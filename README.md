@@ -10,10 +10,7 @@
 <h3>Objetivo</h3>
   </div>
 <p>Ao realizar pesquisas e perceber, através de notícias, estatísticas e acontecimentos cotidianos, que a falta de manutenção em veículos como carros e motos, é um dos motivos do alto índice de acidentes e mortes registrados nos últimos anos. Para que esses números não continuem crescendo cada vez mais pode-se utilizar de meios tecnológicos para auxiliar as manutenções prévias. Por isso, criou-se o projeto Revise, cuja função é exatamente esse auxílio.</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/mrb2LssG7q8"
-                                            frameborder="0"
-                                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                            allowfullscreen></iframe>
+
   </p>
  </div>
  <div class="">
