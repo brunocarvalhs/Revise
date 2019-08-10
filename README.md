@@ -16,11 +16,11 @@
  <div class="">
  <h3>Time de Desenvolvedores:</h3>
  <ul>
-  <li>Bruno S. Carvalho - <a href="">Github</a> / <a href="">LinkdIn</a></li>
+  <li>Bruno Silva Carvalho - <a href="">Github</a> / <a href="https://www.linkedin.com/in/bruno-silva-carvalho-25bb9a17b/">LinkdIn</a></li>
   <li>Fernanda Pereira - <a href="">Github</a> / <a href="">LinkdIn</a></li>
   <li>Katryel Menezes - <a href="">Github</a> / <a href="">LinkdIn</a></li>
-  <li>Lucas Juan - <a href="">Github</a> / <a href="">LinkdIn</a></li>
-  <li>Luiz Marcelo - <a href="">Github</a> / <a href="">LinkdIn</a></li>
+  <li>Lucas Juan Souza de Oliveira Miranda Moraes - <a href="">Github</a> / <a href="https://www.linkedin.com/in/lucas-juan-souza-de-oliveira-miranda-moraes-9795ba190/">LinkdIn</a></li>
+  <li>Luiz Marcelo Garcia - <a href="">Github</a> / <a href="https://www.linkedin.com/in/luiz-marcelo-garcia-85279918b/">LinkdIn</a></li>
  </ul>
  <p>
   
