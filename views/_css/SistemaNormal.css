@@ -1,0 +1,92 @@
+body{
+    background-color: #FFFFFF;
+}
+html{
+
+}
+h1,h2,h3,h4,h5{
+    color: #000000;
+}
+.row{
+
+}
+.col{
+
+}
+#Titulo{
+    margin-top: 5%;
+    margin-bottom: 0px;
+}
+/* Menu */
+.bg-revise{
+    background-color:#F9D13E !important;
+}
+#submenu a{
+    text-decoration:none; 
+    color: #000000;
+}
+#submenu .card{
+    background-color: #fff;
+}
+/* Legenda */
+p #valorNotificacao{
+    font-size: 100;
+}
+
+/* Notificação */
+.dropdown{
+    list-style-type: none;
+}
+/* Peças */
+.card{
+    background-color: #ffffff;
+    margin-top: 5%;
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.50);
+    -moz-box-shadow:    2px 2px 2px rgba(50, 50, 50, 0.50);
+    box-shadow:         2px 2px 2px rgba(50, 50, 50, 0.50);
+}
+progress{
+    margin-top: 2.5%;
+}
+#progressKM{
+    width: 100%;
+    border: 0 none;
+    background: #444;
+    border-radius: 14px;
+    margin-right: 5%;
+}
+#progressKM::-moz-progress-bar {
+    border-radius: 12px;
+    background: #F9D13E;
+}
+#progressKMAlert{
+    width: 100%;
+    border: 0 none;
+    background: #444;
+    border-radius: 14px;
+    margin-right: 5%;
+}
+#progressKMAlert::-moz-progress-bar {
+    border-radius: 12px;
+    background: #DC6A53;
+}
+#progressTime{
+    width: 100%;
+    border: 0 none;
+    background: #444;
+    border-radius: 14px;
+    margin-right: 5%;
+}
+#progressTime::-moz-progress-bar {
+    border-radius: 12px;
+    background: #F9D13E;
+}
+#progressTimeAlert::-moz-progress-bar {
+    border-radius: 12px;
+    background: #F9D13E;
+}
+#col-revise{
+    background-color: #F9D13E;
+    margin-top: 22%;
+}

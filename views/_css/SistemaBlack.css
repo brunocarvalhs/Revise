@@ -1,0 +1,108 @@
+body{
+    background-color: #616161;
+}
+html{
+
+}
+.row{
+
+}
+.col{
+
+}
+#Titulo{
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
+/* Menu */
+.bg-revise{
+    background-color:#424242 !important;
+}
+.card-title h2{
+    color: #000000;
+} 
+#submenu a{
+    text-decoration:none; 
+    color: #000000;
+}
+#submenu .card{
+    background-color: #fff;
+}
+/* Notificação */
+.dropdown{
+    list-style-type: none;
+}
+/* Legenda */
+#valorNotificacao{
+    font-size: 20;
+}
+/* Peças */
+.card{
+    background-color: #707070;
+    margin-top: 5%;
+    width: 100%;
+    -webkit-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.50);
+    -moz-box-shadow:    2px 2px 2px rgba(50, 50, 50, 0.50);
+    box-shadow:         2px 2px 2px rgba(50, 50, 50, 0.50);
+}
+progress{
+    margin-top: 1.5%;
+}
+#progressKM{
+    width: 100%;
+    border: 0 none;
+    background: #fff;
+    border-radius: 14px;
+    margin-right: 5%;
+}
+#progressKM::-moz-progress-bar {
+    border-radius: 12px;
+    background: #F9D13E;
+}
+#progressKMAlert{
+    width: 100%;
+    border: 0 none;
+    background: #DC6A53;
+    border-radius: 14px;
+    margin-right: 5%;
+}
+#progressKMAlert::-moz-progress-bar {
+    border-radius: 12px;
+    background: #DC6A53;
+}
+
+#progressTime{
+    width: 100%;
+    border: 0 none;
+    background: #fff;
+    border-radius: 14px;
+    margin-right: 5%;
+}
+#progressTime::-moz-progress-bar {
+    border-radius: 12px;
+    background: #F9D13E;
+}
+
+#progressTimeAlert{
+    width: 100%;
+    border: 0 none;
+    background: #DC6A53;
+    border-radius: 14px;
+    margin-right: 5%;
+}
+#progressTimeAlert::-moz-progress-bar {
+    border-radius: 12px;
+    background: #DC6A53;
+}
+/* INDEX - Conteudo */
+#col-revise{
+    background-color: #424242;
+    margin-top: 22%;
+}
+h1,h2,h3,h4,h5{
+    color: #fff;
+}
+.col-lg-6 .col-xl-8 #col-revise-km{
+    margin-block-start: -500%;
+}
+

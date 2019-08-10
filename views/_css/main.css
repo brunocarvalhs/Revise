@@ -1,0 +1,32 @@
+#selecionado{
+    color: #F9D13E;
+  }
+  .conteudo-Amarelo{
+    background-color: #F9D13E;
+  }
+  .slide{
+      
+  }
+  .conteudo-Preto{
+    background-color: white;
+  }
+  .col{
+      padding: 0%;
+  }
+  .card{
+      margin-top: 10%;
+      width: 18rem;
+      margin-bottom: 10%;
+      background-color: #ffffff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  }
+  .navbar{
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    margin-bottom: 0.1%;
+    z-index: 3;
+    width: 100%;
+  }
+  body{
+      position: relative;
+  }
+  
