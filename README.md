@@ -1,6 +1,8 @@
 # Revise
   
- <div style="">
+ <div style="display:block;
+    margin-left: auto;
+    margin-right: auto">
   <img src="https://raw.githubusercontent.com/Bruno-Carv/Revise/vers%C3%A3o(2.0)/Views/img/logo.png?token=ALLJHIH5PBRNKCV4FNKJQRS5J5EJI">
  </div>
  <div class="">
