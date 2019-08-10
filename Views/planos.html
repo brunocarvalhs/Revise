@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Menu -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logo.png" width="50" height="50" alt="Revise">
+                </a>
+                <!-- Botão do menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Links do menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Início <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" href="./planos.html" id="planoMenu">
+                                Planos
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
+                            <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
+                                <a class="dropdown-item" href="./aplicativo.html">Sobre o Aplicativo Revise</a>
+                                <a class="dropdown-item" href="./aplicativo.html#suporte">Suporte</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
+                            <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
+                                <a class="dropdown-item" href="./empresa.html#sobre">Sobre</a>
+                                <a class="dropdown-item" href="./empresa.html#contato">Contato</a>
+                                <a class="dropdown-item disable" href="./empresa.html#vagas">Trabalhar Conosco</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signIn()"
+                            type="button">Acessar</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Sobre o plano -->
+    <section id="sobre" class="backgroundBlack">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
+                    <h1></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloBranco">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Plano do fisico -->
+    <section id="fisico" class="backgroundBlackLight">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
+                    <h1>fisico</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard">
+                            <div class="card tamanhoCard">
+                                <div class="card-body">
+                                    <h5 class="card-title">Basic</h5>
+                                    <p class="card-text">
+                                        Com suporte a texto embaixo, que funciona como uma introdução a um
+                                        conteúdo adicional.
+                                    </p>
+                                    <button onclick="btntextoPlano(1)" class="btn btn-success">Ver Planos</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard">
+                            <div class="card tamanhoCard">
+                                <div class="card-body">
+                                    <h5 class="card-title">Standart</h5>
+                                    <p class="card-text">
+                                        Com suporte a texto embaixo, que funciona como uma introdução a um
+                                        conteúdo adicional.
+                                    </p>
+                                    <button onclick="btntextoPlano(2)" class="btn btn-success">Ver Planos</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard">
+                            <div class="card tamanhoCard">
+                                <div class="card-body">
+                                    <h5 class="card-title">Profission</h5>
+                                    <p class="card-text">
+
+                                        Com suporte a texto embaixo, que funciona como uma introdução a um
+                                        conteúdo adicional.
+
+                                    </p>
+                                    <button onclick="btntextoPlano(3)" class="btn btn-success">Ver Planos</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard">
+                            <div class="card tamanhoCard">
+                                <div class="card-body">
+                                    <h5 class="card-title">Deluxe Edition</h5>
+                                    <p class="card-text">
+
+                                        Com suporte a texto embaixo, que funciona como uma introdução a um
+                                        conteúdo adicional.
+
+                                    </p>
+                                    <button onclick="btntextoPlano(4)" class="btn btn-success">Ver Planos</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h4 id="Tituloplano"></h4>
+                </div>
+                <div class="col-12">
+                    <p id="textoPlano">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Plano do juridico -->
+    <section id="juridico" class="backgroundYellow">
+        <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
+                        <h1>juridico</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Anuncios</h5>
+                                        <p class="card-text">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <span>Serviço</span>
+                                                    <input id="servicoInput" type="number" class="form-control"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <span>Produtos</span>
+                                                    <input id="produtoInput" type="number" class="form-control"
+                                                        placeholder="">
+                                                </div>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Plano mensal personalizado</h5>
+                                        <p class="card-text">
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                                                    <h6>Serviço:</h6>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                    <h6><b id="valorServico"></b></h6>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                                                    <h6>Produtos anúnciados:</h6>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                    <h6><b id="valorProduto"></b></h6>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="row border-top-5">
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                                                    <h5>Total:</h5>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                    <h5><b id="valorTotal"></b></h5>
+                                                </div>
+                                            </div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Rodapé -->
+    <footer class="RodapeLight navbar-light bg-light">
+        <div class="container">
+            <div class="row navbar ConteudoRodape">
+                <div class="col-4">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <div class="nav-link">© 2019 Revise, Inc.</div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Termos de uso</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-8">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.facebook.com/Revise-109853873680667">
+                                <img src="./img/icon/facebookIcon.png" class="redesocialIcones" alt="Facebook-revise" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icon/InstagramIcon.png" class="redesocialIcones"
+                                    alt="Instagram-revise" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icon/YoutubeIcon.png" class="redesocialIcones" alt="Youtube-revise" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icon/twitterIcon.png" class="redesocialIcones" alt="Twitter-revise" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icon/githubIcon.png" class="redesocialIcones" alt="Github-revise" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="./js/wow.js"></script>
+<script src="./js/index.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('#servicoInput').click(function () {
+            var valorPro = 1.00;
+            var valorProduto = $('#produtoInput').val();
+            $('#valorProduto').text('R$  ' + valorProduto * valorPro);
+        });
+        $('#produtoInput').click(function () {
+            var valorPro = 1.00;
+            var valorProduto = $('#produtoInput').val();
+            $('#valorProduto').text('R$  ' + valorProduto * valorPro);
+        });
+        setInterval(function () {
+            var valorPro = 1.00;
+            var valorProduto = $('#produtoInput').val();
+            $('#valorProduto').text('R$  ' + valorProduto * valorPro);
+            var valorSer = 10.00;
+            var valorServico = $('#servicoInput').val();
+            $('#valorServico').text('R$  ' + valorServico * valorSer);
+            $('#valorTotal').text('R$  ' + (valorServico + valorProduto));
+        });
+    });
+</script>
+
+
+</html>

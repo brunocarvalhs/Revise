@@ -1,0 +1,272 @@
+/* Estrutura base */
+html,body{
+    overflow-x: hidden;
+}
+.linhaVertical{
+    border-color: #f3e410;
+    height: 100%;
+    border-left: 2px solid;
+}
+.backgroundBlack{
+    background-color: #454545;
+    padding: 80px;
+}
+.backgroundYellow{
+    background-color: #f3e410;
+    padding: 80px;
+}
+.backgroundWhite{
+    background-color: #ffffff;
+    padding: 80px;
+}
+.backgroundBlackLight{
+    background-color: #f8f8f8;
+    padding: 80px;
+}
+@media screen and (max-width: 600px) {
+    .backgroundBlack{
+        background-color: #454545;
+        padding: 10px;
+    }
+    .backgroundYellow{
+        background-color: #f3e410;
+        padding: 10px;
+    }
+    .backgroundWhite{
+        background-color: #ffffff;
+        padding: 10px;
+    }
+    .backgroundBlackLight{
+        background-color: #f8f8f8;
+        padding: 10px;
+    }
+}
+.Rodape{
+    background-color: #454545;
+}
+.RodapeLight{
+    background-color: #f8f8f8;
+}
+
+/* Menu */
+.botaoLogin{
+    margin-left: 5px;
+}
+/* Aplicativo */
+.AppSmart{
+    width: 645px;
+}
+@media screen and (max-width: 1626px) {
+    .AppSmart{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .AppSmart{
+        width: 100%;
+    }
+}
+
+.iconAppDownload{
+
+}
+.iconAppDownload img{
+    width: 100%;
+    object-fit: contain;
+    margin-top: 10px;
+}
+.DownloadApp{
+
+}
+.Texto{
+   
+}
+/* -------- Texto -------- */
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Ubuntu', sans-serif;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 500%;
+}
+h3{
+    font-size: 400%;
+}
+h4{
+    font-size: 300%;
+}
+h5{
+    font-size: 200%;
+}
+h6{
+    font-size: 100%;
+}
+.tituloBranco{
+    color: #ffffff;
+}
+.tituloPreto{
+    color: #454545;
+}
+.tituloAmarelo{
+    color: #f3e410;
+}
+/* -------- Planos ---------- */
+.PlanoCard{
+    padding: 5px;
+}
+.card{
+    border: 0px;
+    border-radius: 10px;
+    -webkit-box-shadow: 1px 1px 1px rgba(245, 245, 245, 0.77);
+    -moz-box-shadow:    1px 1px 1px rgba(245, 245, 245, 0.77);
+    box-shadow:         1px 1px 1px rgba(245, 245, 245, 0.77);
+}
+/* -------- Rodapé ----------- */
+.logoReviseRodape{
+    width: 100%;
+}
+.redesocialIcones{
+    width: 20px;
+    height: 20px;
+}
+/* -------- Desenvolvedores ----- */
+.foto_Linha_Um_Coluna_Um{
+    width:250px; 
+    height:250px;
+    z-index: 0;
+}
+.foto_Linha_Um_Coluna_Dois{
+    width:220px; 
+    height:220px;
+    z-index: 0;
+}
+.foto_Linha_Dois_Coluna_Um{
+    margin-left: 179px;
+    width:243px; 
+    height:243px;
+    z-index: 0;
+}
+.foto_Linha_Tres_Coluna_Um{
+    width:287px; 
+    height:287px;
+    z-index: 0;
+}
+.foto_Linha_Tres_Coluna_Dois{
+    margin-left: 104px;
+    width:246px; 
+    height:246px;
+    z-index: 0;
+}
+@media screen and (max-width: 1423px) {
+    .foto_Linha_Dois_Coluna_Um{
+        margin-left: 110px;
+        width:243px; 
+        height:243px;
+    }
+    .foto_Linha_Tres_Coluna_Dois{
+        margin-left: 40px;
+        width:246px; 
+        height:246px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .foto_Linha_Dois_Coluna_Um{
+        margin-left: 80px;
+        width:243px; 
+        height:243px;
+    }
+    .foto_Linha_Tres_Coluna_Dois{
+        margin-left: 40px;
+        width:246px; 
+        height:246px;
+    }
+}
+@media screen and (min-width: 808px){
+    .foto_Linha_Tres_Coluna_Dois{
+        margin-left: 200px;
+        width:246px; 
+        height:246px;
+    }
+    .foto_Linha_Dois_Coluna_Um{
+        margin-left: 120px;
+        width:243px; 
+        height:243px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .foto_Linha_Dois_Coluna_Um{
+        margin-left: 0px;
+        width:220px; 
+        height:220px;
+    }
+    .foto_Linha_Tres_Coluna_Dois{
+        margin-left: 0px;
+        width:220px; 
+        height:220px;
+    }
+    .foto_Linha_Um_Coluna_Um{
+        width:220px; 
+        height:220px;
+    }
+    .foto_Linha_Um_Coluna_Dois{
+        width:220px; 
+        height:220px;
+    }
+    .foto_Linha_Tres_Coluna_Um{
+        width:220px; 
+        height:220px;
+    }
+}
+.foto_Linha_Um_Coluna_Um:hover{
+    width:350px; 
+    height:350px;
+    z-index: 2;
+    position: relative;
+}
+.foto_Linha_Um_Coluna_Dois:hover{
+    width:350px; 
+    height:350px;
+    z-index: 2;
+    position: relative;
+}
+.foto_Linha_Dois_Coluna_Um:hover{
+    width:350px; 
+    height:350px;
+    z-index: 2;
+    position: relative;
+}
+.foto_Linha_Tres_Coluna_Um:hover{
+    width:350px; 
+    height:350px;
+    z-index: 2;
+    position: relative;
+}
+.foto_Linha_Tres_Coluna_Dois:hover{
+    width:350px; 
+    height:350px;
+    z-index: 2;
+    position: relative;
+}
+    /* ---------- Cadastro -------------*/
+.formularioCadastro{
+    padding-top: 20px;
+}
+.inputCadastro{
+    padding-top: 10px;   
+}
+.cadastro{
+    height: 888px;
+}
+/* --------- Notificação ----------*/
+#notifications {
+    cursor: pointer;
+    position: fixed;
+    right: 0px;
+    z-index: 9999;
+    bottom: 0px;
+    margin-bottom: 22px;
+    margin-right: 15px;
+    max-width: 300px;   
+}

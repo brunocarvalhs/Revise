@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/app.css">
+</head>
+
+<body>
+    <!-- Menu -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="./img/logo.png" width="50" height="50" alt="Revise">
+                </a>
+                <!-- Botão do menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Links do menu -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Início <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="./planos.html" id="planoMenu">
+                                Planos
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
+                            <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
+                                <a class="dropdown-item" href="./aplicativo.html">Sobre o Aplicativo Revise</a>
+                                <a class="dropdown-item" href="./aplicativo.html#suporte">Suporte</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
+                            <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
+                                <a class="dropdown-item" href="./empresa.html#sobre">Sobre</a>
+                                <a class="dropdown-item" href="./empresa.html#contato">Contato</a>
+                                <a class="dropdown-item disable" href="./empresa.html#vagas">Trabalhar Conosco</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signIn()"
+                            type="button">Acessar</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="backgroundAplicativo">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-start">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 TituloAplicativoIntroducao">
+                                <h1>
+                                    Aplicativo Revise
+                                </h1>
+                            </div>
+                            <div class="col-12">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <img src="./img/app.png" class="smartphoneIntroducao">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="backgroundBlack" id="sobre">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloBranco">
+                        <h1>Sobre</h1>
+                    </div>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="backgroundYellow" id="requisitos">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
+                    <h1>Requisito do aplicativo</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                        id="android">
+                                        Android
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <p>
+
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <th>Categoria</th>
+                                            <th>Requisito</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Android </td>
+                                            <td>5.0 ou superior</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dispositivo</td>
+                                            <td>Smartphone e tablet</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Idioma</td>
+                                            <td>Português</td>
+                                        </tr>
+                                    </table>
+                                    <br><br>
+                                    <table>
+                                        <tr>
+                                            <th>Função</th>
+                                            <th>Gratuito</th>
+                                            <th>Pago</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Notificação</td>
+                                            <td> 1 veículo.</td>
+                                            <td> > 1 veículo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Perfil</td>
+                                            <td>Contém.</td>
+                                            <td>Contém.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Acesso dos veículos pelo aplicativo</td>
+                                            <td> 2 veículos.</td>
+                                            <td> > 2 veículos. </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Suporte scanner OBD</td>
+                                            <td> --- </td>
+                                            <td> Contém.</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                        id="IOS">
+                                        IOS
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                        <table>
+                                            <tr>
+                                                <th>Categoria</th>
+                                                <th>Requisito</th>
+                                            </tr>
+                                            <tr>
+                                                <td>IOS </td>
+                                                <td>9 ou superior</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dispositivo</td>
+                                                <td>iphone 5s ou superior / iPad Retina ou superio</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Idioma</td>
+                                                <td>Português</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <br><br>
+                                    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                                        <table>
+                                            <tr>
+                                                <th>Função</th>
+                                                <th>Gratuito</th>
+                                                <th>Pago</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Notificação</td>
+                                                <td> 1 veículo.</td>
+                                                <td> > 1 veículo.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Perfil</td>
+                                                <td>Contém.</td>
+                                                <td>Contém.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Acesso dos veículos pelo aplicativo</td>
+                                                <td> 2 veículos.</td>
+                                                <td> > 2 veículos. </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Suporte scanner OBD</td>
+                                                <td> --- </td>
+                                                <td> Contém.</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <img id="imgRequisito" src="./img/nexus5x-landscape.png" class="AppSmart">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="backgroundBlack" id="suporte">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 tituloBranco">
+                    <h1>Suporte</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-12 SuporteTexto tituloBranco">
+                    <p>
+                        Como meio de suporte, o formulario abaixo, com seu e-mail e o problema que esta sofrendo
+                        com nosso sistema, irémos receber sua requisição e retorna o mais rápido possivel para
+                        resolvemos seu problema.
+                    </p>
+                    <p>
+                        Qualquer duvida, entre em contato com nossas redes sociais, e-mail <a
+                            href="mailto:contatoRevise@revise.com">contatoRevise@revise.com</a> ou telefone:<a
+                            href="tel:13997934483">+55 (13) 99793-4483.</a>
+                    </p>
+                </div>
+            </div>
+            <form action="" method="POST" onsubmit="">
+                <div class="formularioSuport row tituloBranco">
+                    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                        <span>E-mail de contato</span>
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-lg">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <span>Como podemos lhe ajudar?</span>
+                        <div class="input-group">
+                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+                        <div class="input-group suporteBotao">
+                            <button type="button" class="btn btn-warning" type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Rodapé -->
+    <footer class="RodapeLight navbar-light bg-light">
+        <div class="container">
+            <div class="row navbar ConteudoRodape">
+                <div class="col-4">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <div class="nav-link">© 2019 Revise, Inc.</div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Termos de uso</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-8">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icon/facebookIcon.png" class="redesocialIcones" alt="Facebook-revise" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icon/InstagramIcon.png" class="redesocialIcones"
+                                    alt="Instagram-revise" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icon/YoutubeIcon.png" class="redesocialIcones" alt="Youtube-revise" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icon/twitterIcon.png" class="redesocialIcones" alt="Twitter-revise" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./img/icon/githubIcon.png" class="redesocialIcones" alt="Github-revise" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="./js/wow.js"></script>
+<script src="./js/index.js"></script>
+<script>
+    new WOW().init();
+    $(document).ready(function () {
+        $("#IOS").click(function () {
+            $("#imgRequisito").attr('src', './img/iphone8spacegrey_landscape.png');
+        });
+        $('#android').click(function () {
+            $("#imgRequisito").attr('src', './img/nexus5x-landscape.png');
+        });
+    });
+</script>
+
+</html>
