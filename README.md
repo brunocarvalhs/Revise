@@ -6,7 +6,7 @@
 
   <h2> Grupo 5 - Desenvolvimento de Sistema - Etec Draª Ruth Cardoso</h2>
 <div>
-<h2>Objetivo</h2>
+<h3>Objetivo</h3>
   </div>
 <p>Ao realizar pesquisas e perceber, através de notícias, estatísticas e acontecimentos cotidianos, que a falta de manutenção em veículos como carros e motos, é um dos motivos do alto índice de acidentes e mortes registrados nos últimos anos. Para que esses números não continuem crescendo cada vez mais pode-se utilizar de meios tecnológicos para auxiliar as manutenções prévias. Por isso, criou-se o projeto Revise, cuja função é exatamente esse auxílio.</p>
   
