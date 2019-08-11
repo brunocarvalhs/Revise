@@ -8,7 +8,7 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="Views/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
 </head>
@@ -20,7 +20,7 @@
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="./img/logo.png" width="50" height="50" alt="Revise">
+                    <img src="./Views/img/logo.png" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -327,28 +327,28 @@
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./img/icon/facebookIcon.png" class="redesocialIcones" alt="Facebook-revise" />
+                                <img src="./Views/img/icon/facebookIcon.png" class="redesocialIcones" alt="Facebook-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./img/icon/InstagramIcon.png" class="redesocialIcones"
+                                <img src="./Views/img/icon/InstagramIcon.png" class="redesocialIcones"
                                     alt="Instagram-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./img/icon/YoutubeIcon.png" class="redesocialIcones" alt="Youtube-revise" />
+                                <img src="./Views/img/icon/YoutubeIcon.png" class="redesocialIcones" alt="Youtube-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./img/icon/twitterIcon.png" class="redesocialIcones" alt="Twitter-revise" />
+                                <img src="./Views/img/icon/twitterIcon.png" class="redesocialIcones" alt="Twitter-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./img/icon/githubIcon.png" class="redesocialIcones" alt="Github-revise" />
+                                <img src="./Views/img/icon/githubIcon.png" class="redesocialIcones" alt="Github-revise" />
                             </a>
                         </li>
                     </ul>
@@ -367,52 +367,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-<script src="./js/wow.js"></script>
-<script>
-    $('.carousel').carousel({
-        pause: true,
-        interval: false,
-        keyboard: true,
-        wrap: false,
-    });
-    $(document).ready(function () {
-
-        //Evento do clique de continuar
-        $('#btnContinua').click(function () {
-            var camposParaValidar = BotaoContinuar($('#btnContinua').val());
-            return Validacao(camposParaValidar, (33.3333333 / camposParaValidar.length));
-        }
-        );
-
-        //Evento de progresso de barra
-        $('input').keypress(function () {
-            if ($('input').val() == '') {
-                var newprogress = newprogress - porcentagemPorUnidade;
-                $('#theprogressbar').attr('aria-valuenow', newprogress).css('width', newprogress);
-            }
-        });
-
-    });
-
-    function BotaoContinuar(parametroDePagina) {
-        if (parametroDePagina == '2') {
-            var inputs = ["campoPlaca", "campoMarcaVeiculo", "campoModeloVeiculo", "campoAnoVeiculo", "campoCorVeiculo", "campoCidadeVeiculo", "campoEstado"];
-        }
-        else {
-            var inputs = ["campoNome", "campoSobrenome", "campoEmail", "campoDoCpf", "campoSenha", "campoConfirmaSenha"];
-        }
-        return inputs;
-    }
-
-    function Validacao(array, porcentagemPorUnidade) {
-        for (input of array) {
-            if ($('#' + input).val() == '') {
-                alert('Campo em branco encontrado'); 
-                return false;
-            }
-        }
-        return true;
-    }
-</script>
+<script src="Views/js/wow.js"></script>
+<script src="Views/js/cadastro.js"></script>
 
 </html>

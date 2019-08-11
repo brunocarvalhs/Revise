@@ -380,13 +380,13 @@ body, html{
   /*-----------------------------chiller-theme-------------------------------------------------*/
   
   .chiller-theme .sidebar-wrapper {
-      background: #31353D;
+      background: #454545;
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-header,
   .chiller-theme .sidebar-wrapper .sidebar-search,
   .chiller-theme .sidebar-wrapper .sidebar-menu {
-      border-top: 1px solid #3a3f48;
+      border-top: 1px solid #363636;
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
@@ -425,8 +425,8 @@ body, html{
   .chiller-theme .sidebar-wrapper .sidebar-dropdown .sidebar-submenu li a:hover:before,
   .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu:focus+span,
   .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown.active a i {
-      color: #16c7ff;
-      text-shadow:0px 0px 10px rgba(22, 199, 255, 0.5);
+      color: #f3e410;
+      text-shadow:0px 0px 10px #f3e41080;
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-menu ul li a i,
@@ -441,8 +441,7 @@ body, html{
   }
   
   .chiller-theme .sidebar-footer {
-      background: #3a3f48;
-      box-shadow: 0px -1px 5px #282c33;
+      background: #363636;
       border-top: 1px solid #464a52;
   }
   
