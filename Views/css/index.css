@@ -3,7 +3,7 @@ html,body{
     overflow-x: hidden;
 }
 .linhaVertical{
-    border-color: #f3e410;
+    border-color: #ffc107;
     height: 100%;
     border-left: 2px solid;
 }
@@ -12,7 +12,7 @@ html,body{
     padding: 80px;
 }
 .backgroundYellow{
-    background-color: #f3e410;
+    background-color: #ffc107;
     padding: 80px;
 }
 .backgroundWhite{
@@ -29,7 +29,7 @@ html,body{
         padding: 10px;
     }
     .backgroundYellow{
-        background-color: #f3e410;
+        background-color: #ffc107;
         padding: 10px;
     }
     .backgroundWhite{
@@ -110,7 +110,7 @@ h6{
     color: #454545;
 }
 .tituloAmarelo{
-    color: #f3e410;
+    color: #ffc107;
 }
 /* -------- Planos ---------- */
 .PlanoCard{

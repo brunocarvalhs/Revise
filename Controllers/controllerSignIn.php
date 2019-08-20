@@ -18,21 +18,17 @@
         if(strlen($login) === 14)
         {
             //Se for maior que 11 caracteres especifica como cnpj
-            $_SESSION['Usuario'] = 2;
-            echo 'Juridico<br>';
-            echo $login;
-            echo $senha;
+            header('Location: ../Views/sistema.php');
+
         }
         else if(strlen($login) === 11)
         {
             //Se for igual a 11 caracteres e CPF
-            $_SESSION['Usuario'] = 1;
-            echo 'Fisico<br>';
-            echo $login;
-            echo $senha;            
+            header('Location: ../Views/sistema.php');
+ 
         }
         else{
-            echo 'erro';
+            header('Location: ../Views/sistema.php');
         }
     }
 ?>
