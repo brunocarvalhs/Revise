@@ -235,7 +235,6 @@ CONSTRAINT fk_veiculo_usuario
 CONSTRAINT fk_veiculo_modelo
 	FOREIGN KEY(cd_modelo)
 		REFERENCES tb_modelo(cd_modelo)
-); --a
 ); 
 
 CREATE TABLE tb_check(
