@@ -347,7 +347,7 @@ VALUES
 INSERT INTO tb_usuario_fisico
     (cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario)
 VALUES
-    (1, "Jemima A. Park", "31017663436", 1),
+    (1, "Jemima A. Park", 31017663436, 1),
     (2, "Gloria R. Robbins", "44866419822", 2),
     (3, "Quintessa Lancaster", "98569866390", 3),
     (4, "Jaden Berry", "81149704944", 4),
