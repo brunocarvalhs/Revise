@@ -316,4 +316,19 @@ h6{
     width: 100%;
     z-index: 1;
 }
-
+.vazia
+{
+  padding: 14.5%;
+}
+.plano_nomes
+{
+  text-align: center;
+}
+.margem
+{
+    margin-top: 5%;
+}
+.align
+{
+    margin-left: 47%;
+}
