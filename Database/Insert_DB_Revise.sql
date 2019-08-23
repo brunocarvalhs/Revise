@@ -41,6 +41,7 @@ VALUES
     (4, 'Advantage'),
     (5, 'LTZ 1.4'),
     (6, 'Effect');
+    
 
 -- INSERT da tabela Tipo De Peca (Categoria da peça)
 INSERT INTO tb_tipo_peca
@@ -7493,3 +7494,17 @@ VALUES
     (72, 1, 'CLASSIC'),
     (73, 1, 'MARAJO'),
     (74, 1, 'SUPREMA');
+    
+    INSERT INTO tb_veiculo
+    (cd_veiculo, nm_cor, cd_placa, cd_usuario, cd_modelo)
+VALUES
+    (1, 'Prata','MKX-2019', 1, 6),
+    (2, 'Vermelho','JSX-1423',2, 4),
+    (3, 'Preto', 'RVS-7452', 3, 2),
+	(4, 'Azul', 'ANO-2864', 4, 1),
+	(5, 'Amarelo', 'ETC-1524', 5, 5),
+	(6, 'Laranja', 'RYC-9574', 6, 6),
+	(7, 'Vinho', 'NBM-0938', 7, 3),
+    (8, 'Verde','FCB-6547', 8, 1),
+	(9, 'Branco', 'TWK-7562', 9, 5),
+	(10, 'Preto Ouro Negro', 'VET-3175', 10, 2);
