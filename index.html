@@ -8,29 +8,31 @@
     <title>Document</title>
     <link rel="stylesheet" href="Views/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="Views/css/index.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Menu -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav">
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
                     <img src="./Views/img/logo.png" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Links do menu -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="./index.html">Início <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link" href="./planos.html" id="planoMenu">
@@ -38,16 +40,16 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">Aplicativo</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item" href="./aplicativo.html">Sobre o Aplicativo Revise</a>
                                 <a class="dropdown-item" href="./aplicativo.html#suporte">Suporte</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">Empresa</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item" href="./empresa.html#sobre">Sobre</a>
                                 <a class="dropdown-item" href="./empresa.html#contato">Contato</a>
@@ -56,26 +58,34 @@
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
-                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signUp()" type="button">Cadastar</button>
-                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signIn()" type="button">Acessar</button>
+                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signUp()"
+                            type="button">Cadastar</button>
+                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signIn()"
+                            type="button">Acessar</button>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <!-- Apresentação -->
-    <section class="backgroundBlackLight fundoCarro">
+    <br><br>
+    <section class="bg-dark">
+        <br><br>
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-6">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                
+                        <div class="col-6 ">
+                            <div class=" embed-responsive-16by9 text-warning text_definition">
+                                PRATICIDADE E SEGURANÇA QUE VOCÊ EXIGE?
                             </div>
+                            <p class="text-definition2 text-light">REVISE SUAS MANUTENÇÕES USANDO O SISTEMA DE
+                                NOTIFICAÇÃO PREDITIVA E
+                                COMPARE PREÇOS ANTES DA TROCA DOS COMPONENTES NA ABA DE ANÚNCIOS DOS FORNECEDORES</p>
                         </div>
                         <div class="col-6">
-                            <img src="https://www.creativeclique.co.za/wp-content/uploads/2014/02/responsive-website-design.png">
+                            <img src="./Views/img/note_app.png" id="icone">
+                            <br><br>
                         </div>
                     </div>
                 </div>
@@ -83,14 +93,14 @@
         </div>
     </section>
     <!-- Sobre o revise -->
-    <section class="backgroundYellow" id="sobre">
+    <section class="backgroundWhite" id="sobre">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="row">
                         <div class="col-6">
                             <div class="embed-responsive embed-responsive-16by9">
-                                
+
                             </div>
                         </div>
                         <div class="col-6">
@@ -102,7 +112,7 @@
         </div>
     </section>
     <!-- Planos-->
-    <section class="backgroundBlack">
+    <section class="backgroundYellow">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloBranco">
@@ -115,10 +125,15 @@
                         <div class="card-body">
                             <h5 class="card-title">Basic</h5>
                             <p class="card-text">
-                                Com suporte a texto embaixo, que funciona como uma introdução a um
-                                conteúdo adicional.
+                                <ul>
+                                    <li class="planos_padding">Gratuito</li>
+                                    <li class="planos_padding">Máximo de 2 carros cadastrados</li>
+                                    <li class="planos_padding">Obd2 e App não inclusos (compra a parte opcional)</li>
+                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
+                                    </li>
+                                </ul>
                             </p>
-                            <a href="#" class="btn btn-success">Ver Plano</a>
+                            <a href="#" class="btn btn-success">Adquirir plano</a>
                         </div>
                     </div>
                 </div>
@@ -127,10 +142,15 @@
                         <div class="card-body">
                             <h5 class="card-title">Standart</h5>
                             <p class="card-text">
-                                Com suporte a texto embaixo, que funciona como uma introdução a um
-                                conteúdo adicional.
+                                <ul>
+                                    <li class="planos_padding">R$ 9,99 p/ mês</li>
+                                    <li class="planos_padding">Máximo de 5 carros cadastrados</li>
+                                    <li class="planos_padding">Obd2 e App não inclusos (compra a parte opcional)</li>
+                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
+                                    </li>
+                                </ul>
                             </p>
-                            <a href="#" class="btn btn-success">Ver Plano</a>
+                            <a href="#" class="btn btn-success">Adquirir plano</a>
                         </div>
                     </div>
                 </div>
@@ -140,11 +160,17 @@
                             <h5 class="card-title">Profission</h5>
                             <p class="card-text">
 
-                                Com suporte a texto embaixo, que funciona como uma introdução a um
-                                conteúdo adicional.
+                                <ul>
+                                    <li class="planos_padding">R$ 39,99 p/ mês</li>
+                                    <li class="planos_padding">Máximo de 20 carros cadastrados</li>
+                                    <li class="planos_padding">Obd2 e App não inclusos (compra a parte opcional)</li>
+                                    <li class="planos_padding">Desconto na compra do Obd2 e App</li>
+                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
+                                    </li>
+                                </ul>
 
                             </p>
-                            <a href="#" class="btn btn-success">Ver Plano</a>
+                            <a href="#" class="btn btn-outline-dark">Adquirir plano</a>
                         </div>
                     </div>
                 </div>
@@ -154,11 +180,17 @@
                             <h5 class="card-title">Deluxe Edition</h5>
                             <p class="card-text">
 
-                                Com suporte a texto embaixo, que funciona como uma introdução a um
-                                conteúdo adicional.
+                                <ul>
+                                    <li class="planos_padding">R$ 99,90 p/ mês</li>
+                                    <li class="planos_padding">Máximo de 50 carros cadastrados</li>
+                                    <li class="planos_padding">Obd2 e App inclusos (1 unidade)</li>
+                                    <li class="planos_padding">Desconto na compra do Obd2 e App</li>
+                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
+                                    </li>
+                                </ul>
 
                             </p>
-                            <a href="#" class="btn btn-success">Ver Planos</a>
+                            <a href="#" class="btn btn-outline-dark">Adquirir plano</a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +198,7 @@
         </div>
     </section>
     <!-- Aplicativo section -->
-    <section class="backgroundYellow">
+    <section class="backgroundBlack bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
@@ -204,14 +236,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 wow bounceInRight center" data-wow-duration="2s">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 wow bounceInRight center"
+                    data-wow-duration="2s">
                     <img src="./Views/img/AppRevise.png" class="AppSmart">
                 </div>
             </div>
         </div>
     </section>
     <!-- Desenvolvedores -->
-    <section class="backgroundBlackLight">
+    <section class="backgroundWhite">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
@@ -266,7 +299,7 @@
         </div>
     </section>
     <!-- Rodapé -->
-    <footer class="RodapeLight navbar-light bg-light">
+    <footer class="RodapeWhite navbar-white bg-white">
         <div class="container">
             <div class="row navbar ConteudoRodape">
                 <div class="col-4">
@@ -283,27 +316,32 @@
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/facebookIcon.png" class="redesocialIcones" alt="Facebook-revise" />
+                                <img src="./Views/img/icon/facebookIcon.png" class="redesocialIcones"
+                                    alt="Facebook-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/InstagramIcon.png" class="redesocialIcones" alt="Instagram-revise" />
+                                <img src="./Views/img/icon/InstagramIcon.png" class="redesocialIcones"
+                                    alt="Instagram-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/YoutubeIcon.png" class="redesocialIcones" alt="Youtube-revise" />
+                                <img src="./Views/img/icon/YoutubeIcon.png" class="redesocialIcones"
+                                    alt="Youtube-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/twitterIcon.png" class="redesocialIcones" alt="Twitter-revise" />
+                                <img src="./Views/img/icon/twitterIcon.png" class="redesocialIcones"
+                                    alt="Twitter-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="./Views/img/icon/githubIcon.png" class="redesocialIcones" alt="Github-revise" />
+                                <img src="./Views/img/icon/githubIcon.png" class="redesocialIcones"
+                                    alt="Github-revise" />
                             </a>
                         </li>
                     </ul>
@@ -312,11 +350,14 @@
         </div>
     </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 <script src="Views/js/wow.js"></script>
 <script src="Views/js/index.js"></script>
