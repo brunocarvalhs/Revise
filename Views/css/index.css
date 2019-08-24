@@ -156,123 +156,18 @@ h6{
     height: 20px;
 }
 /* -------- Desenvolvedores ----- */
-.foto_Linha_Um_Coluna_Um{
+.foto{
     width:250px; 
     height:250px;
     z-index: 0;
 }
-.foto_Linha_Um_Coluna_Dois{
-    width:220px; 
-    height:220px;
-    z-index: 0;
-}
-.foto_Linha_Dois_Coluna_Um{
-    margin-left: 179px;
-    width:243px; 
-    height:243px;
-    z-index: 0;
-}
-.foto_Linha_Tres_Coluna_Um{
-    width:287px; 
-    height:287px;
-    z-index: 0;
-}
-.foto_Linha_Tres_Coluna_Dois{
-    margin-left: 104px;
-    width:246px; 
-    height:246px;
-    z-index: 0;
-}
 @media screen and (max-width: 1423px) {
-    .foto_Linha_Dois_Coluna_Um{
+    .foto{
         margin-left: 110px;
         width:243px; 
         height:243px;
     }
-    .foto_Linha_Tres_Coluna_Dois{
-        margin-left: 40px;
-        width:246px; 
-        height:246px;
-    }
-}
-@media screen and (max-width: 1200px) {
-    .foto_Linha_Dois_Coluna_Um{
-        margin-left: 80px;
-        width:243px; 
-        height:243px;
-    }
-    .foto_Linha_Tres_Coluna_Dois{
-        margin-left: 40px;
-        width:246px; 
-        height:246px;
-    }
-}
-@media screen and (min-width: 808px){
-    .foto_Linha_Tres_Coluna_Dois{
-        margin-left: 200px;
-        width:246px; 
-        height:246px;
-    }
-    .foto_Linha_Dois_Coluna_Um{
-        margin-left: 120px;
-        width:243px; 
-        height:243px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .foto_Linha_Dois_Coluna_Um{
-        margin-left: 0px;
-        width:220px; 
-        height:220px;
-    }
-    .foto_Linha_Tres_Coluna_Dois{
-        margin-left: 0px;
-        width:220px; 
-        height:220px;
-    }
-    .foto_Linha_Um_Coluna_Um{
-        width:220px; 
-        height:220px;
-    }
-    .foto_Linha_Um_Coluna_Dois{
-        width:220px; 
-        height:220px;
-    }
-    .foto_Linha_Tres_Coluna_Um{
-        width:220px; 
-        height:220px;
-    }
-}
-.foto_Linha_Um_Coluna_Um:hover{
-    width:350px; 
-    height:350px;
-    z-index: 2;
-    position: relative;
-}
-.foto_Linha_Um_Coluna_Dois:hover{
-    width:350px; 
-    height:350px;
-    z-index: 2;
-    position: relative;
-}
-.foto_Linha_Dois_Coluna_Um:hover{
-    width:350px; 
-    height:350px;
-    z-index: 2;
-    position: relative;
-}
-.foto_Linha_Tres_Coluna_Um:hover{
-    width:350px; 
-    height:350px;
-    z-index: 2;
-    position: relative;
-}
-.foto_Linha_Tres_Coluna_Dois:hover{
-    width:350px; 
-    height:350px;
-    z-index: 2;
-    position: relative;
-}
+   
     /* ---------- Cadastro -------------*/
 .formularioCadastro{
     padding-top: 20px;
