@@ -157,15 +157,17 @@ h6{
 }
 /* -------- Desenvolvedores ----- */
 .foto{
-    width:250px; 
-    height:250px;
+    width:80%;
+    height:80%;
     z-index: 0;
 }
 @media screen and (max-width: 1423px) {
     .foto{
-        margin-left: 110px;
-        width:243px; 
-        height:243px;
+        width:80%; 
+        height:80%;
+    } 
+    .foto:hover{
+        opacity: 0.5;
     }
    
     /* ---------- Cadastro -------------*/
@@ -230,14 +232,11 @@ h6{
 .space
 {
   margin-top: 5%;
-  margin-left: -9%;
+  margin-left: 5%;
 }
-.card_hover
+.card_align
 {
-     transition: all 0.2s ease; 
+    align-items: center;
 }
-.card_hover:hover
-{
-    
-}
+
 }
