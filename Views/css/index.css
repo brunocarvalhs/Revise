@@ -242,5 +242,8 @@ h6{
 {
     transform: scale(1.01);
 }
-
+.index
+{
+    z-index: 0;
+}
 }
