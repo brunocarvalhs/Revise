@@ -246,4 +246,9 @@ h6{
 {
     z-index: 0;
 }
+.size
+{
+    width: 300px;
+}
+
 }
