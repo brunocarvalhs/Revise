@@ -238,5 +238,9 @@ h6{
 {
     align-items: center;
 }
+.card_hover:hover
+{
+    transform: scale(1.01);
+}
 
 }
