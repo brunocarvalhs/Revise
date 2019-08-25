@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Planos</title>
+    <link rel="stylesheet" href="Views/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="Views/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
@@ -68,94 +67,96 @@
         </nav>
     </header>
     <!-- Sobre o plano -->
-    <section id="sobre" class="backgroundBlack">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
-                    <h1></h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloBranco">
 
-                </div>
-            </div>
-        </div>
     </section>
     <!-- Plano do fisico -->
     <section id="fisico" class="backgroundBlackLight">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
-                    <h1>fisico</h1>
+                    <h1>Físico</h1>
+                    <p class="text-dark card-text h5 descricao">Planos para usuários que utilizarão o sistema de notificação das manutenções veículares</p>
+                    <br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard">
-                            <div class="card tamanhoCard">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard card_hover ">
+                            <div class="card tamanhoCard shadow mb-5 bg-white">
                                 <div class="card-body">
-                                    <h5 class="card-title">Basic</h5>
+                                    <h5 class="card-title plano_nomes">Basic</h5>
                                     <p class="card-text">
-                                        Com suporte a texto embaixo, que funciona como uma introdução a um
-                                        conteúdo adicional.
+                                        <ul>
+                                            <li class="planos_padding">Gratuito</li>
+                                            <li class="planos_padding">Máximo de 2 carros cadastrados</li>
+                                            <li class="planos_padding">Obd2 e App não inclusos (compra a parte opcional)</li>
+                                            <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
+                                            </li>
+                                            <div class="vazia"></div>
+                                        </ul>
                                     </p>
-                                    <button onclick="btntextoPlano(1)" class="btn btn-success">Ver Planos</button>
+                                    <a href="#" class="btn btn-dark porcentagem">Assinar</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard">
-                            <div class="card tamanhoCard">
-                                <div class="card-body">
-                                    <h5 class="card-title">Standart</h5>
-                                    <p class="card-text">
-                                        Com suporte a texto embaixo, que funciona como uma introdução a um
-                                        conteúdo adicional.
-                                    </p>
-                                    <button onclick="btntextoPlano(2)" class="btn btn-success">Ver Planos</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard">
-                            <div class="card tamanhoCard">
-                                <div class="card-body">
-                                    <h5 class="card-title">Profission</h5>
-                                    <p class="card-text">
-
-                                        Com suporte a texto embaixo, que funciona como uma introdução a um
-                                        conteúdo adicional.
-
-                                    </p>
-                                    <button onclick="btntextoPlano(3)" class="btn btn-success">Ver Planos</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard">
-                            <div class="card tamanhoCard">
-                                <div class="card-body">
-                                    <h5 class="card-title">Deluxe Edition</h5>
-                                    <p class="card-text">
-
-                                        Com suporte a texto embaixo, que funciona como uma introdução a um
-                                        conteúdo adicional.
-
-                                    </p>
-                                    <button onclick="btntextoPlano(4)" class="btn btn-success">Ver Planos</button>
-                                </div>
-                            </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard card_hover">
+                    <div class="card tamanhoCard shadow mb-5 bg-white">
+                        <div class="card-body">
+                            <h5 class="card-title plano_nomes">Standart</h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li class="planos_padding">R$ 9,99 p/ mês</li>
+                                    <li class="planos_padding">Máximo de 5 carros cadastrados</li>
+                                    <li class="planos_padding">Obd2 e App não inclusos (compra a parte opcional)</li>
+                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
+                                    </li>
+                                    <div class="vazia"></div>
+                                </ul>
+                            </p>
+                            <a href="#" class="btn btn-dark porcentagem">Assinar</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <h4 id="Tituloplano"></h4>
-                </div>
-                <div class="col-12">
-                    <p id="textoPlano">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard card_hover">
+                    <div class="card tamanhoCard shadow mb-5 bg-white">
+                        <div class="card-body">
+                            <h5 class="card-title plano_nomes">Profission</h5>
+                            <p class="card-text">
 
-                    </p>
+                                <ul>
+                                    <li class="planos_padding">R$ 39,99 p/ mês</li>
+                                    <li class="planos_padding">Máximo de 20 carros cadastrados</li>
+                                    <li class="planos_padding">Obd2 e App não inclusos (compra a parte opcional)</li>
+                                    <li class="planos_padding">Desconto na compra do Obd2 e App</li>
+                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
+                                    </li>
+                                </ul>
+
+                            </p>
+                            <a href="#" class="btn btn-dark porcentagem">Assinar </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 PlanoCard card_hover">
+                    <div class="card tamanhoCard shadow mb-5 bg-white">
+                        <div class="card-body">
+                            <h5 class="card-title plano_nomes">Deluxe Edition</h5>
+                            <p class="card-text">
+
+                                <ul>
+                                    <li class="planos_padding">R$ 99,90 p/ mês</li>
+                                    <li class="planos_padding">Máximo de 50 carros cadastrados</li>
+                                    <li class="planos_padding">Obd2 e App inclusos (1 unidade)</li>
+                                    <li class="planos_padding">Desconto na compra do Obd2 e App</li>
+                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
+                                    </li>
+                                </ul>
+
+                            </p>
+                            <a href="#" class="btn btn-dark porcentagem">Assinar</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -166,15 +167,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
-                        <h1>juridico</h1>
+                        <h1 class="text-white">Jurídico</h1>
+                        <p class="text-white card-text h5 descricao">Escolha quantos serviços e anúncios deseja e faça um orçamento abaixo:</p>
+                        <br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                <div class="card">
-                                    <div class="card-body">
+                                <div class="card shadow shadow-lg mb-5">
+                                    <div class="card-body ">
                                         <h5 class="card-title">Anuncios</h5>
                                         <p class="card-text">
                                             <div class="row">
@@ -196,8 +199,8 @@
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                <div class="card">
-                                    <div class="card-body">
+                                <div class="card shadow shadow-lg mb-5">
+                                    <div class="card-body ">
                                         <h5 class="card-title">Plano mensal personalizado</h5>
                                         <p class="card-text">
                                             <br>
@@ -227,6 +230,7 @@
                                                     <h5><b id="valorTotal"></b></h5>
                                                 </div>
                                             </div>
+                                            <a href="#" class="btn btn-dark">Assinar</a>
                                         </p>
                                     </div>
                                 </div>
