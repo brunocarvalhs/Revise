@@ -170,6 +170,10 @@ h6{
         opacity: 0.5;
         
     }
+    .descricao
+    {
+        text-align: center;
+    }
    
     /* ---------- Cadastro -------------*/
 .formularioCadastro{
