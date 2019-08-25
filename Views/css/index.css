@@ -216,7 +216,7 @@ h6{
 {
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 9;
 }
 .vazia
 {
@@ -258,5 +258,15 @@ h6{
 .porcentagem
 {
     width: 100%;
+}
+.altura
+{
+  height: 490px;
+  width: 100%;
+  padding: 1%;
+}
+.index
+{
+    z-index: 1;
 }
 }
