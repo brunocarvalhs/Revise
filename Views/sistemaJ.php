@@ -1,11 +1,9 @@
 <?php
-    
         $FotoDePerfil = 'img/user.jpg';
-        $nome = 'Bruno';
-        $sobrenome = 'Silva Carvalho';
-        $placa = 'ABC-1234';
-        $modelo = 'Corsa Classic';
-        $peças = 7;
+        $nome = 'Auto Peças';
+        $sobrenome = 'Katry Jonsons';
+        $peças = 23;
+        $CNPJ = '12.345.678/9101-11';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,8 +53,7 @@
                                 <span class="user-name"><strong><?php echo $nome ?></strong>
                                     <?php echo $sobrenome ?>
                                 </span>
-                                <span class="user-role"><?php echo $placa ?></span>
-                                <span class="user-role"><?php echo $modelo ?></span>
+                                <span class="user-role"><?php echo $CNPJ ?></span>
                             </div>
                         </div>
                         <!-- sidebar-search  -->
@@ -80,20 +77,14 @@
                                 <li class="sidebar-content">
                                     <a href="#">
                                         <i class="fa fa-wrench" aria-hidden="true"></i>
-                                        <span>Peças</span>
+                                        <span>Anuncios</span>
                                         <span class="badge badge-pill badge-danger"><?php echo $peças; ?></span>
                                     </a>
                                 </li>
                                 <li class="sidebar-content">
                                     <a href="#">
                                         <i class="fa fa-car" aria-hidden="true"></i>
-                                        <span>Veículos</span>
-                                    </a>
-                                </li>
-                                <li class="sidebar-content">
-                                    <a href="#">
-                                        <i class="fa fa-building" aria-hidden="true"></i>
-                                        <span>Serviços e Produtos</span>
+                                        <span>Indice de Acesso</span>
                                     </a>
                                 </li>
                             </ul>

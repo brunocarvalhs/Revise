@@ -18,7 +18,7 @@
         if(strlen($login) === 14)
         {
             //Se for maior que 11 caracteres especifica como cnpj
-            header('Location: ../Views/sistema.php');
+            header('Location: ../Views/sistemaJ.php');
 
         }
         else if(strlen($login) === 11)
@@ -28,7 +28,7 @@
  
         }
         else{
-            header('Location: ../Views/sistema.php');
+            header('Location: ../login.html');
         }
     }
 ?>
