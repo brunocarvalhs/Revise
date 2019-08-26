@@ -17,7 +17,7 @@
 <body>
     <!-- Menu -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark  barra_nav">
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
@@ -68,14 +68,15 @@
             </div>
         </nav>
     </header>
-    <section class="backgroundAplicativo">
+    <section class="bg-dark">
         <div class="container">
+                <br>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-start">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 TituloAplicativoIntroducao">
-                                <h1>
+                                <h1 class="tituloBranco">
                                     Aplicativo Revise
                                 </h1>
                             </div>
@@ -86,47 +87,59 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <img src="./Views/img/app.png" class="smartphoneIntroducao">
+                    <img src="./Views/img/app.png" class="smartphoneIntroducao wow bounceInRight"  data-wow-duration="1.5s"  >
                 </div>
             </div>
         </div>
     </section>
-    <section class="backgroundBlack" id="sobre">
+    <section class="bg-light" id="sobre">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloBranco">
+                    <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto text-dark">
+                        <br><br>
                         <h1>Sobre</h1>
+                        <br><br>
                     </div>
                 </div>
-                <div class="col">
-
+                <div class="col-12">
+                        <p class="text-dark h5">O App Revise é usado para apresentar as informações captadas pelo sensor Obd2 conectado ao veículo. 
+                                Mas o que de fato esse sensor detecta?
+                            <br><br>
+                            <ol>
+                               <li class="text-dark h5" >Quilometragem para fazer as manutenções preditivas</li>
+                               <li class="text-dark h5" >O bruno sabe</li>
+                               <li class="text-dark h5" >sla</li>
+                            </ol>
+                        </p>
                 </div>
             </div>
         </div>
+        <br>
     </section>
     <section class="backgroundYellow" id="requisitos">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
-                    <h1>Requisito do aplicativo</h1>
+                    <h1 class="text-white">Requisito do aplicativo</h1>
+                    <br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="accordion" id="accordionExample">
-                        <div class="card">
+                        <div class="card card_hover">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    <button class="btn btn-link text-dark " type="button" data-toggle="collapse"
                                         data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
                                         id="android">
-                                        Android
+                                        Clique para ver sobre Android
                                     </button>
                                 </h2>
                             </div>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
                                 data-parent="#accordionExample">
                                 <div class="card-body">
                                     <p>
@@ -181,13 +194,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <br>
+                        <div class="card card_hover">
                             <div class="card-header" id="headingTwo">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                    <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
                                         data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
                                         id="IOS">
-                                        IOS
+                                        Clique para ver sobre IOS
                                     </button>
                                 </h2>
                             </div>
@@ -250,7 +264,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <img id="imgRequisito" src="./Views/img/nexus5x-landscape.png" class="AppSmart">
+                    <img id="imgRequisito" src="./Views/img/nexus5x-landscape.png" class="AppSmart ">
                 </div>
             </div>
         </div>
@@ -265,12 +279,11 @@
             <div class="row">
                 <div class=" col-12 SuporteTexto tituloBranco">
                     <p>
-                        Como meio de suporte, o formulario abaixo, com seu e-mail e o problema que esta sofrendo
-                        com nosso sistema, irémos receber sua requisição e retorna o mais rápido possivel para
-                        resolvemos seu problema.
+                        Caso tenha algum problema, insira as informações necessárias no formulário abaixo. Iremos receber
+                         sua requisição e retornar o mais rápido possivel.
                     </p>
                     <p>
-                        Qualquer duvida, entre em contato com nossas redes sociais, e-mail <a
+                        Qualquer dúvida, entre em contato em nossas redes sociais ou e-mail <a
                             href="mailto:contatoRevise@revise.com">contatoRevise@revise.com</a> ou telefone:<a
                             href="tel:13997934483">+55 (13) 99793-4483.</a>
                     </p>
@@ -279,21 +292,21 @@
             <form action="" method="POST" onsubmit="">
                 <div class="formularioSuport row tituloBranco">
                     <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                        <span>E-mail de contato</span>
+                        <span>Digite seu e-mail aqui:</span>
                         <div class="input-group input-group-lg">
                             <input type="text" class="form-control" aria-label="Sizing example input"
                                 aria-describedby="inputGroup-sizing-lg">
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <span>Como podemos lhe ajudar?</span>
+                        <span>Como podemos ajudar?</span>
                         <div class="input-group">
                             <textarea class="form-control" aria-label="With textarea"></textarea>
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
                         <div class="input-group suporteBotao">
-                            <button type="button" class="btn btn-warning" type="submit">Enviar</button>
+                            <button type="button" class="btn btn-outline-warning porcentagem" type="submit">Enviar</button>
                         </div>
                     </div>
                 </div>
