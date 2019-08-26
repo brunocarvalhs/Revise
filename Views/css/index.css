@@ -273,3 +273,8 @@ h6{
     width: 100%;
 }
 }
+
+.resize
+{
+ resize: none;   
+}
