@@ -278,3 +278,7 @@ h6{
 {
  resize: none;   
 }
+.tamanhoCard
+{
+    height: 100%;
+}
