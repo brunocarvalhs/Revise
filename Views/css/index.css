@@ -205,7 +205,7 @@ h6 {
 }
 
 .foto:hover {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .descricao {
@@ -320,4 +320,9 @@ h6 {
 
 .tamanhoCard {
     height: 100%;
+}
+.size
+{
+    width: 12%;
+    height: 12%;
 }
