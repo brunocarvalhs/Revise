@@ -5,21 +5,12 @@ body{
     font-family: 'Archivo', sans-serif;
 }
 .divLogin{
-    width: 800px;
-    height: 800px;
+   
     border-radius: 10px;
 }
 
 .imagemLogin{
-    background: url('https://png.pngtree.com/thumb_back/fw800/photos/md/2017-09-06/cars_city_night_rush_hour.jpeg');
-    background-repeat: no-repeat;
-    background-size: 130%; 
-    background-position: center;
-    background-position: -290px;
-}
-
-.imagemLogin{
-    background: url('https://png.pngtree.com/thumb_back/fw800/photos/md/2017-09-06/cars_city_night_rush_hour.jpeg');
+    background: url('../img/backgroundLogin.jpg');
     background-repeat: no-repeat;
     background-size: 130%; 
     background-position: center;
@@ -155,6 +146,12 @@ input{
         background-size: 140%; 
         background-position: center;
     }
+   
 }
 
+.padding
+{
+    padding: 35px 30px;
+    /* padding-bottom: 0px; */
 
+}

@@ -7,8 +7,6 @@ html, body {
 .fundoCarro {
     background-image: url('../img/fundo_index.jpeg');
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
     background-size: 100%;
     background-position: center;
     width: 100%;
@@ -333,4 +331,9 @@ h6 {
 .top_btn
 {
     margin-top: 700px;
+}
+.size
+{
+    width: 100%;
+    height: 100%;
 }
