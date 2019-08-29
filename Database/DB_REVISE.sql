@@ -108,7 +108,7 @@ CONSTRAINT fk_usuario_tipo
 create table tb_usuario_fisico(
 cd_usuario_fisico int not null,
 nm_usuario_fisico varchar(255),
-cd_cpf int not null,
+cd_cpf varchar(13) not null,
 cd_usuario int,
 CONSTRAINT pk_usuario_fisico
 	PRIMARY KEY(cd_usuario_fisico),
@@ -121,7 +121,7 @@ create table tb_usuario_juridico(
 cd_usuario_juridico int not null,
 nm_nome_fantasia varchar(255),
 nm_razao_social VARCHAR(255),
-cd_cnpj int,
+cd_cnpj varchar(16) not null,
 cd_usuario int,
 CONSTRAINT pk_usuario_juridico
 	PRIMARY KEY(cd_usuario_juridico),
