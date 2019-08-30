@@ -4,3 +4,4 @@ function signIn(){
 function signUp(){
     window.location.href ='./redirecionamento.html';
 }
+

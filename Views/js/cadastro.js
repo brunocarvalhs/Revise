@@ -43,3 +43,14 @@
         }
         return true;
     }
+    function juridico()
+    {
+        window.location.href ='./cadastro_juridico.html';
+    }
+    function fisico()
+    {
+        window.location.href ='./cadastro.html';
+    }
+    function redirecionar()
+    {
+        window.location.href ='./redirecionamento.html';    }
