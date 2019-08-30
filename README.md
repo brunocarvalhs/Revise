@@ -29,6 +29,7 @@
  </div>
  <div class="">
  <h3>Layout UX e UI:</h3>
+  <img src="">
  <p>
   
   
@@ -36,6 +37,7 @@
  </div>
  <div class="">
  <h3>Caso de uso: </h3>
+  <img src="">
  <p>
   
   
@@ -43,8 +45,15 @@
  </div>
  <div class="">
  <h3>Requisitos:</h3>
+  <img src="">
  <p>
   
-  
+  </p>
+ </div>
+ <div class="">
+ <h3>Diagrama de Classe:</h3>
+<img src="">
+ <p>
+   
   </p>
  </div>
