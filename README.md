@@ -57,3 +57,10 @@
    
   </p>
  </div>
+  <div class="">
+ <h3>Arquitetura de software:</h3>
+<img src="">
+ <p>
+   
+  </p>
+ </div>
