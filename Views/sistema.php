@@ -80,7 +80,7 @@
                                 <li class="sidebar-content">
                                     <a href="#">
                                         <i class="fa fa-wrench" aria-hidden="true"></i>
-                                        <span>Peças</span>
+                                        <span>Histórico de Peças</span>
                                         <span class="badge badge-pill badge-danger"><?php echo $peças; ?></span>
                                     </a>
                                 </li>
