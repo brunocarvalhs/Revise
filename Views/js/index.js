@@ -2,6 +2,7 @@ function signIn(){
     window.location.href ='./login.html';
 }
 function signUp(){
+<<<<<<< HEAD
     swal("Qual tipo de cadastro você deseja fazer?", {
         icon: "info",
         buttons: {
@@ -31,5 +32,9 @@ function signUp(){
         }
       });
     
+=======
+    swal("Hello world!");
+    //window.location.href ='./redirecionamento.html';
+>>>>>>> 931e81176396aee2b366709ec28ff2a11094c4c9
 }
 
