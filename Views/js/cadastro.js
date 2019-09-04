@@ -52,7 +52,21 @@ function fisico() {
 function redirecionar() {
     window.location.href = './redirecionamento.html';
 }
-function confirma()
-{
-    window.location.href = './confirmaCadastro.html';
+function alertaOK() {
+    swal({
+        title: "Seu cadastro foi realizado com sucesso!",
+        icon: "success",
+        button: "Ok",
+        value: "OK",
+    })
+        .then((value) => {
+            switch (value) {
+
+                case "OK":
+                    window.location.href = './.html';
+                    break;
+            }
+
+        });
+
 }
