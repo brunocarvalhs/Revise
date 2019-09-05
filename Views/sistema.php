@@ -21,7 +21,7 @@
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Revise - Home</title>
+    <title>Perfil</title>
 </head>
 
 <body>
@@ -125,6 +125,8 @@
                 <button></button>
             </div>
         </div>
+
+<!--Perfil-->
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
