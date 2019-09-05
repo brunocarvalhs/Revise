@@ -53,20 +53,24 @@ function redirecionar() {
     window.location.href = './redirecionamento.html';
 }
 function alertaOK() {
-    swal({
-        title: "Seu cadastro foi realizado com sucesso!",
-        icon: "success",
-        button: "Ok",
-        value: "OK",
-    })
+    swal({ title: "Seu cadastro foi realizado com sucesso!",
+    icon: "success",
+        buttons: {
+            catch: {
+              text: "OK",
+              value: "certo",
+            },
+        }
+        })
         .then((value) => {
             switch (value) {
 
-                case "OK":
-                    window.location.href = './.html';
+                case "certo":
+                    window.location.href = './login.html';
                     break;
             }
 
         });
 
 }
+
