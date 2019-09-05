@@ -11,7 +11,7 @@
         /**
          * Get do email
          */ 
-        public function getEmail()
+        protected function getEmail()
         {
             return $this->email;
         }
@@ -21,7 +21,7 @@
          *
          * @return  self
          */ 
-        public function setEmail($email)
+        protected function setEmail($email)
         {
             $this->email = $email;
         }
@@ -29,7 +29,7 @@
         /**
          * Get do plano
          */ 
-        public function getPlano()
+        protected function getPlano()
         {
             return $this->plano;
         }
@@ -39,7 +39,7 @@
          *
          * @return  self
          */ 
-        public function setPlano($plano)
+        protected function setPlano($plano)
         {
             $this->plano = $plano;
         }
@@ -47,7 +47,7 @@
         /**
          * Get do TipoDeUsuario
          */ 
-        public function getTipoDeUsuario()
+        protected function getTipoDeUsuario()
         {
             return $this->TipoDeUsuario;
         }
@@ -57,7 +57,7 @@
          *
          * @return  self
          */ 
-        public function setTipoDeUsuario($TipoDeUsuario)
+        protected function setTipoDeUsuario($TipoDeUsuario)
         {
             $this->TipoDeUsuario = $TipoDeUsuario;
         }
@@ -71,7 +71,7 @@
          *
          * @return void
          */
-        public function IncluirUsuario(){
+        protected function IncluirUsuario(){
             
         }
         
@@ -80,7 +80,7 @@
          *
          * @return void
          */
-        public function VerUsuario(){
+        protected function VerUsuario(){
 
         }
 
@@ -89,7 +89,7 @@
          *
          * @return void
          */
-        public function AlterarUsuario(){
+        protected function AlterarUsuario(){
 
         }
 
@@ -98,7 +98,7 @@
          *
          * @return void
          */
-        public function DeletarUsuario(){
+        protected function DeletarUsuario(){
             
         }
 
@@ -112,8 +112,8 @@
          * @param var $dados
          * @return void
          */
-        public function CriptografiaDeDado($dados){
-            return base64_encode($dados);
+        protected function CriptografiaDeDado($dados){
+            return base64_encode($dados);                                                                                                                                                  
         }
 
         /**
@@ -122,7 +122,7 @@
          * @param var $dados
          * @return void
          */
-        public function DescriptografiaDeDados($dados){
+        protected function DescriptografiaDeDados($dados){
             return base64_decode($dados);
         }
     }
