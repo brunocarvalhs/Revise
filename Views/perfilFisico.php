@@ -72,7 +72,7 @@
                                     </a>
                                 </li>
                                 <li class="sidebar-content">
-                                    <a href="./perfilFisico.php">
+                                    <a href="#">
                                         <i class="fa fa-user-circle" aria-hidden="true"></i>
                                         <span>Perfil</span>
                                     </a>
@@ -125,8 +125,76 @@
                 <button></button>
             </div>
         </div>
-
-
+        <!--Perfil Usuario Fisico-->
+        <form action="" method="POST" onsubmit="">
+                <div class="container">
+           <!-- Nome do formulario -->
+           <div class="row">
+            <div class="col-12">
+                <h4>Dados pessoais</h4>
+            </div>
+        </div>
+        <div class="row formularioCadastro">
+            <div class="col-12">
+                <!-- Nome completo -->
+                <div class="form-group inputCadastro">
+                    <div class="form-row">
+                        <div class="col-12">
+                            <label for="campoNome">Nome completo</label>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md col-lg col-xl">
+                            <input type="text" class="form-control" id="campoNome" placeholder="Nome">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md col-lg col-xl">
+                            <input type="text" class="form-control" id="campoSobrenome"
+                                placeholder="Sobrenome">
+                        </div>
+                    </div>
+                </div>
+                <!-- E-mail -->
+                <div class="form-group inputCadastro">
+                    <label for="exampleFormControlInput1">Endereço de email</label>
+                    <input type="email" class="form-control" id="campoEmail"
+                        placeholder="nome@exemplo.com">
+                </div>
+                <div class="form-group inputCadastro">
+                    <div class="form-row">
+                        <!-- CPF -->
+                        <div class="col-12 col-sm-12 col-md col-lg col-xl">
+                            <label for="exampleFormControlInput1">CPF</label>
+                            <input type="text" class="form-control" id="campoDoCpf"
+                                placeholder="xxx.xxx.xxx-xx">
+                        </div>
+                        <!-- Data de nascimento -->
+                        <div class="col-12 col-sm-12 col-md col-lg col-xl">
+                            <label for="exampleFormControlInput1">Data de nascimento</label>
+                            <input type="date" class="form-control" id="campoDeNascimento"
+                                placeholder="nome@exemplo.com">
+                        </div>
+                    </div>
+                </div>
+                <!-- Senha -->
+                <div class="form-group inputCadastro">
+                    <label for="campoSenha">Senha</label>
+                    <input type="password" id="campoSenha" class="form-control"
+                        aria-describedby="descricaoSenha">
+                    <small id="descricaoSenha" class="form-text text-muted">
+                        Sua senha deve ter entre 6 e 20 caracteres, os quais devem ser letras e números,
+                        sem
+                        espaços, caracteres especiais ou emojis.
+                    </small>
+                </div>
+                <!-- Confirma senha -->
+                <div class="form-group inputCadastro">
+                    <label for="campoSenha">Confirmar senha</label>
+                    <input type="password" id="campoConfirmaSenha" class="form-control"
+                        aria-describedby="descricaoSenha">
+                </div>
+            </div>
+        </div>
+</div>
+</form>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
