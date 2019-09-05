@@ -155,14 +155,9 @@ CONSTRAINT pk_bairro_cidade
 CREATE TABLE tb_peca(
 cd_peca int not null,
 nm_peca varchar(255),
-qt_medida int,
-sg_medida char(2),
 cd_tipo_peca int,
 CONSTRAINT pk_peca
 	PRIMARY KEY(cd_peca),
-CONSTRAINT fk_peca_unidade
-	FOREIGN KEY(sg_medida)
-		REFERENCES tb_medida(sg_medida),
 CONSTRAINT fk_peca_tipo
 	FOREIGN KEY (cd_tipo_peca)
 		REFERENCES tb_tipo_peca(cd_tipo_peca)
@@ -204,7 +199,6 @@ CONSTRAINT fk_anuncio_tipo
 CREATE TABLE tb_modelo(
 cd_modelo int not null,
 nm_modelo VARCHAR(255),
-aa_modelo INT,
 cd_tipo_modelo int,
 cd_categoria int,
 cd_marca int,
@@ -224,6 +218,8 @@ CONSTRAINT fk_marca
 CREATE TABLE tb_veiculo(
 cd_veiculo int not null,
 nm_cor varchar(255),
+aa_veiculo INT,
+qt_quilometragem varchar(255),
 cd_placa varchar(8),
 cd_usuario int,
 cd_modelo int,
@@ -254,4 +250,16 @@ CONSTRAINT fk_check_status
 CONSTRAINT fk_check_peca
 	FOREIGN KEY(cd_peca)
 		REFERENCES tb_peca(cd_peca)
+);
+
+CREATE TABLE tb_medida_peca(
+	cd_peca int,
+	qt_medida double, 
+	sg_medida char(2),
+	CONSTRAINT 
+		FOREIGN KEY(cd_peca)
+			REFERENCES tb_peca(cd_peca),
+	CONSTRAINT 
+		FOREIGN KEY (sg_medida)
+			REFERENCES tb_medida(sg_medida)
 );
