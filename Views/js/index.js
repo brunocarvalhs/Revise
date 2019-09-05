@@ -32,5 +32,5 @@ function signUp(){
         }
       });
     
-
+    }
 
