@@ -1,65 +1,51 @@
 <?php
+require_once 'modelUsuario.php';
 
-    require_once 'modelUsuario.php';
+class UserFisico extends Usuario
+{
+    private $nome;
+    private $cpf;
+    private $dataNascimento;
 
-    use Usuario;
-
-
-    /**
-     * Classe do Usuario Fisico 
-     * 
-     * Diretorio Pai - Models
-     * 
-     * @version 1.0.0
-     */
-    class Fisico extends Usuario{
+    function __construct($id)
+    {
         
-        private $IDFisico;
-        private $Nome;
-        private $CPF;
-        
-
-
-        // --------------- Métodos CRUD --------------- //
-
-        /**
-         * Método de Incluir usuario Fisico (Create)
-         *
-         * @return void
-         */
-        public function IncluirFisico(){
-            
-        }
-        
-        /**
-         * Método de Ver Fisico (Read)
-         *
-         * @return void
-         */
-        public function VerFisico(){
-
-        }
-
-        /**
-         * Método de Alterar Fisico (Update)
-         *
-         * @return void
-         */
-        public function AlterarFisico(){
-
-        }
-
-        /**
-         * Método de Deletar Fisico (Delete)
-         *
-         * @return void
-         */
-        public function DeletarFisico(){
-            
-        }
-
-
-        // -------- Métodos Regra de Negocios -------- //
     }
 
+    protected function getNome()
+    {
+        return $this->nome;
+    }
+
+    protected function setNome($nome)
+    {
+        $this->nome = $nome;
+
+        return $this;
+    }
+
+    protected function getCpf()
+    {
+        return $this->cpf;
+    }
+
+    protected function setCpf($cpf)
+    {
+        $this->cpf = $cpf;
+
+        return $this;
+    }
+
+    protected function getDataNascimento()
+    {
+        return $this->dataNascimento;
+    }
+
+    protected function setDataNascimento($dataNascimento)
+    {
+        $this->dataNascimento = $dataNascimento;
+
+        return $this;
+    }
+}
 ?>
