@@ -341,3 +341,7 @@ h6 {
 {
     margin-top: 50px;
 }
+
+.swal-overlay {
+    background-color: rgba(68, 68, 68, 0.45);
+  }

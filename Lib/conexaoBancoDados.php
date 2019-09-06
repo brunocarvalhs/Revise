@@ -2,8 +2,6 @@
 
     require_once 'dadosConexaoBanco.php';
 
-    use dadosConexaoBanco;
-
     /**
      * Classe conexaoBancoDados
      * Responsavel pela conexão com o banco
@@ -25,19 +23,13 @@
          * @return $conexao
          */
         public function ConexaoPDO(){
-            if($this->conectado === false){
                 try {
-
-                    $conexao = new PDO('host='.$this->servidor.':'.$this->porta.',dbname='.$this->NomeDoBanco,$this->usuario,$this->senha);
-
-                    ($conexao) ? $this->conectado = true : $this->conectado = false;
-
+                    $conexao = new PDO('mysql:host='.$this->getServidor().':'.$this->getPorta().',dbname='.$this->getNomeDoBanco(),$this->getUsuario(),$this->getSenha());
                     return $conexao;
-                    
                 } catch (PDOException $e) {
-                    $this->conectado = false;
+                    return $e;
                 }
-            }
+
         }
 
         /**
@@ -47,16 +39,8 @@
          * @return $conexao
          */
         public function ConexaoMySQLi(){
-            if($this->conectado === false){
-                $conexao = new mysqli($this->servidor,$this->usuario,$this->senha, $this->NomeDoBanco, $this->porta);
-
-                if($conexao->connect_errno){
-                    $conectado = false;
-                }
-                else{
-                    $conectado = true;
-                }
-            }
+                $conexao = new mysqli($this->getServidor(),$this->getUsuario(),$this->getSenha(), $this->getNomeDoBanco(), $this->getPorta());
+                return $conexao;
         }
 
         /**

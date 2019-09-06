@@ -1,129 +1,37 @@
 <?php
 
-    class Usuario{
-        
+    abstract class Usuario{
+        private $id;
         private $email;
-        private $plano;
-        private $TipoDeUsuario;
+        private $senha;
 
+        abstract function Logar();
+        abstract function Cadastrar();
+        abstract function DeletarConta();
+        abstract function Sair();
 
-
-        /**
-         * Get do email
-         */ 
-        public function getEmail()
+        protected function getId()
         {
-            return $this->email;
+                return $this->id;
         }
 
-        /**
-         * Set do email
-         *
-         * @return  self
-         */ 
-        public function setEmail($email)
+        protected function setId($id)
         {
-            $this->email = $email;
+                $this->id = $id;
+
+                return $this;
         }
 
-        /**
-         * Get do plano
-         */ 
-        public function getPlano()
+        protected function getEmail()
         {
-            return $this->plano;
+                return $this->email;
         }
 
-        /**
-         * Set do plano
-         *
-         * @return  self
-         */ 
-        public function setPlano($plano)
+        protected function setEmail($email)
         {
-            $this->plano = $plano;
-        }
+                $this->email = $email;
 
-        /**
-         * Get do TipoDeUsuario
-         */ 
-        public function getTipoDeUsuario()
-        {
-            return $this->TipoDeUsuario;
-        }
-
-        /**
-         * Set do TipoDeUsuario
-         *
-         * @return  self
-         */ 
-        public function setTipoDeUsuario($TipoDeUsuario)
-        {
-            $this->TipoDeUsuario = $TipoDeUsuario;
-        }
-        
-
-
-        // --------------- Métodos CRUD --------------- //
-
-        /**
-         * Método de Incluir Usuario (Create)
-         *
-         * @return void
-         */
-        public function IncluirUsuario(){
-            
-        }
-        
-        /**
-         * Método de Ver Usuario (Read)
-         *
-         * @return void
-         */
-        public function VerUsuario(){
-
-        }
-
-        /**
-         * Método de Alterar Usuario (Update)
-         *
-         * @return void
-         */
-        public function AlterarUsuario(){
-
-        }
-
-        /**
-         * Método de Deletar Usuario (Delete)
-         *
-         * @return void
-         */
-        public function DeletarUsuario(){
-            
-        }
-
-
-        // -------- Métodos Regra de Negocios -------- //
-
-
-        /**
-         * Método de CRIPTOGRAFIA base64
-         *
-         * @param var $dados
-         * @return void
-         */
-        public function CriptografiaDeDado($dados){
-            return base64_encode($dados);
-        }
-
-        /**
-         * Método de DESCRIPTOGRAFIA base64
-         *
-         * @param var $dados
-         * @return void
-         */
-        public function DescriptografiaDeDados($dados){
-            return base64_decode($dados);
+                return $this;
         }
     }
 

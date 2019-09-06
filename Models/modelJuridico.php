@@ -34,37 +34,37 @@
         /**
          * Gettes e Settes ID
          */
-        public function setIDUsuario($id){
+        private function setIDUsuario($id){
             $this->IDUsuario = $id;
         }
-        public function getIDUsuario(){
+        private function getIDUsuario(){
             return $this->IDUsuario;
         }
         /**
          * Gettes e Settes Nome Fantasia
          */
-        public function setNomeFantasia($NomeFantasia){
+        private function setNomeFantasia($NomeFantasia){
             $this->NomeFantasia = $NomeFantasia;
         }
-        public function getNomeFantasia(){
+        private function getNomeFantasia(){
             return $this->NomeFantasia;
         }
         /**
          * Gettes e Settes Razão Social
          */
-        public function setRazaoSocial($RazaoSocial){
+        private function setRazaoSocial($RazaoSocial){
             $this->RazaoSocial = $RazaoSocial;
         }
-        public function getRazaoSocial(){
+        private function getRazaoSocial(){
             return $this->RazaoSocial;
         }
         /**
          * Gettes e Settes CNPJ
          */
-        public function setCNPJ($CNPJ){
+        private function setCNPJ($CNPJ){
             $this->CNPJ = $CNPJ;
         }
-        public function getCNPJ(){
+        private function getCNPJ(){
             return $this->CNPJ;
         }
 
