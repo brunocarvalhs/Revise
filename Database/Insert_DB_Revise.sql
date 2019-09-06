@@ -7679,4 +7679,6 @@ VALUES
 	(9, 'Branco', 'TWK-7562', 9, 5),
 	(10, 'Preto Ouro Negro', 'VET-3175', 10, 2);
 
-INSERT INTO tb_logradouro (cd_logradouro, nm_logradouro, cd_usuario_juridico, cd_bairro) VALUES (1, 'Rua cidade de Santos', 1, 1);
+INSERT INTO tb_logradouro (cd_logradouro, nm_logradouro, cd_usuario_juridico, cd_bairro) VALUES (1, 'Rua cidade de Santos', 1, 1), (2, 'Rua cidade de Santos', 3, 3);
+
+
