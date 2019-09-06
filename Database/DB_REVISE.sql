@@ -110,6 +110,7 @@ cd_usuario_fisico int not null,
 nm_usuario_fisico varchar(255),
 cd_cpf varchar(13) not null,
 cd_usuario int,
+dt_nascimento,
 CONSTRAINT pk_usuario_fisico
 	PRIMARY KEY(cd_usuario_fisico),
 CONSTRAINT fk_fisico_usuario
