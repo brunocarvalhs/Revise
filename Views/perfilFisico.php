@@ -170,14 +170,16 @@
                             </div>
   <!--Botões para alteração-->
   <div class="row">
-        <div class="col-0 col-sm-0 col-md-6 col-lg-8 col-xl-8" style="background-color:blueviolet;"></div>
+        <div class="col-0 col-sm-0 col-md-6 col-lg-4 col-xl-4"></div>
         
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="background-color:pink;">
-                    <button class="btn btn-warning btn-block" 
-                        href="#" 
-                        onclick="">Alterar dados</button>
-               
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                    <button class="btn btn-warning btn-block"  onclick="aparecer_botao()">Alterar dados</button>
+                    
         </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" >
+        <button class="btn btn-warning btn-block" href="#" style="display: none;" id="btn_hidden">Salvar</button>
+        </div>
+
     </div>
                 </div>
             </form>
@@ -194,7 +196,7 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 <script src="./js/wow.js"></script>
-<script src="./js/index.js"></script>
+
 <!-- page-wrapper -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -202,5 +204,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
 
 </html>

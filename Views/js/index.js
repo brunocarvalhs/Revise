@@ -33,4 +33,10 @@ function signUp(){
       });
     
     }
-
+    function aparecer_botao()
+    {
+   var  ue = document.getElementById('btn_hidden');
+   
+       ue.style.display = 'block';
+     
+    }
