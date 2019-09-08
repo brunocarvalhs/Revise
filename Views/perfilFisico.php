@@ -144,14 +144,14 @@
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                         <input type="text" class="form-control" id="campoNome"
-                                            placeholder="Bruno Silva Carvalho">
+                                           >
                                     </div>
                                 </div>
                             </div>
                             <!-- E-mail -->
                             <div class="form-group inputCadastro">
                                 <label for="exampleFormControlInput1">Endereço de email</label>
-                                <input type="email" class="form-control" id="campoEmail" placeholder="nome@exemplo.com">
+                                <input type="email" class="form-control" id="campoEmail" >
                             </div>
                             <div class="form-group inputCadastro">
                                 <div class="form-row">
@@ -165,29 +165,32 @@
                                     <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                         <label for="exampleFormControlInput1">Data de nascimento</label>
                                         <input type="date" class="form-control" id="campoDeNascimento"
-                                            placeholder="nome@exemplo.com">
+                                          >
                                     </div>
                                 </div>
                             </div>
                             <!--Botões para alteração-->
                             <br>
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" >
-
-                                    <button type="button" class="btn btn-warning btn-block"
-                                        onclick="aparecer_botao()">Alterar dados</button>
-
+                            <div class="row" style="background-color: rgb(79, 14, 122);">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="background-color: brown;">
+                                    <button type="button" class="btn btn-warning btn-block" onclick="btnPerfil()">Alterar dados</button>
                                 </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: none;"
-                                id="btn_hidden">
-                                <button type="button" class="btn btn-warning btn-block"
-                                    onclick="confirmacao()">Salvar</button>
+                                <!--Botões escondidos-->
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" style="display: none; background-color: chartreuse;"
+                                    id="btn_hidden">
+                                    <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" style="background-color: chocolate;">
+                                                    <button type="button" class="btn btn-warning btn-block" onclick="Salvar()">Salvar</button>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" style="background-color: cornflowerblue;">
+                                                    <button type="button" class="btn btn-warning btn-block" onclick="Salvar()">Salvar</button>
+                                                </div>
+                                    </div>
+                                   
+                                </div>
                             </div>
-
                             </div>
-
-
-                        </div>
+                            </div>
             </form>
         </div>
     </div>
@@ -211,6 +214,6 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 <script src="./js/index.js"></script>
-<script src="./js/index.js"></script>
+<script src="./js/sweetalert.min.js"></script>
 
 </html>

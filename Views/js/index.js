@@ -33,36 +33,60 @@ function signUp() {
     });
 
 }
-function aparecer_botao() {
-  var ue = document.getElementById('btn_hidden');
-  if (ue.style.display = 'none') {
-    ue.style.display = 'block';
-
-  }
-  else
-    ue.style.display = 'block';
-}
-function confirmacao() {
-
-  swal("Deseja alterar suas informações de perfil?", {
+function btnPerfil() {
+  swal("Deseja realmente alterar suas informações?", {
     icon: "warning",
     buttons: {
-     
+
       catch: {
         text: "Sim",
         value: "Sim",
-      color: "warning",
+        color: "warning",
       },
-      cancel: true,
+      defeat: {
+        text: "Cancelar",
+        value: "cancel",
+        color: "warning",
+      },
+   
     },
   })
     .then((value) => {
       switch (value) {
 
         case "Sim":
-          window.location.href = './';
+          //Limpar Campos 
+          document.getElementById('campoNome').value = "";
+          document.getElementById('campoEmail').value = "";
+          document.getElementById('campoDoCpf').value = "";
+          document.getElementById('campoDeNascimento').value = "";
+          //Aparecer botão
+          var show = document.getElementById('btn_hidden');
+
+          if (show.style.display = 'none') {
+            show.style.display = 'block';
+
+          }
+          else
+            show.style.display = 'block';
           break;
 
-      }
+          case "cancel":
+            window.location.href('./perfilFisico.php')
+        }
+       
     });
-}
+    
+
+  }
+
+  function Salvar()
+  {
+    swal ( {
+      title : " Alterações realizadas com sucesso!" , 
+      ícone : "success" , 
+    } ) ; 
+    
+    
+  }
+ 
