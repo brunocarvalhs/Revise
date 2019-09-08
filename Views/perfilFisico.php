@@ -143,7 +143,8 @@
                                         <label for="campoNome">Nome completo</label>
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                        <input type="text" class="form-control" id="campoNome" placeholder="Bruno Silva Carvalho">
+                                        <input type="text" class="form-control" id="campoNome"
+                                            placeholder="Bruno Silva Carvalho">
                                     </div>
                                 </div>
                             </div>
@@ -168,20 +169,25 @@
                                     </div>
                                 </div>
                             </div>
-  <!--Botões para alteração-->
-  <div class="row">
-        <div class="col-0 col-sm-0 col-md-6 col-lg-4 col-xl-4"></div>
-        
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                    <button class="btn btn-warning btn-block"  onclick="aparecer_botao()">Alterar dados</button>
-                    
-        </div>
-        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" >
-        <button class="btn btn-warning btn-block" href="#" style="display: none;" id="btn_hidden">Salvar</button>
-        </div>
+                            <!--Botões para alteração-->
+                            <br>
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" >
 
-    </div>
-                </div>
+                                    <button type="button" class="btn btn-warning btn-block"
+                                        onclick="aparecer_botao()">Alterar dados</button>
+
+                                </div>
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: none;"
+                                id="btn_hidden">
+                                <button type="button" class="btn btn-warning btn-block"
+                                    onclick="confirmacao()">Salvar</button>
+                            </div>
+
+                            </div>
+
+
+                        </div>
             </form>
         </div>
     </div>
@@ -204,6 +210,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/index.js"></script>
 
 </html>
