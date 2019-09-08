@@ -130,7 +130,7 @@
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-            <br>
+            <br><br>
             <!--Perfil Usuario Fisico-->
             <form action="" method="POST" onsubmit="">
                 <div class="container-fluid">
@@ -171,19 +171,19 @@
                             </div>
                             <!--Botões para alteração-->
                             <br>
-                            <div class="row" style="background-color: rgb(79, 14, 122);">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="background-color: brown;">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: block;" id="btn_off">
                                     <button type="button" class="btn btn-warning btn-block" onclick="btnPerfil()">Alterar dados</button>
                                 </div>
                                 <!--Botões escondidos-->
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" style="display: none; background-color: chartreuse;"
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" style="display: none;"
                                     id="btn_hidden">
                                     <div class="row">
-                                            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" style="background-color: chocolate;">
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                                                     <button type="button" class="btn btn-warning btn-block" onclick="Salvar()">Salvar</button>
                                                 </div>
-                                                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" style="background-color: cornflowerblue;">
-                                                    <button type="button" class="btn btn-warning btn-block" onclick="Salvar()">Salvar</button>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5" >
+                                                    <button type="button" class="btn btn-warning btn-block" onclick="Cancelar()">Cancelar</button>
                                                 </div>
                                     </div>
                                    

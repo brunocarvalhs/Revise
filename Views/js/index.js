@@ -45,7 +45,7 @@ function btnPerfil() {
       },
       defeat: {
         text: "Cancelar",
-        value: "cancel",
+        value: "cancelar",
         color: "warning",
       },
    
@@ -62,17 +62,20 @@ function btnPerfil() {
           document.getElementById('campoDeNascimento').value = "";
           //Aparecer botão
           var show = document.getElementById('btn_hidden');
+          var hide = document.getElementById('btn_off');
 
-          if (show.style.display = 'none') {
+          if (show.style.display == 'none' && hide.style.display == 'block' ) {
             show.style.display = 'block';
-
+            hide.style.display = 'none';
           }
           else
             show.style.display = 'block';
-          break;
-
-          case "cancel":
-            window.location.href('./perfilFisico.php')
+            hide.style.display = 'none';
+            break;
+      
+          case "cancelar":
+            window.location.href('../index.html');
+            break;
         }
        
     });
@@ -82,11 +85,28 @@ function btnPerfil() {
 
   function Salvar()
   {
-    swal ( {
-      title : " Alterações realizadas com sucesso!" , 
-      ícone : "success" , 
-    } ) ; 
+    swal("Suas alterações foram salvas com sucesso", {
+      icon: "success",
+      buttons: {
+        catch: {
+          text: "OK",
+          value: "ok",
+        },
     
-    
+      },
+    })
+      .then((value) => {
+        switch (value) {
+  
+          case "ok":
+            window.location.reload();
+            break;     
+        }
+      });
+  
   }
- 
+ function Cancelar()
+ {
+  window.location.reload();
+  
+ }
