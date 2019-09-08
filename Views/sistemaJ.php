@@ -69,7 +69,7 @@
                                     </a>
                                 </li>
                                 <li class="sidebar-content">
-                                    <a href="#">
+                                    <a href="perfilJuridico.php">
                                         <i class="fa fa-user-circle" aria-hidden="true"></i>
                                         <span>Perfil</span>
                                     </a>

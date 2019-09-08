@@ -48,7 +48,7 @@ function btnPerfil() {
         value: "cancelar",
         color: "warning",
       },
-   
+
     },
   })
     .then((value) => {
@@ -64,49 +64,47 @@ function btnPerfil() {
           var show = document.getElementById('btn_hidden');
           var hide = document.getElementById('btn_off');
 
-          if (show.style.display == 'none' && hide.style.display == 'block' ) {
+          if (show.style.display == 'none' && hide.style.display == 'block') {
             show.style.display = 'block';
             hide.style.display = 'none';
           }
           else
             show.style.display = 'block';
-            hide.style.display = 'none';
-            break;
-      
-          case "cancelar":
-            window.location.href('../index.html');
-            break;
-        }
-       
+          hide.style.display = 'none';
+          break;
+
+        case "cancelar":
+          window.location.href('../index.html');
+          break;
+      }
+
     });
-    
 
-  }
 
-  function Salvar()
-  {
-    swal("Suas alterações foram salvas com sucesso", {
-      icon: "success",
-      buttons: {
-        catch: {
-          text: "OK",
-          value: "ok",
-        },
-    
+}
+
+function Salvar() {
+  swal("Suas alterações foram salvas com sucesso", {
+    icon: "success",
+    buttons: {
+      catch: {
+        text: "OK",
+        value: "ok",
       },
-    })
-      .then((value) => {
-        switch (value) {
-  
-          case "ok":
-            window.location.reload();
-            break;     
-        }
-      });
-  
-  }
- function Cancelar()
- {
+
+    },
+  })
+    .then((value) => {
+      switch (value) {
+
+        case "ok":
+          window.location.reload();
+          break;
+      }
+    });
+
+}
+function Cancelar() {
   window.location.reload();
-  
- }
+
+}
