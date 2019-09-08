@@ -56,10 +56,20 @@ function btnPerfil() {
 
         case "Sim":
           //Limpar Campos 
-          document.getElementById('campoNome').value = "";
-          document.getElementById('campoEmail').value = "";
-          document.getElementById('campoDoCpf').value = "";
-          document.getElementById('campoDeNascimento').value = "";
+          if (document.getElementById('sistemaJ'))
+          {
+            document.getElementById('razaoSocial').value = "";
+            document.getElementById('nomeFantasia').value = "";
+            document.getElementById('campoDoCnpj').value = "";
+            document.getElementById('campoEmail').value = "";
+          }
+          else
+          {
+            document.getElementById('campoNome').value = "";
+            document.getElementById('campoEmail').value = "";
+            document.getElementById('campoDoCpf').value = "";
+            document.getElementById('campoDeNascimento').value = "";
+          }
           //Aparecer botão
           var show = document.getElementById('btn_hidden');
           var hide = document.getElementById('btn_off');
@@ -108,3 +118,4 @@ function Cancelar() {
   window.location.reload();
 
 }
+

@@ -143,8 +143,8 @@
                                         <label for="campoNome">Nome completo</label>
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                        <input type="text" class="form-control" id="campoNome"
-                                           >
+                                        <input type="text" class="form-control" id="campoNome">
+                                           
                                     </div>
                                 </div>
                             </div>

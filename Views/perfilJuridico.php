@@ -22,7 +22,7 @@
     <title>Revise - Home</title>
 </head>
 
-<body>
+<body id="sistemaJ">
     <div class="row">
         <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3">
             <div class="container-fluid">
@@ -120,76 +120,72 @@
                 </div>
             </div>
         </div>
-
-    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-        <br><br>
-        <!--Perfil Usuario Fisico-->
-        <form action="" method="POST" onsubmit="">
-            <div class="container-fluid">
-                <div class="row formularioCadastro">
-                    <div class="col-12">
-                        <!-- Nome completo -->
-                        <div class="form-group inputCadastro">
-                                <div class="form-row">
-                                    <div class="col-12">
-                                        <label for="campoNome">Nome da Empresa</label>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+            <br><br>
+            <!--Perfil Usuario Jurídico-->
+            <form action="" method="POST" onsubmit="">
+                <div class="container-fluid">
+                    <div class="row formularioCadastro">
+                        <div class="col-12">
+                          <!-- Nome Empresa -->
+                          <div class="form-group inputCadastro">
+                                <div class="form-row">                                
+                                    <div class="col-12 col-sm-12 col-md col-lg col-xl">
+                                            <label for="campoNome">Nome Fantasia</label>
+                                        <input type="text" class="form-control" id="razaoSocial" >
                                     </div>
                                     <div class="col-12 col-sm-12 col-md col-lg col-xl">
-                                        <input type="text" class="form-control" id="campoNome" placeholder="Razão Social">
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md col-lg col-xl">
-                                        <input type="text" class="form-control" id="campoSobrenome"
-                                            placeholder="Nome Fantasia">
+                                            <label for="campoNome">Razão Social</label>
+                                        <input type="text" class="form-control" id="nomeFantasia">
+                                           
                                     </div>
                                 </div>
                             </div>
                             <!-- E-mail -->
                             <div class="form-group inputCadastro">
                                 <label for="exampleFormControlInput1">Endereço de email</label>
-                                <input type="email" class="form-control" id="campoEmail" required=""
-                                    placeholder="nome@exemplo.com">
+                                <input type="email" class="form-control" id="campoEmail" required="">
+                                 
                             </div>
                             <div class="form-group inputCadastro">
                                 <div class="form-row">
                                     <!-- CNPJ -->
                                     <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                         <label for="exampleFormControlInput1">CNPJ</label>
-                                        <input type="text" class="form-control" id="campoDoCpf"
-                                            placeholder="xxx.xxx.xxx-xx">
+                                        <input type="text" class="form-control" id="campoDoCnpj">
+                                          
                                     </div>
 
                                 </div>
                             </div>
-                            </div>
-                        </div>
-                        <!--Botões para alteração-->
-                        <br>
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: block;"
-                                id="btn_off">
-                                <button type="button" class="btn btn-warning btn-block" onclick="btnPerfil()">Alterar
-                                    dados</button>
-                            </div>
-                            <!--Botões escondidos-->
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" style="display: none;"
-                                id="btn_hidden">
-                                <div class="row">
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                        <button type="button" class="btn btn-warning btn-block"
-                                            onclick="Salvar()">Salvar</button>
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                        <button type="button" class="btn btn-warning btn-block"
-                                            onclick="Cancelar()">Cancelar</button>
-                                    </div>
+                            <!--Botões para alteração-->
+                            <br>
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: block;"
+                                    id="btn_off">
+                                    <button type="button" class="btn btn-warning btn-block"
+                                        onclick="btnPerfil()">Alterar dados</button>
                                 </div>
+                                <!--Botões escondidos-->
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" style="display: none;"
+                                    id="btn_hidden">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                                            <button type="button" class="btn btn-warning btn-block"
+                                                onclick="Salvar()">Salvar</button>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                                            <button type="button" class="btn btn-warning btn-block"
+                                                onclick="Cancelar()">Cancelar</button>
+                                        </div>
+                                    </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-        </form>
-    </div>
+            </form>
+        </div>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
