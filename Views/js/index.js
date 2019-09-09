@@ -118,4 +118,6 @@ function Cancelar() {
   window.location.reload();
 
 }
-
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
