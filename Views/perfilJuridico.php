@@ -79,7 +79,7 @@
                                         <li class="sidebar-content">
                                             <a href="#">
                                                 <i class="fa fa-wrench" aria-hidden="true"></i>
-                                                <span>Anuncios</span>
+                                                <span>Anúncios</span>
                                                 <span class="badge badge-pill badge-danger"><?php echo $peças; ?></span>
                                             </a>
                                         </li>
