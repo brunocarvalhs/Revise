@@ -1,5 +1,6 @@
 <?php
 require_once 'modelUsuario.php';
+require_once './Lib/connection.php';
 
 class UserFisico extends Usuario
 {
@@ -23,15 +24,18 @@ class UserFisico extends Usuario
     }
     public function Cadastrar()
     {
+        $conexao = new conexaoPDO;
+        $conexao = $conexao->getConnection();
         
+
     }
     public function DeletarConta()
     {
-        
+
     }
     public function Sair()
     {
-        
+
     }
 
     protected function getNome()
