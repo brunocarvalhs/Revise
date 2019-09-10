@@ -22,12 +22,11 @@ class UserFisico extends Usuario
     {
 
     }
-    public function Cadastrar()
+    public function Cadastrar($usuario)
     {
         $conexao = new conexaoPDO;
         $conexao = $conexao->getConnection();
-        
-
+        echo $usuario->getNome();
     }
     public function DeletarConta()
     {
