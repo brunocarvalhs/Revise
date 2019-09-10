@@ -28,14 +28,13 @@ body{
 
 .background{
     background-color: #ffffff;
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .logoRevise{
-    padding: 10px;
     display: block;
     margin-left: auto;
     margin-right: auto
@@ -54,7 +53,7 @@ body{
     text-align: center;
 }
 .formularioLogin{
-    padding: 10%;
+    margin: 10px;
 }
 .inputLogin{
     padding-top: 10px;
@@ -155,3 +154,4 @@ input{
     /* padding-bottom: 0px; */
 
 }
+

@@ -452,4 +452,12 @@ body, html{
   .chiller-theme .sidebar-footer>a:last-child {
       border-right: none;
   }
+
+
+  /*------------------------------------------*/
+  #container {
+    margin: 20px;
+    width: 400px;
+    height: 8px;
+}
   
