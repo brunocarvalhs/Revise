@@ -7,7 +7,29 @@ class UserFisico extends Usuario
     private $cpf;
     private $dataNascimento;
 
-    function __construct($id)
+    function __construct($id, $nome, $email, $cpf, $dataNascimento, $senha)
+    {
+        $this->setID($id);
+        $this->setNome($nome);
+        $this->setEmail($email);
+        $this->setCpf($cpf);
+        $this->setDataNascimento($dataNascimento);
+        $this->setSenha($senha);
+    }
+
+    public function Logar()
+    {
+
+    }
+    public function Cadastrar()
+    {
+        
+    }
+    public function DeletarConta()
+    {
+        
+    }
+    public function Sair()
     {
         
     }

@@ -1,6 +1,7 @@
 <?php
 
-    abstract class Usuario{
+abstract class Usuario
+{
         private $id;
         private $email;
         private $senha;
@@ -33,6 +34,18 @@
 
                 return $this;
         }
-    }
+
+        public function getSenha()
+        {
+                return $this->senha;
+        }
+
+        public function setSenha($senha)
+        {
+                $this->senha = $senha;
+
+                return $this;
+        }
+}
 
 ?>
