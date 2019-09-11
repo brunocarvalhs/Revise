@@ -22,11 +22,15 @@ class UserFisico extends Usuario
     {
 
     }
-    public function Cadastrar($usuario)
+    public function Cadastrar($usuario,$veiculo,$plano)
     {
         $conexao = new conexaoPDO;
         $conexao = $conexao->getConnection();
-        echo $usuario->getNome();
+        
+        $sqlUsuario = 'INSERT INTO tb_usuario (cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES ()';
+        $sqlUsuarioFisico = 'INSERT INTO tb_usuario_fisico (cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario) VALUES ()';
+        $sqlCadastroVeiculo = 'INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veiculo, qt_quilometragem) VALUES ()';
+
     }
     public function DeletarConta()
     {

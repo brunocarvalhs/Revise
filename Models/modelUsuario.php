@@ -7,7 +7,6 @@ abstract class Usuario
         private $senha;
 
         abstract function Logar();
-        abstract function Cadastrar();
         abstract function DeletarConta();
         abstract function Sair();
 
