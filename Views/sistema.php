@@ -134,12 +134,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" style="width: 30rem; height: 10rem;">
-                    <div class="card-body bg-dark">
+            <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3" style="background-color: brown; padding: 10px;">
+                <div class="card bg-dark" style="width: 30rem; height: 10rem;">
+                    <div class="card-body ">
                         <h5 class="card-title">Card title</h5>
                         <div id="container"></div>
                     </div>
                 </div>
+            </div>
             </div>
         </body>
         <script src="js/jquery.min.js"
