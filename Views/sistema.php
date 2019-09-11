@@ -137,7 +137,7 @@
             <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3" style="background-color: brown; padding: 10px;">
                 <div class="card bg-dark" style="width: 30rem; height: 10rem;">
                     <div class="card-body ">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title text white">Troca de óleo</h5>
                         <div id="container"></div>
                     </div>
                 </div>

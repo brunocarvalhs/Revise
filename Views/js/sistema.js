@@ -20,6 +20,7 @@ function infoKm() {
     title: "Bem Vindo(a)!",
     text: "Para iniciar o sistema é necessário inserir a quilometragem do seu carro:",
     content: "input",
+    value: "input",
     buttons: {
       catch: {
         text: "Continuar",
@@ -36,12 +37,20 @@ function infoKm() {
     switch (value) {
 
       case "Continuar":
+        if(value == 0)
+        {
+          alert('preencha o campo');
+        }
+        else
+        {
           swal({
             
             title: "Salvo",
             text: "Caso queira alterar vá na área de veículos",
             icon: "success",
           });
+        }
+         
         break;
         case "Obd2":
             swal({
