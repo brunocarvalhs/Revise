@@ -24,7 +24,7 @@
     <title>Revise - Home</title>
 </head>
 
-<body>
+<body onload="infoKm()">
     <div class="container-fluid">
         <div class="row">
             <div class="page-wrapper chiller-theme toggled">
@@ -146,5 +146,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+    <script src="./js/sweetalert.min.js"></script>
 
 </html>
