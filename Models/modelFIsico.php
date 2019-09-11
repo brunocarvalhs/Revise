@@ -4,6 +4,7 @@ require_once './Lib/connection.php';
 
 class UserFisico extends Usuario
 {
+    private $id;
     private $nome;
     private $cpf;
     private $dataNascimento;
@@ -22,14 +23,35 @@ class UserFisico extends Usuario
     {
 
     }
-    public function Cadastrar($usuario,$veiculo,$plano)
+    public function Cadastrar($usuario)
     {
         $conexao = new conexaoPDO;
         $conexao = $conexao->getConnection();
         
-        $sqlUsuario = 'INSERT INTO tb_usuario (cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES ()';
-        $sqlUsuarioFisico = 'INSERT INTO tb_usuario_fisico (cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario) VALUES ()';
-        $sqlCadastroVeiculo = 'INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veiculo, qt_quilometragem) VALUES ()';
+        $sqlUsuario = 'INSERT INTO tb_usuario (cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES (:id,:email,:senha,:plano,:tipo)';
+
+        $id = $usuario->getID();
+        $email = $usuario->getEmail();
+        $senha = $usuario->getSenha();
+        $plano = 5;
+        $tipo = 2;
+        
+        $stmt = $conexao->prepare($sqlUsuario);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':email', $email,  PDO::PARAM_STR);
+        $stmt->bindParam(':senha', $senha,  PDO::PARAM_STR);
+        $stmt->bindParam(':plano', $plano, PDO::PARAM_INT);
+        $stmt->bindParam(':tipo', $tipo, PDO::PARAM_INT);
+
+        if($stmt->execute())
+        {
+            echo 'Cadastro';
+        }
+        else
+        {
+            echo 'Não Cadastro';
+        }
+
 
     }
     public function DeletarConta()
@@ -76,5 +98,23 @@ class UserFisico extends Usuario
 
         return $this;
     }
+
+    protected function getId()
+    {
+        $conexao = new conexaoPDO;
+        $conexao = $conexao->getConnection();
+        $sql = "SELECT * FROM tb_usuario";
+
+        $stmt = $conexao->prepare($sql);
+        $stmt->execute();
+        $id = $stmt->rowCount() + 1;
+        return $id;
+    }
+
+    protected function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 }
-?>
