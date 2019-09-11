@@ -56,15 +56,13 @@ function btnPerfil() {
 
         case "Sim":
           //Limpar Campos 
-          if (document.getElementById('sistemaJ'))
-          {
+          if (document.getElementById('sistemaJ')) {
             document.getElementById('razaoSocial').value = "";
             document.getElementById('nomeFantasia').value = "";
             document.getElementById('campoDoCnpj').value = "";
             document.getElementById('campoEmail').value = "";
           }
-          else
-          {
+          else {
             document.getElementById('campoNome').value = "";
             document.getElementById('campoEmail').value = "";
             document.getElementById('campoDoCpf').value = "";
@@ -118,6 +116,9 @@ function Cancelar() {
   window.location.reload();
 
 }
+//Tooltips
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
+
