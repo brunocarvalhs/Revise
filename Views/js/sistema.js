@@ -19,8 +19,13 @@ function infoKm() {
   swal( {
     title: "Bem Vindo(a)!",
     text: "Para iniciar o sistema é necessário inserir a quilometragem do seu carro:",
-    content: "input",
-    value: "input",
+    content: {
+     element: "input",
+    attributes:
+    {
+      value: "",
+    },
+  
     buttons: {
       catch: {
         text: "Continuar",
@@ -32,24 +37,13 @@ function infoKm() {
       },
 
     },
+  }
   })
   .then((value) => {
     switch (value) {
 
       case "Continuar":
-        if(value == 0)
-        {
-          alert('preencha o campo');
-        }
-        else
-        {
-          swal({
-            
-            title: "Salvo",
-            text: "Caso queira alterar vá na área de veículos",
-            icon: "success",
-          });
-        }
+       swal(`You typed ${input}`);
          
         break;
         case "Obd2":
@@ -62,4 +56,13 @@ function infoKm() {
           break;
     }
   });
+
+  function salvo(){
+    swal({
+            
+      title: "Salvo",
+      text: "Caso queira alterar vá na área de veículos",
+      icon: "success",
+    });
+  }
 }
