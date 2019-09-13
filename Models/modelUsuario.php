@@ -1,37 +1,70 @@
 <?php
+require_once './Lib/connection.php';
 
-abstract class Usuario
+class Usuario
 {
         private $email;
         private $senha;
 
-        abstract function Logar();
-        abstract function DeletarConta();
-        abstract function Sair();
+        function __construct($email,$senha)
+        {
+                $this->setEmail($email);
+                $this->setSenha($senha);
+        }
+        
+        function Logar($usuario)
+        {
+                $conexao = new conexaoPDO;
+                $conexao = $conexao->getConnection();
+        
+                $sql = "SELECT * FROM tb_usuario WHERE nm_email = :email AND cd_senha = :senha";
 
-        protected function getEmail()
+                $email = $usuario->getEmail();
+                $senha = $usuario->getSenha();
+
+                $stmt = $conexao->prepare($sql);
+                $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+                $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+                
+                if($stmt->execute())
+                {
+                    $res = $stmt->rowCount(); 
+                    if($res === 1)
+                    {
+                        return true;
+                    } 
+                    else
+                    {
+                        return false;
+                    }
+                }
+                else
+                {
+                        return false;
+                }
+        }
+
+        private function getEmail()
         {
                 return $this->email;
         }
 
-        protected function setEmail($email)
+        private function setEmail($email)
         {
                 $this->email = $email;
 
                 return $this;
         }
 
-        public function getSenha()
+        private function getSenha()
         {
                 return $this->senha;
         }
 
-        public function setSenha($senha)
+        private function setSenha($senha)
         {
                 $this->senha = $senha;
 
                 return $this;
         }
 }
-
-?>

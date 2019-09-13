@@ -8,20 +8,17 @@ class UserFisico extends Usuario
     private $nome;
     private $cpf;
     private $dataNascimento;
+    private $tipoConta;
 
-    function __construct($id, $nome, $email, $cpf, $dataNascimento, $senha)
+    function __construct($id, $nome, $email, $cpf, $dataNascimento, $senha,$tipoConta)
     {
         $this->setID($id);
+        $this->setTipoConta($tipoConta);
         $this->setNome($nome);
         $this->setEmail($email);
         $this->setCpf($cpf);
         $this->setDataNascimento($dataNascimento);
         $this->setSenha($senha);
-    }
-
-    public function Logar()
-    {
-
     }
     public function Cadastrar($usuario)
     {
@@ -54,15 +51,6 @@ class UserFisico extends Usuario
 
 
     }
-    public function DeletarConta()
-    {
-
-    }
-    public function Sair()
-    {
-
-    }
-
     protected function getNome()
     {
         return $this->nome;
@@ -114,6 +102,16 @@ class UserFisico extends Usuario
     protected function setId($id)
     {
         $this->id = $id;
+
+        return $this;
+    }
+    protected function getTipoConta()
+    {
+        return $this->tipoConta;
+    }
+    protected function setTipoConta($tipoConta)
+    {
+        $this->tipoConta = $tipoConta;
 
         return $this;
     }
