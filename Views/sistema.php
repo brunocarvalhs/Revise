@@ -24,7 +24,7 @@
 </head>
 
 
-<body onload="infoKm()">
+<body>
     <div class="container-fluid">
 
         <body>
@@ -158,7 +158,8 @@
             crossorigin="anonymous"></script>
         <script src="./js/sweetalert.min.js"></script>
         <script src="js/progressbar.js"></script>
+        <script src="js/sistema.js"></script>
 </html>
-<script src="js/sistema.js"></script>
+
 
 </html>

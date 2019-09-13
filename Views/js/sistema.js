@@ -1,31 +1,26 @@
 var bar = new ProgressBar.Line(container, {
-    strokeWidth: 4,
-    easing: 'easeInOut',
-    duration: 1400,
-    color: '#FFEA82',
-    trailColor: '#eee',
-    trailWidth: 1,
-    svgStyle: {width: '100%', height: '100%'},
-    from: {color: '#FFEA82'},
-    to: {color: '#ED6A5A'},
-    step: (state, bar) => {
-      bar.path.setAttribute('stroke', state.color);
-    }
-  });
-  
-  bar.animate(1.0); 
-  //Alert da Quilometragem
+  strokeWidth: 4,
+  easing: 'easeInOut',
+  duration: 1400,
+  color: '#FFEA82',
+  trailColor: '#eee',
+  trailWidth: 1,
+  svgStyle: { width: '100%', height: '100%' },
+  from: { color: '#FFEA82' },
+  to: { color: '#ED6A5A' },
+  step: (state, bar) => {
+    bar.path.setAttribute('stroke', state.color);
+  }
+});
+
+bar.animate(1.0);
+//Alert da Quilometragem
 function infoKm() {
-  swal( {
+  swal({
     title: "Bem Vindo(a)!",
     text: "Para iniciar o sistema é necessário inserir a quilometragem do seu carro:",
-    content: {
-     element: "input",
-    attributes:
-    {
-      value: "",
-    },
-  
+    content: "input",
+    className: 'quilometragem',
     buttons: {
       catch: {
         text: "Continuar",
@@ -37,29 +32,40 @@ function infoKm() {
       },
 
     },
-  }
   })
-  .then((value) => {
-    switch (value) {
+    .then((value) => {
+      switch (value) {
 
-      case "Continuar":
-       swal(`You typed ${input}`);
-         
-        break;
-        case "Obd2":
+        case "Continuar": { 
+          swal({
+            title: "Bem Vindo(a)!",
+            text: "Para iniciar o sistema é necessário inserir a quilometragem do seu carro:",
+            content: "input",
+            className: 'quilometragem',
+            buttons: true
+          }).then((value) =>{
             swal({
               icon: "info",
-              text: "Para usar a função de captar a quilometragem com o Obd2 baixe o App em seu dispositivo móvel e siga os passos necessários"+
-               " para scanear",
- 
+              text: value,
             });
+          });
           break;
-    }
-  });
+        }
 
-  function salvo(){
+        case "Obd2": {
+          swal({
+            icon: "warning",
+            text: "Para usar a função de captar a quilometragem com o Obd2 (o sensor que ) baixe o App em seu dispositivo móvel e siga os passos necessários" +
+              " para scanear",
+          });
+          break;
+        }
+      }
+    });
+
+  function salvo() {
     swal({
-            
+
       title: "Salvo",
       text: "Caso queira alterar vá na área de veículos",
       icon: "success",
