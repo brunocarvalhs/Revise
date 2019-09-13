@@ -1,16 +1,16 @@
 
-$('.carousel').carousel({
+/*$('.carousel').carousel({
     pause: true,
     interval: false,
     keyboard: true,
     wrap: false,
-});
+});*/
+
 $(document).ready(function () {
 
     //Evento do clique de continuar
     $('#btnContinua').click(function () {
-        var camposParaValidar = BotaoContinuar($('#btnContinua').val());
-        return Validacao(camposParaValidar, (33.3333333 / camposParaValidar.length));
+        return Validacao();
     }
     );
 
@@ -24,17 +24,12 @@ $(document).ready(function () {
 
 });
 
-function BotaoContinuar(parametroDePagina) {
-    if (parametroDePagina == '2') {
-        var inputs = ["campoPlaca", "campoMarcaVeiculo", "campoModeloVeiculo", "campoAnoVeiculo", "campoCorVeiculo", "campoCidadeVeiculo", "campoEstado"];
-    }
-    else {
-        var inputs = ["campoNome", "campoSobrenome", "campoEmail", "campoDoCpf", "campoSenha", "campoConfirmaSenha"];
-    }
-    return inputs;
+function BotaoContinuar() {
+    return ["campoPlaca", "campoMarcaVeiculo", "campoModeloVeiculo", "campoAnoVeiculo", "campoCorVeiculo", "campoCidadeVeiculo", "campoEstado","campoNome", "campoSobrenome", "campoEmail", "campoDoCpf", "campoSenha", "campoConfirmaSenha",];
 }
 
-function Validacao(array, porcentagemPorUnidade) {
+function Validacao() {
+    var array = BotaoContinuar();
     for (input of array) {
         if ($('#' + input).val() == '') {
             alert('Campo em branco encontrado');
