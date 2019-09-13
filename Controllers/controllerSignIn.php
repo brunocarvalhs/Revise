@@ -13,7 +13,14 @@ if (!(empty($_POST['cpfcnpj'])) || !empty($_POST['senha'])) {
     $login = str_replace('"', '"', $login);
 
     //Senha
-    $senha = $_POST['senha'];
+    $senha = trim($_POST['senha']);
+    $senha = str_replace(".", "", $senha);
+    $senha = str_replace(",", "", $senha);
+    $senha = str_replace("-", "", $senha);
+    $senha = str_replace("/", "", $senha);
+    $senha = str_replace("'", "", $senha);
+    $senha = str_replace(";", "", $senha);
+    $senha = str_replace('"', '"', $senha);
 
 
     
