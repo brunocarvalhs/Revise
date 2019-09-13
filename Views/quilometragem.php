@@ -8,10 +8,9 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
     <link rel="stylesheet" type="text/css" href="/Views/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/sistema.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Quilometragem</title>
 </head>
-<body onload="infoKm()" style= "background-image:  url('../img/backgroundLogin.jpg');">     
+<body onload="infoKm()" >     
 </body>
 <script src="js/jquery.min.js"
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

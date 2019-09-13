@@ -21,6 +21,8 @@ function infoKm() {
     text: "Para iniciar o sistema é necessário inserir a quilometragem do seu carro:",
     content: "input",
     className: 'quilometragem',
+    closeOnClickOutside: false,
+    closeOnEsc: false,
     buttons: {
       catch: {
         text: "Continuar",
