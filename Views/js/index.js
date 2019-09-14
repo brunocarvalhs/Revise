@@ -6,7 +6,7 @@ function signUp() {
   swal("Qual tipo de cadastro você deseja fazer?", {
     icon: "info",
     buttons: {
-      cancel: true,
+      text: "Cancelar",
       catch: {
         text: "Jurídico",
         value: "juridico",
