@@ -57,7 +57,7 @@ function infoKm() {
 
         case "Obd2": {
           swal({
-            imageUrl: "../logo.png",
+            imageUrl: "..j/logo.png",
 
             closeOnClickOutside: false,
             closeOnEsc: false,
