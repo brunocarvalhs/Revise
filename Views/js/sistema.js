@@ -17,9 +17,8 @@ bar.animate(1.0);
 //Alert da Quilometragem
 function infoKm() {
   swal({
-    title: "Bem Vindo(a)!",
-    text: "Para iniciar o sistema é necessário inserir a quilometragem do seu carro:",
-    content: "input",
+    title: "Bem Vindo(a) ao Revise!",
+    text: "Para iniciar o sistema é necessário informar a quilometragem do seu carro. Deseja inserir manualmente ou utilizar o Obd2 (sensor do carro)? ",
     className: 'quilometragem',
     closeOnClickOutside: false,
     closeOnEsc: false,
@@ -41,6 +40,8 @@ function infoKm() {
         case "Continuar": { 
           swal({
             title: "Bem Vindo(a)!",
+            closeOnClickOutside: false,
+            closeOnEsc: false,
             text: "Para iniciar o sistema é necessário inserir a quilometragem do seu carro:",
             content: "input",
             className: 'quilometragem',
@@ -56,7 +57,10 @@ function infoKm() {
 
         case "Obd2": {
           swal({
-            icon: "warning",
+            imageUrl: "../logo.png",
+
+            closeOnClickOutside: false,
+            closeOnEsc: false,
             text: "Para usar a função de captar a quilometragem com o Obd2 (o sensor que ) baixe o App em seu dispositivo móvel e siga os passos necessários" +
               " para scanear",
           });
