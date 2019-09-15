@@ -58,23 +58,53 @@ function infoKm() {
             }
 
           }).then((value) =>{
-            swal({
-              icon: "success",
-              title: "Salvo", 
-              text: "Quilometragem:  " +  value,
-            });
-          });
+              if(value != '')
+              {
+      
+                  swal({
+              
+                    title: "Salvo",
+                    text: "Caso queira alterar vá na área de veículos",
+                    icon: "success",
+                    button: 
+                      {
+                        text: "Ok",
+                        className: "swal-button--style",
+                        value: "ok",
+                      }
+                  })
+               
+                .then((value) => {
+                  switch (value) {
+            
+                    case "ok":
+                      window.location.href('../sistema.php');
+                     
+                      break;
+                  }
+                });
+            
+                }
+              else
+              {
+                alert('Campo Vazio');
+                window.location.reload();
+              }
+            })
           break;
         }
-
+    
         case "Obd2": {
           swal({
-            imageUrl: "..j/logo.png",
-
             closeOnClickOutside: false,
             closeOnEsc: false,
             text: "Para usar a função de captar a quilometragem com o Obd2 (o sensor que ) baixe o App em seu dispositivo móvel e siga os passos necessários" +
               " para scanear",
+              button:
+              {
+                text: "Ok",
+                className: "swal-button--style",
+              }
           });
           break;
         }
