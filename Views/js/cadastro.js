@@ -32,7 +32,7 @@ function fisico() {
 function redirecionar() {
     window.location.href = './redirecionamento.html';
 }
-*/
+
 
 function alertaOK() {
     swal({ title: "Seu cadastro foi realizado com sucesso!",
@@ -54,6 +54,7 @@ function alertaOK() {
 
         });
     }})
+    */
 
     $(document).ready(function () {
         $('#servicoInput').click(function () {
@@ -76,3 +77,4 @@ function alertaOK() {
             $('#valorTotal').text('R$  ' + (valorServico + valorProduto));
         });
     });
+})
