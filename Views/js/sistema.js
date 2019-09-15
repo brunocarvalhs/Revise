@@ -17,39 +17,51 @@ bar.animate(1.0);
 //Alert da Quilometragem
 function infoKm() {
   swal({
-    title: "Bem Vindo(a) ao Revise!",
-    text: "Para iniciar o sistema é necessário informar a quilometragem do seu carro. Deseja inserir manualmente ou utilizar o Obd2 (sensor do carro)? ",
+    title: "Bem Vindo ao Revise!",
+    text: "Para iniciar o sistema é necessário informar a quilometragem do seu carro. Deseja inserir manualmente ou utilizar o Obd2 (sensor do carro)?",
     className: 'quilometragem',
     closeOnClickOutside: false,
     closeOnEsc: false,
+    
+    //botões
+    
     buttons: {
+      
       catch: {
-        text: "Continuar",
-        value: "Continuar",
+        
+        text: "Manualmente",
+        value: "Manualmente",
+        className: "swal-button--style"
       },
       defeat: {
-        text: "Usar Obd2 para captar Km ",
+        text: "Obd2",
         value: "Obd2",
+          className: "swal-button--style",
       },
 
     },
+    
   })
+  //tomada de decisão dos botões
     .then((value) => {
       switch (value) {
 
-        case "Continuar": { 
+        case "Manualmente": { 
           swal({
-            title: "Bem Vindo(a)!",
+            texte: "Digite a quilometragm do seu veículo:",
             closeOnClickOutside: false,
             closeOnEsc: false,
-            text: "Para iniciar o sistema é necessário inserir a quilometragem do seu carro:",
             content: "input",
-            className: 'quilometragem',
-            buttons: true
+            button: {
+              text: "Salvar",
+              className: "swal-button--style"
+            }
+
           }).then((value) =>{
             swal({
-              icon: "info",
-              text: value,
+              icon: "success",
+              title: "Salvo", 
+              text: "Quilometragem:  " +  value,
             });
           });
           break;
