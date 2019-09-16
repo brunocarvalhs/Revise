@@ -22,13 +22,13 @@ function infoKm() {
     className: 'quilometragem',
     closeOnClickOutside: false,
     closeOnEsc: false,
-    
+
     //botões
-    
+
     buttons: {
-      
+
       catch: {
-        
+
         text: "Manualmente",
         value: "Manualmente",
         className: "swal-button--style"
@@ -36,17 +36,17 @@ function infoKm() {
       defeat: {
         text: "Obd2",
         value: "Obd2",
-          className: "swal-button--style",
+        className: "swal-button--style",
       },
 
     },
-    
+
   })
-  //tomada de decisão dos botões
+    //tomada de decisão dos botões
     .then((value) => {
       switch (value) {
 
-        case "Manualmente": { 
+        case "Manualmente": {
           swal({
             texte: "Digite a quilometragm do seu veículo:",
             closeOnClickOutside: false,
@@ -57,56 +57,62 @@ function infoKm() {
               className: "swal-button--style"
             }
 
-          }).then((value) =>{
-              if(value != '')
-              {
-      
-                  swal({
-              
-                    title: "Salvo",
-                    text: "Caso queira alterar vá na área de veículos",
-                    icon: "success",
-                    button: 
-                      {
-                        text: "Ok",
-                        className: "swal-button--style",
-                        value: "ok",
-                      }
-                  })
-               
+          }).then((value) => {
+            if (value != '') {
+
+              swal({
+
+                title: "Salvo",
+                text: "Caso deseje alterar sua quilometragem acesse a área das informações do veículo.",
+                icon: "success",
+                closeOnClickOutside: false,
+                closeOnEsc: false,
+                button:
+                {
+                  text: "Ok",
+                  className: "swal-button--style",
+                  value: "ok",
+                  
+                }
+              })
+
                 .then((value) => {
                   switch (value) {
-            
+
                     case "ok":
-                      window.location.href('../sistema.php');
-                     
+
+                      window.location = './sistema.php';
+
                       break;
                   }
                 });
-            
-                }
-              else
-              {
-                alert('Campo Vazio');
-                window.location.reload();
-              }
-            })
+
+
+            }
+            else {
+              alert('Campo Vazio');
+              window.location.reload();
+            }
+          })
           break;
         }
-    
+
         case "Obd2": {
           swal({
+            icon: "info",
             closeOnClickOutside: false,
             closeOnEsc: false,
-            text: "Para usar a função de captar a quilometragem com o Obd2 (o sensor que ) baixe o App em seu dispositivo móvel e siga os passos necessários" +
-              " para scanear",
-              button:
-              {
-                text: "Ok",
-                className: "swal-button--style",
-              }
-          });
-          break;
+            text: "Para usar a função de captar a quilometragem com o sensor Obd2, baixe o App Revise em seu dispositivo móvel"+ 
+           " e siga os passos realizar o escaneamento.",
+            button:
+            {
+              text: "Ok",
+              className: "swal-button--style",
+            }
+          })
+          .then((value) => {     
+            window.location.reload();     
+          })
         }
       }
     });
