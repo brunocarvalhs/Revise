@@ -58,7 +58,7 @@ function infoKm() {
             }
 
           }).then((value) => {
-            if (value != '') {
+            if (value != ''  && isNaN(value) == false) {
 
               swal({
 
@@ -89,8 +89,9 @@ function infoKm() {
 
 
             }
+           
             else {
-              alert('Campo Vazio');
+              alert('Preencha o campo somente com números');
               window.location.reload();
             }
           })
