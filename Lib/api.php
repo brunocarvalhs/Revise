@@ -18,7 +18,7 @@ function getStr2($string, $start, $end) {
 	}
 
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'http://18.229.136.80:3000/'.$placa);
+	curl_setopt($ch, CURLOPT_URL, 'http://18.229.136.80:8080/'.$placa);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
