@@ -6,19 +6,21 @@ class UserFisico extends Usuario
 {
     private $id;
     private $nome;
-    private $cpf;
     private $dataNascimento;
     private $tipoConta;
+    private $email;
+    private $plano;
 
-    function Cadastrar($id, $nome, $email, $cpf, $dataNascimento, $senha,$tipoConta)
+    function Cadastrar($nome, $email, $cpf, $dataNascimento, $senha,$tipoConta,$plano)
     {
-        $this->setID($id);
+        $this->setID($this->getID());
         $this->setTipoConta($tipoConta);
         $this->setNome($nome);
         $this->setEmail($email);
-        $this->setCpf($cpf);
+        $this->setCPFouCNPJ($cpf);
         $this->setDataNascimento($dataNascimento);
         $this->setSenha($senha);
+        $this->setPlano($plano);
     }
 
     public function logar($CPFouCNPJ,$senha)
@@ -113,6 +115,38 @@ class UserFisico extends Usuario
     private function setTipoConta($tipoConta)
     {
         $this->tipoConta = $tipoConta;
+
+        return $this;
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of plano
+     */ 
+    public function getPlano()
+    {
+        return $this->plano;
+    }
+
+    /**
+     * Set the value of plano
+     *
+     * @return  self
+     */ 
+    public function setPlano($plano)
+    {
+        $this->plano = $plano;
 
         return $this;
     }
