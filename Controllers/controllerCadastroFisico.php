@@ -18,9 +18,13 @@ $modelo = $Separadormodelo[0];
 $ano = $_POST["txtAno"];
 $cor = $_POST["txtCor"];
 $plano = $_POST["txtplano"];
+
+$usuario = new UserFisico;
+$usuario->cadastrar($nome,$email,$cpf,$nascimento,$senha,1,$plano);
+echo '<pre>';
+print_r($usuario);
+echo '<br>';
 $veiculo = new Veiculo;
-
-
 $veiculo->cadastrar($placa,$modelo,$ano,$cor);
 echo '<pre>';
 print_r($veiculo);

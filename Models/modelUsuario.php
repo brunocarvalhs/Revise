@@ -8,24 +8,24 @@ abstract class Usuario
 
         public abstract function logar($CPFouCNPJ,$senha);
 
-        private function getCPFouCNPJ()
+        protected function getCPFouCNPJ()
         {
                 return $this->CPFouCNPJ;
         }
 
-        private function setCPFouCNPJ($CPFouCNPJ)
+        protected function setCPFouCNPJ($CPFouCNPJ)
         {
                 $this->CPFouCNPJ = $CPFouCNPJ;
 
                 return $this;
         }
 
-        private function getSenha()
+        protected function getSenha()
         {
                 return $this->senha;
         }
  
-        private function setSenha($senha)
+        protected function setSenha($senha)
         {
                 $this->senha = $senha;
 
