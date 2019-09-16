@@ -1,6 +1,6 @@
 function consultar() {
     var placa = $("#txtplaca").val();
-    var urlStr = "http://localhost/Revise/lib/api.php?placa=" + placa;
+    var urlStr = "./lib/api.php?placa=" + placa;
 
     $.ajax({
         url: urlStr,
