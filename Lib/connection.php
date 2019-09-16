@@ -28,60 +28,60 @@ class conexaoPDO
         }
     }
 
-    public function getHost()
+    private function getHost()
     {
         return $this->host;
     }
 
-    public function setHost($host)
+    private function setHost($host)
     {
         $this->host = $host;
 
         return $this;
     }
 
-    public function getPorta()
+    private function getPorta()
     {
         return $this->porta;
     }
 
-    public function setPorta($porta)
+    private function setPorta($porta)
     {
         $this->porta = $porta;
 
         return $this;
     }
 
-    public function getDbName()
+    private function getDbName()
     {
         return $this->dbName;
     }
 
-    public function setDbName($dbName)
+    private function setDbName($dbName)
     {
         $this->dbName = $dbName;
 
         return $this;
     }
 
-    public function getUsuario()
+    private function getUsuario()
     {
         return $this->usuario;
     }
 
-    public function setUsuario($usuario)
+    private function setUsuario($usuario)
     {
         $this->usuario = $usuario;
 
         return $this;
     }
 
-    public function getSenha()
+    private function getSenha()
     {
         return $this->senha;
     }
 
-    public function setSenha($senha)
+    private function setSenha($senha)
     {
         $this->senha = $senha;
 

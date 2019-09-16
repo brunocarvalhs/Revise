@@ -1,6 +1,6 @@
 <?php
 require_once 'modelUsuario.php';
-require_once './Lib/connection.php';
+require_once '../Lib/connection.php';
 
 class UserFisico extends Usuario
 {
@@ -10,7 +10,7 @@ class UserFisico extends Usuario
     private $dataNascimento;
     private $tipoConta;
 
-    function __construct($id, $nome, $email, $cpf, $dataNascimento, $senha,$tipoConta)
+    function Cadastrar($id, $nome, $email, $cpf, $dataNascimento, $senha,$tipoConta)
     {
         $this->setID($id);
         $this->setTipoConta($tipoConta);
@@ -20,74 +20,75 @@ class UserFisico extends Usuario
         $this->setDataNascimento($dataNascimento);
         $this->setSenha($senha);
     }
-    public function Cadastrar($usuario)
+
+    public function logar($CPFouCNPJ,$senha)
     {
-        $conexao = new conexaoPDO;
-        $conexao = $conexao->getConnection();
-        
-        $sqlUsuario = 'INSERT INTO tb_usuario (cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES (:id,:email,:senha,:plano,:tipo)';
 
-        $id = $usuario->getID();
-        $email = $usuario->getEmail();
-        $senha = $usuario->getSenha();
-        $plano = 5;
-        $tipo = 2;
-        
-        $stmt = $conexao->prepare($sqlUsuario);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->bindParam(':email', $email,  PDO::PARAM_STR);
-        $stmt->bindParam(':senha', $senha,  PDO::PARAM_STR);
-        $stmt->bindParam(':plano', $plano, PDO::PARAM_INT);
-        $stmt->bindParam(':tipo', $tipo, PDO::PARAM_INT);
+            $conn = new conexaoPDO;
+            $conn = $conn->getConnection();
 
-        if($stmt->execute())
-        {
-            echo 'Cadastro';
-        }
-        else
-        {
-            echo 'Não Cadastro';
-        }
+            $sql = "call chkLoginFisico(:CPFouCNPJ,:senha)";
 
-
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':CPFouCNPJ', $CPFouCNPJ, PDO::PARAM_INT);
+            $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+            
+            if($stmt->execute())
+            {
+                    $RES = $stmt->rowCount(); 
+                    if($RES == 1)
+                    {
+                            return true;
+                    }
+                    else
+                    {
+                            return false;
+                    }
+            }
+            else
+            {
+                    echo "Falha na Execução";
+            }
     }
-    protected function getNome()
+
+
+    private function getNome()
     {
         return $this->nome;
     }
 
-    protected function setNome($nome)
+    private function setNome($nome)
     {
         $this->nome = $nome;
 
         return $this;
     }
 
-    protected function getCpf()
+    private function getCpf()
     {
         return $this->cpf;
     }
 
-    protected function setCpf($cpf)
+    private function setCpf($cpf)
     {
         $this->cpf = $cpf;
 
         return $this;
     }
 
-    protected function getDataNascimento()
+    private function getDataNascimento()
     {
         return $this->dataNascimento;
     }
 
-    protected function setDataNascimento($dataNascimento)
+    private function setDataNascimento($dataNascimento)
     {
         $this->dataNascimento = $dataNascimento;
 
         return $this;
     }
 
-    protected function getId()
+    private function getId()
     {
         $conexao = new conexaoPDO;
         $conexao = $conexao->getConnection();
@@ -99,17 +100,17 @@ class UserFisico extends Usuario
         return $id;
     }
 
-    protected function setId($id)
+    private function setId($id)
     {
         $this->id = $id;
 
         return $this;
     }
-    protected function getTipoConta()
+    private function getTipoConta()
     {
         return $this->tipoConta;
     }
-    protected function setTipoConta($tipoConta)
+    private function setTipoConta($tipoConta)
     {
         $this->tipoConta = $tipoConta;
 

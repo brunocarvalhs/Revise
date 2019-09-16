@@ -1,57 +1,21 @@
 <?php
-require_once './Lib/connection.php';
+require_once '../Lib/connection.php';
 
-class Usuario
+abstract class Usuario
 {
-        private $email;
+        private $CPFouCNPJ;
         private $senha;
 
-        function __construct($email,$senha)
-        {
-                $this->setEmail($email);
-                $this->setSenha($senha);
-        }
-        
-        function Logar($usuario)
-        {
-                $conexao = new conexaoPDO;
-                $conexao = $conexao->getConnection();
-        
-                $sql = "SELECT * FROM tb_usuario WHERE nm_email = :email AND cd_senha = :senha";
+        public abstract function logar($CPFouCNPJ,$senha);
 
-                $email = $usuario->getEmail();
-                $senha = $usuario->getSenha();
-
-                $stmt = $conexao->prepare($sql);
-                $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-                $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
-                
-                if($stmt->execute())
-                {
-                    $res = $stmt->rowCount(); 
-                    if($res === 1)
-                    {
-                        return true;
-                    } 
-                    else
-                    {
-                        return false;
-                    }
-                }
-                else
-                {
-                        return false;
-                }
+        private function getCPFouCNPJ()
+        {
+                return $this->CPFouCNPJ;
         }
 
-        private function getEmail()
+        private function setCPFouCNPJ($CPFouCNPJ)
         {
-                return $this->email;
-        }
-
-        private function setEmail($email)
-        {
-                $this->email = $email;
+                $this->CPFouCNPJ = $CPFouCNPJ;
 
                 return $this;
         }
@@ -60,7 +24,7 @@ class Usuario
         {
                 return $this->senha;
         }
-
+ 
         private function setSenha($senha)
         {
                 $this->senha = $senha;

@@ -1,6 +1,9 @@
 <?php
+require_once "../Models/modelFIsico.php";
+require_once "../Models/modelJuridico.php";
 session_start();
-if (!(empty($_POST['cpfcnpj'])) || !empty($_POST['senha'])) {
+if(!empty($_POST["senha"] && !empty($_POST["cpfcnpj"]) ))
+{
 
     //Tratamento do CPF ou CNPJ
     $login = trim($_POST['cpfcnpj']);
@@ -11,42 +14,42 @@ if (!(empty($_POST['cpfcnpj'])) || !empty($_POST['senha'])) {
     $login = str_replace("'", "", $login);
     $login = str_replace(";", "", $login);
     $login = str_replace('"', '"', $login);
-
-    //Senha
     $senha = trim($_POST['senha']);
-    $senha = str_replace(".", "", $senha);
-    $senha = str_replace(",", "", $senha);
-    $senha = str_replace("-", "", $senha);
-    $senha = str_replace("/", "", $senha);
-    $senha = str_replace("'", "", $senha);
-    $senha = str_replace(";", "", $senha);
-    $senha = str_replace('"', '"', $senha);
 
-
-    
-
-    $UserLogando = new Usuario($login,$senha);
+    // $UserLogando = new Usuario($login,$senha);
 
     //Verificando a quantidade de caracteres 
     if (strlen($login) === 14) 
     {
-        //Se for maior que 11 caracteres especifica como cnpj
-        header('Location: ../Views/sistemaJ.php');
-    } 
-    else if (strlen($login) === 11)
-     {
-        if($UserLogando->logar($UserLogando))
+        $UserLogando = new UserJuridico;
+        if($UserLogando->logar($login,$senha))
         {
-            $_SESSION["UsuarioFisicoAutenticado"];
+            $_SESSION["Autenticado-UserJuridico"] = true;
+            header('Location: ../Views/perfilJuridico.php');
         }
         else
         {
-            $_SESSION["N-UsuarioFisicoAutenticado"];
+            $_SESSION["N-Autenticado-UserJuridico"] = true;
+            header('Location: ../login.html');
         }
     } 
-    else 
+    else if (strlen($login) === 11)
     {
-
-        header('Location: ../login.html');
+        $UserLogando = new UserFisico;
+        if($UserLogando->logar($login,$senha))
+        {
+            $_SESSION["Autenticado-UserFisico"] = true;
+            header('Location: ../Views/perfilFisico.php');
+        }
+        else
+        {
+            $_SESSION["N-Autenticado-UserFisico"] = true;
+            header('Location: ../login.html');
+        }
     }
 }
+else 
+{
+    header('Location: ../login.html');
+}
+?>

@@ -1,4 +1,5 @@
 <?php
+require_once "../Lib/connection.php";
 
 class Veiculo
 {
@@ -8,114 +9,103 @@ class Veiculo
     private $modelo;
     private $ano;
     private $cor;
-    private $cidade;
-    private $estado;
+ 
 
-    function __construct($id,$placa,$marca,$modelo,$ano,$cor,$cidade,$estado)
+    public function cadastrar($placa,$modelo,$ano,$cor)
     {
-        $this->setId($id);
-        $this->setPlaca($placa);
-        $this->setMarca($marca);
-        $this->setModelo($modelo);
-        $this->setAno($ano);
-        $this->setCor($cor);
-        $this->setCidade($cidade);
-        $this->setEstado($estado);
+       $this->setId($this->getId());
+       $this->setModelo($this->getModelo($modelo));
+       $this->setMarca("CHEVROLET");
+       $this->setPlaca($placa);
+       $this->setAno($ano);
+       $this->setCor($cor);
     }
-    
-    protected function getPlaca()
+
+
+    private function getId()
+    {
+        $conexao = new conexaoPDO;
+        $conexao = $conexao->getConnection();
+        $sql = "SELECT * FROM tb_veiculo";
+
+        $stmt = $conexao->prepare($sql);
+        $stmt->execute();
+        $id = $stmt->rowCount() + 1;
+        return $id;
+    }
+
+    private function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    private function getPlaca()
     {
         return $this->placa;
     }
 
-    protected function setPlaca($placa)
+    private function setPlaca($placa)
     {
         $this->placa = $placa;
 
         return $this;
     }
 
-    protected function getMarca()
+    private function getMarca()
     {
         return $this->marca;
     }
 
-    protected function setMarca($marca)
+    private function setMarca($marca)
     {
         $this->marca = $marca;
 
         return $this;
     }
-
-    protected function getModelo()
+ 
+    private function getModelo($modelo)
     {
-        return $this->modelo;
+        $conexao = new conexaoPDO;
+        $conexao = $conexao->getConnection();
+        $sql = "SELECT * FROM tb_modelo WHERE nm_modelo LIKE '%$modelo%' LIMIT 1;";
+
+        $stmt = $conexao->prepare($sql);
+        $stmt->execute();
+        $modelo = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $modelo["cd_modelo"];
     }
 
-    protected function setModelo($modelo)
+    private function setModelo($modelo)
     {
         $this->modelo = $modelo;
 
         return $this;
     }
 
-    protected function getAno()
+    private function getAno()
     {
         return $this->ano;
     }
 
-    protected function setAno($ano)
+    private function setAno($ano)
     {
         $this->ano = $ano;
 
         return $this;
     }
 
-    protected function getCor()
+    private function getCor()
     {
         return $this->cor;
     }
 
-    protected function setCor($cor)
+    private function setCor($cor)
     {
         $this->cor = $cor;
 
         return $this;
     }
-
-    protected function getCidade()
-    {
-        return $this->cidade;
-    }
-
-    protected function setCidade($cidade)
-    {
-        $this->cidade = $cidade;
-
-        return $this;
-    }
-
-    protected function getEstado()
-    {
-        return $this->estado;
-    }
-
-    protected function setEstado($estado)
-    {
-        $this->estado = $estado;
-
-        return $this;
-    }
-    public function getId()
-    {
-        return $this->id;
-    }
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
 }
-
 ?>

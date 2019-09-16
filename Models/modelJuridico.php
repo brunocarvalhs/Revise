@@ -1,127 +1,90 @@
 <?php
+require_once "../Lib/connection.php";
+require_once "../Models/modelUsuario.php";
 
-    //Importando Classe
-require_once 'modelUsuario.php';
-
-    //Usando as classes
-use Usuario;
-
-
-/**
- * Classe do Juridico reponsavel por gerenciar 
- * dados do usuario juridico
- * 
- * Diretorio Pai - Models
- * 
- * @version 1.0.0
- */
-class Juridico extends Usuario
+class UserJuridico extends Usuario
 {
-        
-        //Atributos
-    private $IDUsuario;
-    private $NomeFantasia;
+    private $id;
     private $RazaoSocial;
     private $CNPJ;
+    private $NomeFantasia;
 
-
-        //Metodos 
-
-    function __construct()
+    public function logar($CPFouCNPJ,$senha)
     {
 
+            $conn = new conexaoPDO;
+            $conn = $conn->getConnection();
+
+            $sql = "call chkLoginJuridico(:CPFouCNPJ,:senha);";
+
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':CPFouCNPJ', $CPFouCNPJ, PDO::PARAM_INT);
+            $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+            
+            if($stmt->execute())
+            {
+                    $RES = $stmt->rowCount(); 
+                    if($RES == 1)
+                    {
+                            return true;
+                    }
+                    else
+                    {
+                            return false;
+                    }
+            }
+            else
+            {
+                    echo "Falha na Execução";
+            }
     }
 
-    /**
-     * Gettes e Settes ID
-     */
-    private function setIDUsuario($id)
+    public function getId()
     {
-        $this->IDUsuario = $id;
+        return $this->id;
     }
-    private function getIDUsuario()
+
+    public function setId($id)
     {
-        return $this->IDUsuario;
+        $this->id = $id;
+
+        return $this;
     }
-    /**
-     * Gettes e Settes Nome Fantasia
-     */
-    private function setNomeFantasia($NomeFantasia)
-    {
-        $this->NomeFantasia = $NomeFantasia;
-    }
-    private function getNomeFantasia()
-    {
-        return $this->NomeFantasia;
-    }
-    /**
-     * Gettes e Settes Razão Social
-     */
-    private function setRazaoSocial($RazaoSocial)
-    {
-        $this->RazaoSocial = $RazaoSocial;
-    }
-    private function getRazaoSocial()
+
+    public function getRazaoSocial()
     {
         return $this->RazaoSocial;
     }
-    /**
-     * Gettes e Settes CNPJ
-     */
-    private function setCNPJ($CNPJ)
+
+    public function setRazaoSocial($RazaoSocial)
     {
-        $this->CNPJ = $CNPJ;
+        $this->RazaoSocial = $RazaoSocial;
+
+        return $this;
     }
-    private function getCNPJ()
+
+    public function getCNPJ()
     {
         return $this->CNPJ;
     }
 
-
-        // --------------- Métodos CRUD --------------- //
-
-    /**
-     * Método de Incluir usuario Juridico (Create)
-     *
-     * @return void
-     */
-    public function IncluirJuridico()
+    public function setCNPJ($CNPJ)
     {
+        $this->CNPJ = $CNPJ;
 
+        return $this;
+    }
+ 
+    public function getNomeFantasia()
+    {
+        return $this->NomeFantasia;
     }
 
-    /**
-     * Método de Ver Juridico (Read)
-     *
-     * @return void
-     */
-    public function VerJuridico()
+    public function setNomeFantasia($NomeFantasia)
     {
+        $this->NomeFantasia = $NomeFantasia;
 
+        return $this;
     }
-
-    /**
-     * Método de Alterar Juridico (Update)
-     *
-     * @return void
-     */
-    public function AlterarJuridico()
-    {
-
-    }
-
-    /**
-     * Método de Deletar Juridico (Delete)
-     *
-     * @return void
-     */
-    public function DeletarJuridico()
-    {
-
-    }
-
-
-        // -------- Métodos Regra de Negocios -------- //
 }
-
 ?>

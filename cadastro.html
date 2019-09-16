@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Views/css/bootstrap.css">
+    <script src="./Views/js//jquery-3.4.1.js"></script>
+    <script src="./Views/js/APIplaca.js"></script>
 </head>
 
 <body>
@@ -79,7 +81,7 @@
         <!--Inicio dos Forms-->
         <div class="backgroundBlackLight">
             <!--Form dados pessoais-->
-            <form action="" method="POST" onsubmit="">
+            <form action="./Controllers/controllerCadastroFisico.php" method="POST" onsubmit="">
                 <div class="row">
                     <div class="col-12">
                         <h4>Dados pessoais</h4>
@@ -94,33 +96,33 @@
                                     <label for="campoNome">Nome completo</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome">
+                                    <input type="text" class="form-control" id="txtnome" name="txtnome">
                                 </div>
                             </div>
                         </div>
                         <!-- E-mail -->
                         <div class="form-group inputCadastro">
                             <label for="exampleFormControlInput1">Endereço de email</label>
-                            <input type="email" class="form-control" id="campoEmail" placeholder="nome@exemplo.com">
+                            <input type="email" class="form-control" id="txtemail" name="txtemail" placeholder="nome@exemplo.com">
                         </div>
                         <div class="form-group inputCadastro">
                             <div class="form-row">
                                 <!-- CPF -->
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1">CPF</label>
-                                    <input type="text" class="form-control" id="campoDoCpf" placeholder="XXX.XXX.XXX-XX">
+                                    <input type="text" class="form-control" id="txtcpf" name="txtcpf" placeholder="XXX.XXX.XXX-XX">
                                 </div>
                                 <!-- Data de nascimento -->
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1">Data de nascimento</label>
-                                    <input type="date" class="form-control" id="campoDeNascimento" placeholder="nome@exemplo.com">
+                                    <input type="date" class="form-control" id="txtNascimento" name="txtNascimento" placeholder="nome@exemplo.com">
                                 </div>
                             </div>
                         </div>
                         <!-- Senha -->
                         <div class="form-group inputCadastro">
                             <label for="campoSenha">Senha</label>
-                            <input type="password" id="campoSenha" class="form-control" aria-describedby="descricaoSenha">
+                            <input type="password" id="txtsenha" name="txtsenha" class="form-control" aria-describedby="descricaoSenha">
                             <small id="descricaoSenha" class="form-text text-muted">
                                 Sua senha deve ter entre 6 e 20 caracteres, os quais devem ser letras e números,
                                 sem
@@ -130,7 +132,7 @@
                         <!-- Confirma senha -->
                         <div class="form-group inputCadastro">
                             <label for="campoSenha">Confirmar senha</label>
-                            <input type="password" id="campoConfirmaSenha" class="form-control" aria-describedby="descricaoSenha">
+                            <input type="password" id="txtcsenha" name="txtcsenha"  class="form-control" aria-describedby="descricaoSenha">
                         </div>
                     </div>
                 </div>
@@ -148,48 +150,42 @@
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label for="disabledTextInput">Placa</label>
-                                        <input type="text" id="disabledTextInput" class="form-control" placeholder="">
+                                        <input type="text" id="txtplaca" name="txtplaca" class="form-control" placeholder="">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <button type="button" class="btn btn-warning">Pesquisar Placa</button>
+                                        <button type="button" onclick="consultar();" id="buscaPlaca" class="btn btn-warning">Pesquisar Placa</button>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
-                        <fieldset disabled>
                             <div class="form-group">
-                                <label for="disabledTextInput">Marca</label>
-                                <input type="text" id="disabledTextInput" class="form-control" placeholder="">
-                            </div>
-                            <div class="form-group">
-                                <label for="disabledTextInput">Modelo</label>
-                                <input type="text" id="disabledTextInput" class="form-control" placeholder="">
+                                <label for="disabledTextInput">Marca/Modelo</label>
+                                <input type="text" readonly="true"  class="form-control" id="txtMarca" name="txtMarca" placeholder="">
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="anoVeiculo">Ano</label>
-                                    <input type="text" class="form-control" id="anoVeiculo" placeholder="">
+                                    <input type="text" readonly="true"  class="form-control" id="txtAno" name="txtAno" placeholder="">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="corVeiculo">Cor</label>
-                                    <input type="text" class="form-control" id="corVeiculo" placeholder="">
+                                    <input type="text" readonly="true"  class="form-control"  id="txtCor" name="txtCor" placeholder="">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="col-7">
                                     <label for="cidadeVeiculo">Cidade</label>
-                                    <input type="text" class="form-control" id="cidadeVeiculo" placeholder="Cidade">
+                                    <input type="text" readonly="true" class="form-control"  id="txtCidade" name="txtCidade" placeholder="Cidade">
                                 </div>
                                 <div class="col">
                                     <label for="estadoVeiculo">Estado</label>
-                                    <input type="text" class="form-control" id="estadoVeiculo" placeholder="Estado">
+                                    <input type="text" readonly="true"  class="form-control" id="txtEstado" name="txtEstado" placeholder="Estado">
                                 </div>
                             </div>
-                        </fieldset>
                     </div>
                 </div>
                 <!--Form planos-->
@@ -204,12 +200,12 @@
                 <div class="row">
                     <div class="col-5">
                         <div class="input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect03" aria-label="Exemplo de select com botão addon">
-                                <option selected>Selecione seu plano...</option>
-                                <option value="Basic">Basic</option>
-                                <option value="Standart">Standart</option>
-                                <option value="Profission">Profission</option>
-                                <option value="Deluxe">Deluxe Edition </option>
+                            <select class="custom-select" id="txtplano" name="txtplano" aria-label="Exemplo de select com botão addon">
+                                <option value="1" selected>Selecione seu plano...</option>
+                                <option value="1">Basic</option>
+                                <option value="2">Standart</option>
+                                <option value="3">Profission</option>
+                                <option value="4">Deluxe Edition </option>
 
                             </select>
                         </div>
@@ -365,8 +361,6 @@
     </footer>
     <div id="notifications"></div>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"

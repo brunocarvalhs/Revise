@@ -1,14 +1,6 @@
 <?php
-require_once './Models/modelUsuario.php';
-
-$UserLogando = new Usuario('marinalunasales__marinalunasales@acritica.com.br','2Nq1duhP3l');
-if($UserLogando->logar($UserLogando))
-{
-    $_SESSION["UsuarioFisicoAutenticado"];
-}
-else
-{
-    $_SESSION["N-UsuarioFisicoAutenticado"];
-}
+$arquivo = file_get_contents('http://18.229.136.80:3000/EYT4568');
+$json = json_decode($arquivo);
+echo $json->modelo;
 
 ?>
