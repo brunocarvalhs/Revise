@@ -4,9 +4,7 @@ require_once "../Models/modelUsuario.php";
 
 class UserJuridico extends Usuario
 {
-    private $id;
     private $RazaoSocial;
-    private $CNPJ;
     private $NomeFantasia;
 
     public function logar($CPFouCNPJ,$senha)
@@ -39,17 +37,6 @@ class UserJuridico extends Usuario
             }
     }
 
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
 
     public function getRazaoSocial()
     {
@@ -59,18 +46,6 @@ class UserJuridico extends Usuario
     public function setRazaoSocial($RazaoSocial)
     {
         $this->RazaoSocial = $RazaoSocial;
-
-        return $this;
-    }
-
-    public function getCNPJ()
-    {
-        return $this->CNPJ;
-    }
-
-    public function setCNPJ($CNPJ)
-    {
-        $this->CNPJ = $CNPJ;
 
         return $this;
     }

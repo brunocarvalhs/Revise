@@ -4,11 +4,9 @@ require_once '../Lib/connection.php';
 
 class UserFisico extends Usuario
 {
-    private $id;
     private $nome;
     private $dataNascimento;
     private $tipoConta;
-    private $email;
     private $plano;
 
     function Cadastrar($nome, $email, $cpf, $dataNascimento, $senha,$tipoConta,$plano)
@@ -89,25 +87,6 @@ class UserFisico extends Usuario
 
         return $this;
     }
-
-    private function getId()
-    {
-        $conexao = new conexaoPDO;
-        $conexao = $conexao->getConnection();
-        $sql = "SELECT * FROM tb_usuario";
-
-        $stmt = $conexao->prepare($sql);
-        $stmt->execute();
-        $id = $stmt->rowCount() + 1;
-        return $id;
-    }
-
-    private function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
     private function getTipoConta()
     {
         return $this->tipoConta;
@@ -119,31 +98,11 @@ class UserFisico extends Usuario
         return $this;
     }
 
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of plano
-     */ 
     public function getPlano()
     {
         return $this->plano;
     }
 
-    /**
-     * Set the value of plano
-     *
-     * @return  self
-     */ 
     public function setPlano($plano)
     {
         $this->plano = $plano;
