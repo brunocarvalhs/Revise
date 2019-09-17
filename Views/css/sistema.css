@@ -470,3 +470,35 @@ body, html{
 .swal-button--style:hover{
   background-color:  rgba(53, 52, 49, 0.76) !important;
 }
+
+@media (max-width: 1078px) 
+{
+  .responsivo
+   {
+    display: none;
+   }
+}
+@media (min-width: 991px) 
+{
+  .menusuperior{
+    display: none;
+  }
+  .responsivo
+   {
+    display: block;
+   }
+}
+@media (min-width: 991px) 
+{
+  .cardResponsive{
+
+    width: 20rem;
+  }
+}
+@media (min-width: 992px) 
+{
+  .cardResponsive{
+
+    width: 30rem;
+  }
+}
