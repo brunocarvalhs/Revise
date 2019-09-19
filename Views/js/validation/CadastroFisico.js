@@ -108,14 +108,11 @@ function ValidarCadastroFisico()
         var retorno = string.split("/");
         if(retorno[0] == 'CHEVROLET')
         {
-            alert('foi');
         }
         else
         {
-            return false;
         }
     }
-    return false;
 }
 function bloqueioNumero(event) {
 	var regex = new RegExp("^[a-zA-ZÁ-ú \b\0]+$");

@@ -9,27 +9,38 @@ class UserFisico extends Usuario
     private $tipoConta;
     private $plano;
 
-    function Cadastrar($nome, $email, $cpf, $dataNascimento, $senha,$tipoConta,$plano)
+
+    function __construct($nome,$email,$cpf,$nascimento,$senha,$plano)
     {
         $this->setID($this->getID());
-        $this->setTipoConta($tipoConta);
+        $this->setTipoConta('1');
         $this->setNome($nome);
         $this->setEmail($email);
         $this->setCPFouCNPJ($cpf);
-        $this->setDataNascimento($dataNascimento);
+        $this->setDataNascimento($nascimento);
         $this->setSenha($senha);
         $this->setPlano($plano);
+    }
+
+    function Cadastrar($User,$Veiculo)
+    {
 
         $conn = new conexaoPDO;
         $conn = $conn->getConnection();
 
+        $idUsuario = $User->getID();
+        $email = $User->getEmail();
+        $senha = $User->getSenha();
+        $plano = $User->getPlano();
+
+
         $sql = "INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES (:idUsuario,:email,:senha,:plano,1)";
 
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':idUsuario', $this->getId(), PDO::PARAM_STR);
-        $stmt->bindParam(':email', $this->getId(), PDO::PARAM_STR);
-        $stmt->bindParam(':senha', $this->getId(), PDO::PARAM_STR);
-        $stmt->bindParam(':plano', $this->getId(), PDO::PARAM_STR);
+        $stmt->bindParam(':idUsuario', $idUsuario, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+        $stmt->bindParam(':plano', $plano, PDO::PARAM_STR);
 
         if($stmt->execute())
             {

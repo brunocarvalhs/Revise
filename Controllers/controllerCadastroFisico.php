@@ -19,13 +19,14 @@ $ano = $_POST["txtAno"];
 $cor = $_POST["txtCor"];
 $plano = $_POST["txtplano"];
 
-$usuario = new UserFisico;
-$usuario->cadastrar($nome,$email,$cpf,$nascimento,$senha,1,$plano);
-echo '<pre>';
-print_r($usuario);
-echo '<br>';
 $veiculo = new Veiculo;
 $veiculo->cadastrar($placa,$modelo,$ano,$cor);
+
+$usuario = new UserFisico($nome,$email,$cpf,$nascimento,$senha,$plano);
+echo '<pre>';
+print_r($usuario);
+$usuario->Cadastrar($usuario,$veiculo);
+echo '<br>';
 echo '<pre>';
 print_r($veiculo);
 
