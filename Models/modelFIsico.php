@@ -27,7 +27,7 @@ class UserFisico extends Usuario
             $conn = new conexaoPDO;
             $conn = $conn->getConnection();
 
-            $sql = "call chkLoginFisico(:CPFouCNPJ,:senha)";
+            $sql = "call SignInFisico(:CPFouCNPJ,:senha)";
 
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':CPFouCNPJ', $CPFouCNPJ, PDO::PARAM_INT);

@@ -1,3 +1,18 @@
+-- Login do usuario juridico
+
+delimiter $
+create procedure SignInJuridico(in cnpj varchar(14),in senha varchar(255))
+begin
+SELECT * FROM tb_usuario AS user, tb_usuario_juridico AS userj WHERE userj.cd_cnpj = cnpj AND user.cd_senha = senha AND userj.cd_usuario = user.cd_usuario;
+end $
+
+-- Login do usuario Fisico
+delimiter $
+create procedure SignInFisico(in cpf varchar(11),in senha varchar(255))
+begin
+SELECT * FROM tb_usuario AS user, tb_usuario_fisico AS userf WHERE userf.cd_cpf = cpf AND user.cd_senha = senha AND userf.cd_usuario = user.cd_usuario;
+end $
+
 -- Login do usuario FIsico
 
 delimiter $
@@ -19,15 +34,6 @@ begin
                     join tb_modelo as m on m.cd_modelo = v.cd_modelo where  u.cd_senha = senha;
                     
 
-end $
-
--- Login do usuario juridico
-delimiter $
-create procedure SignInJuridico(in cnpj int, in senha text)
-begin 
-
-	select j.nm_nome_fantasia, u.nm_email from tb_usuario as u inner join tb_usuario_juridico as j on j.cd_cnpj = cnpj and u.cd_senha = senha;
-	
 end $
 
 -- procedimento de notificacao de peça 

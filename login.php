@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -44,6 +47,14 @@
                                     </div>
                                 </div>
                                 <div class="col-12 btnEntrar">
+                                        <?php if(isset($_SESSION["N-Autenticado"]))
+                                        {
+                                            echo '<div class="alert alert-danger" role="alert">
+                                            CPF/CNPJ ou senha está inválido.
+                                            </div>';
+                                            unset($_SESSION["N-Autenticado"]);
+                                        }
+                                        ?>
                                     <button type="submit" class="btn btn-dark btn-lg btn-block">
                                         ENTRAR
                                     </button>
