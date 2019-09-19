@@ -19,6 +19,26 @@ class UserFisico extends Usuario
         $this->setDataNascimento($dataNascimento);
         $this->setSenha($senha);
         $this->setPlano($plano);
+
+        $conn = new conexaoPDO;
+        $conn = $conn->getConnection();
+
+        $sql = "INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES (:idUsuario,:email,:senha,:plano,1)";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':idUsuario', $this->getId(), PDO::PARAM_STR);
+        $stmt->bindParam(':email', $this->getId(), PDO::PARAM_STR);
+        $stmt->bindParam(':senha', $this->getId(), PDO::PARAM_STR);
+        $stmt->bindParam(':plano', $this->getId(), PDO::PARAM_STR);
+
+        if($stmt->execute())
+            {
+                echo 'Cadastro';
+            }
+            else
+            {
+                return false;
+            }
     }
 
     public function logar($CPFouCNPJ,$senha)
@@ -50,7 +70,6 @@ class UserFisico extends Usuario
                     echo "Falha na Execução";
             }
     }
-
 
     private function getNome()
     {

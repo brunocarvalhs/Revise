@@ -1,14 +1,14 @@
 -- Login do usuario juridico
 
 delimiter $
-create procedure SignInJuridico(in cnpj varchar(14),in senha varchar(255))
+create procedure sp_SignInJuridico(in cnpj varchar(14),in senha varchar(255))
 begin
 SELECT * FROM tb_usuario AS user, tb_usuario_juridico AS userj WHERE userj.cd_cnpj = cnpj AND user.cd_senha = senha AND userj.cd_usuario = user.cd_usuario;
 end $
 
 -- Login do usuario Fisico
 delimiter $
-create procedure SignInFisico(in cpf varchar(11),in senha varchar(255))
+create procedure sp_SignInFisico(in cpf varchar(11),in senha varchar(255))
 begin
 SELECT * FROM tb_usuario AS user, tb_usuario_fisico AS userf WHERE userf.cd_cpf = cpf AND user.cd_senha = senha AND userf.cd_usuario = user.cd_usuario;
 end $
