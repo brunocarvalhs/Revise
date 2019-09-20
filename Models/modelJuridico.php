@@ -13,7 +13,7 @@ class UserJuridico extends Usuario
             $conn = new conexaoPDO;
             $conn = $conn->getConnection();
 
-            $sql = "call chkLoginJuridico(:CPFouCNPJ,:senha);";
+            $sql = "call sp_SignInJuridico(:CPFouCNPJ,:senha);";
 
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':CPFouCNPJ', $CPFouCNPJ, PDO::PARAM_INT);
