@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -114,7 +117,7 @@
                                 <!-- Data de nascimento -->
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1">Data de nascimento</label>
-                                    <input type="date" class="form-control" id="txtNascimento" name="txtNascimento" placeholder="nome@exemplo.com">
+                                    <input type="date" class="form-control" id="txtNascimento" name="txtNascimento" placeholder="DIA/MÊS/ANO">
                                 </div>
                             </div>
                         </div>
@@ -372,4 +375,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
 <script src="./Views/js/APIplaca.js"></script>
 <script src="./Views/js/validation/CadastroFisico.js"></script>
+<?php 
+if(isset($_SESSION["ERRO-CADASTRO"]))
+{
+    echo $_SESSION["ERRO-CADASTRO"];
+}
+unset($_SESSION["ERRO-CADASTRO"]);
+?>
 </html>

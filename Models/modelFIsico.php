@@ -10,18 +10,91 @@ class UserFisico extends Usuario
     private $tipoConta;
     private $plano;
 
-
-    function __construct($nome,$email,$cpf,$nascimento,$senha,$plano)
+    public function VerificarCadastrar($email,$cpf,$placa)
     {
-        $this->setID($this->getID());
-        $this->setIdUserFisico($this->getIdUserFisico());
-        $this->setTipoConta('1');
-        $this->setNome($nome);
+        $conn = new conexaoPDO;
+        $conn = $conn->getConnection();
+
+        $sql = "CALL sp_VerificarCadastro(:email,:cpf,:placa);";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':cpf', $cpf, PDO::PARAM_INT);
+        $stmt->bindParam(':placa', $placa, PDO::PARAM_STR);
+
+        if($stmt->execute())
+        {
+            $res = $stmt->fetch(PDO::FETCH_OBJ);
+            $res =  $res->RES;
+            return $res;
+        }
+        else
+        {
+            echo 'Erro: Não foi possivel fazer a verrificação de cadastro.';
+        }
+    }
+
+    public function Cadastrar($nome,$email,$senha,$plano,$cpf,$nascimento)
+    {
+        $conn = new conexaoPDO;
+        $conn = $conn->getConnection();
+
+        //CADASTRO DO USUARIO
+
         $this->setEmail($email);
-        $this->setCPFouCNPJ($cpf);
-        $this->setDataNascimento($nascimento);
         $this->setSenha($senha);
         $this->setPlano($plano);
+
+        $idUsuario = $this->getId();
+        $email = $this->getEmail();
+        $senha = $this->getSenha();
+        $plano = $this->getPlano();
+        
+
+        $sql = "CALL sp_CadastrarUsuario(:idUsuario,:email,:senha,:plano,1)";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':idUsuario', $idUsuario, PDO::PARAM_INT);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
+        $stmt->bindParam(':plano', $plano, PDO::PARAM_INT);
+
+        if($stmt->execute())
+            {
+                //CADASTRO DO USUARIO FISICO
+                $this->setNome($nome);
+                $this->setCpf($cpf);
+                $this->setDataNascimento($nascimento);
+        
+                $id = $this->getIdUserFisico();
+                $nome = $this->getNome();
+                $cpf = $this->getCpf();
+                $nascimento = $this->getDataNascimento();
+
+                $sql = "call sp_CadastroUsuarioFisico(:id,:nome,:cpf,:nascimento,:idUsuario)";
+
+                $stmt = $conn->prepare($sql);
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
+                $stmt->bindParam(':cpf', $cpf, PDO::PARAM_INT);
+                $stmt->bindParam(':nascimento', $nascimento, PDO::PARAM_STR);
+                $stmt->bindParam(':idUsuario', $idUsuario, PDO::PARAM_INT);
+        
+                if($stmt->execute())
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        echo 'Erro: tb_usuario_fisico não cadastro.';
+                    }
+            }
+            else
+            {
+                echo 'Erro: tb_usuario não cadastro.';
+            }
+        
+
     }
 
     public function logar($CPFouCNPJ,$senha)
@@ -30,7 +103,7 @@ class UserFisico extends Usuario
             $conn = new conexaoPDO;
             $conn = $conn->getConnection();
 
-            $sql = "call SignInFisico(:CPFouCNPJ,:senha)";
+            $sql = "call sp_SignInFisico(:CPFouCNPJ,:senha)";
 
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':CPFouCNPJ', $CPFouCNPJ, PDO::PARAM_INT);
@@ -100,19 +173,19 @@ class UserFisico extends Usuario
         return $this;
     }
 
-    public function getPlano()
+    private function getPlano()
     {
         return $this->plano;
     }
 
-    public function setPlano($plano)
+    private function setPlano($plano)
     {
         $this->plano = $plano;
 
         return $this;
     }
 
-    public function getIdUserFisico()
+    private function getIdUserFisico()
     {
         $conexao = new conexaoPDO;
         $conexao = $conexao->getConnection();
@@ -124,7 +197,7 @@ class UserFisico extends Usuario
         return $idUserFisico;
     }
 
-    public function setIdUserFisico($idUserFisico)
+    private function setIdUserFisico($idUserFisico)
     {
         $this->idUserFisico = $idUserFisico;
 

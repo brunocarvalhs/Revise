@@ -84,7 +84,7 @@ function ValidarCadastroFisico()
     }
     if(document.CadastroFisico.txtsenha.value == '')
     {
-        alert('O campo nome completo está vazio.');
+        alert('O campo senha está vazio.');
         document.getElementById("txtsenha").setAttribute('class', "form-control is-invalid"); 
         logErro = 1;
     }
@@ -96,7 +96,7 @@ function ValidarCadastroFisico()
             }
     if(document.CadastroFisico.txtcsenha.value == '')
     {
-        alert('O campo nome completo está vazio.');
+        alert('O campo comfirma senha está vazio.');
         document.getElementById("txtcsenha").setAttribute('class', "form-control is-invalid"); 
         logErro = 1;
     }
@@ -168,3 +168,4 @@ function bloqueioNumero(event) {
 	}
 }
 $("#txtcpf").mask("999.999.999-99");
+$("#txtplaca").mask("AAA-9999");

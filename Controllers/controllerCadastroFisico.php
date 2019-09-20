@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once "../Lib/connection.php";
 require_once "../Models/modelFIsico.php";
 require_once "../Models/modelVeiculo.php";
@@ -26,25 +28,29 @@ $cpf = str_replace("/", "", $cpf);
 $cpf = str_replace("'", "", $cpf);
 $cpf = str_replace(";", "", $cpf);
 $cpf = str_replace('"', '"', $cpf);
-$veiculo = new Veiculo($placa,$modelo,$ano,$cor);
-$usuario = new UserFisico($nome,$email,$cpf,$nascimento,$senha,$plano);
-$idUsuario = $usuario->getID();
-$idUsuarioFisico = $usuario->getIdUserFisico();
-$idVeiculo = $veiculo->getId();
 
 
-echo $idUsuario.'<br>';
-echo $idUsuarioFisico.'<br>';
-echo $cpf.'<br>';
-echo $email.'<br>';
-echo $senha.'<br>';
-echo $plano.'<br>';
-echo $nascimento.'<br>';
-echo $nome.'<br>';
-echo $placa.'<br>';
-echo $idVeiculo.'<br>';
-echo $cor.'<br>';
-echo $ano.'<br>';
-echo $modelo.'<br>';
-
+$user = new UserFisico;
+if($user->VerificarCadastrar($email,$cpf,$placa) == 'true')
+{
+    $user = $user->getId();
+    $user->Cadastrar($nome,$email,$senha,$plano,$cpf,$nascimento);
+    $veiculo = new Veiculo;
+    $veiculo->Cadastrar($placa,$cor,$modelo,$ano,$idUser);
+}
+else if ($user->VerificarCadastrar($email,$cpf,$placa) == 'placa')
+{
+    $_SESSION["ERRO-CADASTRO"] = '<script>alert("ERRO: Placa já está cadastrada no nosso sistema");</script>';
+    Header('Location: ../cadastro.php');
+}
+else if ($user->VerificarCadastrar($email,$cpf,$placa) == 'cpf')
+{
+    $_SESSION["ERRO-CADASTRO"] = '<script>alert("ERRO: CPF já está cadastrado no nosso sistema");</script>';
+    Header('Location: ../cadastro.php');
+}
+else if ($user->VerificarCadastrar($email,$cpf,$placa) == 'email')
+{
+    $_SESSION["ERRO-CADASTRO"] = '<script>alert("ERRO: E-mail já está cadastrado no nosso sistema");</script>';
+    Header('Location: ../cadastro.php');
+}
 ?>

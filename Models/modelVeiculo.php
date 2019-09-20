@@ -11,14 +11,42 @@ class Veiculo
     private $cor;
  
 
-    public function __construct($placa,$modelo,$ano,$cor)
+    public function Cadastrar($placa,$cor,$modelo,$ano,$idUsuario)
     {
-       $this->setId($this->getId());
-       $this->setModelo($this->getModelo($modelo));
-       $this->setMarca("CHEVROLET");
+
        $this->setPlaca($placa);
        $this->setAno($ano);
        $this->setCor($cor);
+
+       $id = $this->getId();
+       $modelo = $this->getModelo($modelo);
+       $placa = $this->getPlaca();
+       $ano = $this->getAno();
+       $cor = $this->getCor();
+       $idUsuario = $idUsuario;
+
+       $conn = new conexaoPDO;
+       $conn = $conn->getConnection();
+
+       $sql = "call sp_CadastroVeiculo(:id,:cor,:placa,:idUsuario,:modelo,:ano);";
+       $stmt = $conn->prepare($sql);
+       $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+       $stmt->bindParam(':cor', $cor, PDO::PARAM_STR);
+       $stmt->bindParam(':placa', $placa, PDO::PARAM_STR);
+       $stmt->bindParam(':idUsuario', $idUsuario, PDO::PARAM_INT);
+       $stmt->bindParam(':modelo', $modelo, PDO::PARAM_STR);
+       $stmt->bindParam(':ano', $ano, PDO::PARAM_INT);
+
+       if($stmt->execute())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+       
     }
 
 
