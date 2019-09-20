@@ -1,4 +1,5 @@
 <?php
+require_once "../Lib/connection.php";
 require_once "../Models/modelFIsico.php";
 require_once "../Models/modelVeiculo.php";
 
@@ -18,18 +19,32 @@ $modelo = $Separadormodelo[0];
 $ano = $_POST["txtAno"];
 $cor = $_POST["txtCor"];
 $plano = $_POST["txtplano"];
-
-$veiculo = new Veiculo;
-$veiculo->cadastrar($placa,$modelo,$ano,$cor);
-
+$cpf = str_replace(".", "", $cpf);
+$cpf = str_replace(",", "", $cpf);
+$cpf = str_replace("-", "", $cpf);
+$cpf = str_replace("/", "", $cpf);
+$cpf = str_replace("'", "", $cpf);
+$cpf = str_replace(";", "", $cpf);
+$cpf = str_replace('"', '"', $cpf);
+$veiculo = new Veiculo($placa,$modelo,$ano,$cor);
 $usuario = new UserFisico($nome,$email,$cpf,$nascimento,$senha,$plano);
-echo '<pre>';
-print_r($usuario);
-$usuario->Cadastrar($usuario,$veiculo);
-echo '<br>';
-echo '<pre>';
-print_r($veiculo);
+$idUsuario = $usuario->getID();
+$idUsuarioFisico = $usuario->getIdUserFisico();
+$idVeiculo = $veiculo->getId();
 
 
+echo $idUsuario.'<br>';
+echo $idUsuarioFisico.'<br>';
+echo $cpf.'<br>';
+echo $email.'<br>';
+echo $senha.'<br>';
+echo $plano.'<br>';
+echo $nascimento.'<br>';
+echo $nome.'<br>';
+echo $placa.'<br>';
+echo $idVeiculo.'<br>';
+echo $cor.'<br>';
+echo $ano.'<br>';
+echo $modelo.'<br>';
 
 ?>

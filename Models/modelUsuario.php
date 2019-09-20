@@ -33,7 +33,7 @@ abstract class Usuario
 
                 return $this;
         }
-        protected function getId()
+        public function getId()
         {
                 $conexao = new conexaoPDO;
                 $conexao = $conexao->getConnection();

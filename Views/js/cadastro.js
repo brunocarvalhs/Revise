@@ -48,7 +48,7 @@ function alertaOK() {
             switch (value) {
 
                 case "certo":
-                    window.location.href = './login.html';
+                    window.location.href = './login.php';
                     break;
             }
 

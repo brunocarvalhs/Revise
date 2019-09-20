@@ -1,17 +1,110 @@
--- Login do usuario juridico
 
+-- Login do usuario juridico(Read - tb_usuario_juridico)
 delimiter $
 create procedure sp_SignInJuridico(in cnpj varchar(14),in senha varchar(255))
 begin
 SELECT * FROM tb_usuario AS user, tb_usuario_juridico AS userj WHERE userj.cd_cnpj = cnpj AND user.cd_senha = senha AND userj.cd_usuario = user.cd_usuario;
 end $
 
--- Login do usuario Fisico
+-- Login do usuario Fisico(Read - tb_usuario_Fisico)
 delimiter $
 create procedure sp_SignInFisico(in cpf varchar(11),in senha varchar(255))
 begin
 SELECT * FROM tb_usuario AS user, tb_usuario_fisico AS userf WHERE userf.cd_cpf = cpf AND user.cd_senha = senha AND userf.cd_usuario = user.cd_usuario;
 end $
+
+-- Cadastrar Usuario Fisico, Veiculo e Usuario(Read - tb_usuario_Fisico, Read - tb_usuario, Read - tb_veiculo, Create - tb_usuario_Fisico, Create - tb_usuario, Create - tb_veiculo)
+delimiter $
+create procedure sp_CadastroFisico(in idUser int,in idUserFisico int, in cpf varchar(11),in email varchar(255),in senha varchar(255),in plano char(1),in nascimento date,in nome varchar(255),placa varchar(8),in idVeiculo int,in cor varchar(255), in ano int, in modelo int)
+begin
+if(SELECT count(*) FROM tb_usuario AS user,  tb_usuario_fisico AS userf WHERE user.nm_email = email AND user.cd_usuario = userf.cd_usuario)=0 then
+if(SELECT count(*) FROM tb_usuario AS user,  tb_usuario_fisico AS userf WHERE userf.cd_cpf = cpf AND user.cd_usuario = userf.cd_usuario)=0 then
+if(select count(*) from tb_veiculo WHERE cd_placa = placa)=0 then
+INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES (idUser,email,senha,plano,1);
+INSERT INTO tb_usuario_fisico(cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario,dt_nascimento) VALUES (idUserFisico,nome,cpf,idUser,nascimento);
+INSERT INTO tb_veiculo(cd_veiculo,nm_cor,aa_veiculo,cd_placa,cd_usuario,cd_modelo) VALUES (idVeiculo,cor,ano,placa,idUser,modelo);
+SELECT 'Usuário Cadastrado Com Sucesso.' as 'Mensagem';
+ELSE
+SELECT 'Placa já Cadastrado no Sistema.' as 'Mensagem';
+end if;
+ELSE
+SELECT 'CPF já Cadastrado No Sistema.' as 'Mensagem';
+end if;
+ELSE
+SELECT 'E-mail já Cadastrado No Sistema.' as 'Mensagem';
+end if;
+end $
+
+-- Cadastrar Usuario Juridico e Usuario(Create - tb_usuario_juridico, Create - tb_usuario)
+delimiter $
+create procedure sp_CadastroJuridico(in idUserJuridico int,in nome varchar(255),in razao varchar(255),in cnpj varchar(14),in idUser int,in email varchar(255),in senha varchar(255), in plano int)
+begin
+INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES (idUser,email,senha,plano,1);
+INSERT INTO tb_usuario_juridico(cd_usuario_juridico,nm_nome_fantasia,nm_razao_social,cd_cnpj,cd_usuario) VALUES (idUserJuridico,nome,razao,cnpj,idUser);
+end $
+
+-- Deleta um veículo(Delete - tb_veiculo)
+delimiter $
+create procedure sp_deletarVeiculo(in idVeiculo int)
+begin
+DELETE FROM tb_veiculo WHERE cd_veiculo = idVeiculo;
+end $
+
+-- Altera Placa de veículo(Update - tb_veiculo)
+delimiter $
+create procedure sp_AlterarPlaca(in placa varchar(255),in placaNova varchar(255))
+begin
+UPDATE tb_veiculo SET cd_placa = placaNova WHERE cd_placa = placa;
+end $
+
+-- Deletar conta de usuário(Delete - tb_usuario)
+delimiter $
+create procedure sp_DeletarConta(in idUser int)
+begin
+DELETE FROM tb_usuario WHERE cd_usuario = idUser;
+end $
+
+-- Alterar dados do usuario(Update - tb_usuario)
+delimiter $
+create procedure sp_DadosUsuario(in idUser int,in email varchar(255),in senha varchar(255))
+begin
+UPDATE tb_usuario SET nm_email = email, cd_senha = senha WHERE cd_usuario = idUser;
+end $
+
+-- Deleta um (Delete - tb_usuario_fisico)
+delimiter $
+create procedure sp_DeletarUsuarioFisico(in idUserFisico int)
+begin
+DELETE FROM tb_usuario_fisico WHERE cd_usuario_fisico = idUserFisico;
+end $
+
+-- Deleta um (Delete - tb_Usuario_Juridico)
+delimiter $
+create procedure sp_DeletarUsuarioJuridico(in idUserJuridico int)
+begin
+DELETE FROM tb_usuario_juridico WHERE cd_usuario_juridico = idUserJuridico;
+end $
+
+-- Alterar dados do Usuario Fisico(Update - tb_usuario_fisico)
+delimiter $
+create procedure sp_DadosUsuariofisico(in idUserFisico int,in nome varchar(255),in cpf varchar(13),in userId int,in nascimento DATE)
+begin
+UPDATE tb_usuario_fisico SET nm_usuario_fisico = nome, cd_cpf = cpf, cd_usuario = userId, dt_nascimento = nascimento WHERE cd_usuario_fisico = idUserFisico;
+end $
+
+-- Alterar dados do Usuario Juridico(Update - tb_usuario_juridico)
+delimiter $
+create procedure sp_DadosUsuariojuridico(in idJuridico int,in nome varchar(255),in razao(255),in cnpj varchar(14),in cd_usuario int)
+begin
+UPDATE sp_DadosUsuariofisico SET nm_nome = nome,nm_razao_social = razao,cd_cnpj = cnpj, idUser = cd_usuario WHERE cd_usuario_juridico = idJuridico;
+end $
+
+
+
+
+
+
+
 
 -- Login do usuario FIsico
 
@@ -69,29 +162,6 @@ end $
 
 
 
-
-
-
-
-
-
-delimiter $
-create procedure sp_test(in cpf varchar(11),in email varchar(255),in senha varchar(255),in plano char(1),in nascimento date,in nome varchar(255))
-begin
-
-if(SELECT count(*) FROM tb_usuario AS user,  tb_usuario_fisico AS userf WHERE user.nm_email = email AND user.cd_usuario = userf.cd_usuario)=0 then
-
-if(SELECT count(*) FROM tb_usuario AS user,  tb_usuario_fisico AS userf WHERE userf.cd_cpf = cpf AND user.cd_usuario = userf.cd_usuario)=0 then
-INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES ((SELECT MAX(cd_usuario + 1) FROM tb_usuario),email,senha,plano,1);
-INSERT INTO tb_usuario_fisico(cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario,dt_nascimento) VALUES ((SELECT MAX(cd_usuario_fisico + 1) FROM tb_usuario_fisico),nome,cpf,(SELECT MAX(cd_usuario)),nascimento);
-SELECT true as 'Mensagem';
-ELSE
-SELECT false as 'Mensagem';
-end if;
-ELSE
-SELECT false as 'Mensagem';
-end if;
-end $
 
 
 

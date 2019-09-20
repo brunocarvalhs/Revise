@@ -1,5 +1,5 @@
 function signIn() {
-  window.location.href = './login.html';
+  window.location.href = './login.php';
 }
 function signUp() {
 

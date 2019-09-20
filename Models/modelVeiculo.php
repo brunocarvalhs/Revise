@@ -11,7 +11,7 @@ class Veiculo
     private $cor;
  
 
-    public function cadastrar($placa,$modelo,$ano,$cor)
+    public function __construct($placa,$modelo,$ano,$cor)
     {
        $this->setId($this->getId());
        $this->setModelo($this->getModelo($modelo));
@@ -22,7 +22,7 @@ class Veiculo
     }
 
 
-    private function getId()
+    public function getId()
     {
         $conexao = new conexaoPDO;
         $conexao = $conexao->getConnection();

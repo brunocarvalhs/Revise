@@ -281,7 +281,7 @@
                     break;
                 }
                 default:{
-                    header('Location: ../login.html');
+                    header('Location: ../login.php');
                     break;
                 }
             }
