@@ -223,21 +223,20 @@ begin
 INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES (id,email,senha,plano,tipo);
 end $
 
--- Verrifica se CPF OU EMAIL OU PLACA já esta cadastrado
 delimiter $
 create procedure sp_VerificarCadastro(in email varchar(255),in cpf varchar(11),in placa varchar(255))
 begin
 if(SELECT COUNT(*) FROM tb_usuario WHERE nm_email = email)=0 then
 if(SELECT COUNT(*) FROM tb_usuario_fisico WHERE cd_cpf = cpf)=0 then
 if(SELECT COUNT(*) FROM tb_veiculo WHERE cd_placa = placa)=0 then
-SELECT 'VALIDO' AS 'RES';
+SELECT 'true' AS 'RES';
 ELSE
-SELECT 'PLACA' AS 'RES';
+SELECT 'placa' AS 'RES';
 end if;
 ELSE
-SELECT 'CPF' AS 'RES';
+SELECT 'cpf' AS 'RES';
 end if;
 ELSE
-SELECT 'EMAIL' AS 'RES';
+SELECT 'email' AS 'RES';
 end if;
 end $
