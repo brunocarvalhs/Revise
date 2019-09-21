@@ -169,8 +169,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-12 col-sm-12 col-md col-lg col-xl">
-                                <div class="col-12 col-sm-12 col-md col-lg col-xl">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                                     <div class="input-group mb-3">
                                         <select class="custom-select" id="txtplano" name="txtplano"
                                             aria-label="Exemplo de select com botão addon">
@@ -181,7 +180,9 @@
                                         </select>
                                     </div>
                                 </div>
+                                </div>
                             </div>
+                    </div>
                             <!--Botões para alteração-->
                             <br>
                             <div class="row">
