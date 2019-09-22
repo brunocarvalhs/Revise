@@ -1,3 +1,4 @@
+
 function signIn() {
   window.location.href = './login.php';
 }
@@ -55,6 +56,7 @@ function btnPerfil() {
       switch (value) {
 
         case "Sim":
+            document.getElementById('txtPlano').disabled = false;
           //Limpar Campos 
           if (document.getElementById('sistemaJ')) {
             document.getElementById('razaoSocial').value = "";
@@ -71,7 +73,6 @@ function btnPerfil() {
           //Aparecer botão
           var show = document.getElementById('btn_hidden');
           var hide = document.getElementById('btn_off');
-
           if (show.style.display == 'none' && hide.style.display == 'block') {
             show.style.display = 'block';
             hide.style.display = 'none';
@@ -121,4 +122,9 @@ $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
+function disable()
+{
+  document.getElementById('txtPlano').disabled = true;
+  
+}
 

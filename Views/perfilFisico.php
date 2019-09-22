@@ -24,7 +24,7 @@
     <title>Revise - Home</title>
 </head>
 
-<body>
+<body onload="disable()">
     <div class="row">
         <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3">
             <div class="container-fluid">
@@ -170,13 +170,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                    <div class="input-group mb-3">
-                                        <select class="custom-select" id="txtplano" name="txtplano"
-                                            aria-label="Exemplo de select com botão addon">
+                                    <div class="input-group mb-3" >
+                                        <select class="custom-select" id="txtPlano" name="txtPlano"
+                                            aria-label="Exemplo de select com botão addon" >
                                             <option value="1" selected>Basic</option>
-                                            <option value="2">Standart</option>
-                                            <option value="3">Profission</option>
-                                            <option value="4">Deluxe Edition </option>
                                         </select>
                                     </div>
                                 </div>
