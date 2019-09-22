@@ -11,5 +11,5 @@
     INNER JOIN tb_status AS s ON c.sg_status = s.sg_status
 	AND v.qt_quilometragem >= mp.qt_medida 
     OR DATEDIFF(CURDATE(), c.dt_check) >= mp.qt_medida
-    WHERE v.cd_veiculo = 2
-    GROUP BY  p.nm_peca, m.nm_medida ; 
+    WHERE v.cd_veiculo = 1
+    GROUP BY  p.nm_peca, m.nm_medida; 
