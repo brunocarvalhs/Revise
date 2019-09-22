@@ -27,7 +27,7 @@ function signUp() {
           break;
 
         case "fisico":
-          window.location.href = './cadastro.html';
+          window.location.href = './cadastro.php';
           break;
 
       }

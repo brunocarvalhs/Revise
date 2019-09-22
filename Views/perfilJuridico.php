@@ -158,6 +158,31 @@
 
                                 </div>
                             </div>
+                            <div class="form-row">
+                            <div class="col-12">
+                                <label>Quantidade de Anúncios</label>
+                            </div>
+                            </div>
+                            <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <div class="input-group mb-3">
+                                    <span class="input-group-text">Peças</span>
+                                    <input type="text" class="form-control" aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                      <button class="btn btn-outline-success" type="button" id="button-addon2">Add</button>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                  <div class="input-group mb-3">
+                                          <span class="input-group-text">Serviços</span>
+                                          <input type="text" class="form-control" aria-describedby="button-addon2">
+                                          <div class="input-group-append">
+                                            <button class="btn btn-outline-success" type="button" id="button-addon2">Add</button>
+                                          </div>
+                                        </div>
+                            </div>
+                            </div>
                             <!--Botões para alteração-->
                             <br>
                             <div class="row">

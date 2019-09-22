@@ -170,7 +170,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                    <label>Plano</label>
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <label>Planos</label>
+                                    </div>
+                                </div>
                                     <div class="input-group mb-3">
                                         <select class="custom-select" id="txtPlano" name="txtPlano" aria-label="Exemplo de select com botão addon">
                                             <option value="" selected>Basic</option>
