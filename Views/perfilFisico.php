@@ -121,11 +121,9 @@
                                             </button>
                                             <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
                                                 <a class="dropdown-item" href="">Excluir conta</a>
-                                                
                                             </div>
                                         </div>
-                                    </div>
-                                   
+                                    </div>                                 
                                   </div>
         </div>
         </nav>
