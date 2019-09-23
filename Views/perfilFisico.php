@@ -17,8 +17,7 @@
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Revise - Home</title>
@@ -27,85 +26,128 @@
 <body onload="disable()">
     <div class="row">
         <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="page-wrapper chiller-theme toggled">
-                        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-                            <i class="fas fa-bars"></i>
-                        </a>
-                        <nav id="sidebar" class="sidebar-wrapper">
-                            <div class="sidebar-content">
-                                <div class="sidebar-brand">
-                                    <a class="navbar-brand" href="#">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <img src="img/logo.png" width="50" height="50" alt="Revise"
-                                                    class="d-inline-block align-top">
-                                            </div>
-                                            <div class="col-8">
-                                                <label class="tituloMenu">Revise</label>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="sidebar-header">
-                                    <div class="user-pic">
-                                        <img class="img-responsive img-rounded" src="<?php echo $FotoDePerfil ?>"
-                                            alt="User picture">
-                                    </div>
-                                    <div class="user-info">
-                                        <span class="user-name"><strong><?php echo $nome ?></strong>
-                                            <?php echo $sobrenome ?>
-                                        </span>
-                                        <span class="user-role"><?php echo $placa ?></span>
-                                        <span class="user-role"><?php echo $modelo ?></span>
-                                    </div>
-                                </div>
-                                <!-- sidebar-search  -->
-                                <div class="sidebar-menu">
-                                    <ul>
-                                        <li class="header-menu">
-                                            <span>Geral</span>
-                                        </li>
-                                        <li class="sidebar-content">
-                                            <a href="#">
-                                                <i class="fa fa-home fa-fw" aria-hidden="true"></i>
-                                                <span>Início</span>
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-content">
-                                            <a href="#">
-                                                <i class="fa fa-user-circle" aria-hidden="true"></i>
-                                                <span>Perfil</span>
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-content">
-                                            <a href="#">
-                                                <i class="fa fa-wrench" aria-hidden="true"></i>
-                                                <span>Histórico de Peças</span>
-                                                <span class="badge badge-pill badge-danger"><?php echo $peças; ?></span>
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-content">
-                                            <a href="#">
-                                                <i class="fa fa-car" aria-hidden="true"></i>
-                                                <span>Veículos</span>
-                                            </a>
-                                        </li>
-                                        <li class="sidebar-content">
-                                            <a href="#">
-                                                <i class="fa fa-building" aria-hidden="true"></i>
-                                                <span>Serviços e Produtos</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- sidebar-menu  -->
+            <!--Menu superior responsivo-->
+        <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/logo.png" width="50" height="50" alt="Revise" class="d-inline-block align-top">
                             </div>
-                            <!-- sidebar-content  -->
-                          
-                            <div class="sidebar-footer rodapeMenu bg-dark">
-                                                            
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+    
+    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link h4">Menu</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="sistema.php">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="perfilFisico.php">Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-link" href="#">Notificações</a>
+                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Peças</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Veículos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Serviços e Produtos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--Menu lateral-->
+            <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 responsivo">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="page-wrapper chiller-theme toggled">
+                            <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                            <nav id="sidebar" class="sidebar-wrapper">
+                                <div class="sidebar-content">
+                                    <div class="sidebar-brand">
+                                        <a class="navbar-brand" href="#">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <img src="img/logo.png" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sidebar-header">
+                                        <div class="user-pic">
+                                            <img class="img-responsive img-rounded" src="<?php echo $FotoDePerfil ?>" alt="User picture">
+                                        </div>
+                                        <div class="user-info">
+                                            <span class="user-name"><strong>
+                                                    <?php echo $nome ?></strong>
+                                                <?php echo $sobrenome ?>
+                                            </span>
+                                            <span class="user-role">
+                                                <?php echo $placa ?></span>
+                                            <span class="user-role">
+                                                <?php echo $modelo ?></span>
+                                        </div>
+                                    </div>
+                                    <!-- sidebar-search  -->
+                                         <!-- sidebar-search  -->
+                                <div class="sidebar-menu">
+                                        <ul>
+                                            <li class="header-menu">
+                                                <span>Menu</span>
+                                            </li>
+                                            <li class="sidebar-content">
+                                                <a href="sistema.php">
+                                                    <i class="fa fa-home fa-fw" aria-hidden="true"></i>
+                                                    <span>Início</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-content">
+                                                <a href="perfilFisico.php">
+                                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                                    <span>Perfil</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-content">
+                                                <a href="#">
+                                                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                                                    <span>Notificações</span>
+                                                    <span class="badge badge-pill badge-danger">
+                                                        <?php echo $peças; ?></span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-content">
+                                                <a href="#">
+                                                    <i class="fa fa-car" aria-hidden="true"></i>
+                                                    <span>Veículos</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-content">
+                                                <a href="#">
+                                                    <i class="fa fa-building" aria-hidden="true"></i>
+                                                    <span>Serviços e Produtos</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- sidebar-menu  -->
+                                </div>
+                             <!-- sidebar-content  -->                   
+                             <div class="sidebar-footer rodapeMenu bg-dark">                                                           
                                     <div class="col-9"></div>
                                     <div class="col-2">
                                         <div class="dropdown">
@@ -125,12 +167,12 @@
                                         </div>
                                     </div>                                 
                                   </div>
-        </div>
-        </nav>
-        </div>
-        </div>
-        </div>
-        </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
             <br><br>
             <!--Perfil Usuario Fisico-->
@@ -215,8 +257,8 @@
                             </div>
                         </div>
                     </div>
-                   
             </form>
+    </div>
         </div>
     </div>
 </body>

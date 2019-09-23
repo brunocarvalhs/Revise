@@ -17,7 +17,7 @@
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" type="text/css" href="/Views/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Revise - Home</title>
@@ -26,8 +26,9 @@
 <body>
     <div class="row">
         <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">
-        <!--Menu superior responsivo-->
-        <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
+    <!--Menu superior responsivo-->
+     <!--Menu superior responsivo-->
+     <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">
                     <div class="row">
@@ -48,10 +49,10 @@
                             <a class="nav-link h4">Menu</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Início</a>
+                            <a class="nav-link" href="sistema.php">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Perfil</a>
+                            <a class="nav-link" href="perfilFisico.php">Perfil</a>
                         </li>
                         <li class="nav-item">
                                 <a class="nav-link" href="#">Notificações</a>
@@ -104,19 +105,20 @@
                                     </div>
                                 </div>
                                 <!-- sidebar-search  -->
-                                <div class="sidebar-menu">
+                                     <!-- sidebar-search  -->
+                            <div class="sidebar-menu">
                                     <ul>
                                         <li class="header-menu">
                                             <span>Menu</span>
                                         </li>
                                         <li class="sidebar-content">
-                                            <a href="#">
+                                            <a href="sistema.php">
                                                 <i class="fa fa-home fa-fw" aria-hidden="true"></i>
                                                 <span>Início</span>
                                             </a>
                                         </li>
                                         <li class="sidebar-content">
-                                            <a href="#">
+                                            <a href="perfilFisico.php">
                                                 <i class="fa fa-user-circle" aria-hidden="true"></i>
                                                 <span>Perfil</span>
                                             </a>
@@ -172,7 +174,6 @@
             </div>
         </div>
         </div>
-    
 <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
 <!--Card-->
 <div class="row">
