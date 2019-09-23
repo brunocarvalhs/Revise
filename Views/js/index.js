@@ -23,7 +23,7 @@ function signUp() {
       switch (value) {
 
         case "juridico":
-          window.location.href = './cadastro_juridico.html';
+          window.location.href = './cadastro_juridico.php';
           break;
 
         case "fisico":

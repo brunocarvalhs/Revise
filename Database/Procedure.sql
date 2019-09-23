@@ -223,6 +223,7 @@ begin
 INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES (id,email,senha,plano,tipo);
 end $
 
+-- Validação de Cadastro Fisico
 delimiter $
 create procedure sp_VerificarCadastro(in email varchar(255),in cpf varchar(11),in placa varchar(255))
 begin

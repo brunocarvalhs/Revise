@@ -118,6 +118,20 @@ function ValidarCadastroFisico()
         document.getElementById("txtNascimento").setAttribute('class', "form-control is-invalid"); 
         logErro = 1;
     }
+    else{
+        if(idade < 18)
+        {
+            alert('Você tem que ser maior de idade.');
+            document.getElementById("txtNascimento").setAttribute('class', "form-control is-invalid"); 
+            logErro = 1;
+        }
+        if(idade > 130)
+        {
+            alert('Data de nascimento inválida.');
+            document.getElementById("txtNascimento").setAttribute('class', "form-control is-invalid"); 
+            logErro = 1;
+        }
+    }
     if(document.CadastroFisico.txtplaca.value.length > 8)
     {
         alert('Sua placa não pode ter mais de 8 caracteres.');
@@ -127,12 +141,6 @@ function ValidarCadastroFisico()
     if(document.CadastroFisico.txtMarca.value == '')
     {
         alert('Nenhum veículo carregado.');
-        logErro = 1;
-    }
-    if(idade < 18)
-    {
-        alert('Você tem que ser maior de idade.');
-        document.getElementById("txtNascimento").setAttribute('class', "form-control is-invalid"); 
         logErro = 1;
     }
        if(document.CadastroFisico.txtplano.value == 0)
@@ -145,10 +153,10 @@ function ValidarCadastroFisico()
     {
         var string =  document.getElementById("txtMarca").value;	
         var retorno = string.split("/");
-        if(retorno[0] != 'CHEVROLET')
+        if(retorno[0] != 'CHEVROLET' && retorno[0] != 'CHEV')
         {
             alert('Marca de carro não suportado.');
-            logErro = 1;
+            logErro = 1; 
         }
     }
     if(logErro != 0)
