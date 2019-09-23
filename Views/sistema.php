@@ -168,16 +168,16 @@
             </div>
         </div>
         <!--Card-->
-
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <div class="card">
-                <div class="card-body bg-dark cardResponsive">
-                    <div class="cardResponsive" id="container"></div>
+        <div class="row" style="padding: 2px;">
+            <div class="col-sm-12">
+              <div class="card bg-dark" style="width: 50%;">
+                <div class="card-body">
+                    <div id="container"></div> 
                 </div>
+              </div>
             </div>
-        </div>
+                        
     </div>
-
 </body>
 <script src="js/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
