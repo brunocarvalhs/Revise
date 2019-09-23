@@ -24,10 +24,48 @@
 
 <body id="sistemaJ">
     <div class="row">
-        <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="page-wrapper chiller-theme toggled">
+    <div class="col-0 col-sm-0 col-md-0 col-lg-3 col-xl-3">
+        <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/logo.png" width="50" height="50" alt="Revise" class="d-inline-block align-top">
+                        </div>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link h4">Menu</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="sistema.php">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="perfilFisico.php">Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Anúncios</a>
+                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Índice de Acesso</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+             <!--Menu lateral-->
+             <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 responsivo">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="page-wrapper chiller-theme toggled">
                         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
                             <i class="fas fa-bars"></i>
                         </a>
@@ -117,6 +155,8 @@
                 </div>
             </div>
         </div>
+             </div>
+    </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
             <br><br>
             <!--Perfil Usuario Jurídico-->
