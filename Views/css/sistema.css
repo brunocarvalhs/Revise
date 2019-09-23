@@ -502,3 +502,6 @@ body, html{
     width: 30rem;
   }
 }
+#divPadding{
+  padding-top: 50px;
+}

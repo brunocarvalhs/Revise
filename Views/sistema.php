@@ -25,7 +25,7 @@
 
 <body>
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-0 col-lg-3 col-xl-3">
+        <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">
         <!--Menu superior responsivo-->
         <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -45,7 +45,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link h4">Geral</a>
+                            <a class="nav-link h4">Menu</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Início</a>
@@ -53,6 +53,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Perfil</a>
                         </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Notificações</a>
+                            </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Peças</a>
                         </li>
@@ -104,7 +107,7 @@
                                 <div class="sidebar-menu">
                                     <ul>
                                         <li class="header-menu">
-                                            <span>Geral</span>
+                                            <span>Menu</span>
                                         </li>
                                         <li class="sidebar-content">
                                             <a href="#">
@@ -121,7 +124,7 @@
                                         <li class="sidebar-content">
                                             <a href="#">
                                                 <i class="fa fa-wrench" aria-hidden="true"></i>
-                                                <span>Histórico de Peças</span>
+                                                <span>Notificações</span>
                                                 <span class="badge badge-pill badge-danger">
                                                     <?php echo $peças; ?></span>
                                             </a>
@@ -170,48 +173,208 @@
         </div>
         </div>
     
-        <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
+<div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
 <!--Card-->
 <div class="row">
     <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-    <div class="col-10 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+    <div class="col-10 col-sm-8 col-md-8 col-lg-8 col-xl-8" id="divPadding">
         <div class="card bg-dark w-100" >
-            <div class="card-body">
-                <div class="container" >
+<div class="card-body">
+     <!--Título do card-->
+    <div class="container" >
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <label class="h3 text-white">Óleo do motor</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Progressbars-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <label class="h5 text-white-50">KM</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <label class="h5 text-white-50">Tempo</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+</div>
+<!--Card-->
+<div class="row">
+        <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col-10 col-sm-8 col-md-8 col-lg-8 col-xl-8" id="divPadding">
+            <div class="card bg-dark w-100" >
+    <div class="card-body">
+         <!--Título do card-->
+        <div class="container" >
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <label class="h3 text-white">Filtro de ar</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Progressbars-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <label class="h5 text-white-50">KM</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                </div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <label class="h5 text-white-50">Tempo</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                    </div>
+                </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
+    <!--Card-->
+<div class="row">
+        <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+        <div class="col-10 col-sm-8 col-md-8 col-lg-8 col-xl-8" id="divPadding">
+            <div class="card bg-dark w-100" >
+    <div class="card-body">
+         <!--Título do card-->
+        <div class="container" >
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <label class="h3 text-white">Pastilhas de freio</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Progressbars-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <label class="h5 text-white-50">KM</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <label class="h5 text-white-50">Tempo</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
+    
+    
+    <!--Card-->
+    <div class="row">
+            <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+            <div class="col-10 col-sm-8 col-md-8 col-lg-8 col-xl-8" id="divPadding">
+                <div class="card bg-dark w-100" >
+        <div class="card-body">
+             <!--Título do card-->
+            <div class="container" >
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
-                                <label class="h5 text-white">KM</label>
+                                <label class="h3 text-white">Pneus</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Progressbars-->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <label class="h5 text-white-50">KM</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                        aria-valuemax="100">
-                    </div>
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                        aria-valuemax="100"></div>
                 </div>
-
+                <br>
                 <div class="container">
                     <div class="row">
-                        <label class="h5 text-white">Tempo</label>
+                        <label class="h5 text-white-50">Tempo</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+                </div>
+                </div>
+            <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
         </div>
     </div>
-    <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-</div>
-</div>
-</div>
+    </div>
+    </div>
+    <br>
 </body>
 <script src="js/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
