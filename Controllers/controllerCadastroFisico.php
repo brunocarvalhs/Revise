@@ -33,7 +33,7 @@ $cpf = str_replace('"', '"', $cpf);
 $user = new UserFisico;
 if($user->VerificarCadastrar($email,$cpf,$placa) == 'true')
 {
-    $user = $user->getId();
+    $idUser = $user->getId();
     $user->Cadastrar($nome,$email,$senha,$plano,$cpf,$nascimento);
     $veiculo = new Veiculo;
     $veiculo->Cadastrar($placa,$cor,$modelo,$ano,$idUser);
