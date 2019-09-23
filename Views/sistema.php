@@ -25,6 +25,7 @@
 
 <body>
     <div class="row">
+        <div class="col-12 col-sm-12 col-md-0 col-lg-3 col-xl-3">
         <!--Menu superior responsivo-->
         <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -167,17 +168,50 @@
                 </div>
             </div>
         </div>
-        <!--Card-->
-        <div class="row" style="padding: 2px;">
-            <div class="col-sm-12">
-              <div class="card bg-dark" style="width: 50%;">
-                <div class="card-body">
-                    <div id="container"></div> 
+        </div>
+    
+        <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
+<!--Card-->
+<div class="row">
+    <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+    <div class="col-10 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+        <div class="card bg-dark w-100" >
+            <div class="card-body">
+                <div class="container" >
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <label class="h5 text-white">KM</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                        aria-valuemax="100">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <label class="h5 text-white">Tempo</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-                        
+        </div>
     </div>
+    <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+</div>
+</div>
+</div>
 </body>
 <script src="js/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
