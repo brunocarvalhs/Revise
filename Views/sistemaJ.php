@@ -157,18 +157,12 @@
         </div>
              </div>
     </div>
-   <div class="row" style="padding-top: 50px;">
-   <div class="col-4">
-    <div class="card bg-dark h-50" style="width: 13rem;">
-            <img src="img/oleo.jpg" class="card-img-top" alt="Imagem Indisponível">
+    <div class="card w-50">
+            <img src="./img/oleo.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                </p>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
-            </div>
-          
-        </div>
-    </div>
+          </div>
     </div>
 </body>
 <script src="./js/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
