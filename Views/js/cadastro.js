@@ -24,7 +24,7 @@ function Validacao() {
 }
 /*
 function juridico() {
-    window.location.href = './cadastro_juridico.html';
+    window.location.href = './cadastro_juridico.php';
 }
 function fisico() {
     window.location.href = './cadastro.html';

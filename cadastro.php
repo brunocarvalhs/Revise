@@ -373,7 +373,7 @@ session_start();
 <script src="./Views/js/jquery-3.4.1.js"></script>
 <script src="./Views/js/sweetalert.min.js"></script>
 <script src="./Views/js/jquery.mask.js"></script>
-<script src="./Views/js/APIplaca.js"></script>
+<script src="./Views/js/API.js"></script>
 <script src="./Views/js/validation/CadastroFisico.js"></script>
 <?php 
 if(isset($_SESSION["ERRO-CADASTRO"]))

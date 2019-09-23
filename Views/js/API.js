@@ -37,3 +37,39 @@ function consultar() {
     })
 
 }
+function consultarCep() {
+
+    document.getElementById("txtEstado").setAttribute('value', "Pesquisando..."); 
+    document.getElementById("txtBairro").setAttribute('value', "Pesquisando..."); 
+    document.getElementById("txtCidade").setAttribute('value', "Pesquisando..."); 
+    document.getElementById("txtRua").setAttribute('value', "Pesquisando..."); 
+
+    var cep = $("#txtCEP").val();
+    var urlStr = "https://viacep.com.br/ws/" + cep + "/json/";
+
+    $.ajax({
+        url: urlStr,
+        type: "get",
+        crossDomain: true,
+        dataType: "json",
+        success: function (data) {
+            console.log(data);
+            document.getElementById("txtEstado").setAttribute('value', data.uf); 
+            document.getElementById("txtBairro").setAttribute('value', data.bairro); 
+            document.getElementById("txtRua").setAttribute('value', data.logradouro); 
+            document.getElementById("txtCidade").setAttribute('value', data.localidade);  
+    },
+        error: function (erro) {
+            swal({
+                icon : 'error',
+                title : 'Resultado da Consulta',
+                text : 'CEP não encontrado: ' + cep, 
+            });
+            document.getElementById("txtEstado").setAttribute('value', ""); 
+            document.getElementById("txtBairro").setAttribute('value', ""); 
+            document.getElementById("txtCidade").setAttribute('value', ""); 
+            document.getElementById("txtRua").setAttribute('value', ""); 
+        }
+    })
+
+}
