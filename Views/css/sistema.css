@@ -511,3 +511,6 @@ body, html{
   padding: 8px;
   align-self: center;
 }
+.paddingCards{
+  padding-top: 50px;
+}

@@ -22,10 +22,10 @@
     <title>Revise - Home</title>
 </head>
 
-<body id="sistemaJ">
+<body id="sistemaJ" class="bg-light">
     <div class="row">
     <div class="col-0 col-sm-0 col-md-0 col-lg-3 col-xl-3">
-        <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-0 menusuperior">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">
                     <div class="row">
@@ -62,7 +62,7 @@
             </nav>
         </div>
              <!--Menu lateral-->
-             <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 responsivo">
+             <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-2 responsivo">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="page-wrapper chiller-theme toggled">
@@ -146,8 +146,8 @@
                                                 <circle cx="16" cy="16" r="4" />
                                             </svg>
                                         </button>
-                                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="">Excluir conta</a>
+                                        <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item bg-warning" href="">Excluir conta</a>
                                         </div>
                                     </div>
                                 </div>                                 
@@ -157,12 +157,40 @@
         </div>
              </div>
     </div>
-    <div class="card w-50">
-            <img src="./img/oleo.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-3 paddingCards">
+            <div class="card bg-dark h-100">
+                <img src="./img/oleo.jpg" class="card-img-top" alt="...">
+                <div class="card-body ">
+                    <p class="card-text text-white-50">Kit de Óleo Ipiranga</p>
+                      <h5 class="card-title text-white">R$ 100,00</h5>
+                      <a class="btn btn-outline-success align-content-center w-100" href="#" role="button"> Ver Mais +</a>
+                </div>
             </div>
-          </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-3" style="padding-top: 50px;">
+                <div class="card bg-dark h-100">
+                    <img src="./img/oleo.jpg" class="card-img-top" alt="...">
+                    <div class="card-body ">
+                        <p class="card-text text-white-50">Escreva aqui o nome e a descrição que quiser do produto</p>
+                          <h5 class="card-title text-white">R$ 100,00</h5>
+                          <a class="btn btn-outline-success align-content-center w-100" href="#" role="button"> Ver Mais +</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-3" style="padding-top: 50px;">
+                    <div class="card bg-dark">
+                        <img src="https://www.vicentao.com.br/catalogo/app/thumber.php?q=70&zc=2&w=210&h=180&src=fotos/b109e89d608bf520004b33ce925d91e5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body ">
+                            <p class="card-text text-white-50">Escreva aqui o nome e a descrição que quiser do produto</p>
+                              <h5 class="card-title text-white">R$ 100,00</h5>
+                              <a class="btn btn-outline-success align-content-center w-100" href="#" role="button"> Ver Mais +</a>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    </div>
     </div>
 </body>
 <script src="./js/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
