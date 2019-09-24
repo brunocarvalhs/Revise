@@ -130,40 +130,40 @@
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <button type="button"  onclick="consultarCep();" id="buscaCEP"
+                                                    <button type="button" onclick="consultarCep();" id="buscaCEP"
                                                         class="btn btn-warning">Pesquisar CEP</button>
                                                 </div>
                                             </div>
                                         </div>
-                                    </fieldset>                                                           
+                                    </fieldset>
                                     <div class="form-row">
-                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                                    <input type="text" readonly="true" class="form-control" id="txtEstado"
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <input type="text" readonly="true" class="form-control" id="txtEstado"
                                                 name="txtEstado" placeholder="Estado">
                                         </div>
                                         <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                                <input type="text" readonly="true" class="form-control" id="txtCidade"
-                                                    name="txtCidade" placeholder="Cidade">
-                                            </div>
+                                            <input type="text" readonly="true" class="form-control" id="txtCidade"
+                                                name="txtCidade" placeholder="Cidade">
+                                        </div>
                                         <br><br>
                                         <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-6">
-                                                <div class="form-group">
+                                            <div class="form-group">
                                                 <input type="text" readonly="true" class="form-control" id="txtBairro"
                                                     name="txtBairro" placeholder="Bairro">
-                                            </div>  
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                                            <div class="form-group">
-                                                    <input type="text" class="form-control" id="txtNumero"
-                                                        name="txtNumero" placeholder="Número">
-                                                </div>  
+                                            </div>
                                         </div>
                                         <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                                                <div class="form-group">
-                                                        <input type="text" readonly="true" class="form-control" id="txtRua"
-                                                            name="txtRua" placeholder="Rua">
-                                                    </div>  
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="txtNumero" name="txtNumero"
+                                                    placeholder="Número">
                                             </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                            <div class="form-group">
+                                                <input type="text" readonly="true" class="form-control" id="txtRua"
+                                                    name="txtRua" placeholder="Rua">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -181,7 +181,8 @@
                         <!-- CNPJ -->
                         <div class="col-12 col-sm-12 col-md col-lg col-xl">
                             <label for="exampleFormControlInput1">CNPJ</label>
-                            <input type="text" class="form-control" name="txtcnpj" id="txtcnpj" placeholder="XX.XXX.XXX/YYYY-ZZ">
+                            <input type="text" class="form-control" name="txtcnpj" id="txtcnpj"
+                                placeholder="XX.XXX.XXX/YYYY-ZZ">
                         </div>
 
                     </div>
@@ -347,18 +348,21 @@
         </div>
     </footer>
     <div id="notifications"></div>
-    <script src="./Views/js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="./Views/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-<script src="./Views/js/wow.js"></script>
-<script src="./Views/js/cadastro.js"></script>
-<script src="./Views/js/index.js"></script>
-<script src="./Views/js/jquery-3.4.1.js"></script>
-<script src="./Views/js/sweetalert.min.js"></script>
-<script src="./Views/js/jquery.mask.js"></script>
-<script src="./Views/js/API.js"></script>
-<script src="./Views/js/validation/CadastroJuridico.js"></script>
-<script src="./Views/js/sistema.js"></script>
-<script src="./Views/js/cadastro.js"></script>
+    <script src="./Views/js/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="./Views/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="./Views/js/wow.js"></script>
+    <script src="./Views/js/cadastro.js"></script>
+    <script src="./Views/js/index.js"></script>
+    <script src="./Views/js/jquery-3.4.1.js"></script>
+    <script src="./Views/js/sweetalert.min.js"></script>
+    <script src="./Views/js/jquery.mask.js"></script>
+    <script src="./Views/js/API.js"></script>
+    <script src="./Views/js/validation/CadastroJuridico.js"></script>
+    <script src="./Views/js/sistema.js"></script>
+    <script src="./Views/js/cadastro.js"></script>
+
 </html>
