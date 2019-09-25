@@ -345,3 +345,7 @@ h6 {
 .swal-overlay {
     background-color: rgba(68, 68, 68, 0.45);
   }
+  .CardIcon{
+    width: 40%;
+     padding-block-end: 10px;
+  }
