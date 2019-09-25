@@ -146,12 +146,16 @@ que consta em documentos legais e é usado em termos formais">
                                                 name="txtCidade" placeholder="Cidade">
                                         </div>
                                         <br><br>
+
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-6">
+
                                             <div class="form-group">
                                                 <input type="text" readonly="true" class="form-control" id="txtBairro"
                                                     name="txtBairro" placeholder="Bairro">
                                             </div>
                                         </div>
+
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-5">
                                             <div class="form-group">
                                                 <input type="text" readonly="true" class="form-control" id="txtRua"
@@ -162,6 +166,18 @@ que consta em documentos legais e é usado em termos formais">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id="txtNumero" name="txtNumero"
                                                     placeholder="Número">
+
+                                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="txtNumero" name="txtNumero"
+                                                    placeholder="Número">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                            <div class="form-group">
+                                                <input type="text" readonly="true" class="form-control" id="txtRua"
+                                                    name="txtRua" placeholder="Rua">
+
                                             </div>
                                         </div>
                                     </div>
@@ -217,6 +233,7 @@ que consta em documentos legais e é usado em termos formais">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
                                 <div class="row">
+
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                 <div class="card shadow mb-5 bg-white">
                                     <div class="card-body ">
@@ -228,6 +245,28 @@ que consta em documentos legais e é usado em termos formais">
                                                     <span>Serviço</span>
                                                     <input id="servicoInput" type="number" class="form-control" placeholder="R$ 10,00 cada">
                                                 </div>
+
+                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="card shadow mb-5 bg-white">
+                                            <div class="card-body ">
+                                                <h5 class="card-title">Anúncios</h5>
+                                                <p class="card-text">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <span>Serviço</span>
+                                                            <input name="servicoInput" id="servicoInput" type="text" class="form-control"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <span>Produtos</span>
+                                                            <input name="produtoInput" id="produtoInput" type="text" class="form-control"
+                                                                placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </p>
+
                                             </div>
                                             <div class="row">
                                                 <div class="col">
@@ -251,7 +290,7 @@ que consta em documentos legais e é usado em termos formais">
                                                             <h6>Serviço:</h6>
                                                         </div>
                                                         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                            <h6><b id="valorServico"></b></h6>
+                                                            <h6><b name="txtValorServico" id="txtValorServico"></b></h6>
                                                         </div>
                                                     </div>
                                                     <br>
@@ -260,7 +299,7 @@ que consta em documentos legais e é usado em termos formais">
                                                             <h6>Produtos:</h6>
                                                         </div>
                                                         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                            <h6><b id="valorProduto"></b></h6>
+                                                            <h6><b name="txtValorProduto" id="txtValorProduto"></b></h6>
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -269,7 +308,7 @@ que consta em documentos legais e é usado em termos formais">
                                                             <h5>Total:</h5>
                                                         </div>
                                                         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                            <h5><b id="valorTotal"></b></h5>
+                                                            <h5><b name="txtTotal" id="txtTotal"></b></h5>
                                                         </div>
                                                     </div>
                                                     <br>
