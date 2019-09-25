@@ -54,6 +54,13 @@ session_start();
                                             </div>';
                                             unset($_SESSION["N-Autenticado"]);
                                         }
+                                        if(isset($_SESSION["CADASTRADO-SUCESSO"]))
+                                        {
+                                            echo '<div class="alert alert-success" role="alert">
+                                            Usuário cadastrado com sucesso.
+                                            </div>';
+                                            unset($_SESSION["CADASTRADO-SUCESSO"]);
+                                        }
                                         ?>
                                     <button type="submit" class="btn btn-dark btn-lg btn-block">
                                         ENTRAR

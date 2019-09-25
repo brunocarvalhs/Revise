@@ -37,6 +37,8 @@ if($user->VerificarCadastrar($email,$cpf,$placa) == 'true')
     $user->Cadastrar($nome,$email,$senha,$plano,$cpf,$nascimento);
     $veiculo = new Veiculo;
     $veiculo->Cadastrar($placa,$cor,$modelo,$ano,$idUser);
+    $_SESSION["CADASTRADO-SUCESSO"] = true;
+    Header('Location: ../login.php');
     
 }
 else if ($user->VerificarCadastrar($email,$cpf,$placa) == 'placa')
