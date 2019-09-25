@@ -164,146 +164,119 @@ que consta em documentos legais e é usado em termos formais">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id="txtNumero" name="txtNumero"
                                                     placeholder="Número">
+                                            </div>
+                                        </div>
+
+                                        <!--FIM-->
                                     </div>
                                 </div>
-                          
-                            <!--FIM-->
-                        </div>
-                    </div>
-                </div>
-                <!-- E-mail -->
-                <div class="form-group inputCadastro">
-                    <label for="exampleFormControlInput1">Endereço de email</label>
-                    <input type="email" class="form-control" id="campoEmail" required="" placeholder="nome@exemplo.com">
-                </div>
-                <div class="form-group inputCadastro">
-                    <div class="form-row">
-                        <!-- CNPJ -->
-                        <div class="col-12 col-sm-12 col-md col-lg col-xl">
-                            <label for="exampleFormControlInput1">CNPJ</label>
-                            <input type="text" class="form-control" name="txtcnpj" id="txtcnpj"
-                                placeholder="XX.XXX.XXX/YYYY-ZZ">
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Senha -->
-                <div class="form-group inputCadastro">
-                    <label for="campoSenha">Senha</label>
-                    <input type="password" id="campoSenha" class="form-control" aria-describedby="descricaoSenha">
-                    <small id="descricaoSenha" class="form-text text-muted">
-                        Sua senha deve ter entre 6 e 20 caracteres, os quais devem ser letras e números,
-                        sem
-                        espaços, caracteres especiais ou emojis.
-                    </small>
-                </div>
-                <!-- Confirma senha -->
-                <div class="form-group inputCadastro">
-                    <label for="campoSenha">Confirmar senha</label>
-                    <input type="password" id="campoConfirmaSenha" class="form-control"
-                        aria-describedby="descricaoSenha">
-                </div>
-                <!-- Plano -->
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
-                                <h4>Escolha seus anúncios</h4>
-                                <br>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                            <!-- E-mail -->
+                            <div class="form-group inputCadastro">
+                                <label for="exampleFormControlInput1">Endereço de email</label>
+                                <input type="email" class="form-control" id="campoEmail" required=""
+                                    placeholder="nome@exemplo.com">
+                            </div>
+                            <div class="form-group inputCadastro">
+                                <div class="form-row">
+                                    <!-- CNPJ -->
+                                    <div class="col-12 col-sm-12 col-md col-lg col-xl">
+                                        <label for="exampleFormControlInput1">CNPJ</label>
+                                        <input type="text" class="form-control" name="txtcnpj" id="txtcnpj"
+                                            placeholder="XX.XXX.XXX/YYYY-ZZ">
+                                    </div>
+
+                                </div>
+                        
+                                </div>
+                                </div>
+                            
+                            <!-- Senha -->
+                            <div class="form-group inputCadastro">
+                                <label for="campoSenha">Senha</label>
+                                <input type="password" id="campoSenha" class="form-control"
+                                    aria-describedby="descricaoSenha">
+                                <small id="descricaoSenha" class="form-text text-muted">
+                                    Sua senha deve ter entre 6 e 20 caracteres, os quais devem ser letras e números,
+                                    sem
+                                    espaços, caracteres especiais ou emojis.
+                                </small>
+                            </div>
+                            <!-- Confirma senha -->
+                            <div class="form-group inputCadastro">
+                                <label for="campoSenha">Confirmar senha</label>
+                                <input type="password" id="campoConfirmaSenha" class="form-control"
+                                    aria-describedby="descricaoSenha">
+                            </div>
+                            <!-- Plano -->
                                 <div class="row">
-
-                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                <div class="card shadow mb-5 bg-white">
-                                    <div class="card-body ">
-                                        <h5 class="card-title">Anúncios</h5>
-                                        <p>Insira o número de anúncios que deseja adicionar ao seu plano</p>
-                                        <p class="card-text">
-                                            <div class="row">
-                                                <div class="col">
-                                                    <span>Serviço</span>
-                                                    <input id="servicoInput" type="number" class="form-control" placeholder="R$ 10,00 cada">
-                                                </div>
-
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                        <div class="card shadow mb-5 bg-white">
-                                            <div class="card-body ">
-                                                <h5 class="card-title">Anúncios</h5>
-                                                <p class="card-text">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <span>Serviço</span>
-                                                            <input name="servicoInput" id="servicoInput" type="text" class="form-control"
-                                                                placeholder="">
-                                                        </div>
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                <div class="card shadow mb-5 bg-white">
+                                                    <div class="card-body ">
+                                                        <h5 class="card-title">Anúncios</h5>
+                                                        <p>Insira o número da quantidade de anúncios que deseja</p>
+                                                        <p class="card-text">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <span>Serviço</span>
+                                                                    <input id="servicoInput" type="number" class="form-control"
+                                                                        placeholder="R$ 10,00 cada">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <span>Produtos</span>
+                                                                    <input id="produtoInput" type="number" class="form-control"
+                                                                        placeholder="R$ 1,00 cada">
+                                                                </div>
+                                                            </div>
+                                                        </p>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <span>Produtos</span>
-                                                            <input name="produtoInput" id="produtoInput" type="text" class="form-control"
-                                                                placeholder="">
-                                                        </div>
-                                                    </div>
-                                                </p>
-
-                                            </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <span>Produtos</span>
-                                                    <input id="produtoInput" type="number" class="form-control"
-                                                        placeholder="R$ 1,00 cada">
                                                 </div>
                                             </div>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                        <div class="card shadow mb-5 bg-white">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Plano mensal personalizado</h5>
-                                                <p class="card-text">
-                                                    <br>
-                                                    <div class="row">
-                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
-                                                            <h6>Serviço:</h6>
-                                                        </div>
-                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                            <h6><b name="txtValorServico" id="txtValorServico"></b></h6>
-                                                        </div>
+                                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                                <div class="card shadow mb-5 bg-white">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Plano mensal personalizado</h5>
+                                                        <p class="card-text">
+                                                            <br>
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                                                                    <h6>Serviço:</h6>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                                    <h6><b id="valorServico"></b></h6>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            <div class="row">
+                                                                <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                                                                    <h6>Produtos:</h6>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                                    <h6><b id="valorProduto"></b></h6>
+                                                                </div>
+                                                            </div>
+                                                            <hr>
+                                                            <div class="row border-top-5">
+                                                                <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
+                                                                    <h5>Total:</h5>
+                                                                </div>
+                                                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                                                                    <h5><b id="valorTotal"></b></h5>
+                                                                </div>
+                                                            </div>
+                                                            <br>
+                                                            
+                                                        </p>
                                                     </div>
-                                                    <br>
-                                                    <div class="row">
-                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
-                                                            <h6>Produtos:</h6>
-                                                        </div>
-                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                            <h6><b name="txtValorProduto" id="txtValorProduto"></b></h6>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                    <div class="row border-top-5">
-                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
-                                                            <h5>Total:</h5>
-                                                        </div>
-                                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                            <h5><b name="txtTotal" id="txtTotal"></b></h5>
-                                                        </div>
-                                                    </div>
-                                                    <br>
-                                                </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-            </form>
             <!--Botão-->
             <br><br>
             <div class="row">
