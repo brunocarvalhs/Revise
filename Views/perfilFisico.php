@@ -1,10 +1,10 @@
 <?php
 
 $FotoDePerfil = 'img/user.jpg';
-$nome = 'Bruno';
-$sobrenome = 'Silva Carvalho';
-$placa = 'ABC-1234';
-$modelo = 'Corsa Classic';
+$nome = 'Marina';
+$sobrenome = 'Luna Sales';
+$placa = 'EYT-4550';
+$modelo = 'PRISMA';
 $peças = 7;
 ?>
 <!DOCTYPE html>
