@@ -225,14 +225,14 @@
                                                     <div class="row">
                                                         <div class="col">
                                                             <span>Serviço</span>
-                                                            <input id="servicoInput" type="number" class="form-control"
+                                                            <input name="servicoInput" id="servicoInput" type="text" class="form-control"
                                                                 placeholder="">
                                                         </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col">
                                                             <span>Produtos</span>
-                                                            <input id="produtoInput" type="number" class="form-control"
+                                                            <input name="produtoInput" id="produtoInput" type="text" class="form-control"
                                                                 placeholder="">
                                                         </div>
                                                     </div>
@@ -251,7 +251,7 @@
                                                             <h6>Serviço:</h6>
                                                         </div>
                                                         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                            <h6><b id="valorServico"></b></h6>
+                                                            <h6><b name="txtValorServico" id="txtValorServico"></b></h6>
                                                         </div>
                                                     </div>
                                                     <br>
@@ -260,7 +260,7 @@
                                                             <h6>Produtos anúnciados:</h6>
                                                         </div>
                                                         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                            <h6><b id="valorProduto"></b></h6>
+                                                            <h6><b name="txtValorProduto" id="txtValorProduto"></b></h6>
                                                         </div>
                                                     </div>
                                                     <hr>
@@ -269,7 +269,7 @@
                                                             <h5>Total:</h5>
                                                         </div>
                                                         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                                            <h5><b id="valorTotal"></b></h5>
+                                                            <h5><b name="txtTotal" id="txtTotal"></b></h5>
                                                         </div>
                                                     </div>
                                                     <br>
