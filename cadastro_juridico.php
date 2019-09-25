@@ -137,18 +137,16 @@ que consta em documentos legais e é usado em termos formais">
                                         </div>
                                     </fieldset>
                                     <div class="form-row">
-                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                             <input type="text" readonly="true" class="form-control" id="txtEstado"
                                                 name="txtEstado" placeholder="Estado">
                                         </div>
-                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                             <input type="text" readonly="true" class="form-control" id="txtCidade"
                                                 name="txtCidade" placeholder="Cidade">
                                         </div>
                                         <br><br>
-
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-6">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
 
                                             <div class="form-group">
                                                 <input type="text" readonly="true" class="form-control" id="txtBairro"
@@ -156,33 +154,19 @@ que consta em documentos legais e é usado em termos formais">
                                             </div>
                                         </div>
 
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-5">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                             <div class="form-group">
                                                 <input type="text" readonly="true" class="form-control" id="txtRua"
                                                     name="txtRua" placeholder="Rua">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-sm-12 col-md-5 col-lg-3 col-xl-3">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" id="txtNumero" name="txtNumero"
                                                     placeholder="Número">
-
-                                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="txtNumero" name="txtNumero"
-                                                    placeholder="Número">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                                            <div class="form-group">
-                                                <input type="text" readonly="true" class="form-control" id="txtRua"
-                                                    name="txtRua" placeholder="Rua">
-
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                          
                             <!--FIM-->
                         </div>
                     </div>
