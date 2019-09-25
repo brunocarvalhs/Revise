@@ -346,6 +346,7 @@ h6 {
     background-color: rgba(68, 68, 68, 0.45);
   }
   .CardIcon{
-    width: 40%;
+    width: 80px;
      padding-block-end: 10px;
+     padding-top: 40px;
   }

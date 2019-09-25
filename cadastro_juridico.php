@@ -203,8 +203,6 @@ que consta em documentos legais e é usado em termos formais">
                     <input type="password" id="campoConfirmaSenha" class="form-control"
                         aria-describedby="descricaoSenha">
                 </div>
-
-
                 <!-- Plano -->
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
@@ -302,6 +300,8 @@ que consta em documentos legais e é usado em termos formais">
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        </div>
                         </div>
             </form>
             <!--Botão-->
