@@ -13,12 +13,6 @@ VALUES
     ('T', 'Tempo'),
     ('Km', 'Quilometros');
 
-INSERT INTO tb_tipo_plano
-    (cd_tipo_plano, nm_tipo_plano)
-VALUES
-    (1, 'Plano Fisico'),
-    (2, 'Plano Juridico');
-
 INSERT INTO tb_categoria
     (cd_categoria, nm_categoria)
 VALUES
@@ -126,81 +120,81 @@ VALUES
 
 
 INSERT INTO tb_tipo_anuncio
-    (cd_tipo_anuncio, nm_tipo_anuncio, vl_anuncio)
+    (cd_tipo_anuncio, nm_tipo_anuncio, vl_atual_anuncio)
 VALUES
     (1, 'Serviço', 10.00),
     (2, 'Produto', 1.00);
 
 INSERT INTO tb_plano
-    (cd_plano, nm_plano, ds_plano, cd_tipo_plano, qt_anuncio, qt_veiculo)
+    (cd_plano, nm_plano, ds_plano, qt_anuncio, qt_veiculo)
 VALUES
-    (1 , 'Basic', 'Plano Gratuito', 1, null, 2),
-    (2 , 'Standart', 'Plano de R$9,99', 1, null, 5),
-    (3 , 'Pro', 'Plano de R$39,99', 1, null, 20),
-    (4 , 'Deluxe Edition', 'Plano de R$99,90', 1 , null, 50),
-    (5 , 'Plano Juridico', 'Personalizavel', 2, null, null);
+    (1 , 'Basic', 'Plano Gratuito', null, 2),
+    (2 , 'Standart', 'Plano de R$9,99', null, 5),
+    (3 , 'Pro', 'Plano de R$39,99', null, 20),
+    (4 , 'Deluxe Edition', 'Plano de R$99,90', null, 50),
+    (5 , 'Plano Juridico', 'Personalizavel', null, null);
 
-INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES 
-(1,'marinalunasales__marinalunasales@acritica.com.br','2Nq1duhP3l',2,1),
-(2,'josemariodamata-90@tivit.com.br','UjzE7GqhEI',1,1),
-(3,'robertodiogonogueira_@projetti.com','5Yu7kjnCAC',4,1),
-(4,'calebdanielnascimento__calebdanielnascimento@outllok.com','Gbb85gJOWX',3,1),
-(5,'fabianaaparecidaluanarodrigues_@castromobile.com.br','u7HcXDNmkr',1,1),
-(6,'teresinhaclaudiaisabellydarocha__teresinhaclaudiaisabellydarocha@fk1.com.br','rcMsdwpHqd',3,1),
-(7,'oliviavitoriaclaudiadacunha_@vhbadvogados.com.br','G8jxSQuEjP',4,1),
-(8,'alinejuliaraimundadasilva__alinejuliaraimundadasilva@teadit.com.br','CFT71YKnnN',2,1),
-(9,'isabellystellamelo_@ufscar.br','FYyfeXNQWG',2,1),
-(10,'daianejulianaduarte__daianejulianaduarte@moyageorges.com.br','W30GuPZpCa',1,1),
-(11,'rafaelamarlenecarvalho_@afujita.com.br','RK8wGilM81',4,1),
-(12,'thalespietromanuelcampos__thalespietromanuelcampos@aedu.com','XNuIpNMT6c',2,1),
-(13,'marioricardoalves__marioricardoalves@vivalle.com.br','6QbhS1dbOL',1,1),
-(14,'cauaedsonbrito..cauaedsonbrito@gmeil.com','gckUjHiZTH',4,1),
-(15,'renanbentooliveira_@corpoclinica.com.br','5AtC6c1374',2,1),
-(16,'lucianacarlaalmeida__lucianacarlaalmeida@tuenkers.com.br','q8scbsaszg',3,1),
-(17,'davivitordiegodaluz_@regler.com.br','h9uY1pSEyz',1,1),
-(18,'otaviofranciscodiegodepaula..otaviofranciscodiegodepaula@clickfios.com.br','bSqr4yo28j',2,1),
-(19,'bbernardoluizrodrigocortereal@grupomegavale.com.br','b1X4f0qEbw',3,1),
-(20,'marcelocalebethalesnascimento..marcelocalebethalesnascimento@yahoo.com,br','lPGE4ZEBic',4,1),
-(21,'oliverbrenofarias..oliverbrenofarias@cpfl.com.br','xGKSdOsIcO',1,1),
-(22,'carlosdiegopinto__carlosdiegopinto@viamoc.com.br','dO4iykOm44',2,1),
-(23,'mmayacarladacruz@senioraereo.com.br','RT62gg64ql',4,1),
-(24,'ddeboramanuelalima@eximiart.com.br','01rYoK96ca',1,1),
-(25,'manuelbenjaminnascimento_@policiamilitar.sp.gov.br','qXRrhGzqGM',1,1),
-(26,'brenoluisdacosta_@valeguinchos.com.br','jyms58GrFu',2,1),
-(27,'rodrigojorgemanoelfigueiredo_@vizzacchi.com.br','eGdUTh18nB',3,1),
-(28,'ddiogoleandrofogaca@greenbikeshop.com.br','6zaAxehGiU',4,1),
-(29,'lluizleonardokevindamota@bighost.com.br','Kk9ZGW1m5G',2,1),
-(30,'priscilarafaelamariafernandes_@thacconstrutora.com.br','qsMgB8slSq',1,1),
-(31,'bbrendalunacampos@rabelloadvogados.com.br','XpcowNbfDt',5,2),
-(32,'arthurdiogomendes..arthurdiogomendes@archosolutions.com.br','6Hl6S3c3ze',5,2),
-(33,'cristianeelainepires_@megamega.com.br','utZaEfD2gQ',5,2),
-(34,'thaleshenrygomes..thaleshenrygomes@igui.com.br','AWDOXtDFLb',5,2),
-(35,'jjoaoedsonnogueira@autvale.com','pz6JF8p7n2',5,2),
-(36,'vviniciusluisrocha@gabrielresende.com','nSApXOnONA',5,2),
-(37,'fatimagiovanaamandadias_@fclar.net.br','KNsM8XDWU5',5,2),
-(38,'carolineamandasophiacaldeira_@raya3.com.br','tk71W3fdF2',5,2),
-(39,'eloalorenasales-95@rafaelmarin.net','slNd0E4FuE',5,2),
-(40,'stefanyninaassis__stefanyninaassis@ceviu.com.br','5FTEzxPbwJ',5,2),
-(41,'aaugustoheitorpires@ctlive.com.br','qmKxSPsiQM',5,2),
-(42,'beneditoandersongustavoramos-71@hp.com','RtUxwbKROO',5,2),
-(43,'evelynmarlicosta__evelynmarlicosta@ceviu.com.br','yIuen3hY6p',5,2),
-(44,'tiagobenjaminbarros..tiagobenjaminbarros@lbrazil.com.br','5D2U7rgXWW',5,2),
-(45,'reginasandramalucosta_@kantoferramentaria.com.br','c8R7nLImTd',5,2),
-(46,'isabelantonellamilenaduarte__isabelantonellamilenaduarte@pig.com.br','bCIyfzmZ7j',5,2),
-(47,'marianenataliahelenamartins__marianenataliahelenamartins@tce.sp.gov.br','LIwZb9u0Wh',5,2),
-(48,'nataliagiovanaaliciasouza-77@abdalathomaz.adv.br','9BYI6bM7Xc',5,2),
-(49,'ccaiojuancastro@kimmay.com.br','Fo3CafJLIn',5,2),
-(50,'elaineauroraoliveira..elaineauroraoliveira@moppe.com.br','Hm2p8gA4yW',5,2),
-(51,'jjoaokevinalmada@atrix.com.br','3KwmGeIpLt',5,2),
-(52,'robertoluisenzobrito..robertoluisenzobrito@lanchesdahora.com.br','SzjezZ90yI',5,2),
-(53,'camilabrendamartins_@arablock.com.br','HhxMQIQxCg',5,2),
-(54,'calebbryanluisrodrigues_@netsinf.com.br','8ndh18EDGr',5,2),
-(55,'emilyreginapires-92@eternalam.com.br','qmiraZmlgf',5,2),
-(56,'iisadorateresinhasophiafigueiredo@elevaconsultancy.com.br','WLEZGq27ub',5,2),
-(57,'elzaclaricedasneves__elzaclaricedasneves@owl-ti.com.br','tQqLmsrU7S',5,2),
-(58,'analusophiacastro_@azevedoalves.com.br','QZ13p1dfHy',5,2),
-(59,'anthonyianfarias__anthonyianfarias@sigtechbr.com','HL2GpLGO19',5,2),
-(60,'silvanaelisadapaz..silvanaelisadapaz@rjnet.com.br','8pxqA4BGsX',5,2);
+INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_tipo_usuario) VALUES 
+(1,'marinalunasales__marinalunasales@acritica.com.br','2Nq1duhP3l',1),
+(2,'josemariodamata-90@tivit.com.br','UjzE7GqhEI',1),
+(3,'robertodiogonogueira_@projetti.com','5Yu7kjnCAC',1),
+(4,'calebdanielnascimento__calebdanielnascimento@outllok.com','Gbb85gJOWX',1),
+(5,'fabianaaparecidaluanarodrigues_@castromobile.com.br','u7HcXDNmkr',1),
+(6,'teresinhaclaudiaisabellydarocha__teresinhaclaudiaisabellydarocha@fk1.com.br','rcMsdwpHqd',1),
+(7,'oliviavitoriaclaudiadacunha_@vhbadvogados.com.br','G8jxSQuEjP',1),
+(8,'alinejuliaraimundadasilva__alinejuliaraimundadasilva@teadit.com.br','CFT71YKnnN',1),
+(9,'isabellystellamelo_@ufscar.br','FYyfeXNQWG',1),
+(10,'daianejulianaduarte__daianejulianaduarte@moyageorges.com.br','W30GuPZpCa',1),
+(11,'rafaelamarlenecarvalho_@afujita.com.br','RK8wGilM81',1),
+(12,'thalespietromanuelcampos__thalespietromanuelcampos@aedu.com','XNuIpNMT6c',1),
+(13,'marioricardoalves__marioricardoalves@vivalle.com.br','6QbhS1dbOL',1),
+(14,'cauaedsonbrito..cauaedsonbrito@gmeil.com','gckUjHiZTH',1),
+(15,'renanbentooliveira_@corpoclinica.com.br','5AtC6c1374',1),
+(16,'lucianacarlaalmeida__lucianacarlaalmeida@tuenkers.com.br','q8scbsaszg',1),
+(17,'davivitordiegodaluz_@regler.com.br','h9uY1pSEyz',1),
+(18,'otaviofranciscodiegodepaula..otaviofranciscodiegodepaula@clickfios.com.br','bSqr4yo28j',1),
+(19,'bbernardoluizrodrigocortereal@grupomegavale.com.br','b1X4f0qEbw',1),
+(20,'marcelocalebethalesnascimento..marcelocalebethalesnascimento@yahoo.com,br','lPGE4ZEBic',1),
+(21,'oliverbrenofarias..oliverbrenofarias@cpfl.com.br','xGKSdOsIcO',1),
+(22,'carlosdiegopinto__carlosdiegopinto@viamoc.com.br','dO4iykOm44',1),
+(23,'mmayacarladacruz@senioraereo.com.br','RT62gg64ql',1),
+(24,'ddeboramanuelalima@eximiart.com.br','01rYoK96ca',1),
+(25,'manuelbenjaminnascimento_@policiamilitar.sp.gov.br','qXRrhGzqGM',1),
+(26,'brenoluisdacosta_@valeguinchos.com.br','jyms58GrFu',1),
+(27,'rodrigojorgemanoelfigueiredo_@vizzacchi.com.br','eGdUTh18nB',1),
+(28,'ddiogoleandrofogaca@greenbikeshop.com.br','6zaAxehGiU',1),
+(29,'lluizleonardokevindamota@bighost.com.br','Kk9ZGW1m5G',1),
+(30,'priscilarafaelamariafernandes_@thacconstrutora.com.br','qsMgB8slSq',1),
+(31,'bbrendalunacampos@rabelloadvogados.com.br','XpcowNbfDt',2),
+(32,'arthurdiogomendes..arthurdiogomendes@archosolutions.com.br','6Hl6S3c3ze',2),
+(33,'cristianeelainepires_@megamega.com.br','utZaEfD2gQ',2),
+(34,'thaleshenrygomes..thaleshenrygomes@igui.com.br','AWDOXtDFLb',2),
+(35,'jjoaoedsonnogueira@autvale.com','pz6JF8p7n2',2),
+(36,'vviniciusluisrocha@gabrielresende.com','nSApXOnONA',2),
+(37,'fatimagiovanaamandadias_@fclar.net.br','KNsM8XDWU5',2),
+(38,'carolineamandasophiacaldeira_@raya3.com.br','tk71W3fdF2',2),
+(39,'eloalorenasales-95@rafaelmarin.net','slNd0E4FuE',2),
+(40,'stefanyninaassis__stefanyninaassis@ceviu.com.br','5FTEzxPbwJ',2),
+(41,'aaugustoheitorpires@ctlive.com.br','qmKxSPsiQM',2),
+(42,'beneditoandersongustavoramos-71@hp.com','RtUxwbKROO',2),
+(43,'evelynmarlicosta__evelynmarlicosta@ceviu.com.br','yIuen3hY6p',2),
+(44,'tiagobenjaminbarros..tiagobenjaminbarros@lbrazil.com.br','5D2U7rgXWW',2),
+(45,'reginasandramalucosta_@kantoferramentaria.com.br','c8R7nLImTd',2),
+(46,'isabelantonellamilenaduarte__isabelantonellamilenaduarte@pig.com.br','bCIyfzmZ7j',2),
+(47,'marianenataliahelenamartins__marianenataliahelenamartins@tce.sp.gov.br','LIwZb9u0Wh',2),
+(48,'nataliagiovanaaliciasouza-77@abdalathomaz.adv.br','9BYI6bM7Xc',2),
+(49,'ccaiojuancastro@kimmay.com.br','Fo3CafJLIn',2),
+(50,'elaineauroraoliveira..elaineauroraoliveira@moppe.com.br','Hm2p8gA4yW',2),
+(51,'jjoaokevinalmada@atrix.com.br','3KwmGeIpLt',2),
+(52,'robertoluisenzobrito..robertoluisenzobrito@lanchesdahora.com.br','SzjezZ90yI',2),
+(53,'camilabrendamartins_@arablock.com.br','HhxMQIQxCg',2),
+(54,'calebbryanluisrodrigues_@netsinf.com.br','8ndh18EDGr',2),
+(55,'emilyreginapires-92@eternalam.com.br','qmiraZmlgf',2),
+(56,'iisadorateresinhasophiafigueiredo@elevaconsultancy.com.br','WLEZGq27ub',2),
+(57,'elzaclaricedasneves__elzaclaricedasneves@owl-ti.com.br','tQqLmsrU7S',2),
+(58,'analusophiacastro_@azevedoalves.com.br','QZ13p1dfHy',2),
+(59,'anthonyianfarias__anthonyianfarias@sigtechbr.com','HL2GpLGO19',2),
+(60,'silvanaelisadapaz..silvanaelisadapaz@rjnet.com.br','8pxqA4BGsX',2);
 
 INSERT INTO tb_usuario_fisico
     (cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario) 
