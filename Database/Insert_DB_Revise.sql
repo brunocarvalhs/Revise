@@ -7511,5 +7511,17 @@ INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veicu
 (75,'Azul','MXZ-9242',30,51,2014, '19385');
 
 
-INSERT INTO tb_logradouro (cd_logradouro, nm_logradouro, cd_usuario_juridico, cd_bairro) VALUES (1, 'Rua cidade de Santos', 1, 1), (2, 'Rua cidade de Santos', 3, 3);
+INSERT INTO tb_logradouro (cd_logradouro, nm_logradouro, cd_usuario_juridico, cd_bairro) VALUES 
+(1, 'Rua cidade de Santos', 1, 1), 
+(2, 'Rua cidade de Santos', 3, 3);
 
+
+INSERT INTO tb_controle_plano (cd_plano, cd_usuario_fisico, dt_definicao, dt_expiracao, vl_pago_plano) VALUES
+(2,1,'2019-09-27', '2019-10-27', 9.99);
+
+
+INSERT INTO tb_check (cd_check, cd_veiculo, sg_status, cd_peca) VALUES
+(1, 1, 'A', 1),
+(2, 1, 'B', 4),
+(3, 1, 'A', 14),
+(4, 1, 'C', 12);
