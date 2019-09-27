@@ -7516,4 +7516,4 @@ INSERT INTO tb_logradouro (cd_logradouro, nm_logradouro, cd_usuario_juridico, cd
 
 
 INSERT INTO tb_controle_plano (cd_plano, cd_usuario_fisico, dt_definicao, dt_expiracao, vl_pago_plano) VALUES
-()
+(2,1,'2019-09-27', '2019-10-27', 9.99);
