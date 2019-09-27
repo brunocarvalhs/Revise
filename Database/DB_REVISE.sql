@@ -16,13 +16,6 @@ CONSTRAINT pk_medida
 PRIMARY KEY(sg_medida)
 );
 
-CREATE TABLE tb_tipo_plano(
-cd_tipo_plano int not null,
-nm_tipo_plano varchar(255),
-CONSTRAINT pk_tipo_plano
-PRIMARY KEY(cd_tipo_plano)
-);
-
 CREATE TABLE tb_categoria(
 cd_categoria int not null,
 nm_categoria varchar(255),
@@ -67,26 +60,11 @@ CONSTRAINT pk_tipo_usuario
 
 CREATE TABLE tb_tipo_anuncio(
 cd_tipo_anuncio int not null,
-vl_anuncio decimal(5,2),
 nm_tipo_anuncio varchar(255),
+vl_atual_anuncio decimal(5,2),
+dt_modificacao DATETIME,
 CONSTRAINT pk_tipo_anuncio
 	PRIMARY KEY(cd_tipo_anuncio)
-);
-
-
-
-CREATE TABLE tb_plano(
-cd_plano int not null,
-nm_plano varchar(255),
-ds_plano TEXT,
-cd_tipo_plano int,
-qt_anuncio int,
-qt_veiculo int,
-CONSTRAINT pk_plano
-	PRIMARY KEY (cd_plano),
-CONSTRAINT fk_tipo_plano
-	FOREIGN KEY(cd_tipo_plano)
-		REFERENCES tb_tipo_plano(cd_tipo_plano)
 );
 
 CREATE TABLE tb_usuario(
@@ -182,9 +160,10 @@ CONSTRAINT fk_logradouro_bairro
 CREATE TABLE tb_anuncio(
 cd_anuncio int not null,
 nm_titulo varchar(255),
-ds_anuncio TEXT,
-in_pago BOOLEAN,
-vl_pagar int,
+ds_publicacao TEXT,
+vl_anunciado decimal(10,2),
+dt_publicacao DATETIME,
+dt_expira_publicacao DATETIME,
 cd_usuario_juridico int,
 cd_tipo_anuncio int,
 CONSTRAINT pk_anuncio
