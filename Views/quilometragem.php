@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <title>Quilometragem</title>
 </head>
-<body onload="infoKm()" style=" background-image: url('https://data.1freewallpapers.com/download/ferrari-dashboard-1366x768.jpg'); background-size: cover; background-position: center;" >     
+<body onload="infoKm()" style=" background-image: url('./img/km.jpg'); background-size: cover; background-position: center;" >     
 </body>
 <script src="js/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
