@@ -67,17 +67,27 @@ CONSTRAINT pk_tipo_anuncio
 	PRIMARY KEY(cd_tipo_anuncio)
 );
 
+CREATE TABLE tb_plano(
+cd_plano int not null,
+nm_plano varchar(255),
+ds_plano TEXT,
+cd_tipo_plano int,
+qt_anuncio int,
+qt_veiculo int,
+CONSTRAINT pk_plano
+	PRIMARY KEY (cd_plano),
+CONSTRAINT fk_tipo_plano
+	FOREIGN KEY(cd_tipo_plano)
+		REFERENCES tb_tipo_plano(cd_tipo_plano)
+);
+
 CREATE TABLE tb_usuario(
 cd_usuario int not null,
 nm_email varchar(255),
 cd_senha varchar(255),
-cd_plano int,
 cd_tipo_usuario int,
 CONSTRAINT pk_usuario
 	PRIMARY KEY(cd_usuario),
-CONSTRAINT fk_usuario_plano
-	FOREIGN KEY(cd_plano)
-		REFERENCES tb_plano(cd_plano),
 CONSTRAINT fk_usuario_tipo
 	FOREIGN KEY(cd_tipo_usuario)
 		REFERENCES tb_tipo_usuario(cd_tipo_usuario)
@@ -140,6 +150,17 @@ CONSTRAINT pk_peca
 CONSTRAINT fk_peca_tipo
 	FOREIGN KEY (cd_tipo_peca)
 		REFERENCES tb_tipo_peca(cd_tipo_peca)
+);
+
+CREATE TABLE tb_controle_plano(
+cd_usuario_fisico int not null,
+cd_plano int,
+dt_definicao DATETIME,
+dt_expiracao DATETIME,
+vl_pago_plano DECIMAL(7,2),
+CONSTRAINT fk_plano_usuario
+	FOREIGN KEY(cd_usuario_fisico)
+		REFERENCES tb_usuario(cd_usuario_fisico)
 );
 
 CREATE TABLE tb_logradouro(
