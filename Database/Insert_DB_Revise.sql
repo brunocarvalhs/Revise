@@ -7513,3 +7513,7 @@ INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veicu
 
 INSERT INTO tb_logradouro (cd_logradouro, nm_logradouro, cd_usuario_juridico, cd_bairro) VALUES (1, 'Rua cidade de Santos', 1, 1), (2, 'Rua cidade de Santos', 3, 3);
 
+
+
+INSERT INTO tb_controle_plano (cd_plano, cd_usuario_fisico, dt_definicao, dt_expiracao, vl_pago_plano) VALUES
+()
