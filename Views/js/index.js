@@ -11,14 +11,34 @@ function signUp() {
       catch: {
         text: "Jurídico",
         value: "juridico",
+        className: "swal-button--style"
       },
       defeat: {
         text: "Físico",
-        value: "fisico"
+        value: "fisico",
+        className: "swal-button--style"
       }
 
     },
+    buttons: {
+
+      catch: {
+
+        text: "Manualmente",
+        value: "Manualmente",
+        className: "swal-button--style"
+      },
+      defeat: {
+        text: "Obd2",
+        value: "Obd2",
+        className: "swal-button--style",
+      },
+
+    },
+
   })
+
+
     .then((value) => {
       switch (value) {
 
