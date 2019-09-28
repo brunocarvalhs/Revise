@@ -7,7 +7,11 @@ function signUp() {
   swal("Qual tipo de cadastro você deseja fazer?", {
     icon: "info",
     buttons: {
-      text: "Cancelar",
+      cancel: {
+        text: "Cancelar",
+        className: "swal-button--style"
+      },
+      
       catch: {
         text: "Jurídico",
         value: "juridico",
@@ -20,25 +24,8 @@ function signUp() {
       }
 
     },
-    buttons: {
-
-      catch: {
-
-        text: "Manualmente",
-        value: "Manualmente",
-        className: "swal-button--style"
-      },
-      defeat: {
-        text: "Obd2",
-        value: "Obd2",
-        className: "swal-button--style",
-      },
-
-    },
 
   })
-
-
     .then((value) => {
       switch (value) {
 
