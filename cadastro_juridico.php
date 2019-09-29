@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./Views/css/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Views/css/bootstrap.css">
+    <link rel="stylesheet" href="Views/css/sistema.css">
+
 </head>
 
 <body>
@@ -276,19 +278,19 @@ que consta em documentos legais e é usado em termos formais">
         </div>
     </footer>
     <div id="notifications"></div>
-    <script src="/Views/js/popper.min.js"
+    <script src="./Views/js/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <script src="/Views/js/bootstrap.min.js"
+    <script src="./Views/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <script src="/Views/js/wow.js"></script>
-    <script src="/Views/js/index.js"></script>
-    <script src="/Views/js/jquery-3.4.1.js"></script>
-    <script src="/Views/js/sweetalert.min.js"></script>
-    <script src="/Views/js/jquery.mask.js"></script>
-    <script src="/Views/js/API.js"></script>
+    <script src="./Views/js/wow.js"></script>
+    <script src="./Views/js/cadastro.js"></script>
+    <script src="./Views/js/index.js"></script>
+    <script src="./Views/js/jquery-3.4.1.js"></script>
+    <script src="./Views/js/sweetalert.min.js"></script>
+    <script src="./Views/js/jquery.mask.js"></script>
+    <script src="./Views/js/API.js"></script>
     <script src="/Views/js/validation/CadastroJuridico.js"></script>
-    <script src="/Views/js/sistema.js"></script>
-    <script src="/Views/js/cadastro.js"></script>
+    
 </html>

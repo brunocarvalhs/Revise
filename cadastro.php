@@ -14,6 +14,8 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Views/css/bootstrap.css">
+    <link rel="stylesheet" href="Views/css/sistema.css">
+ 
 </head>
 
 <body>

@@ -9,7 +9,7 @@ function signUp() {
     buttons: {
       cancel: {
         text: "Cancelar",
-        className: "swal-button--style"
+         className: "swal-button--style"
       },
       
       catch: {
