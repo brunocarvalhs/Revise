@@ -44,6 +44,13 @@ CONSTRAINT pk_tipo_peca
 	PRIMARY KEY(cd_tipo_peca)
 );
 
+CREATE TABLE tb_tipo_alteracao(
+cd_tipo_alteracao INT NOT NULL,
+ds_tipo_alteracao TEXT,
+CONSTRAINT pk_tipo_alteracao
+	PRIMARY KEY (cd_tipo_alteracao)
+);
+
 CREATE TABLE tb_uf(
 sg_uf char(2) not null,
 nm_uf varchar(255),
@@ -164,6 +171,21 @@ CONSTRAINT fk_plano_usuario
 CONSTRAINT fk_usuario_plano
 	FOREIGN KEY(cd_plano)
 		REFERENCES tb_plano(cd_plano)
+);
+
+CREATE TABLE tb_registro_alteracao(
+cd_registro_alteracao INT NOT null,
+dt_alteracao DATETIME,
+cd_tipo_alteracao int,
+cd_controle int,
+CONSTRAINT pk_regitro_alteracao
+	PRIMARY KEY (cd_registro_alteracao),
+CONSTRAINT fk_registro_alteracao
+	FOREIGN KEY(cd_tipo_alteracao)
+		REFERENCES tb_tipo_alteracao(cd_tipo_alteracao),
+CONSTRAINT fk_registro_controle
+	FOREIGN KEY(cd_controle)
+		REFERENCES tb_controle_plano(cd_controle)
 );
 
 CREATE TABLE tb_logradouro(
