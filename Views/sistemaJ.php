@@ -117,7 +117,7 @@ $CNPJ = '12.345.678/9101-11';
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="#">
+                                                <a href="">
                                                     <i class="fa fa-wrench" aria-hidden="true"></i>
                                                     <span>Anúncios</span>
                                                     <span
@@ -166,12 +166,12 @@ $CNPJ = '12.345.678/9101-11';
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-3 paddingCards">
                     <div class="card bg-dark h-100">
-                        <img src="./img/oleo.jpg" class="card-img-top sizeImg" alt="...">
+                        <img src="https://http2.mlstatic.com/oleo-do-motor-ipiranga-f1-master-sintetico-10w40-sm-4l-D_NQ_NP_656972-MLB31088368276_062019-O.webp" class="card-img-top sizeImg" alt="...">
                         <div class="card-body ">
-                        <h5 class="card-title text-white">R$ 100,00</h5>
-                            <p class="card-text text-white-50">Kit de Óleo Ipiranga</p>
-                            <br>
-                            <a class="btn btn-outline-warning  w-100" href="#" role="button"> Mais Dertalhes +</a>
+                        <h5 class="card-title text-white">R$ 162,00</h5>
+                            <p class="card-text text-white-50">Óleo Ipiranga</p>
+                            <br><br>
+                            <a class="btn btn-outline-warning  w-100" href="anunciosJ.php" role="button"> Mais Detalhes +</a>
                             <br><br>
                             <h6 class="card-title text-white-50">Local: Praia Grande - SP</h6>
                         </div>
@@ -212,7 +212,7 @@ $CNPJ = '12.345.678/9101-11';
                         <div class="card-body ">
                         <h5 class="card-title text-white">R$ 300,00</h5>
                             <p class="card-text text-white-50">Bateria Heliar 45Ah - HG45BD</p>
-                            <br>
+                            <br><br>
                             <a class="btn btn-outline-warning w-100" href="#" role="button"> Mais Detalhes +</a>
                             <br><br>
                             <h6 class="card-title text-white-50">Local: Itanhaém - SP</h6>
@@ -258,6 +258,20 @@ $CNPJ = '12.345.678/9101-11';
                             <a class="btn btn-outline-warning w-100" href="#" role="button"> Mais Detalhes +</a>
                             <br><br>
                             <h6 class="card-title text-white-50">Local: São Vicente - SP</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-6 col-xl-3" style="padding-top: 50px;">
+                    <div class="card bg-dark h-100">
+                        <img src="https://http2.mlstatic.com/escapamento-cbx-200-strada-silencioso-mod-original-fortuna-D_NQ_NP_684001-MLB20265457499_032015-F.jpg"
+                            class="card-img-top sizeImg" alt="...">
+                        <div class="card-body ">
+                        <h5 class="card-title text-white">R$ 218,90</h5>
+                            <p class="card-text text-white-50">Escapamento Cbx 200 </p>
+                            <br>
+                            <a class="btn btn-outline-warning w-100" href="#" role="button"> Mais Detalhes +</a>
+                            <br><br>
+                            <h6 class="card-title text-white-50">Local: Santos - SP</h6>
                         </div>
                     </div>
                 </div>
