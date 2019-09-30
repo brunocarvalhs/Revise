@@ -150,11 +150,14 @@ CONSTRAINT fk_peca_tipo
 );
 
 CREATE TABLE tb_controle_plano(
+cd_controle int not null,
 cd_usuario_fisico int not null,
 cd_plano int,
 dt_definicao DATETIME,
 dt_expiracao DATETIME,
 vl_pago_plano DECIMAL(7,2),
+CONSTRAINT pk_controle
+	PRIMARY KEY (cd_controle),
 CONSTRAINT fk_plano_usuario
 	FOREIGN KEY(cd_usuario_fisico)
 		REFERENCES tb_usuario_fisico(cd_usuario_fisico),
