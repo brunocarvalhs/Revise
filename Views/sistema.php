@@ -214,12 +214,18 @@
                                         <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
                                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                    <div class=" text-light">Peça vencida</div>
+                                    <div class=" text-light">Hora de Revisar!</div>
 
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                              
+                                <div class="text-white-50" id="divPadding">
+                                    Obs: Lembre que a contagem é feita através do tempo de
+                                    vida útil da peça ou pela
+                                    quilometragem do seu veículo.
+                                </div>                            
+                                </div>
+                                </div>
+                                </div>
                 </div>
             </div>
             <!--Fim legenda-->
