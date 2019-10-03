@@ -1,62 +1,51 @@
 <?php
+
 require_once '../Lib/connection.php';
 
-abstract class Usuario
+ class Usuario
 {
         private $id;
         private $email;
-        private $CPFouCNPJ;
         private $senha;
 
-        public abstract function logar($CPFouCNPJ,$senha);
-
-        protected function getCPFouCNPJ()
+        public function Cadastrar($email,$senha)
         {
-                return $this->CPFouCNPJ;
+
         }
 
-        protected function setCPFouCNPJ($CPFouCNPJ)
+        private function getId()
         {
-                $this->CPFouCNPJ = $CPFouCNPJ;
 
-                return $this;
+                return $this->id;
         }
 
-        protected function getSenha()
-        {
-                return $this->senha;
-        }
- 
-        protected function setSenha($senha)
-        {
-                $this->senha = $senha;
-
-                return $this;
-        }
-        public function getId()
-        {
-                $conexao = new conexaoPDO;
-                $conexao = $conexao->getConnection();
-                $sql = "SELECT * FROM tb_usuario";
-        
-                $stmt = $conexao->prepare($sql);
-                $stmt->execute();
-                $id = $stmt->rowCount() + 1;
-                return $id;
-        }
-        protected function setId($id)
+        private function setId($id)
         {
                 $this->id = $id;
 
                 return $this;
         }
-        protected function getEmail()
+
+        private function getEmail()
         {
                 return $this->email;
         }
-        protected function setEmail($email)
+
+        private function setEmail($email)
         {
                 $this->email = $email;
+
+                return $this;
+        }
+
+        private function getSenha()
+        {
+                return $this->senha;
+        }
+
+        private function setSenha($senha)
+        {
+                $this->senha = $senha;
 
                 return $this;
         }

@@ -1,4 +1,5 @@
 <?php
+require_once '../Lib/connection.php';
 class conexaoPDO
 {
     private $host;
