@@ -192,14 +192,14 @@ call calcularAnuncio(9,'Serviço');
 delimiter $
 create procedure sp_SignInJuridico(in cnpj varchar(14),in senha varchar(255))
 begin
-SELECT * FROM tb_usuario AS user, tb_usuario_juridico AS userj WHERE userj.cd_cnpj = cnpj AND user.cd_senha = senha AND userj.cd_usuario = user.cd_usuario;
+SELECT * FROM tb_tipo_usuario AS TipoUser, tb_usuario AS User, tb_usuario_juridico AS UserJuridico WHERE TipoUser.cd_tipo_usuario = 2 AND TipoUser.cd_tipo_usuario = User.cd_tipo_usuario AND UserJuridico.cd_usuario = User.cd_usuario AND UserJuridico.cd_cnpj = cnpj AND User.cd_senha = senha;
 end $
 
 -- Login do usuario Fisico(Read - tb_usuario_Fisico)
 delimiter $
 create procedure sp_SignInFisico(in cpf varchar(11),in senha varchar(255))
 begin
-SELECT * FROM tb_usuario AS user, tb_usuario_fisico AS userf WHERE userf.cd_cpf = cpf AND user.cd_senha = senha AND userf.cd_usuario = user.cd_usuario;
+SELECT * FROM tb_tipo_usuario AS TipoUser, tb_usuario AS User, tb_usuario_fisico AS UserFisico WHERE TipoUser.cd_tipo_usuario = 1 AND TipoUser.cd_tipo_usuario = User.cd_tipo_usuario AND UserFisico.cd_usuario = User.cd_usuario AND UserFisico.cd_cpf = cpf AND User.cd_senha = senha;
 end $
 
 -- Cadastrar Usuario Fisico
