@@ -89,6 +89,9 @@
                                                     <img src="img/logo.png" width="50" height="50" alt="Revise"
                                                         class="d-inline-block align-top alig">
                                                 </div>
+                                                <div class="col-8">
+                                                    <label class="tituloMenu">Revise</label>
+                                                </div>
                                             </div>
                                         </a>
                                     </div>

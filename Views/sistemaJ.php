@@ -86,11 +86,13 @@ $CNPJ = '12.345.678/9101-11';
                                             </div>
                                         </a>
                                     </div>
+                                    
                                     <div class="sidebar-header">
                                         <div class="user-pic">
                                             <img class="img-responsive img-rounded" src="<?php echo $FotoDePerfil ?>"
                                                 alt="User picture">
                                         </div>
+                                      
                                         <div class="user-info">
                                             <span class="user-name"><strong><?php echo $nome ?></strong>
                                                 <?php echo $sobrenome ?>
@@ -98,6 +100,8 @@ $CNPJ = '12.345.678/9101-11';
                                             <span class="user-role"><?php echo $CNPJ ?></span>
                                         </div>
                                     </div>
+                                    
+    
                                     <!-- sidebar-search  -->
                                     <div class="sidebar-menu">
                                         <ul>

@@ -189,7 +189,8 @@
                                     <!-- CNPJ -->
                                     <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                         <label for="exampleFormControlInput1">CNPJ</label>
-                                        <input type="text" class="form-control" id="campoDoCnpj">
+                                        <input type="text" class="form-control" id="campoDoCnpj" maxlength="18">
+                                        
                                           
                                     </div>
 
