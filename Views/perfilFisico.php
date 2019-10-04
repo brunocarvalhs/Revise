@@ -24,54 +24,51 @@ $peças = 7;
     <title>Revise - Perfil</title>
 </head>
 
-<body onload="disable()">
+<body onload="disable()" class="bg-light">
     <div class="row">
-        <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3">
-            <!--Menu superior responsivo-->
-            <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">
-                        <div class="row">
-                            <div class="col-4">
-                                <img src="img/logo.png" width="50" height="50" alt="Revise"
-                                    class="d-inline-block align-top">
+            <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">     
+          <!--Menu superior responsivo-->
+          <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <a class="navbar-brand" href="#">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="img/logo.png" width="50" height="50" alt="Revise"
+                                        class="d-inline-block align-top">
+                                </div>
                             </div>
+                        </a>                    
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+    
+    
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link h4">Menu</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="sistema.php">Início</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="perfilFisico.php">Perfil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Notificações</a>
+                                </li>                             
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Veículos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Serviços e Produtos</a>
+                                </li>
+                            </ul>
                         </div>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link h4">Menu</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="sistema.php">Início</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="perfilFisico.php">Perfil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Notificações</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Peças</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Veículos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Serviços e Produtos</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+                    </nav>
+                </div>
             <!--Menu lateral-->
             <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 responsivo">
                 <div class="container-fluid">
@@ -179,7 +176,10 @@ $peças = 7;
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+        <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
+                <div class="row">
+                    <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
+                    <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
             <br><br>
             <!--Perfil Usuario Fisico-->
             <form action="" method="POST" onsubmit="">
@@ -267,6 +267,13 @@ $peças = 7;
     </div>
     </div>
     </div>
+    <!--Style para controlar o responsive menu padding-->
+    <style>
+        .col-12,
+        .col-sm-12 {
+            padding: 0px 7px !important;
+        }
+    </style>
 </body>
 <script src="js/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

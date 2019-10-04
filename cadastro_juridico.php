@@ -189,38 +189,39 @@ que consta em documentos legais e é usado em termos formais">
                                     </div>
 
                                 </div>
-                        
-                                </div>
-                                </div>
-                            
-                            <!-- Senha -->
-                            <div class="form-group inputCadastro">
-                                <label for="campoSenha">Senha</label>
-                                <input type="password" id="campoSenha" class="form-control"
-                                    aria-describedby="descricaoSenha">
-                                <small id="descricaoSenha" class="form-text text-muted">
-                                    Sua senha deve ter entre 6 e 20 caracteres, os quais devem ser letras e números,
-                                    sem
-                                    espaços, caracteres especiais ou emojis.
-                                </small>
+
                             </div>
-                            <!-- Confirma senha -->
-                            <div class="form-group inputCadastro">
-                                <label for="campoSenha">Confirmar senha</label>
-                                <input type="password" id="campoConfirmaSenha" class="form-control"
-                                    aria-describedby="descricaoSenha">
+                        </div>
+
+                        <!-- Senha -->
+                        <div class="form-group inputCadastro">
+                            <label for="campoSenha">Senha</label>
+                            <input type="password" id="campoSenha" class="form-control"
+                                aria-describedby="descricaoSenha">
+                            <small id="descricaoSenha" class="form-text text-muted">
+                                Sua senha deve ter entre 6 e 20 caracteres, os quais devem ser letras e números,
+                                sem
+                                espaços, caracteres especiais ou emojis.
+                            </small>
+                        </div>
+                        <!-- Confirma senha -->
+                        <div class="form-group inputCadastro">
+                            <label for="campoSenha">Confirmar senha</label>
+                            <input type="password" id="campoConfirmaSenha" class="form-control"
+                                aria-describedby="descricaoSenha">
+                        </div>
+
+                        <!--Botão-->
+                        <br><br>
+                        <div class="row">
+                            <div class="col-0 col-sm-0 col-md-0 col-lg-8 col-xl-8"></div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                                <button class="btn btn-warning btn-block" id="btnContinua"
+                                    type="submit">Finalizar</button>
                             </div>
-                        
-            <!--Botão-->
-            <br><br>
-            <div class="row">
-                <div class="col-0 col-sm-0 col-md-0 col-lg-8 col-xl-8"></div>
-                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                    <button class="btn btn-warning btn-block" id="btnContinua" type="submit">Finalizar</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        </div>
         </div>
     </section>
     </form>
@@ -292,5 +293,5 @@ que consta em documentos legais e é usado em termos formais">
     <script src="./Views/js/jquery.mask.js"></script>
     <script src="./Views/js/API.js"></script>
     <script src="/Views/js/validation/CadastroJuridico.js"></script>
-    
+
 </html>

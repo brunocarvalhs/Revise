@@ -1,12 +1,13 @@
 <?php
 
-    $FotoDePerfil = 'img/user.jpg';
-    $nome = 'Bruno';
-    $sobrenome = 'Silva Carvalho';
-    $placa = 'ABC-1234';
-    $modelo = 'Corsa Classic';
-    $peças = 7;
+$FotoDePerfil = 'img/user.jpg';
+$nome = 'Marina';
+$sobrenome = 'Luna Sales';
+$placa = 'EYT-4550';
+$modelo = 'PRISMA';
+$peças = 1;
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,14 +20,13 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <title>Revise - Notificações</title>
 </head>
-
-<body>
+<body class="bg-light">
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">
+            <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">       
             <!--Menu superior responsivo-->
             <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,7 +37,7 @@
                                     class="d-inline-block align-top">
                             </div>
                         </div>
-                    </a>
+                    </a>                    
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -58,10 +58,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Notificações</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Peças</a>
-                            </li>
+                            </li>                       
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Veículos</a>
                             </li>
@@ -179,257 +176,54 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
-            <div class="row">
-                <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
-                <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
-                    <!--Legenda-->
-                    <div class="card text-white bg-secondary mb-3" style="width: 100%;">
-                        <div class="card-header text-center">Legenda</div>
-                        <div class="card-body">
-                            <div class="row text-center">
-                                <div class="col-3">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-light" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class=" text-light">Contagem zerada</div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class=" text-light">Longe do vencimento</div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class=" text-light">Ops! Fique atento</div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class=" text-light">Peça vencida</div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
+        <div class="row">
+            <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
+            <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Filtro de ar</h5>
+                    <small>Hoje</small>
                 </div>
-            </div>
-            <!--Fim legenda-->
-            <br><br>
-            <!--Card-->
-            <div class="row">
-                <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
-                <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
-
-                    <div class="card bg-dark w-100">
-                        <div class="card-body">
-                            <!--Título do card-->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <label class="h3 text-white">Óleo do motor</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Progressbars-->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <label class="h5 text-white-50">KM</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" style="width: 50%"
-                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <br>
-                            <div class="container">
-                                <div class="row">
-                                    <label class="h5 text-white-50">Tempo</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <p class="mb-1">Opa, Chegou a hora da troca!</p>
+                    <p>Que tal já realizar suas pesquisas? 
+                            Faça isso em Serviços e Produtos.</p>
+                </p>              
+            </a>
+            <hr>
+            <a href="#" class="list-group-item list-group-item-action active">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Pneus</h5>
+                        <small>Hoje</small>
                     </div>
+                    <p class="mb-1">Opa, Chegou a hora da troca!</p>
+                        <p>Que tal já realizar suas pesquisas? 
+                                Faça isso em Serviços e Produtos.</p>
+                    </p>              
+                </a>
+                <hr>
+            <a href="#" class="list-group-item list-group-item-action badge-light">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">Óleo do motor</h5>
+                    <small class="text-muted">Dia 03/10/19</small>
                 </div>
-                <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-            </div>
-            <!--Card-->
-            <div class="row">
-                <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
-                <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
-                    <div class="card bg-dark w-100">
-                        <div class="card-body">
-                            <!--Título do card-->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <label class="h3 text-white">Filtro de ar</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Progressbars-->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <label class="h5 text-white-50">KM</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                                    aria-valuemax="100">
-                                </div>
-                            </div>
-                            <br>
-                            <div class="container">
-                                <div class="row">
-                                    <label class="h5 text-white-50">Tempo</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="progress">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-            </div>
-            <!--Card-->
-            <div class="row">
-                <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
-                <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
-                    <div class="card bg-dark w-100">
-                        <div class="card-body">
-                            <!--Título do card-->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <label class="h3 text-white">Pastilhas de freio</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Progressbars-->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <label class="h5 text-white-50">KM</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" style="width: 25%"
-                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <br>
-                            <div class="container">
-                                <div class="row">
-                                    <label class="h5 text-white-50">Tempo</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
-            </div>
-
-
-            <!--Card-->
-            <div class="row">
-                <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
-                <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
-                    <div class="card bg-dark w-100">
-                        <div class="card-body">
-                            <!--Título do card-->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <label class="h3 text-white">Pneus</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Progressbars-->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="row">
-                                            <label class="h5 text-white-50">KM</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%"
-                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <br>
-                            <div class="container">
-                                <div class="row">
-                                    <label class="h5 text-white-50">Tempo</label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                                            aria-valuemax="100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-0"></div>
-            </div>
+                <p class="mb-1">Opa, Chegou a hora da troca!</p>
+                <p>Que tal já realizar suas pesquisas?
+                    Faça isso em Serviços e Produtos.</p>
+            </p>  
+            </a>
         </div>
+        </div>
+       </div>
     </div>
-    </div>
-    <br>
+     <!--Style para controlar o responsive menu padding-->
+     <style>
+            .col-12,
+            .col-sm-12 {
+                padding: 0px 7px !important;
+            }
+        </style>
 </body>
 <script src="js/jquery.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -449,5 +243,5 @@
     crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-
+  
 </html>

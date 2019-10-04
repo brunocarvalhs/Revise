@@ -517,3 +517,10 @@ body, html{
 .sizeImg{
   height: 173px;
 }
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #bd2130 !important;
+  border-color: #bd2130 !important;
+}
