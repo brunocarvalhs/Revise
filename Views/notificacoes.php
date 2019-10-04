@@ -5,7 +5,7 @@ $nome = 'Marina';
 $sobrenome = 'Luna Sales';
 $placa = 'EYT-4550';
 $modelo = 'PRISMA';
-$peças = 1;
+$peças = 2;
 ?>
 
 <!DOCTYPE html>

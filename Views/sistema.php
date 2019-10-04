@@ -1,11 +1,11 @@
 <?php
 
-    $FotoDePerfil = 'img/user.jpg';
-    $nome = 'Bruno';
-    $sobrenome = 'Silva Carvalho';
-    $placa = 'ABC-1234';
-    $modelo = 'Corsa Classic';
-    $peças = 7;
+$FotoDePerfil = 'img/user.jpg';
+$nome = 'Marina';
+$sobrenome = 'Luna Sales';
+$placa = 'EYT-4550';
+$modelo = 'PRISMA';
+$peças = 2;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,10 +85,7 @@
                                                 <div class="col-4">
                                                     <img src="img/logo.png" width="50" height="50" alt="Revise"
                                                         class="d-inline-block align-top alig">
-                                                </div>
-                                                <div class="col-8">
-                                                    <label class="tituloMenu">Revise</label>
-                                                </div>
+                                                </div>                                             
                                             </div>
                                             
                                         </a>
