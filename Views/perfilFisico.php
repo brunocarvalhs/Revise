@@ -57,7 +57,7 @@ $peças = 2;
                                     <a class="nav-link" href="perfilFisico.php">Perfil</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Notificações</a>
+                                    <a class="nav-link" href="notificacoes.php">Notificações</a>
                                 </li>                             
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Veículos</a>
@@ -125,7 +125,7 @@ $peças = 2;
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="#">
+                                                <a href="notificacoes.php">
                                                     <i class="fa fa-wrench" aria-hidden="true"></i>
                                                     <span>Notificações</span>
                                                     <span class="badge badge-pill badge-danger">

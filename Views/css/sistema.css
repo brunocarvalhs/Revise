@@ -524,3 +524,6 @@ body, html{
   background-color: #bd2130 !important;
   border-color: #bd2130 !important;
 }
+.badgeDarkColor{
+  background-color: #1d2124;
+}
