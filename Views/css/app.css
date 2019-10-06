@@ -6,11 +6,6 @@
     padding-top: 40px;
 }
 
-.TituloAplicativoIntroducao{
-    margin-top: 80px;
-    font-size: 5rem !important;
-}
-
 @media screen and (max-width: 600px) {
     .TituloAplicativoIntroducao{
         margin-top: 40px;
