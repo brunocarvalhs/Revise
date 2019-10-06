@@ -92,13 +92,13 @@ html, body {
     width: 645px;
 }
 
-.espaco{
-    padding-top: 90px;
-}
 
 @media screen and (max-width: 1626px) {
     .AppSmart {
         width: 100%;
+    }
+    .espaco{
+        padding-top: 90px;
     }
 }
 
