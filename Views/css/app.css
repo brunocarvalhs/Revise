@@ -11,6 +11,10 @@
     font-size: 10rem !important;
 }
 
+.Titulo{
+    font-size: 5rem !important;
+}
+
 @media screen and (max-width: 600px) {
     .TituloAplicativoIntroducao{
         margin-top: 40px;
@@ -20,7 +24,7 @@
         padding-top: 0px;
     }
     .Titulo{
-        font-size: 7rem !important;
+        font-size: 2.5rem !important;
     }
 }
 
