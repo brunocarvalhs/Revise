@@ -100,11 +100,6 @@ html, body {
     .espaco{
         padding-top: 90px;
     }
-
-    .TituloAplicativoIntroducao{
-        margin-top: 80px;
-        font-size: 5rem !important;
-    }
 }
 
 @media screen and (max-width: 600px) {
