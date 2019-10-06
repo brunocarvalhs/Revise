@@ -1,3 +1,10 @@
+/* Estrutura base */
+
+html, body {
+    overflow-x: hidden;
+    background: #343a40;
+}
+
 .backgroundAplicativo{
     background-color: #f8f8f8;
 }
