@@ -1,7 +1,6 @@
 /* Estrutura base */
 
 html, body {
-    overflow-x: hidden;
     background: #343a40;
 }
 
@@ -9,6 +8,18 @@ html, body {
     position: fixed;
     width: 100%;
     z-index: 9;
+}
+
+@media screen and (max-width: 1626px) {
+    .espaco{
+        padding-top: 90px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .espaco{
+        padding-top: 118px;
+    }
 }
 
 .backgroundAplicativo{
