@@ -21,7 +21,7 @@ session_start();
 <body>
     <header>
         <!-- Menu -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav">
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
