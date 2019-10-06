@@ -70,7 +70,7 @@ session_start();
     </header>
     <!-- Titulo do cadastro -->
     <section>
-        <div class=" backgroundBlackLight">
+        <div class=" backgroundBlackLight espaco">
             <div class="row">
                 <div class="col-12">
                     <h1>Cadastro Físico</h1>
