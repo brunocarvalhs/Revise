@@ -8,7 +8,7 @@
 
 .TituloAplicativoIntroducao{
     margin-top: 80px;
-    font-size: 100px !important;
+    font-size: 5rem !important;
 }
 
 @media screen and (max-width: 600px) {
