@@ -4,9 +4,15 @@
 .smartphoneIntroducao{
     padding-top: 40px;
 }
-.TituloAplicativoIntroducao h1{
+.TituloAplicativoIntroducao{
     margin-top: 80px;
     font-size: 90px !important;
+}
+@media screen and (max-width: 600px) {
+    .TituloAplicativoIntroducao{
+        margin-top: 40px;
+        font-size: 50px !important;
+    }
 }
 table{
     width: 100%;
