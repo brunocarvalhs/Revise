@@ -1,25 +1,32 @@
 .backgroundAplicativo{
     background-color: #f8f8f8;
 }
+
 .smartphoneIntroducao{
     padding-top: 40px;
 }
+
 .TituloAplicativoIntroducao{
     margin-top: 80px;
     font-size: 90px !important;
 }
+
 @media screen and (max-width: 600px) {
     .TituloAplicativoIntroducao{
         margin-top: 40px;
         font-size: 50px !important;
+        padding-top: 0px !important;
     }
 }
+
 table{
     width: 100%;
 }
+
 .formularioSuport{
     margin-top: 20px;
 }
+
 .suporteBotao{
     margin-top: 30px;
 }
