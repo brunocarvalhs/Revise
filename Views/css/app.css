@@ -5,6 +5,12 @@ html, body {
     background: #343a40;
 }
 
+.barra_nav {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
 .backgroundAplicativo{
     background-color: #f8f8f8;
 }
@@ -24,7 +30,7 @@ html, body {
 
 @media screen and (max-width: 600px) {
     .TituloAplicativoIntroducao{
-        margin-top: 40px;
+        margin-top: 20px;
         padding-top: 0px !important;
     }
     .espaco{
