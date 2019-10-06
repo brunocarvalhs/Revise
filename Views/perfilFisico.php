@@ -280,10 +280,8 @@ $peças = 2;
 <script src="/Views/js/bootstrap.min.js"></script>
 <script src="./js/wow.js"></script>
 <script src="./js/index.js"></script>
-<script src="js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="./js/sweetalert.min.js"></script>
 <script src="js/progressbar.js"></script>
 <script src="js/sistema.js"></script>
