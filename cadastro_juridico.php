@@ -138,7 +138,7 @@ que consta em documentos legais e é usado em termos formais">
                                             </div>
                                         </div>
                                     </fieldset>
-                                    <div class="form-row">
+                                    <div class="form-row inputCadastro">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                             <input type="text" readonly="true" class="form-control" id="txtEstado"
                                                 name="txtEstado" placeholder="Estado">
@@ -147,23 +147,22 @@ que consta em documentos legais e é usado em termos formais">
                                             <input type="text" readonly="true" class="form-control" id="txtCidade"
                                                 name="txtCidade" placeholder="Cidade">
                                         </div>
-                                        <br><br>
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
 
-                                            <div class="form-group">
+                                            <div class="form-group inputCadastro">
                                                 <input type="text" readonly="true" class="form-control" id="txtBairro"
                                                     name="txtBairro" placeholder="Bairro">
                                             </div>
                                         </div>
 
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                                            <div class="form-group">
+                                            <div class="form-group inputCadastro">
                                                 <input type="text" readonly="true" class="form-control" id="txtRua"
                                                     name="txtRua" placeholder="Rua">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-                                            <div class="form-group">
+                                            <div class="form-group inputCadastro">
                                                 <input type="text" class="form-control" id="txtNumero" name="txtNumero"
                                                     placeholder="Número">
                                             </div>
