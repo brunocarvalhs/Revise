@@ -8,6 +8,7 @@ session_start();
     <link rel="shortcut icon" href="./Views/img/logo.ico" />
     <link rel="stylesheet" href="Views/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="Views/css/login.css">
+    <link rel="stylesheet" type="text/css" href="./Views/css/sistema.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Revise - Login</title>
@@ -74,7 +75,7 @@ session_start();
                                     </a>
                                 </div>
                                 <div class="col-12 btnCadastrar">
-                                    <button type="button" onclick="signUp()" href="./redirecionar.html" class="btn btn-dark btn-lg btn-block">
+                                    <button type="button" onclick="signUp()" class="btn btn-dark btn-lg btn-block">
                                         CADASTAR
                                     </button>
                                 </div>
@@ -96,8 +97,8 @@ session_start();
 </body>
 <script src="Views/js/jquery.min.js"></script>
 <script src="Views/js/jquery.mask.js"></script>
-<script src="Views/js/index.js"></script> 
 <script src="Views/js/sweetalert.min.js"></script>
+<script src="Views/js/index.js"></script> 
 <script>
     $(document).ready(function () {
         $("#cpfcnpj").keypress(function () {
