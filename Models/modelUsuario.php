@@ -1,52 +1,60 @@
 <?php
 
-require_once '../Lib/connection.php';
+require_once "./Lib/connection.php";
 
- class Usuario
+abstract class Usuario
 {
-        private $id;
+        private $idUsuario;
         private $email;
-        private $senha;
+        private $senha; 
 
-        public function Cadastrar($email,$senha)
+            
+        protected function getIdUsuario()
         {
+                $conn = new conexaoPDO;
+                $conn = $conn->getConnection();
+
+                $sql = "SELECT * FROM tb_usuario";
+                $stmt = $conn->prepare($sql);
+                $stmt->execute();
+                $idUsuario = $stmt->rowCount() + 1;
+                if($idUsuario == 0 || $idUsuario == null)
+                {
+                        $idUsuario = 1;
+                }
+                return $idUsuario;
 
         }
 
-        private function getId()
+        protected function setIdUsuario($idUsuario)
         {
-
-                return $this->id;
-        }
-
-        private function setId($id)
-        {
-                $this->id = $id;
+                $this->idUsuario = $idUsuario;
 
                 return $this;
         }
 
-        private function getEmail()
+        protected function getEmail()
         {
                 return $this->email;
         }
 
-        private function setEmail($email)
+        protected function setEmail($email)
         {
                 $this->email = $email;
 
                 return $this;
         }
 
-        private function getSenha()
+        protected function getSenha()
         {
                 return $this->senha;
         }
 
-        private function setSenha($senha)
+        protected function setSenha($senha)
         {
                 $this->senha = $senha;
 
                 return $this;
         }
 }
+?>

@@ -1,130 +1,65 @@
 <?php
-require_once 'modelUsuario.php';
-require_once '../Lib/connection.php';
+require_once "modelUsuario.php";
 
-class UserFisico extends Usuario
+class UsuarioFisico extends Usuario
 {
-    private $idUserFisico;
+    private $idUsuarioFisico;
     private $nome;
-    private $dataNascimento;
-    private $tipoConta;
-    private $plano;
-
-    public function VerificarCadastrar($email,$cpf,$placa)
+    private $cpf;
+    private $nascimento;
+    
+    public function Cadastrar($email,$senha,$nome,$cpf,$nascimento)
     {
+
+        $IdUsuario = $this->getIdUsuario();
+        $IdUsuarioFisico = $this->getIdUsuarioFisico();
+
         $conn = new conexaoPDO;
         $conn = $conn->getConnection();
 
-        $sql = "CALL sp_VerificarCadastro(:email,:cpf,:placa);";
-
+        $sql = "call sp_CadastrarUsuario(:IdUsuario,:email,:senha,:IdUsuarioFisico,:nome,:cpf,:nascimento)";
+        
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-        $stmt->bindParam(':cpf', $cpf, PDO::PARAM_INT);
-        $stmt->bindParam(':placa', $placa, PDO::PARAM_STR);
-
+        $stmt->bindParam(":IdUsuario",$IdUsuario,PDO::PARAM_INT);
+        $stmt->bindParam(":IdUsuarioFisico",$IdUsuarioFisico,PDO::PARAM_INT);
+        $stmt->bindParam(":email",$email,PDO::PARAM_STR);
+        $stmt->bindParam(":senha",$senha,PDO::PARAM_STR);
+        $stmt->bindParam(":nome",$nome,PDO::PARAM_STR);
+        $stmt->bindParam(":cpf",$cpf,PDO::PARAM_INT);
+        $stmt->bindParam(":nascimento",$nascimento,PDO::PARAM_STR);
+        
         if($stmt->execute())
         {
-            $res = $stmt->fetch(PDO::FETCH_OBJ);
-            $res =  $res->RES;
-            return $res;
+           return  "Cadastro";
         }
         else
         {
-            echo 'Erro: Não foi possivel fazer a verrificação de cadastro.';
+            return  "Nao Cadastro";
         }
     }
 
-    public function Cadastrar($nome,$email,$senha,$plano,$cpf,$nascimento)
+    private function getIdUsuarioFisico()
     {
         $conn = new conexaoPDO;
         $conn = $conn->getConnection();
 
-        //CADASTRO DO USUARIO
-
-        $this->setEmail($email);
-        $this->setSenha($senha);
-        $this->setPlano($plano);
-
-        $idUsuario = $this->getId();
-        $email = $this->getEmail();
-        $senha = $this->getSenha();
-        $plano = $this->getPlano();
-        
-
-        $sql = "CALL sp_CadastrarUsuario(:idUsuario,:email,:senha,:plano,1)";
+        $sql = "SELECT * FROM tb_usuario_fisico";
 
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':idUsuario', $idUsuario, PDO::PARAM_INT);
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-        $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
-        $stmt->bindParam(':plano', $plano, PDO::PARAM_INT);
-
-        if($stmt->execute())
-            {
-                //CADASTRO DO USUARIO FISICO
-                $this->setNome($nome);
-                $this->setCpf($cpf);
-                $this->setDataNascimento($nascimento);
-        
-                $id = $this->getIdUserFisico();
-                $nome = $this->getNome();
-                $cpf = $this->getCpf();
-                $nascimento = $this->getDataNascimento();
-
-                $sql = "call sp_CadastroUsuarioFisico(:id,:nome,:cpf,:nascimento,:idUsuario)";
-
-                $stmt = $conn->prepare($sql);
-                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-                $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
-                $stmt->bindParam(':cpf', $cpf, PDO::PARAM_INT);
-                $stmt->bindParam(':nascimento', $nascimento, PDO::PARAM_STR);
-                $stmt->bindParam(':idUsuario', $idUsuario, PDO::PARAM_INT);
-        
-                if($stmt->execute())
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        echo 'Erro: tb_usuario_fisico não cadastro.';
-                    }
-            }
-            else
-            {
-                echo 'Erro: tb_usuario não cadastro.';
-            }
-        
-
+        $stmt->execute();
+        $idUsuarioFisico = $stmt->rowCount() + 1;
+        if($idUsuarioFisico == 0 || $idUsuarioFisico == null)
+        {
+                $idUsuarioFisico = 1;
+        }
+        return $idUsuarioFisico;
     }
 
-    public function logar($CPFouCNPJ,$senha)
+    private function setIdUsuarioFisico($idUsuarioFisico)
     {
+        $this->idUsuarioFisico = $idUsuarioFisico;
 
-            $conn = new conexaoPDO;
-            $conn = $conn->getConnection();
-
-            $sql = "call sp_SignInFisico(:CPFouCNPJ,:senha)";
-
-            $stmt = $conn->prepare($sql);
-            $stmt->bindParam(':CPFouCNPJ', $CPFouCNPJ, PDO::PARAM_INT);
-            $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
-            
-            if($stmt->execute())
-            {
-                    $RES = $stmt->rowCount(); 
-                    if($RES == 1)
-                    {
-                            return true;
-                    }
-                    else
-                    {
-                            return false;
-                    }
-            }
-            else
-            {
-                    echo "Falha na Execução";
-            }
+        return $this;
     }
 
     private function getNome()
@@ -151,56 +86,16 @@ class UserFisico extends Usuario
         return $this;
     }
 
-    private function getDataNascimento()
+    private function getNascimento()
     {
-        return $this->dataNascimento;
+        return $this->nascimento;
     }
 
-    private function setDataNascimento($dataNascimento)
+    private function setNascimento($nascimento)
     {
-        $this->dataNascimento = $dataNascimento;
-
-        return $this;
-    }
-    private function getTipoConta()
-    {
-        return $this->tipoConta;
-    }
-    private function setTipoConta($tipoConta)
-    {
-        $this->tipoConta = $tipoConta;
-
-        return $this;
-    }
-
-    private function getPlano()
-    {
-        return $this->plano;
-    }
-
-    private function setPlano($plano)
-    {
-        $this->plano = $plano;
-
-        return $this;
-    }
-
-    private function getIdUserFisico()
-    {
-        $conexao = new conexaoPDO;
-        $conexao = $conexao->getConnection();
-        $sql = "SELECT * FROM tb_usuario_fisico";
-
-        $stmt = $conexao->prepare($sql);
-        $stmt->execute();
-        $idUserFisico = $stmt->rowCount() + 1;
-        return $idUserFisico;
-    }
-
-    private function setIdUserFisico($idUserFisico)
-    {
-        $this->idUserFisico = $idUserFisico;
+        $this->nascimento = $nascimento;
 
         return $this;
     }
 }
+?>
