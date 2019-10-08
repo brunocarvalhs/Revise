@@ -11,8 +11,7 @@ INSERT INTO tb_medida
     (sg_medida,nm_medida)
 VALUES
     ('T', 'Tempo'),
-    ('Km', 'Quilometros'),
-    ('Co', 'Condição');
+    ('Km', 'Quilometros');
 
 INSERT INTO tb_categoria
     (cd_categoria, nm_categoria)
@@ -6103,7 +6102,7 @@ VALUES
     (90, 'Lente lanterna da placa', 1),
     (91, 'Lente lanterna do para-choque', 1),
     (92, 'Letreiro', 1),
-    (93, 'Limpador do para-brisa', 1),//////
+    (93, 'Limpador do para-brisa', 1),
     (94, 'Limpador do vidro traseiro', 1),
     (95, 'Limpador do vigia com haste', 1),
     (96, 'Mata-junta do friso da janela', 1),
@@ -6228,7 +6227,7 @@ VALUES
     (215, 'Borracha da churrasqueira', 3),
     (216, 'Brake-light', 3),
     (217, 'Bucha de adaptação p/ volante', 3),
-    (218, 'Buzina', 3),//////
+    (218, 'Buzina', 3),
     (219, 'Cadeirinha automotiva', 3),
     (220, 'Caixa acústica', 3),
     (221, 'Caixa de som', 3),
@@ -6369,7 +6368,7 @@ VALUES
     (356, 'Bomba de combustível', 4),
     (357, 'Bomba de combustível elétrica', 4),
     (358, 'Bomba para tirar combustível', 4),
-    (359, 'Bomba reservatório água/gasolina', 4),/////
+    (359, 'Bomba reservatório água/gasolina', 4),
     (360, 'Dobradiça da portinhola', 4),
     (361, 'Mangueira de combustível', 4),
     (362, 'Platinado', 4),
@@ -6394,7 +6393,7 @@ VALUES
     (381, 'Limpador de ar condicionado', 6),
     (382, 'Purificador de Ar', 6),
     (383, 'Aditivo para radiador', 7),
-    (384, 'Bomba d´água', 7),/////
+    (384, 'Bomba dÂ´água', 7),
     (385, 'Capa ventilação do capô', 7),
     (386, 'Cebolão do radiador', 7),
     (387, 'Coxim do radiador', 7),
@@ -6484,14 +6483,14 @@ VALUES
     (471, 'Antena', 12),
     (472, 'Antena do teto', 12),
     (473, 'Bandeja da bateria', 12),
-    (474, 'Bateria', 12),//////
+    (474, 'Bateria', 12),
     (475, 'Bloco ótico do farol de milha', 12),
     (476, 'Bobina de ignição', 12),
     (477, 'Bomba de combustível', 12),
     (478, 'Bomba de combustível elétrica', 12),
     (479, 'Bomba reservatório água/gasolina', 12),
     (480, 'Botão chave do alarme', 12),
-    (481, 'Buzina', 12),//////
+    (481, 'Buzina', 12),
     (482, 'Cabo de vela', 12),
     (483, 'Caixa de fusíveis', 12),
     (484, 'Caixa organizadora', 12),
@@ -6504,9 +6503,9 @@ VALUES
     (491, 'Chupeta de bateria', 12),
     (492, 'Comutador de partida', 12),
     (493, 'Conector adaptador para radio', 12),
-    (494, 'Farol', 12),//////
-    (495, 'Farol de milha', 12),//////
-    (496, 'Farol de socorro', 12),//////
+    (494, 'Farol', 12),
+    (495, 'Farol de milha', 12),
+    (496, 'Farol de socorro', 12),
     (497, 'Farol tuning', 12),
     (498, 'Fusível', 12),
     (499, 'Interruptor de emergência', 12),
@@ -6522,7 +6521,7 @@ VALUES
     (509, 'Kit de farol de milha', 12),
     (510, 'Kit vidro elétrico', 12),
     (511, 'Lâmpada', 12),
-    (512, 'Lâmpada do farol', 12),/////
+    (512, 'Lâmpada do farol', 12),
     (513, 'Lanterna da placa', 12),
     (514, 'Lanterna de teto', 12),
     (515, 'Lanterna dianteira', 12),
@@ -6585,7 +6584,7 @@ VALUES
     (572, 'Chave L', 16),
     (573, 'Chave sextavada canhão', 16),
     (574, 'Chupeta de bateria', 16),
-    (575, 'Macaco', 16),/////
+    (575, 'Macaco', 16),
     (576, 'Pistola para cola de silicone', 16),
     (577, 'Rebitadeira', 16),
     (578, 'Rebite', 16),
@@ -6820,10 +6819,10 @@ VALUES
     (807, 'Cilindro da chave da porta', 24),
     (808, 'Cilindro da chave do contato', 24),
     (809, 'Cinta para rack', 24),
-    (810, 'Cinto de segurança', 24),/////
+    (810, 'Cinto de segurança', 24),
     (811, 'Controle para alarme', 24),
     (812, 'Elástico do bagageiro', 24),
-    (813, 'Extintor de incêndio', 24),/////
+    (813, 'Extintor de incêndio', 24),
     (814, 'Fechadura da porta', 24),
     (815, 'Fechadura do capô traseiro', 24),
     (816, 'Fivela do cinto segurança retrátil', 24),
@@ -6980,14 +6979,14 @@ VALUES
     (967, 'Kit junta do motor', 27),
     (968, 'Kit motor', 27),
     (969, 'Kit relação', 27),
-    (970, 'Lanterna para socorro', 27),/////
+    (970, 'Lanterna para socorro', 27),
     (971, 'Limpa carter', 27),
     (972, 'Mangueira de combustível', 27),
     (973, 'Mangueira do filtro de ar', 27),
     (974, 'Óleo da direção hidráulica', 27),
     (975, 'Óleo do câmbio', 27),
-    (976, 'Óleo do freio', 27),/////
-    (977, 'Óleo do motor', 27),/////
+    (976, 'Óleo do freio', 27),
+    (977, 'Óleo do motor', 27),
     (978, 'Pistão com anel', 27),
     (979, 'Platinado', 27),
     (980, 'Protetor de cárter', 27),
@@ -6995,7 +6994,7 @@ VALUES
     (982, 'Refil bomba de combustível', 27),
     (983, 'Regulador de voltagem', 27),
     (984, 'Regulador elétrico multi fução', 27),
-    (985, 'Reserv. de água do radiador', 27),/////
+    (985, 'Reserv. de água do radiador', 27),
     (986, 'Reservatório de água do para-brisa', 27),
     (987, 'Reservatório de direção hidráulica', 27),
     (988, 'Reservatório de partida fria', 27),
@@ -7004,7 +7003,7 @@ VALUES
     (991, 'Retentor dianteiro virabrequim', 27),
     (992, 'Retentor traseiro virabrequim', 27),
     (993, 'Rolamento apoio da correia', 27),
-    (994, 'Rolamento diferencial', 27), /////
+    (994, 'Rolamento diferencial', 27),
     (995, 'Rolamento do alternador', 27),
     (996, 'Rolamento lateral da coroa', 27),
     (997, 'Rolamento tensor da correia', 27),
@@ -7247,7 +7246,7 @@ VALUES
     (1234, 'Anti-embaçante', 38),
     (1235, 'Aro do quebra vento', 38),
     (1236, 'Barra do limpador do para-brisa', 38),
-    (1237, 'Bomba reservatório água/gasolina', 38),/////
+    (1237, 'Bomba reservatório água/gasolina', 38),
     (1238, 'Borracha crua', 38),
     (1239, 'Borracha da janela lateral traseira', 38),
     (1240, 'Borracha do para-brisa', 38),
@@ -7297,7 +7296,9 @@ VALUES
     (1284, 'Trilho da máquina de vidro', 38);
 */
 
-INSERT INTO tb_peca VALUES
+INSERT INTO tb_peca
+    (cd_peca, nm_peca)
+VALUES
 (1,'Alinhamento dos pneus'),
 (2,'Correia do alternador'),
 (3,'Correia do compressor do ar-condicionado'),
@@ -7314,24 +7315,7 @@ INSERT INTO tb_peca VALUES
 (14,'Líquido de arrefecimento'),
 (15,'Óleo lubrificante'),
 (16,'Pneus'),
-(17,'Velas'),
-(18, 'Limpador do para-brisa', 1),
-(19, 'Bomba reservatório água/gasolina', 4),
-(20, 'Bomba d´água', 7),
-(21, 'Bateria', 12),
-(22, 'Buzina', 12),
-(23, 'Farol', 12),
-(24, 'Farol de milha', 12),
-(25, 'Farol de socorro', 12),
-(26, 'Lâmpada do farol', 12),
-(27, 'Macaco', 16),
-(28, 'Cinto de segurança', 24),
-(29, 'Extintor de incêndio', 24),
-(30, 'Lanterna para socorro', 27),
-(31, 'Óleo do freio', 27),
-(32, 'Óleo do motor', 27),
-(33, 'Reserv. de água do radiador', 27),
-(34, 'Rolamento diferencial', 27);
+(17,'Velas');
 
 
 INSERT INTO tb_medida_peca (cd_peca, qt_medida, sg_medida) VALUES 
@@ -7368,24 +7352,7 @@ INSERT INTO tb_medida_peca (cd_peca, qt_medida, sg_medida) VALUES
 (15,15000,'Km'),
 (16,1825,'T'),
 (17,15000,'Km'),
-(17,100000,'Km'),
-(18, null,'Co'),
-(19, null,'Co'),
-(20, null,'Co'),
-(21, null,'Co'),
-(22, null,'Co'),
-(23, null,'Co'),
-(24, null,'Co'),
-(25, null,'Co'),
-(26, null,'Co'),
-(27, null,'Co'),
-(28, null,'Co'),
-(29, null,'Co'),
-(30, null,'Co'),
-(31, null,'Co'),
-(32, null,'Co'),
-(33, null,'Co'),
-(34, null,'Co');
+(17,100000,'Km');
 
 INSERT INTO tb_modelo
     (cd_modelo,cd_marca,nm_modelo)
