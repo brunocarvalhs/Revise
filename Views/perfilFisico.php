@@ -275,16 +275,17 @@ $peças = 2;
         }
     </style>
 </body>
-<script src="/Views/js/jquery-3.4.1.js"></script>
-<script src="/Views/js/jquery.min.js"></script>
-<script src="/Views/js/popper.min.js"></script>
-<script src="/Views/js/bootstrap.min.js"></script>
-<script src="/Views/js/wow.js"></script>
-<script src="/Views/js/sweetalert.min.js"></script>
-<script src="/Views/js/progressbar.js"></script>
-<script src="/Views/js/sistema.js"></script>
-<script src="/Views/js/jquery.mask.js"></script>
-<script src="/Views/js/API.js"></script>
-<script src="/Views/js/validation/CadastroJuridico.js"></script>
-<script src="/Views/js/cadastro.js"></script>
+<script src="../Views/js/jquery-3.4.1.js"></script>
+<script src="../Views/js/jquery.min.js"></script>
+<script src="../Views/js/popper.min.js"></script>
+<script src="../Views/js/bootstrap.min.js"></script>
+<script src="../Views/js/wow.js"></script>
+<script src="../Views/js/sweetalert.min.js"></script>
+<script src="../Views/js/progressbar.js"></script>
+<script src="../Views/js/sistema.js"></script>
+<script src="../Views/js/jquery.mask.js"></script>
+<script src="../Views/js/API.js"></script>
+<script src="../Views/js/validation/CadastroJuridico.js"></script>
+<script src="../Views/js/cadastro.js"></script>
+<script src="../Views/js/index.js"></script>
 </html>
