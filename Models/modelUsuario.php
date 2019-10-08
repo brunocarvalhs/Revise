@@ -1,6 +1,6 @@
 <?php
 
-require_once "./Lib/connection.php";
+require_once "../Lib/connection.php";
 
 abstract class Usuario
 {
