@@ -5,6 +5,7 @@ body, html{
     width: 100%;
     height: 100%;
 }
+
 /*------------- Menu Vertical - personalizar -----------------*/
 .menu{
     width: 100%;
@@ -471,6 +472,11 @@ body, html{
   background-color:  rgba(53, 52, 49, 0.76) !important;
 }
 
+.menusuperior{
+  padding: 0px !important;
+  margin: 0px;
+}
+
 @media (max-width: 1078px) 
 {
   .responsivo
@@ -482,6 +488,8 @@ body, html{
 {
   .menusuperior{
     display: none;
+    padding-left: 0px !important;
+    margin: 0px;
   }
   .responsivo
    {
