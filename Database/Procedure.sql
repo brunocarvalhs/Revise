@@ -202,11 +202,12 @@ begin
 SELECT * FROM tb_tipo_usuario AS TipoUser, tb_usuario AS User, tb_usuario_fisico AS UserFisico WHERE TipoUser.cd_tipo_usuario = 1 AND TipoUser.cd_tipo_usuario = User.cd_tipo_usuario AND UserFisico.cd_usuario = User.cd_usuario AND UserFisico.cd_cpf = cpf AND User.cd_senha = senha;
 end $
 
--- Cadastrar Usuario Fisico
+-- Cadastrar Usuario Fisico e Usuario
 delimiter $
-create procedure sp_CadastroUsuarioFisico(in id int,in nome varchar(255),in cpf varchar(11),in nascimento date,in idUsuario int)
+create procedure sp_CadastrarUsuario(in IdUsuario int,in email varchar(255),in senha varchar(255),in IdUsuarioFisico int,in nome varchar(255),in cpf varchar(13), in nascimento DATE)
 begin
-INSERT INTO tb_usuario_fisico(cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario,dt_nascimento) VALUES (id,nome,cpf,idUsuario,nascimento);
+INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_tipo_usuario) VALUES (IdUsuario,email,senha,1);
+INSERT INTO tb_usuario_fisico(cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario,dt_nascimento) VALUES (IdUsuarioFisico,nome,cpf,IdUsuario,nascimento);
 end $
 
 -- Cadastrar Veiculo
@@ -214,13 +215,6 @@ delimiter $
 create procedure sp_CadastroVeiculo(in id int,in cor varchar(255),in placa varchar(8),in idUsuario int,in modelo varchar(255),in ano int)
 begin
 INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veiculo, qt_quilometragem) VALUES (id,cor,placa,idUsuario,modelo,ano,null);
-end $
-
--- Cadastarr Usuario
-delimiter $
-create procedure sp_CadastrarUsuario(in id int,in email varchar(255),in senha varchar(255),in plano int,in tipo int)
-begin
-INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_plano,cd_tipo_usuario) VALUES (id,email,senha,plano,tipo);
 end $
 
 -- Validação de Cadastro Fisico

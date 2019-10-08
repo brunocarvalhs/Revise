@@ -7525,3 +7525,5 @@ INSERT INTO tb_check (cd_check, cd_veiculo, sg_status, cd_peca) VALUES
 (2, 1, 'B', 4),
 (3, 1, 'A', 14),
 (4, 1, 'C', 12);
+
+update tb_controle_plano set cd_plano = 1 where cd_plano = 0;
