@@ -24,7 +24,7 @@ $peças = 2;
     <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <title>Revise - Notificações</title>
 </head>
-<body class="bg-escuro">
+<body class="bg-light">
     <div class="row">
             <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">       
             <!--Menu superior responsivo-->

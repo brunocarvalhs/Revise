@@ -25,7 +25,7 @@ $peças = 2;
 <title>Revise - Veículos</title>
 </head>
 
-<body class="bg-escuro">
+<body class="bg-light">
 <div class="row">
     <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">
         <!--Menu superior responsivo-->
