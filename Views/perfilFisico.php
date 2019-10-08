@@ -283,4 +283,8 @@ $peças = 2;
 <script src="/Views/js/sweetalert.min.js"></script>
 <script src="/Views/js/progressbar.js"></script>
 <script src="/Views/js/sistema.js"></script>
+<script src="/Views/js/jquery.mask.js"></script>
+<script src="/Views/js/API.js"></script>
+<script src="/Views/js/validation/CadastroJuridico.js"></script>
+<script src="/Views/js/cadastro.js"></script>
 </html>
