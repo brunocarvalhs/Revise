@@ -25,7 +25,7 @@ $peças = 2;
 <title>Revise - Veículos</title>
 </head>
 
-<body class="bg-light">
+<body class="bg-escuro">
 <div class="row">
     <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">
         <!--Menu superior responsivo-->
@@ -183,7 +183,7 @@ $peças = 2;
             <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
             <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
                 <div class="card">
-                    <div class="card-body bg-dark rounded">
+                    <div class="card-body">
                          <div class="container-fluid">
                         <!--Incia conteúdo card-->
                         <div class="row">                         
