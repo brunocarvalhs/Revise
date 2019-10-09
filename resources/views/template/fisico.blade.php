@@ -115,7 +115,8 @@
                                                     <i class="fa fa-wrench" aria-hidden="true"></i>
                                                     <span>Notificações</span>
                                                     <span class="badge badge-pill badge-danger">
-                                                        <?php echo $peças; ?></span>
+
+                                                    </span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
