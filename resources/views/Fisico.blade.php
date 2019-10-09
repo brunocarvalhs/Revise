@@ -2,8 +2,6 @@
 
 @section('titulo', 'Cadastro')
 
-@section('menu_home','active')
-
 @section('conteudo')
 <section>
     <div class=" backgroundBlackLight espaco">
@@ -21,6 +19,7 @@
     <div class="backgroundBlackLight">
         <!--Form dados pessoais-->
         <form name="CadastroFisico" method="POST" action="./Controllers/controllerCadastroFisico.php" onSubmit="return ValidarCadastroFisico()">
+            @csrf
             <div class="row">
                 <div class="col-12">
                     <h4>Dados pessoais</h4>
