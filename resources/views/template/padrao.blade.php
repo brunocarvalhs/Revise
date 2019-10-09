@@ -116,6 +116,7 @@
             </div>
         </div>
     </footer>
+    <div id="notifications"></div>
 </body>
 <script src="{{asset('js/jquery.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/popper.min.js')}}" type="text/javascript" async="true" defer></script>

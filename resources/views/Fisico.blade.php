@@ -21,6 +21,7 @@
     <div class="backgroundBlackLight">
         <!--Form dados pessoais-->
         <form name="CadastroFisico" method="POST" action="./Controllers/controllerCadastroFisico.php" onSubmit="return ValidarCadastroFisico()">
+            @csrf
             <div class="row">
                 <div class="col-12">
                     <h4>Dados pessoais</h4>
@@ -252,6 +253,10 @@
     </form>
 </section>
 @endsection
-@section('script')
 
+@section('script')
+<script src="{{ asset('js/API.js')}}"></script>
+<script src="{{ asset('js/validation/CadastroFisico.js')}}"></script>
 @endsection
+
+
