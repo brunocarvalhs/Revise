@@ -7,7 +7,7 @@ function consultar() {
     document.getElementById("txtEstado").setAttribute('value', "Pesquisando...");
 
     var placa = $("#txtplaca").val();
-    var urlStr = "revise.ddns.net:8080/placa/" + placa;
+    var urlStr = "http://revise.ddns.net:8080/placa/" + placa;
 
     $.ajax({
         url: urlStr,
