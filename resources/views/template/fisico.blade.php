@@ -1,12 +1,3 @@
-<?php
-
-$FotoDePerfil = 'img/user.jpg';
-$nome = 'Marina';
-$sobrenome = 'Luna Sales';
-$placa = 'EYT-4550';
-$modelo = 'PRISMA';
-$peças = 2;
-?>
 <!DOCTYPE html>
 <html lang="en">
 
