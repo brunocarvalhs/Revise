@@ -93,26 +93,25 @@
                                         </div>
                                     </div>
                                     <!-- sidebar-search  -->
-                                    <!-- sidebar-search  -->
                                     <div class="sidebar-menu">
                                         <ul>
                                             <li class="header-menu">
                                                 <span>Menu</span>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="sistema.php">
+                                                <a href="{{ url('/Home') }}">
                                                     <i class="fa fa-home fa-fw" aria-hidden="true"></i>
                                                     <span>Início</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="perfilFisico.php">
+                                                <a href="{{ url('/Home') }}">
                                                     <i class="fa fa-user-circle" aria-hidden="true"></i>
                                                     <span>Perfil</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="notificacoes.php">
+                                                <a href="{{ url('/Home') }}">
                                                     <i class="fa fa-wrench" aria-hidden="true"></i>
                                                     <span>Notificações</span>
                                                     <span class="badge badge-pill badge-danger">
@@ -121,13 +120,13 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="#">
+                                                <a href="{{ url('/Home') }}">
                                                     <i class="fa fa-car" aria-hidden="true"></i>
                                                     <span>Veículos</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="#">
+                                                <a href="{{ url('/Home') }}">
                                                     <i class="fa fa-building" aria-hidden="true"></i>
                                                     <span>Serviços e Produtos</span>
                                                 </a>
