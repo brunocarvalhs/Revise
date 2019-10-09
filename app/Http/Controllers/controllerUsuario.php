@@ -38,10 +38,10 @@ class controllerUsuario extends Controller
     {
         switch ($request->tipo) {
             case 'juridico':
-                return view('CadastroJuridico');
+                return view('Juridico');
                 break;
             case 'fisico':
-                return view('CadastroFisico');
+                return view('Fisico');
                 break;
             default:
                 return back();
