@@ -10,7 +10,8 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/sistema.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
-    <title>Revise - Home</title>
+    @yield('style')
+    <title>Revise - @yield('titulo')</title>
 </head>
 
 <body id="sistemaJ" class="bg-light">
@@ -75,20 +76,22 @@
                                     </div>
 
                                     <div class="sidebar-header">
-                                        <div class="user-pic">
-                                            <img class="img-responsive img-rounded" src="img/user.jpg" alt="User picture">
+                                            <div class="user-pic">
+                                                <img class="img-responsive img-rounded" src="img/user.jpg" alt="User picture">
+                                            </div>
+                                            <div class="user-info">
+                                                <br>
+                                                <span class="user-name">
+                                                <strong>{{ $dados->Fantasia }}</strong>
+                                                </span>
+                                                <span class="user-role">
+                                                    {{ $dados->CNPJ }}
+                                                </span>
+                                                <span class="user-role">
+
+                                                </span>
+                                            </div>
                                         </div>
-
-                                        <div class="user-info">
-                                            <span class="user-name"><strong>
-
-                                            </strong>
-                                            </span>
-                                            <span class="user-role">
-
-                                            </span>
-                                        </div>
-                                    </div>
                                     <!-- sidebar-search  -->
                                     <div class="sidebar-menu">
                                         <ul>
@@ -163,5 +166,5 @@
 <script src="{{ asset('js/sweetalert.min.js') }}" type="text/javascript" async="true" defer></script>
 <script src="{{ asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
 <script src="{{ asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
-
+@yield('script')
 </html>
