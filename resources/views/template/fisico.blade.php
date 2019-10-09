@@ -82,7 +82,7 @@
                                         </div>
                                         <div class="user-info">
                                             <span class="user-name">
-                                                <strong></strong>
+                                            <strong>{{$dados->Nome}}</strong>
                                             </span>
                                             <span class="user-role">
 

@@ -27,14 +27,13 @@ Route::post('/Home', 'controllerUsuario@SignIn');
 
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
 
-/*
 Route::get('/Home', function () {
     if(( (!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])) )){
         switch($_SESSION['autentic']){
-            case '':
+            case '1':
                 return view('Fisico\Perfil');
             break;
-            case '':
+            case '2':
                 return view('Juridico\Perfil');
             break;
             default:
@@ -46,4 +45,4 @@ Route::get('/Home', function () {
         return back();
     }
 });
-*/
+

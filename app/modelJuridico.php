@@ -102,15 +102,14 @@ class modelJuridico extends modelUsuario
         ->where('tb_usuario_juridico.cd_cnpj', '=', $CNPJ, 'and','tb_usuario.cd_senha', '=', $SENHA)
         ->first();
 
-        return dd($resultado);
-        /*
-        if($resultado->CNPJ == $CPF && $resultado->Senha == $SENHA){
-
-            return true;
+        if($resultado->CNPJ == $CNPJ && $resultado->Senha == $SENHA){
+            $this->setSenha($resultado->Senha);
+            $this->setEmail($resultado->Email);
+            $_SESSION['autentic'] = '2';
+            return $resultado;
         }
         else{
             return false;
         }
-        */
     }
 }

@@ -15,9 +15,17 @@ class controllerUsuario extends Controller
         $senha = $request->senha;
 
         if (strlen($login) === 14) {
-            $modelJuridico->login($login,$senha);
+            $result = $modelJuridico->login($login, $senha);
+            if ($result != false)
+                return view('Juridico\Perfil', ['dados' => $result]);
+            else
+                return back();
         } else if (strlen($login) === 11) {
-            $modelFisico->Login($login, $senha);
+            $result = $modelFisico->Login($login, $senha);
+            if ($result != false)
+                return view('Fisico\Perfil', ['dados' => $result]);
+            else
+                return back();
         } else {
             return back();
         }
