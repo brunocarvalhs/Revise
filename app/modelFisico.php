@@ -115,7 +115,6 @@ class modelFisico extends modelUsuario
             $this->setCPF($resultado->CPF);
             $this->setDataNascimento($resultado->Nascimento);
             $_SESSION['autentic'] = $resultado->Usuario;
-            view('Template/fisico',['nome' => $resultado->Nome]);
             return true;
         }
         else{

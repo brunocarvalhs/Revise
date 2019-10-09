@@ -23,7 +23,7 @@ class controllerUsuario extends Controller
             }
         } else if (strlen($login) === 11) {
             if($modelFisico->Login($login, $senha)){
-                return redirect('/Home');
+                return redirect('/Home')->view('Fisico\Perfil');
             }
             else{
                 return back();

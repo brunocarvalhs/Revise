@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="user-info">
                                             <span class="user-name">
-                                                <strong>{{ $nome }}</strong>
+                                                <strong></strong>
                                             </span>
                                             <span class="user-role">
 
