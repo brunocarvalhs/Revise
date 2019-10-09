@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
+session_start();
 
 // Rotas de todos os usuarios
 Route::get('/', function () {
@@ -28,7 +28,7 @@ Route::post('/SignIn', 'controllerUsuario@SignIn');
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
 
 Route::get('/Home', function () {
-    if(Auth::check()){
+    if(( (!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])) )){
         return 'Funcionou';
     }
     else{
