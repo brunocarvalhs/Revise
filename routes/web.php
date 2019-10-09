@@ -27,6 +27,7 @@ Route::post('/Home', 'controllerUsuario@SignIn');
 
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
 
+/*
 Route::get('/Home', function () {
     if(( (!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])) )){
         switch($_SESSION['autentic']){
@@ -45,3 +46,4 @@ Route::get('/Home', function () {
         return back();
     }
 });
+*/
