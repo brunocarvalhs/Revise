@@ -9,7 +9,89 @@ use Illuminate\Support\Facades\DB;
 class modelFisico extends modelUsuario
 {
     private $IdFisico;
+    private $NomeFisico;
+    private $CPF;
+    private $DataNascimento;
 
+    /**
+     * Get the value of IdFisico
+     */
+    public function getIdFisico()
+    {
+        return $this->IdFisico;
+    }
+
+    /**
+     * Set the value of IdFisico
+     *
+     * @return  self
+     */
+    public function setIdFisico($IdFisico)
+    {
+        $this->IdFisico = $IdFisico;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of NomeFisico
+     */
+    public function getNomeFisico()
+    {
+        return $this->NomeFisico;
+    }
+
+    /**
+     * Set the value of NomeFisico
+     *
+     * @return  self
+     */
+    public function setNomeFisico($NomeFisico)
+    {
+        $this->NomeFisico = $NomeFisico;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of CPF
+     */
+    public function getCPF()
+    {
+        return $this->CPF;
+    }
+
+    /**
+     * Set the value of CPF
+     *
+     * @return  self
+     */
+    public function setCPF($CPF)
+    {
+        $this->CPF = $CPF;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of DataNascimento
+     */
+    public function getDataNascimento()
+    {
+        return $this->DataNascimento;
+    }
+
+    /**
+     * Set the value of DataNascimento
+     *
+     * @return  self
+     */
+    public function setDataNascimento($DataNascimento)
+    {
+        $this->DataNascimento = $DataNascimento;
+
+        return $this;
+    }
 
     public function Login($CPF, $SENHA){
 
@@ -21,11 +103,17 @@ class modelFisico extends modelUsuario
         ->where('tb_usuario_fisico.cd_cpf', '=', $CPF, 'and','tb_usuario.cd_senha', '=', $SENHA)
         ->get();
 
-        if($resultado){
-            return view('home', ['users' => $users]);
-        }
-        else{
+        //if($resultado){
+
+            $this->setCPF($resultado->CPF);
+            return dd($this->getCPF());
+
+            //return view('home', ['users' => $users]);
+        //}
+        /*else{
             return back();
         }
+        */
+
     }
 }
