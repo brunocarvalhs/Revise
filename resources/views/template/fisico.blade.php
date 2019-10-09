@@ -20,7 +20,7 @@ $peças = 2;
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Revise - Início</title>
+    <title>Revise - @yield('titulo')</title>
 </head>
 
 <body class="bg-light">
@@ -32,7 +32,7 @@ $peças = 2;
                     <a class="navbar-brand" href="#">
                         <div class="row">
                             <div class="col-4">
-                                <img src="img/logo.png" width="50" height="50" alt="Revise" class="d-inline-block align-top">
+                                <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top">
                             </div>
                         </div>
                     </a>
@@ -79,7 +79,7 @@ $peças = 2;
                                         <a class="navbar-brand" href="#">
                                             <div class="row">
                                                 <div class="col-4">
-                                                    <img src="img/logo.png" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
+                                                    <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
                                                 </div>
                                             </div>
 
@@ -87,12 +87,11 @@ $peças = 2;
                                     </div>
                                     <div class="sidebar-header">
                                         <div class="user-pic">
-                                            <img class="img-responsive img-rounded" src="<?php echo $FotoDePerfil ?>" alt="User picture">
+                                            <img class="img-responsive img-rounded" src="{{<?php echo $FotoDePerfil ?>}}" alt="User picture">
                                         </div>
                                         <div class="user-info">
-                                            <span class="user-name"><strong>
-                                                    <?php echo $nome ?></strong>
-                                                <?php echo $sobrenome ?>
+                                            <span class="user-name">
+                                                <strong>{{ $Dados->Nome }}</strong>
                                             </span>
                                             <span class="user-role">
                                                 <?php echo $placa ?></span>
