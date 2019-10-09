@@ -4,27 +4,25 @@ namespace App;
 
 use App\modelUsuario;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class modelFisico extends modelUsuario
 {
-    //
+    private $IdFisico;
 
 
-    public function Login($CNPJ, $SENHA){
-        DB::select(`SELECT f.cd_usuario as 'Usuario', f.cd_cpf as 'CPF',
-        u.cd_senha as 'Senha',
-        f.nm_usuario_fisico as 'Nome' ,
-        u.nm_email as 'Email',
-        f.dt_nascimento as 'Nascimento',
-        p.nm_plano as 'Plano',
-        p.qt_veiculo as 'QuantidadeVeiculo'
-        FROM tb_usuario as u
-        INNER JOIN  tb_usuario_fisico as f on f.cd_usuario = u.cd_usuario
-        INNER JOIN tb_controle_plano as cp on cp.cd_usuario_fisico = f.cd_usuario_fisico
-        INNER JOIN tb_plano as p on p.cd_plano = cp.cd_plano
-        and  f.cd_cpf = ? and u.cd_senha = ?`, [$CNPJ, $SENHA]);
+    public function Login($CPF, $SENHA){
+
+        $resultado = DB::table('tb_usuario')
+        ->join('tb_usuario_fisico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
+        ->join('tb_controle_plano', 'tb_controle_plano.cd_usuario_fisico', '=', 'tb_usuario_fisico.cd_usuario_fisico')
+        ->join('tb_plano', 'tb_plano.cd_plano', '=', 'tb_controle_plano.cd_plano')
+        ->select('tb_usuario_fisico.cd_usuario as Usuario','tb_usuario_fisico.cd_cpf as CPF','tb_usuario.cd_senha as Senha','tb_usuario_fisico.nm_usuario_fisico as Nome','tb_usuario.nm_email as Email','tb_usuario_fisico.dt_nascimento as Nascimento','tb_plano.nm_plano as Plano','tb_plano.qt_veiculo as QuantidadeVeiculo')
+        ->where('tb_usuario_fisico.cd_cpf', '=', $CPF, 'and','tb_usuario.cd_senha', '=', $SENHA)
+        ->get();
+
         if($resultado){
-            return view('home', $resultado);
+            return view('home', ['users' => $users]);
         }
         else{
             return back();
