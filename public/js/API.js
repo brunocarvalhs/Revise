@@ -8,19 +8,18 @@ function consultar() {
 
     var placa = $("#txtplaca").val();
     var urlStr = "http://revise.ddns.net:8080/placa/" + placa;
-
     $.ajax({
         url: urlStr,
         type: "get",
         crossDomain: true,
         dataType: "json",
         success: function (data) {
-            console.log(data);
-            document.getElementById("txtMarca").setAttribute('value', data.marca);
-            document.getElementById("txtAno").setAttribute('value', data.anoModelo);
-            document.getElementById("txtCor").setAttribute('value', data.cor);
-            document.getElementById("txtCidade").setAttribute('value', data.municipio);
-            document.getElementById("txtEstado").setAttribute('value', data.uf);
+            console.log(data[0]);
+            document.getElementById("txtMarca").setAttribute('value', data[0].marca);
+            document.getElementById("txtAno").setAttribute('value', data[0].anoModelo);
+            document.getElementById("txtCor").setAttribute('value', data[0].cor);
+            document.getElementById("txtCidade").setAttribute('value', data[0].municipio);
+            document.getElementById("txtEstado").setAttribute('value', data[0].uf);
     },
         error: function (erro) {
             swal({
