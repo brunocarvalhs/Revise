@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-7 padding"></div>
                     <div class="col-0 col-sm-0 col-md-0 col-lg-12 col-xl-5 background">
-                        <form method="POST" action="./SignIn" onsubmit="">
+                        <form method="POST" action="./Home" onsubmit="">
                             @csrf
                             <div class="row formularioLogin">
                                 <div class="logoRevise">

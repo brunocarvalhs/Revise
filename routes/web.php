@@ -23,7 +23,7 @@ Route::get('/SignIn', function () {
     return view('login');
 });
 
-Route::post('/SignIn', 'controllerUsuario@SignIn');
+Route::post('/Home', 'controllerUsuario@SignIn');
 
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
 

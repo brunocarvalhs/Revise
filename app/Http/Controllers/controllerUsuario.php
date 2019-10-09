@@ -16,7 +16,6 @@ class controllerUsuario extends Controller
 
         if (strlen($login) === 14) {
             $modelJuridico->login($login,$senha);
-            return redirect('')->view('Juridico\Perfil');
         } else if (strlen($login) === 11) {
             $modelFisico->Login($login, $senha);
         } else {
