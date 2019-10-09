@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-grid.css') }}">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/sistema.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/sistema.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
     <title>Revise - @yield('titulo')</title>
 </head>
 
@@ -78,16 +77,18 @@
                                     </div>
                                     <div class="sidebar-header">
                                         <div class="user-pic">
-                                            <img class="img-responsive img-rounded" src="<?php echo $FotoDePerfil ?>" alt="User picture">
+                                            <img class="img-responsive img-rounded" src="img/user.jpg" alt="User picture">
                                         </div>
                                         <div class="user-info">
                                             <span class="user-name">
                                                 <strong>{{ $nome }}</strong>
                                             </span>
                                             <span class="user-role">
-                                                <?php echo $placa ?></span>
+
+                                            </span>
                                             <span class="user-role">
-                                                <?php echo $modelo ?></span>
+
+                                            </span>
                                         </div>
                                     </div>
                                     <!-- sidebar-search  -->
