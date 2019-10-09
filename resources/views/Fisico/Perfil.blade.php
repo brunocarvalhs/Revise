@@ -1,6 +1,6 @@
 @extends('template/fisico')
 
 
-@section('sistema')
+@section('sistema_fisico')
 
 @endsection
