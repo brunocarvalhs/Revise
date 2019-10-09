@@ -170,7 +170,7 @@
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
-<script src="{{asset('js/progressbar.js')}}" type="text/javascript" async="true" defer></script>
-<script src="{{asset('js/sistema.js')}}" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
 @yield('script')
 </html>

@@ -1,6 +1,6 @@
 @extends('template\juridico')
 
-@section('titulo')
+@section('titulo','Anuncio')
 
 @section('style')
 
