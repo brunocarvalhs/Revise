@@ -39,7 +39,7 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown @yield('menu_aplicativo')">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                            <a class="nav-link dropdown-toggle" href="{{ url('/aplicativo') }}" id="empresaEmpresa" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item bg-light" href="{{ url('/aplicativo') }}">Sobre o Aplicativo Revise</a>
@@ -47,7 +47,7 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown @yield('menu_empresa')">
-                            <a class="nav-link dropdown-toggle" href="#" id="empresaEmpresa" role="button"
+                            <a class="nav-link dropdown-toggle" href="{{ url('/sobre') }}" id="empresaEmpresa" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item bg-light" href="{{ url('/sobre') }}">Quem Somos?</a>
@@ -117,9 +117,12 @@
         </div>
     </footer>
 </body>
-@yield('script')
+<script src="js/jquery.min.js" type="text/javascript" async="true" defer></script>
+<script src="js/popper.min.js" type="text/javascript" async="true" defer></script>
+<script src="js/bootstrap.min.js" type="text/javascript" async="true" defer></script>
 <script src="js/wow.js" type="text/javascript" async="true" defer></script>
 <script src="js/sweetalert.min.js" type="text/javascript" async="true" defer></script>
 <script src="js/jquery.mask.js" type="text/javascript" async="true" defer></script>
 <script src="js/index.js" type="text/javascript" async="true" defer></script>
+@yield('script')
 </html>
