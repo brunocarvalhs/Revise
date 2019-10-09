@@ -3,6 +3,8 @@
 namespace App;
 
 use App\modelUsuario;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class modelJuridico extends modelUsuario
 {
@@ -92,5 +94,23 @@ class modelJuridico extends modelUsuario
     }
 
 
+    public function login($CNPJ, $SENHA){
 
+        $resultado = DB::table('tb_usuario')
+        ->join('tb_usuario_juridico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_juridico.cd_usuario')
+        ->select('tb_usuario_juridico.cd_usuario as Usuario','tb_usuario_juridico.cd_cnpj as CNPJ','tb_usuario.cd_senha as Senha','tb_usuario.nm_email as Email', 'tb_usuario_juridico.nm_nome_fantasia as Fantasia', 'tb_usuario_juridico.nm_razao_social as Razao')
+        ->where('tb_usuario_juridico.cd_cnpj', '=', $CNPJ, 'and','tb_usuario.cd_senha', '=', $SENHA)
+        ->first();
+
+        return dd($resultado);
+        /*
+        if($resultado->CNPJ == $CPF && $resultado->Senha == $SENHA){
+
+            return true;
+        }
+        else{
+            return false;
+        }
+        */
+    }
 }

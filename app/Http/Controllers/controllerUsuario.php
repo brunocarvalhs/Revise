@@ -14,8 +14,20 @@ class controllerUsuario extends Controller
         $login = $this->TratamentoLogin($request->cpfcnpj);
         $senha = $request->senha;
 
-        if (strlen($login) === 14) { } else if (strlen($login) === 11) {
-            $modelFisico->Login($login, $senha);
+        if (strlen($login) === 14) {
+            if($modelJuridico->login($login,$senha)){
+                return redirect('/');
+            }
+            else{
+                return back();
+            }
+        } else if (strlen($login) === 11) {
+            if($modelFisico->Login($login, $senha)){
+                return redirect('/');
+            }
+            else{
+                return back();
+            }
         } else {
             return back();
         }

@@ -93,27 +93,29 @@ class modelFisico extends modelUsuario
         return $this;
     }
 
+
     public function Login($CPF, $SENHA){
 
         $resultado = DB::table('tb_usuario')
         ->join('tb_usuario_fisico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
         ->join('tb_controle_plano', 'tb_controle_plano.cd_usuario_fisico', '=', 'tb_usuario_fisico.cd_usuario_fisico')
         ->join('tb_plano', 'tb_plano.cd_plano', '=', 'tb_controle_plano.cd_plano')
-        ->select('tb_usuario_fisico.cd_usuario as Usuario','tb_usuario_fisico.cd_cpf as CPF','tb_usuario.cd_senha as Senha','tb_usuario_fisico.nm_usuario_fisico as Nome','tb_usuario.nm_email as Email','tb_usuario_fisico.dt_nascimento as Nascimento','tb_plano.nm_plano as Plano','tb_plano.qt_veiculo as QuantidadeVeiculo')
+        ->select('tb_usuario.cd_usuario as Id','tb_usuario_fisico.cd_usuario as Usuario','tb_usuario_fisico.cd_cpf as CPF','tb_usuario.cd_senha as Senha','tb_usuario_fisico.nm_usuario_fisico as Nome','tb_usuario.nm_email as Email','tb_usuario_fisico.dt_nascimento as Nascimento','tb_plano.nm_plano as Plano','tb_plano.qt_veiculo as QuantidadeVeiculo')
         ->where('tb_usuario_fisico.cd_cpf', '=', $CPF, 'and','tb_usuario.cd_senha', '=', $SENHA)
-        ->get();
+        ->first();
 
-        //if($resultado){
-
+        if($resultado->CPF == $CPF && $resultado->Senha == $SENHA){
+            $this->setSenha($resultado->Senha);
+            $this->setEmail($resultado->Email);
+            $this->setIdFisico($resultado->Id);
+            $this->setIdFisico($resultado->Usuario);
+            $this->setNomeFisico($resultado->Nome);
             $this->setCPF($resultado->CPF);
-            return dd($this->getCPF());
-
-            //return view('home', ['users' => $users]);
-        //}
-        /*else{
-            return back();
+            $this->setDataNascimento($resultado->Nascimento);
+            return true;
         }
-        */
-
+        else{
+            return false;
+        }
     }
 }
