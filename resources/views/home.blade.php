@@ -168,7 +168,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 ">
-                    <img src="img/AppRevise.png" class="AppSmart wow bounceInRight center" 
+                    <img src="img/AppRevise.png" class="AppSmart wow bounceInRight center"
                      data-wow-duration="2s">
                 </div>
             </div>
@@ -268,4 +268,9 @@
             </div>
         </div>
     </section>
+@endsection
+@section('script')
+<script src="js/jquery.min.js" type="text/javascript" async="true" defer></script>
+<script src="js/popper.min.js" type="text/javascript" async="true" defer></script>
+<script src="js/bootstrap.min.js" type="text/javascript" async="true" defer></script>
 @endsection

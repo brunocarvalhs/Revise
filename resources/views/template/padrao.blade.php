@@ -117,12 +117,9 @@
         </div>
     </footer>
 </body>
-<script src="js/jquery.min.js" type="text/javascript" async="true" defer></script>
-<script src="js/popper.min.js" type="text/javascript" async="true" defer></script>
-<script src="js/bootstrap.min.js" type="text/javascript" async="true" defer></script>
+@yield('script')
 <script src="js/wow.js" type="text/javascript" async="true" defer></script>
 <script src="js/sweetalert.min.js" type="text/javascript" async="true" defer></script>
 <script src="js/jquery.mask.js" type="text/javascript" async="true" defer></script>
 <script src="js/index.js" type="text/javascript" async="true" defer></script>
-@yield('script')
 </html>
