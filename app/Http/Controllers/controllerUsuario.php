@@ -22,7 +22,7 @@ class controllerUsuario extends Controller
             if ($result != false){
                 $_SESSION['Dados'] = json_encode($result);
                 $_SESSION['autentic'] = '2';
-                return view('Juridico\Perfil',  ['dados' => json_decode($_SESSION['Dados'])]);
+                return view('Juridico\Inicio',  ['dados' => json_decode($_SESSION['Dados'])]);
             }
             else
                 return back();
@@ -31,7 +31,7 @@ class controllerUsuario extends Controller
             if ($result != false){
                 $_SESSION['Dados'] = json_encode($result);
                 $_SESSION['autentic'] = '1';
-                return view('Fisico\Perfil',  ['dados' => json_decode($_SESSION['Dados'])]);
+                return view('Fisico\Inicio',  ['dados' => json_decode($_SESSION['Dados'])]);
             }
             else
                 return back();
@@ -44,10 +44,10 @@ class controllerUsuario extends Controller
          if(( (!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])) )){
         switch($_SESSION['autentic']){
             case '1':
-                return view('Fisico\Perfil', ['dados' => json_decode($_SESSION['Dados'])]);
+                return view('Fisico\Inicio', ['dados' => json_decode($_SESSION['Dados'])]);
             break;
             case '2':
-                return view('Juridico\Perfil', ['dados' => json_decode($_SESSION['Dados'])]);
+                return view('Juridico\Inicio', ['dados' => json_decode($_SESSION['Dados'])]);
             break;
             default:
                 return back();
