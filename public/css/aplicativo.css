@@ -1,0 +1,68 @@
+/* Estrutura base */
+
+html, body {
+    background: #343a40;
+}
+
+.barra_nav {
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+
+@media screen and (max-width: 1626px) {
+    .espaco{
+        padding-top: 90px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .espaco{
+        padding-top: 118px;
+    }
+}
+
+.backgroundAplicativo{
+    background-color: #f8f8f8;
+}
+
+.smartphoneIntroducao{
+    padding-top: 40px;
+}
+
+.TituloAplicativoIntroducao{
+    margin-top: 80px;
+    font-size: 10rem !important;
+}
+
+.Titulo{
+    font-size: 5rem !important;
+}
+
+@media screen and (max-width: 600px) {
+    .TituloAplicativoIntroducao{
+        margin-top: 20px;
+        padding-top: 0px !important;
+    }
+    .espaco{
+        padding-top: 0px;
+    }
+    .Titulo{
+        font-size: 4rem !important;
+    }
+    .smartphoneIntroducao{
+        width: 120%;
+    }
+}
+
+table{
+    width: 100%;
+}
+
+.formularioSuport{
+    margin-top: 20px;
+}
+
+.suporteBotao{
+    margin-top: 30px;
+}
