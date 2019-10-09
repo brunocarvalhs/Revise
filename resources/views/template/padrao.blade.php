@@ -5,12 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Revise - @yield('titulo')</title>
-        <link rel="shortcut icon" href="img/logo.ico                     "/>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css   ">
-        <link rel="stylesheet" type="text/css" href="css/sistema.css     ">
-        <link rel="stylesheet" type="text/css" href="css/animate.min.css ">
+        <link rel="shortcut icon" href="{{asset('img/logo.ico')}}                     "/>
+        <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}   ">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/sistema.css')}}     ">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}} ">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/index.css       ">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}       ">
     </head>
 <body>
     <!-- Menu -->
@@ -19,7 +19,7 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" width="50" height="50" alt="Revise">
+                    <img src="{{asset('img/logo.png')}}" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -88,27 +88,27 @@
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="img/icon/facebookIcon.png" class="redesocialIcones" alt="Github-revise" />
+                                <img src="{{asset('img/icon/facebookIcon.png')}}" class="redesocialIcones" alt="Github-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="img/icon/InstagramIcon.png" class="redesocialIcones" alt="Github-revise" />
+                                <img src="{{asset('img/icon/InstagramIcon.png')}}" class="redesocialIcones" alt="Github-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="img/icon/YoutubeIcon.png" class="redesocialIcones" alt="Github-revise" />
+                                <img src="{{asset('img/icon/YoutubeIcon.png')}}" class="redesocialIcones" alt="Github-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="img/icon/twitterIcon.png" class="redesocialIcones" alt="Github-revise" />
+                                <img src="{{asset('img/icon/twitterIcon.png')}}" class="redesocialIcones" alt="Github-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <img src="img/icon/githubIcon.png" class="redesocialIcones" alt="Github-revise" />
+                                <img src="{{asset('img/icon/githubIcon.png')}}" class="redesocialIcones" alt="Github-revise" />
                             </a>
                         </li>
                     </ul>
@@ -117,12 +117,12 @@
         </div>
     </footer>
 </body>
-<script src="js/jquery.min.js" type="text/javascript" async="true" defer></script>
-<script src="js/popper.min.js" type="text/javascript" async="true" defer></script>
-<script src="js/bootstrap.min.js" type="text/javascript" async="true" defer></script>
-<script src="js/wow.js" type="text/javascript" async="true" defer></script>
-<script src="js/sweetalert.min.js" type="text/javascript" async="true" defer></script>
-<script src="js/jquery.mask.js" type="text/javascript" async="true" defer></script>
-<script src="js/index.js" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/jquery.min.js')}}" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/popper.min.js')}}" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/jquery.mask.js')}}" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 @yield('script')
 </html>
