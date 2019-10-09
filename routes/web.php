@@ -1,8 +1,5 @@
 <?php
 
-use App\Http\Controllers\Controller;
-
-session_start();
 
 // Rotas de todos os usuarios
 Route::get('/', function () {
@@ -25,6 +22,8 @@ Route::get('/SignIn', function () {
     return view('login');
 });
 
-Route::match(['get', 'post'], '/Home', 'controllerUsuario@SignIn');
+Route::post('/Home', 'controllerUsuario@SignIn');
+
+Route::get('/Home', 'controllerUsuario@Sistema');
 
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');

@@ -105,7 +105,6 @@ class modelJuridico extends modelUsuario
         if($resultado->CNPJ == $CNPJ && $resultado->Senha == $SENHA){
             $this->setSenha($resultado->Senha);
             $this->setEmail($resultado->Email);
-            $_SESSION['autentic'] = '2';
             return $resultado;
         }
         else{

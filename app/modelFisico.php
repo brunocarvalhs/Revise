@@ -6,7 +6,6 @@ use App\modelUsuario;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-//session_start();
 
 class modelFisico extends modelUsuario
 {
@@ -114,7 +113,6 @@ class modelFisico extends modelUsuario
             $this->setNomeFisico($resultado->Nome);
             $this->setCPF($resultado->CPF);
             $this->setDataNascimento($resultado->Nascimento);
-            $_SESSION['autentic'] = '1';
             return $resultado;
         }
         else{
