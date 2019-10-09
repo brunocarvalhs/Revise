@@ -87,11 +87,11 @@ $peças = 2;
                                     </div>
                                     <div class="sidebar-header">
                                         <div class="user-pic">
-                                            <img class="img-responsive img-rounded" src="{{<?php echo $FotoDePerfil ?>}}" alt="User picture">
+                                            <img class="img-responsive img-rounded" src="<?php echo $FotoDePerfil ?>" alt="User picture">
                                         </div>
                                         <div class="user-info">
                                             <span class="user-name">
-                                                <strong>{{ $Dados->Nome }}</strong>
+                                                <strong>{{ $nome }}</strong>
                                             </span>
                                             <span class="user-role">
                                                 <?php echo $placa ?></span>
