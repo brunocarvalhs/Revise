@@ -1,6 +1,6 @@
 
 function signIn() {
-  window.location.href = './SignIn';
+  window.location.href = '/public/SignIn';
 }
 function signUp() {
 
@@ -30,11 +30,11 @@ function signUp() {
       switch (value) {
 
         case "juridico":
-          window.location.href = './cadastro/juridico';
+          window.location.href = '/public/cadastro/juridico';
           break;
 
         case "fisico":
-          window.location.href = './cadastro/fisico';
+          window.location.href = '/public/cadastro/fisico';
           break;
 
       }

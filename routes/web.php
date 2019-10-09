@@ -36,3 +36,4 @@ Route::get('/SignIn', function () {
 Route::post('/SignIn', 'controllerUsuario@SignIn');
 
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
+

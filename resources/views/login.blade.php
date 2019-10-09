@@ -5,10 +5,10 @@ session_start();
 <html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="img/logo.ico" />
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/login.css">
-    <link rel="stylesheet" type="text/css" href="css/sistema.css">
+    <link rel="shortcut icon" href="{{asset('img/logo.ico')}}" />
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/sistema.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Revise - Login</title>
@@ -25,7 +25,7 @@ session_start();
                             @csrf
                             <div class="row formularioLogin">
                                 <div class="logoRevise">
-                                    <img src="img/logo.png" width="200" alt="Revise">
+                                    <img src="{{asset('img/logo.png')}}" width="200" alt="Revise">
                                 </div>
                                 <div class="col-12 inputLogin">
                                     <div class="label-float">
@@ -80,7 +80,7 @@ session_start();
                                     </button>
                                 </div>
                                 <div class="col-12 linkEsqueci">
-                                    <a href="/index.html">
+                                    <a href="{{url('/')}}">
                                         <label>
                                             Voltar
                                         </label>

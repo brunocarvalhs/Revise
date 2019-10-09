@@ -2,8 +2,6 @@
 
 @section('titulo', 'Cadastro')
 
-@section('menu_home','active')
-
 @section('conteudo')
 <section>
     <div class=" backgroundBlackLight espaco">
