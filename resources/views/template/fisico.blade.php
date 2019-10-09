@@ -163,7 +163,7 @@
         </div>
     </div>
 </body>
-<script src="{{asset('js/jquery.min.js')}}" type="text/javascript" async="true" defer></script>
+<script src='js/jquery.min.js' type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/jquery.mask.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/popper.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript" async="true" defer></script>
