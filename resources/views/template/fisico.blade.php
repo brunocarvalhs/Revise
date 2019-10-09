@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/sistema.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
+    @yield('style')
     <title>Revise - @yield('titulo')</title>
 </head>
 
@@ -172,4 +173,5 @@
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/progressbar.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sistema.js')}}" type="text/javascript" async="true" defer></script>
+@yield('script')
 </html>

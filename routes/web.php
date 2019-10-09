@@ -29,7 +29,17 @@ Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
 
 Route::get('/Home', function () {
     if(( (!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])) )){
-        return view('Fisico\Perfil');
+        switch($_SESSION['autentic']){
+            case '':
+                return view('Fisico\Perfil');
+            break;
+            case '':
+                return view('Juridico\Perfil');
+            break;
+            default:
+                return back();
+            break;
+        }
     }
     else{
         return back();

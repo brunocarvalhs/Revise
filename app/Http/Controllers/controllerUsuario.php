@@ -15,19 +15,10 @@ class controllerUsuario extends Controller
         $senha = $request->senha;
 
         if (strlen($login) === 14) {
-            if($modelJuridico->login($login,$senha)){
-                return redirect('/');
-            }
-            else{
-                return back();
-            }
+            $modelJuridico->login($login,$senha);
+            return redirect('')->view('Juridico\Perfil');
         } else if (strlen($login) === 11) {
-            if($modelFisico->Login($login, $senha)){
-                return redirect('/Home')->view('Fisico\Perfil');
-            }
-            else{
-                return back();
-            }
+            $modelFisico->Login($login, $senha);
         } else {
             return back();
         }
