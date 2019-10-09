@@ -5,6 +5,7 @@ namespace App;
 use App\modelUsuario;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class modelFisico extends modelUsuario
 {
@@ -112,6 +113,7 @@ class modelFisico extends modelUsuario
             $this->setNomeFisico($resultado->Nome);
             $this->setCPF($resultado->CPF);
             $this->setDataNascimento($resultado->Nascimento);
+            Auth::login($resultado);
             return true;
         }
         else{
