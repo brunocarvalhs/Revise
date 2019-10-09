@@ -30,11 +30,11 @@ function signUp() {
       switch (value) {
 
         case "juridico":
-          window.location.href = './cadastro_juridico.php';
+          window.location.href = './cadastro/juridico';
           break;
 
         case "fisico":
-          window.location.href = './cadastro.php';
+          window.location.href = './cadastro/fisico';
           break;
 
       }

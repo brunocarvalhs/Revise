@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
-        <script src="js/jquery.min.js" type="text/javascript" async="true" defer></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -118,6 +117,7 @@
         </div>
     </footer>
 </body>
+<script src="js/jquery.min.js" type="text/javascript" async="true" defer></script>
 <script src="js/popper.min.js" type="text/javascript" async="true" defer></script>
 <script src="js/bootstrap.min.js" type="text/javascript" async="true" defer></script>
 <script src="js/wow.js" type="text/javascript" async="true" defer></script>
