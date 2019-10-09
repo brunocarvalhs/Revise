@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Controller;
+
 session_start();
 
 // Rotas de todos os usuarios
@@ -23,26 +25,6 @@ Route::get('/SignIn', function () {
     return view('login');
 });
 
-Route::post('/Home', 'controllerUsuario@SignIn');
+Route::match(['get', 'post'], '/Home', 'controllerUsuario@SignIn');
 
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
-
-Route::get('/Home', function () {
-    if(( (!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])) )){
-        switch($_SESSION['autentic']){
-            case '1':
-                return view('Fisico\Perfil');
-            break;
-            case '2':
-                return view('Juridico\Perfil');
-            break;
-            default:
-                return back();
-            break;
-        }
-    }
-    else{
-        return back();
-    }
-});
-

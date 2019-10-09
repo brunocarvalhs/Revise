@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class controllerUsuario extends Controller
 {
+
     public function SignIn(Request $request, modelFisico $modelFisico, modelJuridico $modelJuridico)
     {
 
@@ -17,13 +18,13 @@ class controllerUsuario extends Controller
         if (strlen($login) === 14) {
             $result = $modelJuridico->login($login, $senha);
             if ($result != false)
-                return view('Juridico\Perfil', ['dados' => $result]);
+                return view('Juridico\Perfil', ['dados' => $modelJuridico]);
             else
                 return back();
         } else if (strlen($login) === 11) {
             $result = $modelFisico->Login($login, $senha);
             if ($result != false)
-                return view('Fisico\Perfil', ['dados' => $result]);
+                return view('Fisico\Perfil', ['dados' => $modelFisico]);
             else
                 return back();
         } else {
@@ -58,4 +59,6 @@ class controllerUsuario extends Controller
                 break;
         }
     }
+
+
 }

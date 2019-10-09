@@ -82,7 +82,7 @@
                                         </div>
                                         <div class="user-info">
                                             <span class="user-name">
-                                            <strong>{{$dados->Nome}}</strong>
+                                            <strong>{{$dados->getNomeFisico()}}</strong>
                                             </span>
                                             <span class="user-role">
 
