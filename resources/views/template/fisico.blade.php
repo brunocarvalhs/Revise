@@ -173,7 +173,6 @@
         </div>
     </div>
 </body>
-@yield('script')
 <script src="/vendor/components/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -183,6 +182,7 @@
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
+@yield('script')
 <script>
     function Sair() {
         swal({
@@ -195,5 +195,4 @@
         });
     }
 </script>
-
 </html>
