@@ -117,59 +117,63 @@ class modelJuridico extends modelUsuario
     public function CadastroUsuarioJuridico($CNPJ, Request $request)
     {
         try {
-            $pesquisa = DB::table('tb_usuario')
-                ->join('tb_usuario_juridico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_juridico.cd_usuario')
-                ->where('tb_usuario_juridico.cd_cnpj', '=', $CNPJ, 'or', 'tb_usuario.nm_email', '=', $request->campoEmail)
-                ->exists();
+            if ($request->campoSenha == $request->campoConfirmaSenha) {
+                $pesquisa = DB::table('tb_usuario')
+                    ->join('tb_usuario_juridico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_juridico.cd_usuario')
+                    ->where('tb_usuario_juridico.cd_cnpj', '=', $CNPJ, 'or', 'tb_usuario.nm_email', '=', $request->campoEmail)
+                    ->exists();
 
-            if (!($pesquisa)) {
-                $auto_usuario = DB::table('tb_usuario')->count() + 1;
-                $auto_juridico = DB::table('tb_usuario_juridico')->count() + 1;
+                if (!($pesquisa)) {
+                    $auto_usuario = DB::table('tb_usuario')->count() + 1;
+                    $auto_juridico = DB::table('tb_usuario_juridico')->count() + 1;
 
-                $Cidade = DB::table('tb_cidade')->select('cd_cidade as Codigo')->where('nm_cidade', '=', $request->txtCidade)->first();
+                    $Cidade = DB::table('tb_cidade')->select('cd_cidade as Codigo')->where('nm_cidade', '=', $request->txtCidade)->first();
 
-                $PesquisaBairro = DB::table('tb_bairro')->select('cd_bairro as Codigo')->where('nm_bairro', '=', $request->txtBairro, 'and', 'cd_cidade', '=', $Cidade)->exists();
-                if ($PesquisaBairro) {
-                    $Bairro = DB::table('tb_bairro')->select('cd_bairro as Bairro')->where('nm_bairro', '=', $request->txtBairro, 'and', 'cd_cidade', '=', $Cidade)->first();
-                    $Bairro = $Bairro->Bairro;
+                    $PesquisaBairro = DB::table('tb_bairro')->select('cd_bairro as Codigo')->where('nm_bairro', '=', $request->txtBairro, 'and', 'cd_cidade', '=', $Cidade)->exists();
+                    if ($PesquisaBairro) {
+                        $Bairro = DB::table('tb_bairro')->select('cd_bairro as Bairro')->where('nm_bairro', '=', $request->txtBairro, 'and', 'cd_cidade', '=', $Cidade)->first();
+                        $Bairro = $Bairro->Bairro;
+                    } else {
+                        $Bairro = DB::table('tb_bairro')->count() + 1;
+                    }
+
+                    $Logradouro = DB::table('tb_logradouro')->count() + 1;
+
+                    DB::table('tb_usuario')->insert(
+                        [
+                            'cd_usuario' => $auto_usuario,
+                            'nm_email' => $request->campoEmail,
+                            'cd_senha' => $request->campoSenha,
+                            'cd_tipo_usuario' => 2
+                        ]
+                    );
+                    DB::table('tb_usuario_juridico')->insert(
+                        [
+                            'cd_usuario_juridico' => $auto_juridico,
+                            'nm_nome_fantasia' => $request->nomeFantasia,
+                            'nm_razao_social' => $request->razaoSocial,
+                            'cd_cnpj' => $CNPJ,
+                            'cd_usuario' => $auto_usuario
+                        ]
+                    );
+
+                    DB::table('tb_logradouro')->insert(
+                        [
+                            'cd_logradouro' => $Logradouro,
+                            'nm_logradouro' => $request->txtRua,
+                            'cd_usuario_juridico' => $auto_juridico,
+                            'cd_bairro' => $Bairro
+                        ]
+                    );
+                    return json_encode(['Status' => true, 'Mensagem' => 'Cadastro realizado com sucesso']);
                 } else {
-                    $Bairro = DB::table('tb_bairro')->count() + 1;
+                    return json_encode(['Status' => false, 'Mensagem' => 'Usuario já cadastrado']);
                 }
-
-                $Logradouro = DB::table('tb_logradouro')->count() + 1;
-
-                DB::table('tb_usuario')->insert(
-                    [
-                        'cd_usuario' => $auto_usuario,
-                        'nm_email' => $request->campoEmail,
-                        'cd_senha' => $request->campoSenha,
-                        'cd_tipo_usuario' => 2
-                    ]
-                );
-                DB::table('tb_usuario_juridico')->insert(
-                    [
-                        'cd_usuario_juridico' => $auto_juridico,
-                        'nm_nome_fantasia' => $request->nomeFantasia,
-                        'nm_razao_social' => $request->razaoSocial,
-                        'cd_cnpj' => $CNPJ,
-                        'cd_usuario' => $auto_usuario
-                    ]
-                );
-
-                DB::table('tb_logradouro')->insert(
-                    [
-                        'cd_logradouro' => $Logradouro,
-                        'nm_logradouro' => $request->txtRua,
-                        'cd_usuario_juridico' => $auto_juridico,
-                        'cd_bairro' => $Bairro
-                    ]
-                );
-                return json_encode(['Status' => true,'Mensagem' => 'Cadastro realizado com sucesso']);
             } else {
-                return json_encode(['Status' => false,'Mensagem' => 'Usuario já cadastrado']);
+                return json_encode(['Status' => false, 'Mensagem' => 'Senhas digitatas são diferentes, tente novamente!']);
             }
         } catch (Exception $e) {
-            return json_encode(['Status' => false,'Mensagem' => 'Erro ao cadastrar.']);
+            return json_encode(['Status' => false, 'Mensagem' => 'Erro ao cadastrar.']);
         }
     }
 }
