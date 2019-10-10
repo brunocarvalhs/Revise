@@ -48,12 +48,12 @@
                             <!-- CPF -->
                             <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                 <label for="exampleFormControlInput1">CPF</label>
-                                <input type="text" class="form-control" maxlength="14" id="txtcpf" name="txtcpf" placeholder="XXX.XXX.XXX-XX">
+                                <input type="text" class="form-control" maxlength="14" id="txtcpf" name="txtcpf" placeholder="XXX.XXX.XXX-XX" data-mask="000.000.000-00">
                             </div>
                             <!-- Data de nascimento -->
                             <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                 <label for="exampleFormControlInput1">Data de nascimento</label>
-                                <input type="date" class="form-control" id="txtNascimento" name="txtNascimento" placeholder="DIA/MÊS/ANO">
+                                <input type="date" class="form-control" id="txtNascimento" name="txtNascimento" placeholder="DIA/MÊS/ANO" max="???" min="???" >
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,14 @@
+var data = new Date();
+
+var dd = data.getDate();
+var mm = data.getMonth() + 1; //January is 0!
+var yy = data.getFullYear();
+
 $(document).ready(function(){
+
+    var max = (yy - 18) + '-' + mm + '-' + dd;
+    var min = (yy - 65) + '-' + mm + '-' + dd;
+
     $("#txtnome").change(function(){
         document.getElementById("txtnome").setAttribute('class', "form-control");
     });
@@ -23,6 +33,10 @@ $(document).ready(function(){
 
     });
 
+    $('#txtNascimento').attr({
+        "max" : max,
+        "min" : min
+     });
   });
 function ValidarCadastroFisico()
 {
