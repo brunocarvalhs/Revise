@@ -116,6 +116,6 @@ class controllerUsuario extends Controller
     public function SignOut()
     {
         session_destroy();
-        return view('login');
+        return redirect('/SignIn');
     }
 }
