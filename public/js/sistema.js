@@ -72,7 +72,7 @@ function infoKm() {
                   text: "Ok",
                   className: "swal-button--style",
                   value: "ok",
-                  
+
                 }
               })
 
@@ -89,7 +89,7 @@ function infoKm() {
 
 
             }
-           
+
             else {
               alert('Preencha o campo somente com números');
               window.location.reload();
@@ -103,7 +103,7 @@ function infoKm() {
             icon: "info",
             closeOnClickOutside: false,
             closeOnEsc: false,
-            text: "Para usar a função de captar a quilometragem com o sensor Obd2, baixe o App Revise em seu dispositivo móvel"+ 
+            text: "Para usar a função de captar a quilometragem com o sensor Obd2, baixe o App Revise em seu dispositivo móvel"+
            " e siga os passos realizar o escaneamento.",
             button:
             {
@@ -111,8 +111,8 @@ function infoKm() {
               className: "swal-button--style",
             }
           })
-          .then((value) => {     
-            window.location.reload();     
+          .then((value) => {
+            window.location.reload();
           })
         }
       }

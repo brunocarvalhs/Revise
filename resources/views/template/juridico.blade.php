@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,18 +38,21 @@
                                 <a class="nav-link h4">Menu</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{ ('/Home') }}">Início</a>
+                                <a class="nav-link" href="{{ url('/Home') }}">Início</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ ('/Home') }}">Perfil</a>
+                                <a class="nav-link" href="{{ url('/Home/Perfil') }}">Perfil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ ('/Home') }}">Anúncios</a>
+                                <a class="nav-link" href="{{ url('/Home/Anuncio') }}">Anúncios</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ ('/Home') }}">Índice de Acesso</a>
+                                <a class="nav-link" href="{{ url('/Home/Indice') }}">Índice de Acesso</a>
                             </li>
                         </ul>
+                        <div class="form-inline my-2 my-lg-0">
+                            <button class="btn btn-outline-danger my-2 my-sm-0" onclick="Sair()" type="button">Sair</button>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -76,22 +80,22 @@
                                     </div>
 
                                     <div class="sidebar-header">
-                                            <div class="user-pic">
-                                                <img class="img-responsive img-rounded" src="img/user.jpg" alt="User picture">
-                                            </div>
-                                            <div class="user-info">
-                                                <br>
-                                                <span class="user-name">
-                                                <strong>{{ $dados->Fantasia }}</strong>
-                                                </span>
-                                                <span class="user-role">
-                                                    {{ $dados->CNPJ }}
-                                                </span>
-                                                <span class="user-role">
-
-                                                </span>
-                                            </div>
+                                        <div class="user-pic">
+                                            <img class="img-responsive img-rounded" src="img/user.jpg" alt="User picture">
                                         </div>
+                                        <div class="user-info">
+                                            <br>
+                                            <span class="user-name">
+                                                <strong>{{ $dados->Fantasia }}</strong>
+                                            </span>
+                                            <span class="user-role">
+                                                {{ $dados->CNPJ }}
+                                            </span>
+                                            <span class="user-role">
+
+                                            </span>
+                                        </div>
+                                    </div>
                                     <!-- sidebar-search  -->
                                     <div class="sidebar-menu">
                                         <ul>
@@ -131,7 +135,13 @@
                                 </div>
                                 <!-- sidebar-content  -->
                                 <div class="sidebar-footer rodapeMenu bg-dark">
-                                    <div class="col-9"></div>
+                                    <div class="col-9">
+                                        <button class="btn btn-dark" type="button" onclick="Sair()">
+                                            <svg id="i-signout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                <path d="M28 16 L8 16 M20 8 L28 16 20 24 M11 28 L3 28 3 4 11 4" />
+                                            </svg>
+                                        </button>
+                                    </div>
                                     <div class="col-2">
                                         <div class="dropdown">
                                             <button class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -168,4 +178,16 @@
 <script src="{{ asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 @yield('script')
+<script>
+function Sair() {
+    swal({
+        icon: "warning",
+        title: "Confirmação",
+        text: "Deseja sair do sistema?",
+        buttons: [true, "Sim, sair."],
+    }).then(()=>{
+        window.location.href = "{{ route('sair') }}";
+    });
+}
+</script>
 </html>

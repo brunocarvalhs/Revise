@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Revise - @yield('titulo')</title>
-        <link rel="shortcut icon" href="{{asset('img/logo.ico')}}                     "/>
-        <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}   ">
-        <link rel="stylesheet" type="text/css" href="{{asset('css/sistema.css')}}     ">
-        <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}} ">
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}       ">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Revise - @yield('titulo')</title>
+    <link rel="shortcut icon" href="{{asset('img/logo.ico')}}                     " />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}   ">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/sistema.css')}}     ">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}} ">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}       ">
+</head>
+
 <body>
     <!-- Menu -->
     <header>
@@ -22,9 +24,7 @@
                     <img src="{{asset('img/logo.png')}}" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Links do menu -->
@@ -39,16 +39,14 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown @yield('menu_aplicativo')">
-                            <a class="nav-link dropdown-toggle" href="{{ url('/aplicativo') }}" id="empresaEmpresa" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
+                            <a class="nav-link dropdown-toggle" href="{{ url('/aplicativo') }}" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aplicativo</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item bg-light" href="{{ url('/aplicativo') }}">Sobre o Aplicativo Revise</a>
                                 <a class="dropdown-item bg-light" href="{{ url('/aplicativo#suporte') }}">Suporte</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown @yield('menu_empresa')">
-                            <a class="nav-link dropdown-toggle" href="{{ url('/sobre') }}" id="empresaEmpresa" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
+                            <a class="nav-link dropdown-toggle" href="{{ url('/sobre') }}" id="empresaEmpresa" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Empresa</a>
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item bg-light" href="{{ url('/sobre') }}">Quem Somos?</a>
 
@@ -57,10 +55,8 @@
                         </li>
                     </ul>
                     <div class="form-inline my-2 my-lg-0">
-                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signUp()"
-                            type="button">Cadastar</button>
-                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signIn()"
-                            type="button">Acessar</button>
+                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signUp()" type="button">Cadastar</button>
+                        <button class="btn btn-outline-warning my-2 my-sm-0 botaoLogin" onclick="signIn()" type="button">Acessar</button>
                     </div>
                 </div>
             </div>
@@ -127,4 +123,5 @@
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 @yield('script')
 @yield('mensagem')
+
 </html>
