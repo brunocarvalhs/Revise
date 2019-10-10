@@ -10,19 +10,19 @@ class controllerFisico extends Controller
     public function RotasFisico($tipo){
         switch($tipo){
             case 'Perfil':{
-                $this->PagePerfil();
+                return 'Fisico\Perfil';
                 break;
             }
             case 'Notificacao':{
-                $this->PageNotificacao();
+                return 'Fisico\Notificacao';
                 break;
             }
             case 'Veiculos':{
-                $this->PageVeiculos();
+                return 'Fisico\Veiculo';
                 break;
             }
             case 'Anuncio':{
-                $this->PageAnuncio();
+                return 'Fisico\Anuncio';
                 break;
             }
             default:{
@@ -31,20 +31,5 @@ class controllerFisico extends Controller
         }
     }
 
-    public function PagePerfil(){
-        return view('Fisico\Perfil');
-    }
-
-    public function PageNotificacao(){
-        return view('Fisico\Notificacao');
-    }
-
-    public function PageVeiculos(){
-        return view('Fisico\Veiculo');
-    }
-
-    public function PageAnuncio(){
-        return view('Fisico\Anuncio');
-    }
 
 }

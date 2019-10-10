@@ -91,10 +91,10 @@ class controllerUsuario extends Controller
         if(( (!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])) )){
             switch($_SESSION['autentic']){
                 case '1':
-                    $controllerFisico->RotasFisico($request->tipo);
+                    return view($controllerFisico->RotasFisico($request->tipo),['dados' => json_decode($_SESSION['Dados'])]);
                 break;
                 case '2':
-                    $controllerJuridico->RotasJuridico($request->tipo);
+                    return view($controllerJuridico->RotasJuridico($request->tipo),['dados' => json_decode($_SESSION['Dados'])]);
                 break;
                 default:
                     return back();

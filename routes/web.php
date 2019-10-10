@@ -28,4 +28,4 @@ Route::get('/Home', 'controllerUsuario@Sistema');
 
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
 
-Route::get('/Home/{Tipo}', 'controllerUsuario@RotasSistema');
+Route::get('/Home/{tipo}', 'controllerUsuario@RotasSistema');
