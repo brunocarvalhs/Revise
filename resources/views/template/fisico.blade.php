@@ -111,7 +111,7 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="{{ url('/Home') }}">
+                                                <a href="{{ url('/Home/Notificacao') }}">
                                                     <i class="fa fa-wrench" aria-hidden="true"></i>
                                                     <span>Notificações</span>
                                                     <span class="badge badge-pill badge-danger">

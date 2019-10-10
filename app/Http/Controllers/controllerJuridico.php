@@ -10,33 +10,21 @@ class controllerJuridico extends Controller
     public function RotasJuridico($tipo){
         switch($tipo){
             case 'Perfil':{
-                $this->PagePerfil();
+                return 'Juridico\Perfil';
                 break;
             }
             case 'Indice':{
-                $this->PageIndice();
+                return 'Juridico\Indice';
                 break;
             }
             case 'Anuncio':{
-                $this->PageAnuncio();
+                return 'Juridico\Anuncio';
                 break;
             }
             default:{
                 return back();
             }
         }
-    }
-
-    public function PagePerfil(){
-        return view('Juridico\Perfil');
-    }
-
-    public function PageIndice(){
-        return view('Juridico\Indice');
-    }
-
-    public function PageAnuncio(){
-        return view('Juridico\Anuncio');
     }
 
 }
