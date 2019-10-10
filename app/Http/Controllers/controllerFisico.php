@@ -33,6 +33,7 @@ class controllerFisico extends Controller
 
     public function Cadastro(Request $request,controllerUsuario $controllerUsuario, modelFisico $modelFisico){
         $cadastro = $modelFisico->CadastrarUsuarioFisico($controllerUsuario->TratamentoLogin($request->txtcpf),$request);
-        return view('Fisico',['Cadastro' => $cadastro]);
+        $cadastro = json_decode($cadastro);
+        return redirect()->back()->with('Cadastro', $cadastro);
     }
 }

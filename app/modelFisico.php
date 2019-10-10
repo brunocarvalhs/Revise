@@ -127,12 +127,12 @@ class modelFisico extends modelUsuario
 
     public function CadastrarUsuarioFisico($CPF, Request $request)
     {
+        try {
         $resultado = DB::table('tb_usuario_fisico')
             ->join('tb_usuario', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
             ->where('tb_usuario_fisico.cd_cpf', '=', $CPF, 'or', 'tb_usuario.nm_email', '=', $request->txtemail)
             ->exists();
         if (!($resultado)) {
-            try {
                 $auto_usuario = DB::table('tb_usuario')->count() + 1;
                 $auto_usuario_fisico = DB::table('tb_usuario_fisico')->count() + 1;
                 $auto_controle_plano = DB::table('tb_controle_plano')->count() + 1;
@@ -160,18 +160,12 @@ class modelFisico extends modelUsuario
                         'cd_plano' => $request->txtplano,
                     ]
                 );
-                $resultado = DB::table('tb_usuario_fisico')
-                    ->join('tb_usuario', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
-                    ->where('tb_usuario_fisico.cd_cpf', '=', $CPF, 'and', 'tb_usuario.nm_email', '=', $request->txtemail)
-                    ->exists();
-                if ($resultado) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } catch (Exception $e) {
-                return false;
+                return json_encode(['Status' => true,'Mensagem' => 'Cadastro realizado com sucesso']);
+            } else {
+                return json_encode(['Status' => false,'Mensagem' => 'Usuario já cadastrado']);
             }
+        } catch (Exception $e) {
+            return json_encode(['Status' => false,'Mensagem' => 'Erro ao cadastrar.']);
         }
     }
 }
