@@ -32,6 +32,6 @@ Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
 
 Route::get('/Home/{tipo}', 'controllerUsuario@RotasSistema');
 
-Route::get('/CadastroFisico','controllerFisico@Cadastro');
+Route::post('/CadastroFisico','controllerFisico@Cadastro');
 
-Route::get('/CadastroJuridico','controllerJuridico@Cadastro');
+Route::post('/CadastroJuridico','controllerJuridico@Cadastro');

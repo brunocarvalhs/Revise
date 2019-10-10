@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\modelJuridico;
 use Illuminate\Http\Request;
+use App\Http\Controllers\controllerUsuario;
 
-class controllerJuridico extends Controller
+class controllerJuridico extends controllerUsuario
 {
     public function RotasJuridico($tipo){
         switch($tipo){

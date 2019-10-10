@@ -18,7 +18,7 @@
     <!--Inicio dos Forms-->
     <div class="backgroundBlackLight">
         <!--Form dados pessoais-->
-        <form name="CadastroFisico" method="POST" action="./Controllers/controllerCadastroFisico.php" onSubmit="return ValidarCadastroFisico()">
+        <form name="CadastroFisico" method="POST" action="{{ url('/CadastroFisico') }}" onSubmit="return ValidarCadastroFisico()">
             @csrf
             <div class="row">
                 <div class="col-12">
@@ -71,58 +71,6 @@
                     <div class="form-group inputCadastro">
                         <label for="campoSenha">Confirmar senha</label>
                         <input type="password" id="txtcsenha" name="txtcsenha" maxlength="20" class="form-control" aria-describedby="descricaoSenha">
-                    </div>
-                </div>
-            </div>
-            <!--Form dados veiculo-->
-            <br>
-            <div class="row">
-                <div class="col-12">
-                    <h4>Dados do veículo</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <fieldset>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="disabledTextInput">Placa</label>
-                                    <input type="text" id="txtplaca" maxlength="8" name="txtplaca" class="form-control" placeholder="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <button type="button" onclick="consultar();" id="buscaPlaca" class="btn btn-warning">Pesquisar Placa</button>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <div class="form-group">
-                        <label for="disabledTextInput">Marca/Modelo</label>
-                        <input type="text" readonly="true" class="form-control" id="txtMarca" name="txtMarca" placeholder="">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="anoVeiculo">Ano</label>
-                            <input type="text" readonly="true" class="form-control" id="txtAno" name="txtAno" placeholder="">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="corVeiculo">Cor</label>
-                            <input type="text" readonly="true" class="form-control" id="txtCor" name="txtCor" placeholder="">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="col-7">
-                            <label for="cidadeVeiculo">Cidade</label>
-                            <input type="text" readonly="true" class="form-control" id="txtCidade" name="txtCidade" placeholder="Cidade">
-                        </div>
-                        <div class="col">
-                            <label for="estadoVeiculo">Estado</label>
-                            <input type="text" readonly="true" class="form-control" id="txtEstado" name="txtEstado" placeholder="Estado">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -257,4 +205,17 @@
 <script src="{{ asset('js/validation/CadastroFisico.js')}}"></script>
 @endsection
 
+@section('mensagem')
+@php
+    try {
+        if($Cadastro){
+            echo '<script>swal("Sucesso", "Cadastro realizado com sucesso", "success");</script>';
+        }
+        else{
+            echo '<script>swal("Erro", "Possivelmente já deve ter uma contra", "error");</script>';
+        }
+    } catch (\Throwable $th) {
 
+    }
+@endphp
+@endsection

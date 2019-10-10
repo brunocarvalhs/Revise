@@ -126,5 +126,5 @@
 <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 @yield('script')
-
+@yield('mensagem')
 </html>

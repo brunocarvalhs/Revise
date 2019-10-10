@@ -31,7 +31,8 @@ class controllerFisico extends Controller
         }
     }
 
-    public function Cadastro(Request $request, modelFisico $modelFisico){
-        $modelFisico->CadastrarUsuarioFisico($request);
+    public function Cadastro(Request $request,controllerUsuario $controllerUsuario, modelFisico $modelFisico){
+        $cadastro = $modelFisico->CadastrarUsuarioFisico($controllerUsuario->TratamentoLogin($request->txtcpf),$request);
+        return view('Fisico',['Cadastro' => $cadastro]);
     }
 }

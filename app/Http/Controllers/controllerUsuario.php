@@ -7,6 +7,7 @@ use App\modelFisico;
 use App\modelJuridico;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 session_start();
 
