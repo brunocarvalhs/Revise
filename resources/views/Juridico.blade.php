@@ -57,7 +57,7 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="disabledTextInput">CEP</label>
-                                                <input type="text" id="txtCEP" maxlength="8" name="txtCEP" class="form-control" placeholder="">
+                                                <input type="text" id="txtCEP" maxlength="8" name="txtCEP" class="form-control" data-mask="00000-000" placeholder="">
                                             </div>
                                         </div>
                                     </div>
@@ -108,7 +108,7 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                                 <!-- CNPJ -->
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1">CNPJ</label>
-                                    <input type="text" class="form-control" name="txtcnpj" id="txtcnpj" placeholder="XX.XXX.XXX/YYYY-ZZ">
+                                    <input type="text" class="form-control" data-mask="00.000.000/0000-00" name="txtcnpj" id="txtcnpj" placeholder="XX.XXX.XXX/YYYY-ZZ">
                                 </div>
 
                             </div>

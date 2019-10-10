@@ -159,7 +159,6 @@
     </div>
 </body>
 <script src="{{asset('js/jquery.min.js')}}" type="text/javascript" async="true" defer></script>
-<script src="{{asset('js/jquery.mask.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/popper.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
@@ -167,5 +166,6 @@
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{ asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
 <script src="{{ asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 @yield('script')
 </html>
