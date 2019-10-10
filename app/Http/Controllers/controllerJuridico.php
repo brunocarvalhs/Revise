@@ -29,6 +29,7 @@ class controllerJuridico extends Controller
 
     public function Cadastro(Request $request,controllerUsuario $controllerUsuario ,modelJuridico $modelJuridico){
         $cadastro = $modelJuridico->CadastroUsuarioJuridico($controllerUsuario->TratamentoLogin($request->txtcnpj), $request);
-        return view('Juridico',['Cadastro' => $cadastro]);
+        $cadastro = json_decode($cadastro);
+        return redirect()->back()->with('Cadastro', $cadastro);
     }
 }

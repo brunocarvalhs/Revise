@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}} ">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}       ">
+    <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 </head>
 
 <body>
@@ -113,16 +114,16 @@
             </div>
         </div>
     </footer>
-    <div id="notifications"></div>
+    <div id="notifications">
+        @yield('mensagem')
+    </div>
 </body>
 <script src="/vendor/components/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
-<script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 @yield('script')
-@yield('mensagem')
 
 </html>

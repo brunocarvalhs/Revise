@@ -154,16 +154,26 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
 @endsection
 
 @section('mensagem')
-@php
-    try {
-        if($Cadastro){
-            echo '<script>swal("Sucesso", "Cadastro realizado com sucesso", "success");</script>';
+@if(session()->has('Cadastro'))
+    @php
+        if(session()->get('Cadastro')->Status){
+            echo '<script>
+                    swal("SUCESSO","'.session()->get('Cadastro')->Mensagem.'", {
+                    icon: "success",
+                    buttons: false,
+                    timer: 3000,
+                    });
+                    </script>';
         }
         else{
-            echo '<script>swal("Erro", "Possivelmente já deve ter uma contra", "error");</script>';
+            echo '<script>
+                    swal("ERRO","'.session()->get('Cadastro')->Mensagem.'", {
+                    icon: "error",
+                    buttons: false,
+                    timer: 3000,
+                    });
+                </script>';
         }
-    } catch (Exception $e) {
-
-    }
-@endphp
+    @endphp
+@endif
 @endsection

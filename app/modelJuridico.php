@@ -164,14 +164,12 @@ class modelJuridico extends modelUsuario
                         'cd_bairro' => $Bairro
                     ]
                 );
-
-                return true;
-
+                return json_encode(['Status' => true,'Mensagem' => 'Cadastro realizado com sucesso']);
             } else {
-                return false;
+                return json_encode(['Status' => false,'Mensagem' => 'Usuario já cadastrado']);
             }
         } catch (Exception $e) {
-            return false;
+            return json_encode(['Status' => false,'Mensagem' => 'Erro ao cadastrar.']);
         }
     }
 }
