@@ -111,4 +111,8 @@ class modelJuridico extends modelUsuario
             return false;
         }
     }
+
+    public function CadastroUsuarioJuridico($dados){
+
+    }
 }

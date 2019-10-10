@@ -5,6 +5,7 @@ namespace App;
 use App\modelUsuario;
 use Exception;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -122,5 +123,9 @@ class modelFisico extends modelUsuario
         } catch (Exception $e) {
             return false;
         }
+    }
+
+    public function CadastrarUsuarioFisico($Dados){
+        return dd($Dados);
     }
 }

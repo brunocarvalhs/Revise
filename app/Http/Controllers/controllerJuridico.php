@@ -27,4 +27,7 @@ class controllerJuridico extends Controller
         }
     }
 
+    public function Cadastro(Request $request, modelJuridico $modelJuridico){
+        $modelJuridico->CadastroUsuarioJuridico($request);
+    }
 }

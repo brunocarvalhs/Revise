@@ -31,5 +31,7 @@ class controllerFisico extends Controller
         }
     }
 
-
+    public function Cadastro(Request $request, modelFisico $modelFisico){
+        $modelFisico->CadastrarUsuarioFisico($request);
+    }
 }
