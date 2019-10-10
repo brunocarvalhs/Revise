@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Revise - @yield('titulo')</title>
     <link rel="shortcut icon" href="{{asset('img/logo.ico')}}                     " />
-    <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.css')}}   ">
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/sistema.css')}}     ">
     <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}} ">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
@@ -114,10 +115,10 @@
     </footer>
     <div id="notifications"></div>
 </body>
-<script src="{{asset('js/jquery.min.js')}}" type="text/javascript" async="true" defer></script>
-<script src="{{asset('js/popper.min.js')}}" type="text/javascript" async="true" defer></script>
+<script src="/vendor/components/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
-<script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript" async="true" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/logo.png">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap-grid.css') }}">
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/sistema.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
@@ -168,10 +168,10 @@
         </div>
     </div>
 </body>
-<script src="{{asset('js/jquery.min.js')}}" type="text/javascript" async="true" defer></script>
-<script src="{{asset('js/popper.min.js')}}" type="text/javascript" async="true" defer></script>
+<script src="/vendor/components/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
-<script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript" async="true" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+<script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>

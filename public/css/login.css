@@ -1,18 +1,18 @@
 body{
     margin: 0px;
     background: #454545;
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: 'Archivo', sans-serif;
 }
 .divLogin{
-   
+
     border-radius: 10px;
 }
 
 .imagemLogin{
     background: url('../img/backgroundLogin.jpg');
     background-repeat: no-repeat;
-    background-size: 130%; 
+    background-size: 130%;
     background-position: center;
     background-position: -290px;
 }
@@ -66,7 +66,7 @@ input{
     position: relative;
     padding-top: 13px;
 }
-  
+
 .label-float input{
     border: 0;
     border-bottom: 2px solid lightgrey;
@@ -79,15 +79,15 @@ input{
     -webkit-appearance:none;
     border-radius: 0;
 }
-  
+
 .label-float input:focus{
     border-bottom: 2px solid #f3e410;
 }
- 
+
 .label-float input::placeholder{
     color:transparent;
 }
-  
+
 .label-float label{
     pointer-events: none;
     position: absolute;
@@ -98,7 +98,7 @@ input{
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
 }
-  
+
 .label-float input:required:invalid + label{
     color: #000000;
 }
@@ -121,17 +121,17 @@ input{
         border-radius: 10px;
         background: #ffffff;
         background-repeat: no-repeat;
-        background-size: 140%; 
+        background-size: 140%;
         background-position: center;
     }
     .background{
         background-color: #ffffff;
         width: 800px;
         height: 800px;
-        border-radius: 10px; 
-    }    
+        border-radius: 10px;
+    }
 }
-  
+
  @media screen and (max-width: 600px) {
     body {
         background: #ffffff;
@@ -142,10 +142,10 @@ input{
         border-radius: 10px;
         background: #ffffff;
         background-repeat: no-repeat;
-        background-size: 140%; 
+        background-size: 140%;
         background-position: center;
     }
-   
+
 }
 
 .padding

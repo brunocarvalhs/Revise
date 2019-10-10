@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="{{asset('img/logo.ico')}}" />
-    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/sistema.css')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,7 +93,9 @@
 
     </div>
 </body>
-<script src="js/jquery.min.js"></script>
+<script src="/vendor/components/jquery/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/jquery.mask.js"></script>
 <script src="js/sweetalert.min.js"></script>
 <script src="js/index.js"></script>
