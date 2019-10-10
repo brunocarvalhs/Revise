@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use App\modelJuridico;
 use Illuminate\Http\Request;
-use App\Http\Controllers\controllerUsuario;
 
-class controllerJuridico extends controllerUsuario
+class controllerJuridico extends Controller
 {
     public function RotasJuridico($tipo){
         switch($tipo){
@@ -28,7 +27,8 @@ class controllerJuridico extends controllerUsuario
         }
     }
 
-    public function Cadastro(Request $request, modelJuridico $modelJuridico){
-        $modelJuridico->CadastroUsuarioJuridico($request);
+    public function Cadastro(Request $request,controllerUsuario $controllerUsuario ,modelJuridico $modelJuridico){
+        $cadastro = $modelJuridico->CadastroUsuarioJuridico($controllerUsuario->TratamentoLogin($request->txtcnpj), $request);
+        return view('Juridico',['Cadastro' => $cadastro]);
     }
 }
