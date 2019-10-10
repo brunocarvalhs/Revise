@@ -26,6 +26,8 @@ Route::post('/Home', 'controllerUsuario@SignIn');
 
 Route::get('/Home', 'controllerUsuario@Sistema');
 
+Route::get('/SignOut','controllerUsuario@SignOut')->name('sair');
+
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
 
 Route::get('/Home/{tipo}', 'controllerUsuario@RotasSistema');

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,7 +83,7 @@
                                         </div>
                                         <div class="user-info">
                                             <span class="user-name">
-                                            <strong>{{ $dados->Nome }}</strong>
+                                                <strong>{{ $dados->Nome }}</strong>
                                             </span>
                                             <span class="user-role">
                                                 {{ $dados->CPF }}
@@ -137,7 +138,15 @@
                                 </div>
                                 <!-- sidebar-content  -->
                                 <div class="sidebar-footer rodapeMenu bg-dark">
-                                    <div class="col-9"></div>
+                                    <div class="col-9">
+                                        <a href="{{ route('sair') }}">
+                                            <button class="btn btn-dark" type="button">
+                                                <svg id="i-signout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                    <path d="M28 16 L8 16 M20 8 L28 16 20 24 M11 28 L3 28 3 4 11 4" />
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
                                     <div class="col-2">
                                         <div class="dropdown">
                                             <button class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -173,4 +182,5 @@
 <script src="{{asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
 @yield('script')
+
 </html>
