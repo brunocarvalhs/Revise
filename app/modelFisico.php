@@ -160,6 +160,7 @@ class modelFisico extends modelUsuario
                         'cd_plano' => $request->txtplano,
                     ]
                 );
+
                 return json_encode(['Status' => true,'Mensagem' => 'Cadastro realizado com sucesso']);
             } else {
                 return json_encode(['Status' => false,'Mensagem' => 'Usuario já cadastrado']);
