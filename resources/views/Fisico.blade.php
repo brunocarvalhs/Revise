@@ -215,7 +215,7 @@
         else{
             echo '<script>swal("Erro", "Possivelmente já deve ter uma contra", "error");</script>';
         }
-    } catch (\Throwable $th) {
+    } catch (Exception $e) {
 
     }
 @endphp

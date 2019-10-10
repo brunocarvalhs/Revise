@@ -155,19 +155,15 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
 
 @section('mensagem')
 @php
-try {
-if($Cadastro){
-echo '<script>
-    swal("Sucesso", "Cadastro realizado com sucesso", "success");
-</script>';
-}
-else{
-echo '<script>
-    swal("Erro", "Possivelmente já deve ter uma contra", "error");
-</script>';
-}
-} catch (\Throwable $th) {
+    try {
+        if($Cadastro){
+            echo '<script>swal("Sucesso", "Cadastro realizado com sucesso", "success");</script>';
+        }
+        else{
+            echo '<script>swal("Erro", "Possivelmente já deve ter uma contra", "error");</script>';
+        }
+    } catch (Exception $e) {
 
-}
+    }
 @endphp
 @endsection
