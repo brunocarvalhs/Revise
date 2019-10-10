@@ -87,14 +87,14 @@ class controllerUsuario extends Controller
         }
     }
 
-    public function RotasSistema(Request $request, modelFisico $modelFisico, modelJuridico $modelJuridico){
+    public function RotasSistema(Request $request, controllerFisico $controllerFisico, controllerJuridico $controllerJuridico){
         if(( (!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])) )){
             switch($_SESSION['autentic']){
                 case '1':
-                    $modelFisico->RotasSistema($request->tipo);
+                    $controllerFisico->RotasFisico($request->tipo);
                 break;
                 case '2':
-                    $modelJuridico->RotasSistema($request->tipo);
+                    $controllerJuridico->RotasJuridico($request->tipo);
                 break;
                 default:
                     return back();

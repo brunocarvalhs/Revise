@@ -105,7 +105,7 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="{{ url('/Home') }}">
+                                                <a href="{{ url('/Home/Perfil') }}">
                                                     <i class="fa fa-user-circle" aria-hidden="true"></i>
                                                     <span>Perfil</span>
                                                 </a>
@@ -120,13 +120,13 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="{{ url('/Home') }}">
+                                                <a href="{{ url('/Home/Veiculos') }}">
                                                     <i class="fa fa-car" aria-hidden="true"></i>
                                                     <span>Veículos</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="{{ url('/Home') }}">
+                                                <a href="{{ url('/Home/Anuncio') }}">
                                                     <i class="fa fa-building" aria-hidden="true"></i>
                                                     <span>Serviços e Produtos</span>
                                                 </a>

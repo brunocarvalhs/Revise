@@ -105,13 +105,13 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="{{ url('/Home') }}">
+                                                <a href="{{ url('/Home/Perfil') }}">
                                                     <i class="fa fa-user-circle" aria-hidden="true"></i>
                                                     <span>Perfil</span>
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="{{ url('/Home') }}">
+                                                <a href="{{ url('/Home/Anuncio') }}">
                                                     <i class="fa fa-wrench" aria-hidden="true"></i>
                                                     <span>Anúncios</span>
                                                     <span class="badge badge-pill badge-danger">
@@ -120,7 +120,7 @@
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="{{ url('/Home') }}">
+                                                <a href="{{ url('/Home/Indice') }}">
                                                     <i class="fa fa-car" aria-hidden="true"></i>
                                                     <span>Indice de Acesso</span>
                                                 </a>
