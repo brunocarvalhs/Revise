@@ -27,3 +27,5 @@ Route::post('/Home', 'controllerUsuario@SignIn');
 Route::get('/Home', 'controllerUsuario@Sistema');
 
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
+
+Route::get('/Home/{Tipo}', 'controllerUsuario@RotasSistema');
