@@ -121,7 +121,7 @@
 <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script src="/node_modules/sweetalert/dist/sweetalert.min.js" type="text/javascript" async="true" defer></script>
 @yield('script')
 @yield('mensagem')
 </html>
