@@ -32,9 +32,10 @@ class SendMailUser extends Mailable
      */
     public function build()
     {
-        return $this->view('componentes.email')
-        ->with([
-            'Usuario' => $this->Usuario,
-        ]);
+        return $this->from('reviseprojeto@gmail.com')
+            ->view('componentes.email')
+            ->with([
+                'Usuario' => $this->Usuario,
+            ]);
     }
 }
