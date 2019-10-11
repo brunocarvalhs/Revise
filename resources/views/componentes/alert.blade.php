@@ -1,7 +1,7 @@
 <div>
     <script>
 
-        document.onload = function() {{{ $tipo }}()};
+    $(document).ready(function () {
 
         function Alert(){
             swal("{{ $titulo }}", "{{ $mensagem }}", {
@@ -15,5 +15,7 @@
 
         }
 
+        {{ $tipo }}();
+    }
     </script>
 </div>
