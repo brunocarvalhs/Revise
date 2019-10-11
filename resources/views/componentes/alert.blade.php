@@ -13,7 +13,7 @@
 
         }
 
-        {{ $tipo }}();
+        onload.{{ $tipo }}();
 
     </script>
 </div>
