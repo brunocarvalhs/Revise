@@ -40,4 +40,4 @@ Route::get('/Esqueci',function(){
     return view('Esqueci');
 });
 
-Route::post('/Recuperar', '');
+Route::post('/Recuperar', 'controllerUsuario@EsqueciSenha');

@@ -84,14 +84,14 @@ class modelUsuario extends Model
 
     public function Email($Email, $Assunto, $Contudo)
     {
-        $emailenviar = "seuemail@seudominio.com.br";
+        $emailenviar = "reviseprojeto@gmail.com";
         $destino = $Email;
         $assunto = $Assunto;
 
         // É necessário indicar que o formato do e-mail é html
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $headers .= 'From: $nome <$email>';
+        $headers .= 'From: Revise Projeto <'.$emailenviar.'>';
         //$headers .= "Bcc: $EmailPadrao\r\n";
 
         $arquivo = `<html>
