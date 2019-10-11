@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}} ">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}       ">
-    <link rel="stylesheet" href="/node_modules/sweetalert/typings/sweetalert.d.ts">
 </head>
 
 <body>
