@@ -1,18 +1,18 @@
-@php
-echo `<script>
-    function Alert(){
-        swal("{{ $titulo }}", "{{ $mensagem }}", {
-            icon: "{{ $icone  }}",
-            buttons: false,
-            timer: 3000,
-        });
-    }
+<?php
+    echo `<script>
+        function Alert(){
+            swal("{{ $titulo }}", "{{ $mensagem }}", {
+                icon: "{{ $icone  }}",
+                buttons: false,
+                timer: 3000,
+            });
+        }
 
-    function AlertQuestion(){
+        function AlertQuestion(){
 
-    }
+        }
 
-    {{ $tipo }}();
-</script>`
-@endphp
+        {{ $tipo }}();
+    </script>`;
+?>
 
