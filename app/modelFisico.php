@@ -173,4 +173,20 @@ class modelFisico extends modelUsuario
             return json_encode(['Status' => false, 'Mensagem' => 'Erro ao cadastrar.']);
         }
     }
+
+
+    public function EsqueciSenha($CPF){
+
+        $check = DB::table('tb_usuario_fisico')
+                    ->join('tb_usuario', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
+                    ->where('tb_usuario_fisico.cd_cpf', '=', $CPF)
+                    ->exists();
+
+        if($check){
+            $email = DB::table('tb_usuario')->select('nm_email as Email','cd_senha as Senha')->first();
+            return $email;
+        }else{
+            return false;
+        }
+    }
 }

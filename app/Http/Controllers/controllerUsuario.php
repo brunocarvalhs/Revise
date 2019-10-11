@@ -183,17 +183,24 @@ class controllerUsuario extends Controller
     /**
      *
      */
-    public function EsqueciSenha(Request $request, modelFisico $modelFisico, modelJuridico $modelJuridico, modelUsuario $modelUsuario){
+    public function EsqueciSenha(Request $request, modelJuridico $modelJuridico, modelFisico $modelFisico){
         $campo = $this->ValidarCampos($request);
         if($campo){
             $login = $this->TratamentoLogin($request->cpfcnpj);
             if(strlen($login) === 14){
                 $resultado = $modelJuridico->EsqueciSenha($login);
-                if($resultado->Status != false){
-                    $Login = $modelUsuario->Email($resultado->Email, 'Revise - Recuperar Senha', 'Sua Senha: ' . $resultado->Senha);
+                if($resultado != false){
+                    $Login = $modelJuridico->Email($resultado->Email, 'Revise - Recuperar Senha', 'Sua Senha: ' . $resultado->Senha);
+                }else{
+                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado.']);
                 }
             }else if(strlen($login) === 11){
-                $modelFisico;
+                $resultado = $modelFisico->EsqueciSenha($login);
+                if($resultado != false){
+                    $Login = $modelFisico->Email($resultado->Email, 'Revise - Recuperar Senha', 'Sua Senha: ' . $resultado->Senha);
+                }else{
+                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado.']);
+                }
             }else{
                 $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres de login invalido, preencha corretamente os campos.']);
             }
@@ -203,6 +210,5 @@ class controllerUsuario extends Controller
         $Login = json_decode($Login);
         return redirect()->back()->with('Login', $Login);
     }
-
 
 }
