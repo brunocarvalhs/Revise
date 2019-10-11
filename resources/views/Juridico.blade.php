@@ -19,7 +19,7 @@
     <!--Inicio dos Forms-->
     <div class="backgroundBlackLight">
         <!--Form dados da empresa-->
-        <form action="{{ url('/CadastroJuridico') }}" method="POST" onsubmit="return ValidarCadastroJuridico()" name="CadastroJuridico">
+        <form id="CadastroJuridico" action="{{ url('/CadastroJuridico') }}" method="POST" onSubmit="return ValidarCadastroJuridico(this)" name="CadastroJuridico">
             @csrf
             <div class="row">
                 <div class="col-12">

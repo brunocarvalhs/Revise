@@ -18,7 +18,7 @@
     <!--Inicio dos Forms-->
     <div class="backgroundBlackLight">
         <!--Form dados pessoais-->
-        <form name="CadastroFisico" method="POST" action="{{ url('/CadastroFisico') }}" onSubmit="return ValidarCadastroFisico()">
+        <form name="CadastroFisico" id="CadastroFisico" method="POST" action="{{ url('/CadastroFisico') }}" onSubmit="return ValidarCadastroFisico(this)">
             @csrf
             <div class="row">
                 <div class="col-12">
