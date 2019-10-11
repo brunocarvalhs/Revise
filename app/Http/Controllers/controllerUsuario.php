@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\modelFisico;
 use App\modelJuridico;
+use App\modelUsuario;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,6 +14,14 @@ session_start();
 
 class controllerUsuario extends Controller
 {
+
+    /**
+     * Metodo de Login
+     *
+     * @param Request $request
+     * @return View
+     * @return JSON erro
+     */
     public function SignIn(Request $request, modelFisico $modelFisico, modelJuridico $modelJuridico)
     {
 
@@ -51,6 +60,14 @@ class controllerUsuario extends Controller
         return redirect()->back()->with('Login', $Login);
     }
 
+
+
+    /**
+     * Metodo de validação de retorno do usuario
+     *
+     * @param Session $_SESSION['autentic']
+     * @return View
+     */
     public function Sistema()
     {
         try {
@@ -74,6 +91,12 @@ class controllerUsuario extends Controller
         }
     }
 
+    /**
+     * Matodo de limpa Login
+     *
+     * @param String $Login
+     * @return String $Login
+     */
     public function TratamentoLogin($Login)
     {
         $Login = trim($Login);
@@ -87,6 +110,14 @@ class controllerUsuario extends Controller
         return $Login;
     }
 
+    /**
+     * Metodo de redirecionamento
+     * para pagina de cadastro
+     *
+     * @param String $request
+     *
+     * @return View
+     */
     public function Cadastro(Request $request)
     {
         switch ($request->tipo) {
@@ -102,6 +133,9 @@ class controllerUsuario extends Controller
         }
     }
 
+    /**
+     *
+     */
     public function RotasSistema(Request $request, controllerFisico $controllerFisico, controllerJuridico $controllerJuridico)
     {
         try {
@@ -123,12 +157,18 @@ class controllerUsuario extends Controller
         }
     }
 
+    /**
+     *
+     */
     public function SignOut()
     {
         session_destroy();
         return redirect('/SignIn');
     }
 
+    /**
+     *
+     */
     public function ValidarCampos(Request $request)
     {
         $r = $request->all();
@@ -139,4 +179,30 @@ class controllerUsuario extends Controller
         }
         return true;
     }
+
+    /**
+     *
+     */
+    public function EsqueciSenha(Request $request, modelFisico $modelFisico, modelJuridico $modelJuridico, modelUsuario $modelUsuario){
+        $campo = $this->ValidarCampos($request);
+        if($campo){
+            $login = $this->TratamentoLogin($request->cpfcnpj);
+            if(strlen($login) === 14){
+                $resultado = $modelJuridico->EsqueciSenha($login);
+                if($resultado->Status != false){
+                    $Login = $modelUsuario->Email($resultado->Email, 'Revise - Recuperar Senha', 'Sua Senha: ' . $resultado->Senha);
+                }
+            }else if(strlen($login) === 11){
+                $modelFisico;
+            }else{
+                $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres de login invalido, preencha corretamente os campos.']);
+            }
+        }else{
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
+        }
+        $Login = json_decode($Login);
+        return redirect()->back()->with('Login', $Login);
+    }
+
+
 }

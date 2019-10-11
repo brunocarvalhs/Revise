@@ -35,3 +35,9 @@ Route::get('/Home/{tipo}', 'controllerUsuario@RotasSistema');
 Route::post('/CadastroFisico','controllerFisico@Cadastro');
 
 Route::post('/CadastroJuridico','controllerJuridico@Cadastro');
+
+Route::get('/Esqueci',function(){
+    return view('Esqueci');
+});
+
+Route::post('/Recuperar', '');

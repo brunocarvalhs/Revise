@@ -186,4 +186,17 @@ class modelJuridico extends modelUsuario
             return json_encode(['Status' => false, 'Mensagem' => 'Erro ao cadastrar.']);
         }
     }
+
+    public function EsqueciSenha($CNPJ){
+        $check = DB::table('tb_usuario')
+                    ->join('tb_usuario_juridico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_juridico.cd_usuario')
+                    ->where('tb_usuario_juridico.cd_cnpj', '=', $CNPJ)
+                    ->exists();
+        if($check){
+            $email = DB::table('tb_usuario')->select('nm_email as Email','cd_senha as Senha')->first();
+            return $email;
+        }else{
+            return json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado.']);
+        }
+    }
 }
