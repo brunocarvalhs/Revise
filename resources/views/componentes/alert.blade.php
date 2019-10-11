@@ -1,18 +1,11 @@
-<?php
-    echo `<script>
-        function Alert(){
-            swal("{{ $titulo }}", "{{ $mensagem }}", {
-                icon: "{{ $icone  }}",
-                buttons: false,
-                timer: 3000,
-            });
-        }
-
-        function AlertQuestion(){
-
-        }
-
-        {{ $tipo }}();
-    </script>`;
-?>
-
+<div>
+    <?php
+        echo `<script>
+        swal("{{ $titulo }}", "{{ $mensagem }}", {
+            icon: "{{ $tipo  }}",
+            buttons: false,
+            timer: 3000,
+        });
+        </script>`;
+    ?>
+</div>
