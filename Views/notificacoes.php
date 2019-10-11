@@ -60,7 +60,7 @@ $peças = 2;
                                 <a class="nav-link" href="notificacoes.php">Notificações</a>
                             </li>                       
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Veículos</a>
+                                <a class="nav-link" href="veiculos.php">Veículos</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Serviços e Produtos</a>
@@ -133,7 +133,7 @@ $peças = 2;
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="#">
+                                                <a href="veiculos.php">
                                                     <i class="fa fa-car" aria-hidden="true"></i>
                                                     <span>Veículos</span>
                                                 </a>
@@ -225,16 +225,17 @@ $peças = 2;
             }
         </style>
 </body>
-<script src="/Views/js/jquery-3.4.1.js"></script>
-<script src="/Views/js/jquery.min.js"></script>
-<script src="/Views/js/popper.min.js"></script>
-<script src="/Views/js/bootstrap.min.js"></script>
-<script src="/Views/js/wow.js"></script>
-<script src="/Views/js/sweetalert.min.js"></script>
-<script src="/Views/js/progressbar.js"></script>
-<script src="/Views/js/sistema.js"></script>
-<script src="/Views/js/jquery.mask.js"></script>
-<script src="/Views/js/API.js"></script>
-<script src="/Views/js/validation/CadastroJuridico.js"></script>
-<script src="/Views/js/cadastro.js"></script>  
+<script src="../Views/js/jquery-3.4.1.js"></script>
+<script src="../Views/js/jquery.min.js"></script>
+<script src="../Views/js/popper.min.js"></script>
+<script src="../Views/js/bootstrap.min.js"></script>
+<script src="../Views/js/wow.js"></script>
+<script src="../Views/js/sweetalert.min.js"></script>
+<script src="../Views/js/progressbar.js"></script>
+<script src="../Views/js/sistema.js"></script>
+<script src="../Views/js/jquery.mask.js"></script>
+<script src="../Views/js/API.js"></script>
+<script src="../Views/js/validation/CadastroJuridico.js"></script>
+<script src="../Views/js/cadastro.js"></script>
+<script src="../Views/js/index.js"></script>
 </html>

@@ -61,7 +61,7 @@ $peças = 2;
                             <a class="nav-link" href="notificacoes.php">Notificações</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Veículos</a>
+                            <a class="nav-link" href="veiculos.php">Veículos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Serviços e Produtos</a>
@@ -134,7 +134,7 @@ $peças = 2;
                                             </a>
                                         </li>
                                         <li class="sidebar-content">
-                                            <a href="#">
+                                            <a href="veiculos.php">
                                                 <i class="fa fa-car" aria-hidden="true"></i>
                                                 <span>Veículos</span>
                                             </a>
@@ -181,8 +181,8 @@ $peças = 2;
     <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
         <div class="row">
             <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
-            <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
-                <div class="card">
+            <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9 paddingCard">
+                <div class="card bg-dark">
                     <div class="card-body">
                          <div class="container-fluid">
                         <!--Incia conteúdo card-->
@@ -192,9 +192,9 @@ $peças = 2;
                                 <div class="input-group">
                                         <select class="custom-select" id="inputGroupSelect04" aria-label="Exemplo de select com botão addon">
                                             <option selected>Escolher...</option>
-                                            <option value="1">Um</option>
-                                            <option value="2">Dois</option>
-                                            <option value="3">Três</option>
+                                            <option value="1">Placa 1</option>
+                                            <option value="2">Placa 2</option>
+                                            <option value="3">Placa 3</option>
                                         </select>
                                         <div class="input-group-append">
                                             <button class="btn btn-danger" type="button">Excluir Veículo</button>
