@@ -3,7 +3,7 @@
         Swal.fire({
             title: '{{ $titulo }}',
             text: '{{ $mensagem }}',
-            type: '{{ $tipo  }}',
+            type: '{{ $icone  }}',
             buttons: false,
             timer: 3000,
         });

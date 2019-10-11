@@ -215,7 +215,6 @@
                 @slot('mensagem')
                     {{ session()->get('Cadastro')->Mensagem }}
                 @endslot
-                @slot('tipo','Alert')
             @endcomponent
         @else
             @component('componentes.alert')
@@ -224,7 +223,6 @@
                 @slot('mensagem')
                     {{ session()->get('Cadastro')->Mensagem }}
                 @endslot
-                @slot('tipo','Alert')
             @endcomponent
         @endif
     @endif

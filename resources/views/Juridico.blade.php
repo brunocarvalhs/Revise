@@ -162,7 +162,6 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                 @slot('mensagem')
                     {{ session()->get('Cadastro')->Mensagem }}
                 @endslot
-                @slot('tipo','Alert')
             @endcomponent
         @else
             @component('componentes.alert')
@@ -171,7 +170,6 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                 @slot('mensagem')
                     {{ session()->get('Cadastro')->Mensagem }}
                 @endslot
-                @slot('tipo','Alert')
             @endcomponent
         @endif
     @endif
