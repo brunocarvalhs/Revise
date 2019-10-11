@@ -19,7 +19,7 @@
     <!--Inicio dos Forms-->
     <div class="backgroundBlackLight">
         <!--Form dados da empresa-->
-        <form action="{{ url('/CadastroJuridico') }}" method="POST" onsubmit="">
+        <form action="{{ url('/CadastroJuridico') }}" method="POST" onsubmit="return ValidarCadastroJuridico()" name="CadastroJuridico">
             @csrf
             <div class="row">
                 <div class="col-12">
@@ -90,10 +90,9 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                                     </div>
                                     <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
                                         <div class="form-group inputCadastro">
-                                            <input type="text" class="form-control" id="txtNumero" name="txtNumero" placeholder="Número">
+                                            <input type="text" class="form-control somente-numero" id="txtNumero" name="txtNumero" placeholder="Número" data-mask="000000" >
                                         </div>
                                     </div>
-
                                     <!--FIM-->
                                 </div>
                             </div>
