@@ -37,7 +37,7 @@
                                 <a class="nav-link h4">
                                 <div class="sidebar-header">
                                         <div class="user-pic">
-                                            <img class="img-responsive img-rounded" src="{{ asset('img/user.jpg') }}" alt="User picture">
+                                            <img class="img-responsive img-rounded" src="{{ asset('img/user.jpg') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
                                         </div>
                                         <div class="user-info">
                                             <span class="user-name">
