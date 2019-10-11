@@ -2641,6 +2641,71 @@
         ]
     },
     {
+        "name": "realrashid/sweet-alert",
+        "version": "v2.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/realrashid/sweet-alert.git",
+            "reference": "53bb75c83a4ceb3263ae7cbd71404b86285a5b5b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/realrashid/sweet-alert/zipball/53bb75c83a4ceb3263ae7cbd71404b86285a5b5b",
+            "reference": "53bb75c83a4ceb3263ae7cbd71404b86285a5b5b",
+            "shasum": ""
+        },
+        "require": {
+            "laravel/framework": "~5.4.0|~5.8.0|~5.9.0",
+            "php": "~5.6|~7.0|~7.1.3"
+        },
+        "time": "2019-06-14T12:04:23+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "RealRashid\\SweetAlert\\SweetAlertServiceProvider"
+                ],
+                "aliases": {
+                    "Alert": "RealRashid\\SweetAlert\\Facades\\Alert"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "RealRashid\\SweetAlert\\": "src/"
+            },
+            "files": [
+                "src/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Rashid Ali",
+                "email": "realrashid05@gmail.com",
+                "homepage": "https://realrashid.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "A BEAUTIFUL, RESPONSIVE, CUSTOMIZABLE, ACCESSIBLE (WAI-ARIA) REPLACEMENT FOR JAVASCRIPT'S POPUP BOXES FOR LARAVEL BY RASHID ALI",
+        "homepage": "https://github.com/realrashid/sweet-alert",
+        "keywords": [
+            "alert",
+            "laravel",
+            "laravel-package",
+            "notifier",
+            "noty",
+            "sweet-alert",
+            "sweet-alert2",
+            "toast"
+        ]
+    },
+    {
         "name": "sebastian/code-unit-reverse-lookup",
         "version": "1.0.1",
         "version_normalized": "1.0.1.0",
@@ -4786,6 +4851,69 @@
             "responsive",
             "sass",
             "web"
+        ]
+    },
+    {
+        "name": "uxweb/sweet-alert",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/uxweb/sweet-alert.git",
+            "reference": "5b74ad1e51b913ede67c17c667dad6c162766fdc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/uxweb/sweet-alert/zipball/5b74ad1e51b913ede67c17c667dad6c162766fdc",
+            "reference": "5b74ad1e51b913ede67c17c667dad6c162766fdc",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/session": "~5.0",
+            "illuminate/support": "~5.0",
+            "php": ">=7.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "0.9.*",
+            "phpunit/phpunit": "^7.0"
+        },
+        "time": "2018-11-20T19:21:08+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "UxWeb\\SweetAlert\\SweetAlertServiceProvider"
+                ],
+                "aliases": {
+                    "Alert": "UxWeb\\SweetAlert\\SweetAlert"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "UxWeb\\SweetAlert\\": "src/SweetAlert/"
+            },
+            "files": [
+                "src/SweetAlert/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Uziel Bueno",
+                "email": "ux.webs@gmail.com"
+            }
+        ],
+        "description": "A simple PHP package to show Sweet Alerts with the Laravel Framework",
+        "keywords": [
+            "alert",
+            "laravel",
+            "notifier",
+            "sweet"
         ]
     },
     {
