@@ -122,6 +122,7 @@
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 <script src="/node_modules/sweetalert/dist/sweetalert.min.js" type="text/javascript" async="true" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 @yield('script')
 @yield('mensagem')
 </html>
