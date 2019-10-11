@@ -117,13 +117,45 @@ function infoKm() {
         }
       }
     });
-
-  function salvo() {
-    swal({
-
-      title: "Salvo",
-      text: "Caso queira alterar vá na área de veículos",
-      icon: "success",
-    });
   }
-}
+  
+function excluirVeiculo(){
+    swal("Deseja realmente excluir esse veículo?", {
+      icon: "warning",
+      buttons: {
+  
+        catch: {
+          text: "Sim",
+          value: "Sim",
+          className: "swal-button--style"
+        },
+        defeat: {
+          text: "Cancelar",
+          value: "cancelar",
+          className: "swal-button--style"
+        },
+  
+      },
+    })
+      .then((value) => {
+        switch (value) {
+  
+          case "Sim":
+          swal("Veículo excluído com sucesso!", {
+            icon: "success",
+            buttons: {
+              catch: {
+                text: "OK",
+                value: "ok",
+                className: "swal-button--style"
+              },     
+            },
+            
+          })   
+          .then((value) => {     
+            window.location.reload();     
+          })
+        }
+      });
+        
+  }
