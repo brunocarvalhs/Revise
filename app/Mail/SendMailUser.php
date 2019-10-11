@@ -18,7 +18,7 @@ class SendMailUser extends Mailable
      */
     public function __construct($Conteudo)
     {
-        return $this->build($Conteudo);
+        return view('componentes.email',['Conteudo' => $Conteudo]);
     }
 
     /**
@@ -26,8 +26,8 @@ class SendMailUser extends Mailable
      *
      * @return $this
      */
-    public function build($DadosDeEnvio)
+    public function build()
     {
-        return view('componentes.email',['Conteudo' => $DadosDeEnvio]);
+        return view('componentes.email');
     }
 }
