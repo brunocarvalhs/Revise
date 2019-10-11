@@ -68,7 +68,7 @@
         @if(session()->get('Login')->Status)
             @component('componentes.alert')
                 @slot('titulo','SUCESSO')
-                @slot('tipo','success')
+                @slot('icone','success')
                 @slot('mensagem')
                         {{ session()->get('Login')->Mensagem }}
                 @endslot
@@ -76,7 +76,7 @@
         @else
             @component('componentes.alert')
                 @slot('titulo','ERRO')
-                @slot('tipo','error')
+                @slot('icone','error')
                 @slot('mensagem')
                         {{ session()->get('Login')->Mensagem }}
                 @endslot
