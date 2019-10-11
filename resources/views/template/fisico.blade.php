@@ -35,16 +35,16 @@
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                                 <div class="row">
-                                    <div class="col-8">
+                                    <div class="col-6">
                                         <a class="nav-link h4">
                                             <div class="sidebar-header">
                                                 <div class="row">
-                                                    <div class="col-4">
+                                                    <div class="col-2">
                                                         <div class="user-pic">
                                                             <img class="img-responsive img-rounded" src="{{ asset('img/user.jpg') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
                                                         </div>
                                                     </div>
-                                                    <div class="col-8">
+                                                    <div class="col-10">
                                                         <div class="user-info">
                                                             <span class="user-name">
                                                                 <strong>{{ $dados->Nome }}</strong>
