@@ -28,6 +28,6 @@ class SendMailUser extends Mailable
      */
     public function build($DadosDeEnvio)
     {
-        return $this->view('componentes.email',['Conteudo' => $DadosDeEnvio]);
+        return view('componentes.email',['Conteudo' => $DadosDeEnvio]);
     }
 }
