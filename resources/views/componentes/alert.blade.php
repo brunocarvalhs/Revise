@@ -1,6 +1,8 @@
 <div>
     <script>
 
+        document.onload = function() {{{ $tipo }}()};
+
         function Alert(){
             swal("{{ $titulo }}", "{{ $mensagem }}", {
                 icon: "{{ $icone  }}",
@@ -12,8 +14,6 @@
         function AlertQuestion(){
 
         }
-
-        onload.{{ $tipo }}();
 
     </script>
 </div>
