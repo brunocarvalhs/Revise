@@ -30,8 +30,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{{ asset('js/jquery.mask.js') }}"></script>
-<script src="{{ asset('js/sweetalert.min.js') }}"></script>
 <script src="{{ asset('js/index.js') }}"></script>
+<script src="/node_modules/sweetalert/dist/sweetalert.min.js" type="text/javascript" async="true" defer></script>
+<script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 <script>
     $(document).ready(function () {
         $("#cpfcnpj").keypress(function () {
