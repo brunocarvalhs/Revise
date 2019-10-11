@@ -23,6 +23,7 @@
         "vue": "^2.5.17"
     },
     "dependencies": {
-        "sweetalert": "^2.1.2"
+        "sweetalert": "^2.1.2",
+        "sweetalert2": "^8.18.3"
     }
 }

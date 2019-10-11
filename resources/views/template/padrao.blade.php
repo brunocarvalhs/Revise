@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}} ">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}       ">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -122,7 +122,7 @@
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 <script src="/node_modules/sweetalert/dist/sweetalert.min.js" type="text/javascript" async="true" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 @yield('script')
 @yield('mensagem')
 </html>
