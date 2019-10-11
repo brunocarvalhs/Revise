@@ -150,6 +150,7 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
 @section('script')
 <script src="{{ asset('js/API.js')}}"></script>
 <script src="{{ asset('js/validation/CadastroJuridico.js')}}"></script>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 @endsection
 
 @section('mensagem')
