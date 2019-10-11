@@ -1,5 +1,6 @@
 <div>
     <script>
+        import swal from 'sweetalert';
         swal("{{ $titulo }}", "{{ $mensagem }}", {
             icon: "{{ $tipo  }}",
             buttons: false,
