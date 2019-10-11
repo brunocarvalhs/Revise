@@ -108,7 +108,7 @@ class modelFisico extends modelUsuario
                 ->where('tb_usuario_fisico.cd_cpf', '=', $CPF, 'and', 'tb_usuario.cd_senha', '=', $SENHA)
                 ->first();
 
-            if ($resultado->CPF == $CPF && $resultado->Senha == $SENHA) {
+            if ($resultado->CPF == $CPF && $resultado->Senha == $SENHA && $resultado != null) {
                 $this->setSenha($resultado->Senha);
                 $this->setEmail($resultado->Email);
                 $this->setIdUsuario($resultado->Id);

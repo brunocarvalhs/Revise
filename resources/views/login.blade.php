@@ -130,3 +130,22 @@
 </script>
 
 </html>
+@if(session()->has('Login'))
+        @if(session()->get('Login')->Status)
+            @component('componentes.alert')
+                @slot('titulo','SUCESSO')
+                @slot('tipo','success')
+                @slot('mensagem')
+                        {{ session()->get('Login')->Mensagem }}
+                @endslot
+            @endcomponent
+        @else
+            @component('componentes.alert')
+                @slot('titulo','ERRO')
+                @slot('tipo','error')
+                @slot('mensagem')
+                        {{ session()->get('Login')->Mensagem }}
+                @endslot
+        @endcomponent
+    @endif
+@endif

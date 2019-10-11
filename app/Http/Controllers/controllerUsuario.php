@@ -16,28 +16,39 @@ class controllerUsuario extends Controller
     public function SignIn(Request $request, modelFisico $modelFisico, modelJuridico $modelJuridico)
     {
 
-        $login = $this->TratamentoLogin($request->cpfcnpj);
-        $senha = $request->senha;
+        $validar = $this->ValidarCampos($request);
 
-        if (strlen($login) === 14) {
-            $result = $modelJuridico->login($login, $senha);
-            if ($result != false) {
-                $_SESSION['Dados'] = json_encode($result);
-                $_SESSION['autentic'] = '2';
-                return view('Juridico\Inicio',  ['dados' => json_decode($_SESSION['Dados'])]);
-            } else
-                return back();
-        } else if (strlen($login) === 11) {
-            $result = $modelFisico->Login($login, $senha);
-            if ($result != false) {
-                $_SESSION['Dados'] = json_encode($result);
-                $_SESSION['autentic'] = '1';
-                return view('Fisico\Inicio',  ['dados' => json_decode($_SESSION['Dados'])]);
-            } else
-                return back();
+        if ($validar) {
+
+            $login = $this->TratamentoLogin($request->cpfcnpj);
+            $senha = $request->senha;
+
+            if (strlen($login) === 14) {
+                $result = $modelJuridico->login($login, $senha);
+                if ($result != false) {
+                    $_SESSION['Dados'] = json_encode($result);
+                    $_SESSION['autentic'] = '2';
+                    return view('Juridico\Inicio',  ['dados' => json_decode($_SESSION['Dados'])]);
+                } else {
+                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Conta não encontrado']);
+                }
+            } else if (strlen($login) === 11) {
+                $result = $modelFisico->Login($login, $senha);
+                if ($result != false) {
+                    $_SESSION['Dados'] = json_encode($result);
+                    $_SESSION['autentic'] = '1';
+                    return view('Fisico\Inicio',  ['dados' => json_decode($_SESSION['Dados'])]);
+                } else {
+                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Conta não encontrado']);
+                }
+            } else {
+                $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres de login invalido, preencha corretamente os campos.']);
+            }
         } else {
-            return back();
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
         }
+        $Login = json_decode($Login);
+        return redirect()->back()->with('Login', $Login);
     }
 
     public function Sistema()
