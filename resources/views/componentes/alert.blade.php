@@ -1,8 +1,5 @@
 <div>
     <script>
-
-    $(document).ready(function () {
-
         function Alert(){
             swal("{{ $titulo }}", "{{ $mensagem }}", {
                 icon: "{{ $icone  }}",
@@ -16,6 +13,5 @@
         }
 
         {{ $tipo }}();
-    }
     </script>
 </div>
