@@ -35,25 +35,23 @@
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                                 <a class="nav-link h4">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
+                                <div class="sidebar-header">
+                                        <div class="user-pic">
+                                            <img class="img-responsive img-rounded" src="{{ asset('img/user.jpg') }}" alt="User picture">
+                                        </div>
+                                        <div class="user-info">
+                                            <span class="user-name">
+                                                <strong>{{ $dados->Nome }}</strong>
+                                            </span>
+                                            <span class="user-role">
+                                                {{ $dados->CPF }}
+                                            </span>
+                                            <span class="user-role">
+
+                                            </span>
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li class="nav-item active">
-                                <div class="user-info">
-                                    <span class="user-name">
-                                        <strong>{{ $dados->Nome }}</strong>
-                                    </span>
-                                    <span class="user-role">
-                                        {{ $dados->CPF }}
-                                    </span>
-                                    <span class="user-role">
-
-                                    </span>
-                                </div>
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link h4">Menu</a>
