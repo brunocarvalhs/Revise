@@ -1,4 +1,5 @@
-<script>
+@php
+echo `<script>
     function Alert(){
         swal("{{ $titulo }}", "{{ $mensagem }}", {
             icon: "{{ $icone  }}",
@@ -12,4 +13,6 @@
     }
 
     {{ $tipo }}();
-</script>
+</script>`
+@endphp
+
