@@ -1,7 +1,7 @@
 <div>
     <script>
-        swal("'{{ $titulo }}'", "'{{ $mensagem }}'", {
-            icon: "'{{ $tipo  }}'",
+        swal("{{ $titulo }}", "{{ $mensagem }}", {
+            icon: "{{ $tipo  }}",
             buttons: false,
             timer: 3000,
         });

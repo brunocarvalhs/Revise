@@ -153,34 +153,23 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
 @endsection
 
 @section('mensagem')
-@if(session()->has('Cadastro'))
-    @if(session()->get('Cadastro')->Status)
-        @component('componentes.alert')
-            @slot('title')
-                Forbidden
-            @endslot
-        @endcomponent
-    @else
-        @component('')
-
-        @endcomponent
+    @if(session()->has('Cadastro'))
+        @if(session()->get('Cadastro')->Status)
+            @component('componentes.alert')
+                @slot('titulo','SUCESSO')
+                @slot('tipo','success')
+                @slot('mensagem')
+                    {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+        @else
+            @component('componentes.alert')
+                @slot('titulo','ERRO')
+                @slot('tipo','error')
+                @slot('mensagem')
+                    {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+        @endif
     @endif
-            <!--echo '<script>
-                    swal("SUCESSO","'.session()->get('Cadastro')->Mensagem.'", {
-                    icon: "success",
-                    buttons: false,
-                    timer: 3000,
-                    });
-                    </script>';
-        }
-        else{
-            echo '<script>
-                    swal("ERRO","'.session()->get('Cadastro')->Mensagem.'", {
-                    icon: "error",
-                    buttons: false,
-                    timer: 3000,
-                    });
-                </script>';
-        }
-@endif
 @endsection

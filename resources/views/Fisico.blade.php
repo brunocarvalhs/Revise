@@ -207,26 +207,23 @@
 @endsection
 
 @section('mensagem')
-@if(session()->has('Cadastro'))
-    @php
-        if(session()->get('Cadastro')->Status){
-            echo '<script>
-                    swal("SUCESSO","'.session()->get('Cadastro')->Mensagem.'", {
-                    icon: "success",
-                    buttons: false,
-                    timer: 3000,
-                    });
-                    </script>';
-        }
-        else{
-            echo '<script>
-                    swal("ERRO","'.session()->get('Cadastro')->Mensagem.'", {
-                    icon: "error",
-                    buttons: false,
-                    timer: 3000,
-                    });
-                </script>';
-        }
-    @endphp
-@endif
+    @if(session()->has('Cadastro'))
+        @if(session()->get('Cadastro')->Status)
+            @component('componentes.alert')
+                @slot('titulo','SUCESSO')
+                @slot('tipo','success')
+                @slot('mensagem')
+                    {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+        @else
+            @component('componentes.alert')
+                @slot('titulo','ERRO')
+                @slot('tipo','error')
+                @slot('mensagem')
+                    {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+        @endif
+    @endif
 @endsection
