@@ -5,7 +5,7 @@
             text: '{{ $mensagem }}',
             type: '{{ $icone  }}',
             buttons: false,
-            timer: 3000,
+            timer: 5000,
         });
     </script>
 </div>
