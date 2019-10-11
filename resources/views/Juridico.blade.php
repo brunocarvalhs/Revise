@@ -154,9 +154,18 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
 
 @section('mensagem')
 @if(session()->has('Cadastro'))
-    @php
-        if(session()->get('Cadastro')->Status){
-            echo '<script>
+    @if(session()->get('Cadastro')->Status)
+        @component('componentes.alert')
+            @slot('title')
+                Forbidden
+            @endslot
+        @endcomponent
+    @else
+        @component('')
+
+        @endcomponent
+    @endif
+            <!--echo '<script>
                     swal("SUCESSO","'.session()->get('Cadastro')->Mensagem.'", {
                     icon: "success",
                     buttons: false,
@@ -173,6 +182,5 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                     });
                 </script>';
         }
-    @endphp
 @endif
 @endsection

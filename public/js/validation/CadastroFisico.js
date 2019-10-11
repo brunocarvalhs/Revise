@@ -176,6 +176,8 @@ function ValidarCadastroFisico()
     if(logErro != 0)
     {
         logErro = 0;
+        return true;
+    }else{
         return false;
     }
 

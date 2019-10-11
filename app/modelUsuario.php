@@ -69,4 +69,16 @@ class modelUsuario extends Model
 
         return $this;
     }
+
+    public function ValidarCampos(Request $request)
+    {
+        $r = $request->all();
+        foreach ($r as $value => $key)
+        {
+            if(empty($key)){
+                return false;
+            }
+        }
+        return true;
+    }
 }

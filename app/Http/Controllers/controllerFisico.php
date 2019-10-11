@@ -7,32 +7,39 @@ use Illuminate\Http\Request;
 
 class controllerFisico extends Controller
 {
-    public function RotasFisico($tipo){
-        switch($tipo){
-            case 'Perfil':{
-                return 'Fisico\Perfil';
-                break;
-            }
-            case 'Notificacao':{
-                return 'Fisico\Notificacao';
-                break;
-            }
-            case 'Veiculos':{
-                return 'Fisico\Veiculo';
-                break;
-            }
-            case 'Anuncio':{
-                return 'Fisico\Anuncio';
-                break;
-            }
-            default:{
-                return back();
-            }
+    public function RotasFisico($tipo)
+    {
+        switch ($tipo) {
+            case 'Perfil': {
+                    return 'Fisico\Perfil';
+                    break;
+                }
+            case 'Notificacao': {
+                    return 'Fisico\Notificacao';
+                    break;
+                }
+            case 'Veiculos': {
+                    return 'Fisico\Veiculo';
+                    break;
+                }
+            case 'Anuncio': {
+                    return 'Fisico\Anuncio';
+                    break;
+                }
+            default: {
+                    return back();
+                }
         }
     }
 
-    public function Cadastro(Request $request,controllerUsuario $controllerUsuario, modelFisico $modelFisico){
-        $cadastro = $modelFisico->CadastrarUsuarioFisico($controllerUsuario->TratamentoLogin($request->txtcpf),$request);
+    public function Cadastro(Request $request, controllerUsuario $controllerUsuario, modelFisico $modelFisico)
+    {
+        $campos = $controllerUsuario->ValidarCampos($request);
+        if ($campos) {
+            $cadastro = $modelFisico->CadastrarUsuarioFisico($controllerUsuario->TratamentoLogin($request->txtcpf), $request);
+        } else {
+            $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
+        }
         $cadastro = json_decode($cadastro);
         return redirect()->back()->with('Cadastro', $cadastro);
     }

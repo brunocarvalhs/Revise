@@ -93,7 +93,7 @@ class controllerUsuario extends Controller
 
     public function RotasSistema(Request $request, controllerFisico $controllerFisico, controllerJuridico $controllerJuridico)
     {
-        try{
+        try {
             if (((!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])))) {
                 switch ($_SESSION['autentic']) {
                     case '1':
@@ -107,8 +107,7 @@ class controllerUsuario extends Controller
                         break;
                 }
             }
-        }
-        catch(Exception $e){
+        } catch (Exception $e) {
             return redirect('/SignIn');
         }
     }
@@ -117,5 +116,16 @@ class controllerUsuario extends Controller
     {
         session_destroy();
         return redirect('/SignIn');
+    }
+
+    public function ValidarCampos(Request $request)
+    {
+        $r = $request->all();
+        foreach ($r as $value => $key) {
+            if (empty($key)) {
+                return false;
+            }
+        }
+        return true;
     }
 }
