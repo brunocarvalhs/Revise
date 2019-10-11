@@ -1,7 +1,7 @@
 <div>
     <script>
 
-        import swal from '/xampp/htdocs/node_modules/sweetalert/typings/sweetalert';
+        const swal = requeri('/xampp/htdocs/node_modules/sweetalert/typings/sweetalert');
 
         swal("{{ $titulo }}", "{{ $mensagem }}", {
             icon: "{{ $tipo  }}",
