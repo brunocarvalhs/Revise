@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/logo.png">
-    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet"/>
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/sistema.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
@@ -31,10 +31,30 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    {{ $dados->Nome }}
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link h4">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <div class="user-info">
+                                    <span class="user-name">
+                                        <strong>{{ $dados->Nome }}</strong>
+                                    </span>
+                                    <span class="user-role">
+                                        {{ $dados->CPF }}
+                                    </span>
+                                    <span class="user-role">
+
+                                    </span>
+                                </div>
+                            </li>
                             <li class="nav-item active">
                                 <a class="nav-link h4">Menu</a>
                             </li>
@@ -196,4 +216,5 @@
         });
     }
 </script>
+
 </html>
