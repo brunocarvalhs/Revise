@@ -1,3 +1,5 @@
+$("#CadastroFisico").validate();
+
 $(document).ready(function () {
 
     $("#razaoSocial").change(function () {
