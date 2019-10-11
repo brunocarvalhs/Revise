@@ -30,19 +30,6 @@
             </div>
         </div>
         <div class="col-12 btnEntrar">
-            <?php if (isset($_SESSION["N-Autenticado"])) {
-                echo '<div class="alert alert-danger" role="alert">
-                                CPF/CNPJ ou senha está inválido.
-                                </div>';
-                unset($_SESSION["N-Autenticado"]);
-            }
-            if (isset($_SESSION["CADASTRADO-SUCESSO"])) {
-                echo '<div class="alert alert-success" role="alert">
-                                Usuário cadastrado com sucesso.
-                                </div>';
-                unset($_SESSION["CADASTRADO-SUCESSO"]);
-            }
-            ?>
             <button type="submit" class="btn btn-dark btn-lg btn-block">
                 ENTRAR
             </button>
