@@ -34,22 +34,28 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link h4">
-                                    <div class="sidebar-header">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="user-pic">
-                                                    <img class="img-responsive img-rounded" src="{{ asset('img/user.jpg') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
-                                                </div>
-                                                <div class="user-info">
-                                                    <span class="user-name">
-                                                        <strong>{{ $dados->Nome }}</strong>
-                                                    </span>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <a class="nav-link h4">
+                                            <div class="sidebar-header">
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <div class="user-pic">
+                                                            <img class="img-responsive img-rounded" src="{{ asset('img/user.jpg') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <div class="user-info">
+                                                            <span class="user-name">
+                                                                <strong>{{ $dados->Nome }}</strong>
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </div>
-                                </a>
+                                </div>
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link h4">Menu</a>
