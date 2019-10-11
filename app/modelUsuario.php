@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Mail\SendMailUser;
 use Illuminate\Database\Eloquent\Model;
 
 class modelUsuario extends Model
@@ -84,36 +85,9 @@ class modelUsuario extends Model
 
     public function Email($Email, $Assunto, $Contudo)
     {
-        $emailenviar = "reviseprojeto@gmail.com";
         $destino = $Email;
-        $assunto = $Assunto;
 
-        // É necessário indicar que o formato do e-mail é html
-        $headers  = 'MIME-Version: 1.0' . "\r\n";
-        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $headers .= 'From: Revise Projeto <'.$emailenviar.'>';
-        //$headers .= "Bcc: $EmailPadrao\r\n";
-
-        $arquivo = `<html>
-        <head>
-            <title>Email Revise</title>
-        </head>
-        <body>
-            <table>
-                <tr>
-                    <td align="center">Revise</td>
-                </tr>
-                <tr>
-                    <td>`.$Contudo.`</td>
-                </tr>
-                <tr>
-                    <td align="center"></td>
-                </tr>
-            </table>
-        </body>
-        </html>`;
-
-        $enviaremail = mail($destino, $assunto, $arquivo, $headers);
+        $enviaremail = Mail::to($destino)->send(new SendMailUser($Contudo));
 
         if ($enviaremail) {
             return json_encode(['Status' => true, 'Mensagem' => "E-MAIL ENVIADO COM SUCESSO! O link será enviado para o e-mail fornecido no formulário"]);
