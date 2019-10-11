@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}} ">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}       ">
-    <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 </head>
 
 <body>
@@ -114,9 +113,6 @@
             </div>
         </div>
     </footer>
-    <div id="notifications">
-        @yield('mensagem')
-    </div>
 </body>
 <script src="/vendor/components/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
@@ -124,6 +120,9 @@
 <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
+<script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 @yield('script')
-
+<div id="notifications">
+    @yield('mensagem')
+</div>
 </html>
