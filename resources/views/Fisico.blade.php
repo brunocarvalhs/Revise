@@ -211,18 +211,20 @@
         @if(session()->get('Cadastro')->Status)
             @component('componentes.alert')
                 @slot('titulo','SUCESSO')
-                @slot('tipo','success')
+                @slot('icone','success')
                 @slot('mensagem')
                     {{ session()->get('Cadastro')->Mensagem }}
                 @endslot
+                @slot('tipo','Alert')
             @endcomponent
         @else
             @component('componentes.alert')
                 @slot('titulo','ERRO')
-                @slot('tipo','error')
+                @slot('icone','error')
                 @slot('mensagem')
                     {{ session()->get('Cadastro')->Mensagem }}
                 @endslot
+                @slot('tipo','Alert')
             @endcomponent
         @endif
     @endif
