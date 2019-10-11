@@ -39,12 +39,12 @@
                                         <a class="nav-link h4">
                                             <div class="sidebar-header">
                                                 <div class="row">
-                                                    <div class="col-12 col-sm-2">
+                                                    <div class="col-12 col-sm-3">
                                                         <div class="user-pic">
                                                             <img class="img-responsive img-rounded" src="{{ asset('img/user.jpg') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top alig">
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-sm-10">
+                                                    <div class="col-12 col-sm-9">
                                                         <div class="user-info">
                                                             <span class="user-name">
                                                                 <strong>{{ $dados->Nome }}</strong>
