@@ -175,17 +175,26 @@ class modelFisico extends modelUsuario
     }
 
 
-    public function EsqueciSenha($CPF){
+    public function EsqueciSenha($CPF)
+    {
 
         $check = DB::table('tb_usuario_fisico')
-                    ->join('tb_usuario', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
-                    ->where('tb_usuario_fisico.cd_cpf', '=', $CPF)
-                    ->exists();
+            ->join('tb_usuario', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
+            ->where('tb_usuario_fisico.cd_cpf', '=', $CPF)
+            ->exists();
 
-        if($check){
-            $email = DB::table('tb_usuario')->select('nm_email as Email','cd_senha as Senha')->first();
-            return $email;
-        }else{
+        if ($check) {
+
+            $Dados = DB::table('tb_usuario')
+                ->join('tb_usuario_fisico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
+                ->join('tb_controle_plano', 'tb_controle_plano.cd_usuario_fisico', '=', 'tb_usuario_fisico.cd_usuario_fisico')
+                ->join('tb_plano', 'tb_plano.cd_plano', '=', 'tb_controle_plano.cd_plano')
+                ->select('tb_usuario.cd_senha as Senha', 'tb_usuario_fisico.nm_usuario_fisico as Nome', 'tb_usuario.nm_email as Email')
+                ->where('tb_usuario_fisico.cd_cpf', '=', $CPF)
+                ->first();
+
+            return $Dados;
+        } else {
             return false;
         }
     }

@@ -1,10 +1,10 @@
 <html>
     <body>
-        <p>Olá Bruno Silva Carvalho</p>
+        <p>Olá {{ $Usuario->Nome }}!</p>
         <p></p>
-        <p>{{ $Conteudo }}</p>
+        <p>Esse é apenas um e-mail de teste, para exemplificar o funcionamento do envio de e-mails no Laravel.</p>
         <p></p>
         <p>Att, <br>
-        Team Devs. Revise!</p>
+        Carlos Ferreira!</p>
     </body>
 </html>

@@ -190,14 +190,14 @@ class controllerUsuario extends Controller
             if(strlen($login) === 14){
                 $resultado = $modelJuridico->EsqueciSenha($login);
                 if($resultado != false){
-                    $Login = $modelJuridico->Email($resultado->Email, 'Revise - Recuperar Senha', 'Sua Senha: ' . $resultado->Senha);
+                    $Login = $modelJuridico->Email($resultado);
                 }else{
                     $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado.']);
                 }
             }else if(strlen($login) === 11){
                 $resultado = $modelFisico->EsqueciSenha($login);
                 if($resultado != false){
-                    $Login = $modelFisico->Email($resultado->Email, 'Revise - Recuperar Senha', 'Sua Senha: ' . $resultado->Senha);
+                    $Login = $modelFisico->Email($resultado);
                 }else{
                     $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado.']);
                 }

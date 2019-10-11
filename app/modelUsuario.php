@@ -84,11 +84,11 @@ class modelUsuario extends Model
     }
 
 
-    public function Email($Email, $Assunto, $Contudo)
+    public function Email($Dados)
     {
-        $destino = $Email;
+        $destino = $Dados->Email;
 
-        $enviaremail = Mail::to($destino)->send(new SendMailUser($Contudo));
+        $enviaremail = Mail::to($destino)->send(new SendMailUser($Dados));
 
         if ($enviaremail) {
             return json_encode(['Status' => true, 'Mensagem' => "E-MAIL ENVIADO COM SUCESSO! O link será enviado para o e-mail fornecido no formulário"]);

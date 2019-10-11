@@ -2,6 +2,9 @@
 
 namespace App\Mail;
 
+use App\modelFisico;
+use App\modelJuridico;
+use App\modelUsuario;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -11,14 +14,15 @@ class SendMailUser extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $Usuario;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($Conteudo)
+    public function __construct($Usuario)
     {
-        return view('componentes.email',['Conteudo' => $Conteudo]);
+        $this->Usuario = $Usuario;
     }
 
     /**
@@ -28,6 +32,9 @@ class SendMailUser extends Mailable
      */
     public function build()
     {
-        return view('componentes.email');
+        return $this->view('componentes.email')
+        ->with([
+            'Usuario' => $this->Usuario,
+        ]);
     }
 }
