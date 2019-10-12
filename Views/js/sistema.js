@@ -117,13 +117,43 @@ function infoKm() {
         }
       }
     });
+}
+function Sair() {
 
-  function salvo() {
-    swal({
+  swal("Qual tipo de cadastro você deseja fazer?", {
+    icon: "info",
+    buttons: {
+      cancel: {
+        text: "Cancelar",
+         className: "swal-button--style"
+      },
+      
+      catch: {
+        text: "Jurídico",
+        value: "juridico",
+        className: "swal-button--style"
+      },
+      defeat: {
+        text: "Físico",
+        value: "fisico",
+        className: "swal-button--style"
+      }
 
-      title: "Salvo",
-      text: "Caso queira alterar vá na área de veículos",
-      icon: "success",
+    },
+
+  })
+    .then((value) => {
+      switch (value) {
+
+        case "juridico":
+          window.location.href = './cadastro_juridico.php';
+          break;
+
+        case "fisico":
+          window.location.href = './cadastro.php';
+          break;
+
+      }
     });
-  }
+
 }

@@ -49,12 +49,13 @@ function btnPerfil() {
       catch: {
         text: "Sim",
         value: "Sim",
-        color: "warning",
+        className: "swal-button--style"
+
       },
       defeat: {
         text: "Cancelar",
         value: "cancelar",
-        color: "warning",
+        className: "swal-button--style"
       },
 
     },
@@ -106,6 +107,7 @@ function Salvar() {
       catch: {
         text: "OK",
         value: "ok",
+        className: "swal-button--style"
       },
 
     },
