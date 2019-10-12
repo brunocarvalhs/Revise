@@ -24,7 +24,7 @@
         <h4 class="card-title">{{ $dados->Nome }}</h4>
         <hr>
         <div class="card-body">
-            <div>
+            <div class="row">
                 <!--Perfil Usuario Fisico-->
                 <form action="" method="POST" onsubmit="">
                     <div class="container-fluid">
