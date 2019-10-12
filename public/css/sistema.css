@@ -561,3 +561,8 @@ body, html{
 .perfilBackgroud{
     background: linear-gradient(40deg,#2096ff,#05ffa3) !important
 }
+
+.avatar{
+    z-index: 2;
+    top: 3;
+}
