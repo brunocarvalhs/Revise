@@ -16,7 +16,9 @@
 <div class="card testimonial-card">
     <div class="card-up lighten-1"></div>
     <div class="avatar mx-auto row">
-        <img src="{{ asset('img/user.jpg') }}" width="300" height="300" class="rounded-circle" alt="woman avatar">
+        <div class="col">
+            <img src="{{ asset('img/user.jpg') }}" width="250" height="250" class="rounded-circle" alt="woman avatar">
+        </div>
     </div>
     <div class="card-body">
         <h4 class="card-title">{{ $dados->Nome }}</h4>
