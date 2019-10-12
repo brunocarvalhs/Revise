@@ -11,7 +11,7 @@
     <div class="col-12 inputPesquisa">
         <form action="{{ route('pesquisa) }}">
             <div class="input-group">
-                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                <input type="text" class="form-control" name="pesquisa">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Filtros</button>
                     <div class="dropdown-menu">

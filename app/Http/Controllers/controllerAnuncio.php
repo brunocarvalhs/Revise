@@ -11,6 +11,6 @@ class controllerAnuncio extends Controller
 
 
     public function Pesquisa(Request $request){
-        return dd($request->tipo, $request->preco);
+        return dd($request->pesquisa, $request->tipo, $request->preco);
     }
 }

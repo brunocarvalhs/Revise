@@ -44,4 +44,4 @@ Route::post('/Recuperar', 'controllerUsuario@EsqueciSenha');
 
 Route::get('/Download/{tipo}', 'controllerUsuario@getDownload');
 
-Route::get('Anuncio/{tipo}/{preco', 'controllerAnuncio@Pesquisa')->name('pesquisa');
+Route::get('Home/Anuncio/{pesquisa}/{tipo}/{preco}', 'controllerAnuncio@Pesquisa')->name('pesquisa');
