@@ -9,6 +9,7 @@ use App\modelUsuario;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response;
 
 session_start();
 
