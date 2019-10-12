@@ -547,6 +547,13 @@ body, html{
     }
 }
 
+@media (max-width: 990px){
+    .conteudo{
+        margin-top: 80px;
+        padding-left: 60px;
+    }
+}
+
 .pesquisaInput{
     border: 1px solid #454545;
 }
@@ -570,12 +577,4 @@ body, html{
 .perfil{
     margin-top: 15px;
 }
-@media (max-width: 990px){
-    .PerfilCard{
-        overflow: hidden;
-        height: 200px;
-        border-top-left-radius: .25rem;
-        border-top-right-radius: .25rem;
-        margin-top: 80px;
-    }
-}
+
