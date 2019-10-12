@@ -8,11 +8,13 @@
 
 @section('sistema_fisico')
 <div class="row">
-    <form>
-        <div class="active-pink-3 active-pink-4 mb-4">
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-        </div>
-    </form>
+    <div class="col-12">
+        <form>
+            <div class="active-pink-3 active-pink-4 mb-4">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div>
+        </form>
+    </div>
 </div>
 <div class="row">
 
