@@ -11,7 +11,7 @@
     <div class="col-12 inputPesquisa">
         <form>
             <div class="active-pink-3 active-pink-4 mb-4">
-                <div class="input-group mb-3 pesquisaInput">
+                <div class="input-group mb-3">
                     <div class="custom-file">
                         <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                     </div>
