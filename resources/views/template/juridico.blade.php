@@ -164,8 +164,8 @@
                 </div>
             </div>
         </div>
-        <!--Anúncios Postados-->
-        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+        <!--COnteudo -->
+        <div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 padding">
