@@ -14,7 +14,7 @@
                 <form>
                     <div class="inner-form">
                         <div class="row">
-                            <div class="input-field first" id="first">
+                            <div class="input-field first form-group" id="first">
                                 <input class="input" id="inputFocus" type="text" placeholder="Keyword" />
                                 <button class="clear" id="clear">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
