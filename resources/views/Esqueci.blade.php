@@ -11,7 +11,7 @@
         </div>
         <div class="col-12 padding ">
             <div class="label-float">
-                <input type="text" placeholder=" " name="cpfcnpj" id="cpfcnpj" class="ls-mask-cpf">
+                <input type="text" placeholder=" " name="cpfcnpj" id="cpfcnpj">
                 <label>CPF/CNPJ</label>
             </div>
         </div>
