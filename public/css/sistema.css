@@ -570,7 +570,7 @@ body, html{
 .perfil{
     margin-top: 15px;
 }
-@media (max-width: 972.8px){
+@media (max-width: 990px){
     .PerfilCard{
         overflow: hidden;
         height: 200px;
