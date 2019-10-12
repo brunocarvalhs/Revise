@@ -41,3 +41,18 @@ Route::get('/Esqueci',function(){
 });
 
 Route::post('/Recuperar', 'controllerUsuario@EsqueciSenha');
+
+Route::get('/Download/{tipo}', function ($tipo){
+    switch($tipo){
+        case 'android':{
+            $apk = public_path(). "/download/build/app-debug.apk";
+            return Response::download($apk, 'revise.apk', []);
+        }
+        case 'ios':{
+            return view('aplicativo');
+        }
+        default:{
+
+        }
+    }
+});

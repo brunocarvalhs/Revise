@@ -214,6 +214,54 @@
         </div>
     </div>
 </section>
+<!-- Aplicativo section -->
+<section class="backgroundBlack bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                <div class="row">
+                    <div class="Texto ">
+                        <!-- Titulo do texto -->
+                        <header>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloPreto">
+                                <h1 class="text-white">Aplicativo e OBD2</h1>
+                            </div>
+                        </header>
+                        <!-- Texto -->
+                        <section>
+                            <p>
+
+                            </p>
+                        </section>
+                        <!-- Rodapé -->
+                        <footer>
+                            <div class="container">
+                                <div class="row DownloadApp center">
+                                    <div
+                                        class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
+                                        <a href="{{ url('/Download/android') }}">
+                                            <img src="img/button_download_android.png" class="">
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
+                                        <a href="{{ url('/Download/ios') }}">
+                                            <img src="img/button_download_ios.png" class="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 ">
+                <img src="img/AppRevise.png" class="AppSmart wow bounceInRight center"
+                 data-wow-duration="2s">
+            </div>
+        </div>
+    </div>
+</section>
 <section class="backgroundBlack" id="suporte">
     <div class="container">
         <div class="row">
