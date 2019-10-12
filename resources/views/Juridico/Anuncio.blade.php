@@ -7,7 +7,7 @@
 @endsection
 
 @section('sistema_juridico')
-    <div class="">
+    <div class="col">
 
     </div>
 @endsection
