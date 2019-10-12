@@ -13,32 +13,17 @@
 
 
 @section('sistema_fisico')
-<div class="col-md-6 mb-4">
+<div class="card testimonial-card">
+    <div class="card-up lighten-1"></div>
 
-    <!-- Card -->
-    <div class="card testimonial-card" style="max-width: 22rem;">
-
-        <!-- Background color -->
-        <div class="card-up aqua-gradient"></div>
-
-        <!-- Avatar -->
-        <div class="avatar mx-auto white">
-            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" class="rounded-circle img-responsive" alt="woman avatar">
-        </div>
-
-        <!-- Content -->
-        <div class="card-body">
-            <!-- Name -->
-            <h4 class="card-title">Martha Smith</h4>
-            <hr>
-            <!-- Quotation -->
-            <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
-                adipisci</p>
-        </div>
-
+    <div class="avatar mx-auto">
+        <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle" alt="woman avatar">
     </div>
-    <!-- Card -->
-
+    <div class="card-body">
+        <h4 class="card-title">{{ $dados->Nome }}</h4>
+        <hr>
+        <p><i class="fas fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci</p>
+    </div>
 </div>
 @endsection
 
