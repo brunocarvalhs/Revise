@@ -9,7 +9,7 @@
 @section('sistema_fisico')
 <div class="row">
     <form>
-        <div class="card">
+        <div>
             <div class="row">
                 <div class="col-12">
                     <div class="active-pink-3 active-pink-4 mb-4">
