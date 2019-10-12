@@ -15,7 +15,7 @@
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filtros</button>
                     <div class="dropdown-menu">
-                        <form>
+                        <form action="{{ url('/') }}" class="container">
                             <div class="form-group">
                                 <select class="custom-select">
                                     <option value="">Tipo</option>
