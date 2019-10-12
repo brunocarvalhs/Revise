@@ -11,7 +11,7 @@
         </div>
         <div class="col-12 inputLogin">
             <div class="label-float">
-                <input type="text" placeholder=" " name="cpfcnpj" id="cpfcnpj">
+                <input type="text" placeholder=" " name="cpfcnpj" id="cpfcnpj" data-mask="???">
                 <label>CPF/CNPJ</label>
             </div>
         </div>
