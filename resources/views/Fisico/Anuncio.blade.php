@@ -11,18 +11,7 @@
     <div class="col-12 inputPesquisa">
         <form>
             <div class="active-pink-3 active-pink-4 mb-4">
-                <div class="input-group mb-3">
-                    <div class="custom-file">
-                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                    </div>
-                    <div class="input-group-append">
-                        <select class="btn btn-outline-secondary">
-                            <option>Todos</option>
-                            <option>Serviços</option>
-                            <option>Produtos</option>
-                        </select>
-                    </div>
-                </div>
+                <input class="form-control pesquisaInput" type="text" placeholder="Search" aria-label="Search">
             </div>
         </form>
     </div>
