@@ -45,7 +45,7 @@ Route::post('/Recuperar', 'controllerUsuario@EsqueciSenha');
 Route::get('/Download/{tipo}', function ($tipo){
     switch($tipo){
         case 'android':{
-            $apk = public_path(). "\download\build\app-debug.apk";
+            $apk = "\download\build\app-debug.apk";
             redirect()->back();
             return Response::download($apk, 'revise.apk', []);
         }
