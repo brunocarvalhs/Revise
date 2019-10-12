@@ -207,7 +207,5 @@
 <script src="{{asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
 @yield('script')
 @yield('mensagem')
-@component('componentes.sair')
-    @slot('local','{{ route('sair') }}')
-@endcomponent
+@component('componentes.SairSistema')
 </html>

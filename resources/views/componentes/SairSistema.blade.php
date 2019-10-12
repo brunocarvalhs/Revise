@@ -22,7 +22,7 @@
             }],
         }).then((decicao)=>{
             if(decicao)
-                window.location.href = "{{ $local }}";
+                window.location.href = "{{ route('sair') }}";
         });
     }
 </script>
