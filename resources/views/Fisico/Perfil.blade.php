@@ -64,8 +64,9 @@
                                     <label class="text-warning">Planos</label>
                                 </div>
                             </div>
+
                             <div class="input-group mb-3">
-                                <select class="custom-select" id="txtPlano" name="txtPlano" value={{ $dados->Plano }} aria-label="Exemplo de select com botão addon">
+                                <select class="custom-select" id="txtPlano" name="txtPlano" value='{{ $dados->Plano }}' aria-label="Exemplo de select com botão addon" hidden>
                                     <option value="" >Basic</option>
                                     <option value="" >Standart</option>
                                     <option value="" >Profission</option>
