@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="row">
-
+    @include('componentes\filtro')
 </div>
 @endsection
 
