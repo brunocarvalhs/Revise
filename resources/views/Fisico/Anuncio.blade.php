@@ -17,43 +17,55 @@
                     <div class="dropdown-menu">
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                    Todos
-                                </label>
+                                <div class="dropdown-item">
+                                    <input class="form-check-input" type="radio" name="tipo" id="tipo1" value="todos" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Todos
+                                    </label>
+                                </div>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Serviços
-                                </label>
+                                <div class="dropdown-item">
+                                    <input class="form-check-input" type="radio" name="tipo" id="tipo2" value="servico">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Serviços
+                                    </label>
+                                </div>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Produtos
-                                </label>
+                                <div class="dropdown-item">
+                                    <input class="form-check-input" type="radio" name="tipo" id="tipo3" value="produto">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Produtos
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <div class="dropdown-divider"></div>
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                <label class="form-check-label" for="exampleRadios1">
-                                    Todos
-                                </label>
+                                <div class="dropdown-item">
+                                    <input class="form-check-input" type="radio" name="preco" id="preco1" value="todos" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Todos
+                                    </label>
+                                </div>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Menores preços
-                                </label>
+                                <div class="dropdown-item">
+                                    <input class="form-check-input" type="radio" name="preco" id="preco2" value="menor">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Menores preços
+                                    </label>
+                                </div>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                <label class="form-check-label" for="exampleRadios2">
-                                    Maiores preços
-                                </label>
+                                <div class="dropdown-item">
+                                    <input class="form-check-input" type="radio" name="preco" id="preco3" value="maior">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Maiores preços
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
