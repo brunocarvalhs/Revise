@@ -17,7 +17,7 @@
     <div class="card-up lighten-1"></div>
 
     <div class="avatar mx-auto">
-        <img src="{{ asset('img/user.jpg') }}" width="50" height="50" class="rounded-circle" alt="woman avatar">
+        <img src="{{ asset('img/user.jpg') }}" width="300" height="300" class="rounded-circle" alt="woman avatar">
     </div>
     <div class="card-body">
         <h4 class="card-title">{{ $dados->Nome }}</h4>
