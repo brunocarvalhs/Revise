@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-0 menusuperior">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav">
                     <a class="navbar-brand" href="#">
                         <div class="row">
                             <div class="col-4">
@@ -30,8 +30,6 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
