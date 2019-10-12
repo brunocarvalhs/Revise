@@ -13,7 +13,7 @@
                 closeModal: true,
             },
             confirm: {
-                text: "Sim, Sair.",
+                text: "OK",
                 value: true,
                 visible: true,
                 className: "",

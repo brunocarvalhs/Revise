@@ -181,6 +181,6 @@
 @yield('script')
 @yield('mensagem')
 @component('componentes.sair')
-    @slot('local',{{ route('sair') }})
+    @slot('local','{{ route('sair') }}')
 @endcomponent
 </html>
