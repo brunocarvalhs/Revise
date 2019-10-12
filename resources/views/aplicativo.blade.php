@@ -224,7 +224,7 @@
                         <!-- Titulo do texto -->
                         <header>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloPreto">
-                                <h1 class="text-white">Aplicativo e OBD2</h1>
+                                <h1 class="text-black">Aplicativo e OBD2</h1>
                             </div>
                         </header>
                         <!-- Texto -->
