@@ -559,7 +559,7 @@ body, html{
 }
 
 .perfilBackgroud{
-    background: linear-gradient(40deg,#454545,#f3e410) !important
+    background: linear-gradient(40deg,#f3e410,#454545) !important
 }
 
 .avatar{
