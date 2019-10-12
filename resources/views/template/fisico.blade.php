@@ -15,7 +15,7 @@
     <title>Revise - @yield('titulo')</title>
 </head>
 
-<body class="bg-light container-fluid">
+<body class="bg-light container-fluid semPadding">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2">
             <!--Menu superior responsivo-->
