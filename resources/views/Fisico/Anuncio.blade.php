@@ -3,7 +3,7 @@
 @section('titulo','Serviços e Produtos')
 
 @section('style')
-
+    <link href="{{ asset('css/SearchBar.css') }}"
 @endsection
 
 @section('sistema_fisico')
