@@ -7,8 +7,8 @@
             buttons: {
                 cancel: {
                     text: "Cancel",
-                    value: null,
-                    visible: false,
+                    value: false,
+                    visible: true,
                     className: "",
                     closeModal: true,
                 },
