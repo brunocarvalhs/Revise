@@ -16,7 +16,7 @@
 <div class="card testimonial-card">
     <div class="card-up lighten-1"></div>
 
-    <div class="avatar mx-auto">
+    <div class="avatar mx-auto col">
         <img src="{{ asset('img/user.jpg') }}" width="300" height="300" class="rounded-circle" alt="woman avatar">
     </div>
     <div class="card-body">
