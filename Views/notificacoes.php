@@ -148,9 +148,18 @@ $peças = 2;
                                     </div>
                                     <!-- sidebar-menu  -->
                                 </div>
-                                <!-- sidebar-content  -->
-                                <div class="sidebar-footer rodapeMenu bg-dark">
-                                    <div class="col-9"></div>
+                                <!-- sidebar-content  -->                 
+                            <div class="sidebar-footer rodapeMenu bg-dark">
+                                    <div class="col-9">
+                                        <button class="btn btn-dark" type="button" onclick="Sair()">                                    
+                                            <svg id="i-signout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                                width="22" height="22" fill="none" stroke="currentcolor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                <path d="M28 16 L8 16 M20 8 L28 16 20 24 M11 28 L3 28 3 4 11 4"></path>
+                                            </svg>
+                                            <span>Sair</span>
+                                        </button>
+                                    </div>
                                     <div class="col-2">
                                         <div class="dropdown">
                                             <button class="btn btn-dark" type="button" id="dropdownMenuButton"
@@ -160,16 +169,21 @@ $peças = 2;
                                                     stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
                                                     stroke-width="2">
                                                     <path
-                                                        d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30 19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z" />
-                                                    <circle cx="16" cy="16" r="4" />
+                                                        d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30 19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z">
+                                                    </path>
+                                                    <circle cx="16" cy="16" r="4"></circle>
                                                 </svg>
                                             </button>
                                             <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item bg-warning bg-warning-hover" href="">Excluir conta</a>
+                                                <a class="dropdown-item bg-warning" href="">
+                                                    <span style="vertical-align: inherit;">
+                                                        <span style="vertical-align: inherit;" class="text-light">Excluir conta</span>
+                                                    </span>
+                                                </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                            </div>
+                                            </div>
+                                            </div>
                             </nav>
                         </div>
                     </div>

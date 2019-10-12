@@ -118,10 +118,11 @@ function infoKm() {
       }
     });
 }
+
 function Sair() {
 
-  swal("Qual tipo de cadastro você deseja fazer?", {
-    icon: "info",
+  swal("Deseja realmente sair?", {
+    icon: "warning",
     buttons: {
       cancel: {
         text: "Cancelar",
@@ -129,13 +130,13 @@ function Sair() {
       },
       
       catch: {
-        text: "Jurídico",
-        value: "juridico",
+        text: "Sim",
+        value: "Sim",
         className: "swal-button--style"
       },
       defeat: {
-        text: "Físico",
-        value: "fisico",
+        text: "Cancelar",
+        value: "Cancelar",
         className: "swal-button--style"
       }
 
@@ -145,15 +146,51 @@ function Sair() {
     .then((value) => {
       switch (value) {
 
-        case "juridico":
-          window.location.href = './cadastro_juridico.php';
+        case "Sim":
+          window.location.href = '../login.php';
           break;
-
-        case "fisico":
-          window.location.href = './cadastro.php';
-          break;
-
       }
     });
 
+}
+
+function excluirVeiculo(){
+  swal("Deseja realmente excluir esse veículo?", {
+    icon: "warning",
+    buttons: {
+
+      catch: {
+        text: "Sim",
+        value: "Sim",
+        className: "swal-button--style"
+      },
+      defeat: {
+        text: "Cancelar",
+        value: "cancelar",
+        className: "swal-button--style"
+      },
+
+    },
+  })
+    .then((value) => {
+      switch (value) {
+
+        case "Sim":
+        swal("Veículo excluído com sucesso!", {
+          icon: "success",
+          buttons: {
+            catch: {
+              text: "OK",
+              value: "ok",
+              className: "swal-button--style"
+            },     
+          },
+          
+        })   
+        .then((value) => {     
+          window.location.reload();     
+        })
+      }
+    });
+      
 }

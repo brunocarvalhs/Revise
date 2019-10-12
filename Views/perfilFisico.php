@@ -17,7 +17,8 @@ $peças = 2;
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Revise - Perfil</title>
@@ -25,49 +26,49 @@ $peças = 2;
 
 <body onload="disable()" class="bg-light">
     <div class="row">
-            <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">     
-          <!--Menu superior responsivo-->
-          <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <a class="navbar-brand" href="#">
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="img/logo.png" width="50" height="50" alt="Revise"
-                                        class="d-inline-block align-top">
-                                </div>
+        <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">
+            <!--Menu superior responsivo-->
+            <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/logo.png" width="50" height="50" alt="Revise"
+                                    class="d-inline-block align-top">
                             </div>
-                        </a>                    
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-    
-    
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link h4">Menu</a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="sistema.php">Início</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="perfilFisico.php">Perfil</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="notificacoes.php">Notificações</a>
-                                </li>                             
-                                <li class="nav-item">
-                                    <a class="nav-link" href="veiculos.php">Veículos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Serviços e Produtos</a>
-                                </li>
-                            </ul>
                         </div>
-                    </nav>
-                </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link h4">Menu</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="sistema.php">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="perfilFisico.php">Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="notificacoes.php">Notificações</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="veiculos.php">Veículos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Serviços e Produtos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
             <!--Menu lateral-->
             <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 responsivo">
                 <div class="container-fluid">
@@ -149,26 +150,41 @@ $peças = 2;
                                 </div>
                                 <!-- sidebar-content  -->
                                 <div class="sidebar-footer rodapeMenu bg-dark">
-                                        <div class="col-9">
-                                            <button class="btn btn-dark" type="button" onclick="Sair()">
-                                                <svg id="i-signout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                                                    <path d="M28 16 L8 16 M20 8 L28 16 20 24 M11 28 L3 28 3 4 11 4"></path>
+                                    <div class="col-9">
+                                        <button class="btn btn-dark" type="button" onclick="Sair()">
+                                            <svg id="i-signout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                                width="22" height="22" fill="none" stroke="currentcolor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                <path d="M28 16 L8 16 M20 8 L28 16 20 24 M11 28 L3 28 3 4 11 4"></path>
+                                            </svg>
+                                            <span>Sair</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="dropdown">
+                                            <button class="btn btn-dark" type="button" id="dropdownMenuButton"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <svg id="i-settings" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 32 32" width="22" height="22" fill="none"
+                                                    stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2">
+                                                    <path
+                                                        d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30 19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z">
+                                                    </path>
+                                                    <circle cx="16" cy="16" r="4"></circle>
                                                 </svg>
                                             </button>
+                                            <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
+                                                <a class="dropdown-item bg-warning" href="">
+                                                    <span style="vertical-align: inherit;">
+                                                        <span style="vertical-align: inherit;"
+                                                            class="text-light">Excluir conta</span>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="col-2">
-                                            <div class="dropdown">
-                                                <button class="btn btn-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <svg id="i-settings" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                                                        <path d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30 19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z"></path>
-                                                        <circle cx="16" cy="16" r="4"></circle>
-                                                    </svg>
-                                                </button>
-                                                <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item bg-warning" href=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Excluir conta</font></font></a>
-                        </div>
-                    </div>
-                
+                                    </div>
+                                </div>
                             </nav>
                         </div>
                     </div>
@@ -176,98 +192,104 @@ $peças = 2;
             </div>
         </div>
         <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
-                <div class="row">
-                    <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
-                    <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
-            <br><br>
-            <div class="card  bg-dark" >
-                <div class="card-body">
-                      <!--Perfil Usuario Fisico-->
-                    <form action="" method="POST" onsubmit="">
-                        <div class="container-fluid">
-                            <div class="row formularioCadastro">
-                                <div class="col-12">
-                                    <!-- Nome completo -->
-                                    <div class="form-group inputCadastro">
-                                        <div class="form-row">
-                                            <div class="col-12">
-                                                <label for="campoNome" class="text-warning">Nome completo</label>
-                                            </div>
-                                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                                <input type="text" class="form-control" id="campoNome">
-        
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- E-mail -->
-                                    <div class="form-group inputCadastro">
-                                        <label for="exampleFormControlInput1" class="text-warning">Endereço de email</label>
-                                        <input type="email" class="form-control" id="campoEmail">
-                                    </div>
-                                    <div class="form-group inputCadastro">
-                                        <div class="form-row">
-                                            <!-- CPF -->
-                                            <div class="col-12 col-sm-12 col-md col-lg col-xl">
-                                                <label for="exampleFormControlInput1" class="text-warning">CPF</label>
-                                                <input type="text" class="form-control" id="campoDoCpf"
-                                                    placeholder="xxx.xxx.xxx-xx">
-                                            </div>
-                                            <!-- Data de nascimento -->
-                                            <div class="col-12 col-sm-12 col-md col-lg col-xl">
-                                                <label for="exampleFormControlInput1" class="text-warning">Data de nascimento</label>
-                                                <input type="date" class="form-control" id="campoDeNascimento">
-                                            </div>
-                                        </div>
-                                    </div>
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                            <div class="form-row">
-                                                <div class="col-12">
-                                                    <label class="text-warning">Planos</label>
+            <div class="row">
+                <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
+                <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
+                    <br><br>
+                    <div class="card  bg-dark">
+                        <div class="card-body">
+                            <!--Perfil Usuario Fisico-->
+                            <form action="" method="POST" onsubmit="">
+                                <div class="container-fluid">
+                                    <div class="row formularioCadastro">
+                                        <div class="col-12">
+                                            <!-- Nome completo -->
+                                            <div class="form-group inputCadastro">
+                                                <div class="form-row">
+                                                    <div class="col-12">
+                                                        <label for="campoNome" class="text-warning">Nome
+                                                            completo</label>
+                                                    </div>
+                                                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                        <input type="text" class="form-control" id="campoNome">
+
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="input-group mb-3">
-                                                <select class="custom-select" id="txtPlano" name="txtPlano"
-                                                    aria-label="Exemplo de select com botão addon">
-                                                    <option value="" selected>Basic</option>
-                                                    <option value="" selected>Standart</option>
-                                                    <option value="" selected>Profission</option>
-                                                    <option value="" selected>Deluxe Edition</option>
-                                                </select>
+                                            <!-- E-mail -->
+                                            <div class="form-group inputCadastro">
+                                                <label for="exampleFormControlInput1" class="text-warning">Endereço de
+                                                    email</label>
+                                                <input type="email" class="form-control" id="campoEmail">
                                             </div>
-                                        </div> 
-                                </div>
-                            </div>
-                            <!--Botões para alteração-->
-                            <br>
-                            <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: block;" id="btn_off">
-                                    <button type="button" class="btn btn-outline-warning btn-block" onclick="btnPerfil()">Alterar
-                                        dados</button>
-                                </div>
-                                <!--Botões escondidos-->
-                                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" style="display: none;"
-                                    id="btn_hidden">
-                                    <div class="row">
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                            <button type="button" class="btn btn-success btn-block"
-                                                onclick="Salvar()">Salvar</button>
-                                        </div>
-                                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                            <button type="button" class="btn btn-danger btn-block"
-                                                onclick="Cancelar()">Cancelar</button>
+                                            <div class="form-group inputCadastro">
+                                                <div class="form-row">
+                                                    <!-- CPF -->
+                                                    <div class="col-12 col-sm-12 col-md col-lg col-xl">
+                                                        <label for="exampleFormControlInput1"
+                                                            class="text-warning">CPF</label>
+                                                        <input type="text" class="form-control" id="campoDoCpf"
+                                                            placeholder="xxx.xxx.xxx-xx">
+                                                    </div>
+                                                    <!-- Data de nascimento -->
+                                                    <div class="col-12 col-sm-12 col-md col-lg col-xl">
+                                                        <label for="exampleFormControlInput1" class="text-warning">Data
+                                                            de nascimento</label>
+                                                        <input type="date" class="form-control" id="campoDeNascimento">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                                                <div class="form-row">
+                                                    <div class="col-12">
+                                                        <label class="text-warning">Planos</label>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <select class="custom-select" id="txtPlano" name="txtPlano"
+                                                        aria-label="Exemplo de select com botão addon">
+                                                        <option value="" selected>Basic</option>
+                                                        <option value="" selected>Standart</option>
+                                                        <option value="" selected>Profission</option>
+                                                        <option value="" selected>Deluxe Edition</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-        
+                                    <!--Botões para alteração-->
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: block;"
+                                            id="btn_off">
+                                            <button type="button" class="btn btn-outline-warning btn-block"
+                                                onclick="btnPerfil()">Alterar
+                                                dados</button>
+                                        </div>
+                                        <!--Botões escondidos-->
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" style="display: none;"
+                                            id="btn_hidden">
+                                            <div class="row">
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                                                    <button type="button" class="btn btn-success btn-block"
+                                                        onclick="Salvar()">Salvar</button>
+                                                </div>
+                                                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                                                    <button type="button" class="btn btn-danger btn-block"
+                                                        onclick="Cancelar()">Cancelar</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
                         </div>
+                        </form>
+                    </div>
                 </div>
-                </form>
-                </div>
-              </div>
-           
-    </div>
-    </div>
+
+            </div>
+        </div>
     </div>
     <!--Style para controlar o responsive menu padding-->
     <style>
@@ -290,4 +312,5 @@ $peças = 2;
 <script src="../Views/js/validation/CadastroJuridico.js"></script>
 <script src="../Views/js/cadastro.js"></script>
 <script src="../Views/js/index.js"></script>
+
 </html>

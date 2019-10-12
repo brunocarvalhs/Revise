@@ -17,7 +17,8 @@ $peças = 2;
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/sistema.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>Revise - Início</title>
@@ -26,48 +27,48 @@ $peças = 2;
 <body class="bg-light">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-0 col-lg-1 col-xl-1">
-             <!--Menu superior responsivo-->
-             <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
-                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <a class="navbar-brand" href="#">
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="img/logo.png" width="50" height="50" alt="Revise"
-                                        class="d-inline-block align-top">
-                                </div>
+            <!--Menu superior responsivo-->
+            <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/logo.png" width="50" height="50" alt="Revise"
+                                    class="d-inline-block align-top">
                             </div>
-                        </a>                    
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-    
-    
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link h4">Menu</a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="sistema.php">Início</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="perfilFisico.php">Perfil</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="notificacoes.php">Notificações</a>
-                                </li>                          
-                                <li class="nav-item">
-                                    <a class="nav-link" href="veiculos.php">Veículos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Serviços e Produtos</a>
-                                </li>
-                            </ul>
                         </div>
-                    </nav>
-                </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link h4">Menu</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="sistema.php">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="perfilFisico.php">Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="notificacoes.php">Notificações</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="veiculos.php">Veículos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Serviços e Produtos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
             <!--Menu lateral-->
             <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 responsivo">
                 <div class="container-fluid">
@@ -84,9 +85,9 @@ $peças = 2;
                                                 <div class="col-4">
                                                     <img src="img/logo.png" width="50" height="50" alt="Revise"
                                                         class="d-inline-block align-top alig">
-                                                </div>                                             
+                                                </div>
                                             </div>
-                                            
+
                                         </a>
                                     </div>
                                     <div class="sidebar-header">
@@ -150,7 +151,16 @@ $peças = 2;
                                 </div>
                                 <!-- sidebar-content  -->
                                 <div class="sidebar-footer rodapeMenu bg-dark">
-                                    <div class="col-9"></div>
+                                    <div class="col-9">
+                                        <button class="btn btn-dark" type="button" onclick="Sair()">
+                                            <svg id="i-signout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                                width="22" height="22" fill="none" stroke="currentcolor"
+                                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                                <path d="M28 16 L8 16 M20 8 L28 16 20 24 M11 28 L3 28 3 4 11 4"></path>
+                                            </svg>
+                                            <span>Sair</span>
+                                        </button>
+                                    </div>
                                     <div class="col-2">
                                         <div class="dropdown">
                                             <button class="btn btn-dark" type="button" id="dropdownMenuButton"
@@ -160,12 +170,18 @@ $peças = 2;
                                                     stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round"
                                                     stroke-width="2">
                                                     <path
-                                                        d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30 19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z" />
-                                                    <circle cx="16" cy="16" r="4" />
+                                                        d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30 19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z">
+                                                    </path>
+                                                    <circle cx="16" cy="16" r="4"></circle>
                                                 </svg>
                                             </button>
                                             <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
-                                                <button class="dropdown-item bg-warning" onclick="excluirConta()" href="">Excluir conta</button>
+                                                <a class="dropdown-item bg-warning" href="">
+                                                    <span style="vertical-align: inherit;">
+                                                        <span style="vertical-align: inherit;"
+                                                            class="text-light">Excluir conta</span>
+                                                    </span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -181,11 +197,11 @@ $peças = 2;
                 <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
                 <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
                     <!--Legenda-->
-                    <div class="card text-white bg-secondary mb-3" style="width: 100%;" >
+                    <div class="card text-white bg-secondary mb-3" style="width: 100%;">
                         <div class="card-header text-center">Legenda</div>
                         <div class="card-body">
                             <div class="row text-center">
-                            <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                                <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                                     <div class="progress">
                                         <div class="progress-bar bg-light" role="progressbar" style="width: 100%"
                                             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -214,9 +230,9 @@ $peças = 2;
                                     <div class=" text-light">Hora de Revisar!</div>
 
                                 </div>
-                                </div>
-                                </div>
-                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--Fim legenda-->
@@ -448,4 +464,5 @@ $peças = 2;
 <script src="../Views/js/validation/CadastroJuridico.js"></script>
 <script src="../Views/js/cadastro.js"></script>
 <script src="../Views/js/index.js"></script>
+
 </html>
