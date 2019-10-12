@@ -21,8 +21,6 @@
         </div>
     </div>
     <div class="card-body">
-        <h4 class="card-title">{{ $dados->Nome }}</h4>
-        <hr>
         <div class="card-body">
             <form action="" method="POST" onsubmit="">
                 <!--Perfil Usuario Fisico-->
@@ -68,10 +66,10 @@
                             </div>
                             <div class="input-group mb-3">
                                 <select class="custom-select" id="txtPlano" name="txtPlano" aria-label="Exemplo de select com botão addon">
-                                    <option value="" selected>Basic</option>
-                                    <option value="" selected>Standart</option>
-                                    <option value="" selected>Profission</option>
-                                    <option value="" selected>Deluxe Edition</option>
+                                    <option value="" >Basic</option>
+                                    <option value="" >Standart</option>
+                                    <option value="" >Profission</option>
+                                    <option value="" >Deluxe Edition</option>
                                 </select>
                             </div>
                         </div>
