@@ -207,5 +207,5 @@
 <script src="{{asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
 @yield('script')
 @yield('mensagem')
-@component('componentes.SairSistema')
+@include('componentes.SairSistema')
 </html>
