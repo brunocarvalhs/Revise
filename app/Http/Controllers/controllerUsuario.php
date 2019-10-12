@@ -215,14 +215,14 @@ class controllerUsuario extends Controller
     public function getDownload(Request $request){
 
         $headers = array(
-            'Content-Type: application/apk',
+            'Content-Type: application/vnd.android.package-archive',
         );
 
         switch($request->tipo){
             case 'android':{
                 $apk = public_path()."\download\build\app-debug.apk";
                 redirect()->back();
-                return Response::download($apk, 'revise.apk', $headers);
+                return Response::download($apk, 'revise', $headers);
             }
             case 'ios':{
                 return redirect()->back();
