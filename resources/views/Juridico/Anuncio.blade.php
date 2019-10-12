@@ -7,7 +7,9 @@
 @endsection
 
 @section('sistema_juridico')
+    <div class="">
 
+    </div>
 @endsection
 
 @section('script')
