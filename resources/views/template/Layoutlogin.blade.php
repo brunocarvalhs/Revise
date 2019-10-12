@@ -39,14 +39,12 @@
 
             var tamanho = $("#cpfcnpj").val().length;
 
-            if (tamanho < 11) {
-                    $("#cpfcnpj").attr({
-                        "data-mask": "000.000.000-00",
-                    });
-                } else {
-                    $("#cpfcnpj").attr({
-                        "data-mask": "00.000.000/0000-00",
-                    });
+            if (tamanho < 11)
+            {
+                    $("#cpfcnpj").attr('ls-mask-cnpj', 'ls-mask-cpf');
+            } else
+            {
+                    $("#cpfcnpj").attr('ls-mask-cpf', 'ls-mask-cnpj');
             }
 
             // ajustando foco
