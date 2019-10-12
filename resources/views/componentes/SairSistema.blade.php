@@ -13,10 +13,10 @@
                     closeModal: true,
                 },
                 confirm: {
-                    text: "OK",
+                    text: "Sair",
                     value: true,
                     visible: true,
-                    className: "",
+                    className: "swal-button--style",
                     closeModal: true
                 }
             }
