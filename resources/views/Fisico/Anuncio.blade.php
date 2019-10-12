@@ -9,7 +9,7 @@
 @section('sistema_fisico')
 <div class="row">
     <div class="col-12 inputPesquisa">
-        <form action="">
+        <form action="{{ route('pesquisa) }}">
             <div class="input-group">
                 <input type="text" class="form-control" aria-label="Text input with dropdown button">
                 <div class="input-group-append">

@@ -6,5 +6,11 @@ use Illuminate\Http\Request;
 
 class controllerAnuncio extends Controller
 {
-    //
+
+
+
+
+    public function Pesquisa(Request $request){
+        return dd($request->tipo, $request->preco);
+    }
 }
