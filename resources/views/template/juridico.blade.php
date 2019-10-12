@@ -168,7 +168,9 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
             <div class="container-fluid">
                 <div class="row">
-                    @yield('sistema_juridico')
+                    <div class="col-12 semPadding">
+                        @yield('sistema_juridico')
+                    </div>
                 </div>
             </div>
         </div>
