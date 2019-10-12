@@ -175,7 +175,7 @@
         </div>
     </section>
     <!--Obd2 section-->
-    <section class="bg-dark">
+    <section class="backgroundBlack bg-dark">
         <div class="container">
             <!--Passo a passo-->
             <div class="col-12">

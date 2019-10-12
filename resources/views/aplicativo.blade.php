@@ -262,7 +262,7 @@
         </div>
     </div>
 </section>
-<section class="backgroundBlack" id="suporte">
+<section class="backgroundBlack bg-dark" id="suporte">
     <div class="container">
         <div class="row">
             <div class="col-12 tituloBranco">
