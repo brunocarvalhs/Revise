@@ -59,7 +59,7 @@ $peças = 2;
                                     <a class="nav-link" href="notificacoes.php">Notificações</a>
                                 </li>                             
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Veículos</a>
+                                    <a class="nav-link" href="veiculos.php">Veículos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Serviços e Produtos</a>
@@ -132,7 +132,7 @@ $peças = 2;
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="#">
+                                                <a href="veiculos.php">
                                                     <i class="fa fa-car" aria-hidden="true"></i>
                                                     <span>Veículos</span>
                                                 </a>

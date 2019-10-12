@@ -59,7 +59,7 @@ $peças = 2;
                                     <a class="nav-link" href="notificacoes.php">Notificações</a>
                                 </li>                          
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Veículos</a>
+                                    <a class="nav-link" href="veiculos.php">Veículos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Serviços e Produtos</a>
@@ -133,7 +133,7 @@ $peças = 2;
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="#">
+                                                <a href="veiculos.php">
                                                     <i class="fa fa-car" aria-hidden="true"></i>
                                                     <span>Veículos</span>
                                                 </a>
@@ -165,7 +165,7 @@ $peças = 2;
                                                 </svg>
                                             </button>
                                             <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item bg-warning" href="">Excluir conta</a>
+                                                <button class="dropdown-item bg-warning" onclick="excluirConta()" href="">Excluir conta</button>
                                             </div>
                                         </div>
                                     </div>
@@ -435,18 +435,17 @@ $peças = 2;
         }
     </style>
 </body>
-<script src="Views/js/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-<script src="Views/js/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="/Views/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-<script src="Views/js/wow.js"></script>
-<script src="Views/js/index.js"></script>
-<script src="Views/js/sweetalert.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="../Views/js/jquery-3.4.1.js"></script>
+<script src="../Views/js/jquery.min.js"></script>
+<script src="../Views/js/popper.min.js"></script>
+<script src="../Views/js/bootstrap.min.js"></script>
+<script src="../Views/js/wow.js"></script>
+<script src="../Views/js/sweetalert.min.js"></script>
+<script src="../Views/js/progressbar.js"></script>
+<script src="../Views/js/sistema.js"></script>
+<script src="../Views/js/jquery.mask.js"></script>
+<script src="../Views/js/API.js"></script>
+<script src="../Views/js/validation/CadastroJuridico.js"></script>
+<script src="../Views/js/cadastro.js"></script>
+<script src="../Views/js/index.js"></script>
 </html>

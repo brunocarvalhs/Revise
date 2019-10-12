@@ -535,3 +535,6 @@ body, html{
 .badgeDarkColor{
   background-color: #1d2124;
 }
+.paddingCard{
+  padding-top: 150px;
+}

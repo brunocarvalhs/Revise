@@ -61,7 +61,7 @@ $peças = 2;
                             <a class="nav-link" href="notificacoes.php">Notificações</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Veículos</a>
+                            <a class="nav-link" href="veiculos.php">Veículos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Serviços e Produtos</a>
@@ -134,7 +134,7 @@ $peças = 2;
                                             </a>
                                         </li>
                                         <li class="sidebar-content">
-                                            <a href="#">
+                                            <a href="veiculos.php">
                                                 <i class="fa fa-car" aria-hidden="true"></i>
                                                 <span>Veículos</span>
                                             </a>
@@ -181,8 +181,8 @@ $peças = 2;
     <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
         <div class="row">
             <div class="col-1 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
-            <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9" id="divPadding">
-                <div class="card">
+            <div class="col-10 col-sm-10 col-md-10 col-lg-9 col-xl-9 paddingCard">
+                <div class="card bg-dark">
                     <div class="card-body">
                          <div class="container-fluid">
                         <!--Incia conteúdo card-->
@@ -192,12 +192,12 @@ $peças = 2;
                                 <div class="input-group">
                                         <select class="custom-select" id="inputGroupSelect04" aria-label="Exemplo de select com botão addon">
                                             <option selected>Escolher...</option>
-                                            <option value="1">Um</option>
-                                            <option value="2">Dois</option>
-                                            <option value="3">Três</option>
+                                            <option value="1">Placa 1</option>
+                                            <option value="2">Placa 2</option>
+                                            <option value="3">Placa 3</option>
                                         </select>
                                         <div class="input-group-append">
-                                            <button class="btn btn-danger" type="button">Excluir Veículo</button>
+                                            <button class="btn btn-danger" onclick="excluirVeiculo()" type="button">Excluir Veículo</button>
                                         </div>
                                     </div>
                                 </fieldset>
@@ -251,15 +251,17 @@ $peças = 2;
     }
 </style>
 </body>
-<script src="/Views/js/jquery-3.4.1.js"></script>
-<script src="/Views/js/popper.min.js"></script>
-<script src="/Views/js/bootstrap.min.js"></script>
-<script src="/Views/js/wow.js"></script>
-<script src="/Views/js/index.js"></script>
-<script src="/Views/js/sweetalert.min.js"></script>
-<script src="/Views/js/progressbar.js"></script>
-<script src="/Views/js/sistema.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="../Views/js/jquery-3.4.1.js"></script>
+<script src="../Views/js/jquery.min.js"></script>
+<script src="../Views/js/popper.min.js"></script>
+<script src="../Views/js/bootstrap.min.js"></script>
+<script src="../Views/js/wow.js"></script>
+<script src="../Views/js/sweetalert.min.js"></script>
+<script src="../Views/js/progressbar.js"></script>
+<script src="../Views/js/sistema.js"></script>
+<script src="../Views/js/jquery.mask.js"></script>
+<script src="../Views/js/API.js"></script>
+<script src="../Views/js/validation/CadastroJuridico.js"></script>
+<script src="../Views/js/cadastro.js"></script>
+<script src="../Views/js/index.js"></script>
 </html>
