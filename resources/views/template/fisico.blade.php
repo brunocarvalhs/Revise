@@ -83,7 +83,7 @@
                 </nav>
             </div>
             <!--Menu lateral-->
-            <div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 responsivo">
+            <div class="col-0 col-sm-0 col-md-6 col-lg-6 col-xl-6 responsivo">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
