@@ -540,3 +540,10 @@ body, html{
 .inputPesquisa{
     margin-top: 5%;
 }
+
+@media (min-width: 1204px ) and (max-width: 1428px){
+    .conteudo{
+        padding-left: 60px;
+    }
+}
+
