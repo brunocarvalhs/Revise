@@ -13,8 +13,8 @@
 
 
 @section('sistema_fisico')
-<div class="card PerfilCard">
-    <div class="card-up lighten-1 perfilBackgroud"></div>
+<div class="card">
+    <div class="card-up lighten-1 PerfilCard perfilBackgroud"></div>
     <div class="avatar mx-auto row">
         <div class="col">
             <img src="{{ asset('img/user.jpg') }}" width="250" height="250" class="rounded-circle" alt="woman avatar">
