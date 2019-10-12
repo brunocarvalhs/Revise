@@ -193,9 +193,7 @@
         <div class="col-12 col-sm-12 col-md-0 col-lg-9 col-xl-9">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
-                        @yield('sistema_fisico')
-                    </div>
+                    @yield('sistema_fisico')
                 </div>
             </div>
         </div>
