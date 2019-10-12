@@ -548,9 +548,8 @@ body, html{
 }
 
 @media (max-width: 990px){
-    .conteudo{
+    .conteudoTop{
         margin-top: 80px;
-        padding-left: 60px;
     }
 }
 
