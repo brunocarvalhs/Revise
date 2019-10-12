@@ -46,13 +46,14 @@ Route::get('/Download/{tipo}', function ($tipo){
     switch($tipo){
         case 'android':{
             $apk = public_path(). "\download\build\app-debug.apk";
-            return Response::download($apk, 'revise.apk', []);
+            Response::download($apk, 'revise.apk', []);
+            return redirect()->back();
         }
         case 'ios':{
-            return view('aplicativo');
+            return redirect()->back();
         }
         default:{
-
+            return redirect()->back();
         }
     }
 });
