@@ -15,7 +15,7 @@
                     <div class="custom-file">
                         <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                     </div>
-                    <div class="input-group-prepend">
+                    <div class="input-group-append">
                         <select class="btn btn-outline-secondary">
                             <option>Todos</option>
                             <option>Serviços</option>
