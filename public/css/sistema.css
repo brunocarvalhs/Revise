@@ -570,6 +570,12 @@ body, html{
 .perfil{
     margin-top: 15px;
 }
-.sistema_navbar{
-    margin-bottom: 40px;
+@media (max-width: 972.8px){
+    .PerfilCard{
+        overflow: hidden;
+        height: 200px;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem;
+        margin-top: 80px;
+    }
 }
