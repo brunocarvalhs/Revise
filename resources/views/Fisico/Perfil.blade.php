@@ -13,7 +13,7 @@
 
 
 @section('sistema_fisico')
-<div class="card">
+<div class="card perfil">
     <div class="card-up lighten-1 PerfilCard perfilBackgroud"></div>
     <div class="avatar mx-auto row">
         <div class="col">
