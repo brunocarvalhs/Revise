@@ -51,19 +51,24 @@
                     <div class="dropdown-menu dropdown-menu-right" role="menu">
                         <form class="form-horizontal" role="form">
                             <div class="form-group">
-                                <select class="custom-select">
-                                    <option value="">Tipo</option>
-                                    <option value="1">Serviços</option>
-                                    <option value="2">Produtos</option>
+                                <label for="filter">Filter by</label>
+                                <select class="form-control">
+                                    <option value="0" selected>All Snippets</option>
+                                    <option value="1">Featured</option>
+                                    <option value="2">Most popular</option>
+                                    <option value="3">Top rated</option>
+                                    <option value="4">Most commented</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <select class="custom-select">
-                                    <option value="">Ordem</option>
-                                    <option value="1">Mais Barato</option>
-                                    <option value="2">Mais Caros</option>
-                                </select>
+                                <label for="contain">Author</label>
+                                <input class="form-control" type="text" />
                             </div>
+                            <div class="form-group">
+                                <label for="contain">Contains the words</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                         </form>
                     </div>
                 </div>
