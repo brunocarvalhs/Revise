@@ -17,7 +17,7 @@
 
 <body id="sistemaJ" class="bg-light container-fluid semPadding">
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-0 menusuperior">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <a class="navbar-brand" href="#">
@@ -165,7 +165,7 @@
             </div>
         </div>
         <!--COnteudo -->
-        <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-10">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
