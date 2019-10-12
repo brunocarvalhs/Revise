@@ -60,19 +60,19 @@
                             <li class="nav-item active">
                                 <a class="nav-link h4">Menu</a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item @yield('menu_inicio')">
                                 <a class="nav-link" href="{{ url('/Home') }}">Início</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item @yield('menu_perfil')">
                                 <a class="nav-link" href="{{ url('/Home/Perfil') }}">Perfil</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item @yield('menu_notificacao')">
                                 <a class="nav-link" href="{{ url('/Home/Notificacao') }}">Notificações</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item @yield('menu_veiculos')">
                                 <a class="nav-link" href="{{ url('/Home/Veiculos') }}">Veículos</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item @yield('menu_anuncio')">
                                 <a class="nav-link" href="{{ url('/Home/Anuncio') }}">Serviços e Produtos</a>
                             </li>
                         </ul>

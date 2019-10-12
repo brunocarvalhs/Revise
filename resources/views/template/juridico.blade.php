@@ -23,7 +23,7 @@
                     <a class="navbar-brand" href="#">
                         <div class="row">
                             <div class="col-4">
-                                <img src="img/logo.png" width="50" height="50" alt="Revise" class="d-inline-block align-top">
+                                <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top">
                             </div>
                         </div>
                     </a>
@@ -37,16 +37,16 @@
                             <li class="nav-item active">
                                 <a class="nav-link h4">Menu</a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item @yield('menu_inicio')">
                                 <a class="nav-link" href="{{ url('/Home') }}">Início</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item @yield('menu_perfil')">
                                 <a class="nav-link" href="{{ url('/Home/Perfil') }}">Perfil</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item @yield('menu_anuncios')">
                                 <a class="nav-link" href="{{ url('/Home/Anuncio') }}">Anúncios</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item @yield('menu_indice')">
                                 <a class="nav-link" href="{{ url('/Home/Indice') }}">Índice de Acesso</a>
                             </li>
                         </ul>
@@ -71,7 +71,7 @@
                                             <a class="navbar-brand" href="#">
                                                 <div class="row">
                                                     <div class="col-4">
-                                                        <img src="img/logo.png" width="50" height="50" alt="Revise" class="d-inline-block align-top">
+                                                        <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top">
                                                     </div>
                                                     <div class="col-8">
                                                         <label class="tituloMenu">Revise</label>

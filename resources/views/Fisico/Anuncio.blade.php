@@ -2,6 +2,8 @@
 
 @section('titulo','Serviços e Produtos')
 
+@section('menu_anuncio','active')
+
 @section('style')
 
 @endsection

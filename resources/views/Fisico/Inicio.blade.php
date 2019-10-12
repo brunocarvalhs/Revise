@@ -1,6 +1,8 @@
 @extends('template/fisico')
 
-@section('titulo', 'Início')
+@section('titulo','Início')
+
+@section('menu_inicio','active')
 
 @section('style')
 
