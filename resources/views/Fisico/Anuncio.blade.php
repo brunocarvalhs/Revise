@@ -3,6 +3,7 @@
 @section('titulo','Serviços e Produtos')
 
 @section('style')
+<style>
 .dropdown.dropdown-lg .dropdown-menu {
     margin-top: -1px;
     padding: 6px 20px;
@@ -30,6 +31,7 @@
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
+</style>
 @endsection
 
 @section('sistema_fisico')
