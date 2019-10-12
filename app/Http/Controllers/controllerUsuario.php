@@ -211,4 +211,26 @@ class controllerUsuario extends Controller
         return redirect()->back()->with('Login', $Login);
     }
 
+
+    public function getDownload(Request $request){
+
+        $headers = array(
+            'Content-Type: application/apk',
+        );
+
+        switch($request->tipo){
+            case 'android':{
+                $apk = "\download\build\app-debug.apk";
+                redirect()->back();
+                return Response::download($apk, 'revise.apk', $headers);
+            }
+            case 'ios':{
+                return redirect()->back();
+            }
+            default:{
+                return redirect()->back();
+
+            }
+        }
+    }
 }
