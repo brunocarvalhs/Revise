@@ -179,16 +179,7 @@
 <script src="{{ asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
 <script src="{{ asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
 @yield('script')
-<script>
-function Sair() {
-    swal({
-        icon: "warning",
-        title: "Confirmação",
-        text: "Deseja sair do sistema?",
-        buttons: [true, "Sim, sair."],
-    }).then(()=>{
-        window.location.href = "{{ route('sair') }}";
-    });
-}
-</script>
+@component('componentes.sair')
+    @slot('',{{ route('sair') }})
+@endcomponent
 </html>
