@@ -218,10 +218,10 @@ class controllerUsuario extends Controller
             case 'android':{
                 $apk = public_path()."\download\build\app-debug.apk";
                 redirect()->back();
-                return Response::download($apk, 'revise.apk')->header([
+                return Response::download($apk,[
                     'Content-Type'=>'application/vnd.android.package-archive',
-                    'Content-Disposition'=> 'attachment; filename="android.apk"',
-                ]);
+                    'Content-Disposition'=> 'attachment; filename="app.apk"',
+                    ]);
             }
             case 'ios':{
                 return redirect()->back();
