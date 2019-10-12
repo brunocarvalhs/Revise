@@ -63,7 +63,7 @@ function infoKm() {
               swal({
 
                 title: "Salvo",
-                text: "Caso deseje alterar sua quilometragem acesse a área das informações do veículo.",
+                text: "Obs: Caso deseje alterar, acesse a área veículos",
                 icon: "success",
                 closeOnClickOutside: false,
                 closeOnEsc: false,

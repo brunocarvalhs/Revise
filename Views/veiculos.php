@@ -248,7 +248,19 @@ $peças = 2;
                                             </div>
 
                                         </div>
-                                    </div>
+                                        <br>
+                                        <div class="form-row">
+                                            <div class="col-12">
+                                            <label for="cidadeVeiculo" class="text-warning">Quilometragem</label>
+                                                <div class="input-group mb-1">
+                                                    <input type="text" class="form-control">
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-warning" type="button" id="btnAlterarKm">Alterar</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
