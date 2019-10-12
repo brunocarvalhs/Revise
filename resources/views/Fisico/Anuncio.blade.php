@@ -16,8 +16,7 @@
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Filtros</button>
                     <div class="dropdown-menu">
                         <div class="form-group">
-                            <label>Tipos</label>
-
+                            <label class="dropdown-item">Tipos</label>
                             <div class="form-check">
                                 <div class="dropdown-item">
                                     <input class="form-check-input" type="radio" name="tipo" id="tipo1" value="todos" checked>
@@ -45,7 +44,7 @@
                         </div>
                         <div class="dropdown-divider"></div>
                         <div class="form-group">
-                            <label>Preços</label>
+                            <label class="dropdown-item">Preços</label>
                             <div class="form-check">
                                 <div class="dropdown-item">
                                     <input class="form-check-input" type="radio" name="preco" id="preco1" value="todos" checked>
