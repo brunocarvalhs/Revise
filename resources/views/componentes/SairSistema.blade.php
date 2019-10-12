@@ -4,7 +4,7 @@
             icon: "warning",
             title: "Confirmação",
             text: "Deseja sair do sistema?",
-            buttons: [{
+            buttons: [
             cancel: {
                 text: "Cancel",
                 value: false,
@@ -18,7 +18,6 @@
                 visible: true,
                 className: "",
                 closeModal: true
-            }
             }],
         }).then((decicao)=>{
             if(decicao)
