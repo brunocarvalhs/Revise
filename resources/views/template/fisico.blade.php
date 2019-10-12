@@ -20,7 +20,7 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2">
             <!--Menu superior responsivo-->
             <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav sistema_navbar">
                     <a class="navbar-brand" href="#">
                         <div class="row">
                             <div class="col-4">
