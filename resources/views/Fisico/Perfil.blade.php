@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" value='{{ $dados->Plano }}' readonly>
+                                <input class="form-control" type="text" value='{{ $dados->Plano }}' readonly>
                             </div>
                             <div class="input-group mb-3">
                                 <select class="custom-select" id="txtPlano" name="txtPlano" aria-label="Exemplo de select com botão addon" hidden>
