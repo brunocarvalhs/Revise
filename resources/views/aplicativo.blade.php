@@ -278,8 +278,8 @@
                 </p>
                 <p>
                     Qualquer dúvida, entre em contato conosco pelas redes sociais, e-mail <a
-                        href="mailto:contatoRevise@revise.com">contatoRevise@revise.com</a> ou pelo telefone:<a
-                        href="tel:13997934483">+55 (13) 99199-4978.</a>
+                        href="mailto:reviseprojeto@gmail.com">reviseprojeto@gmail.com</a> ou pelo telefone: <a
+                        href="tel:"></a>
                 </p>
             </div>
         </div>
