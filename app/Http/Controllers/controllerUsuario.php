@@ -23,7 +23,7 @@ class controllerUsuario extends Controller
      * @return View
      * @return JSON erro
      */
-    public function SignIn(Request $request, modelFisico $modelFisico, modelJuridico $modelJuridico)
+    public function SignIn(Request $request)
     {
 
         $validar = $this->ValidarCampos($request);
@@ -34,6 +34,7 @@ class controllerUsuario extends Controller
             $senha = $request->senha;
 
             if (strlen($login) === 14) {
+                $modelJuridico = new modelJuridico();
                 $result = $modelJuridico->login($login, $senha);
                 if ($result != false) {
                     $_SESSION['Dados'] = json_encode($result);
@@ -43,6 +44,7 @@ class controllerUsuario extends Controller
                     $Login = json_encode(['Status' => false, 'Mensagem' => 'Conta não encontrado']);
                 }
             } else if (strlen($login) === 11) {
+                $modelFisico = new modelFisico();
                 $result = $modelFisico->Login($login, $senha);
                 if ($result != false) {
                     $_SESSION['Dados'] = json_encode($result);

@@ -50,13 +50,13 @@
                                 <!-- CPF -->
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1" class="text-warning">CPF</label>
-                                    <input type="text" class="form-control" id="campoDoCpf" placeholder="xxx.xxx.xxx-xx" data-mask="000.000.000-00" value="{{ $dados->Cpf }}">
+                                    <input type="text" class="form-control" id="campoDoCpf" placeholder="xxx.xxx.xxx-xx" data-mask="000.000.000-00" value="{{ $dados->CPF }}">
                                 </div>
                                 <!-- Data de nascimento -->
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1" class="text-warning">Data
                                         de nascimento</label>
-                                    <input type="date" class="form-control" id="campoDeNascimento">
+                                    <input type="date" class="form-control" id="campoDeNascimento" value="{{ $dados->Nascimento }}" >
                                 </div>
                             </div>
                         </div>
