@@ -16,7 +16,7 @@
                         <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                     </div>
                     <div class="input-group-append">
-                        <select class="selectpicker">
+                        <select class="form-control">
                             <option>Todos</option>
                             <option>Serviços</option>
                             <option>Produtos</option>
