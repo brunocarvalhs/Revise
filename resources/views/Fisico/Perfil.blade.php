@@ -60,19 +60,19 @@
                                         de nascimento</label>
                                     <input type="date" class="form-control" id="campoDeNascimento">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                            <div class="form-row">
-                                <label class="text-warning">Planos</label>
-                            </div>
-                            <div class="input-group mb-3">
-                                <select class="custom-select" id="txtPlano" name="txtPlano" aria-label="Exemplo de select com botão addon">
-                                    <option value="" selected>Basic</option>
-                                    <option value="" selected>Standart</option>
-                                    <option value="" selected>Profission</option>
-                                    <option value="" selected>Deluxe Edition</option>
-                                </select>
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
+                                    <div class="form-row">
+                                        <label class="text-warning">Planos</label>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <select class="custom-select" id="txtPlano" name="txtPlano" aria-label="Exemplo de select com botão addon">
+                                            <option value="" selected>Basic</option>
+                                            <option value="" selected>Standart</option>
+                                            <option value="" selected>Profission</option>
+                                            <option value="" selected>Deluxe Edition</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
