@@ -220,7 +220,7 @@ class controllerUsuario extends Controller
 
         switch($request->tipo){
             case 'android':{
-                $apk = "\download\build\app-debug.apk";
+                $apk = public_path()."\download\build\app-debug.apk";
                 redirect()->back();
                 return Response::download($apk, 'revise.apk', $headers);
             }
