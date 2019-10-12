@@ -206,7 +206,8 @@
 <script src="{{asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
 @yield('script')
+@yield('mensagem')
 @component('componentes.sair')
-    @slot('',{{ route('sair') }})
+    @slot('local',{{ route('sair') }})
 @endcomponent
 </html>
