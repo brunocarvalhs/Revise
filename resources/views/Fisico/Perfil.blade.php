@@ -64,9 +64,7 @@
                         </div>
                         <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
                             <div class="form-row">
-                                <div class="col-12">
-                                    <label class="text-warning">Planos</label>
-                                </div>
+                                <label class="text-warning">Planos</label>
                             </div>
                             <div class="input-group mb-3">
                                 <select class="custom-select" id="txtPlano" name="txtPlano" aria-label="Exemplo de select com botão addon">
