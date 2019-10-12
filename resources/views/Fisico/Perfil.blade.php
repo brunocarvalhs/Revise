@@ -32,12 +32,10 @@
                         <div class="form-group inputCadastro">
                             <div class="form-row">
                                 <div class="col-12">
-                                    <label for="campoNome" class="text-warning">Nome
-                                        completo</label>
+                                    <label for="campoNome" class="text-warning">Nome completo</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome">
-
+                                    <input type="text" class="form-control" id="campoNome" value="{{ $dados->Nome }}">
                                 </div>
                             </div>
                         </div>
@@ -45,7 +43,7 @@
                         <div class="form-group inputCadastro">
                             <label for="exampleFormControlInput1" class="text-warning">Endereço de
                                 email</label>
-                            <input type="email" class="form-control" id="campoEmail">
+                            <input type="email" class="form-control" id="campoEmail" value="{{ $dados->Email }}">
                         </div>
                         <div class="form-group inputCadastro">
                             <div class="form-row">
