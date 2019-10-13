@@ -15,7 +15,6 @@ class Fisico
      */
     public function handle($request, Closure $next)
     {
-        return dd(session()->has('Fisico'));
         if(session()->has('Fisico')){
             return $next($request);
         }
