@@ -42,25 +42,6 @@ class modelAnuncio extends Model
     }
 
     public function PesquisaDeAnuncio($pesquisa, $tipo, $preco){
-        /*
-            select
-            tb_anuncio.cd_anuncio, tb_anuncio.nm_titulo, tb_anuncio.ds_publicacao, tb_anuncio.vl_anunciado, tb_anuncio.dt_publicacao,
-            tb_tipo_anuncio.nm_tipo_anuncio,
-            tb_usuario_juridico.nm_nome_fantasia,
-            tb_logradouro.nm_logradouro,
-            tb_bairro.nm_bairro,
-            tb_cidade.nm_cidade,
-            tb_uf.sg_uf
-            from tb_anuncio
-            inner join tb_tipo_anuncio on tb_anuncio.cd_tipo_anuncio = tb_tipo_anuncio.cd_tipo_anuncio
-            inner join tb_usuario_juridico on tb_usuario_juridico.cd_usuario_juridico = tb_anuncio.cd_usuario_juridico
-            inner join tb_logradouro on tb_logradouro.cd_usuario_juridico = tb_usuario_juridico.cd_usuario_juridico
-            inner join tb_bairro on tb_bairro.cd_bairro = tb_logradouro.cd_bairro
-            inner join tb_cidade on tb_cidade.cd_cidade = tb_bairro.cd_cidade
-            inner join tb_uf on tb_uf.sg_uf = tb_cidade.sg_uf
-            WHERE tb_anuncio.nm_titulo LIKE '%p%';
-        */
-
         if($preco != null){
 
             if($preco == 'menor'){
