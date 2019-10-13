@@ -77,7 +77,7 @@ h3 {
 
 @section('sistema_fisico')
 <div class="row">
-    <div class="">
+    <div>
         <ul class="hs">
             @foreach ($Veiculos as $Veiculo)
                 <li>
