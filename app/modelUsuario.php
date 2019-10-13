@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Mail\SendMailUser;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Database\Eloquent\Model;
 
