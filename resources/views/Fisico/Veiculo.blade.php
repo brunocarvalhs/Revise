@@ -15,7 +15,7 @@
 
 @section('sistema_fisico')
 <ul>
-    @foreach ($Veiculo as $Veiculos)
+    @foreach ($Veiculos as $Veiculo)
         <li>{{ $Veiculo->placa }} - {{ $Veiculo->modelo }}</li>
     @endforeach
 </ul>
