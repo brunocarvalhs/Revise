@@ -27,7 +27,7 @@ class controllerFisico extends Controller
         $usuario = $modelFisico->Login($CPF,$SENHA);
         if($usuario != false){
             session(['Fisico' => $request->tokey]);
-            return view('Fisico\Inicio',compact($modelFisico));
+            return view('Fisico\Inicio',['Fisico' => $modelFisico]);
         }
         else{
             unset($modelFisico);
