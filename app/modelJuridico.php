@@ -96,7 +96,7 @@ class modelJuridico extends modelUsuario
     }
 
 
-    public function login($CNPJ, $SENHA)
+    public function Login($CNPJ, $SENHA)
     {
 
         $checkUser = DB::table('tb_usuario')

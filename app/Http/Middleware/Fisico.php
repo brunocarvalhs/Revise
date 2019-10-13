@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use App\modelFisico;
 use Closure;
 
-class Fisico
+class Fisico extends Middleware
 {
     /**
      * Handle an incoming request.

@@ -7,27 +7,6 @@ use Illuminate\Http\Request;
 
 class controllerJuridico extends Controller
 {
-    public function RotasJuridico($tipo)
-    {
-        switch ($tipo) {
-            case 'Perfil': {
-                    return 'Juridico\Perfil';
-                    break;
-                }
-            case 'Indice': {
-                    return 'Juridico\Indice';
-                    break;
-                }
-            case 'Anuncio': {
-                    return 'Juridico\Anuncio';
-                    break;
-                }
-            default: {
-                    return back();
-                }
-        }
-    }
-
     public function Cadastro(Request $request, controllerUsuario $controllerUsuario, modelJuridico $modelJuridico)
     {
         $campos = $controllerUsuario->ValidarCampos($request);
@@ -38,5 +17,22 @@ class controllerJuridico extends Controller
         }
         $cadastro = json_decode($cadastro);
         return redirect()->back()->with('Cadastro', $cadastro);
+    }
+
+    public function Login(Request $request, controllerUsuario $controllerUsuario){
+        $CNPJ = $controllerUsuario->TratamentoLogin($request->cpfcnpj);
+        $SENHA = $request->senha;
+        $modelJuridico = new modelJuridico();
+        $usuario = $modelJuridico->Login($CNPJ,$SENHA);
+        if($usuario != false){
+            session(['Fisico' => $request->tokey]);
+            return view('Fisico\Inicio',['Juridico' => $modelJuridico]);
+        }
+        else{
+            unset($modelJuridico);
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado, verificar se os dados de acesso estão corretos!']);
+        }
+        $Login = json_decode($Login);
+        return redirect()->back()->with('Login', $Login);
     }
 }
