@@ -89,7 +89,7 @@ class modelAnuncio extends Model
 
         $lista = json_encode($lista);
 
-        return $lista;
+        return dd($lista);
     }
 
 
