@@ -73,7 +73,7 @@ class modelAnuncio extends Model
                     'tb_usuario_juridico.nm_nome_fantasia as Empresa','tb_logradouro.nm_logradouro as Endereco',
                     'tb_bairro.nm_bairro as Bairro','tb_cidade.nm_cidade as Cidade',
                     'tb_uf.sg_uf as Estado')
-            ->where('tb_anuncio.nm_titulo','LIKE','%'.$pesquisa.'%','AND','tb_tipo_anuncio.cd_tipo_anuncio','=',$tipo)
+            ->where('tb_anuncio.nm_titulo','LIKE','%'.$pesquisa.'%','and','tb_tipo_anuncio.cd_tipo_anuncio','=',$tipo)
             ->orderByRaw('tb_anuncio.vl_anunciado '.$preco)
             ->get();
         } else {
@@ -91,7 +91,7 @@ class modelAnuncio extends Model
                     'tb_usuario_juridico.nm_nome_fantasia as Empresa','tb_logradouro.nm_logradouro as Endereco',
                     'tb_bairro.nm_bairro as Bairro','tb_cidade.nm_cidade as Cidade',
                     'tb_uf.sg_uf as Estado')
-            ->where('tb_anuncio.nm_titulo','LIKE','%'.$pesquisa.'%','AND','tb_tipo_anuncio.cd_tipo_anuncio','=',$tipo)
+            ->where('tb_anuncio.nm_titulo','LIKE','%'.$pesquisa.'%','and','tb_tipo_anuncio.cd_tipo_anuncio','=',$tipo)
             ->get();
         }
 
