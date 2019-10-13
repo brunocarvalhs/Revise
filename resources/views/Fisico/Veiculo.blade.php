@@ -12,13 +12,8 @@
   background-color: #fff;
   min-width: 100%;
   min-height: 200px;
-}
-.card {display: flex}
-.card {
-  overflow-x: auto;
-}
-.card::-webkit-scrollbar {
   display: none;
+  overflow-x: auto
 }
 .card--content {
   background-color: #e74c3c;
@@ -33,30 +28,12 @@
 
 @section('sistema_fisico')
 <div class="row">
-    <div>
-        <ul class="hs">
-            @foreach ($Veiculos as $Veiculo)
-                <li>
-                    <div class="card">
-                        {{ $Veiculo->placa }} / {{ $Veiculo->modelo }}
-                    </div>
-                </li>
-            @endforeach
-        </ul>
-  </div>
-</div>
-<div class="row">
     <section class="card">
-        <div class="card--content"></div>
-        <div class="card--content"></div>
-        <div class="card--content"></div>
-        <div class="card--content"></div>
-        <div class="card--content"></div>
-        <div class="card--content"></div>
-        <div class="card--content"></div>
-        <div class="card--content"></div>
-        <div class="card--content"></div>
-        <div class="card--content"></div>
+        @foreach ($Veiculos as $Veiculo)
+            <div class="card--content">
+                {{ $Veiculo->placa }} / {{ $Veiculo->modelo }}
+            </div>
+        @endforeach
     </section>
 </div>
 @endsection
