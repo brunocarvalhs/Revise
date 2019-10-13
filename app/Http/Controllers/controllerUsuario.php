@@ -189,4 +189,8 @@ class controllerUsuario extends Controller
             }
         }
     }
+
+    public function ListaVeiculosDoUsuario($model){
+        return $model->VeiculosDoUsuario();
+    }
 }

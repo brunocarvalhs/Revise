@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\modelFisico;
+use App\modelUsuario;
 use Illuminate\Http\Request;
 
 class controllerFisico extends Controller
@@ -64,9 +65,9 @@ class controllerFisico extends Controller
 
     }
 
-    public function LerVeiculos(){
+    public function LerVeiculos(controllerUsuario $controllerUsuario){
         $modelFisico = session()->get('Fisico');
-        $Veiculos = $modelFisico->VeiculosDoUsuario();
+        $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);
         return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos]);
     }

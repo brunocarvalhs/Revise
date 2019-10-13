@@ -212,8 +212,4 @@ class modelFisico extends modelUsuario
         return $resultado;
     }
 
-    public function VeiculosDoUsuario(){
-        $Veiculos = DB::table('tb_veiculo');
-        return dd($Veiculos);
-    }
 }

@@ -96,4 +96,13 @@ class modelUsuario extends Model
             return json_encode(['Status' => false, 'Mensagem' => "ERRO AO ENVIAR E-MAIL!"]);
         }
     }
+
+    public function VeiculosDoUsuario(){
+        $Veiculos = DB::table('tb_veiculo')
+        ->join('tb_modelo','tb_veiculo.cd_modelo','=','tb_modelo.cd_modelo')
+        ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_veiculo.cd_usuario')
+        ->where('tb_veiculo.cd_usuario','=', $this->getIdUsuario())
+        ->first();
+        return json_encode($Veiculos);
+    }
 }
