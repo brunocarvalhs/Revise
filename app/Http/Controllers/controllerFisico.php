@@ -39,6 +39,7 @@ class controllerFisico extends Controller
     }
 
     public function Index(){
+        return dd(session()->has('Fisico'));
         if(session()->has('Fisico')){
             $modelFisico = session()->get('IntanciaFisico');
             return view('Fisico\Inicio',['Fisico' => $modelFisico]);
