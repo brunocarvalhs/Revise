@@ -109,10 +109,10 @@
                                             </div>
                                             <div class="user-info">
                                                 <span class="user-name">
-                                                    <strong>{{ $dados->Nome }}</strong>
+                                                    <strong>{{ $modelFisico->NomeFisico() }}</strong>
                                                 </span>
                                                 <span class="user-role">
-                                                    {{ $dados->CPF }}
+                                                    {{ $modelFisico->getCPF() }}
                                                 </span>
                                                 <span class="user-role">
 
