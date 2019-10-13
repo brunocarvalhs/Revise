@@ -25,8 +25,8 @@ class controllerJuridico extends Controller
         $modelJuridico = new modelJuridico();
         $usuario = $modelJuridico->Login($CNPJ,$SENHA);
         if($usuario != false){
-            session(['Fisico' => $request->tokey]);
-            return view('Fisico\Inicio',['Juridico' => $modelJuridico]);
+            session(['Juridico' => $modelJuridico]);
+            return view('Juridico\Inicio',['Juridico' => $modelJuridico]);
         }
         else{
             unset($modelJuridico);
@@ -34,5 +34,10 @@ class controllerJuridico extends Controller
         }
         $Login = json_decode($Login);
         return redirect()->back()->with('Login', $Login);
+    }
+
+    public function Index(){
+        $modelFisico = session()->get('Juridico');
+        return view('Juridico\Inicio',['Juridico' => $modelFisico]);
     }
 }
