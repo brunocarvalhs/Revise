@@ -22,14 +22,12 @@
 
 @section('sistema_fisico')
 <div class="container-fluid">
-    <div class="d-flex flex-row flex-nowrap">
-        <div class="card card-body">Card</div>
-            @foreach ($Veiculos as $Veiculo)
-                <div class="card card-body">
-                    {{ $Veiculo->placa }} - {{ $Veiculo->modelo }}
-                </div>
-            @endforeach
-        </div>
+    <div class="d-flex flex-row flex-nowrap slide ">
+        @foreach ($Veiculos as $Veiculo)
+            <div class="card card-body">
+                {{ $Veiculo->placa }} - {{ $Veiculo->modelo }}
+            </div>
+        @endforeach
     </div>
 @endsection
 
