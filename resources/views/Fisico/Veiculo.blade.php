@@ -7,11 +7,7 @@
 
 
 @section('style')
-<style>
-    .card-block {
-        min-height: 300px;
-    }
-</style>
+<link rel="stylesheet" href="/bower_components/bootstrap-horizon/bootstrap-horizon.css">
 @endsection
 
 
@@ -23,59 +19,62 @@
         <li>{{ $Veiculo->placa }} - {{ $Veiculo->modelo }}</li>
     @endforeach
 </ul>
-<div class="container-fluid">
-        <h2>Bootstrap Horizontal Scrolling with Flexbox</h2>
-        <div class="row flex-nowrap">
-            <div class="col-3">
-                <div class="card card-block">Card</div>
+<div class="row row-horizon">
+    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="container-fluid">
+                <div class="row flex-nowrap">
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card card-block">Card</div>
+                    </div>
+                </div>
             </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-            <div class="col-3">
-                <div class="card card-block">Card</div>
-            </div>
-        </div>
     </div>
+</div>
 @endsection
 
 
