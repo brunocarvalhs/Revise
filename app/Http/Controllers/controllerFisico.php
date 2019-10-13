@@ -65,7 +65,10 @@ class controllerFisico extends Controller
     }
 
     public function LerVeiculos(){
-        return view('Fisico\Veiculo');
+        $modelFisico = session()->get('Fisico');
+        $Veiculos = $modelFisico->DadosPerfil();
+        $Veiculos = json_decode($Veiculos);
+        return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos]);
     }
 
     public function AlterarVeiculos(){
@@ -82,7 +85,10 @@ class controllerFisico extends Controller
 
     // Notificacao ---------------------------------------------------------------
     public function LerNotificacao(){
-        return view('Fisico\Notificacao');
+        $modelFisico = session()->get('Fisico');
+        $Notificacao = $modelFisico->DadosPerfil();
+        $Notificacao = json_decode($Notificacao);
+        return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao]);
     }
 
     public function AlterarNotificacao(){
