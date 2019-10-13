@@ -66,7 +66,7 @@ class controllerFisico extends Controller
 
     public function LerVeiculos(){
         $modelFisico = session()->get('Fisico');
-        $Veiculos = $modelFisico->DadosPerfil();
+        $Veiculos = $modelFisico->VeiculosDoUsuario();
         $Veiculos = json_decode($Veiculos);
         return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos]);
     }
