@@ -27,11 +27,24 @@ class controllerFisico extends Controller
         $usuario = $modelFisico->Login($CPF,$SENHA);
         if($usuario != false){
             session(['Fisico' => $request->tokey]);
+            session(['IntanciaFisico' => $modelFisico]);
             return view('Fisico\Inicio',['Fisico' => $modelFisico]);
         }
         else{
             unset($modelFisico);
             $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado, verificar se os dados de acesso estão corretos!']);
+        }
+        $Login = json_decode($Login);
+        return redirect()->back()->with('Login', $Login);
+    }
+
+    public function Index(){
+        if(session()->has('Fisico')){
+            $modelFisico = session()->get('IntanciaFisico');
+            return view('Fisico\Inicio',['Fisico' => $modelFisico]);
+        }
+        else{
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Sessão encerrada']);
         }
         $Login = json_decode($Login);
         return redirect()->back()->with('Login', $Login);
