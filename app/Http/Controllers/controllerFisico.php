@@ -26,8 +26,7 @@ class controllerFisico extends Controller
         $modelFisico = new modelFisico();
         $usuario = $modelFisico->Login($CPF,$SENHA);
         if($usuario != false){
-            session(['Fisico' => $request->tokey]);
-            session(['IntanciaFisico' => $modelFisico]);
+            session(['Fisico' => $modelFisico]);
             return view('Fisico\Inicio',['Fisico' => $modelFisico]);
         }
         else{
@@ -39,15 +38,7 @@ class controllerFisico extends Controller
     }
 
     public function Index(){
-        return dd(session()->has('Fisico'));
-        if(session()->has('Fisico')){
-            $modelFisico = session()->get('IntanciaFisico');
-            return view('Fisico\Inicio',['Fisico' => $modelFisico]);
-        }
-        else{
-            $Login = json_encode(['Status' => false, 'Mensagem' => 'Sessão encerrada']);
-        }
-        $Login = json_decode($Login);
-        return redirect()->back()->with('Login', $Login);
+        $modelFisico = session()->get('Fisico');
+        return view('Fisico\Inicio',['Fisico' => $modelFisico]);
     }
 }
