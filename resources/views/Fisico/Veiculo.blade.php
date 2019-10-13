@@ -52,15 +52,6 @@
 
 
 @section('sistema_fisico')
-<div class="container-fluid">
-    <div class="d-flex flex-row flex-nowrap slide carros">
-        @foreach ($Veiculos as $Veiculo)
-            <div class="card card-body">
-                {{ $Veiculo->placa }} - {{ $Veiculo->modelo }}
-            </div>
-        @endforeach
-    </div>
-</div>
 <div class="container">
         <div class="row">
             <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
