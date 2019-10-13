@@ -52,7 +52,7 @@ h3 {
   margin: 0;
 }
 
-.app::-webkit-scrollbar {
+.app::-webkit-scrollbar, .hs::-webkit-scrollbarhs {
   display: none;
 }
 
