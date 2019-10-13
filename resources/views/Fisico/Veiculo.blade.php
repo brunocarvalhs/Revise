@@ -8,18 +8,71 @@
 
 @section('style')
 <style>
-.card {
-  background-color: #fff;
-  min-width: 100%;
-  min-height: 200px;
+
+:root {
+  --gutter: 20px;
+}
+
+.app {
+  padding: var(--gutter) 0;
+  display: grid;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
+}
+
+.app > * {
+  grid-column: 2 / -2;
+}
+
+.app > .full {
+  grid-column: 1 / -1;
+}
+
+.hs {
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
+  grid-template-rows: minmax(150px, 1fr);
+
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.app::-webkit-scrollbar {
   display: none;
-  overflow-x: auto
 }
-.card--content {
-  background-color: #e74c3c;
-  min-width: 200px;
-  margin: 5px;
+
+.app {
+  overflow-y: scroll;
 }
+
+.hs > li,
+.item {
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+}
+
+
 </style>
 @endsection
 
@@ -28,13 +81,17 @@
 
 @section('sistema_fisico')
 <div class="row">
-    <section class="card">
-        @foreach ($Veiculos as $Veiculo)
-            <div class="card--content">
-                {{ $Veiculo->placa }} / {{ $Veiculo->modelo }}
-            </div>
-        @endforeach
-    </section>
+    <div class="app">
+        <ul class="hs">
+            @foreach ($Veiculos as $Veiculo)
+                <li>
+                    <div class="card">
+                        {{ $Veiculo->placa }} / {{ $Veiculo->modelo }}
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+  </div>
 </div>
 @endsection
 
