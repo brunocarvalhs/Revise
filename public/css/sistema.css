@@ -577,7 +577,7 @@ body, html{
     margin-top: 15px;
 }
 
-@media (max-width: 550 ){
+@media (min-width: 545px ){
     .card-horizontal {
         display: flex;
         flex: 1 1 auto;
