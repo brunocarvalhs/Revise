@@ -539,6 +539,7 @@ body, html{
 
 .inputPesquisa{
     margin-top: 5%;
+    position: absolute;
 }
 
 @media (min-width: 1204px ) and (max-width: 1428px){
