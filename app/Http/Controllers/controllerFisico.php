@@ -100,11 +100,4 @@ class controllerFisico extends Controller
 
     }
 
-    // Anuncios ------------------------------------------------------------------
-    public function LerAnuncios(){
-        $modelFisico = session()->get('Fisico');
-        return view('Fisico\Anuncio',['Fisico' => $modelFisico]);
-    }
-
-
 }

@@ -4,12 +4,12 @@
             <div class="card-horizontal">
                 <img class="img-square-wrapper" src="http://via.placeholder.com/300x180" alt="Card image cap">
                 <div class="card-body">
-                    <h6 class="card-subtitle">Produto</h6>
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <h6 class="card-title">Local: Praia Grande - SP</h6>
-                    <h5>R$ 900.00</h5>
-                    <a class="btn btn-outline-warning  w-100" href="anunciosJ.php" role="button"> Mais Detalhes +</a>
+                    <h6 class="card-subtitle">{{ $tipo }}</h6>
+                    <h4 class="card-title">{{ $titulo }}</h4>
+                    <p class="card-text">{{ $descricao }}</p>
+                    <h6 class="card-title">Local: {{ $cidade }} - {{ $uf }}</h6>
+                    <h5>{{ $preco }}</h5>
+                    <a class="btn btn-outline-warning  w-100" href="#" role="button"> Mais Detalhes +</a>
                 </div>
             </div>
        </div>

@@ -21,7 +21,7 @@
                             <label class="dropdown-item">Tipos</label>
                             <div class="form-check">
                                 <div class="dropdown-item">
-                                    <input class="form-check-input" type="radio" name="tipo" id="tipo1" value="todos" checked>
+                                    <input class="form-check-input" type="radio" name="tipo" id="tipo1" value="" checked>
                                     <label class="form-check-label" for="tipo1">
                                         Todos
                                     </label>
@@ -49,7 +49,7 @@
                             <label class="dropdown-item">Preços</label>
                             <div class="form-check">
                                 <div class="dropdown-item">
-                                    <input class="form-check-input" type="radio" name="preco" id="preco1" value="todos" checked>
+                                    <input class="form-check-input" type="radio" name="preco" id="preco1" value="" checked>
                                     <label class="form-check-label" for="preco1">
                                         Todos
                                     </label>
@@ -80,7 +80,18 @@
     </div>
 </div>
 <div class="row">
-    @include('componentes.PesquisaAnuncio')
+    @if($Anuncios)
+    @foreach ($Anuncios as $Anuncios)
+        @component('componentes.PesquisaAnuncio')
+            @slot('tipo',$Anuncios->Tipo)
+            @slot('titulo',$Anuncios->Titulo)
+            @slot('descricao',$Anuncios->Descricao)
+            @slot('cidade',$Anuncios->Cidade)
+            @slot('uf',$Anuncios->Estado)
+            @slot('preco',$Anuncios->Valor)
+        @endcomponent
+    @endforeach
+    @endif
 </div>
 @endsection
 
