@@ -38,7 +38,11 @@
     <div class="app">
         <ul class="hs">
             @foreach ($Veiculos as $Veiculo)
-                <li>{{ $Veiculo->placa }} / {{ $Veiculo->modelo }}</li>
+                <li>
+                    <div class="card">
+                        {{ $Veiculo->placa }} / {{ $Veiculo->modelo }}
+                    </div>
+                </li>
             @endforeach
         </ul>
   </div>
