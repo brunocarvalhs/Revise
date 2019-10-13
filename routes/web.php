@@ -31,7 +31,7 @@ Route::get('/Home', 'controllerUsuario@Sistema');
 
 
 // * Inicio
-Route::get('/Home','controllerFisico@Login')->middleware('Fisico');//Ler
+Route::get('/Home','controllerFisico@Index')->middleware('Fisico');//Ler
 Route::post('/Home','controllerFisico@Login');//Criar
 // * Perfil
 /*
