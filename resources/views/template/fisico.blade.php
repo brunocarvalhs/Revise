@@ -73,7 +73,7 @@
                                 <a class="nav-link" href="{{ url('/Home/Veiculos') }}">Veículos</a>
                             </li>
                             <li class="nav-item @yield('menu_anuncio')">
-                                <a class="nav-link" href="{{ url('/Home/Anuncio') }}">Serviços e Produtos</a>
+                                <a class="nav-link" href="{{ url('/Home/Anuncios') }}">Serviços e Produtos</a>
                             </li>
                         </ul>
                         <div class="form-inline my-2 my-lg-0">
@@ -153,7 +153,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="sidebar-content">
-                                                    <a href="{{ url('/Home/Anuncio') }}">
+                                                    <a href="{{ url('/Home/Anuncios') }}">
                                                         <i class="fa fa-building" aria-hidden="true"></i>
                                                         <span>Serviços e Produtos</span>
                                                     </a>

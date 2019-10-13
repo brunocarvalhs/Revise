@@ -40,4 +40,18 @@ class controllerJuridico extends Controller
         $modelFisico = session()->get('Juridico');
         return view('Juridico\Inicio',['Juridico' => $modelFisico]);
     }
+
+
+
+    public function LerPerfil(){
+
+    }
+
+    public function AlterarPerfil(){
+
+    }
+
+    public function DeletarPerfil(){
+
+    }
 }

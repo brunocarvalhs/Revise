@@ -118,30 +118,6 @@ class controllerUsuario extends Controller
     /**
      *
      */
-    public function RotasSistema(Request $request, controllerFisico $controllerFisico, controllerJuridico $controllerJuridico)
-    {
-        try {
-            if (((!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])))) {
-                switch ($_SESSION['autentic']) {
-                    case '1':
-                        return view($controllerFisico->RotasFisico($request->tipo), ['dados' => json_decode($_SESSION['Dados'])]);
-                        break;
-                    case '2':
-                        return view($controllerJuridico->RotasJuridico($request->tipo), ['dados' => json_decode($_SESSION['Dados'])]);
-                        break;
-                    default:
-                        return back();
-                        break;
-                }
-            }
-        } catch (Exception $e) {
-            return redirect('/SignIn');
-        }
-    }
-
-    /**
-     *
-     */
     public function SignOut()
     {
         session()->flush();

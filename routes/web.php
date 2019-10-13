@@ -24,61 +24,7 @@ Route::post('/Home', 'controllerUsuario@SignIn');
 
 Route::get('/Home', 'controllerUsuario@Sistema');
 
-
-//Rotas Paticulares
-
-//--------------- Fisico ------------------------
-
-
-// * Inicio
-Route::get('/Home','controllerFisico@Index')->middleware('Fisico');//Ler
-Route::post('/Home','controllerFisico@Login');//Criar
-// * Perfil
-/*
-Route::group(['middleware' => 'Fisico'], function () {
-Route::get('/Home/Perfil','');//Ler
-Route::post('/Home/Perfil','');//Criar
-Route::put('/Home/Perfil','');//Alterar
-Route::delete('/Home/Perfil', '');//Deletar
-// * Veiculos
-Route::get('/Home/Veiculos','');//Ler
-Route::post('/Home/Veiculos','');//Criar
-Route::put('/Home/Veiculos','');//Alterar
-Route::delete('/Home/Veiculo', '');//Deletar
-// * Anuncios
-Route::get('/Home/Anuncios','');//Ler
-// * Notificacao
-Route::get('/Home/Notificacao','');//Ler
-Route::post('/Home/Notificacao','');//Criar
-Route::put('/Home/Notificacao','');//Alterar
-Route::delete('/Home/Notificacao', '');//Deletar
-}
-
-// ------------ Juridico ------------
-Route::group(['middleware' => 'Juridico'], function () {
-    // * Inicio
-    Route::get('/Painel','');//Ler
-    Route::post('/Painel','');//Criar
-    // * Perfil
-    Route::get('/Painel/Perfil','');//Ler
-    Route::post('/Painel/Perfil','');//Criar
-    Route::put('/Painel/Perfil','');//Alterar
-    Route::delete('/Painel/Perfil', '');//Deletar
-    // * Anuncios
-    Route::get('/Painel/Anuncios','');//Ler
-    Route::post('/Painel/Anuncios','');//Criar
-    Route::put('/Painel/Anuncios','');//Alterar
-    Route::delete('/Painel/Anuncios/{anuncio}', '');//Deletar
-    // Inidices
-    Route::get('/Painel/Inidices','');//Ler
-    Route::post('/Painel/Inidices','');//Criar
- });
-
-
-*/
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
-
-Route::get('/Home/{tipo}', 'controllerUsuario@RotasSistema');
 
 Route::post('/CadastroFisico','controllerFisico@Cadastro');
 
@@ -92,8 +38,53 @@ Route::post('/Recuperar', 'controllerUsuario@EsqueciSenha');
 
 Route::get('/Download/{tipo}', 'controllerUsuario@getDownload');
 
-Route::get('/Anuncio', 'controllerAnuncio@Pesquisa')->name('pesquisa');
 
-Auth::routes();
+//Rotas Paticulares
 
-Route::get('/home', 'HomeController@index')->name('home');
+//--------------- Fisico ------------------------
+
+
+Route::post('/Home','controllerFisico@Login');//Login
+
+Route::group(['middleware' => 'Fisico'], function () {
+    // * Inicio
+    Route::get('/Home','controllerFisico@Index');
+    // * Perfil
+    Route::get('/Home/Perfil','controllerFisico@LerPerfil');//Ler
+    Route::put('/Home/Perfil','controllerFisico@AlterarPerfil');//Alterar
+    Route::delete('/Home/Perfil', 'controllerFisico@DeletarPerfil');//Deletar
+    // * Veiculos
+    Route::get('/Home/Veiculos','controllerFisico@LerVeiculos');//Ler
+    Route::post('/Home/Veiculos','controllerFisico@CriarVeiculos');//Criar
+    Route::put('/Home/Veiculos','controllerFisico@AlterarVeiculos');//Alterar
+    Route::delete('/Home/Veiculo', 'controllerFisico@DeletarVeiculos');//Deletar
+    Route::post('/Home/Veiculo/{Placa}','controllerFisico@InserirQuilometragem');//Criar
+    // * Anuncios
+    Route::get('/Home/Anuncios','controllerAnuncio@Pesquisa')->name('pesquisa');;//Ler
+    // * Notificacao
+    Route::get('/Home/Notificacao','controllerFisico@LerNotificacao');//Ler
+    Route::put('/Home/Notificacao','controllerFisico@AlterarNotificacao');//Alterar
+    Route::delete('/Home/Notificacao', 'controllerFisico@DeletarNotificacao');//Deletar
+});
+
+Route::post('/Painel','controllerJuridico@Login');//Login
+
+// ------------ Juridico ------------
+Route::group(['middleware' => 'Juridico'], function () {
+    // * Inicio
+    Route::get('/Painel','controllerJuridico@Index');//Ler
+    // * Perfil
+    /*
+    Route::get('/Painel/Perfil','');//Ler
+    Route::put('/Painel/Perfil','');//Alterar
+    Route::delete('/Painel/Perfil', '');//Deletar
+    // * Anuncios
+    Route::get('/Painel/Anuncios','');//Ler
+    Route::post('/Painel/Anuncios','');//Criar
+    Route::put('/Painel/Anuncios','');//Alterar
+    Route::delete('/Painel/Anuncios/{anuncio}', '');//Deletar
+    // Inidices
+    Route::get('/Painel/Inidices','');//Ler
+    Route::post('/Painel/Inidices','');//Criar
+    */
+ });

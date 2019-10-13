@@ -33,7 +33,7 @@
                                     <label for="campoNome" class="text-warning">Nome completo</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome" value="{{ $dados->Nome }}" readonly>
+                                    <input type="text" class="form-control" id="campoNome" value="{{ $Perfil->Nome }}" readonly>
                                 </div>
                             </div>
                         </div>
@@ -41,20 +41,20 @@
                         <div class="form-group inputCadastro">
                             <label for="exampleFormControlInput1" class="text-warning">Endereço de
                                 email</label>
-                            <input type="email" class="form-control" id="campoEmail" value="{{ $dados->Email }}" readonly>
+                            <input type="email" class="form-control" id="campoEmail" value="{{ $Perfil->Email }}" readonly>
                         </div>
                         <div class="form-group inputCadastro">
                             <div class="form-row">
                                 <!-- CPF -->
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1" class="text-warning">CPF</label>
-                                    <input type="text" class="form-control" id="campoDoCpf" placeholder="xxx.xxx.xxx-xx" data-mask="000.000.000-00" value="{{ $dados->CPF }}" readonly>
+                                    <input type="text" class="form-control" id="campoDoCpf" placeholder="xxx.xxx.xxx-xx" data-mask="000.000.000-00" value="{{ $Perfil->CPF }}" readonly>
                                 </div>
                                 <!-- Data de nascimento -->
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1" class="text-warning">Data
                                         de nascimento</label>
-                                    <input type="date" class="form-control" id="campoDeNascimento" value="{{ $dados->Nascimento }}" readonly>
+                                    <input type="date" class="form-control" id="campoDeNascimento" value="{{ $Perfil->Nascimento }}" readonly>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                                 </div>
                             </div>
                             <div class="input-group mb-3">
-                                <input class="form-control" type="text" value='{{ $dados->Plano }}' readonly>
+                                <input class="form-control" type="text" value='{{ $Perfil->Plano }}' readonly>
                             </div>
                             <div class="input-group mb-3">
                                 <select class="custom-select" id="txtPlano" name="txtPlano" aria-label="Exemplo de select com botão addon" hidden>

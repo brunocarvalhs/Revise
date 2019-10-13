@@ -41,4 +41,57 @@ class controllerFisico extends Controller
         $modelFisico = session()->get('Fisico');
         return view('Fisico\Inicio',['Fisico' => $modelFisico]);
     }
+
+
+    // Perfil -----------------------------------------------------------------
+    public function LerPerfil(){
+        $modelFisico = session()->get('Fisico');
+        $perfil = $modelFisico->DadosPerfil();
+        $perfil = json_decode($perfil);
+        return view('Fisico\Perfil',['Perfil' => $perfil]);
+    }
+
+    public function AlterarPerfil(){
+
+    }
+
+    public function DeletarPerfil(){
+
+    }
+
+    // Veiculos ---------------------------------------------------------------
+    public function CriarVeiculos(){
+
+    }
+
+    public function LerVeiculos(){
+        return view('Fisico\Veiculo');
+    }
+
+    public function AlterarVeiculos(){
+
+    }
+
+    public function DeletarVeiculos(){
+
+    }
+
+    public function InserirQuilometragem(){
+
+    }
+
+    // Notificacao ---------------------------------------------------------------
+    public function LerNotificacao(){
+        return view('Fisico\Notificacao');
+    }
+
+    public function AlterarNotificacao(){
+
+    }
+
+    public function DeletarNotificacao(){
+
+    }
+
+
 }
