@@ -7,6 +7,11 @@
 
 
 @section('style')
+<style>
+    .card-block {
+        min-height: 300px;
+    }
+</style>
 <link rel="stylesheet" href="/bower_components/bootstrap-horizon/bootstrap-horizon.css">
 @endsection
 
