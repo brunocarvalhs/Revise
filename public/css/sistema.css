@@ -541,10 +541,11 @@ body, html{
     margin-top: 5%;
     position: fixed;
     z-index: 3;
+    padding: 80px;
 }
 
 .Anuncios{
-    margin-top: 80px;
+    margin-top: 140px;
 }
 
 @media (min-width: 1204px ) and (max-width: 1428px){
