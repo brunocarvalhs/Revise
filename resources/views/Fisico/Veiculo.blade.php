@@ -58,8 +58,8 @@
             <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
                 <div class="MultiCarousel-inner">
                     @foreach ($Veiculos as $Veiculo)
-                    <a href="#" type="submit">
-                        <div class="item" value="{{ $Veiculo->id }}">
+                    <a href="#">
+                        <div class="item">
                             <div class="pad15">
                                 <p class="lead">{{ $Veiculo->placa }}</p>
                                 <p>{{ $Veiculo->modelo }}</p>
