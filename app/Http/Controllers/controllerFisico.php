@@ -48,7 +48,7 @@ class controllerFisico extends Controller
         $modelFisico = session()->get('Fisico');
         $perfil = $modelFisico->DadosPerfil();
         $perfil = json_decode($perfil);
-        return view('Fisico\Perfil',['Perfil' => $perfil]);
+        return view('Fisico\Perfil',['Fisico' => $modelFisico, 'Perfil' => $perfil]);
     }
 
     public function AlterarPerfil(){
