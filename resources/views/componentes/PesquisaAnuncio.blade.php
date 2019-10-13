@@ -2,7 +2,6 @@
         <li class="list-group-item shadow-sm mb-5 bg-white rounded w-100 semPadding">
             <div class="card rounded">
                 <div class="card-horizontal">
-                    <img class="img-square-wrapper" src="http://via.placeholder.com/300x180" alt="Card image cap">
                     <div class="card-body">
                         <h6 class="card-subtitle">{{ $tipo }}</h6>
                         <h4 class="card-title">{{ $titulo }}</h4>
