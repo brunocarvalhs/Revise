@@ -53,12 +53,11 @@
 
 @section('sistema_fisico')
 <div class="container">
-    <div class="row">
-        <form method="POST" action="{{ url('/Home/Veiculo') }}/{{ $Veiculo->placa }}">
+        <div class="row">
             <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
                 <div class="MultiCarousel-inner">
                     @foreach ($Veiculos as $Veiculo)
-                    <a href="#">
+                    <a href="{{ url('/Home/Veiculo') }}/{{ $Veiculo->placa }} ">
                         <div class="item">
                             <div class="pad15">
                                 <p class="lead">{{ $Veiculo->placa }}</p>
@@ -71,12 +70,11 @@
                 <button class="btn btn-primary leftLst"><</button>
                 <button class="btn btn-primary rightLst">></button>
             </div>
-        </form>
-    </div>
-    <div class="row">
+        </div>
+        <div class="row">
 
+        </div>
     </div>
-</div>
 @endsection
 
 

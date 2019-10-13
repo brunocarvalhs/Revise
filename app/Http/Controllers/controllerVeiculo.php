@@ -6,5 +6,11 @@ use Illuminate\Http\Request;
 
 class controllerVeiculo extends Controller
 {
-    //
+
+
+
+
+    public function DetalhesVeiculo(){
+
+    }
 }
