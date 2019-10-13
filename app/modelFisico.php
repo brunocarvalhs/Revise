@@ -200,7 +200,7 @@ class modelFisico extends modelUsuario
     }
 
 
-    private function DadosPerfil(){
+    public function DadosPerfil(){
         $resultado = DB::table('tb_usuario')
                 ->join('tb_usuario_fisico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
                 ->join('tb_controle_plano', 'tb_controle_plano.cd_usuario_fisico', '=', 'tb_usuario_fisico.cd_usuario_fisico')
