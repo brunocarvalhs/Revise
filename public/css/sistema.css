@@ -577,3 +577,7 @@ body, html{
     margin-top: 15px;
 }
 
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}

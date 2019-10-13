@@ -59,7 +59,7 @@
                     @foreach ($Veiculos as $Veiculo)
                     <a href="{{ url('/Home/Veiculo') }}/{{ $Veiculo->placa }} ">
                         <div class="item">
-                            <div class="pad15">
+                            <div class="pad15 shadow-sm p-3 mb-5 bg-white rounded">
                                 <p class="lead">{{ $Veiculo->placa }}</p>
                                 <p>{{ $Veiculo->modelo }}</p>
                             </div>

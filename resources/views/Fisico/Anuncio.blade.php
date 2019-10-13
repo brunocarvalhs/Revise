@@ -10,7 +10,7 @@
 
 @section('sistema_fisico')
 <div class="row">
-    <div class="col-12 inputPesquisa">
+    <div class="col-12 inputPesquisa shadow-sm p-3 mb-5 bg-white rounded">
         <form action="{{ route('pesquisa') }}">
             <div class="input-group">
                 <input type="text" class="form-control" name="pesquisa">
@@ -80,7 +80,7 @@
     </div>
 </div>
 <div class="row">
-
+    @include('componentes.PesquisaAnuncio')
 </div>
 @endsection
 
