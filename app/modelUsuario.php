@@ -99,24 +99,12 @@ class modelUsuario extends Model
     }
 
     public function VeiculosDoUsuario(){
-        /*
-                SELECT
-              v.cd_veiculo as 'id',
-              v.cd_placa as 'placa',
-              m.nm_modelo as 'modelo'
-              FROM tb_veiculo as v
-              inner join tb_modelo as m on v.cd_modelo = m.cd_modelo
-              inner join tb_usuario as u on u.cd_usuario = v.cd_usuario
-              and v.cd_usuario= ?
-
-        */
-
         $Veiculos = DB::table('tb_veiculo')
         ->join('tb_modelo','tb_veiculo.cd_modelo','=','tb_modelo.cd_modelo')
         ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_veiculo.cd_usuario')
         ->select('tb_veiculo.cd_veiculo as id','tb_veiculo.cd_placa as placa','tb_modelo.nm_modelo as modelo')
         ->where('tb_veiculo.cd_usuario','=', $this->getIdUsuario())
         ->get();
-        return dd($Veiculos);
+        return json_encode($Veiculos);
     }
 }
