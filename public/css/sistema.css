@@ -539,7 +539,12 @@ body, html{
 
 .inputPesquisa{
     margin-top: 5%;
-    position: absolute;
+    position: fixed;
+    z-index: 3;
+}
+
+.Anuncios{
+    margin-top: 80px;
 }
 
 @media (min-width: 1204px ) and (max-width: 1428px){

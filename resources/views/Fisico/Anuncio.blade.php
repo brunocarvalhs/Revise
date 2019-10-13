@@ -79,7 +79,7 @@
         </form>
     </div>
 </div>
-<div class="row">
+<div class="row Anuncios">
     @if($Anuncios)
     <ul class="list-group list-group-flush mw-100 w-100 semPadding">
     @foreach ($Anuncios as $Anuncios)
