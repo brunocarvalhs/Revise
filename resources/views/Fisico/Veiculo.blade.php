@@ -8,9 +8,11 @@
 
 @section('style')
 <style>
-    .card-block {
-        min-height: 300px;
-    }
+    .card-body {
+    min-height: 300px;
+    min-width: 300px;
+    margin-right: 5px;
+}
 </style>
 <link rel="stylesheet" href="/bower_components/bootstrap-horizon/bootstrap-horizon.css">
 @endsection
@@ -19,67 +21,16 @@
 
 
 @section('sistema_fisico')
-<ul>
-    @foreach ($Veiculos as $Veiculo)
-        <li>{{ $Veiculo->placa }} - {{ $Veiculo->modelo }}</li>
-    @endforeach
-</ul>
-<div class="row row-horizon">
-    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-        <div class="container-fluid">
-                <div class="row flex-nowrap">
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
-                    <div class="col-3">
-                        <div class="card card-block">Card</div>
-                    </div>
+<div class="container-fluid">
+    <div class="d-flex flex-row flex-nowrap">
+        <div class="card card-body">Card</div>
+            @foreach ($Veiculos as $Veiculo)
+                <div class="card card-body">
+                    {{ $Veiculo->placa }} - {{ $Veiculo->modelo }}
                 </div>
-            </div>
+            @endforeach
+        </div>
     </div>
-</div>
 @endsection
 
 
