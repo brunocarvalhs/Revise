@@ -14,7 +14,7 @@
 
 
 @section('sistema_fisico')
-
+    {{ $Veiculos }}
 @endsection
 
 
