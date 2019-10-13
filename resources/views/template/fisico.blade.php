@@ -47,7 +47,7 @@
                                                     <div class="col-12 col-sm-9">
                                                         <div class="user-info">
                                                             <span class="user-name">
-                                                                <strong>{{ $Fisico->NomeFisico() }}</strong>
+                                                                <strong>{{ $Fisico->getNomeFisico() }}</strong>
                                                             </span>
                                                         </div>
                                                     </div>
@@ -109,7 +109,7 @@
                                             </div>
                                             <div class="user-info">
                                                 <span class="user-name">
-                                                    <strong>{{ $Fisico->NomeFisico() }}</strong>
+                                                    <strong>{{ $Fisico->getNomeFisico() }}</strong>
                                                 </span>
                                                 <span class="user-role">
                                                     {{ $Fisico->getCPF() }}
