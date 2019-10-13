@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class Fisico extends Middleware
+class Fisico
 {
     /**
      * Handle an incoming request.

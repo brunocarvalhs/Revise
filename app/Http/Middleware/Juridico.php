@@ -4,7 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class Juridico extends Middleware
+class Juridico
 {
     /**
      * Handle an incoming request.
