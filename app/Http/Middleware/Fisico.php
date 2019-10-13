@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use App\modelFisico;
 use Closure;
 
 class Fisico extends Middleware
