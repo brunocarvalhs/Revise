@@ -133,7 +133,6 @@ $(function () {
 
 function disable()
 {
-  document.getElementById('txtPlano').disabled = true;
-  
+  document.getElementById('txtPlano').disabled = true;  
 }
 

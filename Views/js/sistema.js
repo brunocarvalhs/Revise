@@ -194,3 +194,107 @@ function excluirVeiculo(){
     });
       
 }
+
+function btnExcluirConta() {
+  swal("Deseja realmente excluir sua conta?", {
+    icon: "warning",
+    buttons: {
+
+      catch: {
+        text: "Sim",
+        value: "Sim",
+        className: "swal-button--style"
+
+      },
+      defeat: {
+        text: "Cancelar",
+        value: "cancelar",
+        className: "swal-button--style"
+      },
+
+    },
+  })
+    .then((value) => {
+      switch (value) {
+
+        case "Sim":
+          //Alert do caso sim
+          swal({
+            icon: "warning",
+            title: "Atenção",
+            text: "Ao excluir sua conta, todas as informações que foram inseridas serão totalmente deletadas. Caso o seu plano seja pago, mandaremos um email com os procedimentos a serem realizados, conforme o que está escrito em nosso termo de uso.",
+            buttons: {
+
+              catch: {
+                text: "Ok",
+                value: "Ok",
+                className: "swal-button--style"
+
+              },
+              defeat: {
+                text: "Cancelar",
+                value: "cancelar",
+                className: "swal-button--style"
+              },
+        
+            },
+          })
+          .then((value) => {
+            switch (value) {
+              case "Ok":
+                  window.location.href = '../login.php';
+            }
+          })
+          break;
+      }
+
+    });
+}
+function disabledKm(){
+  document.getElementById('txtKm').disabled = true;
+  document.getElementById('btnSalvarKm').style.display = 'none';
+}
+
+function alterarKm() {
+  swal("Deseja realmente alterar a quilometragem desse veículo?", {
+    icon: "warning",
+    buttons: {
+
+      catch: {
+        text: "Sim",
+        value: "Sim",
+        className: "swal-button--style"
+
+      },
+      defeat: {
+        text: "Cancelar",
+        value: "cancelar",
+        className: "swal-button--style"
+      },
+
+    },
+  })
+    .then((value) => {
+      switch (value) {
+
+        case "Sim":
+            document.getElementById('txtKm').disabled = false;
+            document.getElementById('btnSalvarKm').style.display = 'block';
+            document.getElementById('btnAlterarKm').style.display = 'none';
+
+            if (document.getElementById('btnAlterarKm').style.display = 'none' == true)
+              swal("Quilometragem alterada com sucesso!", {
+                icon: "success",
+                buttons: {
+                  catch: {
+                    text: "OK",
+                    value: "ok",
+                    className: "swal-button--style"
+                  },     
+                },
+                
+              })  
+      }
+
+    });
+}
