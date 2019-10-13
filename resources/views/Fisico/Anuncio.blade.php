@@ -81,6 +81,7 @@
 </div>
 <div class="row">
     @if($Anuncios)
+    <ul class="list-group list-group-flush mw-100 w-100 semPadding">
     @foreach ($Anuncios as $Anuncios)
         @component('componentes.PesquisaAnuncio')
             @slot('tipo',$Anuncios->Tipo)
@@ -91,6 +92,7 @@
             @slot('preco',$Anuncios->Valor)
         @endcomponent
     @endforeach
+    </ul>
     @endif
 </div>
 @endsection
