@@ -47,7 +47,7 @@
                                                     <div class="col-12 col-sm-9">
                                                         <div class="user-info">
                                                             <span class="user-name">
-                                                                <strong>{{ $dados->Nome }}</strong>
+                                                                <strong>{{ $modelFisico->NomeFisico() }}</strong>
                                                             </span>
                                                         </div>
                                                     </div>
