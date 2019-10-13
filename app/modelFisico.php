@@ -19,7 +19,7 @@ class modelFisico extends modelUsuario
     /**
      * Get the value of IdFisico
      */
-    public function getIdFisico()
+    protected function getIdFisico()
     {
         return $this->IdFisico;
     }
@@ -29,7 +29,7 @@ class modelFisico extends modelUsuario
      *
      * @return  self
      */
-    public function setIdFisico($IdFisico)
+    protected function setIdFisico($IdFisico)
     {
         $this->IdFisico = $IdFisico;
 
@@ -49,7 +49,7 @@ class modelFisico extends modelUsuario
      *
      * @return  self
      */
-    public function setNomeFisico($NomeFisico)
+    protected function setNomeFisico($NomeFisico)
     {
         $this->NomeFisico = $NomeFisico;
 
@@ -69,7 +69,7 @@ class modelFisico extends modelUsuario
      *
      * @return  self
      */
-    public function setCPF($CPF)
+    protected function setCPF($CPF)
     {
         $this->CPF = $CPF;
 
@@ -89,7 +89,7 @@ class modelFisico extends modelUsuario
      *
      * @return  self
      */
-    public function setDataNascimento($DataNascimento)
+    protected function setDataNascimento($DataNascimento)
     {
         $this->DataNascimento = $DataNascimento;
 

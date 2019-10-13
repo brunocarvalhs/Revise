@@ -20,39 +20,18 @@ class controllerUsuario extends Controller
      * Metodo de Login
      *
      * @param Request $request
-     * @return View
+     * @return Redirect
      * @return JSON erro
      */
     public function SignIn(Request $request)
     {
-
         $validar = $this->ValidarCampos($request);
-
         if ($validar) {
-
             $login = $this->TratamentoLogin($request->cpfcnpj);
-            $senha = $request->senha;
-
             if (strlen($login) === 14) {
-                $modelJuridico = new modelJuridico();
-                $result = $modelJuridico->login($login, $senha);
-                if ($result != false) {
-                    $_SESSION['Dados'] = json_encode($result);
-                    $_SESSION['autentic'] = '2';
-                    return view('Juridico\Inicio',  ['dados' => json_decode($_SESSION['Dados'])]);
-                } else {
-                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Conta não encontrado']);
-                }
+                return redirect('/Home');
             } else if (strlen($login) === 11) {
-                $modelFisico = new modelFisico();
-                $result = $modelFisico->Login($login, $senha);
-                if ($result != false) {
-                    $_SESSION['Dados'] = json_encode($result);
-                    $_SESSION['autentic'] = '1';
-                    return view('Fisico\Inicio',  ['dados' => json_decode($_SESSION['Dados'])]);
-                } else {
-                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Conta não encontrado']);
-                }
+                return redirect('/Painel');
             } else {
                 $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres de login invalido, preencha corretamente os campos.']);
             }

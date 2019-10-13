@@ -7,30 +7,6 @@ use Illuminate\Http\Request;
 
 class controllerFisico extends Controller
 {
-    public function RotasFisico($tipo)
-    {
-        switch ($tipo) {
-            case 'Perfil': {
-                    return 'Fisico\Perfil';
-                    break;
-                }
-            case 'Notificacao': {
-                    return 'Fisico\Notificacao';
-                    break;
-                }
-            case 'Veiculos': {
-                    return 'Fisico\Veiculo';
-                    break;
-                }
-            case 'Anuncio': {
-                    return 'Fisico\Anuncio';
-                    break;
-                }
-            default: {
-                    return back();
-                }
-        }
-    }
 
     public function Cadastro(Request $request, controllerUsuario $controllerUsuario, modelFisico $modelFisico)
     {
@@ -42,5 +18,22 @@ class controllerFisico extends Controller
         }
         $cadastro = json_decode($cadastro);
         return redirect()->back()->with('Cadastro', $cadastro);
+    }
+
+    public function Login(Request $request, controllerUsuario $controllerUsuario){
+        $CPF = $controllerUsuario->TratamentoLogin($request->cpfcnpj);
+        $SENHA = $request->senha;
+        $modelFisico = new modelFisico();
+        $usuario = $modelFisico->Login($CPF,$SENHA);
+        if($usuario != false){
+            session(['Fisico' => $request->tokey]);
+            return view('Fisico\Inicio',compact($modelFisico));
+        }
+        else{
+            unset($modelFisico);
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado, verificar se os dados de acesso estão corretos!']);
+        }
+        $Login = json_decode($Login);
+        return redirect()->back()->with('Login', $Login);
     }
 }
