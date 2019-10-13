@@ -42,15 +42,6 @@ class modelAnuncio extends Model
     }
 
     public function PesquisaDeAnuncio($pesquisa, $tipo, $preco){
-        if($tipo != null){
-            if($tipo == 'servico'){
-                $tipo = '1';
-            }
-            else{
-                $tipo = '2';
-            }
-        }
-
         if($preco != null){
 
             if($preco == 'menor'){
@@ -73,7 +64,10 @@ class modelAnuncio extends Model
                     'tb_usuario_juridico.nm_nome_fantasia as Empresa','tb_logradouro.nm_logradouro as Endereco',
                     'tb_bairro.nm_bairro as Bairro','tb_cidade.nm_cidade as Cidade',
                     'tb_uf.sg_uf as Estado')
-            ->where('tb_anuncio.nm_titulo','LIKE','%'.$pesquisa.'%','and','tb_tipo_anuncio.cd_tipo_anuncio','=',$tipo)
+                    ->where([
+                        ['tb_anuncio.nm_titulo', 'LIKE', '%'.$pesquisa.'%'],
+                        ['tb_tipo_anuncio.nm_tipo_anuncio', 'LIKE', '%'.$tipo.'%'],
+                    ])
             ->orderByRaw('tb_anuncio.vl_anunciado '.$preco)
             ->get();
         } else {
@@ -91,7 +85,10 @@ class modelAnuncio extends Model
                     'tb_usuario_juridico.nm_nome_fantasia as Empresa','tb_logradouro.nm_logradouro as Endereco',
                     'tb_bairro.nm_bairro as Bairro','tb_cidade.nm_cidade as Cidade',
                     'tb_uf.sg_uf as Estado')
-            ->where('tb_anuncio.nm_titulo','LIKE','%'.$pesquisa.'%','and','tb_tipo_anuncio.cd_tipo_anuncio','=',$tipo)
+            ->where([
+                ['tb_anuncio.nm_titulo', 'LIKE', '%'.$pesquisa.'%'],
+                ['tb_tipo_anuncio.nm_tipo_anuncio', 'LIKE', '%'.$tipo.'%'],
+            ])
             ->get();
         }
 
