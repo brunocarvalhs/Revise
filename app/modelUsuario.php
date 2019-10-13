@@ -116,7 +116,7 @@ class modelUsuario extends Model
         ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_veiculo.cd_usuario')
         ->select('tb_veiculo.cd_veiculo as id','tb_veiculo.cd_placa as placa','tb_modelo.nm_modelo as modelo')
         ->where('tb_veiculo.cd_usuario','=', $this->getIdUsuario())
-        ->first();
+        ->get();
         return dd($Veiculos);
     }
 }
