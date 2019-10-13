@@ -156,4 +156,27 @@ class modelVeiculo extends Model
 
     }
 
+
+    public function DetalhesDoVeiculo()
+    {
+        /*
+        SELECT
+            v.cd_placa as 'Placa',
+            mo.nm_modelo as 'Modelo',
+            ma.nm_marca as 'Marca',
+            v.nm_cor as 'Cor',
+            v.aa_veiculo as 'Ano'
+            FROM tb_veiculo as v
+            INNER JOIN tb_modelo as mo on v.cd_modelo = mo.cd_modelo
+                    INNER JOIN tb_marca as ma on mo.cd_marca = ma.cd_marca
+                AND v.cd_veiculo = ?
+        */
+
+        DB::table('tb_veiculo')
+        ->join('tb_modelo','','=','')
+        ->join('tb_marca','','=','')
+        ->select('')
+        ->where('')
+        ->first();
+    }
 }
