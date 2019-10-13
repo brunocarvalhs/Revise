@@ -211,4 +211,9 @@ class modelFisico extends modelUsuario
         $resultado = json_encode($resultado);
         return $resultado;
     }
+
+    public function VeiculosDoUsuario(){
+        $Veiculos = DB::table('tb_veiculo');
+        return dd($Veiculos);
+    }
 }
