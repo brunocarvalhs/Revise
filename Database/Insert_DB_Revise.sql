@@ -7353,7 +7353,20 @@ INSERT INTO tb_medida_peca (cd_peca, qt_medida, sg_medida) VALUES
 (15,15000,'Km'),
 (16,1825,'T'),
 (17,15000,'Km'),
-(17,100000,'Km');
+(17,100000,'Km'),
+(18, null, 'Co'),
+(19, null, 'Co'),
+(20, null, 'Co'),
+(21, null, 'Co'),
+(22, null, 'Co'),
+(23, null, 'Co'),
+(24, null, 'Co'),
+(25, null, 'Co'),
+(26, null, 'Co'),
+(27, null, 'Co'),
+(28, null, 'Co'),
+(29, null, 'Co'),
+(30, null, 'Co');
 
 INSERT INTO tb_modelo
     (cd_modelo,cd_marca,nm_modelo)
