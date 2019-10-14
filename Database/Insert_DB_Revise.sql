@@ -13,7 +13,7 @@ VALUES
     ('T', 'Tempo'),
     ('Km', 'Quilometros'),
     ('Co','Condição');
-    
+
 INSERT INTO tb_categoria
     (cd_categoria, nm_categoria)
 VALUES
@@ -7528,3 +7528,25 @@ INSERT INTO tb_check (cd_check, cd_veiculo, sg_status, cd_peca) VALUES
 (4, 1, 'C', 12);
 
 update tb_controle_plano set cd_plano = 1 where cd_plano = 0;
+
+INSERT INTO tb_medida
+    (sg_medida,nm_medida)
+VALUES
+('Co', 'Condições');
+
+INSERT INTO tb_peca
+    (cd_peca, nm_peca, cd_tipo_peca)
+VALUES 
+    (18, 'Buzina', 3),
+    (19, 'Borracha do para-brisa', 38),
+    (20, 'Farol de milha', 29),
+    (21, 'Óleo do motor', 27),
+    (22, 'Filtro de óleo', 27),
+    (23, 'Bateria', 12),
+    (24, 'Bomba reservatório água', 12),
+	(24, 'Bomba reservatório gasolina', 12),
+    (25, 'Farol', 12),
+    (810, 'Cinto de segurança', 24),
+	(93, 'Limpador do para-brisa', 1),
+    (94, 'Limpador do vidro traseiro', 1),
+	(270, 'Extintor de incêndio', 3);
