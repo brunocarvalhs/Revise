@@ -11,8 +11,9 @@ INSERT INTO tb_medida
     (sg_medida,nm_medida)
 VALUES
     ('T', 'Tempo'),
-    ('Km', 'Quilometros');
-
+    ('Km', 'Quilometros'),
+    ('Co','Condição');
+    
 INSERT INTO tb_categoria
     (cd_categoria, nm_categoria)
 VALUES
