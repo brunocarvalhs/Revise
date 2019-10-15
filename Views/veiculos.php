@@ -64,7 +64,7 @@ $peças = 2;
                                 <a class="nav-link" href="veiculos.php">Veículos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Serviços e Produtos</a>
+                                <a class="nav-link" href="servicosEProdutos.php">Serviços e Produtos</a>
                             </li>
                         </ul>
                     </div>
@@ -140,7 +140,7 @@ $peças = 2;
                                                 </a>
                                             </li>
                                             <li class="sidebar-content">
-                                                <a href="#">
+                                                <a href="servicosEProdutos.php">
                                                     <i class="fa fa-building" aria-hidden="true"></i>
                                                     <span>Serviços e Produtos</span>
                                                 </a>
@@ -250,11 +250,11 @@ $peças = 2;
                                                 <div class="input-group mb-1">
                                                     <input type="text" class="form-control" id="txtKm" name="txtKm">
                                                     <div class="input-group-append">
-                                                        <button class="btn btn-warning" type="button" id="btnAlterarKm" onclick="alterarKm()">Alterar</button>
+                                                        <button class="btn btn-warning rounded-right" type="button" id="btnAlterarKm" onclick="alterarKm()">Alterar</button>
                                                     </div>
                                                     <!--Botão para aparecer-->
                                                     <div class="input-group-append">
-                                                        <button class="btn btn-success" readonly="true" id="btnSalvarKm" type="button" onclick="">Salvar</button>
+                                                        <button class="btn btn-success" readonly="true" id="btnSalvarKm" type="button" onclick="salvarKm()">Salvar</button>
                                                     </div>
                                                 </div>
                                                 </div>

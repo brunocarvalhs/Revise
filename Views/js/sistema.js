@@ -256,8 +256,10 @@ function disabledKm(){
 }
 
 function alterarKm() {
-  swal("Deseja realmente alterar a quilometragem desse veículo?", {
+  swal({
     icon: "warning",
+    title:"Deseja realmente alterar?",
+    text: "Lembre-se: Ao alterar a quilometragem a contagem dos componentes será reiniciada. Além disso, é necessário que seja informado o valor correto, que aparece no painel do veículo.",
     buttons: {
 
       catch: {
@@ -280,21 +282,52 @@ function alterarKm() {
         case "Sim":
             document.getElementById('txtKm').disabled = false;
             document.getElementById('btnSalvarKm').style.display = 'block';
-            document.getElementById('btnAlterarKm').style.display = 'none';
-
-            if (document.getElementById('btnAlterarKm').style.display = 'none' == true)
-              swal("Quilometragem alterada com sucesso!", {
-                icon: "success",
-                buttons: {
-                  catch: {
-                    text: "OK",
-                    value: "ok",
-                    className: "swal-button--style"
-                  },     
-                },
-                
-              })  
+            document.getElementById('btnAlterarKm').style.display = 'none';              
       }
 
     });
+}
+
+function salvarKm() {
+  var txtKm = document.getElementById('txtKm').value;
+  if(txtKm == '' || isNaN(txtKm) == true){
+    swal("Erro ao salvar", {
+      icon: "error",
+      buttons: {
+        catch: {
+          text: "OK",
+          value: "OK",
+          className: "swal-button--style"
+        },
+  
+      },
+  
+    })
+      .then((value) => {
+        switch (value) {
+          case "OK":
+           
+        }
+      })
+    }
+  else{
+    swal("Quilometragem alterada com sucesso!", {
+      icon: "success",
+      buttons: {
+        catch: {
+          text: "OK",
+          value: "OK",
+          className: "swal-button--style"
+        },
+  
+      },
+  
+    })
+      .then((value) => {
+        switch (value) {
+          case "OK":
+            window.location.reload();
+        }
+      })
+  }
 }
