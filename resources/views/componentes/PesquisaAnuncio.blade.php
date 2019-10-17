@@ -7,7 +7,7 @@
                 <p class="card-text">{{ $descricao }}</p>
                 <h6 class="card-title">Local: {{ $cidade }} - {{ $uf }}</h6>
                 <h5>{{ $preco }}</h5>
-                <a class="btn btn-outline-warning  w-100" href="#" role="button"> Mais Detalhes +</a>
+                <a class="btn btn-outline-warning  w-100 col-4" href="#" role="button"> Mais Detalhes +</a>
             </div>
         </div>
     </div>

@@ -185,7 +185,6 @@ class controllerUsuario extends Controller
             }
             default:{
                 return redirect()->back();
-
             }
         }
     }

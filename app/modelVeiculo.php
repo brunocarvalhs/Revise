@@ -14,7 +14,7 @@ class modelVeiculo extends Model
     private $modelo;
     private $ano;
     private $cor;
-
+    private $Quilometragem;
 
 
 
@@ -138,6 +138,25 @@ class modelVeiculo extends Model
         return $this;
     }
 
+    /**
+     * Get the value of Quilometragem
+     */
+    public function getQuilometragem()
+    {
+        return $this->Quilometragem;
+    }
+
+    /**
+     * Set the value of Quilometragem
+     *
+     * @return  self
+     */
+    public function setQuilometragem($Quilometragem)
+    {
+        $this->Quilometragem = $Quilometragem;
+
+        return $this;
+    }
 
     public function Cadastrar(Request $request, modelUsuario $modelUsuario)
     {
@@ -179,4 +198,5 @@ class modelVeiculo extends Model
         ->where('')
         ->first();
     }
+
 }
