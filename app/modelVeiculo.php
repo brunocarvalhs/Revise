@@ -199,4 +199,7 @@ class modelVeiculo extends Model
         ->first();
     }
 
+
+
+
 }
