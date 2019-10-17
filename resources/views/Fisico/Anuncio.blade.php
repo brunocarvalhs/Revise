@@ -22,12 +22,12 @@
 
 @section('sistema_fisico')
 <div class="row">
-    <div class="col-12 inputPesquisa shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded bg-dark">
         <form action="{{ route('pesquisa') }}">
             <div class="input-group">
                 <input type="text" class="form-control" name="pesquisa">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Filtros</button>
+                    <button class="btn btn-secondary dropdown-toggle text-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Filtros</button>
                     <div class="dropdown-menu">
                         <div class="form-group">
                             <label class="dropdown-item">Tipos</label>
@@ -86,14 +86,14 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="input-group-append btn btn-dark">Pesquisar</button>
+                <button type="submit" class="input-group-append btn btn-success rounded-right">Pesquisar</button>
             </div>
         </form>
     </div>
 </div>
 <div class="row Anuncios">
     @if($Anuncios)
-    <ul class="list-group list-group-flush mw-100 w-100 semPadding">
+    <div class="h-100 semPadding row p-3">
     @foreach ($Anuncios as $Anuncios)
         @component('componentes.PesquisaAnuncio')
             @slot('tipo',$Anuncios->Tipo)
@@ -104,7 +104,7 @@
             @slot('preco',$Anuncios->Valor)
         @endcomponent
     @endforeach
-    </ul>
+    </div>
     @endif
 </div>
 <a href="#top" class="glyphicon glyphicon-chevron-up"></a>

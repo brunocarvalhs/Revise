@@ -1,5 +1,5 @@
-<li class="list-group-item shadow-sm mb-5 bg-white rounded w-100 semPadding">
-    <div class="card rounded">
+<div class="mb-5 rounded col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-10 bg-light w-50">
+    <div class="card h-100 rounde shadow-sm">
         <div class="card-horizontal">
             <div class="card-body">
                 <h6 class="card-subtitle">{{ $tipo }}</h6>
@@ -7,9 +7,9 @@
                 <p class="card-text">{{ $descricao }}</p>
                 <h6 class="card-title">Local: {{ $cidade }} - {{ $uf }}</h6>
                 <h5>{{ $preco }}</h5>
-                <a class="btn btn-outline-warning  w-100 col-4" href="#" role="button"> Mais Detalhes +</a>
+                <a class="btn btn-outline-warning  w-100 col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" href="#" role="button"> Mais Detalhes +</a>
             </div>
         </div>
     </div>
-</li>
+</div>
 
