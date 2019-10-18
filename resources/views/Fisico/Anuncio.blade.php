@@ -91,7 +91,7 @@
         </form>
     </div>
 </div>
-<div class="row Anuncios">
+<div>
     @if($Anuncios)
     <div class="h-100 semPadding row p-3">
     @foreach ($Anuncios as $Anuncios)
