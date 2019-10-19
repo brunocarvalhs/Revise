@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\modelAnuncio;
 use App\modelJuridico;
 use Illuminate\Http\Request;
 
@@ -34,9 +35,9 @@ class controllerJuridico extends Controller
         return redirect()->back()->with('Login', $Login);
     }
 
-    public function Index(){
-        $modelFisico = session()->get('Juridico');
-        return view('Juridico\Inicio',['Juridico' => $modelFisico]);
+    public function Index(modelAnuncio $modelAnuncio){
+        $modelJuridico = session()->get('Juridico');
+        return view('Juridico\Inicio',['Juridico' => $modelJuridico]);
     }
 
 

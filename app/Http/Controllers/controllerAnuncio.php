@@ -41,4 +41,17 @@ class controllerAnuncio extends Controller
             return redirect()->back();
         }
     }
+
+
+    public function IndiceTipo(Request $request, modelAnuncio $modelAnuncio){
+        $modelJuridico = session()->get('Juridico');
+        $indice = $modelAnuncio->IndiceAcesso($modelJuridico->getIdJuridico());
+        return json_decode($indice);
+    }
+
+    public function IndiceAnuncios(Request $request, modelAnuncio $modelAnuncio){
+        $modelJuridico = session()->get('Juridico');
+        $Anuncios = $modelAnuncio->IndiceAnuncios($modelJuridico->getIdJuridico());
+        return json_decode($Anuncios);
+    }
 }
