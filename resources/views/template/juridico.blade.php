@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/logo.png">
-    <link href="/node_modules/chart.js/dist/Chart.min.css" rel="stylesheet">
     <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/vendor/twbs/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/node_modules/chart.js/dist/Chart.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/sistema.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
     @yield('style')
@@ -180,7 +180,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
 <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
-<script src="/node_modules/chart.js/dist/Chart.min.js"></script>
+<script src="/node_modules/chart.js/dist/Chart.min.js" type="text/javascript"></script>
+<script src="/node_modules/chart.js/dist/Chart.bundle.min.js" type="text/javascript"></script>
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>

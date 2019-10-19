@@ -27,7 +27,7 @@ class controllerFisico extends Controller
         $usuario = $modelFisico->Login($CPF,$SENHA);
         if($usuario != false){
             session(['Fisico' => $modelFisico]);
-            return view('Fisico\Inicio',['Fisico' => $modelFisico]);
+            return redirect('/Home');
         }
         else{
             unset($modelFisico);

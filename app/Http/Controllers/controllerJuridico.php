@@ -24,7 +24,7 @@ class controllerJuridico extends Controller
         $usuario = $modelJuridico->Login($CNPJ,$SENHA);
         if($usuario != false){
             session(['Juridico' => $modelJuridico]);
-            return view('Juridico\Inicio',['Juridico' => $modelJuridico]);
+            return redirect('/Painel');
         }
         else{
             unset($modelJuridico);

@@ -41,9 +41,6 @@ Route::get('/Download/{tipo}', 'controllerUsuario@getDownload');
 
 //--------------- Fisico ------------------------
 
-
-Route::post('/Home','controllerFisico@Login');//Login
-
 Route::group(['middleware' => 'Fisico'], function () {
     // * Inicio
     Route::get('/Home','controllerFisico@Index');
@@ -67,8 +64,6 @@ Route::group(['middleware' => 'Fisico'], function () {
     Route::put('/Home/Notificacao','controllerFisico@AlterarNotificacao');//Alterar
     Route::delete('/Home/Notificacao', 'controllerFisico@DeletarNotificacao');//Deletar
 });
-
-Route::post('/Painel','controllerJuridico@Login');//Login
 
 // ------------ Juridico ------------
 Route::group(['middleware' => 'Juridico'], function () {
