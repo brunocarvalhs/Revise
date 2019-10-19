@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\modelFisico;
 use App\modelUsuario;
 use Illuminate\Http\Request;
+use App\modelJuridico;
 
 class controllerFisico extends Controller
 {
@@ -21,9 +22,7 @@ class controllerFisico extends Controller
         return redirect()->back()->with('Cadastro', $cadastro);
     }
 
-    public function Login(Request $request, controllerUsuario $controllerUsuario){
-        $CPF = $controllerUsuario->TratamentoLogin($request->cpfcnpj);
-        $SENHA = $request->senha;
+    public function Login($CPF,$SENHA){
         $modelFisico = new modelFisico();
         $usuario = $modelFisico->Login($CPF,$SENHA);
         if($usuario != false){
