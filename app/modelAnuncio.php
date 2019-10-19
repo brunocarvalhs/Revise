@@ -119,4 +119,11 @@ class modelAnuncio extends Model
 
         return $lista;
     }
+
+
+    public function Anuncio($id){
+        $Anuncio = DB::select('call sp_selectAnuncio(?)',[$id]);
+        $Anuncio = json_encode($Anuncio);
+        return ($Anuncio);
+    }
 }

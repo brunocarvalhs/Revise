@@ -27,4 +27,18 @@ class controllerAnuncio extends Controller
         $lista = json_decode($lista);
         return view('Fisico\Anuncio',['Fisico' => $modelFisico, 'Anuncios' => $lista]);
     }
+
+    public function DetalhesAnuncios(Request $request, modelAnuncio $modelAnuncio){
+        $modelFisico = session()->get('Fisico');
+        $id = $request->id;
+        if($id != ''){
+            $Anuncio = $modelAnuncio->Anuncio($id);
+            $Anuncio = json_decode($Anuncio);
+            //return dd($Anuncio);
+            return view('Fisico\DetalhesAnuncio',['Fisico' => $modelFisico, 'Anuncio' => $Anuncio]);
+        }
+        else{
+            return redirect()->back();
+        }
+    }
 }

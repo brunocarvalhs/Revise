@@ -91,7 +91,7 @@
         </form>
     </div>
 </div>
-<div>
+<div class="Anuncios">
     @if($Anuncios)
     <div class="h-100 semPadding row p-3">
     @foreach ($Anuncios as $Anuncios)
@@ -102,12 +102,13 @@
             @slot('cidade',$Anuncios->Cidade)
             @slot('uf',$Anuncios->Estado)
             @slot('preco',$Anuncios->Valor)
+            @slot('id',$Anuncios->ID)
         @endcomponent
     @endforeach
     </div>
     @endif
 </div>
-<a href="#top" class="glyphicon glyphicon-chevron-up"></a>
+<a href="{{ url('/') }}" class="glyphicon glyphicon-chevron-up"></a>
 @endsection
 
 @section('script')

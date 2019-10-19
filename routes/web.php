@@ -63,6 +63,7 @@ Route::group(['middleware' => 'Fisico'], function () {
     // * Anuncios
     Route::get('/Home/Anuncio','controllerAnuncio@PesquisaFisico')->name('pesquisa');;//Ler
     Route::get('/Home/Anuncios', 'controllerAnuncio@ListaAnunciosFisico');
+    Route::get('/Home/Anuncios/{id?}','controllerAnuncio@DetalhesAnuncios');
     // * Notificacao
     Route::get('/Home/Notificacao','controllerFisico@LerNotificacao');//Ler
     Route::put('/Home/Notificacao','controllerFisico@AlterarNotificacao');//Alterar
