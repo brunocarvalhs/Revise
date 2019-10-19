@@ -1,3 +1,87 @@
+-- ################# OFICIAIS ##########################
+
+-- Seleciona Anuncio 
+delimiter $
+create procedure sp_selectAnuncio(in id int)
+begin
+	declare idIndice int;
+    declare vlIndice int;
+    declare idAnuncio int;
+    IF(SELECT cd_anuncio FROM tb_anuncio WHERE cd_anuncio = id)
+	THEN
+		set idAnuncio = (SELECT cd_anuncio FROM tb_anuncio WHERE cd_anuncio = id);
+		IF(SELECT cd_indice FROM tb_indice WHERE cd_anuncio = id)
+			THEN 
+				set vlIndice = (SELECT max(vl_indice)+1 FROM tb_indice WHERE cd_anuncio = id);
+				UPDATE tb_indice SET vl_indice =  vlIndice WHERE cd_anuncio = id;
+            ELSE
+				set idIndice = (SELECT count(cd_indice) + 1 FROM tb_indice);
+				INSERT INTO tb_indice VALUES 
+				(idIndice,1,idAnuncio);
+            END IF;
+	END IF;
+    SELECT
+        tb_anuncio.cd_anuncio as ID, 
+        tb_anuncio.nm_titulo as Titulo,
+		tb_anuncio.ds_publicacao as Descricao,
+        tb_anuncio.vl_anunciado as Valor,
+		tb_anuncio.dt_publicacao as Data,
+        tb_tipo_anuncio.nm_tipo_anuncio as Tipo,
+		tb_usuario_juridico.nm_nome_fantasia as Empresa,
+        tb_logradouro.nm_logradouro as Endereco,
+        tb_bairro.nm_bairro as Bairro,tb_cidade.nm_cidade as Cidade,
+		tb_uf.sg_uf as Estado
+			FROM tb_anuncio
+				INNER JOIN tb_tipo_anuncio ON tb_anuncio.cd_tipo_anuncio = tb_tipo_anuncio.cd_tipo_anuncio
+				INNER JOIN tb_usuario_juridico ON tb_usuario_juridico.cd_usuario_juridico = tb_anuncio.cd_usuario_juridico
+				INNER JOIN tb_logradouro ON tb_logradouro.cd_usuario_juridico = tb_usuario_juridico.cd_usuario_juridico
+				INNER JOIN tb_bairro ON tb_bairro.cd_bairro = tb_logradouro.cd_bairro
+				INNER JOIN tb_cidade ON tb_cidade.cd_cidade = tb_bairro.cd_cidade
+				INNER JOIN tb_uf ON tb_uf.sg_uf = tb_cidade.sg_uf
+					WHERE tb_anuncio.cd_anuncio = id;
+end $
+
+
+
+
+
+-- procedimento de notificacao de peça 
+delimiter $
+create procedure notificacao(in sigla char(2))
+begin 
+	
+  select 
+		p.nm_peca as 'PEÇA', 
+        v.cd_placa as 'PLACA', 
+        s.nm_status as 'STATUS',
+        c.dt_check as 'DATA'
+			from tb_check as c
+				inner join 
+					tb_veiculo as v on v.cd_veiculo = c.cd_veiculo
+                    join tb_status as s
+                    join tb_peca as p on p.cd_peca = c.cd_peca
+						order by sigla;
+                        
+end $
+
+
+-- Calcular cobrança do tipo de anuncio
+delimiter $
+create procedure calcularAnuncio(in quantidade int, in tipo varchar(12)) 
+begin 
+
+	SELECT quantidade * vl_anuncio as 'Cobrança' from tb_tipo_anuncio where nm_tipo_anuncio = tipo;
+
+end $
+
+-- 
+
+
+
+
+
+
+
 
 -- Login do usuario juridico(Read - tb_usuario_juridico)
 delimiter $
@@ -129,61 +213,7 @@ begin
 
 end $
 
--- procedimento de notificacao de peça 
-delimiter $
-create procedure notificacao(in sigla char(2))
-begin 
-	
-  select 
-		p.nm_peca as 'PEÇA', 
-        v.cd_placa as 'PLACA', 
-        s.nm_status as 'STATUS',
-        c.dt_check as 'DATA'
-			from tb_check as c
-				inner join 
-					tb_veiculo as v on v.cd_veiculo = c.cd_veiculo
-                    join tb_status as s
-                    join tb_peca as p on p.cd_peca = c.cd_peca
-						order by sigla;
-                        
-end $
 
-
--- Calcular cobrança do tipo de anuncio
-delimiter $
-create procedure calcularAnuncio(in quantidade int, in tipo varchar(12)) 
-begin 
-
-	SELECT quantidade * vl_anuncio as 'Cobrança' from tb_tipo_anuncio where nm_tipo_anuncio = tipo;
-
-end $
-
--- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-select * from tb_peca;
-select * from tb_check;
-select * from tb_veiculo;
-select * from tb_usuario;
-select * from tb_usuario_fisico;
-select * from tb_tipo_anuncio;
-
-call calcularAnuncio(9,'Serviço');
 
 
 -=-----------------------------------------------------------
