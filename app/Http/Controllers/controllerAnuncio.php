@@ -69,6 +69,6 @@ class controllerAnuncio extends Controller
 
     public function ControlerDeIndiceJuridico(Request $request){
         $modelJuridico = session()->get('Juridico');
-        return view('Juridico.Anuncio',['Juridico' => $modelJuridico]);
+        return view('Juridico.Indice',['Juridico' => $modelJuridico]);
     }
 }

@@ -118,9 +118,6 @@
                                                     <a href="{{ url('/Painel/Anuncio') }}">
                                                         <i class="fa fa-wrench" aria-hidden="true"></i>
                                                         <span>Anúncios</span>
-                                                        <span class="badge badge-pill badge-danger">
-
-                                                        </span>
                                                     </a>
                                                 </li>
                                                 <li class="sidebar-content">
