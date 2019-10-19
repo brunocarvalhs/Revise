@@ -108,14 +108,19 @@ class modelJuridico extends modelUsuario
         if ($checkUser) {
             $resultado = DB::table('tb_usuario')
                 ->join('tb_usuario_juridico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_juridico.cd_usuario')
-                ->select('tb_usuario_juridico.cd_usuario as Usuario', 'tb_usuario_juridico.cd_cnpj as CNPJ', 'tb_usuario.cd_senha as Senha', 'tb_usuario.nm_email as Email', 'tb_usuario_juridico.nm_nome_fantasia as Fantasia', 'tb_usuario_juridico.nm_razao_social as Razao')
+                ->select('tb_usuario_juridico.cd_usuario as Usuario','tb_usuario_juridico.cd_usuario_juridico as Id' ,
+                'tb_usuario_juridico.cd_cnpj as CNPJ', 'tb_usuario.cd_senha as Senha', 'tb_usuario.nm_email as Email',
+                 'tb_usuario_juridico.nm_nome_fantasia as Fantasia', 'tb_usuario_juridico.nm_razao_social as Razao')
                 ->where('tb_usuario_juridico.cd_cnpj', '=', $CNPJ, 'and', 'tb_usuario.cd_senha', '=', $SENHA)
                 ->first();
             if ($resultado->CNPJ == $CNPJ && $resultado->Senha == $SENHA) {
+                $this->setIdUsuario($resultado->Usuario);
                 $this->setSenha($resultado->Senha);
                 $this->setEmail($resultado->Email);
-                $this->setIdJuridico();
-                $this->setNome
+                $this->setIdJuridico($resultado->Id);
+                $this->setNomeFantasia($resultado->Fantasia);
+                $this->setRazaoSocial($resultado->Razao);
+                $this->setCNPJ($resultado->CNPJ);
                 return $resultado;
             } else {
                 return false;
