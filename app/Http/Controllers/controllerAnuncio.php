@@ -54,4 +54,21 @@ class controllerAnuncio extends Controller
         $Anuncios = $modelAnuncio->IndiceAnuncios($modelJuridico->getIdJuridico());
         return json_decode($Anuncios);
     }
+
+
+
+    public function CadastroAnuncio(Request $request){
+
+    }
+
+
+    public function ControlerDeAnuncioJuridico(Request $request){
+        $modelJuridico = session()->get('Juridico');
+        return view('Juridico.Anuncio',['Juridico' => $modelJuridico]);
+    }
+
+    public function ControlerDeIndiceJuridico(Request $request){
+        $modelJuridico = session()->get('Juridico');
+        return view('Juridico.Anuncio',['Juridico' => $modelJuridico]);
+    }
 }

@@ -70,17 +70,19 @@ Route::group(['middleware' => 'Juridico'], function () {
     // * Inicio
     Route::get('/Painel','controllerJuridico@Index');//Ler
     // * Perfil
-    /*
-    Route::get('/Painel/Perfil','');//Ler
-    Route::put('/Painel/Perfil','');//Alterar
-    Route::delete('/Painel/Perfil', '');//Deletar
+    Route::get('/Painel/Perfil','controllerJuridico@LerPerfil');//Ler
+    //Route::put('/Painel/Perfil','');//Alterar
+    //Route::delete('/Painel/Perfil', '');//Deletar
     // * Anuncios
-    Route::get('/Painel/Anuncios','');//Ler
-    Route::post('/Painel/Anuncios','');//Criar
-    Route::put('/Painel/Anuncios','');//Alterar
-    Route::delete('/Painel/Anuncios/{anuncio}', '');//Deletar
-    // Inidices*/
+    Route::get('/Painel/Anuncio','controllerAnuncio@ControlerDeAnuncioJuridico');//Ler
+    //Route::post('/Painel/Anuncios','');//Criar
+    //Route::put('/Painel/Anuncios','');//Alterar
+    //Route::delete('/Painel/Anuncios/{anuncio}', '');//Deletar
+    // * Inidices
+    Route::get('/Painel/Indice','controllerAnuncio@ControlerDeIndiceJuridico');
+
+
+
     Route::get('Indices/Quantidade','controllerAnuncio@IndiceTipo')->name('qt');
     Route::get('Indices/Anuncios','controllerAnuncio@IndiceAnuncios')->name('an');//Criar
-
  });

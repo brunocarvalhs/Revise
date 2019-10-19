@@ -43,7 +43,8 @@ class controllerJuridico extends Controller
 
 
     public function LerPerfil(){
-
+        $modelJuridico = session()->get('Juridico');
+        return view('Juridico\Perfil',['Juridico' => $modelJuridico]);
     }
 
     public function AlterarPerfil(){
@@ -53,4 +54,7 @@ class controllerJuridico extends Controller
     public function DeletarPerfil(){
 
     }
+
+
+
 }
