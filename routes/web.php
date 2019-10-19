@@ -20,9 +20,7 @@ Route::get('/SignIn', function () {
 
 Route::get('/SignOut','controllerUsuario@SignOut')->name('sair');
 
-Route::post('/Home', 'controllerUsuario@SignIn');
-
-Route::get('/Home', 'controllerUsuario@Sistema');
+Route::post('/SignIn', 'controllerUsuario@SignIn')->name('login');
 
 Route::get('/cadastro/{tipo}', 'controllerUsuario@Cadastro');
 

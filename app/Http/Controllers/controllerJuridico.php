@@ -19,9 +19,7 @@ class controllerJuridico extends Controller
         return redirect()->back()->with('Cadastro', $cadastro);
     }
 
-    public function Login(Request $request, controllerUsuario $controllerUsuario){
-        $CNPJ = $controllerUsuario->TratamentoLogin($request->cpfcnpj);
-        $SENHA = $request->senha;
+    public function Login($CNPJ, $SENHA){
         $modelJuridico = new modelJuridico();
         $usuario = $modelJuridico->Login($CNPJ,$SENHA);
         if($usuario != false){
@@ -30,7 +28,7 @@ class controllerJuridico extends Controller
         }
         else{
             unset($modelJuridico);
-            $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado, verificar se os dados de acesso estão corretos!']);
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado, verificar se os dados inseridos estão corretos!']);
         }
         $Login = json_decode($Login);
         return redirect()->back()->with('Login', $Login);

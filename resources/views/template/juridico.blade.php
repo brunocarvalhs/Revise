@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="img/logo.png">
+    <link href="/node_modules/chart.js/dist/Chart.min.css" rel="stylesheet">
     <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/vendor/twbs/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,16 +37,16 @@
                                 <a class="nav-link h4">Menu</a>
                             </li>
                             <li class="nav-item @yield('menu_inicio')">
-                                <a class="nav-link" href="{{ url('/Home') }}">Início</a>
+                                <a class="nav-link" href="{{ url('/Painel') }}">Início</a>
                             </li>
                             <li class="nav-item @yield('menu_perfil')">
-                                <a class="nav-link" href="{{ url('/Home/Perfil') }}">Perfil</a>
+                                <a class="nav-link" href="{{ url('/Painel/Perfil') }}">Perfil</a>
                             </li>
                             <li class="nav-item @yield('menu_anuncios')">
-                                <a class="nav-link" href="{{ url('/Home/Anuncio') }}">Anúncios</a>
+                                <a class="nav-link" href="{{ url('/Painel/Anuncio') }}">Anúncios</a>
                             </li>
                             <li class="nav-item @yield('menu_indice')">
-                                <a class="nav-link" href="{{ url('/Home/Indice') }}">Índice de Acesso</a>
+                                <a class="nav-link" href="{{ url('/Painel/Indice') }}">Índice de Acesso</a>
                             </li>
                         </ul>
                         <div class="form-inline my-2 my-lg-0">
@@ -85,10 +86,10 @@
                                             <div class="user-info">
                                                 <br>
                                                 <span class="user-name">
-                                                    <strong>{{ $dados->Fantasia }}</strong>
+                                                    <strong>{{ $Juridico->getNomeFantasia() }}</strong>
                                                 </span>
                                                 <span class="user-role">
-                                                    {{ $dados->CNPJ }}
+                                                    {{ $Juridico->getCNPJ() }}
                                                 </span>
                                                 <span class="user-role">
 
@@ -102,19 +103,19 @@
                                                     <span>Geral</span>
                                                 </li>
                                                 <li class="sidebar-content">
-                                                    <a href="{{ url('/Home') }}">
+                                                    <a href="{{ url('/Painel') }}">
                                                         <i class="fa fa-home fa-fw" aria-hidden="true"></i>
                                                         <span>Início</span>
                                                     </a>
                                                 </li>
                                                 <li class="sidebar-content">
-                                                    <a href="{{ url('/Home/Perfil') }}">
+                                                    <a href="{{ url('/Painel/Perfil') }}">
                                                         <i class="fa fa-user-circle" aria-hidden="true"></i>
                                                         <span>Perfil</span>
                                                     </a>
                                                 </li>
                                                 <li class="sidebar-content">
-                                                    <a href="{{ url('/Home/Anuncio') }}">
+                                                    <a href="{{ url('/Painel/Anuncio') }}">
                                                         <i class="fa fa-wrench" aria-hidden="true"></i>
                                                         <span>Anúncios</span>
                                                         <span class="badge badge-pill badge-danger">
@@ -123,7 +124,7 @@
                                                     </a>
                                                 </li>
                                                 <li class="sidebar-content">
-                                                    <a href="{{ url('/Home/Indice') }}">
+                                                    <a href="{{ url('/Painel/Indice') }}">
                                                         <i class="fa fa-car" aria-hidden="true"></i>
                                                         <span>Indice de Acesso</span>
                                                     </a>
@@ -179,11 +180,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
 <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
+<script src="/node_modules/chart.js/dist/Chart.min.js"></script>
 <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{ asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
 <script src="{{ asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
+
 @yield('script')
 @yield('mensagem')
 @include('componentes.SairSistema')

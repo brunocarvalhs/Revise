@@ -3,7 +3,7 @@
 @section('titulo','Login')
 
 @section('login')
-<form method="POST" action="{{ url('/Home') }}" onsubmit="">
+<form method="POST" action="{{ url('/SignIn') }}" onsubmit="">
     @csrf
     <div class="row formularioLogin">
         <div class="logoRevise">

@@ -23,15 +23,16 @@ class controllerUsuario extends Controller
      * @return Redirect
      * @return JSON erro
      */
-    public function SignIn(Request $request)
+    public function SignIn(Request $request, controllerUsuario $controllerUsuario, controllerFisico $controllerFisico, controllerJuridico $controllerJuridico )
     {
         $validar = $this->ValidarCampos($request);
         if ($validar) {
             $login = $this->TratamentoLogin($request->cpfcnpj);
+            $senha = $request->senha;
             if (strlen($login) === 14) {
-                return redirect('/Home');
+                return $controllerJuridico->Login($login,$senha);
             } else if (strlen($login) === 11) {
-                return redirect('/Painel');
+                return $controllerFisico->Login($login,$senha);
             } else {
                 $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres de login invalido, preencha corretamente os campos.']);
             }
