@@ -80,10 +80,10 @@ Route::group(['middleware' => 'Juridico'], function () {
     //Route::put('/Painel/Anuncios','');//Alterar
     //Route::delete('/Painel/Anuncios/{anuncio}', '');//Deletar
     // * Inidices
-    Route::get('/Painel/Indice','controllerAnuncio@ControlerDeIndiceJuridico');
+    Route::get('/Painel/Indice','controllerIndice@ControlerDeIndiceJuridico');
 
 
 
-    Route::get('Indices/Quantidade','controllerAnuncio@IndiceTipo')->name('qt');
-    Route::get('Indices/Anuncios','controllerAnuncio@IndiceAnuncios')->name('an');//Criar
+    Route::get('Indices/Quantidade','controllerIndice@IndiceTipo')->name('qt');
+    Route::get('Indices/Anuncios','controllerIndice@IndiceAnuncios')->name('an');//Criar
  });
