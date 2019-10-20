@@ -19,16 +19,16 @@
 <div id="main" class="container-fluid" style="margin-top: 50px">
     <div id="top" class="row">
         <form action="" method="POST">
-        <div class="col-sm-6">
+        <div class="col-sm-8">
             <div class="input-group h2">
                 <div class="form-group input-group">
                     <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
-                    <span class="input-group-addon"><button type="submit">Pesquisar</button></span>
+                    <span class="input-group-addon"><button type="submit" class="btn btn-primary">Pesquisar</button></span>
                 </div>
             </div>
         </div>
        </form>
-       <div class="col-sm-3">
+       <div class="col-sm-4">
            <button class="btn btn-primary pull-right h2">Novo Item<button>
        </div>
    </div> <!-- /#top -->
