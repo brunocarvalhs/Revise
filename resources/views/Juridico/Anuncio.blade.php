@@ -22,8 +22,8 @@
         <div class="col-sm-6">
             <div class="input-group h2">
                 <div class="form-group input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
                     <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+                    <span class="input-group-addon"><button type="submit">Pesquisar</button></span>
                 </div>
             </div>
         </div>
