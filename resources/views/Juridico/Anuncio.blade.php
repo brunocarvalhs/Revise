@@ -51,8 +51,8 @@
                     <td>01/01/2015</td>
                     <td class="actions">
                         <button class="btn btn-success">Visualiar</button>
-                        <button class="btn btn-warning">Editar<button>
-                        <button class="btn btn-danger">Excluir<button>
+                        <button class="btn btn-warning">Editar</button>
+                        <button class="btn btn-danger">Excluir</button>
                     </td>
                 </tr>
             </tbody>
