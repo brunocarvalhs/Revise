@@ -18,18 +18,13 @@
 @section('sistema_juridico')
 <div id="main" class="container-fluid" style="margin-top: 50px">
     <div id="top" class="row">
-        <div class="col-sm-3">
-            <h2>Anuncios</h2>
-        </div>
         <form action="" method="POST">
         <div class="col-sm-6">
             <div class="input-group h2">
-                <input class="form-control" id="search" type="text" placeholder="Pesquisar Anuncio">
-                <span class="input-group-btn">
-                    <button class="btn btn-primary" type="submit">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                </span>
+                <div class="form-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+                </div>
             </div>
         </div>
        </form>
