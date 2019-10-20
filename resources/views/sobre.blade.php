@@ -35,118 +35,116 @@
                             familiar e onde diversão na medida certa é sinônimo de produção saudável </p>
                     </p>
 </section>
-<!--Sobre os integrantes-->
-
-    <div class="container-fluid">
+ <!--Sobre os integrantes-->
+    
+ <div class="container-fluid">
+        
         <div class="row space">
-
-            <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-                <div class="card card_align card_hover" style="width: 12rem;">
-                    <img src="img/integrantes/fe.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+                    <div class="card card_align  card_hover" style="width: 12rem;">
+                        <img src="./Views/img/integrantes/fe.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                    </div>
+                </div>
+    
+                <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
+                        <div class="card-body badgeDarkColor rounded card_hover">
+                                <p class="card-text text-light h5 descricao ">Fernanda Pereira Santos da Silva</p>
+                                <p class="card-text">
+                            <ul>
+                                    <li class="text-light">Analista</li>
+                                    <li class="text-light">Coordenadora</li>
+                                    <li class="text-light">Front-end</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>   
+        <div class="row space">
+                <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+                    <div class="card card_align  card_hover" style="width: 12rem;">
+                        <img src="./Views/img/integrantes/bruno.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                    </div>
+                </div>
+    
+                <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
+                        <div class="card-body badgeDarkColor rounded card_hover">
+                                <p class="card-text text-light h5 descricao">Bruno Silva Carvalho</p>
+                                <p class="card-text">
+                            <ul>
+                                    <li class="text-light">Analista</li>
+                                    <li class="text-light">Desenvolvedor Mobile</li>
+                                    <li class="text-light">Full Stack</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <div class="row space">
+                <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+                    <div class="card card_align  card_hover" style="width: 12rem;">
+                        <img src="./Views/img/integrantes/lucas.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                    </div>
+                </div>
+    
+                <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
+                        <div class="card-body badgeDarkColor rounded card_hover">
+                                <p class="card-text text-light h5 descricao ">Lucas Juan Souza de Oliveira Miranda Moraes</p>
+                                <p class="card-text">
+                            <ul>
+                                    <li class="text-light">Cientista de Dados</li>
+                                    <li class="text-light">Editor de mídia</li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-12 col-sm-8 col-md-9 col-lg-9 col-xl-9">
-                <div class="card-body badgeDarkColor rounded card_hover">
-                    <p class="card-text text-light h5 descricao ">Fernanda Pereira Santos da Silva</p>
-                    <p class="card-text">
+        <div class="row space">
+            <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+                <div class="card card_align  card_hover" style="width: 12rem;">
+                    <img src="./Views/img/integrantes/luiz.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                </div>
+            </div>
 
+            <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
+                    <div class="card-body badgeDarkColor rounded card_hover">
+                    <p class="card-text text-light h5 descricao">Luiz Marcelo da Silva Garcia Filho</p>
+                    <p class="card-text">
                         <ul>
-                            <li class="text-light">Analista</li>
-                            <li class="text-light">Coordenadora</li>
+                            <li class="text-light">Designer</li>                      
                             <li class="text-light">Front-end</li>
                         </ul>
                     </p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row space">
+    
 
-        <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div class="card card_align  card_hover" style="width: 12rem;">
-                <img src="img/integrantes/bruno.jpeg" class="card-img-top rounded-circle foto" alt="...">
+        <div class="row space">
+                <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
+                    <div class="card card_align  card_hover" style="width: 12rem;">
+                        <img src="./Views/img/integrantes/katry.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                    </div>
+                </div>
+    
+                <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
+                        <div class="card-body badgeDarkColor rounded card_hover">
+                        <p class="card-text text-light h5 descricao">Katryel Menezes Vieira</p>
+                        <p class="card-text">
+                            <ul>
+                                <li class="text-light"></li>
+                                <li class="text-light">Back-end</li>
+                                <li class="text-light">Auxiliador de Gerenciamento de projeto</li>
+                            </ul>
+                        </p>
+                        </div>
+                </div>
             </div>
-        </div>
-
-        <div class="col-12 col-sm-8 col-md-9 col-lg-9 col-xl-9">
-            <div class="card-body badgeDarkColor rounded  card_hover">
-                <p class="card-text text-light h5 descricao">Bruno Silva Carvalho</p>
-                <p class="card-text">
-                    <ul>
-                        <li class="text-light">Analista</li>
-                        <li class="text-light">Desenvolvedor Mobile</li>
-                        <li class="text-light">Full Stack</li>
-                    </ul>
-                </p>
             </div>
-        </div>
-    </div>
-    </div>
-
-    <div class="row space">
-        <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div class="card card_align  card_hover" style="width: 12rem;">
-                <img src="img/integrantes/lucas.jpeg" class="card-img-top rounded-circle foto" alt="...">
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-8 col-md-9 col-lg-9 col-xl-9">
-            <div class="card-body badgeDarkColor rounded card_hover">
-                <p class="card-text text-light h5 descricao ">Lucas Juan Souza de Oliveira Miranda Moraes</p>
-                <p class="card-text">
-                    <ul>
-                        <li class="text-light">Cientista de Dados</li>
-                        <li class="text-light">Editor de mídia</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <div class="row space">
-        <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div class="card card_align  card_hover" style="width: 12rem;">
-                <img src="img/integrantes/luiz.jpeg" class="card-img-top rounded-circle foto" alt="...">
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-8 col-md-9 col-lg-9 col-xl-9">
-            <div class="card-body badgeDarkColor rounded card_hover">
-                <p class="card-text text-light h5 descricao">Luiz Marcelo da Silva Garcia Filho</p>
-                <p class="card-text">
-                    <ul>
-                        <li class="text-light">Designer</li>
-                        <li class="text-light">Front-end</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="row space">
-        <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
-            <div class="card card_align  card_hover" style="width: 12rem;">
-                <img src="img/integrantes/katry.jpeg" class="card-img-top rounded-circle foto" alt="...">
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-8 col-md-9 col-lg-9 col-xl-9">
-            <div class="card-body badgeDarkColor rounded card_hover">
-                <p class="card-text text-light h5 descricao">Katryel Menezes Vieira</p>
-                <p class="card-text">
-                    <ul>
-                        <li class="text-light">Back-end</li>
-                        <li class="text-light">Auxiliador de Gerenciamento de projeto</li>
-                    </ul>
-                </p>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-<br>
+      
+    
+    </section>
+    <br>
 <!-- Trabalhe conosco -->
 <section id="vagas" class="backgroundBlack">
     <h1 class="text-white">
