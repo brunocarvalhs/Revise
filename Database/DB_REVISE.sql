@@ -289,3 +289,14 @@ CREATE TABLE tb_medida_peca(
 		FOREIGN KEY (sg_medida)
 			REFERENCES tb_medida(sg_medida)
 );
+
+CREATE TABLE tb_indice(
+ cd_indice int not null,
+ vl_indice int not null,
+ cd_anuncio int not null,
+ CONSTRAINT pk_lote
+	PRIMARY KEY (cd_indice),
+ CONSTRAINT fk_indice_anuncio
+	FOREIGN KEY (cd_anuncio)
+		REFERENCES tb_anuncio(cd_anuncio)
+);
