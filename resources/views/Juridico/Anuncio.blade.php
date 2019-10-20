@@ -35,7 +35,7 @@
 <div id="list" class="row">
     <div class="table-responsive col-md-12">
         <table class="table table-striped shadow-sm p-3 mb-5 rounded" cellspacing="0" cellpadding="0">
-            <thead class="shadow mb-9">
+            <thead class="shadow">
                 <tr>
                     <th scope="col"><input type="checkbox" name="select-all" id="select-all"/></th>
                     <th scope="col">Titulo</th>
@@ -46,7 +46,7 @@
                     <th class="actions">Ações</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="mt-5">
                 @foreach ($Anuncios as $Anuncios)
                     <tr>
                         <td scope="row"><input type="checkbox" value="{{ $Anuncios->ID }}" id="txtIdAnuncio" name="txtIdAnuncio{{ $Anuncios->ID }}"></td>
