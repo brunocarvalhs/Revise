@@ -1,28 +1,17 @@
 <script>
     function Sair() {
-        swal({
-            icon: "warning",
+        Swal.fire({
+            type: "question",
             title: "Confirmação",
             text: "Deseja sair do sistema?",
-            buttons: {
-                cancel: {
-                    text: "Cancel",
-                    value: false,
-                    visible: true,
-                    className: "",
-                    closeModal: true,
-                },
-                confirm: {
-                    text: "Sair",
-                    value: true,
-                    visible: true,
-                    className: "swal-button--style",
-                    closeModal: true
-                }
-            }
-        }).then((decicao)=>{
-            if(decicao)
+            showCancelButton: true,
+            confirmButtonText: 'Sim, sair...',
+            cancelButtonText: 'Não, cancelar',
+            reverseButtons: true
+        }).then((result)=>{
+            if (result.value) {
                 window.location.href = "{{ route('sair') }}";
+            }
         });
     }
 </script>

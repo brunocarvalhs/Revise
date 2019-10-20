@@ -69,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer d-flex justify-content-center bg-warning mt-3">
+                <div class="modal-footer d-flex justify-content-center bg-warning mt-3" type="submit">
                     <button type="submit" class="btn btn-default bg-warning">Cadastrar</button>
                 </div>
             </div>
