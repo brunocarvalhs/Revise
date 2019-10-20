@@ -137,9 +137,9 @@ class modelFisico extends modelUsuario
 
                 if (!($resultado)) {
 
-                    $auto_usuario = DB::table('tb_usuario')->count() + 1;
-                    $auto_usuario_fisico = DB::table('tb_usuario_fisico')->count() + 1;
-                    $auto_controle_plano = DB::table('tb_controle_plano')->count() + 1;
+                    $auto_usuario = DB::table('tb_usuario')->max('cd_usuario') + 1;
+                    $auto_usuario_fisico = DB::table('tb_usuario_fisico')->max('cd_usuario_fisico') + 1;
+                    $auto_controle_plano = DB::table('tb_controle_plano')->max('cd_controle') + 1;
 
                     DB::table('tb_usuario')->insert(
                         [
