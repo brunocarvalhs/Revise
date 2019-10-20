@@ -108,14 +108,14 @@ class modelFisico extends modelUsuario
                 ->where('tb_usuario_fisico.cd_cpf', '=', $CPF, 'and', 'tb_usuario.cd_senha', '=', $SENHA)
                 ->first();
 
-            if ($resultado->CPF == $CPF && $resultado->Senha == $SENHA && $resultado != null) {
-                $this->setSenha($resultado->Senha);
-                $this->setEmail($resultado->Email);
+            if (base64_decode($resultado->CPF) == $CPF && base64_decode($resultado->Senha) == $SENHA && $resultado != null) {
+                $this->setSenha(base64_decode($resultado->Senha));
+                $this->setEmail(base64_decode($resultado->Email));
                 $this->setIdUsuario($resultado->Id);
                 $this->setIdFisico($resultado->Usuario);
-                $this->setNomeFisico($resultado->Nome);
-                $this->setCPF($resultado->CPF);
-                $this->setDataNascimento($resultado->Nascimento);
+                $this->setNomeFisico(base64_decode($resultado->Nome));
+                $this->setCPF(base64_decode($resultado->CPF));
+                $this->setDataNascimento(base64_decode($resultado->Nascimento));
                 return $resultado;
             } else {
                 return false;
@@ -140,18 +140,18 @@ class modelFisico extends modelUsuario
                     DB::table('tb_usuario')->insert(
                         [
                             'cd_usuario' => $auto_usuario,
-                            'nm_email' => $request->txtemail,
-                            'cd_senha' => $request->txtsenha,
+                            'nm_email' => base64_encode($request->txtemail),
+                            'cd_senha' => base64_encode($request->txtsenha),
                             'cd_tipo_usuario' => 1
                         ]
                     );
                     DB::table('tb_usuario_fisico')->insert(
                         [
                             'cd_usuario_fisico' => $auto_usuario_fisico,
-                            'nm_usuario_fisico' => $request->txtnome,
-                            'cd_cpf' => $CPF,
+                            'nm_usuario_fisico' => base64_encode($request->txtnome),
+                            'cd_cpf' => base64_encode($CPF),
                             'cd_usuario' => $auto_usuario,
-                            'dt_nascimento' => $request->txtNascimento
+                            'dt_nascimento' => base64_encode($request->txtNascimento)
                         ]
                     );
                     DB::table('tb_controle_plano')->insert(
