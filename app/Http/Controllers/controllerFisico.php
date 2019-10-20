@@ -101,9 +101,7 @@ class controllerFisico extends Controller
     // Notificacao ---------------------------------------------------------------
     public function LerNotificacao(){
         $modelFisico = session()->get('Fisico');
-        $Notificacao = $modelFisico->DadosPerfil();
-        $Notificacao = json_decode($Notificacao);
-        return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao]);
+        return view('Fisico\Notificacao',['Fisico' => $modelFisico]);
     }
 
     public function AlterarNotificacao(){
