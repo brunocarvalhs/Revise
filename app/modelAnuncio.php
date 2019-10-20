@@ -132,11 +132,10 @@ class modelAnuncio extends Model
         $lista = DB::table('tb_anuncio')
             ->join('tb_tipo_anuncio','tb_anuncio.cd_tipo_anuncio','=','tb_tipo_anuncio.cd_tipo_anuncio')
             ->join('tb_usuario_juridico','tb_usuario_juridico.cd_usuario_juridico', '=', 'tb_anuncio.cd_usuario_juridico')
-            ->join('tb_logradouro','tb_logradouro.cd_usuario_juridico', '=', 'tb_usuario_juridico.cd_usuario_juridico')
             ->select('tb_anuncio.cd_anuncio as ID','tb_anuncio.nm_titulo as Titulo',
                     'tb_anuncio.ds_publicacao as Descricao','tb_anuncio.vl_anunciado as Valor',
                     'tb_anuncio.dt_publicacao as Data','tb_anuncio.dt_expira_publicacao as Validade','tb_tipo_anuncio.nm_tipo_anuncio as Tipo')
-            ->where('tb_usuario_juridico.cd_juridico','=',$id)
+            ->where('tb_usuario_juridico.cd_usuario_juridico','=',$id)
             ->get();
 
         $lista = json_encode($lista);
