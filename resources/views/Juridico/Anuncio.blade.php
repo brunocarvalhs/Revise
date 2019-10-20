@@ -16,84 +16,158 @@
 
 
 @section('sistema_juridico')
-<div class="col-12">
-    <div class="card">
-        <div class="card-body">
-            This is some text within a panel body.
-        </div>
+<div id="main" class="container-fluid" style="margin-top: 50px">
+
+    <div id="top" class="row">
+       <div class="col-sm-3">
+           <h2>Itens</h2>
+       </div>
+       <div class="col-sm-6">
+
+           <div class="input-group h2">
+               <input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Itens">
+               <span class="input-group-btn">
+                   <button class="btn btn-primary" type="submit">
+                       <span class="glyphicon glyphicon-search"></span>
+                   </button>
+               </span>
+           </div>
+
+       </div>
+       <div class="col-sm-3">
+           <a href="add.html" class="btn btn-primary pull-right h2">Novo Item</a>
+       </div>
+   </div> <!-- /#top -->
+
+
+    <hr />
+    <div id="list" class="row">
+
+   <div class="table-responsive col-md-12">
+       <table class="table table-striped" cellspacing="0" cellpadding="0">
+           <thead>
+               <tr>
+                   <th>ID</th>
+                   <th>Header 1</th>
+                   <th>Header 2</th>
+                   <th>Header 3</th>
+                   <th class="actions">Ações</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>1001</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+               <tr>
+                   <td>1002</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+               <tr>
+                   <td>1003</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+               <tr>
+                   <td>1004</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+               <tr>
+                   <td>1005</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+               <tr>
+                   <td>1006</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+               <tr>
+                   <td>1007</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+               <tr>
+                   <td>1008</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+               <tr>
+                   <td>1009</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+               <tr>
+                   <td>1010</td>
+                   <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
+                   <td>Jes</td>
+                   <td>01/01/2015</td>
+                   <td class="actions">
+                       <a class="btn btn-success btn-xs" href="view.html">Visualizar</a>
+                       <a class="btn btn-warning btn-xs" href="edit.html">Editar</a>
+                       <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+                   </td>
+               </tr>
+           </tbody>
+       </table>
     </div>
-</div>
-<div class="col-12">
-    <table class="table table-hover table-fixed">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Surname</th>
-                <th>Country</th>
-                <th>City</th>
-                <th>Position</th>
-                <th>Age</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">4</th>
-                <td>Jerry</td>
-                <td>Horwitz</td>
-                <td>Italy</td>
-                <td>Bari</td>
-                <td>Editor-in-chief</td>
-                <td>41</td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Janis</td>
-                <td>Joplin</td>
-                <td>Poland</td>
-                <td>Warsaw</td>
-                <td>Video Maker</td>
-                <td>39</td>
-            </tr>
-            <tr>
-                <th scope="row">6</th>
-                <td>Gary</td>
-                <td>Winogrand</td>
-                <td>Germany</td>
-                <td>Berlin</td>
-                <td>Photographer</td>
-                <td>37</td>
-            </tr>
-            <tr>
-                <th scope="row">7</th>
-                <td>Angie</td>
-                <td>Smith</td>
-                <td>USA</td>
-                <td>San Francisco</td>
-                <td>Teacher</td>
-                <td>52</td>
-            </tr>
-            <tr>
-                <th scope="row">8</th>
-                <td>John</td>
-                <td>Mattis</td>
-                <td>France</td>
-                <td>Paris</td>
-                <td>Actor</td>
-                <td>28</td>
-            </tr>
-            <tr>
-                <th scope="row">9</th>
-                <td>Otto</td>
-                <td>Morris</td>
-                <td>Germany</td>
-                <td>Munich</td>
-                <td>Singer</td>
-                <td>35</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
 @endsection
 
 
