@@ -46,9 +46,11 @@ class controllerAnuncio extends Controller
 
     }
 
-    public function ControlerDeAnuncioJuridico(Request $request){
+    public function ControlerDeAnuncioJuridico(Request $request, modelAnuncio $modelAnuncio){
         $modelJuridico = session()->get('Juridico');
-        return view('Juridico.Anuncio',['Juridico' => $modelJuridico]);
+        $Anuncios = $modelAnuncio->AnuncioDoJuridico($modelJuridico->getIdJuridico());
+        $Anuncios = json_decode($Anuncios);
+        return view('Juridico.Anuncio',['Juridico' => $modelJuridico,'Anuncios' => $Anuncios]);
     }
 
 }

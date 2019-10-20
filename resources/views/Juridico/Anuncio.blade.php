@@ -36,25 +36,31 @@
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Header 1</th>
-                    <th>Header 2</th>
-                    <th>Header 3</th>
+                    <th><input type="checkbox"></th>
+                    <th>Titulo</th>
+                    <th>Preço</th>
+                    <th>Data de Publicação</th>
+                    <th>Validade</th>
+                    <th>Tipo</th>
                     <th class="actions">Ações</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1001</td>
-                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
-                    <td>Jes</td>
-                    <td>01/01/2015</td>
-                    <td class="actions">
-                        <button class="btn btn-success">Visualiar</button>
-                        <button class="btn btn-warning">Editar</button>
-                        <button class="btn btn-danger">Excluir</button>
-                    </td>
-                </tr>
+                @foreach ($Anuncios as $Anuncios)
+                    <tr>
+                        <td><input type="checkbox" value="{{ $Anuncios->ID }}"></td>
+                        <td>{{ $Anuncios->Titulo }}</td>
+                        <td>{{ $Anuncios->Valor }}</td>
+                        <td>{{ $Anuncios->Data }}</td>
+                        <td>{{ $Anuncios->Validade }}</td>
+                        <td>{{ $Anuncios->Tipo }}</td>
+                        <td class="actions">
+                            <button class="btn btn-success">Visualiar</button>
+                            <button class="btn btn-warning">Editar</button>
+                            <button class="btn btn-danger">Excluir</button>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
