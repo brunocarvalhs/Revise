@@ -28,13 +28,12 @@
         </form>
     </div>
 </div>
-<div class="col-sm-4">
-    <button class="btn btn-primary pull-right h2">Novo Item<button>
+<div class="shadow-sm p-3 mb-5 rounded">
+    <div class="col-sm-4">
+        <button class="btn btn-primary pull-right h2">Novo Item<button>
+    </div>
 </div>
-</div>
-<hr />
 <div id="list" class="row">
-
     <div class="table-responsive col-md-12">
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
