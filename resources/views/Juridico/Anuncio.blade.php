@@ -34,27 +34,27 @@
 <div id="list" class="row">
     <div class="table-responsive col-md-12">
         <table class="table table-striped" cellspacing="0" cellpadding="0">
-            <thead class="col-12">
+            <thead>
                 <tr>
-                    <th class="col-12"><input type="checkbox" name="select-all" id="select-all"/></th>
-                    <th class="col-12">Titulo</th>
-                    <th class="col-12">Preço</th>
-                    <th class="col-12">Data de Publicação</th>
-                    <th class="col-12">Validade</th>
-                    <th class="col-12">Tipo</th>
-                    <th class="col-12 actions">Ações</th>
+                    <th scope="col"><input type="checkbox" name="select-all" id="select-all"/></th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Data de Publicação</th>
+                    <th scope="col">Validade</th>
+                    <th scope="col">Tipo</th>
+                    <th class="actions">Ações</th>
                 </tr>
             </thead>
-            <tbody class="row">
+            <tbody>
                 @foreach ($Anuncios as $Anuncios)
                     <tr>
-                        <td class="col-12"><input type="checkbox" value="{{ $Anuncios->ID }}" id="txtIdAnuncio" name="txtIdAnuncio{{ $Anuncios->ID }}"></td>
-                        <td class="col-12">{{ $Anuncios->Titulo }}</td>
-                        <td class="col-12">{{ $Anuncios->Valor }}</td>
-                        <td class="col-12">{{ $Anuncios->Data }}</td>
-                        <td class="col-12">{{ $Anuncios->Validade }}</td>
-                        <td class="col-12">{{ $Anuncios->Tipo }}</td>
-                        <td class="col-12" class="actions">
+                        <td scope="row"><input type="checkbox" value="{{ $Anuncios->ID }}" id="txtIdAnuncio" name="txtIdAnuncio{{ $Anuncios->ID }}"></td>
+                        <td>{{ $Anuncios->Titulo }}</td>
+                        <td>{{ $Anuncios->Valor }}</td>
+                        <td>{{ $Anuncios->Data }}</td>
+                        <td>{{ $Anuncios->Validade }}</td>
+                        <td>{{ $Anuncios->Tipo }}</td>
+                        <td class="actions">
                             <button class="btn btn-success">Visualiar</button>
                             <button class="btn btn-warning">Editar</button>
                             <button class="btn btn-danger">Excluir</button>
