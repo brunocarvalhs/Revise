@@ -21,8 +21,9 @@
         <form action="{{ route('pesquisa') }}">
             <div class="input-group">
                 <input type="text" class="form-control" name="pesquisa">
+                <div class="input-group-append">
+                    <button type="submit" class="input-group-append btn btn-success rounded-right">Pesquisar</button>
                 </div>
-                <button type="submit" class="input-group-append btn btn-success rounded-right">Pesquisar</button>
             </div>
         </form>
     </div>
