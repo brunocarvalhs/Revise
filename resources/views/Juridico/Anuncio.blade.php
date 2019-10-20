@@ -36,7 +36,7 @@
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
-                    <th><input type="checkbox" onClick="selectAll(this)"></th>
+                    <th><input type="checkbox" name="select-all" id="select-all"/></th>
                     <th>Titulo</th>
                     <th>Preço</th>
                     <th>Data de Publicação</th>
@@ -72,11 +72,17 @@
 
 @section('script')
     <script>
-        function selectAll(source) {
-            checkboxes = document.querySelectorAll('txtIdAnuncio');
-            for(var i=0, n=checkboxes.length;i<n;i++) {
-                checkboxes[i].checked = source.checked;
+        $('#select-all').click(function(event) {
+            if(this.checked) {
+                // Iterate each checkbox
+                $(':checkbox').each(function() {
+                    this.checked = true;
+                });
+            } else {
+                $(':checkbox').each(function() {
+                    this.checked = false;
+                });
             }
-        }
+        });
     </script>
 @endsection
