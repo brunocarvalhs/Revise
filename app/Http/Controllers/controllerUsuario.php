@@ -44,36 +44,6 @@ class controllerUsuario extends Controller
     }
 
 
-
-    /**
-     * Metodo de validação de retorno do usuario
-     *
-     * @param Session $_SESSION['autentic']
-     * @return View
-     */
-    public function Sistema()
-    {
-        try {
-            if (((!empty($_SESSION['autentic'])) || (!isset($_SESSION['autentic'])))) {
-                switch ($_SESSION['autentic']) {
-                    case '1':
-                        return view('Fisico\Inicio', ['dados' => json_decode($_SESSION['Dados'])]);
-                        break;
-                    case '2':
-                        return view('Juridico\Inicio', ['dados' => json_decode($_SESSION['Dados'])]);
-                        break;
-                    default:
-                        return back();
-                        break;
-                }
-            } else {
-                return back();
-            }
-        } catch (Exception $e) {
-            return redirect('/SignIn');
-        }
-    }
-
     /**
      * Matodo de limpa Login
      *

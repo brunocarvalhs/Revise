@@ -50,7 +50,7 @@ Route::group(['middleware' => 'Fisico'], function () {
     Route::delete('/Home/Perfil', 'controllerFisico@DeletarPerfil');//Deletar
     // * Veiculos
     Route::get('/Home/Veiculos','controllerFisico@LerVeiculos');//Ler
-    Route::post('/Home/Veiculos','controllerFisico@CriarVeiculos');//Criar
+    Route::post('/Home/Veiculos','controllerFisico@CriarVeiculos')->name('veiculo');//Criar
     Route::put('/Home/Veiculos','controllerFisico@AlterarVeiculos');//Alterar
     Route::delete('/Home/Veiculo', 'controllerFisico@DeletarVeiculos');//Deletar
     Route::get('/Home/Veiculo/{Placa}','controllerFisico@DetalhesVeiculo');//Criar

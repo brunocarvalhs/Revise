@@ -1,7 +1,8 @@
 <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <form action="" onsubmit="" method="POST">
+        <form action="{{ route('veiculo') }}" onsubmit="" method="POST">
+            @csrf
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <h4 class="modal-title w-100 font-weight-bold">Dados do veículo</h4>
@@ -18,7 +19,7 @@
                                         <div class="form-group">
                                             <label for="disabledTextInput">Placa</label>
                                             <input type="text" id="txtplaca" maxlength="8" name="txtplaca"
-                                                class="form-control" placeholder="">
+                                                class="form-control" placeholder="" data-mask="SSS-0000">
                                         </div>
                                     </div>
                                 </div>
@@ -59,6 +60,11 @@
                                     <input type="text" readonly="true" class="form-control" id="txtEstado"
                                         name="txtEstado" placeholder="Estado">
                                 </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <label for="disabledTextInput">Quilometragem</label>
+                                <input type="text" class="form-control" id="txtQuilometragem" name="txtQuilometragem" data-mask="000000000"
+                                    placeholder="">
                             </div>
                         </div>
                     </div>

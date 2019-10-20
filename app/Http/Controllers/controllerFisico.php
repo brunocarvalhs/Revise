@@ -6,6 +6,7 @@ use App\modelFisico;
 use App\modelUsuario;
 use Illuminate\Http\Request;
 use App\modelJuridico;
+use App\modelVeiculo;
 
 class controllerFisico extends Controller
 {
@@ -60,8 +61,22 @@ class controllerFisico extends Controller
     }
 
     // Veiculos ---------------------------------------------------------------
-    public function CriarVeiculos(){
-
+    public function CriarVeiculos(Request $request, controllerVeiculo $controllerVeiculo, controllerUsuario $controllerUsuario,modelVeiculo $modelVeiculo){
+        $campos = $controllerUsuario->ValidarCampos($request);
+        if ($campos) {
+            $veiculo = (explode("/",$request->txtMarca));
+            if($controllerVeiculo->compartibilidadeVeiculo($veiculo,$modelVeiculo)){
+                $modelFisico = session()->get('Fisico');
+                $cadastro = $controllerVeiculo->AdicionarVeiculo($request, $modelVeiculo, $modelFisico);
+            }
+            else{
+                $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Modelo e Marca não suportado pelo Revise.']);
+            }
+        } else {
+            $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
+        }
+        $cadastro = json_decode($cadastro);
+        return redirect()->back()->with('Cadastro', $cadastro);
     }
 
     public function LerVeiculos(controllerUsuario $controllerUsuario){

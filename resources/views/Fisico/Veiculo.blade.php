@@ -7,7 +7,6 @@
 
 
 @section('style')
-<link href="{{asset('css/solid.min.css')}}" rel="stylesheet" type="text/css">
 <style>
     .MultiCarousel {
         float: left;
@@ -113,12 +112,12 @@
             </div>
         </div>
     </div>
-    @endsection
+@endsection
 
 
 
 
-    @section('script')
+@section('script')
     <script>
         $(document).ready(function () {
             var itemsMainDiv = ('.MultiCarousel');
@@ -228,4 +227,27 @@
         });
     </script>
     <script src="{{asset('js/API.js')}}"></script>
-    @endsection
+@endsection
+
+
+@section('mensagem')
+@if(session()->has('Cadastro'))
+    @if(session()->get('Cadastro')->Status)
+        @component('componentes.alert')
+            @slot('titulo','SUCESSO')
+            @slot('icone','success')
+            @slot('mensagem')
+                {{ session()->get('Cadastro')->Mensagem }}
+            @endslot
+        @endcomponent
+    @else
+        @component('componentes.alert')
+            @slot('titulo','ERRO')
+            @slot('icone','error')
+            @slot('mensagem')
+                {{ session()->get('Cadastro')->Mensagem }}
+            @endslot
+        @endcomponent
+    @endif
+@endif
+@endsection

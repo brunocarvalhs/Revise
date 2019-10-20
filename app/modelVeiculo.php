@@ -15,7 +15,8 @@ class modelVeiculo extends Model
     private $ano;
     private $cor;
     private $Quilometragem;
-
+    private $Estado;
+    private $Cidade;
 
 
     /**
@@ -158,20 +159,110 @@ class modelVeiculo extends Model
         return $this;
     }
 
-    public function Cadastrar(Request $request, modelUsuario $modelUsuario)
+    /**
+     * Get the value of Estado
+     */
+    public function getEstado()
+    {
+        return $this->Estado;
+    }
+
+    /**
+     * Set the value of Estado
+     *
+     * @return  self
+     */
+    public function setEstado($Estado)
+    {
+        $this->Estado = $Estado;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of Cidade
+     */
+    public function getCidade()
+    {
+        return $this->Cidade;
+    }
+
+    /**
+     * Set the value of Cidade
+     *
+     * @return  self
+     */
+    public function setCidade($Cidade)
+    {
+        $this->Cidade = $Cidade;
+
+        return $this;
+    }
+
+    public function Cadastrar($idUsuario)
     {
 
-       $this->setPlaca($request->placa);
-       $this->setAno($request->ano);
-       $this->setCor($request->cor);
+        $id = $this->getId();
+        $modelo = $this->getModelo();
+        $marca = $this->getMarca();
+        $placa = $this->getPlaca();
+        $ano = $this->getAno();
+        $cor = $this->getCor();
+        $Quilometragem = $this->getQuilometragem();
 
-       $id = $this->getId();
-       $modelo = $this->getModelo();
-       $placa = $this->getPlaca();
-       $ano = $this->getAno();
-       $cor = $this->getCor();
-       $idUsuario = $modelUsuario->getIdUsuario();
+        if(!(DB::table('tb_veiculo')->where('cd_placa','=',$placa)->exists())){
 
+            $marca = DB::select("SELECT cd_marca as ID from tb_marca where nm_marca like CONCAT('%',?,'%')",[$marca]);
+            $marca = ($marca[0]->ID);
+
+            $idVeiculo = DB::select("SELECT max(cd_veiculo) + 1 as ID FROM tb_veiculo");
+            $this->setId($idVeiculo[0]->ID);
+            $idVeiculo = $this->getId();
+
+            //return dd($idVeiculo);
+
+            if((DB::table('tb_modelo')->where('nm_modelo','=',$modelo)->exists())){
+
+                $modelo = DB::select("SELECT cd_modelo as ID from tb_modelo where nm_modelo like CONCAT('%',?,'%')",[$modelo]);
+
+                $modelo = $modelo[0]->ID;
+
+            }
+            else{
+
+
+                $idmodelo = DB::select("SELECT max(cd_modelo) + 1 as ID FROM tb_modelo");
+
+                $idmodelo = $idmodelo[0]->ID;
+
+                DB::table('tb_modelo')->insert([
+                    'cd_modelo' =>  $idmodelo,
+                    'nm_modelo' => $modelo,
+                    'cd_marca' => $marca,
+                ]);
+
+                $modelo = DB::select("SELECT cd_modelo as ID from tb_modelo where nm_modelo like CONCAT('%',?,'%')",[$modelo]);
+
+                $modelo = $modelo[0]->ID;
+
+            }
+
+
+            DB::table('tb_veiculo')->insert([
+                'cd_veiculo' =>  $idVeiculo,
+                'nm_cor' => $cor,
+                'qt_quilometragem' => $Quilometragem,
+                'aa_veiculo' => $ano,
+                'cd_placa' => $placa,
+                'cd_usuario' => $idUsuario,
+                'cd_modelo' => $modelo
+            ]);
+
+            return json_encode(['Status' => true, 'Mensagem' => 'Veículo cadastrado com sucesso, placa: '.$placa]);;
+        }
+        else{
+            return json_encode(['Status' => false, 'Mensagem' => 'Veículo já cadastrado com a placa '.$placa]);;
+      }
 
     }
 
@@ -200,6 +291,8 @@ class modelVeiculo extends Model
     }
 
 
-
+    public function compartibilidadeVeiculo($veiculo){
+        return DB::table('tb_marca')->where('nm_marca','LIKE','%'.$veiculo[0].'%')->exists();
+    }
 
 }

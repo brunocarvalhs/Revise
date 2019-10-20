@@ -214,6 +214,7 @@
 <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
 <script src="{{asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
+<script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 @yield('script')
 @yield('mensagem')
 @include('componentes.SairSistema')
