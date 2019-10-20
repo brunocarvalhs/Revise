@@ -140,7 +140,7 @@ class modelFisico extends modelUsuario
                     DB::table('tb_usuario')->insert(
                         [
                             'cd_usuario' => $auto_usuario,
-                            'nm_email' => base_encode($request->txtemail),
+                            'nm_email' => $request->txtemail,
                             'cd_senha' => $request->txtsenha,
                             'cd_tipo_usuario' => 1
                         ]
