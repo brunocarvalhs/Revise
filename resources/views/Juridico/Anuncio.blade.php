@@ -50,10 +50,9 @@
                     <td>Jes</td>
                     <td>01/01/2015</td>
                     <td class="actions">
-                        <button class="btn btn-success btn-xs" href="view.html">Visualizar<button>
-                                <button class="btn btn-warning btn-xs" href="edit.html">Editar<button>
-                                        <button class="btn btn-danger btn-xs" href="#" data-toggle="modal"
-                                            data-target="#delete-modal">Excluir<button>
+                        <button class="btn btn-success">Visualiar</button>
+                        <button class="btn btn-warning">Editar<button>
+                        <button class="btn btn-danger">Excluir<button>
                     </td>
                 </tr>
             </tbody>
