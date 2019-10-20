@@ -129,14 +129,19 @@ class modelFisico extends modelUsuario
     {
         try {
             if ($request->txtsenha == $request->txtcsenha) {
+
                 $resultado = DB::table('tb_usuario_fisico')
                     ->join('tb_usuario', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
                     ->where('tb_usuario_fisico.cd_cpf', '=', $CPF, 'or', 'tb_usuario.nm_email', '=', $request->txtemail)
                     ->exists();
+
                 if (!($resultado)) {
+
                     $auto_usuario = DB::table('tb_usuario')->count() + 1;
                     $auto_usuario_fisico = DB::table('tb_usuario_fisico')->count() + 1;
                     $auto_controle_plano = DB::table('tb_controle_plano')->count() + 1;
+
+                    return dd(base64_encode($request->txtemail));
                     DB::table('tb_usuario')->insert(
                         [
                             'cd_usuario' => $auto_usuario,
