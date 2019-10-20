@@ -129,14 +129,18 @@ class modelFisico extends modelUsuario
     {
         try {
             if ($request->txtsenha == $request->txtcsenha) {
+
                 $resultado = DB::table('tb_usuario_fisico')
                     ->join('tb_usuario', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
                     ->where('tb_usuario_fisico.cd_cpf', '=', $CPF, 'or', 'tb_usuario.nm_email', '=', $request->txtemail)
                     ->exists();
+
                 if (!($resultado)) {
+
                     $auto_usuario = DB::table('tb_usuario')->count() + 1;
                     $auto_usuario_fisico = DB::table('tb_usuario_fisico')->count() + 1;
                     $auto_controle_plano = DB::table('tb_controle_plano')->count() + 1;
+
                     DB::table('tb_usuario')->insert(
                         [
                             'cd_usuario' => $auto_usuario,
@@ -145,6 +149,7 @@ class modelFisico extends modelUsuario
                             'cd_tipo_usuario' => 1
                         ]
                     );
+
                     DB::table('tb_usuario_fisico')->insert(
                         [
                             'cd_usuario_fisico' => $auto_usuario_fisico,
@@ -154,6 +159,7 @@ class modelFisico extends modelUsuario
                             'dt_nascimento' => $request->txtNascimento
                         ]
                     );
+
                     DB::table('tb_controle_plano')->insert(
                         [
                             'cd_controle' => $auto_controle_plano,
@@ -163,6 +169,7 @@ class modelFisico extends modelUsuario
                     );
 
                     return json_encode(['Status' => true, 'Mensagem' => 'Cadastro realizado com sucesso']);
+
                 } else {
                     return json_encode(['Status' => false, 'Mensagem' => 'Usuario já cadastrado']);
                 }
