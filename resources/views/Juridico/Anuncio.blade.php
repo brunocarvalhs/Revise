@@ -29,18 +29,7 @@
     </div>
 </div>
 <div class="shadow-sm p-3 mb-5 rounded">
-    <div class="col-sm-4">
-        <button class="btn btn-primary rounded-circle">Novo Item<button>
-    </div>
-    <div class="col-sm-4">
-        <button class="btn btn-primary rounded-circle">Novo Item<button>
-    </div>
-    <div class="col-sm-4">
-        <button class="btn btn-primary rounded-circle">Novo Item<button>
-    </div>
-    <div class="col-sm-4">
-        <button class="btn btn-primary rounded-circle">Novo Item<button>
-    </div>
+
 </div>
 <div id="list" class="row">
     <div class="table-responsive col-md-12">
