@@ -63,6 +63,7 @@ Route::group(['middleware' => 'Fisico'], function () {
     Route::get('/Home/Notificacao','controllerFisico@LerNotificacao');//Ler
     Route::put('/Home/Notificacao','controllerFisico@AlterarNotificacao');//Alterar
     Route::delete('/Home/Notificacao', 'controllerFisico@DeletarNotificacao');//Deletar
+    Route::post('/Home/Notificacao','controllerFisico@LerNotificacao')->name('notificacao');
 });
 
 // ------------ Juridico ------------
