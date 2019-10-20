@@ -29,7 +29,7 @@
     </div>
 </div>
 <div class="shadow-sm p-3 mb-5 rounded">
-    <button>Novo Anuncio</button>
+    <button class="btn">Novo Anuncio</button>
 </div>
 <div id="list" class="row">
     <div class="table-responsive col-md-12">
@@ -58,7 +58,7 @@
             </tbody>
         </table>
     </div>
-    @endsection
+@endsection
 
 
 
