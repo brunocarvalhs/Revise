@@ -36,7 +36,7 @@
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
-                    <th><input type="checkbox"></th>
+                    <th><input type="checkbox" onClick="selectAll(this)"></th>
                     <th>Titulo</th>
                     <th>Preço</th>
                     <th>Data de Publicação</th>
@@ -48,7 +48,7 @@
             <tbody>
                 @foreach ($Anuncios as $Anuncios)
                     <tr>
-                        <td><input type="checkbox" value="{{ $Anuncios->ID }}"></td>
+                        <td><input type="checkbox" value="{{ $Anuncios->ID }}" id="txtIdAnuncio" name="txtIdAnuncio{{ $Anuncios->ID }}"></td>
                         <td>{{ $Anuncios->Titulo }}</td>
                         <td>{{ $Anuncios->Valor }}</td>
                         <td>{{ $Anuncios->Data }}</td>
@@ -70,8 +70,13 @@
 
 
 
-    @section('script')
+@section('script')
     <script>
-
+        function selectAll(source) {
+            checkboxes = document.querySelectorAll('txtIdAnuncio');
+            for(var i=0, n=checkboxes.length;i<n;i++) {
+                checkboxes[i].checked = source.checked;
+            }
+        }
     </script>
-    @endsection
+@endsection
