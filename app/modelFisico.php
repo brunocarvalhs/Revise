@@ -141,7 +141,6 @@ class modelFisico extends modelUsuario
                     $auto_usuario_fisico = DB::table('tb_usuario_fisico')->count() + 1;
                     $auto_controle_plano = DB::table('tb_controle_plano')->count() + 1;
 
-                    return dd(base64_encode($request->txtemail));
                     DB::table('tb_usuario')->insert(
                         [
                             'cd_usuario' => $auto_usuario,
@@ -156,7 +155,7 @@ class modelFisico extends modelUsuario
                             'nm_usuario_fisico' => base64_encode($request->txtnome),
                             'cd_cpf' => base64_encode($CPF),
                             'cd_usuario' => $auto_usuario,
-                            'dt_nascimento' => base64_encode($request->txtNascimento)
+                            'dt_nascimento' => $request->txtNascimento
                         ]
                     );
                     DB::table('tb_controle_plano')->insert(
