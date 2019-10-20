@@ -32,7 +32,7 @@
     <button class="btn btn-default btn-rounded btn-dark text-right" data-toggle="modal"
     data-target="#modalLoginForm">Novo Anuncio</button>
 </div>
-<div id="list" class="row">
+<div id="list" class="row shadow-sm p-3 mb-5 rounded">
     <div class="table-responsive col-md-12">
         <table class="table table-striped" cellspacing="0" cellpadding="0">
             <thead>
