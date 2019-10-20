@@ -43,7 +43,7 @@ class controllerAnuncio extends Controller
     }
 
     public function CadastroAnuncio(Request $request){
-
+        return dd($request);
     }
 
     public function ControlerDeAnuncioJuridico(Request $request, modelAnuncio $modelAnuncio){
