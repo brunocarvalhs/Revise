@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use App\modelFisico;
 use App\modelUsuario;
-use App\modelVeiculo;
-use App\modelJuridico;
 use Illuminate\Http\Request;
-use App\Http\Controllers\controllerNotificacao;
+use App\modelJuridico;
+use App\modelVeiculo;
 
 class controllerFisico extends Controller
 {
@@ -100,13 +99,11 @@ class controllerFisico extends Controller
     }
 
     // Notificacao ---------------------------------------------------------------
-    public function LerNotificacao(controllerNotificacao $controllerNotificacao, controllerUsuario $controllerUsuario){
+    public function LerNotificacao(){
         $modelFisico = session()->get('Fisico');
-        $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
-        $Veiculos = json_decode($Veiculos);
-        $Notificacao = $controllerNotificacao->Notificacao($Veiculos);
+        $Notificacao = $modelFisico->DadosPerfil();
         $Notificacao = json_decode($Notificacao);
-        return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);
+        return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao]);
     }
 
     public function AlterarNotificacao(){
