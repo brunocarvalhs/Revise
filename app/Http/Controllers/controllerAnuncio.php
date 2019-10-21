@@ -54,7 +54,9 @@ class controllerAnuncio extends Controller
     }
 
 
-    public function deletarAnuncio(Request $request){
-        return dd($request->anuncio);
+    public function deletarAnuncio(Request $request,modelAnuncio $modelAnuncio){
+        $mensagem = $modelAnuncio->deletarAnuncio($request->anuncio);
+        $mensagem = json_decode($mensagem);
+        return redirect('/Painel/Anuncio')->with('status', $mensagem);
     }
 }
