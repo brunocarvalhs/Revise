@@ -83,7 +83,7 @@
             }
         });
         $('#excluir').click(function(){
-            var checks = document.querySelectorAll("input[type='checkbox']:checked"),
+            var checks = document.querySelectorAll("#txtIdAnuncio"),
             i = checks.length,
             arr = [];
             while (i--) {
