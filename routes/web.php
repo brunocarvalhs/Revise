@@ -78,8 +78,7 @@ Route::group(['middleware' => 'Juridico'], function () {
     Route::get('/Painel/Anuncio','controllerAnuncio@ControlerDeAnuncioJuridico');//Ler
     Route::post('/Painel/Anuncios','controllerAnuncio@CadastroAnuncio')->name('anuncio');//Criar
     //Route::put('/Painel/Anuncios','');//Alterar
-    Route::delete('/Painel/Anuncios/{anuncio}', 'controllerAnuncio@deletarAnuncio');//Deletar
-    Route::post('Anuncios/Todos', 'controllerAnuncio@deletarAnuncio')->name('deletarAnuncios');//Deletar Todos
+    Route::delete('/Painel/Anuncios/{anuncio}', 'controllerAnuncio@deletarAnuncio')->name('deletarAnuncio');//Deletar
     // * Inidices
     Route::get('/Painel/Indice','controllerIndice@ControlerDeIndiceJuridico');
 

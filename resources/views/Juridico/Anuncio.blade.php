@@ -16,20 +16,11 @@
 
 
 @section('sistema_juridico')
-<div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded">
+<div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded bg-dark">
     <div class="row">
         <div class="col">
-            <button class="btn btn-dark btn-rounded text-right" data-toggle="modal"
-                data-target="#modalLoginForm">Novo Anuncio</button>
-        </div>
-        <div class="col">
-            <button class="btn btn-success" id="visualizar">Visualiar</button>
-        </div>
-        <div class="col">
-            <button class="btn btn-warning" id="editar">Editar</button>
-        </div>
-        <div class="col">
-            <button class="btn btn-danger" id="excluir">Excluir</button>
+             <button class="btn btn-default btn-rounded text-right" data-toggle="modal"
+    data-target="#modalLoginForm">Novo Anuncio</button>
         </div>
     </div>
 </div>
@@ -44,17 +35,27 @@
                     <th scope="col">Data de Publicação</th>
                     <th scope="col">Validade</th>
                     <th scope="col">Tipo</th>
+                    <th class="actions">Ações</th>
                 </tr>
             </thead>
             <tbody class="mt-5">
                 @foreach ($Anuncios as $Anuncios)
                     <tr>
-                        <td scope="row"><input type="checkbox" value="{{ $Anuncios->ID }}" id="txtIdAnuncio" name="txtIdAnuncio{{ $Anuncios->ID }}"></td>
+                        <td scope="row">
+                        <form action="{{ url('/Painel/Anuncios/', ['anuncio' => $Anuncios->ID]) }}" method="post">
                         <td>{{ $Anuncios->Titulo }}</td>
                         <td>{{ $Anuncios->Valor }}</td>
                         <td>{{ $Anuncios->Data }}</td>
                         <td>{{ $Anuncios->Validade }}</td>
                         <td>{{ $Anuncios->Tipo }}</td>
+                        <td class="actions">
+                            <button class="btn btn-success">Visualiar</button>
+                            <button class="btn btn-warning">Editar</button>
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                            @method('delete')
+                            @csrf
+                        </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
@@ -81,34 +82,6 @@
                     this.checked = false;
                 });
             }
-        });
-        $('#excluir').click(function(){
-            Swal.fire({
-            type: "question",
-            title: "Confirmação",
-            text: "Deseja realmente deletar esses anuncios? Sendo imposivel reastaurar após decição, sem reembolso.",
-            showCancelButton: true,
-            confirmButtonText: 'Sim, Deletar',
-            cancelButtonText: 'Não, cancelar',
-            reverseButtons: true
-            }).then((result)=>{
-                if (result.value) {
-                    var checks = document.querySelectorAll("#txtIdAnuncio"),
-                    i = checks.length,
-                    arr = [];
-                    while (i--) {
-                        arr.push(checks[i].value);
-                    }
-
-                    $.post({{ url('Anuncios/Todos') }},{ anuncio : arr},function(result){
-                        Swal.fire({
-                            type: result.type,
-                            title: result.titulo,
-                            text: result.texto,
-                        })
-                    });
-                }
-            });
         });
     </script>
 @endsection
