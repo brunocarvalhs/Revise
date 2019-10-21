@@ -113,7 +113,7 @@ class modelAnuncio extends Model
                     'tb_usuario_juridico.nm_nome_fantasia as Empresa','tb_logradouro.nm_logradouro as Endereco',
                     'tb_bairro.nm_bairro as Bairro','tb_cidade.nm_cidade as Cidade',
                     'tb_uf.sg_uf as Estado')
-            ->where('tb_anuncio.dt_expira_publicacao','<','NOW()')
+            ->where('NOW()','<','tb_anuncio.dt_expira_publicacao')
             ->get();
 
         $lista = json_encode($lista);
@@ -138,7 +138,7 @@ class modelAnuncio extends Model
                     'tb_anuncio.dt_publicacao as Data','tb_anuncio.dt_expira_publicacao as Validade','tb_tipo_anuncio.nm_tipo_anuncio as Tipo')
             ->where([
                 ['tb_usuario_juridico.cd_usuario_juridico','=',$id],
-                ['tb_anuncio.dt_expira_publicacao','<','NOW()']
+                ['NOW()','<','tb_anuncio.dt_expira_publicacao']
             ])
             ->get();
 
