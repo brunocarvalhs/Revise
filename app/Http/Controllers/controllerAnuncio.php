@@ -53,4 +53,9 @@ class controllerAnuncio extends Controller
         return view('Juridico.Anuncio',['Juridico' => $modelJuridico,'Anuncios' => $Anuncios]);
     }
 
+
+    public function deletarAnuncio(Request $request){
+        $mensagem = json_encode(['type' => 'error','Titulo' => 'Falha','texto' => 'Falha ao tentar excluir anuncios...']);
+        return json_decode($mensagem);
+    }
 }
