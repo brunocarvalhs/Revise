@@ -100,7 +100,7 @@
                         arr.push(checks[i].value);
                     }
 
-                    $.post({{ route('deletarAnuncio') }},{ anuncio : arr},function(result){
+                    $.post({{ url('Anuncios/Todos') }},{ anuncio : arr},function(result){
                         Swal.fire({
                             type: result.type,
                             title: result.titulo,
