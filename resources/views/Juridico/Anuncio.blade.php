@@ -19,7 +19,7 @@
 <div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded">
     <div class="row">
         <div class="col">
-                <button class="btn btn-default btn-rounded text-right" data-toggle="modal"
+                <button class="btn btn-dark btn-rounded text-right" data-toggle="modal"
                 data-target="#modalLoginForm">Novo Anuncio</button>
         </div>
         <div class="col">
