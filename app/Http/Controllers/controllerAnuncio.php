@@ -55,7 +55,6 @@ class controllerAnuncio extends Controller
 
 
     public function deletarAnuncio(Request $request){
-        $mensagem = json_encode(['type' => 'error','Titulo' => 'Falha','texto' => 'Falha ao tentar excluir anuncios...']);
-        return json_decode($mensagem);
+        return dd($request->anuncio);
     }
 }
