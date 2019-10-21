@@ -17,8 +17,21 @@
 
 @section('sistema_juridico')
 <div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded bg-dark">
-    <button class="btn btn-default btn-rounded text-right" data-toggle="modal"
-    data-target="#modalLoginForm">Novo Anuncio</button>
+    <div class="row">
+        <div class="col">
+                <button class="btn btn-default btn-rounded text-right" data-toggle="modal"
+                data-target="#modalLoginForm">Novo Anuncio</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-success">Visualiar</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-warning">Editar</button>
+        </div>
+        <div class="col">
+            <button class="btn btn-danger">Excluir</button>
+        </div>
+    </div>
 </div>
 <div id="list" class="row">
     <div class="table-responsive col-md-12">
@@ -31,7 +44,6 @@
                     <th scope="col">Data de Publicação</th>
                     <th scope="col">Validade</th>
                     <th scope="col">Tipo</th>
-                    <th class="actions">Ações</th>
                 </tr>
             </thead>
             <tbody class="mt-5">
@@ -43,11 +55,6 @@
                         <td>{{ $Anuncios->Data }}</td>
                         <td>{{ $Anuncios->Validade }}</td>
                         <td>{{ $Anuncios->Tipo }}</td>
-                        <td class="actions">
-                            <button class="btn btn-success">Visualiar</button>
-                            <button class="btn btn-warning">Editar</button>
-                            <button class="btn btn-danger">Excluir</button>
-                        </td>
                     </tr>
                 @endforeach
             </tbody>
