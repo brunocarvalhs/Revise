@@ -83,13 +83,32 @@
             }
         });
         $('#excluir').click(function(){
-            var checks = document.querySelectorAll("#txtIdAnuncio"),
-            i = checks.length,
-            arr = [];
-            while (i--) {
-                arr.push(checks[i].value);
-            }
-            alert(arr);
+            Swal.fire({
+            type: "question",
+            title: "Confirmação",
+            text: "Deseja realmente deletar esses anuncios? Sendo imposivel reastaurar após decição, sem reembolso.",
+            showCancelButton: true,
+            confirmButtonText: 'Sim, Deletar',
+            cancelButtonText: 'Não, cancelar',
+            reverseButtons: true
+            }).then((result)=>{
+                if (result.value) {
+                    var checks = document.querySelectorAll("#txtIdAnuncio"),
+                    i = checks.length,
+                    arr = [];
+                    while (i--) {
+                        arr.push(checks[i].value);
+                    }
+
+                    $.post({{  }},{ anuncio : arr},function(result){
+                        Swal.fire({
+                            type: result.type,
+                            title: result.titulo,
+                            text: result.texto,
+                        })
+                    });
+                }
+            });
         });
     </script>
 @endsection
