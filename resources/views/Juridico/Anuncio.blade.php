@@ -16,10 +16,10 @@
 
 
 @section('sistema_juridico')
-<div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded bg-dark">
+<div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded">
     <div class="row">
         <div class="col">
-             <button class="btn btn-default btn-rounded text-right" data-toggle="modal"
+             <button class="btn btn-dark btn-rounded text-right" data-toggle="modal"
     data-target="#modalLoginForm">Novo Anuncio</button>
         </div>
     </div>
@@ -42,7 +42,7 @@
                 @foreach ($Anuncios as $Anuncios)
                     <tr>
                         <td scope="row">
-                        <form action="{{ url('/Painel/Anuncios/', ['anuncio' => $Anuncios->ID]) }}" method="post">
+                        <form action="{{ url('/Painel/Anuncios', ['anuncio' => $Anuncios->ID]) }}" method="post">
                         <td>{{ $Anuncios->Titulo }}</td>
                         <td>{{ $Anuncios->Valor }}</td>
                         <td>{{ $Anuncios->Data }}</td>
