@@ -19,17 +19,17 @@
 <div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded">
     <div class="row">
         <div class="col">
-                <button class="btn btn-dark btn-rounded text-right" data-toggle="modal"
+            <button class="btn btn-dark btn-rounded text-right" data-toggle="modal"
                 data-target="#modalLoginForm">Novo Anuncio</button>
         </div>
         <div class="col">
-            <button class="btn btn-success">Visualiar</button>
+            <button class="btn btn-success" id="visualizar">Visualiar</button>
         </div>
         <div class="col">
-            <button class="btn btn-warning">Editar</button>
+            <button class="btn btn-warning" id="editar">Editar</button>
         </div>
         <div class="col">
-            <button class="btn btn-danger">Excluir</button>
+            <button class="btn btn-danger" id="excluir">Excluir</button>
         </div>
     </div>
 </div>
@@ -81,6 +81,15 @@
                     this.checked = false;
                 });
             }
+        });
+        $('#excluir').click(function(){
+            var checks = document.querySelectorAll("input[type='checkbox']:checked"),
+            i = checks.length,
+            arr = [];
+            while (i--) {
+                arr.push(checks[i].value);
+            }
+            alert(arr);
         });
     </script>
 @endsection
