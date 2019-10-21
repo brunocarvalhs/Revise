@@ -63,14 +63,14 @@
     </div>
 </div>
 @include('componentes.adicionarAnuncio')
-@if ($status)
-@component('componentes.alert')
-    @slot('titulo',$status->Titulo)
-    @slot('icone',$status->Tipo)
-    @slot('mensagem')
-    {{ $status->Mensagem }}
-    @endslot
-@endcomponent
+@if(session()->has('status'))
+    @component('componentes.alert')
+        @slot('titulo',$status->Titulo)
+        @slot('icone',$status->Tipo)
+        @slot('mensagem')
+        {{ $status->Mensagem }}
+        @endslot
+    @endcomponent
 @endif
 @endsection
 
