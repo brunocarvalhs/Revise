@@ -69,9 +69,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer d-flex justify-content-center bg-warning mt-3" type="submit">
-                    <button type="submit" class="btn btn-default bg-warning">Cadastrar</button>
-                </div>
+                <button class="modal-footer d-flex justify-content-center bg-warning text-white btn-warning mt-3" type="submit">
+                    <h5>Cadastrar</h5>
+                </button>
             </div>
         </form>
     </div>

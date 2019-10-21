@@ -63,6 +63,8 @@
     </div>
 </div>
 @include('componentes.adicionarAnuncio')
+@include('componentes.adicionarProduto')
+@include('componentes.adicionarServico')
 @if(session()->has('status'))
     @component('componentes.alert')
         @slot('titulo',$status->Titulo)
@@ -79,18 +81,5 @@
 
 
 @section('script')
-    <script>
-        $('#select-all').click(function(event) {
-            if(this.checked) {
-                // Iterate each checkbox
-                $(':checkbox').each(function() {
-                    this.checked = true;
-                });
-            } else {
-                $(':checkbox').each(function() {
-                    this.checked = false;
-                });
-            }
-        });
-    </script>
+
 @endsection

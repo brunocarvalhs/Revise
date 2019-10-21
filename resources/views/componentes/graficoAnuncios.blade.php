@@ -2,7 +2,7 @@
 
 <div>
     <script>
-        var anuncio = "{{route('an')}}"; //Rota de coleta de dados do banco
+        var anuncio = "{{ route('an') }}"; //Rota de coleta de dados do banco
         var Anuncio = new Array();
         var Acessos = new Array();
         $(document).ready(function () {

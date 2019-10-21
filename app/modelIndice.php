@@ -15,7 +15,7 @@ class modelIndice extends Model
         INNER JOIN tb_anuncio AS a ON i.cd_anuncio = a.cd_anuncio
         INNER JOIN tb_tipo_anuncio AS ta ON ta.cd_tipo_anuncio = a.cd_tipo_anuncio
         INNER JOIN tb_usuario_juridico AS uj ON uj.cd_usuario_juridico = a.cd_usuario_juridico
-        WHERE uj.cd_usuario_juridico = ? AND tb_anuncio.dt_expira_publicacao > NOW() group by ta.nm_tipo_anuncio", [$id]);
+        WHERE uj.cd_usuario_juridico = ? group by ta.nm_tipo_anuncio", [$id]);
 
         if($indice == []){
             $indice = [["Visualizacao" => 0,"Tipo" => 'Produto'],["Visualizacao" => 0,"Tipo" => 'Serviço']];
@@ -32,7 +32,7 @@ class modelIndice extends Model
         INNER JOIN tb_anuncio AS a ON i.cd_anuncio = a.cd_anuncio
         INNER JOIN tb_tipo_anuncio AS ta ON ta.cd_tipo_anuncio = a.cd_tipo_anuncio
         INNER JOIN tb_usuario_juridico AS uj ON uj.cd_usuario_juridico = a.cd_usuario_juridico
-        WHERE uj.cd_usuario_juridico = ? AND tb_anuncio.dt_expira_publicacao > NOW()",[$id]);
+        WHERE uj.cd_usuario_juridico = ? ",[$id]);
 
         if($indiceAnuncios == []){
             $indiceAnuncios = [["Visualizacao" => 0,"Tipo" => 'Anuncio']];
