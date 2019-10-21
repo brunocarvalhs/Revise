@@ -67,6 +67,7 @@ class modelAnuncio extends Model
                     ->where([
                         ['tb_anuncio.nm_titulo', 'LIKE', '%'.$pesquisa.'%'],
                         ['tb_tipo_anuncio.nm_tipo_anuncio', 'LIKE', '%'.$tipo.'%'],
+                        ['tb_anuncio.dt_expira_publicacao','>','NOW()']
                     ])
             ->orderByRaw('tb_anuncio.vl_anunciado '.$preco)
             ->get();
@@ -88,6 +89,7 @@ class modelAnuncio extends Model
             ->where([
                 ['tb_anuncio.nm_titulo', 'LIKE', '%'.$pesquisa.'%'],
                 ['tb_tipo_anuncio.nm_tipo_anuncio', 'LIKE', '%'.$tipo.'%'],
+                ['tb_anuncio.dt_expira_publicacao','>','NOW()']
             ])
             ->get();
         }
