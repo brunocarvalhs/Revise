@@ -16,7 +16,7 @@
 
 
 @section('sistema_juridico')
-<div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded bg-dark">
+<div class="col-12 inputPesquisa shadow-sm p-3 mb-5 rounded">
     <div class="row">
         <div class="col">
                 <button class="btn btn-default btn-rounded text-right" data-toggle="modal"
