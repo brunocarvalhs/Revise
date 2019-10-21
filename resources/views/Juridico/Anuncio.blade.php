@@ -29,6 +29,7 @@
         <table class="table table-striped shadow-sm p-3 mb-5 rounded" cellspacing="0" cellpadding="0">
             <thead class="shadow">
                 <tr>
+                    <th scope="col"></th>
                     <th scope="col">Titulo</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Data de Publicação</th>
