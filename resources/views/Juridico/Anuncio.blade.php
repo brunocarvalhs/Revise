@@ -29,7 +29,7 @@
         <table class="table table-striped shadow-sm p-3 mb-5 rounded" cellspacing="0" cellpadding="0">
             <thead class="shadow">
                 <tr>
-                    <th scope="col"><input type="checkbox" name="select-all" id="select-all"/></th>
+                    <th scope="col">Sequência</th>
                     <th scope="col">Titulo</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Data de Publicação</th>
@@ -43,6 +43,7 @@
                     <tr>
                         <td scope="row">
                         <form action="{{ url('/Painel/Anuncios', ['anuncio' => $Anuncios->ID]) }}" method="post">
+                        <td>{{ $valor = $valor + 1 }}</td>
                         <td>{{ $Anuncios->Titulo }}</td>
                         <td>{{ $Anuncios->Valor }}</td>
                         <td>{{ $Anuncios->Data }}</td>
