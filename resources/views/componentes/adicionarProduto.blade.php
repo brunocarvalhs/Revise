@@ -52,7 +52,7 @@
                                             <span class="input-group-text">R$</span>
                                         </div>
                                         <input type="number" placeholder="00000000.00" required min="0" value="0" step="00000000.01" title="Preço" pattern="^\d+(?:\.\d{1,2})?$" class="form-control"
-                                            aria-label="Preço" id="txtPreco" name="txtPreco" data-mask="#0.00">
+                                            aria-label="Preço" id="txtPreco" name="txtPreco">
                                     </div>
                                 </div>
                             </div>
