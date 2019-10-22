@@ -2,10 +2,12 @@
 
 namespace App;
 
+use DateTime;
+use Exception;
+use App\modelJuridico;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Request;
-use TheSeer\Tokenizer\Exception;
 
 class modelAnuncio extends Model
 {
