@@ -48,6 +48,7 @@ class controllerAnuncio extends Controller
 
     public function CadastroAnuncio(Request $request, modelAnuncio $modelAnuncio)
     {
+        return dd($request);
         $modelJuridico = session()->get('Juridico');
         $check = $modelJuridico->ValidarCampos($request);
         if ($check) {
