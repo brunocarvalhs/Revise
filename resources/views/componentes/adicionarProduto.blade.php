@@ -51,7 +51,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">R$</span>
                                         </div>
-                                        <input type="number" placeholder="0.00" required min="0" value="0" step="0.01" title="Preço" pattern="^\d+(?:\.\d{1,2})?$" class="form-control"
+                                        <input type="number" placeholder="00000000.00" required min="0" value="0" step="00000000.01" title="Preço" pattern="^\d+(?:\.\d{1,2})?$" class="form-control"
                                             aria-label="Preço" id="txtPreco" name="txtPreco" data-mask="#0.00">
                                     </div>
                                 </div>
