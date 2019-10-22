@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\modelAnuncio;
+use App\modelTipoAnuncio;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class controllerAnuncio extends Controller
 {
@@ -42,8 +44,10 @@ class controllerAnuncio extends Controller
         }
     }
 
-    public function CadastroAnuncio(Request $request){
-        return dd($request);
+    public function CadastroAnuncio(Request $request,modelAnuncio $modelAnuncio){
+        $modelJuridico = session()->get('Juridico');
+        $cadastro = $modelAnuncio->Cadastro($request,$modelJuridico);
+        return redirect('/Painel/Anuncio')->with('status', $cadastro);
     }
 
     public function ControlerDeAnuncioJuridico(Request $request, modelAnuncio $modelAnuncio){
