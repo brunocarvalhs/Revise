@@ -51,8 +51,8 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">R$</span>
                                         </div>
-                                        <input type="text" class="form-control money_example"
-                                            aria-label="Preço" id="txtPreco" name="txtPreco">
+                                        <input type="numeric" class="form-control"
+                                            aria-label="Preço" id="txtPreco" name="txtPreco" data-mask="#0.00">
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <button class="modal-footer d-flex justify-content-center bg-warning mt-3 btn btn-default bg-warning" type="submit">
-                    Cadastrar
+                    <h5 class="text-white">Cadastrar</h5>
                 </button>
             </div>
         </form>
