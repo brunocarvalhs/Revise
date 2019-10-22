@@ -91,6 +91,19 @@ class controllerUsuario extends Controller
      */
     public function SignOut()
     {
+        if(session()->has('Fisico')){
+            $modelFisico = session()->get('Fisico');
+            unset($modelFisico);
+            session()->flush();
+        }
+        else if (session()->has('Juridico')){
+            $modelJuridico = session()->get('Juridico');
+            unset($modelJuridico);
+            session()->flush();
+        }
+        else{
+            session()->flush();
+        }
         session()->flush();
         return redirect('/SignIn');
     }

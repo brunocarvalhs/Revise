@@ -18,6 +18,6 @@ class Juridico
         if(session()->has('Juridico')){
             return $next($request);
         }
-        return redirect()->back();
+        return redirect('/SignIn');
     }
 }

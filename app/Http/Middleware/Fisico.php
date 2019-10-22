@@ -18,6 +18,6 @@ class Fisico
         if(session()->has('Fisico')){
             return $next($request);
         }
-        return redirect()->back();
+        return redirect('/SignIn');
     }
 }
