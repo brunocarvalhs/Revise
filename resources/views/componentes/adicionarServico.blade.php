@@ -3,6 +3,7 @@
     <div class="modal-dialog" role="document">
         <form action="{{ route('anuncio') }}" onsubmit="" method="POST">
             @csrf
+            <input type="hidden" name="txtTipo" value="Serviço">
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <h4 class="modal-title w-100 font-weight-bold">Adicionar Serviço</h4>
