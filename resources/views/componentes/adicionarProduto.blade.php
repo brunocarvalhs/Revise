@@ -52,7 +52,7 @@
                                             <span class="input-group-text">R$</span>
                                         </div>
                                         <input type="text" class="form-control"
-                                            aria-label="Preço" id="txtPreco" name="txtPreco" data-mask="##0.00">
+                                            aria-label="Preço" id="txtPreco" name="txtPreco" data-thousands="." data-decimal=",">
                                     </div>
                                 </div>
                             </div>
