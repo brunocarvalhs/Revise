@@ -111,7 +111,7 @@ class controllerUsuario extends Controller
     /**
      *
      */
-    public function ValidarCampos(Request $request)
+    public function ValidarCampos($request)
     {
         $r = $request->all();
         foreach ($r as $value => $key) {
