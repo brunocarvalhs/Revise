@@ -42,7 +42,7 @@ class modelAnuncio extends Model
                         'dt_publicacao' => $atual,
                         'vl_mensal' => $TipoAnuncio[1],
                         'cd_usuario_juridico' => $modelJuridico->getIdJuridico(),
-                        'cd_tipo_anuncio' => $$TipoAnuncio[0],
+                        'cd_tipo_anuncio' => $TipoAnuncio[0],
                         'dt_expira_publicacao' => $expiracao
                     ]
                 );
