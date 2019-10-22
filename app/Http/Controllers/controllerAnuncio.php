@@ -49,12 +49,7 @@ class controllerAnuncio extends Controller
     public function CadastroAnuncio(Request $request, modelAnuncio $modelAnuncio)
     {
         $modelJuridico = session()->get('Juridico');
-        $check = $modelJuridico->ValidarCampos($request);
-        if ($check) {
-            $cadastro = $modelAnuncio->Cadastro($request, $modelJuridico);
-        } else {
-            return json_decode(['Status' => false, 'Tipo' => 'warning', 'Titulo' => 'Falha', 'Mensagem' => 'Campos em branco detectado.']);
-        }
+        $cadastro = $modelAnuncio->Cadastro($request, $modelJuridico);
         return redirect('/Painel/Anuncio')->with('status', $cadastro);
     }
 

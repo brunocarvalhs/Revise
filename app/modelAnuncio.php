@@ -19,13 +19,14 @@ class modelAnuncio extends Model
     private $ValorMensal;
     private $DataExpiracao;
 
-    public function Cadastro(Request $request, modelJuridico $modelJuridico)
+    public function Cadastro($request, modelJuridico $modelJuridico)
     {
         try {
-
+            $check = $modelJuridico->ValidarCampos($request);
+            if ($check) {
                 $auto_anuncio = DB::table('tb_anuncio')->max('cd_anuncio') + 1;
 
-                $TipoAnuncio = DB::select("SELECT cd_tipo_anuncio, vl_atual_anuncio FROM tb_tipo_anuncio WHERE nm_tipo_anuncio = ?",[$request->txtTipo]);
+                $TipoAnuncio = DB::select("SELECT cd_tipo_anuncio, vl_atual_anuncio FROM tb_tipo_anuncio WHERE nm_tipo_anuncio = ?", [$request->txtTipo]);
 
                 $atual = new DateTime();
 
@@ -45,6 +46,9 @@ class modelAnuncio extends Model
                     ]
                 );
                 return json_decode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Sucesso', 'Mensagem' => 'Cadastrado com sucesso.']);
+            } else {
+                return json_decode(['Status' => false, 'Tipo' => 'warning', 'Titulo' => 'Falha', 'Mensagem' => 'Campos em branco detectado.']);
+            }
         } catch (Exception $e) {
             return json_decode(['Status' => false, 'Tipo' => 'error', 'Titulo' => 'Falha', 'Mensagem' => 'Erro ao tentar deletar.']);
         }
