@@ -51,8 +51,8 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">R$</span>
                                         </div>
-                                        <input type="text" class="form-control"
-                                            aria-label="Preço" id="txtPreco" name="txtPreco" data-thousands="." data-decimal=",">
+                                        <input type="text" class="form-control money_example"
+                                            aria-label="Preço" id="txtPreco" name="txtPreco">
                                     </div>
                                 </div>
                             </div>
