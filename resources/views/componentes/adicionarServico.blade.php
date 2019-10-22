@@ -29,7 +29,7 @@
                                     <div class="form-group">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="customFileLang" lang="es"
-                                                name="fileAnuncio">
+                                            disabled>
                                             <label class="custom-file-label" for="customFileLang">Seleccionar
                                                 foto</label>
                                         </div>
