@@ -49,9 +49,9 @@ class controllerAnuncio extends Controller
     public function CadastroAnuncio(Request $request, modelAnuncio $modelAnuncio)
     {
         $modelJuridico = session()->get('Juridico');
-        $mensagem = $modelAnuncio->Cadastro($request, $modelJuridico);
-        $mensagem = json_decode($mensagem);
-        return redirect('/Painel/Anuncio')->with('Retorno', $mensagem);
+        $Retorno = $modelAnuncio->Cadastro($request, $modelJuridico);
+        $Retorno = json_decode($Retorno);
+        return redirect('/Painel/Anuncio')->with('Retorno', $Retorno);
     }
 
     public function ControlerDeAnuncioJuridico(Request $request, modelAnuncio $modelAnuncio)
@@ -65,8 +65,8 @@ class controllerAnuncio extends Controller
 
     public function deletarAnuncio(Request $request, modelAnuncio $modelAnuncio)
     {
-        $mensagem = $modelAnuncio->deletarAnuncio($request->anuncio);
-        $mensagem = json_decode($mensagem);
-        return redirect('/Painel/Anuncio')->with('Retorno', $mensagem);
+        $Retorno = $modelAnuncio->deletarAnuncio($request->anuncio);
+        $Retorno = json_decode($Retorno);
+        return redirect('/Painel/Anuncio')->with('Retorno', $Retorno);
     }
 }
