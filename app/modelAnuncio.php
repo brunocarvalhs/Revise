@@ -22,11 +22,16 @@ class modelAnuncio extends Model
     public function Cadastro($request, modelJuridico $modelJuridico)
     {
         try {
+
             $check = $modelJuridico->ValidarCampos($request);
+
             if ($check) {
+
                 $auto_anuncio = DB::table('tb_anuncio')->max('cd_anuncio') + 1;
 
                 $TipoAnuncio = DB::select("SELECT cd_tipo_anuncio, vl_atual_anuncio FROM tb_tipo_anuncio WHERE nm_tipo_anuncio = ?", [$request->txtTipo]);
+
+                return dd($TipoAnuncio);
 
                 $atual = new DateTime();
 
