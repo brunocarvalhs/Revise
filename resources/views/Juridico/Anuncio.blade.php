@@ -71,8 +71,8 @@
 @section('mensagem')
 @if(session()->has('Retorno'))
     @component('componentes.alert')
-        @slot('titulo',{{ session()->get('Retorno')->Titulo }})
-        @slot('icone',{{ session()->get('Retorno')->Tipo }})
+        @slot('titulo',session()->get('Retorno')->Titulo)
+        @slot('icone',session()->get('Retorno')->Tipo)
         @slot('mensagem')
             {{ session()->get('Retorno')->Mensagem }}
         @endslot
