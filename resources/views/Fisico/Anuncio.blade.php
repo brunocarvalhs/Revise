@@ -94,17 +94,21 @@
 <div class="Anuncios">
     @if($Anuncios)
     <div class="h-100 semPadding row p-3">
-    @foreach ($Anuncios as $Anuncios)
-        @component('componentes.PesquisaAnuncio')
-            @slot('tipo',$Anuncios->Tipo)
-            @slot('titulo',$Anuncios->Titulo)
-            @slot('descricao',$Anuncios->Descricao)
-            @slot('cidade',$Anuncios->Cidade)
-            @slot('uf',$Anuncios->Estado)
-            @slot('preco',$Anuncios->Valor)
-            @slot('id',$Anuncios->ID)
-        @endcomponent
-    @endforeach
+        @if($Anuncios != '[]')
+            @foreach ($Anuncios as $Anuncios)
+                @component('componentes.PesquisaAnuncio')
+                    @slot('tipo',$Anuncios->Tipo)
+                    @slot('titulo',$Anuncios->Titulo)
+                    @slot('descricao',$Anuncios->Descricao)
+                    @slot('cidade',$Anuncios->Cidade)
+                    @slot('uf',$Anuncios->Estado)
+                    @slot('preco',$Anuncios->Valor)
+                    @slot('id',$Anuncios->ID)
+                @endcomponent
+            @endforeach
+        @else
+            <img src="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg">
+        @endif
     </div>
     @endif
 </div>
