@@ -94,7 +94,7 @@
 <div class="Anuncios">
     @if($Anuncios)
     <div class="h-100 semPadding row p-3">
-        @if($Anuncios != '[]')
+        @if(count($Anuncios) > 0)
             @foreach ($Anuncios as $Anuncios)
                 @component('componentes.PesquisaAnuncio')
                     @slot('tipo',$Anuncios->Tipo)
