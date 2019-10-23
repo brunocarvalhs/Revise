@@ -26,10 +26,10 @@
 
                 @endcomponent
                 @else
-                    <div class="text-center">
-                        <img src={{asset('img/not.png')}} height="500" width="500">
-                        <h4> Carro em dia </h4>
-                    </div>
+                <div class="text-center">
+                    <img src={{asset('img/not.png')}} height="500" width="500">
+                    <h4> Carro em dia </h4>
+                </div>
                 @endif
             </div>
         </div>
@@ -41,9 +41,9 @@
             </div>
             <hr />
             <div class="col-12 mt-3">
-                <form action="{{ url('/Home/Notificacao') }}" method="POST">
-                    <ul class="list-group">
-                        @foreach ($Veiculos as $Veiculo)
+                <ul class="list-group">
+                    @foreach ($Veiculos as $Veiculo)
+                    <form action="{{ route('notificacao') }}" method="POST">
                         <input type="hidden" name="Placa" value="{{ $Veiculo->placa }}">
                         <button name="txtPlaca" class="btn list-group-item-action flex-column align-items-start "
                             type="submit">
@@ -54,9 +54,9 @@
                                 <span class="badge badge-primary badge-pill">{{ $Veiculo->Notificacao }}</span>
                             </li>
                         </button>
-                        @endforeach
-                    </ul>
-                </form>
+                    </form>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>
