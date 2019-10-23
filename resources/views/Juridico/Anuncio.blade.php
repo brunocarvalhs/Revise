@@ -65,6 +65,10 @@
 @include('componentes.adicionarAnuncio')
 @include('componentes.adicionarProduto')
 @include('componentes.adicionarServico')
+@endsection
+
+
+@section('mensagem')
 @if(session()->has('Retorno'))
     @if(session()->get('Retorno')->Status)
         @component('componentes.alert')
@@ -85,8 +89,6 @@
     @endif
 @endif
 @endsection
-
-
 
 
 
