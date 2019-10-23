@@ -94,18 +94,17 @@
 <div class="Anuncios">
     @if($Anuncios)
     <div class="h-100 semPadding row p-3">
-        @if (count($Anuncios) > 0)
-            @foreach ($Anuncios as $Anuncios)
-                @component('componentes.PesquisaAnuncio')
-                    @slot('tipo',$Anuncios->Tipo)
-                    @slot('titulo',$Anuncios->Titulo)
-                    @slot('descricao',$Anuncios->Descricao)
-                    @slot('cidade',$Anuncios->Cidade)
-                    @slot('uf',$Anuncios->Estado)
-                    @slot('preco',$Anuncios->Valor)
-                    @slot('id',$Anuncios->ID)
-                @endcomponent
-            @endforeach
+        @foreach ($Anuncios as $Anuncios)
+            @component('componentes.PesquisaAnuncio')
+                @slot('tipo',$Anuncios->Tipo)
+                @slot('titulo',$Anuncios->Titulo)
+                @slot('descricao',$Anuncios->Descricao)
+                @slot('cidade',$Anuncios->Cidade)
+                @slot('uf',$Anuncios->Estado)
+                @slot('preco',$Anuncios->Valor)
+                @slot('id',$Anuncios->ID)
+            @endcomponent
+        @endforeach
     </div>
     @else
         <img href="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg">
