@@ -43,8 +43,7 @@
             <div class="col-12 mt-3">
                 <ul class="list-group">
                     @foreach ($Veiculos as $Veiculo)
-                    <form action="{{ route('notificacao') }}" method="POST">
-                        <input type="hidden" name="Placa" value="{{ $Veiculo->placa }}">
+                    <form action="{{ url('/Home/Notificacao/') }}{{ $Veiculo->placa }}" method="POST">
                         <button name="txtPlaca" class="btn list-group-item-action flex-column align-items-start "
                             type="submit">
                             <li class="list-group-item d-flex justify-content-between align-items-center m-1">
