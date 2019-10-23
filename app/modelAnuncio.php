@@ -25,6 +25,8 @@ class modelAnuncio extends Model
 
             $check = $modelJuridico->ValidarCampos($request);
 
+            return dd($check);
+
             if ($check) {
 
                 $auto_anuncio = DB::table('tb_anuncio')->max('cd_anuncio') + 1;

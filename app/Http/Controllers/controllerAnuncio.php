@@ -49,7 +49,6 @@ class controllerAnuncio extends Controller
     public function CadastroAnuncio(Request $request, modelAnuncio $modelAnuncio)
     {
         $modelJuridico = session()->get('Juridico');
-        return dd($request);
         $Retorno = $modelAnuncio->Cadastro($request, $modelJuridico);
         $Retorno = json_decode($Retorno);
         return redirect('/Painel/Anuncio')->with('Retorno', $Retorno);
