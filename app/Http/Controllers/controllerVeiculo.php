@@ -49,4 +49,8 @@ class controllerVeiculo extends Controller
     public function compartibilidadeVeiculo($veiculo, modelVeiculo $modelVeiculo){
         return ($modelVeiculo->compartibilidadeVeiculo($veiculo));
     }
+
+    public function verificarVeiculo(Request $request, modelVeiculo $modelVeiculo){
+        $modelVeiculo->verificarVeiculo($request);
+    }
 }

@@ -17,7 +17,7 @@ class modelVeiculo extends Model
     private $Quilometragem;
     private $Estado;
     private $Cidade;
-
+    private $delta;
 
     /**
      * Get the value of id
@@ -199,6 +199,26 @@ class modelVeiculo extends Model
         return $this;
     }
 
+    /**
+     * Get the value of delta
+     */
+    public function getDelta()
+    {
+        return $this->delta;
+    }
+
+    /**
+     * Set the value of delta
+     *
+     * @return  self
+     */
+    public function setDelta($delta)
+    {
+        $this->delta = $delta;
+
+        return $this;
+    }
+
     public function Cadastrar($idUsuario)
     {
 
@@ -293,6 +313,18 @@ class modelVeiculo extends Model
 
     public function compartibilidadeVeiculo($veiculo){
         return DB::table('tb_marca')->where('nm_marca','LIKE','%'.$veiculo[0].'%')->exists();
+    }
+
+
+    private function CalculoQuilometragem($placa,$atualKM){
+
+        $anteriorKM = DB::table('tb_veiculo')->where('cd_placa','=',$placa)->select('qt_quilometragem as KM')->first();
+
+        $anteriorKM = $anteriorKM[0]->KM;
+
+        $delta = ($atualKM - $anteriorKM);
+
+        return dd($delta);
     }
 
 }

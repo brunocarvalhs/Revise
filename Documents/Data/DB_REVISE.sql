@@ -246,6 +246,7 @@ cd_veiculo int not null,
 nm_cor varchar(255),
 aa_veiculo INT,
 qt_quilometragem varchar(255),
+qt_delta double,
 cd_placa varchar(8),
 cd_usuario int,
 cd_modelo int,
@@ -257,17 +258,17 @@ CONSTRAINT fk_veiculo_usuario
 CONSTRAINT fk_veiculo_modelo
 	FOREIGN KEY(cd_modelo)
 		REFERENCES tb_modelo(cd_modelo)
-); 
+);
 
 CREATE TABLE tb_check(
 cd_check int not null,
-dt_check timestamp, 
+dt_check timestamp,
 cd_veiculo int,
 sg_status char(2),
 cd_peca int,
 CONSTRAINT pk_usuario
 	PRIMARY KEY(cd_check),
-CONSTRAINT fk_check_veiculo	
+CONSTRAINT fk_check_veiculo
 	FOREIGN KEY(cd_veiculo)
 		REFERENCES tb_veiculo(cd_veiculo),
 CONSTRAINT fk_check_status
@@ -280,12 +281,12 @@ CONSTRAINT fk_check_peca
 
 CREATE TABLE tb_medida_peca(
 	cd_peca int,
-	qt_medida double, 
+	qt_medida double,
 	sg_medida char(2),
-	CONSTRAINT 
+	CONSTRAINT
 		FOREIGN KEY(cd_peca)
 			REFERENCES tb_peca(cd_peca),
-	CONSTRAINT 
+	CONSTRAINT
 		FOREIGN KEY (sg_medida)
 			REFERENCES tb_medida(sg_medida)
 );
