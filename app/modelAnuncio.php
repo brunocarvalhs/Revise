@@ -31,7 +31,7 @@ class modelAnuncio extends Model
 
                 $TipoAnuncio = DB::select("SELECT cd_tipo_anuncio AS id FROM tb_tipo_anuncio WHERE nm_tipo_anuncio = ?", [$request->txtTipo]);
 
-                if($request->txtTipo == 'Serviço'){
+                if ($request->txtTipo == 'Serviço') {
                     $request->txtPreco = null;
                 }
 
@@ -53,7 +53,6 @@ class modelAnuncio extends Model
                 );
 
                 return json_encode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Sucesso', 'Mensagem' => 'Cadastrado com sucesso.']);
-
             } else {
 
                 return json_encode(['Status' => false, 'Tipo' => 'warning', 'Titulo' => 'Falha', 'Mensagem' => 'Campos em branco detectado.']);
@@ -66,75 +65,79 @@ class modelAnuncio extends Model
 
     public function PesquisaDeAnuncio($pesquisa, $tipo, $preco)
     {
-        if ($preco != null) {
+        try {
+            if ($preco != null) {
 
-            if ($preco == 'menor') {
-                $preco = 'asc';
+                if ($preco == 'menor') {
+                    $preco = 'asc';
+                } else {
+                    $preco = 'desc';
+                }
+
+                $lista = DB::table('tb_anuncio')
+                    ->join('tb_tipo_anuncio', 'tb_anuncio.cd_tipo_anuncio', '=', 'tb_tipo_anuncio.cd_tipo_anuncio')
+                    ->join('tb_usuario_juridico', 'tb_usuario_juridico.cd_usuario_juridico', '=', 'tb_anuncio.cd_usuario_juridico')
+                    ->join('tb_logradouro', 'tb_logradouro.cd_usuario_juridico', '=', 'tb_usuario_juridico.cd_usuario_juridico')
+                    ->join('tb_bairro', 'tb_bairro.cd_bairro', '=', 'tb_logradouro.cd_bairro')
+                    ->join('tb_cidade', 'tb_cidade.cd_cidade', '=', 'tb_bairro.cd_cidade')
+                    ->join('tb_uf', 'tb_uf.sg_uf', '=', 'tb_cidade.sg_uf')
+                    ->select(
+                        'tb_anuncio.cd_anuncio as ID',
+                        'tb_anuncio.nm_titulo as Titulo',
+                        'tb_anuncio.ds_publicacao as Descricao',
+                        'tb_anuncio.vl_anunciado as Valor',
+                        'tb_anuncio.dt_publicacao as Data',
+                        'tb_tipo_anuncio.nm_tipo_anuncio as Tipo',
+                        'tb_usuario_juridico.nm_nome_fantasia as Empresa',
+                        'tb_logradouro.nm_logradouro as Endereco',
+                        'tb_bairro.nm_bairro as Bairro',
+                        'tb_cidade.nm_cidade as Cidade',
+                        'tb_uf.sg_uf as Estado'
+                    )
+                    ->where([
+                        ['tb_anuncio.nm_titulo', 'LIKE', '%' . $pesquisa . '%'],
+                        ['tb_tipo_anuncio.nm_tipo_anuncio', 'LIKE', '%' . $tipo . '%'],
+                        ['tb_anuncio.dt_expira_publicacao', '>', 'NOW()']
+                    ])
+                    ->orderByRaw('tb_anuncio.vl_anunciado ' . $preco)
+                    ->get();
             } else {
-                $preco = 'desc';
+
+                $lista = DB::table('tb_anuncio')
+                    ->join('tb_tipo_anuncio', 'tb_anuncio.cd_tipo_anuncio', '=', 'tb_tipo_anuncio.cd_tipo_anuncio')
+                    ->join('tb_usuario_juridico', 'tb_usuario_juridico.cd_usuario_juridico', '=', 'tb_anuncio.cd_usuario_juridico')
+                    ->join('tb_logradouro', 'tb_logradouro.cd_usuario_juridico', '=', 'tb_usuario_juridico.cd_usuario_juridico')
+                    ->join('tb_bairro', 'tb_bairro.cd_bairro', '=', 'tb_logradouro.cd_bairro')
+                    ->join('tb_cidade', 'tb_cidade.cd_cidade', '=', 'tb_bairro.cd_cidade')
+                    ->join('tb_uf', 'tb_uf.sg_uf', '=', 'tb_cidade.sg_uf')
+                    ->select(
+                        'tb_anuncio.cd_anuncio as ID',
+                        'tb_anuncio.nm_titulo as Titulo',
+                        'tb_anuncio.ds_publicacao as Descricao',
+                        'tb_anuncio.vl_anunciado as Valor',
+                        'tb_anuncio.dt_publicacao as Data',
+                        'tb_tipo_anuncio.nm_tipo_anuncio as Tipo',
+                        'tb_usuario_juridico.nm_nome_fantasia as Empresa',
+                        'tb_logradouro.nm_logradouro as Endereco',
+                        'tb_bairro.nm_bairro as Bairro',
+                        'tb_cidade.nm_cidade as Cidade',
+                        'tb_uf.sg_uf as Estado'
+                    )
+                    ->where([
+                        ['tb_anuncio.nm_titulo', 'LIKE', '%' . $pesquisa . '%'],
+                        ['tb_tipo_anuncio.nm_tipo_anuncio', 'LIKE', '%' . $tipo . '%'],
+                        ['tb_anuncio.dt_expira_publicacao', '>', 'NOW()']
+                    ])
+                    ->get();
             }
 
-            $lista = DB::table('tb_anuncio')
-                ->join('tb_tipo_anuncio', 'tb_anuncio.cd_tipo_anuncio', '=', 'tb_tipo_anuncio.cd_tipo_anuncio')
-                ->join('tb_usuario_juridico', 'tb_usuario_juridico.cd_usuario_juridico', '=', 'tb_anuncio.cd_usuario_juridico')
-                ->join('tb_logradouro', 'tb_logradouro.cd_usuario_juridico', '=', 'tb_usuario_juridico.cd_usuario_juridico')
-                ->join('tb_bairro', 'tb_bairro.cd_bairro', '=', 'tb_logradouro.cd_bairro')
-                ->join('tb_cidade', 'tb_cidade.cd_cidade', '=', 'tb_bairro.cd_cidade')
-                ->join('tb_uf', 'tb_uf.sg_uf', '=', 'tb_cidade.sg_uf')
-                ->select(
-                    'tb_anuncio.cd_anuncio as ID',
-                    'tb_anuncio.nm_titulo as Titulo',
-                    'tb_anuncio.ds_publicacao as Descricao',
-                    'tb_anuncio.vl_anunciado as Valor',
-                    'tb_anuncio.dt_publicacao as Data',
-                    'tb_tipo_anuncio.nm_tipo_anuncio as Tipo',
-                    'tb_usuario_juridico.nm_nome_fantasia as Empresa',
-                    'tb_logradouro.nm_logradouro as Endereco',
-                    'tb_bairro.nm_bairro as Bairro',
-                    'tb_cidade.nm_cidade as Cidade',
-                    'tb_uf.sg_uf as Estado'
-                )
-                ->where([
-                    ['tb_anuncio.nm_titulo', 'LIKE', '%' . $pesquisa . '%'],
-                    ['tb_tipo_anuncio.nm_tipo_anuncio', 'LIKE', '%' . $tipo . '%'],
-                    ['tb_anuncio.dt_expira_publicacao', '>', 'NOW()']
-                ])
-                ->orderByRaw('tb_anuncio.vl_anunciado ' . $preco)
-                ->get();
-        } else {
 
-            $lista = DB::table('tb_anuncio')
-                ->join('tb_tipo_anuncio', 'tb_anuncio.cd_tipo_anuncio', '=', 'tb_tipo_anuncio.cd_tipo_anuncio')
-                ->join('tb_usuario_juridico', 'tb_usuario_juridico.cd_usuario_juridico', '=', 'tb_anuncio.cd_usuario_juridico')
-                ->join('tb_logradouro', 'tb_logradouro.cd_usuario_juridico', '=', 'tb_usuario_juridico.cd_usuario_juridico')
-                ->join('tb_bairro', 'tb_bairro.cd_bairro', '=', 'tb_logradouro.cd_bairro')
-                ->join('tb_cidade', 'tb_cidade.cd_cidade', '=', 'tb_bairro.cd_cidade')
-                ->join('tb_uf', 'tb_uf.sg_uf', '=', 'tb_cidade.sg_uf')
-                ->select(
-                    'tb_anuncio.cd_anuncio as ID',
-                    'tb_anuncio.nm_titulo as Titulo',
-                    'tb_anuncio.ds_publicacao as Descricao',
-                    'tb_anuncio.vl_anunciado as Valor',
-                    'tb_anuncio.dt_publicacao as Data',
-                    'tb_tipo_anuncio.nm_tipo_anuncio as Tipo',
-                    'tb_usuario_juridico.nm_nome_fantasia as Empresa',
-                    'tb_logradouro.nm_logradouro as Endereco',
-                    'tb_bairro.nm_bairro as Bairro',
-                    'tb_cidade.nm_cidade as Cidade',
-                    'tb_uf.sg_uf as Estado'
-                )
-                ->where([
-                    ['tb_anuncio.nm_titulo', 'LIKE', '%' . $pesquisa . '%'],
-                    ['tb_tipo_anuncio.nm_tipo_anuncio', 'LIKE', '%' . $tipo . '%'],
-                    ['tb_anuncio.dt_expira_publicacao', '>', 'NOW()']
-                ])
-                ->get();
+            $lista = json_encode($lista);
+
+            return ($lista);
+        } catch (Exception $e) {
+            return false;
         }
-
-
-        $lista = json_encode($lista);
-
-        return ($lista);
     }
 
 
@@ -204,7 +207,7 @@ class modelAnuncio extends Model
 
     public function DeletarAnuncio($IdAnuncio)
     {
-        if(DB::table('tb_indice')->where('cd_anuncio','=',$IdAnuncio)->exists()){
+        if (DB::table('tb_indice')->where('cd_anuncio', '=', $IdAnuncio)->exists()) {
             DB::table('tb_indice')->where('cd_anuncio', '=', $IdAnuncio)->delete();
         }
         $deletar = DB::table('tb_anuncio')->where('cd_anuncio', '=', $IdAnuncio)->delete();
