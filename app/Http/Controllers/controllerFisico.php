@@ -99,11 +99,13 @@ class controllerFisico extends Controller
     }
 
     // Notificacao ---------------------------------------------------------------
-    public function LerNotificacao(){
+    public function LerNotificacao(controllerUsuario $controllerUsuario, controllerCheck $controllerCheck){
         $modelFisico = session()->get('Fisico');
         $Notificacao = $modelFisico->DadosPerfil();
         $Notificacao = json_decode($Notificacao);
-        return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao]);
+        $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
+        $Veiculos = json_decode($Veiculos);
+        return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);
     }
 
     public function AlterarNotificacao(){

@@ -43,17 +43,17 @@
             <div class="col-12 mt-3">
                 <form action="{{route('notificacao')}}" method="POST">
                     <ul class="list-group">
-
+                        @foreach ($Veiculos as $Veiculo)
                         <button name="txtPlaca" class="btn list-group-item-action flex-column align-items-start "
                             type="submit">
                             <li class="list-group-item d-flex justify-content-between align-items-center m-1">
                                 <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">OFO-9397 <br> CRUZER</h5>
+                                    <h5 class="mb-1">{{ $Veiculo->placa }} <br> {{ $Veiculo->modelo }}</h5>
                                 </div>
                                 <span class="badge badge-primary badge-pill">1</span>
                             </li>
                         </button>
-
+                        @endforeach
                     </ul>
                 </form>
             </div>
