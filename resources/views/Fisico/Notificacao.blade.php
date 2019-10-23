@@ -50,7 +50,7 @@
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1">{{ $Veiculo->placa }} <br> {{ $Veiculo->modelo }}</h5>
                                 </div>
-                                <span class="badge badge-primary badge-pill">1</span>
+                                <span class="badge badge-primary badge-pill">{{ $Veiculo->Notificacao }}</span>
                             </li>
                         </button>
                         @endforeach
