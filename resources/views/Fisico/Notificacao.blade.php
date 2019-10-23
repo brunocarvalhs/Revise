@@ -21,7 +21,7 @@
             </div>
             <hr />
             <div class="col-12 mt-3">
-                @if ($Notificacao != '[]')
+                @if ($Notificacao)
                 @component('componentes.notificacao')
 
                 @endcomponent
