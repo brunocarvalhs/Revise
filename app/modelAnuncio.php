@@ -57,7 +57,7 @@ class modelAnuncio extends Model
             }
         } catch (Exception $e) {
 
-            return json_encode(['Status' => false, 'Tipo' => 'error', 'Titulo' => 'Falha', 'Mensagem' => 'Erro ao tentar deletar.']);
+            return json_encode(['Status' => false, 'Tipo' => 'error', 'Titulo' => 'Falha', 'Mensagem' => 'Erro ao tentar cadastar.']);
         }
     }
 
