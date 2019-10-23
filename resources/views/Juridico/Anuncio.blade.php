@@ -74,6 +74,15 @@
         @endslot
     @endcomponent
 @endif
+@if(session()->has('cadastro'))
+    @component('componentes.alert')
+        @slot('titulo',$cadastro->Titulo)
+        @slot('icone',$cadastro->Tipo)
+        @slot('mensagem')
+        {{ $cadastro->Mensagem }}
+        @endslot
+    @endcomponent
+@endif
 @endsection
 
 
