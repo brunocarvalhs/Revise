@@ -202,9 +202,9 @@ class modelAnuncio extends Model
     {
         $deletar = DB::table('tb_anuncio')->where('cd_anuncio', '=', $IdAnuncio)->delete();
         if ($deletar) {
-            return json_decode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Sucesso', 'Mensagem' => 'Deletado com sucesso.']);
+            return json_encode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Sucesso', 'Mensagem' => 'Deletado com sucesso.']);
         } else {
-            return json_decode(['Status' => false, 'Tipo' => 'error', 'Titulo' => 'Falha', 'Mensagem' => 'Erro ao tentar deletar.']);
+            return json_encode(['Status' => false, 'Tipo' => 'error', 'Titulo' => 'Falha', 'Mensagem' => 'Erro ao tentar deletar.']);
         }
     }
 }
