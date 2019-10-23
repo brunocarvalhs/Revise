@@ -103,7 +103,7 @@ class modelUsuario extends Model
         inner join tb_modelo on tb_veiculo.cd_modelo = tb_modelo.cd_modelo
         inner join tb_usuario on tb_usuario.cd_usuario = tb_veiculo.cd_usuario
         left Join tb_check on tb_veiculo.cd_veiculo = tb_check.cd_veiculo
-        where tb_veiculo.cd_usuario = ? group by id", [$this->getIdUsuario()]);
+        where tb_veiculo.cd_usuario = ? group by tb_veiculo.cd_veiculo", [$this->getIdUsuario()]);
         return json_encode($Veiculos);
     }
 }
