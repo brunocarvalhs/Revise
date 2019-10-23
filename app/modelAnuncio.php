@@ -200,10 +200,7 @@ class modelAnuncio extends Model
 
     public function DeletarAnuncio($IdAnuncio)
     {
-        $deletar = DB::delete('delete tb_anuncio where cd_anuncio = ?', [$IdAnuncio]);
-
-        return dd($deletar);
-
+        $deletar = DB::table('tb_anuncio')->where('cd_anuncio', '=', $IdAnuncio)->delete();
         if ($deletar) {
             return json_decode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Sucesso', 'Mensagem' => 'Deletado com sucesso.']);
         } else {
