@@ -35,7 +35,7 @@ class modelAnuncio extends Model
 
                 $expiracao = date('Y-m-d"', strtotime('+1 month'));
 
-                return dd($request->txtAnuncio, $request->txtDescricao,$request->txtPreco);
+                return dd($auto_anuncio,$request->txtAnuncio, $request->txtDescricao,$request->txtPreco, $atual,$TipoAnuncio[0]->vl,$expiracao);
 
                 DB::table('tb_anuncio')->insert(
                     [
