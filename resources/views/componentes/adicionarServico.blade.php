@@ -25,7 +25,6 @@
                                     </div>
                                 </div>
                             </fieldset>
-                            <input type="hidden" name="txtPreco" value="00.00">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
