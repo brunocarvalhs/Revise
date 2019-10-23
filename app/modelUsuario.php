@@ -106,6 +106,6 @@ class modelUsuario extends Model
         ->select('tb_veiculo.cd_veiculo as id','tb_veiculo.cd_placa as placa','tb_modelo.nm_modelo as modelo','count(tb_check.cd_check) as Notificacao')
         ->where('tb_veiculo.cd_usuario','=', $this->getIdUsuario())
         ->get();
-        return json_encode($Veiculos);
+        return dd($Veiculos);
     }
 }
