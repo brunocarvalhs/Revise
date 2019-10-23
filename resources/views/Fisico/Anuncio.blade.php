@@ -107,9 +107,9 @@
         @endforeach
     </div>
     @else
-        <div class="h-100 semPadding row p-3">
+        <div class="row p-3">
             <div class="col-12">
-                <img src="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg">
+                <img src="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg" width="500" height="500">
             </div>
         </div>
     @endif
