@@ -41,7 +41,7 @@
             </div>
             <hr />
             <div class="col-12 mt-3">
-                <form action="{{ route('notificacao') }}" method="POST">
+                <form action="{{ url('/Home/Notificacao') }}" method="POST">
                     <ul class="list-group">
                         @foreach ($Veiculos as $Veiculo)
                         <input type="hidden" name="Placa" value="{{ $Veiculo->placa }}">
