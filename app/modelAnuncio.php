@@ -35,14 +35,14 @@ class modelAnuncio extends Model
 
                 $expiracao = date('Y-m-d"', strtotime('+1 month'));
 
-                return dd($TipoAnuncio[0]->vl);
+                return dd($request->txtAnuncio, $request->txtDescricao);
 
                 DB::table('tb_anuncio')->insert(
                     [
                         'cd_anuncio' => $auto_anuncio,
                         'nm_titulo' => $request->txtAnuncio,
                         'ds_publicacao' => $request->txtDescricao,
-                        'vl_anunciado' => $request->txtDescricao,
+                        'vl_anunciado' => $request->txtPreco,
                         'dt_publicacao' => $atual,
                         'vl_mensal' => $TipoAnuncio[0]->vl,
                         'cd_usuario_juridico' => $modelJuridico->getIdJuridico(),
