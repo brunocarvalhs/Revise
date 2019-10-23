@@ -18,7 +18,6 @@ class controllerCheck extends Controller
         $Notificacao = json_decode($Notificacao);
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);
-        return dd($Notificacao);
         return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);
     }
 }
