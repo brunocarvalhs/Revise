@@ -108,7 +108,9 @@
     </div>
     @else
         <div class="h-100 semPadding row p-3">
-            <img src="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg">
+            <div class="col-12">
+                <img src="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg">
+            </div>
         </div>
     @endif
 </div>
