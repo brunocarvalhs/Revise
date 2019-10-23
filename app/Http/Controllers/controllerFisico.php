@@ -101,7 +101,7 @@ class controllerFisico extends Controller
     // Notificacao ---------------------------------------------------------------
     public function LerNotificacao(controllerUsuario $controllerUsuario, controllerCheck $controllerCheck){
         $modelFisico = session()->get('Fisico');
-        $Notificacao = $modelFisico->DadosPerfil();
+        $Notificacao = $controllerCheck->listaNotificacoes($modelFisico->getIdUsuario());
         $Notificacao = json_decode($Notificacao);
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);

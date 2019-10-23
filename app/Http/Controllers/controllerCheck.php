@@ -12,12 +12,21 @@ class controllerCheck extends Controller
 
     }
 
-    public function VeificarVeiculo(Request $request,modelCheck $modelCheck, controllerUsuario $controllerUsuario){
+    public function VerificarVeiculo(Request $request,modelCheck $modelCheck, controllerUsuario $controllerUsuario){
         $modelFisico = session()->get('Fisico');
         $Notificacao = $modelCheck->listaNotificacao($request->Placa);
         $Notificacao = json_decode($Notificacao);
         if($Notificacao == [])
             $Notificacao = false;
+        $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
+        $Veiculos = json_decode($Veiculos);
+        return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);
+    }
+
+    public function listaNotificacoes(Request $request, controllerUsuario $controllerUsuario, modelCheck $modelCheck){
+        $modelFisico = session()->get('Fisico');
+        $Notificacao = $modelCheck->listaNotificacoes($modelFisico->getIdUsuario());
+        $Notificacao = json_decode($Notificacao);
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);
         return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);

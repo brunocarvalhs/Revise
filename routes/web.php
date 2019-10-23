@@ -60,10 +60,10 @@ Route::group(['middleware' => 'Fisico'], function () {
     Route::get('/Home/Anuncios', 'controllerAnuncio@ListaAnunciosFisico');
     Route::get('/Home/Anuncios/{id?}','controllerAnuncio@DetalhesAnuncios');
     // * Notificacao
-    Route::get('/Home/Notificacao','controllerFisico@LerNotificacao');//Ler
+    Route::get('/Home/Notificacao','controllerCheck@listaNotificacoes');//Ler
     Route::put('/Home/Notificacao','controllerFisico@AlterarNotificacao');//Alterar
     Route::delete('/Home/Notificacao', 'controllerFisico@DeletarNotificacao');//Deletar
-    Route::post('/Home/Notificacao','controllerCheck@VeificarVeiculo')->name('notificacao');
+    Route::post('/Home/Notificacao','controllerCheck@VerificarVeiculo')->name('notificacao');
 });
 
 // ------------ Juridico ------------
