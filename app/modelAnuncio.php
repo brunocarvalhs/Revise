@@ -29,9 +29,7 @@ class modelAnuncio extends Model
 
                 $auto_anuncio = DB::table('tb_anuncio')->max('cd_anuncio') + 1;
 
-                $TipoAnuncio = DB::select("SELECT cd_tipo_anuncio, vl_atual_anuncio FROM tb_tipo_anuncio WHERE nm_tipo_anuncio = ?", [$request->txtTipo]);
-
-                return dd($TipoAnuncio);
+                $TipoAnuncio = DB::select("SELECT cd_tipo_anuncio AS id, vl_atual_anuncio AS vl FROM tb_tipo_anuncio WHERE nm_tipo_anuncio = ?", [$request->txtTipo]);
 
                 $atual = new DateTime();
 
@@ -44,9 +42,9 @@ class modelAnuncio extends Model
                         'ds_publicacao' => $request->txtDescricao,
                         'vl_anunciado' => $request->txtDescricao,
                         'dt_publicacao' => $atual,
-                        'vl_mensal' => $TipoAnuncio[1],
+                        'vl_mensal' => $TipoAnuncio[0]->vl,
                         'cd_usuario_juridico' => $modelJuridico->getIdJuridico(),
-                        'cd_tipo_anuncio' => $TipoAnuncio[0],
+                        'cd_tipo_anuncio' => $TipoAnuncio[0]->id,
                         'dt_expira_publicacao' => $expiracao
                     ]
                 );
