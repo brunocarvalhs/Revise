@@ -16,9 +16,8 @@ class controllerCheck extends Controller
         $modelFisico = session()->get('Fisico');
         $Notificacao = $modelCheck->listaNotificacao($request->Placa);
         $Notificacao = json_decode($Notificacao);
-        if($Notificacao == []){
+        if($Notificacao == [])
             $Notificacao = false;
-        }
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);
         return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);

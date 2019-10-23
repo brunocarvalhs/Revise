@@ -22,9 +22,11 @@
             <hr />
             <div class="col-12 mt-3">
                 @if ($Notificacao)
-                @component('componentes.notificacao')
+                    @foreach ($Notificacao as $item)
+                        @component('componentes.notificacao')
 
-                @endcomponent
+                        @endcomponent
+                    @endforeach
                 @else
                 <div class="text-center">
                     <img src={{asset('img/not.png')}} height="500" width="500">
