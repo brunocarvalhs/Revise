@@ -65,14 +65,24 @@
 @include('componentes.adicionarAnuncio')
 @include('componentes.adicionarProduto')
 @include('componentes.adicionarServico')
-@if(session()->has('status'))
-    @component('componentes.alert')
-        @slot('titulo',$status->Titulo)
-        @slot('icone',$status->Tipo)
-        @slot('mensagem')
-        {{ $status->Mensagem }}
-        @endslot
-    @endcomponent
+@if(session()->has('Retorno'))
+    @if(session()->get('Retorno')->Status)
+        @component('componentes.alert')
+            @slot('titulo','SUCESSO')
+            @slot('icone','success')
+            @slot('mensagem')
+                {{ session()->get('Retorno')->Mensagem }}
+            @endslot
+        @endcomponent
+    @else
+        @component('componentes.alert')
+            @slot('titulo','ERRO')
+            @slot('icone','error')
+            @slot('mensagem')
+                {{ session()->get('Retorno')->Mensagem }}
+            @endslot
+        @endcomponent
+    @endif
 @endif
 @endsection
 
