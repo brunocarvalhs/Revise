@@ -99,11 +99,11 @@ class modelUsuario extends Model
     }
 
     public function VeiculosDoUsuario(){
-        $Veiculos = DB::select('SELECT tb_veiculo.cd_veiculo as id,tb_veiculo.cd_placa as placa,tb_modelo.nm_modelo as modelo, count(tb_check.cd_check) as Notificacao FROM tb_veiculo
+        $Veiculos = DB::select("SELECT tb_veiculo.cd_veiculo as id,tb_veiculo.cd_placa as placa,tb_modelo.nm_modelo as modelo, count(tb_check.cd_check) as Notificacao FROM tb_veiculo
         inner join tb_modelo on tb_veiculo.cd_modelo = tb_modelo.cd_modelo
         inner join tb_usuario on tb_usuario.cd_usuario = tb_veiculo.cd_usuario
         left Join tb_check on tb_veiculo.cd_veiculo = tb_check.cd_veiculo
-        where tb_veiculo.cd_usuario = ? group by id', [1]);
+        where tb_veiculo.cd_usuario = ? group by tb_veiculo.cd_veiculo", [1]);
         return dd($Veiculos);
     }
 }
