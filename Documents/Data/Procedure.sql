@@ -1,6 +1,6 @@
 -- ################# OFICIAIS ##########################
 
--- Seleciona Anuncio 
+-- Seleciona Anuncio
 delimiter $
 create procedure sp_selectAnuncio(in id int)
 begin
@@ -11,17 +11,17 @@ begin
 	THEN
 		set idAnuncio = (SELECT cd_anuncio FROM tb_anuncio WHERE cd_anuncio = id);
 		IF(SELECT cd_indice FROM tb_indice WHERE cd_anuncio = id)
-			THEN 
+			THEN
 				set vlIndice = (SELECT max(vl_indice)+1 FROM tb_indice WHERE cd_anuncio = id);
 				UPDATE tb_indice SET vl_indice =  vlIndice WHERE cd_anuncio = id;
             ELSE
 				set idIndice = (SELECT count(cd_indice) + 1 FROM tb_indice);
-				INSERT INTO tb_indice VALUES 
+				INSERT INTO tb_indice VALUES
 				(idIndice,1,idAnuncio);
             END IF;
 	END IF;
     SELECT
-        tb_anuncio.cd_anuncio as ID, 
+        tb_anuncio.cd_anuncio as ID,
         tb_anuncio.nm_titulo as Titulo,
 		tb_anuncio.ds_publicacao as Descricao,
         tb_anuncio.vl_anunciado as Valor,
@@ -42,39 +42,48 @@ begin
 end $
 
 
+-- Lista de veiculos
+delimiter $
+create procedure sp_listaVeiculo(in idUser int)
+begin
+    SELECT tb_veiculo.cd_veiculo as id,tb_veiculo.cd_placa as placa,tb_modelo.nm_modelo as modelo, count(tb_check.cd_check) as Notificacao FROM tb_veiculo
+        inner join tb_modelo on tb_veiculo.cd_modelo = tb_modelo.cd_modelo
+        inner join tb_usuario on tb_usuario.cd_usuario = tb_veiculo.cd_usuario
+        left Join tb_check on tb_veiculo.cd_veiculo = tb_check.cd_veiculo
+        where tb_veiculo.cd_usuario = idUser group by tb_veiculo.cd_veiculo;
+end $
 
 
-
--- procedimento de notificacao de peça 
+-- procedimento de notificacao de peça
 delimiter $
 create procedure notificacao(in sigla char(2))
-begin 
-	
-  select 
-		p.nm_peca as 'PEÇA', 
-        v.cd_placa as 'PLACA', 
+begin
+
+  select
+		p.nm_peca as 'PEÇA',
+        v.cd_placa as 'PLACA',
         s.nm_status as 'STATUS',
         c.dt_check as 'DATA'
 			from tb_check as c
-				inner join 
+				inner join
 					tb_veiculo as v on v.cd_veiculo = c.cd_veiculo
                     join tb_status as s
                     join tb_peca as p on p.cd_peca = c.cd_peca
 						order by sigla;
-                        
+
 end $
 
 
 -- Calcular cobrança do tipo de anuncio
 delimiter $
-create procedure calcularAnuncio(in quantidade int, in tipo varchar(12)) 
-begin 
+create procedure calcularAnuncio(in quantidade int, in tipo varchar(12))
+begin
 
 	SELECT quantidade * vl_anuncio as 'Cobrança' from tb_tipo_anuncio where nm_tipo_anuncio = tipo;
 
 end $
 
--- 
+--
 
 
 
@@ -194,22 +203,22 @@ end $
 
 delimiter $
 create procedure SignInFisico(in cpf int, in senha varchar(255))
-begin 
+begin
 
-	SELECT  
-		f.nm_usuario_fisico as 'NOME', 
-		u.nm_email as 'E-MAIL', 
+	SELECT
+		f.nm_usuario_fisico as 'NOME',
+		u.nm_email as 'E-MAIL',
         p.nm_plano as 'PLANO',
-        v.cd_placa as 'PLACA', 
-        m.nm_modelo as 'MODELO', 
-        v.nm_cor as 'COR' 
+        v.cd_placa as 'PLACA',
+        m.nm_modelo as 'MODELO',
+        v.nm_cor as 'COR'
 			FROM tb_usuario as u
-				 join 
+				 join
 					tb_usuario_fisico as f on f.cd_cpf = cpf
-                    join tb_plano as p on p.cd_plano = u.cd_plano 
+                    join tb_plano as p on p.cd_plano = u.cd_plano
                     join tb_veiculo as v on v.cd_usuario = u.cd_usuario
                     join tb_modelo as m on m.cd_modelo = v.cd_modelo where  u.cd_senha = senha;
-                    
+
 
 end $
 

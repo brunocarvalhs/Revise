@@ -100,6 +100,6 @@ class modelUsuario extends Model
 
     public function VeiculosDoUsuario(){
         $Veiculos = DB::select("call sp_listaVeiculo(?)", [$this->getIdUsuario()]);
-        return dd($Veiculos);
+        return json_encode($Veiculos);
     }
 }
