@@ -102,6 +102,7 @@ class modelUsuario extends Model
         $Veiculos = DB::table('tb_veiculo')
         ->join('tb_modelo','tb_veiculo.cd_modelo','=','tb_modelo.cd_modelo')
         ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_veiculo.cd_usuario')
+        ->leftJoin('tb_check','tb_veiculo.cd_veiculo','=','tb_check.cd_veiculo')
         ->select('tb_veiculo.cd_veiculo as id','tb_veiculo.cd_placa as placa','tb_modelo.nm_modelo as modelo')
         ->where('tb_veiculo.cd_usuario','=', $this->getIdUsuario())
         ->get();
