@@ -107,7 +107,7 @@
         @endforeach
     </div>
     @else
-        <img href="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg">
+        <img src="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg">
     @endif
 </div>
 <a href="{{ url('/') }}" class="glyphicon glyphicon-chevron-up"></a>
