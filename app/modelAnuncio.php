@@ -31,11 +31,11 @@ class modelAnuncio extends Model
 
                 $TipoAnuncio = DB::select("SELECT cd_tipo_anuncio AS id, vl_atual_anuncio AS vl FROM tb_tipo_anuncio WHERE nm_tipo_anuncio = ?", [$request->txtTipo]);
 
-                $atual = new DateTime();
+                $atual = date("Y-m-d");
 
-                $expiracao = new DateTime(' +1 month');
+                $expiracao = date('Y-m-d"', strtotime('+1 month'));
 
-                return dd($TipoAnuncio[0]->id, $TipoAnuncio[0]->vl, date("Y-m-d"), date('d-m-Y', strtotime('+1 month')), $modelJuridico->getIdJuridico());
+                return dd($TipoAnuncio[0]->id, $TipoAnuncio[0]->vl, $atual, $expiracao, $modelJuridico->getIdJuridico());
 
                 DB::table('tb_anuncio')->insert(
                     [
