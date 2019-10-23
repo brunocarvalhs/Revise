@@ -107,7 +107,7 @@
                 @endcomponent
             @endforeach
         @else
-            <img src="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg">
+            <img href="https://www.dominiosistemas.com.br/assets/uploads/templates/3/includes/img/erro-404.jpg">
         @endif
     </div>
     @endif
