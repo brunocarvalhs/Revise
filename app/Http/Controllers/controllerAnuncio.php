@@ -51,6 +51,7 @@ class controllerAnuncio extends Controller
         $modelJuridico = session()->get('Juridico');
         $cadastro = $modelAnuncio->Cadastro($request, $modelJuridico);
         $cadastro = json_decode($cadastro);
+        return dd($cadastro);
         return redirect('/Painel/Anuncio')->with('cadastro', $cadastro);
     }
 
