@@ -38,16 +38,15 @@ class controllerAnuncio extends Controller
         $id = $request->id;
         if ($id != '') {
             $Anuncio = $modelAnuncio->Anuncio($id);
-            return dd($Anuncio);
-            if($Anuncio != false){
+            if($Anuncio != []){
                 $Anuncio = json_decode($Anuncio);
                 return view('Fisico\DetalhesAnuncio', ['Fisico' => $modelFisico, 'Anuncio' => $Anuncio]);
             }
             else{
-                return view('Fisico\Anuncio', ['Fisico' => $modelFisico, 'Anuncio' => $Anuncio]);
+                return redirect()->back();
             }
         } else {
-            return redirect('/Home/Anuncios');
+            return redirect()->back();
         }
     }
 
