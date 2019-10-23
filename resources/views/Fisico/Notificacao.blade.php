@@ -28,10 +28,10 @@
                         @endcomponent
                     @endforeach
                 @else
-                <div class="text-center">
-                    <img src={{asset('img/not.png')}} height="500" width="500">
-                    <h4> Carro em dia </h4>
-                </div>
+                    <div class="text-center">
+                        <img src={{asset('img/not.png')}} height="500" width="500">
+                        <h4> Carro em dia </h4>
+                    </div>
                 @endif
             </div>
         </div>
