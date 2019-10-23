@@ -31,6 +31,10 @@ class modelAnuncio extends Model
 
                 $TipoAnuncio = DB::select("SELECT cd_tipo_anuncio AS id FROM tb_tipo_anuncio WHERE nm_tipo_anuncio = ?", [$request->txtTipo]);
 
+                if($request->txtTipo == 'Serviço'){
+                    $request->txtPreco = null;
+                }
+
                 $atual = date("Y-m-d");
 
                 $expiracao = date('Y-m-d"', strtotime('+1 month'));
