@@ -105,7 +105,7 @@ class modelUsuario extends Model
         ->leftJoin('tb_check','tb_veiculo.cd_veiculo','=','tb_check.cd_veiculo')
         ->select('tb_veiculo.cd_veiculo as id','tb_veiculo.cd_placa as placa','tb_modelo.nm_modelo as modelo')
         ->where('tb_veiculo.cd_usuario','=', $this->getIdUsuario())
-        ->groupBy('tb_veiculo.cd_veiculo')
+        ->groupBy('cd_veiculo')
         ->get();
         return json_encode($Veiculos);
     }
