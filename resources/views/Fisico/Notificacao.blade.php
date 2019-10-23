@@ -23,9 +23,11 @@
             <div class="col-12 mt-3">
                 @if ($Notificacao)
                     @foreach ($Notificacao as $item)
-                        @component('componentes.notificacao')
+                        <div class="m-1 p-3">
+                            @component('componentes.notificacao')
 
-                        @endcomponent
+                            @endcomponent
+                        </div>
                     @endforeach
                 @else
                     <div class="text-center">
