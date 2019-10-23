@@ -70,23 +70,13 @@
 
 @section('mensagem')
 @if(session()->has('Retorno'))
-    @if(session()->get('Retorno')->Status)
-        @component('componentes.alert')
-            @slot('titulo','SUCESSO')
-            @slot('icone','success')
-            @slot('mensagem')
-                {{ session()->get('Retorno')->Mensagem }}
-            @endslot
-        @endcomponent
-    @else
-        @component('componentes.alert')
-            @slot('titulo','ERRO')
-            @slot('icone','error')
-            @slot('mensagem')
-                {{ session()->get('Retorno')->Mensagem }}
-            @endslot
-        @endcomponent
-    @endif
+    @component('componentes.alert')
+        @slot('titulo',{{ session()->get('Retorno')->Titulo }})
+        @slot('icone',{{ session()->get('Retorno')->Tipo }})
+        @slot('mensagem')
+            {{ session()->get('Retorno')->Mensagem }}
+        @endslot
+    @endcomponent
 @endif
 @endsection
 
