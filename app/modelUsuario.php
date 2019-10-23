@@ -99,7 +99,7 @@ class modelUsuario extends Model
     }
 
     public function VeiculosDoUsuario(){
-        $Veiculos = DB::select("call sp_listaVeiculo(?)", [1]);
+        $Veiculos = DB::select("call sp_listaVeiculo(?)", [$this->getIdUsuario()]);
         return dd($Veiculos);
     }
 }
