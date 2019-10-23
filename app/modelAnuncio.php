@@ -35,7 +35,7 @@ class modelAnuncio extends Model
 
                 $expiracao = new DateTime(' +1 month');
 
-                return dd($TipoAnuncio[0]->vl, $atual, $expiracao, $modelJuridico->getIdJuridico());
+                return dd($TipoAnuncio[0]->id, $TipoAnuncio[0]->vl, $atual, $expiracao, $modelJuridico->getIdJuridico());
 
                 DB::table('tb_anuncio')->insert(
                     [
