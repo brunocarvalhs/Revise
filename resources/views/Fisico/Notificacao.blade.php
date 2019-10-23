@@ -21,15 +21,15 @@
             </div>
             <hr />
             <div class="col-12 mt-3">
-                @if ($Notificacao)
+                @if (!$Notificacao)
                 @component('componentes.notificacao')
 
                 @endcomponent
                 @else
-                <div class="text-center">
-                    <img src={{asset('img/not.png')}} height="500" width="500">
-                    <h4> Carro em dia </h4>
-                </div>
+                    <div class="text-center">
+                        <img src={{asset('img/not.png')}} height="500" width="500">
+                        <h4> Carro em dia </h4>
+                    </div>
                 @endif
             </div>
         </div>
