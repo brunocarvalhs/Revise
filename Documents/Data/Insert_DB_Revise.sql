@@ -7298,26 +7298,38 @@ VALUES
 */
 
 INSERT INTO tb_peca
-    (cd_peca, nm_peca)
+    (cd_peca, nm_peca, cd_tipo_peca)
 VALUES
-(1,'Alinhamento dos pneus'),
-(2,'Correia do alternador'),
-(3,'Correia do compressor do ar-condicionado'),
-(4,'Correia dentada'),
-(5,"Correia poly-v (bomba d'água)"),
-(6,'Filtro de ar'),
-(7,'Filtro de cabine (antipólen)'),
-(8,'Filtro de combustível'),
-(9,'Filtro de óleo'),
-(10,'Fluido das transmissões'),
-(11,'Fluido de freio (óleo do freio)'),
-(12,'Limpeza do ar condicionado'),
-(13,'Limpeza do sistema de arrefecimento'),
-(14,'Líquido de arrefecimento'),
-(15,'Óleo lubrificante'),
-(16,'Pneus'),
-(17,'Velas');
-
+(1,'Alinhamento dos pneus',null),
+(2,'Correia do alternador',null),
+(3,'Correia do compressor do ar-condicionado',null),
+(4,'Correia dentada',null),
+(5,"Correia poly-v (bomba d'água)",null),
+(6,'Filtro de ar',null),
+(7,'Filtro de cabine (antipólen)',null),
+(8,'Filtro de combustível',null),
+(9,'Filtro de óleo',null),
+(10,'Fluido das transmissões',null),
+(11,'Fluido de freio (óleo do freio)',null),
+(12,'Limpeza do ar condicionado',null),
+(13,'Limpeza do sistema de arrefecimento',null),
+(14,'Líquido de arrefecimento',null),
+(15,'Óleo lubrificante',null),
+(16,'Pneus',null),
+(17,'Velas',null),
+(18, 'Buzina', 3),
+(19, 'Borracha do para-brisa', 38),
+(20, 'Farol de milha', 29),
+(21, 'Óleo do motor', 27),
+(22, 'Filtro de óleo', 27),
+(23, 'Bateria', 12),
+(24, 'Bomba reservatório água', 12),
+(25, 'Bomba reservatório gasolina', 12),
+(26, 'Farol', 12),
+(27, 'Cinto de segurança', 24),
+(28, 'Limpador do para-brisa', 1),
+(29, 'Limpador do vidro traseiro', 1),
+(30, 'Extintor de incêndio', 3);
 
 INSERT INTO tb_medida_peca (cd_peca, qt_medida, sg_medida) VALUES 
 (1,10000,'Km'),
@@ -7541,25 +7553,3 @@ INSERT INTO tb_check (cd_check, cd_veiculo, sg_status, cd_peca) VALUES
 (4, 1, 'C', 12);
 
 update tb_controle_plano set cd_plano = 1 where cd_plano = 0;
-
-INSERT INTO tb_medida
-    (sg_medida,nm_medida)
-VALUES
-('Co', 'Condições');
-
-INSERT INTO tb_peca
-    (cd_peca, nm_peca, cd_tipo_peca)
-VALUES 
-    (18, 'Buzina', 3),
-    (19, 'Borracha do para-brisa', 38),
-    (20, 'Farol de milha', 29),
-    (21, 'Óleo do motor', 27),
-    (22, 'Filtro de óleo', 27),
-    (23, 'Bateria', 12),
-    (24, 'Bomba reservatório água', 12),
-	(24, 'Bomba reservatório gasolina', 12),
-    (25, 'Farol', 12),
-    (810, 'Cinto de segurança', 24),
-	(93, 'Limpador do para-brisa', 1),
-    (94, 'Limpador do vidro traseiro', 1),
-	(270, 'Extintor de incêndio', 3);
