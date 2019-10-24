@@ -44,6 +44,7 @@ Route::get('/Download/{tipo}', 'controllerUsuario@getDownload');
 Route::group(['middleware' => 'Fisico'], function () {
     // * Inicio
     Route::get('/Home','controllerFisico@Index');
+    Route::get('quilometragem/{placa?}/{km?}','controllerVeiculo@InserirQuilometragem')->name('quilomatragem');
     // * Perfil
     Route::get('/Home/Perfil','controllerFisico@LerPerfil');//Ler
     Route::put('/Home/Perfil','controllerFisico@AlterarPerfil');//Alterar

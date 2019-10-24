@@ -587,3 +587,8 @@ body, html{
     width: 800px;
     height: 800px;
 }
+.user-name{
+    font-size: 18px;
+    color: white !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

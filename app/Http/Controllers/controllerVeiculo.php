@@ -43,7 +43,8 @@ class controllerVeiculo extends Controller
     }
 
     public function InserirQuilometragem(Request $request){
-        return dd($request->Placa);
+        $data = json_encode(['ok'=> true,'value' => ['Placa'=>$request->Placa,'Km'=>$request->KM]]);
+        return ($data);
     }
 
     public function compartibilidadeVeiculo($veiculo, modelVeiculo $modelVeiculo){
