@@ -39,13 +39,13 @@
                     </div>
                     <div class="col-12 m-1 p-3 card shadow-sm">
                         <h5 class="mb-4">Notificação</h5>
-                        @for ($i = 0; $i < 2; $i++)
+                        @foreach ($Notificacoes as $Notificacao)
                             <div class="p-1">
                                 @component('componentes.notificacao')
-
+                                    @slot('Nome',$Notificacao->nm_peca)
                                 @endcomponent
                             </div>
-                        @endfor
+                        @endforeach
                     </div>
                 </div>
             </div>
