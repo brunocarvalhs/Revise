@@ -31,4 +31,13 @@ class controllerCheck extends Controller
         $Veiculos = json_decode($Veiculos);
         return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);
     }
+
+
+    public function AlterarNotificacao(){
+
+    }
+
+    public function DeletarNotificacao(){
+
+    }
 }

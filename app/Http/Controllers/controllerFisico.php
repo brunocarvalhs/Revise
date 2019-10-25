@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\modelCheck;
 use App\modelFisico;
 use App\modelUsuario;
-use Illuminate\Http\Request;
-use App\modelJuridico;
 use App\modelVeiculo;
+use App\modelJuridico;
+use Illuminate\Http\Request;
 
 class controllerFisico extends Controller
 {
@@ -38,9 +39,13 @@ class controllerFisico extends Controller
         return redirect()->back()->with('Login', $Login);
     }
 
-    public function Index(){
+    public function Index(controllerUsuario $controllerUsuario, modelCheck $modelCheck){
         $modelFisico = session()->get('Fisico');
-        return view('Fisico\Inicio',['Fisico' => $modelFisico]);
+        $Notificacao = $modelCheck->listaNotificacoes($modelFisico->getIdUsuario());
+        $Notificacao = json_decode($Notificacao);
+        $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
+        $Veiculos = json_decode($Veiculos);
+        return view('Fisico\Inicio',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);
     }
 
 
@@ -96,24 +101,6 @@ class controllerFisico extends Controller
 
     public function InserirQuilometragem(Request $request){
         return dd($request->Placa);
-    }
-
-    // Notificacao ---------------------------------------------------------------
-    public function LerNotificacao(controllerUsuario $controllerUsuario, controllerCheck $controllerCheck){
-        $modelFisico = session()->get('Fisico');
-        $Notificacao = $controllerCheck->listaNotificacoes($modelFisico->getIdUsuario());
-        $Notificacao = json_decode($Notificacao);
-        $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
-        $Veiculos = json_decode($Veiculos);
-        return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);
-    }
-
-    public function AlterarNotificacao(){
-
-    }
-
-    public function DeletarNotificacao(){
-
     }
 
 }

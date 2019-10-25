@@ -29,11 +29,12 @@
                     <div class="col-12 m-1 p-3 card shadow-sm">
                         <h5 class="mb-4">Veículos</h5>
                         <div class="row">
-                            @for ($i = 0; $i < 2; $i++)
+                            @foreach ($Veiculos as $Veiculo)
                                 @component('componentes.veiculos')
-
+                                    @slot('placa',$Veiculo->placa)
+                                    @slot('modelo',$Veiculo->modelo)
                                 @endcomponent
-                            @endfor
+                            @endforeach
                         </div>
                     </div>
                     <div class="col-12 m-1 p-3 card shadow-sm">
