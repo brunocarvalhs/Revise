@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Request;
+use TheSeer\Tokenizer\Exception;
 
 class modelVeiculo extends Model
 {
@@ -230,9 +231,9 @@ class modelVeiculo extends Model
         $cor = $this->getCor();
         $Quilometragem = $this->getQuilometragem();
 
-        if(!(DB::table('tb_veiculo')->where('cd_placa','=',$placa)->exists())){
+        if (!(DB::table('tb_veiculo')->where('cd_placa', '=', $placa)->exists())) {
 
-            $marca = DB::select("SELECT cd_marca as ID from tb_marca where nm_marca like CONCAT('%',?,'%')",[$marca]);
+            $marca = DB::select("SELECT cd_marca as ID from tb_marca where nm_marca like CONCAT('%',?,'%')", [$marca]);
             $marca = ($marca[0]->ID);
 
             $idVeiculo = DB::select("SELECT max(cd_veiculo) + 1 as ID FROM tb_veiculo");
@@ -241,14 +242,12 @@ class modelVeiculo extends Model
 
             //return dd($idVeiculo);
 
-            if((DB::table('tb_modelo')->where('nm_modelo','=',$modelo)->exists())){
+            if ((DB::table('tb_modelo')->where('nm_modelo', '=', $modelo)->exists())) {
 
-                $modelo = DB::select("SELECT cd_modelo as ID from tb_modelo where nm_modelo like CONCAT('%',?,'%')",[$modelo]);
+                $modelo = DB::select("SELECT cd_modelo as ID from tb_modelo where nm_modelo like CONCAT('%',?,'%')", [$modelo]);
 
                 $modelo = $modelo[0]->ID;
-
-            }
-            else{
+            } else {
 
 
                 $idmodelo = DB::select("SELECT max(cd_modelo) + 1 as ID FROM tb_modelo");
@@ -261,10 +260,9 @@ class modelVeiculo extends Model
                     'cd_marca' => $marca,
                 ]);
 
-                $modelo = DB::select("SELECT cd_modelo as ID from tb_modelo where nm_modelo like CONCAT('%',?,'%')",[$modelo]);
+                $modelo = DB::select("SELECT cd_modelo as ID from tb_modelo where nm_modelo like CONCAT('%',?,'%')", [$modelo]);
 
                 $modelo = $modelo[0]->ID;
-
             }
 
 
@@ -278,12 +276,10 @@ class modelVeiculo extends Model
                 'cd_modelo' => $modelo
             ]);
 
-            return json_encode(['Status' => true, 'Mensagem' => 'Veículo cadastrado com sucesso, placa: '.$placa]);;
+            return json_encode(['Status' => true, 'Mensagem' => 'Veículo cadastrado com sucesso, placa: ' . $placa]);;
+        } else {
+            return json_encode(['Status' => false, 'Mensagem' => 'Veículo já cadastrado com a placa ' . $placa]);;
         }
-        else{
-            return json_encode(['Status' => false, 'Mensagem' => 'Veículo já cadastrado com a placa '.$placa]);;
-      }
-
     }
 
 
@@ -303,28 +299,49 @@ class modelVeiculo extends Model
         */
 
         DB::table('tb_veiculo')
-        ->join('tb_modelo','tb_veiculo.cd_modelo','=','tb_modelo.cd_modelo')
-        ->join('tb_marca','tb_modelo.cd_marca','=','tb_marca.cd_marca')
-        ->select('tb_veiculo.cd_placa','tb_modelo.nm_modelo', 'tb_marca.nm_marca','tb_veiculo.nm_cor','tb_veiculo.aa_veiculo')
-        ->where('tb_veiculo.cd_veiculo','=',$id)
-        ->first();
+            ->join('tb_modelo', 'tb_veiculo.cd_modelo', '=', 'tb_modelo.cd_modelo')
+            ->join('tb_marca', 'tb_modelo.cd_marca', '=', 'tb_marca.cd_marca')
+            ->select('tb_veiculo.cd_placa', 'tb_modelo.nm_modelo', 'tb_marca.nm_marca', 'tb_veiculo.nm_cor', 'tb_veiculo.aa_veiculo')
+            ->where('tb_veiculo.cd_veiculo', '=', $id)
+            ->first();
     }
 
 
-    public function compartibilidadeVeiculo($veiculo){
-        return DB::table('tb_marca')->where('nm_marca','LIKE','%'.$veiculo[0].'%')->exists();
+    public function compartibilidadeVeiculo($veiculo)
+    {
+        return DB::table('tb_marca')->where('nm_marca', 'LIKE', '%' . $veiculo[0] . '%')->exists();
     }
 
 
-    private function CalculoQuilometragem($placa,$atualKM){
-
-        $anteriorKM = DB::table('tb_veiculo')->where('cd_placa','=',$placa)->select('qt_quilometragem as KM')->first();
-
+    private function CalculoQuilometragem($placa, $atualKM)
+    {
+        $anteriorKM = DB::table('tb_veiculo')->where('cd_placa', '=', $placa)->select('qt_quilometragem as KM')->first();
         $anteriorKM = $anteriorKM[0]->KM;
-
         $delta = ($atualKM - $anteriorKM);
-
-        return dd($delta);
+        if($delta < 0){
+            return false;
+        }
+        return ($delta);
     }
 
+
+    public function SistemaVerificacaoVeiculo($placa, $Km)
+    {
+        try {
+
+            $resultado = $this->CalculoQuilometragem($placa, $Km);
+
+            if ($resultado) {
+
+                DB::table('tb_veiculo')->where('cd_placa', '=', $placa)->update(['qt_quilometragem' => $Km]);
+
+                return true;
+            }
+            else{
+                return false;
+            }
+        } catch (Exception $e) {
+            return false;
+        }
+    }
 }

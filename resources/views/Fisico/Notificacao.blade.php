@@ -25,7 +25,7 @@
                     @foreach ($Notificacao as $item)
                         <div class="m-1 p-3">
                             @component('componentes.notificacao')
-
+                                @slot('Nome',$item->nm_peca)
                             @endcomponent
                         </div>
                     @endforeach

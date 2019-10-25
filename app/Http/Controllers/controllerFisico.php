@@ -101,8 +101,4 @@ class controllerFisico extends Controller
 
     }
 
-    public function InserirQuilometragem(Request $request){
-        return dd($request->Placa);
-    }
-
 }

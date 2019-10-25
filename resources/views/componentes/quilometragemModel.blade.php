@@ -1,9 +1,9 @@
-<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="modelQuilometragem" tabindex="-1" role="dialog" aria-labelledby="modelQuilometragem"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Quilomentragem - <div id="campo"></div></h4>
+                <h4 class="modal-title w-100 font-weight-bold">Quilometragem <div id="campo"></div></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

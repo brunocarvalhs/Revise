@@ -1,8 +1,11 @@
-<div class="col-3" onclick="quilometragem('{{ $placa }}')">
-    <div class="item">
+<div class="col-3">
+    <div class="item m-1">
         <div class="pad15 shadow-sm bg-light rounded">
-            <p class="lead">{{ $placa }}</p>
-            <p>{{ $modelo }}</p>
+            <button class="btn" data-toggle="modal"
+                data-target="#modelQuilometragem" onclick="quilometragem('{{ $placa }}')">
+                <p class="lead">{{ $placa }}</p>
+                <p>{{ $modelo }}</p>
+            </button>
         </div>
     </div>
 </div>
