@@ -53,7 +53,7 @@
                             <!-- Data de nascimento -->
                             <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                 <label for="exampleFormControlInput1">Data de nascimento</label>
-                                <input type="date" class="form-control" id="txtNascimento" name="txtNascimento" placeholder="DIA/MÊS/ANO" max="???" min="???" >
+                                <input type="date" class="form-control" id="txtNascimento" name="txtNascimento" placeholder="DIA/MÊS/ANO" max="{{  date('Y-m-d', strtotime('- 18 year')) }}" min="{{  date('Y-m-d', strtotime('- 65 year')) }}" >
                             </div>
                         </div>
                     </div>
