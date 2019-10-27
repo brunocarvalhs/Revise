@@ -7553,3 +7553,59 @@ INSERT INTO tb_check (cd_check, cd_veiculo, sg_status, cd_peca) VALUES
 (4, 1, 'C', 12);
 
 update tb_controle_plano set cd_plano = 1 where cd_plano = 0;
+
+
+-- ################# OFICIAIS ##########################
+
+-- Seleciona Anuncio
+delimiter $
+create procedure sp_selectAnuncio(in id int)
+begin
+	declare idIndice int;
+    declare vlIndice int;
+    declare idAnuncio int;
+    IF(SELECT cd_anuncio FROM tb_anuncio WHERE cd_anuncio = id)
+	THEN
+		set idAnuncio = (SELECT cd_anuncio FROM tb_anuncio WHERE cd_anuncio = id);
+		IF(SELECT cd_indice FROM tb_indice WHERE cd_anuncio = id)
+			THEN
+				set vlIndice = (SELECT max(vl_indice)+1 FROM tb_indice WHERE cd_anuncio = id);
+				UPDATE tb_indice SET vl_indice =  vlIndice WHERE cd_anuncio = id;
+            ELSE
+				set idIndice = (SELECT count(cd_indice) + 1 FROM tb_indice);
+				INSERT INTO tb_indice VALUES
+				(idIndice,1,idAnuncio);
+            END IF;
+	END IF;
+    SELECT
+        tb_anuncio.cd_anuncio as ID,
+        tb_anuncio.nm_titulo as Titulo,
+		tb_anuncio.ds_publicacao as Descricao,
+        tb_anuncio.vl_anunciado as Valor,
+		tb_anuncio.dt_publicacao as Data,
+        tb_tipo_anuncio.nm_tipo_anuncio as Tipo,
+		tb_usuario_juridico.nm_nome_fantasia as Empresa,
+        tb_logradouro.nm_logradouro as Endereco,
+        tb_bairro.nm_bairro as Bairro,tb_cidade.nm_cidade as Cidade,
+		tb_uf.sg_uf as Estado
+			FROM tb_anuncio
+				INNER JOIN tb_tipo_anuncio ON tb_anuncio.cd_tipo_anuncio = tb_tipo_anuncio.cd_tipo_anuncio
+				INNER JOIN tb_usuario_juridico ON tb_usuario_juridico.cd_usuario_juridico = tb_anuncio.cd_usuario_juridico
+				INNER JOIN tb_logradouro ON tb_logradouro.cd_usuario_juridico = tb_usuario_juridico.cd_usuario_juridico
+				INNER JOIN tb_bairro ON tb_bairro.cd_bairro = tb_logradouro.cd_bairro
+				INNER JOIN tb_cidade ON tb_cidade.cd_cidade = tb_bairro.cd_cidade
+				INNER JOIN tb_uf ON tb_uf.sg_uf = tb_cidade.sg_uf
+					WHERE tb_anuncio.cd_anuncio = id;
+end $
+
+
+-- Lista de veiculos
+delimiter $
+create procedure sp_listaVeiculo(in idUser int)
+begin
+    SELECT tb_veiculo.cd_veiculo as id,tb_veiculo.cd_placa as placa,tb_modelo.nm_modelo as modelo, count(tb_check.cd_check) as Notificacao FROM tb_veiculo
+        inner join tb_modelo on tb_veiculo.cd_modelo = tb_modelo.cd_modelo
+        inner join tb_usuario on tb_usuario.cd_usuario = tb_veiculo.cd_usuario
+        left Join tb_check on tb_veiculo.cd_veiculo = tb_check.cd_veiculo
+        where tb_veiculo.cd_usuario = idUser group by tb_veiculo.cd_veiculo;
+end $
