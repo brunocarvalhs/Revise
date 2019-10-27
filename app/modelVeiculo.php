@@ -271,6 +271,7 @@ class modelVeiculo extends Model
                 'nm_cor' => $cor,
                 'qt_quilometragem' => $Quilometragem,
                 'aa_veiculo' => $ano,
+                'dt_verificacao' => date('Y-m-d'),
                 'cd_placa' => $placa,
                 'cd_usuario' => $idUsuario,
                 'cd_modelo' => $modelo
@@ -316,24 +317,97 @@ class modelVeiculo extends Model
     private function CalculoQuilometragem($placa, $atualKM)
     {
         $anteriorKM = DB::table('tb_veiculo')->where('cd_placa', '=', $placa)->select('qt_quilometragem as KM')->first();
-        $anteriorKM = $anteriorKM[0]->KM;
+
+        $anteriorKM = (int) $anteriorKM->KM;
+
         $delta = ($atualKM - $anteriorKM);
+
         if($delta < 0){
             return false;
         }
         return ($delta);
     }
 
+    public function CalculoTempo($placa){
+
+        $ultimaVerificacao = DB::table('tb_veiculo')
+        ->where('cd_placa', '=', $placa)
+        ->select(DB::raw('timestampdiff(DAY,dt_verificacao,now()) as Tempo'))
+        ->first();
+
+        $ultimaVerificacao = (int) $ultimaVerificacao->Tempo;
+
+        return ($ultimaVerificacao);
+    }
 
     public function SistemaVerificacaoVeiculo($placa, $Km)
     {
         try {
-
+            //Calcular diferença de quilometragem
             $resultado = $this->CalculoQuilometragem($placa, $Km);
-
+            //Verificar resultado
             if ($resultado) {
+                //Peças vencidas por Quilometragem
+                $pecas = DB::table('tb_medida_peca')
+                ->select(DB::raw('cd_peca'))
+                ->where([
+                    ['qt_medida', '<', $resultado],
+                    ['sg_medida', '=', 'km']
+                ])
+                ->groupBy('cd_peca')
+                ->get();
+                //ID do veículo da placa
+                $idVeiculo = DB::table('tb_veiculo')->select('cd_veiculo as id')->where('cd_placa','=',$placa)->first();
+                //Isolando resultado do ID
+                $idVeiculo = $idVeiculo->id;
+                //Foreach de peças
+                foreach($pecas as $peca){
+                    //Auto inclemente do ID check
+                    $id = DB::table('tb_check')->max('cd_check') + 1;
+                    //Insert CHECK das peça vencida
+                    DB::table('tb_check')->insert([
+                        'cd_check' => $id,
+                        'dt_check' => date("Y-m-d"),
+                        'cd_veiculo' => $idVeiculo,
+                        'sg_status' => 'A',
+                        'cd_peca' => $peca->cd_peca
+                    ]);
+                }
+                //Calculo de tempo desde a ultimo check
+                $tempo = $this->CalculoTempo($placa);
+                //Peças que venceram por tempo
+                $pecas = DB::table('tb_medida_peca')
+                ->select(DB::raw('cd_peca'))
+                ->where([
+                    ['qt_medida', '<', $tempo],
+                    ['sg_medida', '=', 'T']
+                ])
+                ->groupBy('cd_peca')
+                ->get();
+                //Insert de peças vencidas por tempo
+                foreach($pecas as $peca){
+                    //Auto inclemente do ID check
+                    $id = DB::table('tb_check')->max('cd_check') + 1;
+                    //Insert CHECK das peça vencida
+                    DB::table('tb_check')->insert([
+                        'cd_check' => $id,
+                        'dt_check' => date("Y-m-d"),
+                        'cd_veiculo' => $idVeiculo,
+                        'sg_status' => 'A',
+                        'cd_peca' => $peca->cd_peca
+                    ]);
+                }
 
-                DB::table('tb_veiculo')->where('cd_placa', '=', $placa)->update(['qt_quilometragem' => $Km]);
+                //Atualizando dados do veiculo
+                DB::table('tb_veiculo')
+                ->where('cd_placa', '=', $placa)
+                ->update(
+                    [
+                    'qt_quilometragem' => $Km,
+                    'dt_verificacao' => date('Y-m-d'),
+                    'qt_pecorrido' => $resultado
+                    ]
+                );
 
                 return true;
             }
