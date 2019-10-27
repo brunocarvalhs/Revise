@@ -18,7 +18,7 @@ class modelPlano extends Model
         ->where('cd_usuario_fisico','=',$idFisico)->get();
 
         $lista = json_encode($lista);
-        return dd($lista);
+        return ($lista);
     }
 
     public function MensalCobrança(){
