@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\modelPlano;
 use App\modelVeiculo;
 use Illuminate\Http\Request;
 
@@ -53,5 +54,19 @@ class controllerVeiculo extends Controller
 
     public function verificarVeiculo(Request $request, modelVeiculo $modelVeiculo){
         $modelVeiculo->verificarVeiculo($request);
+    }
+
+    public function quantidadeVeiculoPorPlano($modelUsuario, modelVeiculo $modelVeiculo, modelPlano $modelPlano){
+        $quantidade = $modelVeiculo->QuantidadeVeiculosConta($modelUsuario->getIdUsuario());
+        $maximo = $modelPlano->MaximoVeiculosDoPlano($modelUsuario->getIdFisico());
+
+        $valor = $maximo - $quantidade;
+
+        if($valor > 0){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

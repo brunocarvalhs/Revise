@@ -427,4 +427,9 @@ class modelVeiculo extends Model
             return false;
         }
     }
+
+    public function QuantidadeVeiculosConta($idUsuario){
+        $numero_veiculos = DB::table('tb_veiculo')->where('cd_usuario','=',$idUsuario)->count();
+        return ($numero_veiculos);
+    }
 }
