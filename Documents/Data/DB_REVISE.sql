@@ -62,6 +62,7 @@ CREATE TABLE tb_plano(
 cd_plano int not null,
 nm_plano varchar(255),
 ds_plano TEXT,
+vl_plano decimal(5,2),
 qt_anuncio int,
 qt_veiculo int,
 CONSTRAINT pk_plano

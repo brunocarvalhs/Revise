@@ -36,7 +36,7 @@ VALUES
     (4, 'Advantage'),
     (5, 'LTZ 1.4'),
     (6, 'Effect');
-    
+
 
 -- INSERT da tabela Tipo De Peca (Categoria da peça)
 INSERT INTO tb_tipo_peca
@@ -127,15 +127,15 @@ VALUES
     (2, 'Produto', 1.00);
 
 INSERT INTO tb_plano
-    (cd_plano, nm_plano, ds_plano, qt_anuncio, qt_veiculo)
+    (cd_plano, nm_plano, ds_plano, vl_plano, qt_anuncio, qt_veiculo)
 VALUES
-    (1 , 'Basic', 'Plano Gratuito', null, 2),
-    (2 , 'Standart', 'Plano de R$9,99', null, 5),
-    (3 , 'Pro', 'Plano de R$39,99', null, 20),
-    (4 , 'Deluxe Edition', 'Plano de R$99,90', null, 50),
-    (5 , 'Plano Juridico', 'Personalizavel', null, null);
+    (1 , 'Basic', 'Plano Gratuito', null, null, 2),
+    (2 , 'Standart', 'Plano de R$9,99', null, 9.99, 5),
+    (3 , 'Pro', 'Plano de R$39,99', null, 39.99, 20),
+    (4 , 'Deluxe Edition', 'Plano de R$99,90', null, 99.90, 50),
+    (5 , 'Plano Juridico', 'Personalizavel', null, null, null);
 
-INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_tipo_usuario) VALUES 
+INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_tipo_usuario) VALUES
 (1,'marinalunasales__marinalunasales@acritica.com.br','2Nq1duhP3l',1),
 (2,'josemariodamata-90@tivit.com.br','UjzE7GqhEI',1),
 (3,'robertodiogonogueira_@projetti.com','5Yu7kjnCAC',1),
@@ -198,8 +198,8 @@ INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_tipo_usuario) VALUES
 (60,'silvanaelisadapaz..silvanaelisadapaz@rjnet.com.br','8pxqA4BGsX',2);
 
 INSERT INTO tb_usuario_fisico
-    (cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario) 
-VALUES 
+    (cd_usuario_fisico,nm_usuario_fisico,cd_cpf,cd_usuario)
+VALUES
 (1,'Marina Luna Sales','85920671033',1),
 (2,'José Mario da Mata','50191732664',2),
 (3,'Roberto Diogo Nogueira','67028644421',3),
@@ -268,7 +268,7 @@ VALUES
 (30,'Raimundo e Isabel Entregas Expressas ME','Mudanças para tudo','61067396000189',60);
 
 
-INSERT INTO  
+INSERT INTO
     tb_cidade
     (cd_cidade,nm_cidade,sg_uf)
 VALUES
@@ -5837,7 +5837,7 @@ VALUES
     (5563, 'Wanderlândia', 'TO'),
     (5564, 'Xambioá', 'TO');
 
--- INSERT DA TABELA CIDADE 
+-- INSERT DA TABELA CIDADE
 INSERT INTO tb_bairro(cd_bairro, nm_bairro, cd_cidade) VALUES
 (1,	'Belvedere Mar Pequeno',5277),
 (2, 'Catiapoã',5277),
@@ -5881,8 +5881,8 @@ INSERT INTO tb_bairro(cd_bairro, nm_bairro, cd_cidade) VALUES
 (40, 'Vila Vorturua',5277),
 (41, 'Alemoa',5250),
 (42, 'Aparecida',5250),
-(43, 'Areia Branca',5250), 
-(44, 'Chinês',5250), 
+(43, 'Areia Branca',5250),
+(44, 'Chinês',5250),
 (45, 'Bom Retiro ',5250),
 (46, 'Boqueirão ',5250),
 (47, 'Cabuçu/Caetê ',5250),
@@ -5980,34 +5980,34 @@ INSERT INTO tb_bairro(cd_bairro, nm_bairro, cd_cidade) VALUES
 (139, 'Jardim Guilhermina',5167),
 (140, 'Jardim Imperador',5167),
 (141, 'Jardim Quietude',5167),
-(142, 'Jardim Real',5167), 
-(143, 'Jardins',5167), 
-(144, 'Maxland',5167), 
-(145, 'Melvi',5167), 
-(146, 'Mirim',5167), 
-(147, 'Ocian',5167), 
-(148, 'Parque das Américas',5167), 
-(149, 'Pedra de Tórguer',5167), 
-(150, 'Ribeirópolis',5167), 
-(151, 'Samambaia',5167), 
-(152, 'Sanharol',5167), 
-(153, 'Santa Helena',5167), 
-(154, 'Santa Mathilde',5167), 
-(155, 'Sítio do Campo',5167), 
-(156, 'Sítio dos Jesuítas',5167), 
-(157, 'Solemar',5167), 
-(158, 'Trilha da Adutora',5167), 
-(159, 'Tude Bastos',5167), 
-(160, 'Tupi',5167), 
-(161, 'Tupiry',5167), 
-(162, 'Vila Sônia',5167), 
-(163, 'Vila Tupi',5167), 
-(164, 'Ximeno de Villeroy',5167), 
+(142, 'Jardim Real',5167),
+(143, 'Jardins',5167),
+(144, 'Maxland',5167),
+(145, 'Melvi',5167),
+(146, 'Mirim',5167),
+(147, 'Ocian',5167),
+(148, 'Parque das Américas',5167),
+(149, 'Pedra de Tórguer',5167),
+(150, 'Ribeirópolis',5167),
+(151, 'Samambaia',5167),
+(152, 'Sanharol',5167),
+(153, 'Santa Helena',5167),
+(154, 'Santa Mathilde',5167),
+(155, 'Sítio do Campo',5167),
+(156, 'Sítio dos Jesuítas',5167),
+(157, 'Solemar',5167),
+(158, 'Trilha da Adutora',5167),
+(159, 'Tude Bastos',5167),
+(160, 'Tupi',5167),
+(161, 'Tupiry',5167),
+(162, 'Vila Sônia',5167),
+(163, 'Vila Tupi',5167),
+(164, 'Ximeno de Villeroy',5167),
 (165, 'Xixová', 5167);
 
 
 /*
--- INSERT DA TABELA PEÇA 
+-- INSERT DA TABELA PEÇA
 INSERT INTO tb_peca
     (cd_peca, nm_peca, cd_tipo_peca)
 VALUES
@@ -7331,7 +7331,7 @@ VALUES
 (29, 'Limpador do vidro traseiro', 1),
 (30, 'Extintor de incêndio', 3);
 
-INSERT INTO tb_medida_peca (cd_peca, qt_medida, sg_medida) VALUES 
+INSERT INTO tb_medida_peca (cd_peca, qt_medida, sg_medida) VALUES
 (1,10000,'Km'),
 (1,20000,'Km'),
 (2,40000,'Km'),
@@ -7457,9 +7457,9 @@ VALUES
     (72, 1, 'CLASSIC'),
     (73, 1, 'MARAJO'),
     (74, 1, 'SUPREMA');
-    
- 
-INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veiculo, qt_quilometragem) VALUES 
+
+
+INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veiculo, qt_quilometragem) VALUES
 (1,'Prata','JQK-4077',1,32,2015,'20469'),
 (2,'Laranja','MUK-2453',1,32,2016,'1069'),
 (3,'Azul','MQC-0017',1,19,2014,'34269'),
@@ -7537,8 +7537,8 @@ INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veicu
 (75,'Azul','MXZ-9242',30,51,2014, '19385');
 
 
-INSERT INTO tb_logradouro (cd_logradouro, nm_logradouro, cd_usuario_juridico, cd_bairro) VALUES 
-(1, 'Rua cidade de Santos', 1, 1), 
+INSERT INTO tb_logradouro (cd_logradouro, nm_logradouro, cd_usuario_juridico, cd_bairro) VALUES
+(1, 'Rua cidade de Santos', 1, 1),
 (2, 'Rua cidade de Santos', 3, 3);
 
 
