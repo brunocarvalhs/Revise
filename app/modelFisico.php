@@ -143,8 +143,6 @@ class modelFisico extends modelUsuario
 
                     $plano = DB::table('tb_plano')->select('cd_plano as ID','vl_plano as valor')->where('cd_plano','=',$request->txtplano)->first();
 
-                    return dd($plano);
-
                     DB::table('tb_usuario')->insert(
                         [
                             'cd_usuario' => $auto_usuario,
@@ -168,10 +166,10 @@ class modelFisico extends modelUsuario
                         [
                             'cd_controle' => $auto_controle_plano,
                             'cd_usuario_fisico' => $auto_usuario_fisico,
-                            'cd_plano' => $request->txtplano,
+                            'cd_plano' => $plano->ID,
                             'dt_definicao' => date('Y-m-d'),
-                            'dt_expiracao' => date('Y-m-d', strtotime('+1 mount')),
-                            'vl_pago_plano' => $request->txtplano//TROCA AQUI
+                            'dt_expiracao' => date('Y-m-d', strtotime('+1 month')),
+                            'vl_pago_plano' => $plano->valor
                         ]
                     );
 
