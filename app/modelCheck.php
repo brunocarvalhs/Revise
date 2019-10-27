@@ -13,7 +13,7 @@ class modelCheck extends Model
         ->join('tb_status','tb_check.sg_status','=','tb_status.sg_status')
         ->join('tb_veiculo','tb_check.cd_veiculo','=','tb_veiculo.cd_veiculo')
         ->select('tb_check.cd_check','tb_status.nm_status','tb_peca.nm_peca')
-        ->where('tb_veiculo.cd_placa','=',$placa)->get();
+        ->where([['tb_veiculo.cd_placa','=',$placa],['tb_check.sg_status','!=','A']])->groupBy('tb_peca.nm_peca')->get();
         return json_encode($listaNotificacao);
     }
 

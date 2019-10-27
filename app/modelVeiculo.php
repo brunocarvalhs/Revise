@@ -340,6 +340,15 @@ class modelVeiculo extends Model
         return ($ultimaVerificacao);
     }
 
+    private function calculoPecorrido($placa,$pecorrido){
+        $check = DB::table('tb_veiculo')->select('qt_pecorrido as Pecorrido')->where('cd_placa','=',$placa)->first();
+        $check = $check->Pecorrido;
+        if($check != null){
+            return $check + $pecorrido;
+        }
+        return $pecorrido;
+    }
+
     public function SistemaVerificacaoVeiculo($placa, $Km)
     {
         try {
@@ -397,7 +406,8 @@ class modelVeiculo extends Model
                         'cd_peca' => $peca->cd_peca
                     ]);
                 }
-
+                //Somando quilometragem pecorrida desde o cadastro do veículo
+                $resultado = $this->calculoPecorrido($placa, $resultado);
                 //Atualizando dados do veiculo
                 DB::table('tb_veiculo')
                 ->where('cd_placa', '=', $placa)
@@ -408,7 +418,6 @@ class modelVeiculo extends Model
                     'qt_pecorrido' => $resultado
                     ]
                 );
-
                 return true;
             }
             else{

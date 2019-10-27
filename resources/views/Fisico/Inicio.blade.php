@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-6 card shadow-sm">
                 <h5 class="p-1 pt-3 mb-4">Status</h5>
-                @for ($x = 0; $x < 10; $x++)
+                @foreach ($Andamentos as $Andamento)
                     <div class="row p-1">
                         <div class="col-12">
                             @component('componentes.contagem')
@@ -22,7 +22,7 @@
                             @endcomponent
                         </div>
                     </div>
-                @endfor
+                @endforeach
             </div>
             <div class="col-6">
                 <div class="row">

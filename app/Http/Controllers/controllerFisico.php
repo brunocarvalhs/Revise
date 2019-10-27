@@ -43,11 +43,11 @@ class controllerFisico extends Controller
         $modelFisico = session()->get('Fisico');
         $Notificacao = $modelCheck->listaNotificacoes($modelFisico->getIdUsuario());
         $Notificacao = json_decode($Notificacao);
-        $Andamento = $modelCheck->listaNotificacoes($modelFisico->getIdUsuario());
+        $Andamento = $modelCheck->listaNotificacao($modelFisico->getIdUsuario());
         $Andamento = json_decode($Andamento);
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);
-        return view('Fisico\Inicio',['Fisico' => $modelFisico, 'Notificacoes' => $Notificacao, 'Veiculos' => $Veiculos, 'Andamento' => $Andamento]);
+        return view('Fisico\Inicio',['Fisico' => $modelFisico, 'Notificacoes' => $Notificacao, 'Veiculos' => $Veiculos, 'Andamentos' => $Andamento]);
     }
 
 
