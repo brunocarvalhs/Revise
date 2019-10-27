@@ -7,6 +7,7 @@ use App\modelFisico;
 use App\modelUsuario;
 use App\modelVeiculo;
 use App\modelJuridico;
+use App\modelPlano;
 use Illuminate\Http\Request;
 
 class controllerFisico extends Controller
@@ -52,11 +53,13 @@ class controllerFisico extends Controller
 
 
     // Perfil -----------------------------------------------------------------
-    public function LerPerfil(){
+    public function LerPerfil(modelPlano $modelPlano){
         $modelFisico = session()->get('Fisico');
         $perfil = $modelFisico->DadosPerfil();
         $perfil = json_decode($perfil);
-        return view('Fisico\Perfil',['Fisico' => $modelFisico, 'Perfil' => $perfil]);
+        $mensalidade = $modelPlano->listaMensalidadeFisico($modelFisico->getIdFisico());
+        $mensalidade = json_decode($mensalidade);
+        return view('Fisico\Perfil',['Fisico' => $modelFisico, 'Perfil' => $perfil, 'Mensalidades' => $mensalidade]);
     }
 
     public function AlterarPerfil(){

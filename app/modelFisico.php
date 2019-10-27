@@ -19,7 +19,7 @@ class modelFisico extends modelUsuario
     /**
      * Get the value of IdFisico
      */
-    protected function getIdFisico()
+    public function getIdFisico()
     {
         return $this->IdFisico;
     }
