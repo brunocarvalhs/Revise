@@ -129,7 +129,7 @@ VALUES
 INSERT INTO tb_plano
     (cd_plano, nm_plano, ds_plano, vl_plano, qt_anuncio, qt_veiculo)
 VALUES
-    (1 , 'Basic', 'Plano Gratuito', null, null, 2),
+    (1 , 'Basic', 'Plano Gratuito', 00.00, null, 2),
     (2 , 'Standart', 'Plano de R$9,99', 9.99, null, 5),
     (3 , 'Pro', 'Plano de R$39,99', 39.99, null, 20),
     (4 , 'Deluxe Edition', 'Plano de R$99,90', 99.90, null, 50),
