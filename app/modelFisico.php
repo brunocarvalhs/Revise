@@ -141,6 +141,10 @@ class modelFisico extends modelUsuario
                     $auto_usuario_fisico = DB::table('tb_usuario_fisico')->max('cd_usuario_fisico') + 1;
                     $auto_controle_plano = DB::table('tb_controle_plano')->max('cd_controle') + 1;
 
+                    $plano = DB::table('tb_plano')->select('cd_plano as ID','vl_plano as valor')->where('cd_plano','=',$request->txtplano)->first();
+
+                    return dd($plano);
+
                     DB::table('tb_usuario')->insert(
                         [
                             'cd_usuario' => $auto_usuario,
@@ -165,6 +169,9 @@ class modelFisico extends modelUsuario
                             'cd_controle' => $auto_controle_plano,
                             'cd_usuario_fisico' => $auto_usuario_fisico,
                             'cd_plano' => $request->txtplano,
+                            'dt_definicao' => date('Y-m-d'),
+                            'dt_expiracao' => date('Y-m-d', strtotime('+1 mount')),
+                            'vl_pago_plano' => $request->txtplano//TROCA AQUI
                         ]
                     );
 

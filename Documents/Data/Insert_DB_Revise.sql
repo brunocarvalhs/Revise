@@ -130,9 +130,9 @@ INSERT INTO tb_plano
     (cd_plano, nm_plano, ds_plano, vl_plano, qt_anuncio, qt_veiculo)
 VALUES
     (1 , 'Basic', 'Plano Gratuito', null, null, 2),
-    (2 , 'Standart', 'Plano de R$9,99', null, 9.99, 5),
-    (3 , 'Pro', 'Plano de R$39,99', null, 39.99, 20),
-    (4 , 'Deluxe Edition', 'Plano de R$99,90', null, 99.90, 50),
+    (2 , 'Standart', 'Plano de R$9,99', 9.99, null, 5),
+    (3 , 'Pro', 'Plano de R$39,99', 39.99, null, 20),
+    (4 , 'Deluxe Edition', 'Plano de R$99,90', 99.90, null, 50),
     (5 , 'Plano Juridico', 'Personalizavel', null, null, null);
 
 INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_tipo_usuario) VALUES
