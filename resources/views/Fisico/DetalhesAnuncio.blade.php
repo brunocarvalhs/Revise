@@ -40,6 +40,8 @@
                                 @endif
                                 <h5 class="card-text mt-5">Descrição</h5>
                                 <p class="card-text text-dark mt-3" align="justify">{{ $Anuncio->Descricao }}</p>
+                                <h5 class="card-text mt-5">Empresa</h5>
+                                <p class="card-text text-dark mt-3" align="justify">{{ $Anuncio->Empresa }}</p>
                             </div>
                         </div>
                         <div class="row mt-5">
