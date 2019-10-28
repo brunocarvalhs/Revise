@@ -14,7 +14,7 @@
 
 @section('sistema_fisico')
 <div class="row p-3">
-    <div class="col-7 card p-3 m-1 shadow-sm">
+    <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 card p-3 m-1 shadow-sm">
         <div class="row mt-3">
             <div class="col-12">
                 <h4>Notificação</h4>
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="col-4 card p-3 shadow-sm">
+    <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 card p-3 shadow-sm">
         <div class="row mt-3">
             <div class="col-12">
                 <h4>Veículos</h4>
