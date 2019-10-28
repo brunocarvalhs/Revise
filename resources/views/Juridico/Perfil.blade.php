@@ -35,7 +35,7 @@
                                     <label for="campoNome" class="text-warning">Nome Fantasia</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome" value="" readonly>
+                                    <input type="text" class="form-control" id="campoNome" value="{{ $Dados->nm_nome_fantasia }}" readonly>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                     <label for="campoNome" class="text-warning">Razão Social</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome" value="" readonly>
+                                    <input type="text" class="form-control" id="campoNome" value="{{ $Dados->nm_razao_social }}" readonly>
                                 </div>
                             </div>
                         </div>
@@ -55,13 +55,13 @@
                                 <div class="col-12 col-sm-12 col-md col-lg-6 col-xl-6">
                                     <label for="exampleFormControlInput1" class="text-warning">Endereço de
                                         email</label>
-                                    <input type="email" class="form-control" id="campoEmail" value="" readonly>
+                                    <input type="email" class="form-control" id="campoEmail" value="{{ $Dados->nm_razao_social }}" readonly>
                                 </div>
                                 <!-- CNPJ -->
                                 <div class="col-12 col-sm-12 col-md col-lg-6 col-xl-6">
                                     <label for="exampleFormControlInput1" class="text-warning">CNPJ</label>
                                     <input type="text" class="form-control" id="campoDoCpf" placeholder="" data-mask=""
-                                        value="" readonly>
+                                        value="{{ $Dados->cd_cnpj }}" readonly>
                                 </div>
                             </div>
                             <br>

@@ -214,8 +214,11 @@ class modelJuridico extends modelUsuario
         ->join('tb_logradouro','tb_logradouro.cd_usuario_juridico','=','tb_usuario_juridico.cd_usuario_juridico')
         ->join('tb_bairro','tb_bairro.cd_bairro','=','tb_logradouro.cd_bairro')
         ->join('tb_cidade','tb_cidade.cd_cidade','=','tb_bairro.cd_cidade')
+        ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_usuario_juridico.cd_usuario')
         ->where('tb_usuario_juridico.cd_usuario_juridico','=',$IdJuridico)
+        ->select('tb_usuario_juridico.nm_nome_fantasia as Fantasia')
         ->first();
-        return dd($dados);
+        $dados = json_encode($dados);
+        return ($dados);
     }
 }
