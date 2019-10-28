@@ -24,20 +24,14 @@
                                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="d-block w-100" src=".../800x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
+                                            <img class="d-block w-100" src="https://www.fbmforjaria.com.br/imagens/informacoes/fornecedores-pecas-agricolas-02.jpg" alt="Primeiro Slide">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
-                                <h4 class="card-text text-dark" align="justify">{{ $Anuncio->Titulo }}</h4>
-                                <h5 class="card-text text-dark m-5" align="justify"> Preço : R$ {{ $Anuncio->Valor }} </h5>
+                                <h4 class="card-text text-dark" align="center">{{ $Anuncio->Titulo }}</h4>
+                                <h5 class="card-text text-dark m-5" align="center"> Preço : R$ {{ $Anuncio->Valor }} </h5>
                             </div>
                         </div>
                         <div class="row">
