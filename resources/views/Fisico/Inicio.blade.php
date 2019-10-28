@@ -12,7 +12,7 @@
 <div class="row p-3">
     <div class="col-12">
         <div class="row">
-            <div class="col-6 card shadow-sm">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 card shadow-sm">
                 <h5 class="p-1 pt-3 mb-4">Status</h5>
                 @foreach ($Andamentos as $Andamento)
                     <div class="row p-1">
