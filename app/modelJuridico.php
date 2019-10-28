@@ -209,11 +209,13 @@ class modelJuridico extends modelUsuario
     }
 
 
-    public function dadosUsuario(){
+    public function dadosUsuario($IdJuridico){
         $dados = DB::table('tb_usuario_juridico')
         ->join('tb_logradouro','tb_logradouro.cd_usuario_juridico','=','tb_usuario_juridico.cd_usuario_juridico')
         ->join('tb_bairro','tb_bairro.cd_bairro','=','tb_logradouro.cd_bairro')
-        ->get();
+        ->join('tb_cidade','tb_cidade.cd_cidade','=','tb_bairro.cd_cidade')
+        ->where('tb_usuario_juridico.cd_usuario_juridico','=',$IdJuridico)
+        ->first();
         return dd($dados);
     }
 }
