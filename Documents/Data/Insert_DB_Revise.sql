@@ -7585,6 +7585,7 @@ begin
 		tb_anuncio.dt_publicacao as Data,
         tb_tipo_anuncio.nm_tipo_anuncio as Tipo,
 		tb_usuario_juridico.nm_nome_fantasia as Empresa,
+        tb_logradouro.cd_localizacao as Numero,
         tb_logradouro.nm_logradouro as Endereco,
         tb_bairro.nm_bairro as Bairro,tb_cidade.nm_cidade as Cidade,
 		tb_uf.sg_uf as Estado

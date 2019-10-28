@@ -191,6 +191,7 @@ CONSTRAINT fk_registro_controle
 
 CREATE TABLE tb_logradouro(
 cd_logradouro int not null,
+cd_localizacao int,
 nm_logradouro varchar(255),
 cd_usuario_juridico int,
 cd_bairro int,

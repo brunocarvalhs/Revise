@@ -179,6 +179,7 @@ class modelJuridico extends modelUsuario
                         [
                             'cd_logradouro' => $Logradouro,
                             'nm_logradouro' => $request->txtRua,
+                            'cd_localizacao' => $request->txtNumero,
                             'cd_usuario_juridico' => $auto_juridico,
                             'cd_bairro' => $Bairro
                         ]
