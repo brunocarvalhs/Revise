@@ -176,7 +176,7 @@ class modelAnuncio extends Model
     {
         $Anuncio = DB::select('call sp_selectAnuncio(?)', [$id]);
         $Anuncio = json_encode($Anuncio);
-        return dd($Anuncio);
+        return ($Anuncio);
     }
 
 
