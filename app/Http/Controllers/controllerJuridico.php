@@ -46,7 +46,6 @@ class controllerJuridico extends Controller
         $modelJuridico = session()->get('Juridico');
         $dados = $modelJuridico->dadosUsuario($modelJuridico->getIdJuridico());
         $dados = json_decode($dados);
-        return dd($dados);
         return view('Juridico\Perfil',['Juridico' => $modelJuridico, 'Dados' => $dados]);
     }
 
