@@ -55,33 +55,33 @@
                                 <div class="col-12 col-sm-12 col-md col-lg-6 col-xl-6">
                                     <label for="exampleFormControlInput1" class="text-warning">Endereço de
                                         email</label>
-                                    <input type="email" class="form-control" id="campoEmail" value="{{ $Dados->nm_razao_social }}" readonly>
+                                    <input type="email" class="form-control" id="campoEmail" value="{{ $Dados->Email }}" readonly>
                                 </div>
                                 <!-- CNPJ -->
                                 <div class="col-12 col-sm-12 col-md col-lg-6 col-xl-6">
                                     <label for="exampleFormControlInput1" class="text-warning">CNPJ</label>
-                                    <input type="text" class="form-control" id="campoDoCpf" placeholder="" data-mask=""
-                                        value="{{ $Dados->cd_cnpj }}" readonly>
+                                    <input type="text" class="form-control" id="campoDoCpf" placeholder="" data-mask="00.000.000/0000-00"
+                                        value="{{ $Dados->CNPJ }}" readonly>
                                 </div>
                             </div>
                             <br>
                             <div class="form-group inputCadastro">
                                 <label for="inputAddress" class="text-warning">Endereço</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="" readonly>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="" readonly value="{{ $Dados->Endereco }} - {{ $Dados->Bairro }}">
                             </div>
                             <div class="form-row inputCadastro">
                                 <div class="form-group col-md-4">
                                     <label for="inputCity" class="text-warning">Cidade</label>
-                                    <input type="text" class="form-control" id="inputCity" readonly>
+                                    <input type="text" class="form-control" id="inputCity" readonly value="{{ $Dados->Cidade }}">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEstado" class="text-warning">Estado</label>
-                                    <input type="text" class="form-control" id="inputCity" readonly>
+                                    <input type="text" class="form-control" id="inputCity" readonly value="{{ $Dados->Cidade }}">
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
                                         <label for="inputEstado" class="text-warning">Pais</label>
-                                        <input type="text" class="form-control" id="inputCity" readonly>
+                                        <input type="text" class="form-control" id="inputCity" value="Brasil" readonly>
                                         </select>
                                     </div>
                             </div>
