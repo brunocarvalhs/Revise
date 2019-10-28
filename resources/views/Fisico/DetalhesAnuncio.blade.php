@@ -42,7 +42,14 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
+                                <h4>Descrição</h4>
                                 <p class="card-text text-dark mt-5" align="justify">{{ $Anuncio->Descricao }}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>Endereço</h4>
+
                             </div>
                         </div>
                     </div>
