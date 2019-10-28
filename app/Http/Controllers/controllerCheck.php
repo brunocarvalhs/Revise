@@ -14,10 +14,11 @@ class controllerCheck extends Controller
 
     public function VerificarVeiculo(Request $request,modelCheck $modelCheck, controllerUsuario $controllerUsuario){
         $modelFisico = session()->get('Fisico');
-        $Notificacao = $modelCheck->listaNotificacao($request->Placa);
+        $Notificacao = $modelCheck->listaNotificacoes($request->Placa);
         $Notificacao = json_decode($Notificacao);
         if($Notificacao == [])
             $Notificacao = false;
+
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);
         return view('Fisico\Notificacao',['Fisico' => $modelFisico, 'Notificacao' => $Notificacao, 'Veiculos' => $Veiculos]);
