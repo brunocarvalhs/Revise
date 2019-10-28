@@ -207,4 +207,10 @@ class modelJuridico extends modelUsuario
             return json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado.']);
         }
     }
+
+
+    public function dadosUsuario(){
+        $dados = DB::table('tb_usuario_juridico')->join('tb_logradouro','tb_logradouro.cd_logradouro','=','tb_usuario_juridico.cd_logradouro')->get();
+        return dd($dados);
+    }
 }
