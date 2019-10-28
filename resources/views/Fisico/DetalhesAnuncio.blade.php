@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-5">
-                                <h6 class="card-subtitle" align="center">{{ $Anuncio->Tipo }}</h6>
+                                <h5 class="card-subtitle mb-3" align="center">{{ $Anuncio->Tipo }}</h5>
                                 <h4 class="card-title text-dark" align="center">{{ $Anuncio->Titulo }}</h4>
                                 @if($Anuncio->Valor != null)
                                     <h3 class="card-text text-dark m-5" align="center">R$ {{ $Anuncio->Valor }} </h3>
