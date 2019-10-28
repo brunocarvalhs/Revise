@@ -34,18 +34,18 @@
                             </div>
                             <div class="col-6 mt-5">
                                 <h4 class="card-text text-dark" align="center">{{ $Anuncio->Titulo }}</h4>
-                                <h5 class="card-text text-dark m-5" align="center">R$ {{ $Anuncio->Valor }} </h5>
+                                <h3 class="card-text text-dark m-5" align="center">R$ {{ $Anuncio->Valor }} </h3>
                             </div>
                         </div>
                         <div class="row mt-5">
                             <div class="col-12">
-                                <h4>Descrição</h4>
+                                <h5>Descrição</h5>
                                 <p class="card-text text-dark mt-5" align="justify">{{ $Anuncio->Descricao }}</p>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-5">
                             <div class="col-12">
-                                <h4>Endereço</h4>
+                                <h5>Endereço</h5>
 
                             </div>
                         </div>
