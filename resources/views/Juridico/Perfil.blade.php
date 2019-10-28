@@ -67,7 +67,11 @@
                             <br>
                             <div class="form-group inputCadastro">
                                 <label for="inputAddress" class="text-warning">Endereço</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="" readonly value="{{ $Dados->Endereco }} - {{ $Dados->Bairro }}">
+                                <input type="text" class="form-control" id="inputAddress" placeholder="" readonly value="{{ $Dados->Endereco }}">
+                            </div>
+                            <div class="form-group inputCadastro">
+                                    <label for="inputAddress" class="text-warning">Bairro</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="" readonly value="{{ $Dados->Bairro }}">
                             </div>
                             <div class="form-row inputCadastro">
                                 <div class="form-group col-md-4">
