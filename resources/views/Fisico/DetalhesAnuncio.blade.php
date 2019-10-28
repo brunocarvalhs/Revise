@@ -34,7 +34,7 @@
                                 <h5 class="card-text text-dark m-5" align="center"> Preço : R$ {{ $Anuncio->Valor }} </h5>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row mt-5">
                             <div class="col-12">
                                 <h4>Descrição</h4>
                                 <p class="card-text text-dark mt-5" align="justify">{{ $Anuncio->Descricao }}</p>
