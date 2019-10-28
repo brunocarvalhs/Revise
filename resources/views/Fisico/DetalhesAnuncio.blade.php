@@ -24,10 +24,10 @@
                                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="d-block w-100" src="https://http2.mlstatic.com/pai-ausente-filho-carente-D_NQ_NP_770632-MLB31546662007_072019-F.jpg" height="500" width="500" alt="Primeiro Slide">
+                                            <img class="d-block w-100" src="{{ asset('img/ausente.jpg') }}" height="500" width="500" alt="Primeiro Slide">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="d-block w-100" src="https://http2.mlstatic.com/pai-ausente-filho-carente-D_NQ_NP_770632-MLB31546662007_072019-F.jpg" height="500" width="500" alt="Primeiro Slide">
+                                            <img class="d-block w-100" src="{{ asset('img/ausente.jpg') }}" height="500" width="500" alt="Primeiro Slide">
                                         </div>
                                     </div>
                                 </div>
