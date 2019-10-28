@@ -14,7 +14,7 @@ class controllerCheck extends Controller
 
     public function VerificarVeiculo(Request $request,modelCheck $modelCheck, controllerUsuario $controllerUsuario){
         $modelFisico = session()->get('Fisico');
-        $Notificacao = $modelCheck->listaNotificacoes($request->Placa);
+        $Notificacao = $modelCheck->listaNotificacao($request->Placa);
         $Notificacao = json_decode($Notificacao);
         if($Notificacao == [])
             $Notificacao = false;
