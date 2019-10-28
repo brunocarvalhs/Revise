@@ -12,7 +12,7 @@
 
 @section('sistema_fisico')
     @foreach ($Anuncio as $Anuncio)
-    <div class="row">
+    <div class="row p-1">
     <!--Anúncios Postados-->
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="row">
