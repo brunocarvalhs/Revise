@@ -38,8 +38,8 @@
                                 @if($Anuncio->Valor != null)
                                     <h3 class="card-text text-dark m-5" align="center">R$ {{ $Anuncio->Valor }} </h3>
                                 @endif
-                                <h5>Descrição</h5>
-                                <p class="card-text text-dark mt-5" align="justify">{{ $Anuncio->Descricao }}</p>
+                                <h5 class="card-text mt-5">Descrição</h5>
+                                <p class="card-text text-dark mt-3" align="justify">{{ $Anuncio->Descricao }}</p>
                             </div>
                         </div>
                         <div class="row mt-5">
