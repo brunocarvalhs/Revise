@@ -35,7 +35,7 @@
                                     <label for="campoNome" class="text-warning">Nome Fantasia</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome" value="{{ $Dados->nm_nome_fantasia }}" readonly>
+                                    <input type="text" class="form-control" id="campoNome" value="{{ $Dados->Fantasia }}" readonly>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                                     <label for="campoNome" class="text-warning">Razão Social</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome" value="{{ $Dados->nm_razao_social }}" readonly>
+                                    <input type="text" class="form-control" id="campoNome" value="{{ $Dados->Razao }}" readonly>
                                 </div>
                             </div>
                         </div>
