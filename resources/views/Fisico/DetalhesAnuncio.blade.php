@@ -20,8 +20,9 @@
                 <div class="card bg-white h-100">
                     <div class="card-body ">
                         <h4 class="card-text text-dark" align="center">{{ $Anuncio->Titulo }}</h4>
-                        <p class="card-text text-dark" align="center">{{ $Anuncio->Descricao }}</p>
-                        <h5 class="card-text text-dark" align="center"> Preço : R$ {{ $Anuncio->Valor }} </p>
+
+                        <p class="card-text text-dark mt-5" align="justify">{{ $Anuncio->Descricao }}</p>
+                        <h5 class="card-text text-dark m-5" align="center"> Preço : R$ {{ $Anuncio->Valor }} </p>
                     </div>
                 </div>
             </div>
