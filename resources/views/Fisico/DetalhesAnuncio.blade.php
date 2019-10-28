@@ -20,7 +20,7 @@
                 <div class="card bg-white h-100">
                     <div class="card-body ">
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6 mt-5">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-5">
                                 <h4 class="card-text text-dark" align="center">{{ $Anuncio->Titulo }}</h4>
                                 <h3 class="card-text text-dark m-5" align="center">R$ {{ $Anuncio->Valor }} </h3>
                             </div>
