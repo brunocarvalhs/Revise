@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-6 mt-5">
                                 <h4 class="card-text text-dark" align="center">{{ $Anuncio->Titulo }}</h4>
                                 <h5 class="card-text text-dark m-5" align="center">R$ {{ $Anuncio->Valor }} </h5>
                             </div>
