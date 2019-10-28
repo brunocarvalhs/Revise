@@ -24,14 +24,17 @@
                                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="d-block w-100" src="https://www.fbmforjaria.com.br/imagens/informacoes/fornecedores-pecas-agricolas-02.jpg" alt="Primeiro Slide">
+                                            <img class="d-block w-100" src="https://http2.mlstatic.com/pai-ausente-filho-carente-D_NQ_NP_770632-MLB31546662007_072019-F.jpg" height="500" width="500" alt="Primeiro Slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="https://http2.mlstatic.com/pai-ausente-filho-carente-D_NQ_NP_770632-MLB31546662007_072019-F.jpg" height="500" width="500" alt="Primeiro Slide">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <h4 class="card-text text-dark" align="center">{{ $Anuncio->Titulo }}</h4>
-                                <h5 class="card-text text-dark m-5" align="center"> Preço : R$ {{ $Anuncio->Valor }} </h5>
+                                <h5 class="card-text text-dark m-5" align="center">R$ {{ $Anuncio->Valor }} </h5>
                             </div>
                         </div>
                         <div class="row mt-5">
