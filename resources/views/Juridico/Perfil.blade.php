@@ -76,7 +76,7 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEstado" class="text-warning">Estado</label>
-                                    <input type="text" class="form-control" id="inputCity" readonly value="{{ $Dados->Cidade }}">
+                                    <input type="text" class="form-control" id="inputCity" readonly value="{{ $Dados->Estado }}">
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
