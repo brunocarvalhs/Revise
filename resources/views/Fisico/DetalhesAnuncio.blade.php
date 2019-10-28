@@ -34,7 +34,9 @@
                             </div>
                             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mt-5">
                                 <h4 class="card-text text-dark" align="center">{{ $Anuncio->Titulo }}</h4>
-                                <h3 class="card-text text-dark m-5" align="center">R$ {{ $Anuncio->Valor }} </h3>
+                                @if($Anuncio->valor != null)
+                                    <h3 class="card-text text-dark m-5" align="center">R$ {{ $Anuncio->Valor }} </h3>
+                                @endif
                             </div>
                         </div>
                         <div class="row mt-5">
