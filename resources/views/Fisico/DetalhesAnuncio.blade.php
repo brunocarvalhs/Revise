@@ -11,7 +11,8 @@
 @endsection
 
 @section('sistema_fisico')
-<div class="row">
+    @foreach ($Anuncio as $Anuncio)
+    <div class="row">
     <!--Anúncios Postados-->
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="row">
@@ -53,6 +54,7 @@
             </div>
         </div>
     </div>
+    @endforeach
 @endsection
 
 @section('script')
