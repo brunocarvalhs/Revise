@@ -25,7 +25,7 @@ VALUES
 INSERT INTO tb_marca
     (cd_marca,nm_marca)
 VALUES
-    (1, 'CHEVROLET');
+    (1, 'CHEVROLET/GM');
 
 INSERT INTO tb_tipo_modelo
     (cd_tipo_modelo, nm_tipo_modelo)
