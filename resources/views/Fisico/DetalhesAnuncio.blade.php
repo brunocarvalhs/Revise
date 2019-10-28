@@ -46,7 +46,7 @@
                         <div class="row mt-5">
                             <div class="col-12">
                                 <h5>Endereço</h5>
-                                <iframe id="ifr-google" src="https://maps.google.com/maps?width=100%&amp;height=500&amp;hl=en&amp;q={{ urlencode($Anuncio->Numero.''.$Anuncio->Endereco.''.$Anuncio->Bairro.''.$Anuncio->Cidade.''.$Anuncio->Estado) }}&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="500" frameborder="0"></iframe>
+                                <iframe id="ifr-google" src="https://maps.google.com/maps?width=100%&amp;height=500&amp;hl=en&amp;q={{ urlencode($Anuncio->Numero.''.$Anuncio->Endereco.''.$Anuncio->Bairro.''.$Anuncio->Cidade.''.$Anuncio->Estado) }}&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="500" frameborder="0"></iframe>
                             </div>
                         </div>
                     </div>
