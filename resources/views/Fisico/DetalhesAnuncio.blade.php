@@ -46,7 +46,7 @@
                         <div class="row mt-5">
                             <div class="col-12">
                                 <h5>Endereço</h5>
-                                <iframe id="ifr-google" src="https://maps.google.com/maps?width=100%&amp;height=500&amp;hl=en&amp;q=S%C3%A3o%20Vicente%2C%20S%C3%A3o%20Paulo+(av.%20emerick)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="500" frameborder="0"></iframe>
+                                <iframe id="ifr-google" src="https://maps.google.com/maps?width=100%&amp;height=500&amp;hl=en&amp;q={{ urlencode('São Vicente') }}&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="500" frameborder="0"></iframe>
                             </div>
                         </div>
                     </div>
