@@ -49,8 +49,8 @@
                         <td>{{ $Anuncios->Validade }}</td>
                         <td>{{ $Anuncios->Tipo }}</td>
                         <td class="actions">
-                            <button class="btn btn-success">Visualizar</button>
-                            <button class="btn btn-warning">Editar</button>
+                            <!--<button class="btn btn-success">Visualizar</button>
+                            <button class="btn btn-warning">Editar</button>-->
                             <button type="submit" class="btn btn-danger">Excluir</button>
                             @method('delete')
                             @csrf
