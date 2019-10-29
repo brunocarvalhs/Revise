@@ -16,7 +16,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
     @yield('style')
     <script src="/vendor/components/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
     <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
@@ -190,4 +189,5 @@
         </div>
     </div>
 </body>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 </html>
