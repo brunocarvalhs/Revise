@@ -19,7 +19,7 @@
     <!--Inicio dos Forms-->
     <div class="backgroundBlackLight">
         <!--Form dados da empresa-->
-        <form id="CadastroJuridico" action="{{ url('/CadastroJuridico') }}" method="POST" onSubmit="return ValidarCadastroJuridico(this)" name="CadastroJuridico">
+        <form id="CadastroJuridico" action="{{ url('/CadastroJuridico') }}" method="POST" onsubmit="return ValidarCadastroJuridico();" name="CadastroJuridico">
             @csrf
             <div class="row">
                 <div class="col-12">
@@ -57,7 +57,7 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="disabledTextInput">CEP</label>
-                                                <input type="text" id="txtCEP" maxlength="8" name="txtCEP" class="form-control" data-mask="00000-000" placeholder="">
+                                                <input type="text" id="txtCEP" maxlength="8" name="txtCEP" class="form-control" data-mask="00000-000" placeholder="XXXXX-XXX">
                                             </div>
                                         </div>
                                     </div>
@@ -100,7 +100,7 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                         <!-- E-mail -->
                         <div class="form-group inputCadastro">
                             <label for="exampleFormControlInput1">Endereço de email</label>
-                            <input type="email" class="form-control" id="campoEmail" name="campoEmail" required="" placeholder="nome@exemplo.com">
+                            <input type="email" class="form-control" id="campoEmail" name="campoEmail" placeholder="nome@exemplo.com">
                         </div>
                         <div class="form-group inputCadastro">
                             <div class="form-row">

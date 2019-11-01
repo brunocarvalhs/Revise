@@ -1,5 +1,3 @@
-$("#CadastroFisico").validate();
-
 $(document).ready(function () {
 
     $("#razaoSocial").change(function () {
@@ -55,21 +53,10 @@ $(document).ready(function () {
 function ValidarCadastroJuridico() {
 
     var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    var date = new Date();
     var logErro = 0;
-    var Data = document.getElementById("txtNascimento").value;
-    var ano = Data.split("-");
-    var ano4 = date.getFullYear();
-    var idade = ano4 - ano[0];
-
 
     if (document.CadastroJuridico.razaoSocial.value == '') {
         alert('O campo Razão Social completo está vazio.');
-        document.getElementById("razaoSocial").setAttribute('class', "form-control is-invalid");
-        logErro = 1;
-    }
-    if (document.CadastroJuridico.razaoSocial.value.length > 125) {
-        alert('Sua Razão Social não pode ter mais de 125 caracteres.');
         document.getElementById("razaoSocial").setAttribute('class', "form-control is-invalid");
         logErro = 1;
     }
@@ -79,22 +66,21 @@ function ValidarCadastroJuridico() {
         document.getElementById("nomeFantasia").setAttribute('class', "form-control is-invalid");
         logErro = 1;
     }
-    if (document.CadastroJuridico.nomeFantasia.value.length > 125) {
-        alert('Sua Nome Fantasia não pode ter mais de 125 caracteres.');
-        document.getElementById("nomeFantasia").setAttribute('class', "form-control is-invalid");
-        logErro = 1;
-    }
+
 
     if (document.CadastroJuridico.txtCEP.value == '') {
         alert('O campo CEP está vazio.');
         document.getElementById("txtCEP").setAttribute('class', "form-control is-invalid");
         logErro = 1;
     }
-    if (document.CadastroJuridico.txtCEP.value.length > 9) {
-        alert('Seu CEP não pode ter mais de 9 caracteres.');
-        document.getElementById("txtCEP").setAttribute('class', "form-control is-invalid");
-        logErro = 1;
+    else{
+        if (document.CadastroJuridico.txtCEP.value.length != 9) {
+            alert('Seu CEP não pode ter mais de 9 caracteres.');
+            document.getElementById("txtCEP").setAttribute('class', "form-control is-invalid");
+            logErro = 1;
+        }
     }
+
 
     if (document.CadastroJuridico.txtEstado.value == '') {
         alert('O campo Estado está vazio, procure pelo seu CEP.');
@@ -126,28 +112,22 @@ function ValidarCadastroJuridico() {
         logErro = 1;
     }
 
-    if(document.CadastroFisico.campoEmail.value == '')
-    {
-        alert('O campo e-mail está vazio.');
+    if (document.CadastroJuridico.campoEmail.value == '') {
+        alert('O campo E-mail está vazio.');
         document.getElementById("campoEmail").setAttribute('class', "form-control is-invalid");
         logErro = 1;
     }
-    if(document.CadastroFisico.campoEmail.value.length > 60)
-    {
-        alert('Seu email não pode ter mais de 60 caracteres.');
-        document.getElementById("campoEmail").setAttribute('class', "form-control is-invalid");
-        logErro = 1;
-    }
-    if (!filter.test(document.CadastroFisico.campoEmail.value)) {
-		alert('E-mail digitado inválido.');
-		logErro = 1;
-	}
 
-    if (document.CadastroJuridico.campoSenha.value != document.CadastroJuridico.campoConfirmaSenha.value) {
-        alert('As senhas não estão iguais.');
-        document.getElementById("campoSenha").setAttribute('class', "form-control is-invalid");
-        document.getElementById("campoConfirmaSenha").setAttribute('class', "form-control is-invalid");
+    if (document.CadastroJuridico.txtcnpj.value == '') {
+        alert('O campo CNPJ está vazio.');
+        document.getElementById("txtcnpj").setAttribute('class', "form-control is-invalid");
         logErro = 1;
+    }else{
+        if (document.CadastroJuridico.txtcnpj.value.length === 14) {
+            alert('O campo CNPJ deve-se ter 14 caracteres.');
+            document.getElementById("txtcnpj").setAttribute('class', "form-control is-invalid");
+            logErro = 1;
+        }
     }
 
     if (document.CadastroJuridico.campoSenha.value == '') {
@@ -161,6 +141,7 @@ function ValidarCadastroJuridico() {
         document.getElementById("campoSenha").setAttribute('class', "form-control is-invalid");
         logErro = 1;
     }
+
     if (document.CadastroJuridico.campoConfirmaSenha.value == '') {
         alert('O campo comfirma senha está vazio.');
         document.getElementById("campoConfirmaSenha").setAttribute('class', "form-control is-invalid");
