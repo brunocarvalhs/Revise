@@ -113,11 +113,6 @@ function ValidarCadastroFisico() {
         document.getElementById("txtcsenha").setAttribute('class', "form-control is-invalid");
         logErro = 1;
     }
-    if (document.CadastroFisico.txtplaca.value == '') {
-        alert('O campo placa está vazio.');
-        document.getElementById("txtplaca").setAttribute('class', "form-control is-invalid");
-        logErro = 1;
-    }
     if (document.CadastroFisico.txtNascimento.value == '') {
         alert('O campo data de nascimento está vazio.');
         document.getElementById("txtNascimento").setAttribute('class', "form-control is-invalid");
@@ -134,33 +129,17 @@ function ValidarCadastroFisico() {
             logErro = 1;
         }
     }
-    if (document.CadastroFisico.txtplaca.value.length > 8) {
-        alert('Sua placa não pode ter mais de 8 caracteres.');
-        document.getElementById("txtplaca").setAttribute('class', "form-control is-invalid");
-        logErro = 1;
-    }
-    if (document.CadastroFisico.txtMarca.value == '') {
-        alert('Nenhum veículo carregado.');
-        logErro = 1;
-    }
     if (document.CadastroFisico.txtplano.value == 0) {
         document.getElementById("txtplano").setAttribute('class', "form-control is-invalid");
         alert('Selecione um plano.');
         logErro = 1;
     }
-    if (document.CadastroFisico.txtMarca.value != '') {
-        var string = document.getElementById("txtMarca").value;
-        var retorno = string.split("/");
-        if (retorno[0] != 'CHEVROLET' && retorno[0] != 'CHEV') {
-            alert('Marca de carro não suportado.');
-            logErro = 1;
-        }
-    }
+
     if (logErro != 0) {
         logErro = 0;
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     }
 
 }

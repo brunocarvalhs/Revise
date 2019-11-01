@@ -18,7 +18,7 @@
     <!--Inicio dos Forms-->
     <div class="backgroundBlackLight">
         <!--Form dados pessoais-->
-        <form name="CadastroFisico" id="CadastroFisico" method="POST" action="{{ url('/CadastroFisico') }}" onSubmit="return ValidarCadastroFisico(this)">
+        <form name="CadastroFisico" id="CadastroFisico" method="POST" action="{{ url('/CadastroFisico') }}" onSubmit="return ValidarCadastroFisico();">
             @csrf
             <div class="row">
                 <div class="col-12">
@@ -170,7 +170,6 @@
                         <div class="card-body">
                             <h5 class="card-title plano_nomes">Deluxe Edition</h5>
                             <p class="card-text">
-
                                 <ul>
                                     <li class="planos_padding">R$ 99,90 p/ mês</li>
                                     <li class="planos_padding">Máximo de 50 carros cadastrados</li>
@@ -181,7 +180,6 @@
                                         fornecedores
                                     </li>
                                 </ul>
-
                             </p>
                         </div>
                     </div>
@@ -192,7 +190,7 @@
             <div class="row">
                 <div class="col-0 col-sm-0 col-md-0 col-lg-8 col-xl-8"></div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                    <button class="btn btn-warning btn-block" id="btnContinua" type="submit" onclick="">Finalizar</button>
+                    <button class="btn btn-warning btn-block" id="btnContinua">Cadastrar</button>
                 </div>
             </div>
     </div>
