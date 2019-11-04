@@ -36,16 +36,16 @@
                     </p>
 </section>
  <!--Sobre os integrantes-->
-    
+
  <div class="container-fluid">
-        
+
         <div class="row space">
                 <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
                     <div class="card card_align  card_hover" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/fe.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{asset('img/integrantes/fe.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
                         <div class="card-body badgeDarkColor rounded card_hover">
                                 <p class="card-text text-light h5 descricao ">Fernanda Pereira Santos da Silva</p>
@@ -58,14 +58,14 @@
                         </p>
                     </div>
                 </div>
-            </div>   
+            </div>
         <div class="row space">
                 <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
                     <div class="card card_align  card_hover" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/bruno.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{asset('img/integrantes/bruno.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
                         <div class="card-body badgeDarkColor rounded card_hover">
                                 <p class="card-text text-light h5 descricao">Bruno Silva Carvalho</p>
@@ -82,10 +82,10 @@
         <div class="row space">
                 <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
                     <div class="card card_align  card_hover" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/lucas.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{asset('img/integrantes/lucas.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
                         <div class="card-body badgeDarkColor rounded card_hover">
                                 <p class="card-text text-light h5 descricao ">Lucas Juan Souza de Oliveira Miranda Moraes</p>
@@ -102,7 +102,7 @@
         <div class="row space">
             <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
                 <div class="card card_align  card_hover" style="width: 12rem;">
-                    <img src="./Views/img/integrantes/luiz.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                    <img src="{{asset('img/integrantes/luiz.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
                 </div>
             </div>
 
@@ -111,22 +111,22 @@
                     <p class="card-text text-light h5 descricao">Luiz Marcelo da Silva Garcia Filho</p>
                     <p class="card-text">
                         <ul>
-                            <li class="text-light">Designer</li>                      
+                            <li class="text-light">Designer</li>
                             <li class="text-light">Front-end</li>
                         </ul>
                     </p>
                 </div>
             </div>
         </div>
-    
+
 
         <div class="row space">
                 <div class="col-12 col-sm-4 col-md-3 col-lg-3 col-xl-2">
                     <div class="card card_align  card_hover" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/katry.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{asset('img/integrantes/katry.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-sm-6 col-md-9 col-lg-9 col-xl-9">
                         <div class="card-body badgeDarkColor rounded card_hover">
                         <p class="card-text text-light h5 descricao">Katryel Menezes Vieira</p>
@@ -141,8 +141,8 @@
                 </div>
             </div>
             </div>
-      
-    
+
+
     </section>
     <br>
 <!-- Trabalhe conosco -->

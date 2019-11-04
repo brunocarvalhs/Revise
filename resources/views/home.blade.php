@@ -48,10 +48,11 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-0 col-sm-0 col-md-0 col-lg-6 col-xl-3"></div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover">
                     <div class="card tamanhoCard">
                         <div class="card-body">
-                            <h5 class="card-title plano_nomes">Basic</h5>
+                            <h5 class="card-title plano_nomes">Standart</h5>
                             <p class="card-text">
                                 <ul>
                                     <li class="planos_padding">Gratuito</li>
@@ -69,7 +70,7 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover">
                     <div class="card tamanhoCard">
                         <div class="card-body">
-                            <h5 class="card-title plano_nomes">Standart</h5>
+                            <h5 class="card-title plano_nomes">Gold</h5>
                             <p class="card-text">
                                 <ul>
                                     <li class="planos_padding">R$ 9,99 p/ mês</li>
@@ -80,46 +81,6 @@
                                     <div class="vazia"></div>
                                 </ul>
                             </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover">
-                    <div class="card tamanhoCard">
-                        <div class="card-body">
-                            <h5 class="card-title plano_nomes">Profission</h5>
-                            <p class="card-text">
-
-                                <ul>
-                                    <li class="planos_padding">R$ 39,99 p/ mês</li>
-                                    <li class="planos_padding">Máximo de 20 carros cadastrados</li>
-                                    <li class="planos_padding">Obd2 e App não inclusos (compra a parte opcional)</li>
-                                    <li class="planos_padding">Desconto na compra do Obd2 e App</li>
-                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
-                                    </li>
-                                </ul>
-
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover">
-                    <div class="card tamanhoCard">
-                        <div class="card-body">
-                            <h5 class="card-title plano_nomes">Deluxe Edition</h5>
-                            <p class="card-text">
-
-                                <ul>
-                                    <li class="planos_padding">R$ 99,90 p/ mês</li>
-                                    <li class="planos_padding">Máximo de 50 carros cadastrados</li>
-                                    <li class="planos_padding">Obd2 e App inclusos (1 unidade)</li>
-                                    <li class="planos_padding">Desconto na compra do Obd2 e App</li>
-                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
-                                    </li>
-                                </ul>
-
-                            </p>
-
                         </div>
                     </div>
                 </div>
