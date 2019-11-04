@@ -5,6 +5,23 @@
 @section('menu_home','active')
 
 @section('conteudo')
+   <!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Revise - Home</title>
+    <link rel="shortcut icon" href="./Views/img/logo.ico" />
+    <link rel="stylesheet" href="./Views/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./Views/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./Views/css/sistema.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
+    </head>
+
+<body>
     <!-- Apresentação -->
     <br><br>
     <section class="bg-dark espaco">
@@ -21,7 +38,7 @@
                                 COMPARE PREÇOS ANTES DA TROCA DOS COMPONENTES NA ABA DE ANÚNCIOS DOS FORNECEDORES</p>
                         </div>
                         <div class="col-0 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                            <img src="img/note_app.png" id="icone">
+                            <img src="./Views/img/note_app.png" id="icone">
                             <br><br>
                         </div>
                     </div>
@@ -30,61 +47,67 @@
         </div>
     </section>
     <!-- Sobre o revise -->
-    <section class="backgroundWhite" id="sobre">
+    <section class="backgroundWhite bg-light" id="sobre">
         <div class="container">
             <div class="row">
                 <div class="col-12"></div>
                 <video class=" w-100" height="450" alt="..." controls muted autoplay allowfullscreen>
-                    <source src="img/pitch_oficial.mp4" type="video/mp4">
+                    <source src="./Views/img/pitch_oficial.mp4" type="video/mp4">
             </div>
         </div>
     </section>
     <!-- Planos-->
-    <section class="backgroundYellow">
+    <section class="backgroundWhite">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloBranco">
+            <div class="row p-0">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-dark">
                     <h1>Planos</h1>
+                    <hr>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-0 col-sm-0 col-md-0 col-lg-6 col-xl-3"></div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover">
-                    <div class="card tamanhoCard">
-                        <div class="card-body">
-                            <h5 class="card-title plano_nomes">Standart</h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li class="planos_padding">Gratuito</li>
-                                    <li class="planos_padding">Máximo de 2 carros cadastrados</li>
-                                    <li class="planos_padding">Obd2 e App não inclusos (compra a parte opcional)</li>
-                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
-                                    </li>
-                                    <div class="vazia"></div>
-                                </ul>
-                            </p>
-
+            <div class="row ">
+                    <div class="col-0 col-sm-0 col-md-0 col-lg-2 col-xl-3"></div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 PlanoCard card_hover pt-5 pt-5 mr-xl-5 mr-lg-5">
+                        <div class="card tamanhoCard shadow-lg pt-2 mb-5">
+                            <div class="card-body">
+                                <h5 class="card-title plano_nomes">Standart</h5>
+                                <hr>
+                                <p class="card-text">
+                                    <ul>
+                                        <li class="planos_padding h6">Gratuito</li>
+                                        <li class="planos_padding h6">Máximo 1 carro cadastrado</li>
+                                        <li class="planos_padding h6">App sem suporte para Obd2</li>
+                                        <li class="planos_padding h6">Visualização dos anúncios postados pelos fornecedores
+                                        </li>
+                                      
+                                    </ul>
+                                </p>
+                                <div class="pt-4"></div>
+                                <button type="button" class="btn btn-warning w-100">Assine já</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 PlanoCard card_hover pt-5 ml-xl-4 ml-lg-4">
+                        <div class="card tamanhoCard shadow-lg pt-2 mb-5">
+                            <div class="card-body">
+                                <h5 class="card-title plano_nomes">Gold</h5>
+                                <hr>
+                                <p class="card-text">
+                                    <ul>
+                                        <li class="planos_padding h6">R$ 9,99 p/ mês</li>
+                                        <li class="planos_padding h6">Máximo 3 carros cadastrados</li>
+                                        <li class="planos_padding h6">App com suporte para Obd2</li>
+                                        <li class="planos_padding h6">Visualização dos anúncios postados pelos fornecedores
+                                        </li>
+                                       
+                                    </ul>
+                                </p>
+                                <div class="pt-4"></div>
+                                <button type="button" class="btn btn-warning w-100">Assine já</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover">
-                    <div class="card tamanhoCard">
-                        <div class="card-body">
-                            <h5 class="card-title plano_nomes">Gold</h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li class="planos_padding">R$ 9,99 p/ mês</li>
-                                    <li class="planos_padding">Máximo de 5 carros cadastrados</li>
-                                    <li class="planos_padding">Obd2 e App não inclusos (compra a parte opcional)</li>
-                                    <li class="planos_padding">Visualização dos anúncios postados pelos fornecedores
-                                    </li>
-                                    <div class="vazia"></div>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <!-- Aplicativo section -->
@@ -95,31 +118,26 @@
                     <div class="row">
                         <div class="Texto ">
                             <!-- Titulo do texto -->
-                            <header>
+                         
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloPreto">
                                     <h1 class="text-white">Aplicativo e OBD2</h1>
+                                    <hr class="bg-secondary">
                                 </div>
-                            </header>
-                            <!-- Texto -->
-                            <section>
-                                <p>
-
-                                </p>
-                            </section>
+                              
                             <!-- Rodapé -->
                             <footer>
                                 <div class="container">
                                     <div class="row DownloadApp center">
                                         <div
                                             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
-                                            <a href="{{ url('/Download/android') }}">
-                                                <img src="img/button_download_android.png" class="">
+                                            <a href="">
+                                                <img src="./Views/img/button_download_android.png" class="">
                                             </a>
                                         </div>
                                         <div
                                             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
-                                            <a href="{{ url('/Download/ios') }}">
-                                                <img src="img/button_download_ios.png" class="">
+                                            <a href="">
+                                                <img src="./Views/img/button_download_ios.png" class="">
                                             </a>
                                         </div>
                                     </div>
@@ -129,30 +147,30 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 ">
-                    <img src="img/AppRevise.png" class="AppSmart wow bounceInRight center"
+                    <img src="./Views/img/AppRevise.png" class="AppSmart wow bounceInRight center" 
                      data-wow-duration="2s">
                 </div>
             </div>
         </div>
     </section>
     <!--Obd2 section-->
-    <section class="backgroundBlack bg-dark">
+    <section class="bg-dark">
         <div class="container">
             <!--Passo a passo-->
             <div class="col-12">
-                <div class="card text-center h-100 card_hover">
+                <div class="card text-center h-100 shadow-lg pt-2 mb-5">
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                <img src="img/obd2.jpg" class=" h-75 w-75">
+                                <img src="./Views/img/obd2.jpg" class=" h-75 w-75">
                                 <h5 class="card-title text-center">Instale</h5>
                             </div>
                             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                <img src="img/bluetooth.png" class="CardIcon h-75 w-25">
+                                <img src="./Views/img/bluetooth.png" class="CardIcon h-75 w-25">
                                 <h5 class="card-title text-center">Conecte</h5>
                             </div>
                             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                <img src="img/right.png" class="CardIcon h-75 w-50">
+                                <img src="./Views/img/right.png" class="CardIcon h-75 w-50">
                                 <h5 class="card-title text-center">Tudo pronto!</h5>
                             </div>
                         </div>
@@ -167,16 +185,16 @@
     <section class="backgroundWhite">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
+                <div class="col-12 tituloPreto">
                     <h1>Time de Desenvolvedores</h1>
-
+                    <hr>
                 </div>
             </div>
             <div class="row space">
                 <div class="col-2 col-sm-0 col-md-0 col-lg-0 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-3 col-xl-1">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="img/integrantes/fe.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="./Views/img/integrantes/fe.jpeg" class="card-img-top rounded-circle foto" alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Analista</p>
                             <p class="card-text text-secondary descricao">Fernanda Pereira</p>
@@ -186,7 +204,7 @@
                 <div class="col-2 col-sm-0 col-md-0 col-lg-0 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-2 col-xl-1">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="img/integrantes/lucas.jpeg" class="card-img-top rounded-circle foto"
+                        <img src="./Views/img/integrantes/lucas.jpeg" class="card-img-top rounded-circle foto"
                             alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Cientista de Dados</p>
@@ -197,7 +215,7 @@
                 <div class="col-2 col-sm-0 col-md-3 col-lg-0 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-2 col-xl-1">
                     <div class="card  card_align" style="width: 12rem;">
-                        <img src="img/integrantes/bruno.jpeg" class="card-img-top rounded-circle foto"
+                        <img src="./Views/img/integrantes/bruno.jpeg" class="card-img-top rounded-circle foto"
                             alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Front-end</p>
@@ -208,7 +226,7 @@
                 <div class="col-2 col-sm-2 col-md-0 col-lg-2 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-3 col-xl-1">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="img/integrantes/luiz.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="./Views/img/integrantes/luiz.jpeg" class="card-img-top rounded-circle foto" alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Designer</p>
                             <p class="card-text text-secondary descricao">Luiz Marcelo </p>
@@ -218,7 +236,7 @@
                 <div class="col-2 col-sm-2 col-md-0 col-lg-0 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-3 col-xl-1">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="img/integrantes/katry.jpeg" class="card-img-top rounded-circle foto"
+                        <img src="./Views/img/integrantes/katry.jpeg" class="card-img-top rounded-circle foto"
                             alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Back-end</p>
@@ -229,6 +247,7 @@
             </div>
         </div>
     </section>
+
 @endsection
 @section('script')
 
