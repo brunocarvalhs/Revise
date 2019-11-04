@@ -211,6 +211,9 @@
                     {{ session()->get('Cadastro')->Mensagem }}
                 @endslot
             @endcomponent
+            <script>
+                window.location.href = '/public/SignIn';
+            </script>
         @else
             @component('componentes.alert')
                 @slot('titulo','ERRO')
