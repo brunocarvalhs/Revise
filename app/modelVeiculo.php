@@ -236,8 +236,8 @@ class modelVeiculo extends Model
             $marca = DB::select("SELECT cd_marca as ID from tb_marca where nm_marca like CONCAT('%',?,'%')", [$marca]);
             $marca = ($marca[0]->ID);
 
-            $idVeiculo = DB::select("SELECT max(cd_veiculo) + 1 as ID FROM tb_veiculo");
-            $this->setId($idVeiculo[0]->ID);
+            $idVeiculo = DB::table("tb_veiculo")->max('cd_veiculo') + 1;
+            $this->setId($idVeiculo);
             $idVeiculo = $this->getId();
 
             //return dd($idVeiculo);
@@ -250,9 +250,8 @@ class modelVeiculo extends Model
             } else {
 
 
-                $idmodelo = DB::select("SELECT max(cd_modelo) + 1 as ID FROM tb_modelo");
 
-                $idmodelo = $idmodelo[0]->ID;
+                $idmodelo = DB::table("tb_modelo")->max('cd_modelo') + 1;
 
                 DB::table('tb_modelo')->insert([
                     'cd_modelo' =>  $idmodelo,
