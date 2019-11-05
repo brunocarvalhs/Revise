@@ -1,5 +1,5 @@
-@extends('errors::minimal')
+@extends('errors::illustrated-layout')
 
 @section('title', __('Not Found'))
-@section('code', '<img src="{{ asset('img/erros/404.png') }}">')
-@section('message', __('Pagina não encontrada'))
+@section('code', '404')
+@section('message', __('Not Found'))
