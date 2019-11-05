@@ -16,8 +16,8 @@
         height: 800px;
     }
 </style>
-<div class="padding container">
-    <div class="row box">
+<div class="padding">
+    <div class="row">
         <div class="col">
             <img src="{{ asset('img/erros/404.png') }}" width="400" height="400">
         </div>
