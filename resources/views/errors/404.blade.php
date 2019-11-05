@@ -5,7 +5,7 @@
 <div class="padding">
     <div class="row">
         <div class="col">
-            <img src="{{ asset('img/erros/404.png') }}" width="400" height="400">
+            <img src="{{ asset('img/erros/404.png') }}" width="500" height="500">
         </div>
     </div>
     <div class="row">
