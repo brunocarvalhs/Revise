@@ -456,6 +456,20 @@
                     background-position: center;
                 }
             }
+
+            .container {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center
+            }
+            
+            .box {
+                width: 800px;
+                height: 800px;
+            }
         </style>
     </head>
     <body class="antialiased font-sans container">
