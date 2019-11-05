@@ -2,9 +2,13 @@
 
 @section('title', __('Not Found'))
 @section('code')
+<div class="padding">
     <div class="row justify-content-center">
-        <img src="{{ asset('img/erros/404.png') }}" width="300" height="300">
+        <div class="col">
+            <img src="{{ asset('img/erros/404.png') }}" width="400" height="400">
+        </div>
     </div>
+</div>
 @endsection
 @section('message')
 
