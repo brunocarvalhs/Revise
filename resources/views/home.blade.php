@@ -13,10 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Revise - Home</title>
-    <link rel="shortcut icon" href="./Views/img/logo.ico" />
-    <link rel="stylesheet" href="./Views/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="./Views/css/index.css">
-    <link rel="stylesheet" type="text/css" href="./Views/css/sistema.css">
+    <link rel="shortcut icon" href="{{asset('img/logo.ico')}}" />
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/sistema.css')}}">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
     </head>
@@ -38,7 +38,7 @@
                                 COMPARE PREÇOS ANTES DA TROCA DOS COMPONENTES NA ABA DE ANÚNCIOS DOS FORNECEDORES</p>
                         </div>
                         <div class="col-0 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                            <img src="./Views/img/note_app.png" id="icone">
+                            <img src="{{asset('img/note_app.png')}}" id="icone">
                             <br><br>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
             <div class="row">
                 <div class="col-12"></div>
                 <video class=" w-100" height="450" alt="..." controls muted autoplay allowfullscreen>
-                    <source src="./Views/img/pitch_oficial.mp4" type="video/mp4">
+                    <source src="{{asset('img/pitch_oficial.mp4')}}" type="video/mp4">
             </div>
         </div>
     </section>
@@ -131,13 +131,13 @@
                                         <div
                                             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
                                             <a href="">
-                                                <img src="./Views/img/button_download_android.png" class="">
+                                                <img src="{{asset('img/button_download_android.png')}}" class="">
                                             </a>
                                         </div>
                                         <div
                                             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
                                             <a href="">
-                                                <img src="./Views/img/button_download_ios.png" class="">
+                                                <img src="{{asset('img/button_download_ios.png')}}" class="">
                                             </a>
                                         </div>
                                     </div>
@@ -147,7 +147,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 ">
-                    <img src="./Views/img/AppRevise.png" class="AppSmart wow bounceInRight center" 
+                    <img src="{{asset('img/AppRevise.png')}}" class="AppSmart wow bounceInRight center" 
                      data-wow-duration="2s">
                 </div>
             </div>
@@ -162,15 +162,15 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                <img src="./Views/img/obd2.jpg" class=" h-75 w-75">
+                                <img src="{{asset('img/obd2.jpg')}}" class=" h-75 w-75">
                                 <h5 class="card-title text-center">Instale</h5>
                             </div>
                             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                <img src="./Views/img/bluetooth.png" class="CardIcon h-75 w-25">
+                                <img src="{{asset('img/bluetooth.png')}}" class="CardIcon h-75 w-25">
                                 <h5 class="card-title text-center">Conecte</h5>
                             </div>
                             <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                                <img src="./Views/img/right.png" class="CardIcon h-75 w-50">
+                                <img src="{{asset('img/right.png')}}" class="CardIcon h-75 w-50">
                                 <h5 class="card-title text-center">Tudo pronto!</h5>
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                 <div class="col-2 col-sm-0 col-md-0 col-lg-0 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-3 col-xl-1">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/fe.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{asset('img/integrantes/fe.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Analista</p>
                             <p class="card-text text-secondary descricao">Fernanda Pereira</p>
@@ -204,7 +204,7 @@
                 <div class="col-2 col-sm-0 col-md-0 col-lg-0 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-2 col-xl-1">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/lucas.jpeg" class="card-img-top rounded-circle foto"
+                        <img src="{{asset('img/integrantes/lucas.jpeg')}}" class="card-img-top rounded-circle foto"
                             alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Cientista de Dados</p>
@@ -215,7 +215,7 @@
                 <div class="col-2 col-sm-0 col-md-3 col-lg-0 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-2 col-xl-1">
                     <div class="card  card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/bruno.jpeg" class="card-img-top rounded-circle foto"
+                        <img src="{{asset('img/integrantes/bruno.jpeg')}}" class="card-img-top rounded-circle foto"
                             alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Front-end</p>
@@ -226,7 +226,7 @@
                 <div class="col-2 col-sm-2 col-md-0 col-lg-2 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-3 col-xl-1">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/luiz.jpeg" class="card-img-top rounded-circle foto" alt="...">
+                        <img src="{{asset('img/integrantes/luiz.jpeg')}}" class="card-img-top rounded-circle foto" alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Designer</p>
                             <p class="card-text text-secondary descricao">Luiz Marcelo </p>
@@ -236,7 +236,7 @@
                 <div class="col-2 col-sm-2 col-md-0 col-lg-0 col-xl-1"></div>
                 <div class="col-10 col-sm-10 col-md-2 col-lg-3 col-xl-1">
                     <div class="card card_align" style="width: 12rem;">
-                        <img src="./Views/img/integrantes/katry.jpeg" class="card-img-top rounded-circle foto"
+                        <img src="{{asset('img/integrantes/katry.jpeg')}}" class="card-img-top rounded-circle foto"
                             alt="...">
                         <div class="card-body">
                             <p class="card-text text-secondary h5 descricao">Back-end</p>
