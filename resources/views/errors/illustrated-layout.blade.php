@@ -16,7 +16,7 @@
         <style>
             html {
                 line-height: 1.15;
-                    -ms-text-size-adjust: 100%;
+                -ms-text-size-adjust: 100%;
                 -webkit-text-size-adjust: 100%;
             }
 
