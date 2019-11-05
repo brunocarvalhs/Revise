@@ -465,7 +465,7 @@
                 justify-content: center;
                 align-items: center
             }
-            
+
             .box {
                 width: 800px;
                 height: 800px;
@@ -473,8 +473,8 @@
         </style>
     </head>
     <body class="antialiased font-sans container">
-        <div class="md:flex min-h-screen box">
-            <div class="w-full md:w-1/2 bg-white flex items-center justify-center">
+        <div class="md:flex min-h-screen">
+            <div class="w-full md:w-1/2 bg-white flex items-center justify-center box">
                 <div class="max-w-sm m-8">
                     <div class="text-black text-5xl md:text-15xl font-black">
                         @yield('code', __('Oh no'))
