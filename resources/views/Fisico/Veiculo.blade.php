@@ -148,9 +148,11 @@
                             <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                 <button class="btn btn-lg btn-block btn-success">Checklist</button>
                             </div>
-                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                                <button class="btn btn-lg btn-block btn-danger">Delete</button>
-                            </div>
+                            <form action="">
+                                <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                    <button class="btn btn-lg btn-block btn-danger">Delete</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
