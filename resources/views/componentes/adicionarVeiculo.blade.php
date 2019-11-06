@@ -61,15 +61,17 @@
                                         name="txtEstado" placeholder="Estado">
                                 </div>
                             </div>
-                            <div class="form-group mt-1">
-                                <label for="disabledTextInput">RENAVAN</label>
-                                <input type="text" class="form-control" id="txtRenavan" name="txtRenavan"
-                                    placeholder="">
-                            </div>
-                            <div class="form-group m-1">
-                                <label for="disabledTextInput">Quilometragem</label>
-                                <input type="text" class="form-control" id="txtQuilometragem" name="txtQuilometragem" data-mask="000000000"
-                                    placeholder="">
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="disabledTextInput">RENAVAN</label>
+                                    <input type="text" class="form-control" id="txtRenavan" name="txtRenavan"
+                                        placeholder="">
+                                </div>
+                                <div class="col">
+                                    <label for="disabledTextInput">Quilometragem</label>
+                                    <input type="text" class="form-control" id="txtQuilometragem" name="txtQuilometragem" data-mask="000000000"
+                                        placeholder="">
+                                </div>
                             </div>
                         </div>
                     </div>
