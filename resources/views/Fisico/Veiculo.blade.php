@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <div class="form-row row">
-                    <div class="col-6">
+                    <div class="col-6 p-1">
                         <div class="row">
                             <div class="form-group col">
                                 <button class="btn btn-lg btn-block btn-success">Checklist</button>
