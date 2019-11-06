@@ -124,9 +124,9 @@
                         <input type="text"  class="form-control" id="" placeholder="Ano" data-mask='0000' disabled>
                     </div>
                     <div class="form-group">
-                        <label for="inputAddress2"></label>
+                        <label for="inputAddress2">RENAVAN</label>
                         <input type="text" class="form-control" id=""
-                            placeholder="">
+                            placeholder="" disabled>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -139,9 +139,9 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Entrar</button>
+                    <button class="btn btn-primary">Checklist</button>
+                    <button class="btn btn-primary">Delete</button>
                 </form>
-                <button class="btn btn-primary">Checklist</button>
-                <button class="btn btn-primary">Delete</button>
             </div>
         </div>
     </div>
