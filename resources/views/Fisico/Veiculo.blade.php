@@ -139,7 +139,7 @@
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputEstado">Estado</label>
-                        <input type="text" class="form-control" placeholder="Estado" id="">
+                        <input type="text" class="form-control" placeholder="Estado" id="" disabled>
                     </div>
                 </div>
                 <button class="btn btn-success  col-md-4 mb-1">Checklist</button>

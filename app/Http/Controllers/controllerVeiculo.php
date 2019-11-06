@@ -15,8 +15,8 @@ class controllerVeiculo extends Controller
 
     }
 
-    public function DetalhesVeiculo(){
-
+    public function DetalhesVeiculo(Request $request,modelVeiculo $modelVeiculo, $usuario){
+        return view('Fisico/veiculo');
     }
 
     public function AdicionarVeiculo(Request $request,modelVeiculo $modelVeiculo, $usuario){
