@@ -142,14 +142,17 @@
                         <input type="text" class="form-control" placeholder="Estado" id="" disabled>
                     </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col">
-                        <button class="btn btn-lg btn-block btn-success">Checklist</button>
+                <div class="form-row row">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="form-group col">
+                                <button class="btn btn-lg btn-block btn-success">Checklist</button>
+                            </div>
+                            <div class="form-group col">
+                                <button class="btn btn-lg btn-block btn-danger">Delete</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group col">
-                        <button class="btn btn-lg btn-block btn-danger">Delete</button>
-                    </div>
-                    <div class="col-6"></div>
                 </div>
             </div>
         </div>
