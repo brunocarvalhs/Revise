@@ -144,12 +144,12 @@
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <button class="btn btn-success  col-md-4 mb-1">Checklist</button>
+                        <button class="btn btn-lg btn-block btn-success">Checklist</button>
                     </div>
                     <div class="form-group col">
-                        <button class="btn btn-danger  col-md-4 mb-1">Delete</button>
+                        <button class="btn btn-lg btn-block btn-danger">Delete</button>
                     </div>
-                    <div class="col-8"></div>
+                    <div class="col-6"></div>
                 </div>
             </div>
         </div>
