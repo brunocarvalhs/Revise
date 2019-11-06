@@ -145,10 +145,10 @@
                 <div class="form-row row">
                     <div class="col-6 p-3">
                         <div class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                 <button class="btn btn-lg btn-block btn-success">Checklist</button>
                             </div>
-                            <div class="form-group col">
+                            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                 <button class="btn btn-lg btn-block btn-danger">Delete</button>
                             </div>
                         </div>
