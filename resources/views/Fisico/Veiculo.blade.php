@@ -142,8 +142,8 @@
                         <input type="text" class="form-control" placeholder="Estado" id="">
                     </div>
                 </div>
-                <button class="btn btn-primary">Checklist</button>
-                <button class="btn btn-primary">Delete</button>
+                <button class="btn btn-primary  col-md-4 mb-1">Checklist</button>
+                <button class="btn btn-primary  col-md-4 mb-1">Delete</button>
             </div>
         </div>
     </div>
