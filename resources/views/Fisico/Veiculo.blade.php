@@ -108,40 +108,42 @@
         </div>
         <div class="row">
             <div class="col-12 card shadow p-3 bg-white rounded">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Placa</label>
-                            <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Modelo / Marca</label>
-                            <input type="text" class="form-control" placeholder="Modelo / Marca" disabled>
-                        </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Placa</label>
+                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Modelo / Marca</label>
+                        <input type="text" class="form-control" placeholder="Modelo / Marca" disabled>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
                         <label for="inputAddress">Ano</label>
-                        <input type="text"  class="form-control" id="" placeholder="Ano" data-mask='0000' disabled>
+                        <input type="text" class="form-control" id="" placeholder="Ano" data-mask='0000' disabled>
                     </div>
-                    <div class="form-group">
-                        <label for="inputAddress2">RENAVAN</label>
-                        <input type="text" class="form-control" id=""
-                            placeholder="" disabled>
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress">Cor</label>
+                        <input type="text" class="form-control" id="" placeholder="Cor" data-mask='0000' disabled>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">Cidade</label>
-                            <input type="text" class="form-control" id="" disabled>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputEstado">Estado</label>
-                            <input type="text" class="form-control" id="inputCEP">
-                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">RENAVAN</label>
+                    <input type="text" class="form-control" id="" placeholder="RENAVAN" disabled>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label for="inputCity">Cidade</label>
+                        <input type="text" class="form-control" placeholder="Cidade" id="" disabled>
                     </div>
-                    <button type="submit" class="btn btn-primary">Entrar</button>
-                    <button class="btn btn-primary">Checklist</button>
-                    <button class="btn btn-primary">Delete</button>
-                </form>
+                    <div class="form-group col-md-4">
+                        <label for="inputEstado">Estado</label>
+                        <input type="text" class="form-control" placeholder="Estado" id="">
+                    </div>
+                </div>
+                <button class="btn btn-primary">Checklist</button>
+                <button class="btn btn-primary">Delete</button>
             </div>
         </div>
     </div>
