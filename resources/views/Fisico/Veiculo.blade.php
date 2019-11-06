@@ -142,8 +142,14 @@
                         <input type="text" class="form-control" placeholder="Estado" id="" disabled>
                     </div>
                 </div>
-                <button class="btn btn-success  col-md-4 mb-1">Checklist</button>
-                <button class="btn btn-danger  col-md-4 mb-1">Delete</button>
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <button class="btn btn-success  col-md-4 mb-1">Checklist</button>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <button class="btn btn-danger  col-md-4 mb-1">Delete</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
