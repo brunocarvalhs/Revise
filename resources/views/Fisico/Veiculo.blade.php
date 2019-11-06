@@ -112,21 +112,21 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail4">Placa</label>
-                            <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' >
+                            <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputPassword4">Modelo / Marca</label>
-                            <input type="text" class="form-control" placeholder="Modelo / Marca">
+                            <input type="text" class="form-control" placeholder="Modelo / Marca" disabled>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="inputAddress">Endereço</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+                        <label for="inputAddress">Ano</label>
+                        <input type="text"  class="form-control" id="" placeholder="Ano" data-mask='0000' disabled>
                     </div>
                     <div class="form-group">
-                        <label for="inputAddress2">Endereço 2</label>
-                        <input type="text" class="form-control" id="inputAddress2"
-                            placeholder="Apartamento, hotel, casa, etc.">
+                        <label for="inputAddress2"></label>
+                        <input type="text" class="form-control" id=""
+                            placeholder="">
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
