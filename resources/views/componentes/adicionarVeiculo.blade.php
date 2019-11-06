@@ -61,7 +61,7 @@
                                         name="txtEstado" placeholder="Estado">
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <div class="form-row p-3">
                                 <div class="col">
                                     <label for="disabledTextInput">RENAVAN</label>
                                     <input type="text" class="form-control" id="txtRenavan" name="txtRenavan"
