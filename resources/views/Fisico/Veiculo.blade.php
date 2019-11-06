@@ -111,12 +111,12 @@
                 <form>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <label for="inputEmail4">Placa</label>
+                            <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' >
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputPassword4">Senha</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                            <label for="inputPassword4">Modelo / Marca</label>
+                            <input type="text" class="form-control" placeholder="Modelo / Marca">
                         </div>
                     </div>
                     <div class="form-group">
