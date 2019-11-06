@@ -149,6 +149,7 @@
                     <div class="form-group col">
                         <button class="btn btn-danger  col-md-4 mb-1">Delete</button>
                     </div>
+                    <div class="col-8"></div>
                 </div>
             </div>
         </div>
