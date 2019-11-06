@@ -143,7 +143,7 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-8">
+                    <div class="form-group col-md-4">
                         <button class="btn btn-success  col-md-4 mb-1">Checklist</button>
                     </div>
                     <div class="form-group col-md-4">
