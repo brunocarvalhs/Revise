@@ -22,7 +22,6 @@
     <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
     <script src="/node_modules/sweetalert/dist/sweetalert.min.js" type="text/javascript" async="true" defer></script>
     <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
-    @yield('script')
     @yield('mensagem')
     @include('componentes.cadastroRedirecionamento')
 </head>
@@ -127,4 +126,5 @@
     </footer>
 </body>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
+@yield('script')
 </html>
