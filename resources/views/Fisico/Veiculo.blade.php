@@ -106,12 +106,13 @@
                     data-target="#modalLoginForm">Adicionar</button>
             </div>
         </div>
+        @if($Veiculo)
         <div class="row">
             <div class="col-12 card shadow p-3 bg-white rounded">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Placa</label>
-                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled value="{{ session()->get('status') }}">
+                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled value="">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Modelo / Marca</label>
@@ -160,6 +161,7 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
     @endsection
 
