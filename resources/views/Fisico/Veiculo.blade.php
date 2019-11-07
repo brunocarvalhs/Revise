@@ -111,7 +111,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Placa</label>
-                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled value="{{ session('status') }}">
+                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled value="{{ session()->get('Status') }}">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Modelo / Marca</label>
