@@ -156,6 +156,15 @@
                     </div>
                 </div>
             </div>
+            <!-- Termos de uso -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Aceito os <a href="" data-toggle="modal" data-target="#modalTermoDeUso" >Termos de uso</a></label>
+                    </div>
+                </div>
+            </div>
             <!--Botão-->
             <br><br>
             <div class="row">
@@ -167,6 +176,8 @@
     </div>
     </form>
 </section>
+@component('componentes.termosdeuso')
+@endcomponent
 @endsection
 
 @section('script')
