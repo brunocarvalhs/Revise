@@ -16,16 +16,15 @@ session_start();
 
 <body class="centralizar">
     <div class="container menu">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center ">
             <div class="divLogin imagemLogin col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-self-center ">
                 <div class="row">
                     <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-7 padding"></div>
                     <div class="col-0 col-sm-0 col-md-0 col-lg-12 col-xl-5 background">
-
                         <form method="POST" action="Controllers/controllerSignIn.php" onsubmit="">
                             <div class="row formularioLogin">
                                 <div class="logoRevise">
-                                    <img src="./Views/img/logo.png" width="200" alt="Revise">
+                                    <img src="./Views/img/logo.png" width="200" alt="Revise" class="pt-5">
                                 </div>
                                 <div class="col-12 inputLogin">
                                     <div class="label-float">
@@ -67,22 +66,16 @@ session_start();
                                         ENTRAR
                                     </button>
                                 </div>
-                                <div class="col-12 linkEsqueci">
-                                    <a href="">
-                                        <label>
-                                            Esqueceu sua senha?
-                                        </label>
-                                    </a>
-                                </div>
+                              
                                 <div class="col-12 btnCadastrar">
                                     <button type="button" onclick="signUp()" class="btn btn-dark btn-lg btn-block">
                                         CADASTAR
                                     </button>
                                 </div>
                                 <div class="col-12 linkEsqueci">
-                                    <a href="./index.html">
+                                    <a href="">
                                         <label>
-                                            Voltar
+                                            Esqueceu sua senha?
                                         </label>
                                     </a>
                                 </div>

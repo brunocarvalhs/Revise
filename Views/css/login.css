@@ -7,6 +7,7 @@ body{
 .divLogin{
    
     border-radius: 10px;
+    
 }
 
 .imagemLogin{
@@ -14,7 +15,7 @@ body{
     background-repeat: no-repeat;
     background-size: 130%; 
     background-position: center;
-    background-position: -290px;
+    background-position: -290px; 
 }
 
 .centralizar{
