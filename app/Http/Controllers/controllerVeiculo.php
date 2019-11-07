@@ -19,7 +19,7 @@ class controllerVeiculo extends Controller
         $modelFisico = session()->get('Fisico');
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);
-        return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos]);
+        return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos])->with('status', 'ABC1234');
     }
 
     public function AdicionarVeiculo(Request $request,modelVeiculo $modelVeiculo, $usuario){
