@@ -305,7 +305,7 @@ class modelVeiculo extends Model
                     ->where('tb_veiculo.cd_placa', '=', $placa)
                     ->first();
 
-        return json_decode($dados);
+        return json_encode($dados);
     }
 
 
