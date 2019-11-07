@@ -121,31 +121,21 @@
                 </div>
                 <div class="form-group">
                     <label for="inputPassword4">Marca</label>
-                    <input type="text" class="form-control" placeholder="Modelo" disabled value="">
+                    <input type="text" class="form-control" placeholder="Modelo" disabled value="{{$Dados->marca}}">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputAddress">Ano</label>
-                        <input type="text" class="form-control" id="" placeholder="Ano" data-mask='0000' disabled>
+                        <input type="text" class="form-control" id="" placeholder="Ano" data-mask='0000' disabled value="{{$Dados->ano}}">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputAddress">Cor</label>
-                        <input type="text" class="form-control" id="" placeholder="Cor" data-mask='0000' disabled>
+                        <input type="text" class="form-control" id="" placeholder="Cor" data-mask='0000' disabled value="{{$Dados->cor}}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputAddress2">RENAVAN</label>
                     <input type="text" class="form-control" id="" placeholder="RENAVAN" disabled>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="inputCity">Cidade</label>
-                        <input type="text" class="form-control" placeholder="Cidade" id="" disabled>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputEstado">Estado</label>
-                        <input type="text" class="form-control" placeholder="Estado" id="" disabled>
-                    </div>
                 </div>
                 <div class="form-row row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">

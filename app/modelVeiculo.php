@@ -309,7 +309,7 @@ class modelVeiculo extends Model
                     ])
                     ->first();
 
-        return dd($dados);
+        return json_encode($dados);
     }
 
 
