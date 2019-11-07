@@ -19,7 +19,7 @@ class controllerVeiculo extends Controller
         $modelFisico = session()->get('Fisico');
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);
-        $Veiculo = $modelVeiculo->DetalhesDoVeiculo($request->placa);
+        $Veiculo = $modelVeiculo->DetalhesDoVeiculo($request->placa,$modelFisico->getIdUsuario());
         $Veiculo = json_decode($Veiculo);
         return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos, 'Dados' => $Veiculo]);
     }

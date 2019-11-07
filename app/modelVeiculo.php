@@ -283,7 +283,7 @@ class modelVeiculo extends Model
     }
 
 
-    public function DetalhesDoVeiculo($placa)
+    public function DetalhesDoVeiculo($placa,$idUsuario)
     {
         /*
         SELECT
@@ -301,11 +301,15 @@ class modelVeiculo extends Model
         $dados = DB::table('tb_veiculo')
                     ->join('tb_modelo', 'tb_veiculo.cd_modelo', '=', 'tb_modelo.cd_modelo')
                     ->join('tb_marca', 'tb_modelo.cd_marca', '=', 'tb_marca.cd_marca')
+                    ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_veiculo.cd_usuario')
                     ->select('tb_veiculo.cd_placa as placa', 'tb_modelo.nm_modelo as modelo', 'tb_marca.nm_marca as marca', 'tb_veiculo.nm_cor as cor', 'tb_veiculo.aa_veiculo as ano')
-                    ->where('tb_veiculo.cd_placa', '=', $placa)
+                    ->where([
+                        ['tb_veiculo.cd_placa', '=', $placa],
+                        ['tb_veiculo.cd_usuario','=',$idUsuario]
+                    ])
                     ->first();
 
-        return json_encode($dados);
+        return dd($dados);
     }
 
 
