@@ -107,7 +107,7 @@
             </div>
         </div>
         @if (isset($Dados))
-        <div class="row">
+        <div class="row mb-2">
             <div class="col-12 card shadow p-3 bg-white rounded">
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -158,7 +158,7 @@
             </div>
         </div>
         @else
-        <div class="row">
+        <div class="row mb-2">
             <div class="col-12 card shadow p-3 bg-white rounded">
                 <div class="form-row">
                     <div class="form-group col-md-6">
