@@ -443,13 +443,13 @@ class modelVeiculo extends Model
 
             $informacao = json_decode(json_encode($informacao));
 
-            DB::table('tb_check')->where('cd_veiculo', '=', $$informacao->veiculo)->delete();
+            DB::table('tb_check')->where('cd_veiculo', '=', $informacao->veiculo)->delete();
 
-            DB::table('tb_modelo')->where('cd_modelo', '=', $$informacao->modelo)->delete();
+            DB::table('tb_modelo')->where('cd_modelo', '=', $informacao->modelo)->delete();
 
             DB::table('tb_veiculo')->where([
-                ['cd_veiculo', '=',  $$informacao->veiculo],
-                ['cd_veiculo', '=',  $$informacao->veiculo]
+                ['cd_veiculo', '=',  $informacao->veiculo],
+                ['cd_veiculo', '=',  $informacao->veiculo]
             ])->delete();
 
             return (true);
