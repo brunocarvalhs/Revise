@@ -39,7 +39,9 @@
                                                 </ul>
                                             </p>
                                             <div class="pt-4"></div>
-                                            <button type="button" class="btn btn-warning w-100">Assine já</button>
+                                            <a href="{{ url('/cadastro/juridico')}}">
+                                                <button type="button" class="btn btn-warning w-100">Assine já</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +61,9 @@
                                                 </ul>
                                             </p>
                                             <div class="pt-4"></div>
-                                            <button type="button" class="btn btn-warning w-100">Assine já</button>
+                                            <a href="{{ url('/cadastro/juridico')}}">
+                                                <button type="button" class="btn btn-warning w-100">Assine já</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -90,14 +94,14 @@
                                                 <div class="col">
                                                     <span>Serviço</span>
                                                     <input id="servicoInput" type="number" class="form-control"
-                                                        placeholder="">
+                                                        placeholder="" min="0">
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col">
                                                     <span>Produtos</span>
                                                     <input id="produtoInput" type="number" class="form-control"
-                                                        placeholder="">
+                                                        placeholder="" min="0">
                                                 </div>
                                             </div>
                                         </p>
@@ -137,7 +141,7 @@
                                                 </div>
                                             </div>
                                             <br>
-                                            <a href="./cadastro_juridico.php" class="btn btn-warning porcentagem">Assinar
+                                            <a href="{{ url('/cadastro/juridico')}}" class="btn btn-warning porcentagem">Assinar
                                                 agora</a>
                                         </p>
                                     </div>
