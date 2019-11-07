@@ -267,10 +267,10 @@
     new WOW().init();
     $(document).ready(function () {
         $("#IOS").click(function () {
-            $("#imgRequisito").attr('src', '{{asset("img/iphone8spacegrey_landscape.png")}}');
+            $("#imgRequisito").attr('src', 'http://revise.ddns.net/public/img/iphone8spacegrey_landscape.png');
         });
         $('#android').click(function () {
-            $("#imgRequisito").attr('src', '{{asset("img/nexus5x-landscape.png")}}');
+            $("#imgRequisito").attr('src', 'http://revise.ddns.net/public/img/nexus5x-landscape.png');
         });
     });
 </script>
