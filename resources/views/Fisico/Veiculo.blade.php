@@ -147,10 +147,12 @@
                                     <button class="btn btn-lg btn-block btn-success">Checklist</button>
                                 </div>
                             </form>
-                            <form action="" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                            <form action="{{ url('/Home/Veiculos') }}/{{ $Dados->placa }}" method="POST" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                 <div class="form-group">
-                                    <button class="btn btn-lg btn-block btn-danger">Delete</button>
+                                    <button value="{{$Dados->id}}" class="btn btn-lg btn-block btn-danger">Delete</button>
                                 </div>
+                                @method('delete')
+                                @csrf
                             </form>
                         </div>
                     </div>
