@@ -34,10 +34,10 @@ class controllerUsuario extends Controller
             } else if (strlen($login) === 11) {
                 return $controllerFisico->Login($login,$senha);
             } else {
-                $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres de login invalido, preencha corretamente os campos.']);
+                $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres inválidos, preencha corretamente os campos']);
             }
         } else {
-            $Login = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Preencha todos os campos']);
         }
         $Login = json_decode($Login);
         return redirect()->back()->with('Login', $Login);
