@@ -130,7 +130,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputAddress">Cor</label>
-                        <input type="text" class="form-control" id="" placeholder="Cor" data-mask='0000' disabled value="{{$Dados->cor}}">
+                        <input type="text" class="form-control" id="" placeholder="Cor" disabled value="{{$Dados->cor}}">
                     </div>
                 </div>
                 <div class="form-group">
