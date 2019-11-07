@@ -106,18 +106,22 @@
                     data-target="#modalLoginForm">Adicionar</button>
             </div>
         </div>
-        @if($Veiculo)
+        @if ($Dados)
         <div class="row">
             <div class="col-12 card shadow p-3 bg-white rounded">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Placa</label>
-                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled value="">
+                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled value="{{$Dados->placa}}">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputPassword4">Modelo / Marca</label>
-                        <input type="text" class="form-control" placeholder="Modelo / Marca" disabled>
+                        <label for="inputPassword4">Modelo</label>
+                        <input type="text" class="form-control" placeholder="Modelo" disabled value="{{$Dados->modelo}}">
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword4">Marca</label>
+                    <input type="text" class="form-control" placeholder="Modelo" disabled value="">
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
