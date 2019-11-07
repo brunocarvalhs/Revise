@@ -1,7 +1,7 @@
 <div class="modal fade" id="modelChecklist" tabindex="-1" role="dialog" aria-labelledby="modelChecklist"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
-        <form action="" onsubmit="" method="POST">
+        <form action="{{ $link }}" onsubmit="" method="POST">
             @csrf
             <input type="hidden" name="txtTipo" value="Serviço">
             <div class="modal-content">

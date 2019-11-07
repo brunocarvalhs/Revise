@@ -160,7 +160,8 @@
             </div>
         </div>
         @component('componentes.checklist')
-            @yield('placa',$Dados->placa)
+            @slot('link',url('/Home/Veiculos').'/'.$Dados->placa)
+            @slot('placa',$Dados->placa)
         @endcomponent
         @else
         <div class="row mb-2">
