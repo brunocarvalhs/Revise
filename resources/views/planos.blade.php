@@ -39,7 +39,7 @@
                                                 </ul>
                                             </p>
                                             <div class="pt-4"></div>
-                                            <a href="{{ url('/cadastro/juridico')}}">
+                                            <a href="{{ url('/cadastro/fisico')}}">
                                                 <button type="button" class="btn btn-warning w-100">Assine já</button>
                                             </a>
                                         </div>
@@ -61,7 +61,7 @@
                                                 </ul>
                                             </p>
                                             <div class="pt-4"></div>
-                                            <a href="{{ url('/cadastro/juridico')}}">
+                                            <a href="{{ url('/cadastro/fisico')}}">
                                                 <button type="button" class="btn btn-warning w-100">Assine já</button>
                                             </a>
                                         </div>
