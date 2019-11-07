@@ -15,8 +15,11 @@ class controllerVeiculo extends Controller
 
     }
 
-    public function DetalhesVeiculo(Request $request,modelVeiculo $modelVeiculo, $usuario){
-        return view('Fisico/veiculo');
+    public function DetalhesVeiculo(Request $request,modelVeiculo $modelVeiculo, $usuario, controllerUsuario $controllerUsuario){
+        $modelFisico = session()->get('Fisico');
+        $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
+        $Veiculos = json_decode($Veiculos);
+        return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos]);
     }
 
     public function AdicionarVeiculo(Request $request,modelVeiculo $modelVeiculo, $usuario){
