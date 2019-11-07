@@ -15,9 +15,9 @@
                     <h1>Físico</h1>
                     <hr>
                 </div>
-                <p class="text-dark card-text h5 descricao ml-3">Planos para usuários que utilizarão a função de 
+                <p class="text-dark card-text h5 descricao ml-3">Planos para usuários que utilizarão a função de
                         notificação das manutenções preditivas</p>
-                       
+
             </div>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
@@ -35,7 +35,7 @@
                                                     <li class="planos_padding h6">App sem suporte para Obd2</li>
                                                     <li class="planos_padding h6">Visualização dos anúncios postados pelos fornecedores
                                                     </li>
-                                                  
+
                                                 </ul>
                                             </p>
                                             <div class="pt-4"></div>
@@ -55,7 +55,7 @@
                                                     <li class="planos_padding h6">App com suporte para Obd2</li>
                                                     <li class="planos_padding h6">Visualização dos anúncios postados pelos fornecedores
                                                     </li>
-                                                   
+
                                                 </ul>
                                             </p>
                                             <div class="pt-4"></div>
@@ -73,7 +73,7 @@
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloPreto">
                         <h1 class="text-white">Jurídico</h1>
-                        <hr class="bg-secondary"> 
+                        <hr class="bg-secondary">
                     </div>
                     <p class="text-white card-text h5 descricao pb-5 pl-3">Escolha quantos serviços e anúncios deseja e faça
                         um orçamento abaixo:</p>
@@ -171,7 +171,8 @@
             var valorSer = 10.00;
             var valorServico = $('#servicoInput').val();
             $('#valorServico').text('R$  ' + valorServico * valorSer);
-            $('#valorTotal').text('R$  ' + (valorServico + valorProduto));
+            var valorTotal = valorServico + valorProduto;
+            $('#valorTotal').text('R$  ' + valorTotal);
         });
     });
 </script>
