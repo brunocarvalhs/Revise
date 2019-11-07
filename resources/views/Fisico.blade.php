@@ -4,21 +4,23 @@
 
 @section('conteudo')
 <section>
-    <div class=" backgroundBlackLight espaco">
+    <div class="backgroundBlackLight espaco">
         <div class="row">
             <div class="col-12">
-                <h1>Cadastro Físico</h1>
+                <h1 class="pt-3">Cadastro Físico</h1>
             </div>
         </div>
         <!-- Barra de progresso -->
         <div class="progress bg-dark">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 0%" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100"></div>
         </div>
     </div>
     <!--Inicio dos Forms-->
     <div class="backgroundBlackLight">
         <!--Form dados pessoais-->
-        <form name="CadastroFisico" id="CadastroFisico" method="POST" action="{{ url('/CadastroFisico') }}" onsubmit="return ValidarCadastroFisico();">
+        <form name="CadastroFisico" id="CadastroFisico" method="POST" action="{{ url('/CadastroFisico') }}"
+            onsubmit="return ValidarCadastroFisico();">
             @csrf
             <div class="row">
                 <div class="col-12">
@@ -34,33 +36,39 @@
                                 <label for="campoNome">Nome completo</label>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                <input type="text" maxlength="125" class="form-control" id="txtnome" name="txtnome" onkeypress="return bloqueioNumero(event)">
+                                <input type="text" maxlength="125" class="form-control" id="txtnome" name="txtnome"
+                                    onkeypress="return bloqueioNumero(event)">
                             </div>
                         </div>
                     </div>
                     <!-- E-mail -->
                     <div class="form-group inputCadastro">
                         <label for="exampleFormControlInput1">Endereço de email</label>
-                        <input type="email" class="form-control" maxlength="60" id="txtemail" name="txtemail" placeholder="nome@exemplo.com">
+                        <input type="email" class="form-control" maxlength="60" id="txtemail" name="txtemail"
+                            placeholder="nome@exemplo.com">
                     </div>
                     <div class="form-group inputCadastro">
                         <div class="form-row">
                             <!-- CPF -->
                             <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                 <label for="exampleFormControlInput1">CPF</label>
-                                <input type="text" class="form-control" maxlength="14" id="txtcpf" name="txtcpf" placeholder="XXX.XXX.XXX-XX" data-mask="000.000.000-00">
+                                <input type="text" class="form-control" maxlength="14" id="txtcpf" name="txtcpf"
+                                    placeholder="XXX.XXX.XXX-XX" data-mask="000.000.000-00">
                             </div>
                             <!-- Data de nascimento -->
                             <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                 <label for="exampleFormControlInput1">Data de nascimento</label>
-                                <input type="date" class="form-control" id="txtNascimento" name="txtNascimento" placeholder="DIA/MÊS/ANO" max="{{  date('Y-m-d', strtotime('- 18 year')) }}" min="{{  date('Y-m-d', strtotime('- 65 year')) }}" >
+                                <input type="date" class="form-control" id="txtNascimento" name="txtNascimento"
+                                    placeholder="DIA/MÊS/ANO" max="{{  date('Y-m-d', strtotime('- 18 year')) }}"
+                                    min="{{  date('Y-m-d', strtotime('- 65 year')) }}">
                             </div>
                         </div>
                     </div>
                     <!-- Senha -->
                     <div class="form-group inputCadastro">
                         <label for="campoSenha">Senha</label>
-                        <input type="password" id="txtsenha" maxlength="20" name="txtsenha" class="form-control" aria-describedby="descricaoSenha">
+                        <input type="password" id="txtsenha" maxlength="20" name="txtsenha" class="form-control"
+                            aria-describedby="descricaoSenha">
                         <small id="descricaoSenha" class="form-text text-muted">
                             Sua senha deve ter entre 6 e 20 caracteres, os quais devem ser letras e números,
                             sem
@@ -70,7 +78,8 @@
                     <!-- Confirma senha -->
                     <div class="form-group inputCadastro">
                         <label for="campoSenha">Confirmar senha</label>
-                        <input type="password" id="txtcsenha" name="txtcsenha" maxlength="20" class="form-control" aria-describedby="descricaoSenha">
+                        <input type="password" id="txtcsenha" name="txtcsenha" maxlength="20" class="form-control"
+                            aria-describedby="descricaoSenha">
                     </div>
                 </div>
             </div>
@@ -86,7 +95,8 @@
             <div class="row">
                 <div class="col-5">
                     <div class="input-group mb-3">
-                        <select class="custom-select" id="txtplano" name="txtplano" aria-label="Exemplo de select com botão addon">
+                        <select class="custom-select" id="txtplano" name="txtplano"
+                            aria-label="Exemplo de select com botão addon">
                             <option value="0" selected>Selecione seu plano...</option>
                             <option value="1">Standart</option>
                             <option value="2">Gold</option>
@@ -96,88 +106,52 @@
             </div>
             <!--Cards plano-->
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover ">
-                    <div class="card tamanhoCard shadow mb-5 bg-white">
-                        <div class="card-body">
-                            <h5 class="card-title plano_nomes">Basic</h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li class="planos_padding">Gratuito</li>
-                                    <li class="planos_padding">Máximo de 2 carros cadastrados</li>
-                                    <li class="planos_padding">Obd2 e App não inclusos (compra a
-                                        parte opcional)
-                                    </li>
-                                    <li class="planos_padding">Visualização dos anúncios postados
-                                        pelos
-                                        fornecedores
-                                    </li>
-                                    <div class="vazia"></div>
-                                </ul>
-                            </p>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <div class="row ">
+                        <div class="col-0 col-sm-0 col-md-0 col-lg-2 col-xl-3"></div>
+                        <div
+                            class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 PlanoCard card_hover pt-5 mr-xl-5 mr-lg-5">
+                            <div class="card tamanhoCard shadow pt-2 mb-5">
+                                <div class="card-body">
+                                    <h5 class="card-title plano_nomes">Standart</h5>
+                                    <hr>
+                                    <p class="card-text">
+                                        <ul>
+                                            <li class="planos_padding h6">Gratuito</li>
+                                            <li class="planos_padding h6">Máximo 1 carro cadastrado</li>
+                                            <li class="planos_padding h6">App sem suporte para Obd2</li>
+                                            <li class="planos_padding h6">Visualização dos anúncios postados pelos
+                                                fornecedores
+                                            </li>
 
+                                        </ul>
+                                    </p>
+                                    <div class="pt-4"></div>
+                                    <button type="button" class="btn btn-warning w-100">Assine já</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover ">
-                    <div class="card tamanhoCard shadow mb-5 bg-white">
-                        <div class="card-body">
-                            <h5 class="card-title plano_nomes">Standart</h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li class="planos_padding">R$ 9,99 p/ mês</li>
-                                    <li class="planos_padding">Máximo de 5 carros cadastrados</li>
-                                    <li class="planos_padding">Obd2 e App não inclusos (compra a
-                                        parte opcional)
-                                    </li>
-                                    <li class="planos_padding">Visualização dos anúncios postados
-                                        pelos
-                                        fornecedores
-                                    </li>
-                                    <div class="vazia"></div>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover ">
-                    <div class="card tamanhoCard shadow mb-5 bg-white">
-                        <div class="card-body">
-                            <h5 class="card-title plano_nomes">Profission</h5>
-                            <p class="card-text">
+                        <div
+                            class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 PlanoCard card_hover pt-5 ml-xl-4 ml-lg-4">
+                            <div class="card tamanhoCard shadow pt-2 mb-5">
+                                <div class="card-body">
+                                    <h5 class="card-title plano_nomes">Gold</h5>
+                                    <hr>
+                                    <p class="card-text">
+                                        <ul>
+                                            <li class="planos_padding h6">R$ 9,99 p/ mês</li>
+                                            <li class="planos_padding h6">Máximo 3 carros cadastrados</li>
+                                            <li class="planos_padding h6">App com suporte para Obd2</li>
+                                            <li class="planos_padding h6">Visualização dos anúncios postados pelos
+                                                fornecedores
+                                            </li>
 
-                                <ul>
-                                    <li class="planos_padding">R$ 39,99 p/ mês</li>
-                                    <li class="planos_padding">Máximo de 20 carros cadastrados</li>
-                                    <li class="planos_padding">Obd2 e App não inclusos (compra a
-                                        parte opcional)
-                                    </li>
-                                    <li class="planos_padding">Desconto na compra do Obd2 e App</li>
-                                    <li class="planos_padding">Visualização dos anúncios postados
-                                        pelos
-                                        fornecedores
-                                    </li>
-                                </ul>
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 PlanoCard card_hover ">
-                    <div class="card tamanhoCard shadow mb-5 bg-white">
-                        <div class="card-body">
-                            <h5 class="card-title plano_nomes">Deluxe Edition</h5>
-                            <p class="card-text">
-                                <ul>
-                                    <li class="planos_padding">R$ 99,90 p/ mês</li>
-                                    <li class="planos_padding">Máximo de 50 carros cadastrados</li>
-                                    <li class="planos_padding">Obd2 e App inclusos (1 unidade)</li>
-                                    <li class="planos_padding">Desconto na compra do Obd2 e App</li>
-                                    <li class="planos_padding">Visualização dos anúncios postados
-                                        pelos
-                                        fornecedores
-                                    </li>
-                                </ul>
-                            </p>
+                                        </ul>
+                                    </p>
+                                    <div class="pt-4"></div>
+                                    <button type="button" class="btn btn-warning w-100">Assine já</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -202,26 +176,26 @@
 @endsection
 
 @section('mensagem')
-    @if(session()->has('Cadastro'))
-        @if(session()->get('Cadastro')->Status)
-            @component('componentes.alert')
-                @slot('titulo','SUCESSO')
-                @slot('icone','success')
-                @slot('mensagem')
-                    {{ session()->get('Cadastro')->Mensagem }}
-                @endslot
-            @endcomponent
-            <script>
-                window.location.href = '/public/SignIn';
-            </script>
-        @else
-            @component('componentes.alert')
-                @slot('titulo','ERRO')
-                @slot('icone','error')
-                @slot('mensagem')
-                    {{ session()->get('Cadastro')->Mensagem }}
-                @endslot
-            @endcomponent
-        @endif
-    @endif
+@if(session()->has('Cadastro'))
+@if(session()->get('Cadastro')->Status)
+@component('componentes.alert')
+@slot('titulo','SUCESSO')
+@slot('icone','success')
+@slot('mensagem')
+{{ session()->get('Cadastro')->Mensagem }}
+@endslot
+@endcomponent
+<script>
+    window.location.href = '/public/SignIn';
+</script>
+@else
+@component('componentes.alert')
+@slot('titulo','ERRO')
+@slot('icone','error')
+@slot('mensagem')
+{{ session()->get('Cadastro')->Mensagem }}
+@endslot
+@endcomponent
+@endif
+@endif
 @endsection
