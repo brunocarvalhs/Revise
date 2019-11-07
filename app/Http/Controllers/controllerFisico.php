@@ -70,45 +70,4 @@ class controllerFisico extends Controller
 
     }
 
-    // Veiculos ---------------------------------------------------------------
-    public function CriarVeiculos(Request $request, controllerVeiculo $controllerVeiculo, controllerUsuario $controllerUsuario,modelVeiculo $modelVeiculo, modelPlano $modelPlano){
-
-
-        $campos = $controllerUsuario->ValidarCampos($request);
-        if ($campos) {
-            $veiculo = (explode("/",$request->txtMarca));
-            if($controllerVeiculo->compartibilidadeVeiculo($veiculo,$modelVeiculo)){
-                $modelFisico = session()->get('Fisico');
-                if($controllerVeiculo->quantidadeVeiculoPorPlano($modelFisico,$modelVeiculo,$modelPlano)){
-                    $cadastro = $controllerVeiculo->AdicionarVeiculo($request, $modelVeiculo, $modelFisico);
-                }
-                else{
-                    $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Sua garagem está cheia, seu limite maximo de veículos no seu plano foi preenchido, caso queira registra mais veículos terá que mudar de plano na pagina de perfil, cobrando valor mensal.']);
-                }
-            }
-            else{
-                $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Modelo e Marca não suportado pelo Revise.']);
-            }
-        } else {
-            $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
-        }
-        $cadastro = json_decode($cadastro);
-        return redirect()->back()->with('Cadastro', $cadastro);
-    }
-
-    public function LerVeiculos(controllerUsuario $controllerUsuario){
-        $modelFisico = session()->get('Fisico');
-        $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
-        $Veiculos = json_decode($Veiculos);
-        return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos]);
-    }
-
-    public function AlterarVeiculos(){
-
-    }
-
-    public function DeletarVeiculos(){
-
-    }
-
 }
