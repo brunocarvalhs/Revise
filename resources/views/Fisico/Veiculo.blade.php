@@ -196,6 +196,11 @@
         </div>
         @endif
     </div>
+    @if(session()->has('delete'))
+        @if(session()->get('delete'))
+
+        @endif
+    @endif
     @endsection
 
 
@@ -315,23 +320,38 @@
 
 
     @section('mensagem')
-    @if(session()->has('Cadastro'))
-    @if(session()->get('Cadastro')->Status)
-    @component('componentes.alert')
-    @slot('titulo','SUCESSO')
-    @slot('icone','success')
-    @slot('mensagem')
-    {{ session()->get('Cadastro')->Mensagem }}
-    @endslot
-    @endcomponent
-    @else
-    @component('componentes.alert')
-    @slot('titulo','ERRO')
-    @slot('icone','error')
-    @slot('mensagem')
-    {{ session()->get('Cadastro')->Mensagem }}
-    @endslot
-    @endcomponent
-    @endif
-    @endif
+        @if(session()->has('Cadastro'))
+            @if(session()->get('Cadastro')->Status)
+                @component('componentes.alert')
+                    @slot('titulo','SUCESSO')
+                    @slot('icone','success')
+                    @slot('mensagem')
+                    {{ session()->get('Cadastro')->Mensagem }}
+                    @endslot
+                @endcomponent
+            @else
+                @component('componentes.alert')
+                    @slot('titulo','ERRO')
+                    @slot('icone','error')
+                    @slot('mensagem')
+                    {{ session()->get('Cadastro')->Mensagem }}
+                    @endslot
+                @endcomponent
+            @endif
+        @endif
+        @if(session()->has('delete'))
+            @if(session()->get('delete'))
+                @component('componentes.alert')
+                    @slot('titulo','SUCESSO')
+                    @slot('icone','success')
+                    @slot('mensagem','Veículo deletado com sucesso')
+                @endcomponent
+            @else
+                @component('componentes.alert')
+                    @slot('titulo','ERRO')
+                    @slot('icone','error')
+                    @slot('mensagem','Ocorreu um erro ao tentar deletado o veículo')
+                @endcomponent
+            @endif
+        @endif
     @endsection

@@ -73,8 +73,7 @@ class controllerVeiculo extends Controller
     public function DeletarVeiculo(request $request, modelVeiculo $modelVeiculo){
         $modelFisico = session()->get('Fisico');
         $resultado = $modelVeiculo->Deletar($request->placa,$modelFisico->getIdUsuario());
-        return dd($resultado);
-        return back()->with('delete', $resultado);
+        return redirect()->back()->with('delete', $resultado);
     }
 
     public function InserirQuilometragem(Request $request, modelVeiculo $modelVeiculo){

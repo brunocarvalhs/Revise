@@ -176,26 +176,26 @@
 @endsection
 
 @section('mensagem')
-@if(session()->has('Cadastro'))
-@if(session()->get('Cadastro')->Status)
-@component('componentes.alert')
-@slot('titulo','SUCESSO')
-@slot('icone','success')
-@slot('mensagem')
-{{ session()->get('Cadastro')->Mensagem }}
-@endslot
-@endcomponent
-<script>
-    window.location.href = '/public/SignIn';
-</script>
-@else
-@component('componentes.alert')
-@slot('titulo','ERRO')
-@slot('icone','error')
-@slot('mensagem')
-{{ session()->get('Cadastro')->Mensagem }}
-@endslot
-@endcomponent
-@endif
-@endif
+    @if(session()->has('Cadastro'))
+        @if(session()->get('Cadastro')->Status)
+            @component('componentes.alert')
+                @slot('titulo','SUCESSO')
+                @slot('icone','success')
+                @slot('mensagem')
+                {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+            <script>
+                window.location.href = '/public/SignIn';
+            </script>
+        @else
+            @component('componentes.alert')
+                @slot('titulo','ERRO')
+                @slot('icone','error')
+                @slot('mensagem')
+                {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+        @endif
+    @endif
 @endsection
