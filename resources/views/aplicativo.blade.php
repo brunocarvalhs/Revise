@@ -5,16 +5,16 @@
 @section('menu_aplicativo','active')
 
 @section('conteudo')
-<section class="bg-dark espaco">
+<section class="bg-dark pt-3">
     <div class="container">
         <br>
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 align-self-start">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 align-self-start">
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 TituloAplicativoIntroducao">
-                            <h1 class="tituloBranco Titulo">
-                                Aplicativo Revise
+                            <h1 class="tituloBranco Titulo espaco">
+                                Revise App
                             </h1>
                         </div>
                         <div class="col-12">
@@ -23,9 +23,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <img src="img/app.png" class="smartphoneIntroducao wow bounceInRight"
-                    data-wow-duration="1.5s">
+            <div class="col-0 col-sm-0 col-md-12 col-lg-6 col-xl-6">
+                <img src="./Views/img/app.png" class="smartphoneIntroducao wow bounceInRight" data-wow-duration="1.5s">
             </div>
         </div>
     </div>
@@ -36,43 +35,45 @@
             <div class="col">
                 <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto text-dark">
                     <br><br>
-                    <h1>Sobre</h1>
+                    <h1>O que é o Revise App?</h1>
+                    <hr>
                     <br>
                 </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col-12">
                 <p class="text-dark h5">
-
-                    Ao adquirir o sensor através do plano Deluxe Edition ou pela compra do pacote App+Obd2, esse
-                    dispositivo é conectado ao veículo e
-                    acionado. Em seguida, para que as informações cheguem até aplicativo do Revise, é necessário
-                    acionar a
-                    conexão bluetooth do seu aparelho e logo após, realizar o scanner. Mas o que de fato ele
-                    detecta? Veja a seguir:
-                    <br><br>
-                    <ul>
-                        <li class="text-dark h5">Quilometragem para fazer as manutenções preditivas</li>
-                        <li class="text-dark h5">Nível de combustível</li>
-                    </ul>
-                </p>
+                    Acesse as funcionalidades do sistema em seu smartphone ou
+                    tablet a qualquer momento e ainda confira sua quilometragem com a tecnologia
+                    do sensor Obd2, caso seja usuário Gold
                 </p>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <!--src="{{ asset('img/imagem.png') }}"-->
+                <img id="imgRequisito" src="./Views/img/Imagem_iphone.png" class="AppSmart pl-5">
+            </div>
+        </div>
+    </div>
     </div>
     <br><br>
 </section>
-<section class="backgroundYellow" id="requisitos">
+<section class="backgroundWhite" id="requisitos">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto tituloPreto">
-                <h1 class="text-white">Requisitos do aplicativo</h1>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloPreto">
+                <h1 class="text-dark">Requisitos do aplicativo</h1>
+                <hr>
                 <br>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div class="accordion" id="accordionExample">
-                    <div class="card card_hover">
+                    <div class="card card_hover shadow-lg mb-5">
                         <div class="card-header" id="headingOne">
                             <h2 class="mb-0">
                                 <button class="btn btn-link text-dark " type="button" data-toggle="collapse"
@@ -140,12 +141,12 @@
                         </div>
                     </div>
                     <br>
-                    <div class="card card_hover">
+                    <div class="card card_hover shadow-lg mb-5">
                         <div class="card-header" id="headingTwo">
                             <h2 class="mb-0">
-                                <button class="btn btn-link collapsed text-dark" type="button"
-                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo" id="IOS">
+                                <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                                    id="IOS">
                                     Clique para ver sobre IOS
                                 </button>
                             </h2>
@@ -209,55 +210,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <img id="imgRequisito" src="img/nexus5x-landscape.png" class="AppSmart ">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Aplicativo section -->
-<section class="backgroundWhite bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
-                <div class="row">
-                    <div class="Texto ">
-                        <!-- Titulo do texto -->
-                        <header>
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloPreto">
-                                <h1 class="text-black">Aplicativo</h1>
-                            </div>
-                        </header>
-                        <!-- Texto -->
-                        <section>
-                            <p>
-
-                            </p>
-                        </section>
-                        <!-- Rodapé -->
-                        <footer>
-                            <div class="container">
-                                <div class="row DownloadApp center">
-                                    <div
-                                        class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
-                                        <a href="{{ url('/Download/android') }}">
-                                            <img src="img/button_download_android.png" class="">
-                                        </a>
-                                    </div>
-                                    <div
-                                        class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
-                                        <a href="{{ url('/Download/ios') }}">
-                                            <img src="img/button_download_ios.png" class="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 ">
-                <img src="img/AppRevise.png" class="AppSmart wow bounceInRight center"
-                 data-wow-duration="2s">
+                <img id="imgRequisito" src="./Views/img/nexus5x-landscape.png" class="AppSmart">
             </div>
         </div>
     </div>
@@ -267,10 +220,11 @@
         <div class="row">
             <div class="col-12 tituloBranco">
                 <h1>Suporte</h1>
+                <hr class="bg-secondary">
             </div>
         </div>
         <div class="row">
-            <div class=" col-12 SuporteTexto tituloBranco">
+            <div class=" col-12 SuporteTexto tituloBranco h6">
                 <p>
                     Caso tenha algum problema, insira as informações necessárias no formulário abaixo. Iremos
                     receber
@@ -286,22 +240,21 @@
         <form action="" method="POST" onsubmit="">
             <div class="formularioSuport row tituloBranco">
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    <span>Digite seu e-mail aqui:</span>
-                    <div class="input-group input-group-lg">
+                    <span class="h6">Digite seu e-mail aqui:</span>
+                    <div class="input-group input-group-lg p-2">
                         <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg">
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                    <span>Como podemos ajudar?</span>
-                    <div class="input-group">
+                    <span class="h6">Como podemos ajudar?</span>
+                    <div class="input-group p-2">
                         <textarea class="form-control resize" aria-label="With textarea" rows="4"></textarea>
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
                     <div class="input-group suporteBotao">
-                        <button type="button" class="btn btn-outline-warning porcentagem"
-                            type="submit">Enviar</button>
+                        <button type="button" class="btn btn-warning porcentagem" type="submit">Enviar</button>
                     </div>
                 </div>
             </div>

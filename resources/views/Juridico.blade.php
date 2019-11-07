@@ -8,7 +8,7 @@
     <div class=" backgroundBlackLight espaco">
         <div class="row">
             <div class="col-12">
-                <h1>Cadastro Jurídico</h1>
+                <h1 class="pt-3">Cadastro Jurídico</h1>
             </div>
         </div>
         <!-- Barra de progresso -->

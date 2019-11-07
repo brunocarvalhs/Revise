@@ -25,7 +25,7 @@ function consultar() {
             swal({
                 icon : 'error',
                 title : 'Resultado da Consulta',
-                text : 'Placa de carro não encontrada: ' + placa,
+                text : 'Placa não encontrada: ',
             });
             document.getElementById("txtMarca").setAttribute('value', "");
             document.getElementById("txtAno").setAttribute('value', "");
@@ -61,8 +61,7 @@ function consultarCep() {
         error: function (erro) {
             swal({
                 icon : 'error',
-                title : 'Resultado da Consulta',
-                text : 'CEP não encontrado: ' + cep,
+                title : 'CEP não encontrado',
             });
             document.getElementById("txtEstado").setAttribute('value', "");
             document.getElementById("txtBairro").setAttribute('value', "");

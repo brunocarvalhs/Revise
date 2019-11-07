@@ -7,7 +7,7 @@
     @csrf
     <div class="row formularioLogin">
         <div class="logoRevise">
-            <img src="{{asset('img/logo.png')}}" width="200" alt="Revise">
+            <img src="{{asset('img/logo.png')}}" width="200" alt="Revise" class="pt-5">
         </div>
         <div class="col-12 inputLogin">
             <div class="label-float">
@@ -34,22 +34,15 @@
                 ENTRAR
             </button>
         </div>
-        <div class="col-12 linkEsqueci">
-            <a href="{{ url('/Esqueci') }}">
-                <label>
-                    Esqueceu sua senha?
-                </label>
-            </a>
-        </div>
         <div class="col-12 btnCadastrar">
             <button type="button" onclick="signUp()" class="btn btn-dark btn-lg btn-block">
                 CADASTAR
             </button>
         </div>
         <div class="col-12 linkEsqueci">
-            <a href="{{url('/')}}">
+            <a href="{{ url('/Esqueci') }}">
                 <label>
-                    Voltar
+                    Esqueceu sua senha?
                 </label>
             </a>
         </div>
