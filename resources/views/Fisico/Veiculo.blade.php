@@ -159,6 +159,9 @@
                 </div>
             </div>
         </div>
+        @component('componentes.checklist')
+            @yield('placa',$Dados->placa)
+        @endcomponent
         @else
         <div class="row mb-2">
             <div class="col-12 card shadow p-3 bg-white rounded">
@@ -196,7 +199,6 @@
         </div>
         @endif
     </div>
-    @include('componentes.checklist')
     @endsection
 
 
