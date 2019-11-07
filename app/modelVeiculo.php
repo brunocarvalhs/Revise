@@ -242,27 +242,17 @@ class modelVeiculo extends Model
 
             //return dd($idVeiculo);
 
-            if ((DB::table('tb_modelo')->where('nm_modelo', '=', $modelo)->exists())) {
+            $idmodelo = DB::table("tb_modelo")->max('cd_modelo') + 1;
 
-                $modelo = DB::select("SELECT cd_modelo as ID from tb_modelo where nm_modelo like CONCAT('%',?,'%')", [$modelo]);
+            DB::table('tb_modelo')->insert([
+                'cd_modelo' =>  $idmodelo,
+                'nm_modelo' => $modelo,
+                'cd_marca' => $marca,
+            ]);
 
-                $modelo = $modelo[0]->ID;
-            } else {
+            $modelo = DB::select("SELECT cd_modelo as ID from tb_modelo where nm_modelo like CONCAT('%',?,'%')", [$modelo]);
 
-
-
-                $idmodelo = DB::table("tb_modelo")->max('cd_modelo') + 1;
-
-                DB::table('tb_modelo')->insert([
-                    'cd_modelo' =>  $idmodelo,
-                    'nm_modelo' => $modelo,
-                    'cd_marca' => $marca,
-                ]);
-
-                $modelo = DB::select("SELECT cd_modelo as ID from tb_modelo where nm_modelo like CONCAT('%',?,'%')", [$modelo]);
-
-                $modelo = $modelo[0]->ID;
-            }
+            $modelo = $modelo[0]->ID;
 
 
             DB::table('tb_veiculo')->insert([
@@ -436,5 +426,36 @@ class modelVeiculo extends Model
     public function QuantidadeVeiculosConta($idUsuario){
         $numero_veiculos = DB::table('tb_veiculo')->where('cd_usuario','=',$idUsuario)->count();
         return ($numero_veiculos);
+    }
+
+    public function Deletar($placa,$idUsuario){
+        try{
+            $informacao =  DB::table('tb_veiculo')
+            ->join('tb_modelo', 'tb_veiculo.cd_modelo', '=', 'tb_modelo.cd_modelo')
+            ->join('tb_marca', 'tb_modelo.cd_marca', '=', 'tb_marca.cd_marca')
+            ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_veiculo.cd_usuario')
+            ->select('tb_veiculo.cd_veiculo as veiculo', 'tb_modelo.cd_modelo as modelo')
+            ->where([
+                ['tb_veiculo.cd_placa', '=', $placa],
+                ['tb_veiculo.cd_usuario','=',$idUsuario]
+            ])
+            ->first();
+
+            $informacao = json_decode(json_encode($informacao));
+
+            DB::table('tb_check')->where('cd_veiculo', '=', $$informacao->veiculo)->delete();
+
+            DB::table('tb_modelo')->where('cd_modelo', '=', $$informacao->modelo)->delete();
+
+            DB::table('tb_veiculo')->where([
+                ['cd_veiculo', '=',  $$informacao->veiculo],
+                ['cd_veiculo', '=',  $$informacao->veiculo]
+            ])->delete();
+
+            return (true);
+
+        }catch(Exception $e){
+            return (false);
+        }
     }
 }
