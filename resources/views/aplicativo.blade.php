@@ -209,7 +209,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <img id="imgRequisito" src="{{ asset('img/nexus5x-landscape.png') }}" class="AppSmart">
+                <img id="imgRequisito" src="{{ asset('img/AppRevise.png') }}" class="AppSmart">
             </div>
         </div>
     </div>
@@ -263,15 +263,5 @@
 @endsection
 
 @section('script')
-<script>
-    new WOW().init();
-    $(document).ready(function () {
-        $("#IOS").click(function () {
-            $("#imgRequisito").attr('src', 'http://revise.ddns.net/public/img/iphone8spacegrey_landscape.png');
-        });
-        $('#android').click(function () {
-            $("#imgRequisito").attr('src', 'http://revise.ddns.net/public/img/nexus5x-landscape.png');
-        });
-    });
-</script>
+
 @endsection
