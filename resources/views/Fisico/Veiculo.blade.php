@@ -133,6 +133,12 @@
                         <input type="text" class="form-control" id="" placeholder="Cor" disabled value="{{$Dados->cor}}">
                     </div>
                 </div>
+                <!--
+                <div class="form-group">
+                    <label for="inputAddress2">RENAVAN</label>
+                    <input type="text" class="form-control" id="" placeholder="RENAVAN" disabled>
+                </div>
+                -->
                 <div class="form-row row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
                         <div class="row">
@@ -149,6 +155,41 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        @else
+        <div class="row">
+            <div class="col-12 card shadow p-3 bg-white rounded">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Placa</label>
+                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Modelo</label>
+                        <input type="text" class="form-control" placeholder="Modelo" disabled >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword4">Marca</label>
+                    <input type="text" class="form-control" placeholder="Modelo" disabled>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress">Ano</label>
+                        <input type="text" class="form-control" id="" placeholder="Ano" data-mask='0000' disabled>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress">Cor</label>
+                        <input type="text" class="form-control" id="" placeholder="Cor" disabled>
+                    </div>
+                </div>
+                <!--
+                <div class="form-group">
+                    <label for="inputAddress2">RENAVAN</label>
+                    <input type="text" class="form-control" id="" placeholder="RENAVAN" disabled>
+                </div>
+                -->
             </div>
         </div>
         @endif
