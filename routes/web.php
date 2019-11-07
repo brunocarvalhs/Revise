@@ -52,8 +52,8 @@ Route::group(['middleware' => 'Fisico'], function () {
     Route::get('/Home/Veiculos','controllerFisico@LerVeiculos');//Ler
     Route::post('/Home/Veiculos','controllerFisico@CriarVeiculos')->name('veiculo');//Criar
     Route::put('/Home/Veiculos','controllerFisico@AlterarVeiculos');//Alterar
-    Route::delete('/Home/Veiculo', 'controllerFisico@DeletarVeiculos');//Deletar
-    Route::get('/Home/Veiculo/{placa?}','controllerVeiculo@DetalhesVeiculo');
+    Route::delete('/Home/Veiculos', 'controllerFisico@DeletarVeiculos');//Deletar
+    Route::get('/Home/Veiculos/{placa?}','controllerVeiculo@DetalhesVeiculo');
     Route::get('/Home/Quilometragem/{Placa?}','controllerVeiculo@InserirQuilometragem')->name('quilomatragem');
     // * Anuncios
     Route::get('/Home/Anuncio','controllerAnuncio@PesquisaFisico')->name('pesquisa');;//Ler
