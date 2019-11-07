@@ -160,7 +160,6 @@
             </div>
         </div>
         @component('componentes.checklist')
-            @yield('link',url('/Home/Veiculos').'/'.$Dados->placa)
             @yield('placa',$Dados->placa)
         @endcomponent
         @else
