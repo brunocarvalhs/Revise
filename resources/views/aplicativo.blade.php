@@ -53,7 +53,6 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <!--src="{{ asset('img/imagem.png') }}"-->
                 <img id="imgRequisito" src="{{ asset('img/Imagem_iphone.png') }}" class="AppSmart pl-5">
             </div>
         </div>
@@ -268,10 +267,10 @@
     new WOW().init();
     $(document).ready(function () {
         $("#IOS").click(function () {
-            $("#imgRequisito").attr('src', 'img/iphone8spacegrey_landscape.png');
+            $("#imgRequisito").attr('src', '{{asset("img/iphone8spacegrey_landscape.png")}}');
         });
         $('#android').click(function () {
-            $("#imgRequisito").attr('src', 'img/nexus5x-landscape.png');
+            $("#imgRequisito").attr('src', '{{asset("img/nexus5x-landscape.png")}}');
         });
     });
 </script>
