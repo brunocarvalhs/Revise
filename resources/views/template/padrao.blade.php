@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Revise - @yield('titulo')</title>
     <link rel="shortcut icon" href="{{asset('img/logo.ico')}}                     " />
-    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="/vendor/twbs/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet"/>
+    <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="{{asset('css/sistema.css')}}     ">
     <link rel="stylesheet" type="text/css" href="{{asset('css/animate.min.css')}} ">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu|Cairo|Rubik&display=swap" rel="stylesheet">
