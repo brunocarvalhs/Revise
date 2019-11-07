@@ -52,7 +52,7 @@ Route::group(['middleware' => 'Fisico'], function () {
     Route::get('/Home/Veiculos','controllerVeiculo@LerVeiculos');//Ler
     Route::post('/Home/Veiculos','controllerVeiculo@CriarVeiculos')->name('veiculo');//Criar
     Route::put('/Home/Veiculos','controllerVeiculo@AlterarVeiculos');//Alterar
-    Route::delete('/Home/Veiculos/{placa?}', 'controllerVeiculo@DeletarVeiculos');//Deletar
+    Route::delete('/Home/Veiculos/{placa?}', 'controllerVeiculo@DeletarVeiculo');//Deletar
     Route::get('/Home/Veiculos/{placa?}','controllerVeiculo@DetalhesVeiculo');
     Route::get('/Home/Quilometragem/{Placa?}','controllerVeiculo@InserirQuilometragem')->name('quilomatragem');
     // * Anuncios
