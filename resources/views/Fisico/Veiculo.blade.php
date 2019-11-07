@@ -133,10 +133,6 @@
                         <input type="text" class="form-control" id="" placeholder="Cor" disabled value="{{$Dados->cor}}">
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="inputAddress2">RENAVAN</label>
-                    <input type="text" class="form-control" id="" placeholder="RENAVAN" disabled>
-                </div>
                 <div class="form-row row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
                         <div class="row">
