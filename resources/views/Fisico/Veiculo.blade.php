@@ -106,7 +106,7 @@
                     data-target="#modalLoginForm">Adicionar</button>
             </div>
         </div>
-        @if ($Dados)
+        @if (isset($Dados))
         <div class="row">
             <div class="col-12 card shadow p-3 bg-white rounded">
                 <div class="form-row">

@@ -19,7 +19,9 @@ class controllerVeiculo extends Controller
         $modelFisico = session()->get('Fisico');
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);
-        return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos, 'Dados' => $Veiculos]);
+        $Veiculo = $modelVeiculo->DetalhesDoVeiculo($request->placa);
+        $Veiculo = json_decode($Veiculo);
+        return view('Fisico\Veiculo',['Fisico' => $modelFisico, 'Veiculos' => $Veiculos, 'Dados' => $Veiculo]);
     }
 
     public function AdicionarVeiculo(Request $request,modelVeiculo $modelVeiculo, $usuario){
