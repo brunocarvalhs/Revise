@@ -45,6 +45,8 @@
                             <div class="p-1">
                                 @component('componentes.notificacao')
                                     @slot('Nome',$Notificacao->nm_peca)
+                                    @slot('Id',$Notificacao->cd_check)
+                                    @slot('Data',$Notificacao->dt_check)
                                 @endcomponent
                             </div>
                         @endforeach
@@ -58,4 +60,25 @@
 
 @section('script')
 @include('componentes.quilometragem')
+<script>
+function validarNotificacap(){
+    Swal.fire({
+        title: 'A peça foi verificada ou trocada?',
+        text: "You won't be able to revert this!",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim'
+    }).then((result) => {
+        if (result.value) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    });
+    return false;
+}
+</script>
 @endsection
