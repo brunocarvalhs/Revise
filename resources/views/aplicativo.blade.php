@@ -53,7 +53,7 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <img id="imgRequisito" src="{{ asset('img/Imagem_iphone.png') }}" class="AppSmart pl-5">
+                <img id="imgRequisito" src="{{ asset('img/appimg.png') }}" class="AppSmart pl-5">
             </div>
         </div>
     </div>
