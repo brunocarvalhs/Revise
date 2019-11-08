@@ -112,13 +112,13 @@
                                 <div class="row DownloadApp center">
                                     <div
                                         class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
-                                        <a href="">
+                                        <a href="{{ url('/Download/android') }}">
                                             <img src="{{asset('img/button_download_android.png')}}" class="">
                                         </a>
                                     </div>
                                     <div
                                         class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 iconAppDownload center margem">
-                                        <a href="">
+                                        <a href="{{ url('/Download/ios') }}">
                                             <img src="{{asset('img/button_download_ios.png')}}" class="">
                                         </a>
                                     </div>
