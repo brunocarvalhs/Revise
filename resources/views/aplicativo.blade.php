@@ -6,30 +6,30 @@
 
 @section('conteudo')
 <section class="bg-dark pt-3">
-        <div class="container">
-            <br>
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 align-self-start">
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 align-self-start">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 TituloAplicativoIntroducao">
-                                <h1 class="tituloBranco Titulo espaco">
+                                <h1 class="tituloBranco pt-3 espaco">
                                     Revise App
                                 </h1>
                             </div>
                             <div class="col-12">
-
+                    
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-0 col-sm-0 col-md-12 col-lg-6 col-xl-6">
-                    <img src="{{ asset('img/app.png') }}" class="smartphoneIntroducao wow bounceInRight"
-                        data-wow-duration="1.5s">
-                </div>
+            </div>
+            <div class="col-0 col-sm-0 col-md-12 col-lg-6 col-xl-6">
+                <img src="{{ asset('img/app.png') }}" class="smartphoneIntroducao wow bounceInRight mt-5" data-wow-duration="1.5s">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <section class="bg-light" id="sobre">
     <div class="container">
         <div class="row">
