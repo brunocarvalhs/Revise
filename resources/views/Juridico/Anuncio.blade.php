@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col">
              <button class="btn btn-dark btn-rounded text-right" data-toggle="modal"
-    data-target="#modalLoginForm">Novo Anuncio</button>
+    data-target="#modalLoginForm">Novo Anúncio</button>
         </div>
     </div>
 </div>
@@ -30,7 +30,7 @@
             <thead class="shadow">
                 <tr>
                     <th scope="col"></th>
-                    <th scope="col">Titulo</th>
+                    <th scope="col">Título</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Data de Publicação</th>
                     <th scope="col">Validade</th>
