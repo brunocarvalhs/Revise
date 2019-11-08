@@ -57,11 +57,11 @@
             <div class="divLogin imagemLogin col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-self-center ">
                 <div class="row">
                     <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-7 padding">
-
-                        <svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
-                            <path d="M20 30 L8 16 20 2" />
-                        </svg>
-
+                        <a href="{{ route('iwillbeback') }}">
+                            <svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                                <path d="M20 30 L8 16 20 2" />
+                            </svg>
+                        </a>
                     </div>
                     <div class="col-0 col-sm-0 col-md-0 col-lg-12 col-xl-5 background">
                         @yield('login')
