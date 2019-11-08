@@ -13,7 +13,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 TituloAplicativoIntroducao">
-                                <h1 class="tituloBranco pt-3 espaco">
+                                <h1 class="tituloBranco Titulo espaco">
                                     Revise App
                                 </h1>
                             </div>
