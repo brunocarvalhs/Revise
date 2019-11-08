@@ -10,7 +10,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <h1>Pagina não encontrada</h1>
+            <h1>Página não encontrada</h1>
         </div>
     </div>
 </div>
