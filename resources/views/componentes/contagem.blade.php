@@ -1,20 +1,32 @@
-<div>
-    <a href="#" class="list-group-item list-group-item-action shadow-sm">
-        <div class="row">
-            <div class="col-12">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">Filtro de ar</h5>
-                    <small>Hoje</small>
-                </div>
-                <p class="mb-1">
-                    Opa, Chegou a hora da troca!
-                </p>
-                <p>
-                    Que tal já realizar suas pesquisas?Faça isso em Serviços e Produtos.
-                </p>
-                <progress class="mt-3 progress is-medium" value="45" max="100">45%</progress>
-                <progress class="mt-3 progress is-medium" value="45" max="100">45%</progress>
+<div class="bg-ligth card shadow" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <img src="{{ asset('img/logo.png')}}" width="20" height="20" class="rounded mr-2" alt="...">
+        <strong class="mr-auto">{{ $Nome }} ({{ $Placa }})</strong>
+        <small class="text-muted"></small>
+    </div>
+    <div class="toast-body bg-ligth">
+        @if ($Quilometragem >= 5000)
+            <div class="form-group">
+                <label for="disabledTextInput">Quilometragem - {{round($Porcentagem,2)}}%</label>
+                    @if($Porcentagem >= 90)
+                        <progress class="progress is-medium is-danger" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
+                    @elseif($Porcentagem >= 50)
+                        <progress class="progress is-medium is-warning" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
+                    @else
+                        <progress class="progress is-medium" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
+                    @endif
             </div>
-        </div>
-    </a>
+        @else
+            <div class="form-group">
+                <label for="disabledTextInput">Tempo - {{round($Porcentagem,2)}}%</label>
+                    @if($Porcentagem >= 90)
+                        <progress class="progress is-medium is-danger" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
+                    @elseif($Porcentagem >= 50)
+                        <progress class="progress is-medium is-warning" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
+                    @else
+                            <progress class="progress is-medium" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
+                    @endif
+            </div>
+        @endif
+    </div>
 </div>

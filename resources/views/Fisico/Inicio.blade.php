@@ -18,7 +18,10 @@
                     <div class="row p-1">
                         <div class="col-12">
                             @component('componentes.contagem')
-
+                                @slot('Nome',$Andamento->nm_peca)
+                                @slot('Placa',$Andamento->cd_placa)
+                                @slot('Quilometragem',$Andamento->qt_medida)
+                                @slot('Porcentagem', ((($Andamento->qt_pecorrido - $Andamento->qt_medida) / $Andamento->qt_pecorrido ) * 100) )
                             @endcomponent
                         </div>
                     </div>

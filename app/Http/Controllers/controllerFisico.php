@@ -44,7 +44,7 @@ class controllerFisico extends Controller
         $modelFisico = session()->get('Fisico');
         $Notificacao = $modelCheck->listaNotificacoes($modelFisico->getIdUsuario());
         $Notificacao = json_decode($Notificacao);
-        $Andamento = $modelCheck->listaNotificacao($modelFisico->getIdUsuario());
+        $Andamento = $modelCheck->listaPecasVerificados($modelFisico->getIdUsuario());
         $Andamento = json_decode($Andamento);
         $Veiculos = $controllerUsuario->ListaVeiculosDoUsuario($modelFisico);
         $Veiculos = json_decode($Veiculos);

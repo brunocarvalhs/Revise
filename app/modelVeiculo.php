@@ -423,6 +423,28 @@ class modelVeiculo extends Model
                     'qt_pecorrido' => $resultado
                     ]
                 );
+                //Pecas com maior quilometragem
+                $pecas = DB::table('tb_medida_peca')
+                ->select(DB::raw('cd_peca'))
+                ->where([
+                    ['qt_medida', '>', $resultado],
+                    ['sg_medida', '=', 'km']
+                ])
+                ->groupBy('cd_peca')
+                ->get();
+                //Insert de peças com maior quilometragem
+                foreach($pecas as $peca){
+                    //Auto inclemente do ID check
+                    $id = DB::table('tb_check')->max('cd_check') + 1;
+                    //Insert CHECK das peça vencida
+                    DB::table('tb_check')->insert([
+                        'cd_check' => $id,
+                        'dt_check' => date("Y-m-d"),
+                        'cd_veiculo' => $idVeiculo,
+                        'sg_status' => 'B',
+                        'cd_peca' => $peca->cd_peca
+                    ]);
+                }
                 return true;
             }
             else{
