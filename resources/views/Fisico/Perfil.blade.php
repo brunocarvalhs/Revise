@@ -69,9 +69,7 @@
                                 <select class="custom-select" id="txtPlano" name="txtPlano"
                                     aria-label="Exemplo de select com botão addon" hidden>
                                     <option value="">Basic</option>
-                                    <option value="">Standart</option>
-                                    <option value="">Profission</option>
-                                    <option value="">Deluxe Edition</option>
+                                    <option value="">Gold</option>
                                 </select>
                             </div>
                         </div>

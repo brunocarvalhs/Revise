@@ -16,12 +16,6 @@
 
 @section('sistema_juridico')
 <div class="card perfil">
-    <div class="card-up lighten-1 PerfilCard perfilBackgroud"></div>
-    <div class="avatar mx-auto row">
-        <div class="col">
-            <img src="{{ asset('img/user.jpg') }}" width="250" height="250" class="rounded-circle" alt="woman avatar">
-        </div>
-    </div>
     <div class="card-body">
         <div class="card-body">
             <form action="" method="POST" onsubmit="">
@@ -96,7 +90,7 @@
                 <br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: block;" id="btn_off">
-                        <button type="button" class="btn btn-outline-warning btn-block" onclick="btnPerfil()">Alterar
+                        <button type="button" class="btn btn-warning btn-block" onclick="btnPerfil()">Alterar
                             dados</button>
                     </div>
                     <!--Botões escondidos-->
