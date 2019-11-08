@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="col-0 col-sm-0 col-md-12 col-lg-6 col-xl-6">
-                <img src="{{ asset('img/app.png') }}" class="smartphoneIntroducao wow bounceInRight" data-wow-duration="1.5s">
+                <img src="{{ asset('img/app.png') }}" class="smartphoneIntroducao wow bounceInRight mt-5" data-wow-duration="1.5s">
             </div>
         </div>
     </div>
