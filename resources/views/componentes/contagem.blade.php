@@ -1,4 +1,3 @@
-@if($Porcentagem >= 0)
 <div class="bg-ligth card shadow" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
         <img src="{{ asset('img/logo.png')}}" width="20" height="20" class="rounded mr-2" alt="...">
@@ -31,4 +30,3 @@
         @endif
     </div>
 </div>
-@endif
