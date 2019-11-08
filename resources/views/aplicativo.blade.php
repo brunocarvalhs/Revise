@@ -25,8 +25,6 @@
                 </div>
             </div>
         </div>
-
-    </div>
     </div>
 </section>
 <section class="bg-light" id="sobre">

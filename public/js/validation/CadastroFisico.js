@@ -1,15 +1,4 @@
-$("#CadastroFisico").validate();
-
-var data = new Date();
-
-var dd = data.getDate();
-var mm = data.getMonth() + 1; //January is 0!
-var yy = data.getFullYear();
-
 $(document).ready(function () {
-
-    var max = (yy - 18) + '-' + mm + '-' + dd;
-    var min = (yy - 65) + '-' + mm + '-' + dd;
 
     $("#txtnome").change(function () {
         document.getElementById("txtnome").setAttribute('class', "form-control");
@@ -45,13 +34,8 @@ $(document).ready(function () {
 
 function ValidarCadastroFisico() {
     var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    var date = new Date();
     var logErro = 0;
     var Data = document.getElementById("txtNascimento").value;
-    var ano = Data.split("-");
-    var ano4 = date.getFullYear();
-    var idade = ano4 - ano[0];
-
 
     if (document.CadastroFisico.txtnome.value == '') {
         alert('O campo nome completo está vazio.');
@@ -134,6 +118,7 @@ function ValidarCadastroFisico() {
         alert('Selecione um plano.');
         logErro = 1;
     }
+
 
     if (logErro != 0) {
         logErro = 0;

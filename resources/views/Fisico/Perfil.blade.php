@@ -14,6 +14,12 @@
 
 @section('sistema_fisico')
 <div class="card perfil">
+    <div class="card-up lighten-1 PerfilCard perfilBackgroud"></div>
+    <div class="avatar mx-auto row">
+        <div class="col">
+            <img src="{{ asset('img/user.jpg') }}" width="250" height="250" class="rounded-circle" alt="woman avatar">
+        </div>
+    </div>
     <div class="card-body">
         <div class="card-body">
             <form action="" method="POST" onsubmit="">
@@ -122,25 +128,26 @@
                     </thead>
                     <tbody class="mt-5">
                         @foreach ($Mensalidades as $Mensalidade)
-                            <tr>
-                                <td scope="row">
-                                <form action="{{ url('/Painel/Anuncios',['boleto' => $Mensalidade->ID]) }}" method="POST">
-                                <td>{{ $Mensalidade->mes }}</td>
-                                <td>{{ $Mensalidade->vencimento }}</td>
-                                <td>R$ {{ $Mensalidade->valor }}</td>
-                                @if($Mensalidade->estado > 0)
-                                    <td>Em Aberto</td>
-                                @else
-                                    <td>Vencido</td>
-                                @endif
-                                <td class="actions">
-                                @if($Mensalidade->estado <= 0)
-                                    <button type="submit" class="btn btn-danger">Gerar Boleto</button>
+                        <tr>
+                            <td scope="row">
+                                <form action="{{ url('/Painel/Anuncios',['boleto' => $Mensalidade->ID]) }}"
+                                    method="POST">
+                            <td>{{ $Mensalidade->mes }}</td>
+                            <td>{{ $Mensalidade->vencimento }}</td>
+                            <td>R$ {{ $Mensalidade->valor }}</td>
+                            @if($Mensalidade->estado > 0)
+                            <td>Em Aberto</td>
+                            @else
+                            <td>Vencido</td>
+                            @endif
+                            <td class="actions">
+                                @if($Mensalidade->estado <= 0) <button type="submit" class="btn btn-danger">Gerar
+                                    Boleto</button>
                                     @method('POST')
                                     @csrf
-                                @endif
-                                </form>
-                            </tr>
+                                    @endif
+                                    </form>
+                        </tr>
                         @endforeach
                     </tbody>
                 </table>
