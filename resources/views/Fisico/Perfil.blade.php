@@ -14,12 +14,6 @@
 
 @section('sistema_fisico')
 <div class="card perfil">
-    <div class="card-up lighten-1 PerfilCard perfilBackgroud"></div>
-    <div class="avatar mx-auto row">
-        <div class="col">
-            <img src="{{ asset('img/user.jpg') }}" width="250" height="250" class="rounded-circle" alt="woman avatar">
-        </div>
-    </div>
     <div class="card-body">
         <div class="card-body">
             <form action="" method="POST" onsubmit="">

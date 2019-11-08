@@ -21,14 +21,14 @@ class controllerVeiculo extends Controller
                     $cadastro = $controllerVeiculo->AdicionarVeiculo($request, $modelVeiculo, $modelFisico);
                 }
                 else{
-                    $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Sua garagem está cheia, seu limite maximo de veículos no seu plano foi preenchido, caso queira registra mais veículos terá que mudar de plano na pagina de perfil, cobrando valor mensal.']);
+                    $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Venha ser Gold e cadastre mais carros!']);
                 }
             }
             else{
-                $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Modelo e Marca não suportado pelo Revise.']);
+                $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Modelo e Marca não suportado!']);
             }
         } else {
-            $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
+            $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Preencha os campos em branco!']);
         }
         $cadastro = json_decode($cadastro);
         return redirect()->back()->with('Cadastro', $cadastro);

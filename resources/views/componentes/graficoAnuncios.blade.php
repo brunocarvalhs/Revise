@@ -17,7 +17,7 @@
                     data: {
                         labels: Anuncio,
                         datasets: [{
-                            label: 'Popularidade do Anuncio',
+                            label: 'Popularidade do Anúncio',
                             data: Acessos,
                             borderWidth: 1,
                             backgroundColor: 'rgba(255, 193, 7, 0.9)'//Amarelo

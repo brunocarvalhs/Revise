@@ -99,7 +99,7 @@ function btnPerfil() {
 }
 
 function Salvar() {
-    swal("Suas alterações foram salvas com sucesso", {
+    swal("Suas alterações foram salvas com sucesso!", {
             icon: "success",
             buttons: {
                 catch: {
