@@ -117,23 +117,23 @@
                                     </tr>
                                     <tr>
                                         <td>Notificação</td>
-                                        <td>2 carros</td>
-                                        <td>+ de 2</td>
+                                        <td>1 carro</td>
+                                        <td>3 carros</td>
                                     </tr>
                                     <tr>
                                         <td>Perfil</td>
-                                        <td>Contém</td>
-                                        <td>Contém</td>
+                                        <td>Sim</td>
+                                        <td>Sim</td>
                                     </tr>
                                     <tr>
                                         <td>Acesso aos veículos pelo aplicativo</td>
-                                        <td> 2 carros</td>
-                                        <td> + de 2 </td>
+                                        <td>Sim</td>
+                                        <td>Sim</td>
                                     </tr>
                                     <tr>
-                                        <td>Suporte scanner OBD</td>
-                                        <td> --- </td>
-                                        <td> Contém </td>
+                                        <td>Suporte scanner OBD2</td>
+                                        <td>Não</td>
+                                        <td>Sim </td>
                                     </tr>
                                 </table>
                             </div>
@@ -183,23 +183,23 @@
                                         </tr>
                                         <tr>
                                             <td>Notificação</td>
-                                            <td> 2 carros</td>
-                                            <td> + de 2</td>
+                                            <td>1 carro</td>
+                                            <td>3 carros</td>
                                         </tr>
                                         <tr>
                                             <td>Perfil</td>
-                                            <td>Contém</td>
-                                            <td>Contém</td>
+                                            <td>Sim</td>
+                                            <td>Sim</td>
                                         </tr>
                                         <tr>
-                                            <td>Acesso dos veículos pelo aplicativo</td>
-                                            <td> 2 carros</td>
-                                            <td> + de 2</td>
+                                            <td>Acesso aos veículos pelo aplicativo</td>
+                                            <td>Sim</td>
+                                            <td>Sim</td>
                                         </tr>
                                         <tr>
-                                            <td>Suporte scanner OBD</td>
-                                            <td> --- </td>
-                                            <td> Contém</td>
+                                            <td>Suporte scanner OBD2</td>
+                                            <td>Não</td>
+                                            <td>Sim </td>
                                         </tr>
                                     </table>
                                 </div>
