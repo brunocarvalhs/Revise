@@ -46,7 +46,7 @@
     </script>
 </head>
 
-<body class="centralizar">
+<body class="centralizar p-2">
     <div class="container menu">
         <div class="row justify-content-center">
             <div class="divLogin imagemLogin col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 align-self-center ">
