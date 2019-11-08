@@ -8,20 +8,16 @@
 <section class="bg-dark">
     <div class="container">
         <br>
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 align-self-start">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 TituloAplicativoIntroducao">
-                            <h1 class="tituloBranco Titulo espaco">
-                                Revise App
-                            </h1>
-                        </div>
-                        <div class="col-0 col-sm-0 col-md-12 col-lg-6 col-xl-6">
-                            <img src="{{ asset('img/app.png') }}" class="smartphoneIntroducao wow bounceInRight mt-5"
-                                data-wow-duration="1.5s">
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 TituloAplicativoIntroducao">
+                    <h1 class="tituloBranco Titulo espaco display-4">
+                        Revise App
+                    </h1>
+                </div>
+                <div class="col-0 col-sm-0 col-md-12 col-lg-4 col-xl-4">
+                    <img src="{{ asset('img/app.png') }}" class="smartphoneIntroducao wow bounceInRight mt-5"
+                        data-wow-duration="1.5s">
                 </div>
             </div>
         </div>
