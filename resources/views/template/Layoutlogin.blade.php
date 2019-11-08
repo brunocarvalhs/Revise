@@ -48,6 +48,9 @@
         svg {
             color: white;
         }
+        svg:hover{
+            filter: blur(20px);
+        }
     </style>
 </head>
 
