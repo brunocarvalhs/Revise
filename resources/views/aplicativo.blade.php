@@ -10,7 +10,7 @@
         <br>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 TituloAplicativoIntroducao">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 TituloAplicativoIntroducao">
                     <h1 class="tituloBranco Titulo espaco display-4">
                         Revise App
                     </h1>
