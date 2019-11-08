@@ -74,7 +74,7 @@
         <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
             <div class="MultiCarousel-inner">
                 @foreach ($Veiculos as $Veiculo)
-                <a href="{{ url('/Home/Veiculo') }}/{{ $Veiculo->placa }} ">
+                <a href="{{ url('/Home/Veiculos') }}/{{ $Veiculo->placa }} ">
                     <div class="item">
                         <div class="pad15 shadow-sm bg-light rounded">
                             <p class="lead">{{ $Veiculo->placa }}</p>
@@ -106,17 +106,79 @@
                     data-target="#modalLoginForm">Adicionar</button>
             </div>
         </div>
-        <div class="row">
+        @if (isset($Dados))
+        <div class="row mb-2">
             <div class="col-12 card shadow p-3 bg-white rounded">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Placa</label>
-                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled>
+                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled value="{{$Dados->placa}}">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputPassword4">Modelo / Marca</label>
-                        <input type="text" class="form-control" placeholder="Modelo / Marca" disabled>
+                        <label for="inputPassword4">Modelo</label>
+                        <input type="text" class="form-control" placeholder="Modelo" disabled value="{{$Dados->modelo}}">
                     </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword4">Marca</label>
+                    <input type="text" class="form-control" placeholder="Modelo" disabled value="{{$Dados->marca}}">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress">Ano</label>
+                        <input type="text" class="form-control" id="" placeholder="Ano" data-mask='0000' disabled value="{{$Dados->ano}}">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputAddress">Cor</label>
+                        <input type="text" class="form-control" id="" placeholder="Cor" disabled value="{{$Dados->cor}}">
+                    </div>
+                </div>
+                <!--
+                <div class="form-group">
+                    <label for="inputAddress2">RENAVAN</label>
+                    <input type="text" class="form-control" id="" placeholder="RENAVAN" disabled>
+                </div>
+                -->
+                <div class="form-row row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <button class="btn btn-lg btn-block btn-success" data-toggle="modal" data-target="#modelChecklist">Checklist</button>
+                                </div>
+                            </div>
+                            <form action="{{ url('/Home/Veiculos') }}/{{ $Dados->placa }}" method="POST" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                                <div class="form-group">
+                                    <button value="{{$Dados->id}}" class="btn btn-lg btn-block btn-danger">Delete</button>
+                                </div>
+                                @method('delete')
+                                @csrf
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @component('componentes.checklist')
+            @slot('link',url('/Home/Veiculos').'/'.$Dados->placa)
+            @slot('placa',$Dados->placa)
+        @endcomponent
+        @else
+        <div class="row mb-2">
+            <div class="col-12 card shadow p-3 bg-white rounded">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Placa</label>
+                        <input type="text" class="form-control" placeholder="Placa" data-mask='AAA-0000' disabled >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Modelo</label>
+                        <input type="text" class="form-control" placeholder="Modelo" disabled >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword4">Marca</label>
+                    <input type="text" class="form-control" placeholder="Modelo" disabled>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -125,41 +187,18 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputAddress">Cor</label>
-                        <input type="text" class="form-control" id="" placeholder="Cor" data-mask='0000' disabled>
+                        <input type="text" class="form-control" id="" placeholder="Cor" disabled>
                     </div>
                 </div>
+                <!--
                 <div class="form-group">
                     <label for="inputAddress2">RENAVAN</label>
                     <input type="text" class="form-control" id="" placeholder="RENAVAN" disabled>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-8">
-                        <label for="inputCity">Cidade</label>
-                        <input type="text" class="form-control" placeholder="Cidade" id="" disabled>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputEstado">Estado</label>
-                        <input type="text" class="form-control" placeholder="Estado" id="" disabled>
-                    </div>
-                </div>
-                <div class="form-row row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
-                        <div class="row">
-                            <form action="" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                                <div class="form-group">
-                                    <button class="btn btn-lg btn-block btn-success">Checklist</button>
-                                </div>
-                            </form>
-                            <form action="" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                                <div class="form-group">
-                                    <button class="btn btn-lg btn-block btn-danger">Delete</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                -->
             </div>
         </div>
+        @endif
     </div>
     @endsection
 
@@ -280,23 +319,38 @@
 
 
     @section('mensagem')
-    @if(session()->has('Cadastro'))
-    @if(session()->get('Cadastro')->Status)
-    @component('componentes.alert')
-    @slot('titulo','SUCESSO')
-    @slot('icone','success')
-    @slot('mensagem')
-    {{ session()->get('Cadastro')->Mensagem }}
-    @endslot
-    @endcomponent
-    @else
-    @component('componentes.alert')
-    @slot('titulo','ERRO')
-    @slot('icone','error')
-    @slot('mensagem')
-    {{ session()->get('Cadastro')->Mensagem }}
-    @endslot
-    @endcomponent
-    @endif
-    @endif
+        @if(session()->has('Cadastro'))
+            @if(session()->get('Cadastro')->Status)
+                @component('componentes.alert')
+                    @slot('titulo','SUCESSO')
+                    @slot('icone','success')
+                    @slot('mensagem')
+                    {{ session()->get('Cadastro')->Mensagem }}
+                    @endslot
+                @endcomponent
+            @else
+                @component('componentes.alert')
+                    @slot('titulo','ERRO')
+                    @slot('icone','error')
+                    @slot('mensagem')
+                    {{ session()->get('Cadastro')->Mensagem }}
+                    @endslot
+                @endcomponent
+            @endif
+        @endif
+        @if(session()->has('delete'))
+            @if(session()->get('delete'))
+                @component('componentes.alert')
+                    @slot('titulo','SUCESSO')
+                    @slot('icone','success')
+                    @slot('mensagem','Veículo deletado com sucesso')
+                @endcomponent
+            @else
+                @component('componentes.alert')
+                    @slot('titulo','ERRO')
+                    @slot('icone','error')
+                    @slot('mensagem','Ocorreu um erro ao tentar deletado o veículo')
+                @endcomponent
+            @endif
+        @endif
     @endsection

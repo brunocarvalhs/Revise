@@ -156,6 +156,15 @@
                     </div>
                 </div>
             </div>
+            <!-- Termos de uso -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Aceito os <a href="" data-toggle="modal" data-target="#modalTermoDeUso" >Termos de uso</a></label>
+                    </div>
+                </div>
+            </div>
             <!--Botão-->
             <br><br>
             <div class="row">
@@ -167,6 +176,8 @@
     </div>
     </form>
 </section>
+@component('componentes.termosdeuso')
+@endcomponent
 @endsection
 
 @section('script')
@@ -176,26 +187,26 @@
 @endsection
 
 @section('mensagem')
-@if(session()->has('Cadastro'))
-@if(session()->get('Cadastro')->Status)
-@component('componentes.alert')
-@slot('titulo','SUCESSO')
-@slot('icone','success')
-@slot('mensagem')
-{{ session()->get('Cadastro')->Mensagem }}
-@endslot
-@endcomponent
-<script>
-    window.location.href = '/public/SignIn';
-</script>
-@else
-@component('componentes.alert')
-@slot('titulo','ERRO')
-@slot('icone','error')
-@slot('mensagem')
-{{ session()->get('Cadastro')->Mensagem }}
-@endslot
-@endcomponent
-@endif
-@endif
+    @if(session()->has('Cadastro'))
+        @if(session()->get('Cadastro')->Status)
+            @component('componentes.alert')
+                @slot('titulo','SUCESSO')
+                @slot('icone','success')
+                @slot('mensagem')
+                {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+            <script>
+                window.location.href = '/public/SignIn';
+            </script>
+        @else
+            @component('componentes.alert')
+                @slot('titulo','ERRO')
+                @slot('icone','error')
+                @slot('mensagem')
+                {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+        @endif
+    @endif
 @endsection

@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="col-0 col-sm-0 col-md-12 col-lg-6 col-xl-6">
-                <img src="./Views/img/app.png" class="smartphoneIntroducao wow bounceInRight" data-wow-duration="1.5s">
+                <img src="{{ asset('img/app.png') }}" class="smartphoneIntroducao wow bounceInRight" data-wow-duration="1.5s">
             </div>
         </div>
     </div>
@@ -53,8 +53,7 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <!--src="{{ asset('img/imagem.png') }}"-->
-                <img id="imgRequisito" src="./Views/img/Imagem_iphone.png" class="AppSmart pl-5">
+                <img id="imgRequisito" src="{{ asset('img/Imagem_iphone.png') }}" class="AppSmart pl-5">
             </div>
         </div>
     </div>
@@ -210,7 +209,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <img id="imgRequisito" src="./Views/img/nexus5x-landscape.png" class="AppSmart">
+                <img id="imgRequisito" src="{{ asset('img/AppRevise.png') }}" class="AppSmart">
             </div>
         </div>
     </div>
@@ -264,15 +263,5 @@
 @endsection
 
 @section('script')
-<script>
-    new WOW().init();
-    $(document).ready(function () {
-        $("#IOS").click(function () {
-            $("#imgRequisito").attr('src', 'img/iphone8spacegrey_landscape.png');
-        });
-        $('#android').click(function () {
-            $("#imgRequisito").attr('src', 'img/nexus5x-landscape.png');
-        });
-    });
-</script>
+
 @endsection

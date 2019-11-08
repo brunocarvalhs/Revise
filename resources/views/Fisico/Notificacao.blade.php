@@ -26,6 +26,9 @@
                         <div class="m-1 p-3">
                             @component('componentes.notificacao')
                                 @slot('Nome',$item->nm_peca)
+                                @slot('Placa',$item->cd_placa)
+                                @slot('Id',$item->cd_check)
+                                @slot('Data',$item->dt_check)
                             @endcomponent
                         </div>
                     @endforeach

@@ -62,11 +62,13 @@
                                 </div>
                             </div>
                             <div class="form-row pt-3">
+                                <!--
                                 <div class="col">
                                     <label for="disabledTextInput">RENAVAN</label>
                                     <input type="text" class="form-control" id="txtRenavan" name="txtRenavan"
                                         placeholder="">
                                 </div>
+                                -->
                                 <div class="col">
                                     <label for="disabledTextInput">Quilometragem</label>
                                     <input type="text" class="form-control" id="txtQuilometragem" name="txtQuilometragem" data-mask="000000000"

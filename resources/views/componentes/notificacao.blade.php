@@ -1,14 +1,21 @@
-<div>
-    <a href="{{ route('pesquisa') }}?pesquisa={{ urlencode($Nome) }}&tipo=&preco=" class="list-group-item list-group-item-action active">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">{{ $Nome }}</h5>
-            <small>Hoje</small>
-        </div>
-        <p class="mb-1">
-            Opa, Chegou a hora da troca!
-        </p>
-        <p>
-            Que tal já realizar suas pesquisas?Faça isso em Serviços e Produtos.
-        </p>
-    </a>
+<div class="bg-ligth card shadow" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <img src="{{ asset('img/logo.png')}}" width="20" height="20" class="rounded mr-2" alt="...">
+        <strong class="mr-auto">{{ $Nome }} ({{$Placa}})</strong>
+        <small class="text-muted">{{ $Data }}</small>
+        <form action="" onsubmit="return validarNotificacap();" method="POST">
+            <button type="submit" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            @csrf
+            @method('delete')
+        </form>
+    </div>
+    <div class="toast-body bg-ligth">
+        Opa, Chegou a hora da verificar o {{ $Nome }}!<br><br>
+        Que tal já realizar suas pesquisas?Faça isso em Serviços e Produtos.<br>
+        <a href="{{ route('pesquisa') }}?pesquisa={{ urlencode($Nome) }}&tipo=&preco=">
+            <button class="btn btn-success mt-3">Pesquisar</button>
+        </a>
+    </div>
 </div>

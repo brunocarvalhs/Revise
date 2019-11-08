@@ -283,7 +283,7 @@ class modelVeiculo extends Model
     }
 
 
-    public function DetalhesDoVeiculo($id)
+    public function DetalhesDoVeiculo($placa,$idUsuario)
     {
         /*
         SELECT
@@ -298,12 +298,18 @@ class modelVeiculo extends Model
                 AND v.cd_veiculo = ?
         */
 
-        DB::table('tb_veiculo')
-            ->join('tb_modelo', 'tb_veiculo.cd_modelo', '=', 'tb_modelo.cd_modelo')
-            ->join('tb_marca', 'tb_modelo.cd_marca', '=', 'tb_marca.cd_marca')
-            ->select('tb_veiculo.cd_placa', 'tb_modelo.nm_modelo', 'tb_marca.nm_marca', 'tb_veiculo.nm_cor', 'tb_veiculo.aa_veiculo')
-            ->where('tb_veiculo.cd_veiculo', '=', $id)
-            ->first();
+        $dados = DB::table('tb_veiculo')
+                    ->join('tb_modelo', 'tb_veiculo.cd_modelo', '=', 'tb_modelo.cd_modelo')
+                    ->join('tb_marca', 'tb_modelo.cd_marca', '=', 'tb_marca.cd_marca')
+                    ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_veiculo.cd_usuario')
+                    ->select('tb_veiculo.cd_veiculo as id','tb_veiculo.cd_placa as placa', 'tb_modelo.nm_modelo as modelo', 'tb_marca.nm_marca as marca', 'tb_veiculo.nm_cor as cor', 'tb_veiculo.aa_veiculo as ano')
+                    ->where([
+                        ['tb_veiculo.cd_placa', '=', $placa],
+                        ['tb_veiculo.cd_usuario','=',$idUsuario]
+                    ])
+                    ->first();
+
+        return json_encode($dados);
     }
 
 
@@ -417,6 +423,28 @@ class modelVeiculo extends Model
                     'qt_pecorrido' => $resultado
                     ]
                 );
+                //Pecas com maior quilometragem
+                $pecas = DB::table('tb_medida_peca')
+                ->select(DB::raw('cd_peca'))
+                ->where([
+                    ['qt_medida', '>', $resultado],
+                    ['sg_medida', '=', 'km']
+                ])
+                ->groupBy('cd_peca')
+                ->get();
+                //Insert de peças com maior quilometragem
+                foreach($pecas as $peca){
+                    //Auto inclemente do ID check
+                    $id = DB::table('tb_check')->max('cd_check') + 1;
+                    //Insert CHECK das peça vencida
+                    DB::table('tb_check')->insert([
+                        'cd_check' => $id,
+                        'dt_check' => date("Y-m-d"),
+                        'cd_veiculo' => $idVeiculo,
+                        'sg_status' => 'B',
+                        'cd_peca' => $peca->cd_peca
+                    ]);
+                }
                 return true;
             }
             else{
@@ -430,5 +458,38 @@ class modelVeiculo extends Model
     public function QuantidadeVeiculosConta($idUsuario){
         $numero_veiculos = DB::table('tb_veiculo')->where('cd_usuario','=',$idUsuario)->count();
         return ($numero_veiculos);
+    }
+
+    public function Deletar($placa,$idUsuario){
+        try{
+            $informacao =  DB::table('tb_veiculo')
+            ->join('tb_modelo', 'tb_veiculo.cd_modelo', '=', 'tb_modelo.cd_modelo')
+            ->join('tb_marca', 'tb_modelo.cd_marca', '=', 'tb_marca.cd_marca')
+            ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_veiculo.cd_usuario')
+            ->select('tb_veiculo.cd_veiculo as veiculo')
+            ->where([
+                ['tb_veiculo.cd_placa', '=', $placa],
+                ['tb_veiculo.cd_usuario','=',$idUsuario]
+            ])
+            ->first();
+
+            $informacao = json_decode(json_encode($informacao));
+
+            if(isset($informacao)){
+                DB::table('tb_check')->where('cd_veiculo', '=', $informacao->veiculo)->delete();
+
+                DB::table('tb_veiculo')->where([
+                    ['cd_veiculo', '=',  $informacao->veiculo],
+                    ['cd_veiculo', '=',  $informacao->veiculo]
+                ])->delete();
+
+                return (true);
+
+            }else{
+                return (false);
+            }
+        }catch(Exception $e){
+            return (false);
+        }
     }
 }
