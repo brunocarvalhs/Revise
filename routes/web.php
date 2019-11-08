@@ -36,6 +36,9 @@ Route::post('/Recuperar', 'controllerUsuario@EsqueciSenha');
 
 Route::get('/Download/{tipo}', 'controllerUsuario@getDownload');
 
+Route::get('/voltar', function(){
+    return redirect('/');
+})->name('iwillbeback');//Referencias do Pedrão
 
 //Rotas Paticulares
 

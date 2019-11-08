@@ -36,13 +36,20 @@
         </div>
         <div class="col-12 btnCadastrar">
             <button type="button" onclick="signUp()" class="btn btn-dark btn-lg btn-block">
-                CADASTAR
+                CADASTRAR
             </button>
         </div>
         <div class="col-12 linkEsqueci">
             <a href="{{ url('/Esqueci') }}">
                 <label>
                     Esqueceu sua senha?
+                </label>
+            </a>
+        </div>
+        <div class="col-12 linkEsqueci">
+            <a href="{{ route('iwillbeback') }}">
+                <label>
+                    Voltar
                 </label>
             </a>
         </div>
