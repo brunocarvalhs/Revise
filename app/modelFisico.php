@@ -173,16 +173,16 @@ class modelFisico extends modelUsuario
                         ]
                     );
 
-                    return json_encode(['Status' => true, 'Mensagem' => 'Cadastro realizado com sucesso']);
+                    return json_encode(['Status' => true, 'Mensagem' => 'Cadastro realizado com sucesso!']);
 
                 } else {
-                    return json_encode(['Status' => false, 'Mensagem' => 'Usuario já cadastrado']);
+                    return json_encode(['Status' => false, 'Mensagem' => 'Usuário já cadastrado!']);
                 }
             } else {
-                return json_encode(['Status' => false, 'Mensagem' => 'Senhas digitatas são diferentes, tente novamente!']);
+                return json_encode(['Status' => false, 'Mensagem' => 'Insira senhas iguais!']);
             }
         } catch (Exception $e) {
-            return json_encode(['Status' => false, 'Mensagem' => 'Erro ao cadastrar.']);
+            return json_encode(['Status' => false, 'Mensagem' => 'Ops! Ocorreu um erro ao cadastrar']);
         }
     }
 

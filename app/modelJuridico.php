@@ -205,7 +205,7 @@ class modelJuridico extends modelUsuario
             $email = DB::table('tb_usuario')->select('nm_email as Email','cd_senha as Senha')->first();
             return $email;
         }else{
-            return json_encode(['Status' => false, 'Mensagem' => 'Usuário não encontrado']);
+            return json_encode(['Status' => false, 'Mensagem' => 'Usuário não encontrado!']);
         }
     }
 
