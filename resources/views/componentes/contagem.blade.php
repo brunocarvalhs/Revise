@@ -12,8 +12,10 @@
                         <progress class="progress is-medium is-danger" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
                     @elseif($Porcentagem >= 50)
                         <progress class="progress is-medium is-warning" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
-                    @else
+                    @elseif($Porcentagem >= 0)
                         <progress class="progress is-medium" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
+                    @else
+
                     @endif
             </div>
         @else
@@ -23,8 +25,9 @@
                         <progress class="progress is-medium is-danger" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
                     @elseif($Porcentagem >= 50)
                         <progress class="progress is-medium is-warning" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
+                    @elseif($Porcentagem >= 0)
+                        <progress class="progress is-medium" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
                     @else
-                            <progress class="progress is-medium" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
                     @endif
             </div>
         @endif
