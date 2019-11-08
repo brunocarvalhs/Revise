@@ -5,7 +5,7 @@
 @section('menu_aplicativo','active')
 
 @section('conteudo')
-<section class="bg-dark pt-3">
+<section class="bg-dark">
     <div class="container">
         <br>
         <div class="row">
