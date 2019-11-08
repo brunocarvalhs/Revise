@@ -1,3 +1,4 @@
+@if($Porcentagem >= 0)
 <div class="bg-ligth card shadow" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
         <img src="{{ asset('img/logo.png')}}" width="20" height="20" class="rounded mr-2" alt="...">
@@ -5,7 +6,7 @@
         <small class="text-muted"></small>
     </div>
     <div class="toast-body bg-ligth">
-        @if ($Quilometragem >= 5000 && $Porcentagem >= 0)
+        @if ($Quilometragem >= 5000)
             <div class="form-group">
                 <label for="disabledTextInput">Quilometragem - {{round($Porcentagem,2)}}%</label>
                     @if($Porcentagem >= 90)
@@ -16,7 +17,7 @@
                         <progress class="progress is-medium" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
                     @endif
             </div>
-        @elseif($Porcentagem >= 0)
+        @else
             <div class="form-group">
                 <label for="disabledTextInput">Tempo - {{round($Porcentagem,2)}}%</label>
                     @if($Porcentagem >= 90)
@@ -27,8 +28,7 @@
                             <progress class="progress is-medium" value="{{round($Porcentagem,2)}}" min="0" max="100">{{round($Porcentagem,2)}}</progress>
                     @endif
             </div>
-        @else
-
         @endif
     </div>
 </div>
+@endif
