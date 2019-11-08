@@ -12,7 +12,7 @@
 <div class="row p-3">
     <div class="col-12">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 card shadow-sm">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 card shadow-sm">
                 <h5 class="p-1 pt-3 mb-4">Status</h5>
                 @foreach ($Andamentos as $Andamento)
                     <div class="row p-1">
@@ -24,17 +24,19 @@
                     </div>
                 @endforeach
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div class="row">
                     <div class="col-12 m-1 p-3 card shadow-sm">
                         <h5 class="mb-4">Veículos</h5>
-                        <div class="row">
-                            @foreach ($Veiculos as $Veiculo)
-                                @component('componentes.veiculos')
-                                    @slot('placa',$Veiculo->placa)
-                                    @slot('modelo',$Veiculo->modelo)
-                                @endcomponent
-                            @endforeach
+                        <div class='container'>
+                            <div class="row">
+                                @foreach ($Veiculos as $Veiculo)
+                                    @component('componentes.veiculos')
+                                        @slot('placa',$Veiculo->placa)
+                                        @slot('modelo',$Veiculo->modelo)
+                                    @endcomponent
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 m-1 p-3 card shadow-sm">
