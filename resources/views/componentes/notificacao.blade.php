@@ -1,7 +1,7 @@
 <div class="bg-ligth card shadow" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
         <img src="{{ asset('img/logo.png')}}" width="20" height="20" class="rounded mr-2" alt="...">
-        <strong class="mr-auto">{{ $Nome }}</strong>
+        <strong class="mr-auto">{{ $Nome }} ({{$Placa}})</strong>
         <small class="text-muted">{{ $Data }}</small>
         <form action="" onsubmit="return validarNotificacap();" method="POST">
             <button type="submit" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">

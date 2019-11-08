@@ -50,6 +50,7 @@
                             <div class="p-1">
                                 @component('componentes.notificacao')
                                     @slot('Nome',$Notificacao->nm_peca)
+                                    @slot('Placa',$Notificacao->cd_placa)
                                     @slot('Id',$Notificacao->cd_check)
                                     @slot('Data',$Notificacao->dt_check)
                                 @endcomponent
