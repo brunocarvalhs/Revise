@@ -85,7 +85,7 @@
                 <br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: block;" id="btn_off">
-                        <button type="button" class="btn btn-outline-warning btn-block" onclick="btnPerfil()">Alterar
+                        <button type="button" class="btn btn-warning btn-block" onclick="btnPerfil()">Alterar
                             dados</button>
                     </div>
                     <!--Botões escondidos-->

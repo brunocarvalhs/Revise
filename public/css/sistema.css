@@ -565,7 +565,8 @@ body, html{
 }
 
 .perfilBackgroud{
-    background: linear-gradient(to right,#ffd500,#ffd712) !important
+    background: linear-gradient(to right,#3e83cb,#4babff) !important;
+    /*background: #454545 !important;*/
 }
 
 .avatar{
