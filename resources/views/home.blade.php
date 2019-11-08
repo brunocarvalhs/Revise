@@ -15,9 +15,8 @@
                         <div class=" text-warning text_definition">
                             PRATICIDADE E SEGURANÇA QUE VOCÊ EXIGE?
                         </div>
-                        <p class="text-definition2 text-light">REVISE SUAS MANUTENÇÕES USANDO O SISTEMA DE
-                            NOTIFICAÇÃO PREDITIVA E
-                            COMPARE PREÇOS ANTES DA TROCA DOS COMPONENTES NA ABA DE ANÚNCIOS DOS FORNECEDORES</p>
+                        <p class="text-definition2 text-light">Revise suas manutenções usando o sistema de notificação
+                             preditiva e compare preços antes da troca dos componentes
                     </div>
                     <div class="col-0 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <img src="{{asset('img/note_app.png')}}" id="icone">
