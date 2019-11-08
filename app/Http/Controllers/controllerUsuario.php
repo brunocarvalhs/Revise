@@ -134,20 +134,20 @@ class controllerUsuario extends Controller
                 if($resultado != false){
                     $Login = $modelJuridico->Email($resultado);
                 }else{
-                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado.']);
+                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuário não encontrado']);
                 }
             }else if(strlen($login) === 11){
                 $resultado = $modelFisico->EsqueciSenha($login);
                 if($resultado != false){
                     $Login = $modelFisico->Email($resultado);
                 }else{
-                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado.']);
+                    $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuário não encontrado']);
                 }
             }else{
-                $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres de login invalido, preencha corretamente os campos.']);
+                $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres de login inválido. Preencha corretamente os campos!']);
             }
         }else{
-            $Login = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado. Preencha corretamente os campos!']);
         }
         $Login = json_decode($Login);
         return redirect()->back()->with('Login', $Login);

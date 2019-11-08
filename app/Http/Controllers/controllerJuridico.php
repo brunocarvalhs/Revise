@@ -14,7 +14,7 @@ class controllerJuridico extends Controller
         if ($campos) {
             $cadastro = $modelJuridico->CadastroUsuarioJuridico($controllerUsuario->TratamentoLogin($request->txtcnpj), $request);
         } else {
-            $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
+            $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Preencha os campos em branco!']);
         }
         $cadastro = json_decode($cadastro);
         return redirect()->back()->with('Cadastro', $cadastro);
@@ -29,7 +29,7 @@ class controllerJuridico extends Controller
         }
         else{
             unset($modelJuridico);
-            $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado, verificar se os dados inseridos estão corretos!']);
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuário não encontrado!']);
         }
         $Login = json_decode($Login);
         return redirect()->back()->with('Login', $Login);
