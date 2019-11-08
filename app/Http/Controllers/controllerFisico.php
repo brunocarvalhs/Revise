@@ -34,7 +34,7 @@ class controllerFisico extends Controller
         }
         else{
             unset($modelFisico);
-            $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuario não encontrado, verificar se os dados de acesso estão corretos!']);
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Usuário não encontrado']);
         }
         $Login = json_decode($Login);
         return redirect()->back()->with('Login', $Login);
