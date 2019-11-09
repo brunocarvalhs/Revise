@@ -142,14 +142,9 @@
                 <div class="form-row row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 p-3">
                         <div class="row">
-                            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                                <div class="form-group">
-                                    <button class="btn btn-lg btn-block btn-success" data-toggle="modal" data-target="#modelChecklist">Checklist</button>
-                                </div>
-                            </div>
                             <form action="{{ url('/Home/Veiculos') }}/{{ $Dados->placa }}" method="POST" class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                 <div class="form-group">
-                                    <button value="{{$Dados->id}}" class="btn btn-lg btn-block btn-danger">Delete</button>
+                                    <button value="{{$Dados->id}}" class="btn btn-lg btn-block btn-danger">Deletar</button>
                                 </div>
                                 @method('delete')
                                 @csrf
