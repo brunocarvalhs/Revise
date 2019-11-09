@@ -49,7 +49,7 @@
             color: white;
         }
         svg:hover{
-            filter: blur(10px);
+            filter: blur(1px);
         }
     </style>
 </head>
