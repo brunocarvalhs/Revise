@@ -5,20 +5,17 @@
 @section('menu_aplicativo','active')
 
 @section('conteudo')
-<section class="bg-dark">
+<section class="bg-dark pt-5">
     <div class="container">
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 TituloAplicativoIntroducao">
-                    <h1 class="tituloBranco Titulo espaco display-4">
-                        Revise App
-                    </h1>
-                </div>
-                <div class="col-0 col-sm-0 col-md-12 col-lg-4 col-xl-4">
-                    <img src="{{ asset('img/app.png') }}" class="smartphoneIntroducao wow bounceInRight mt-5"
-                        data-wow-duration="1.5s">
-                </div>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 TituloAplicativoIntroducao">
+                <h1 class="tituloBranco espaco display-3 mt-5">
+                    Revise App
+                </h1>
+            </div>
+            <div class="col-0 col-sm-0 col-md-12 col-lg-1 col-xl-1">
+                <img src="{{ asset('img/app.png') }}" class="smartphoneIntroducao wow bounceInRight pt-3"
+                    data-wow-duration="1.5s">
             </div>
         </div>
     </div>
@@ -36,18 +33,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12">
-                <p class="text-dark h5">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+
+                <img id="imgRequisito" src="{{ asset('img/appimg.png') }}" class="AppSmart pl-5">
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <p class="text-dark h5 mt-5">
                     Acesse as funcionalidades do sistema em seu smartphone ou
                     tablet a qualquer momento e ainda confira sua quilometragem com a tecnologia
                     do sensor Obd2, caso seja usuário Gold
                 </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <img id="imgRequisito" src="{{ asset('img/appimg.png') }}" class="AppSmart pl-5">
             </div>
         </div>
     </div>
