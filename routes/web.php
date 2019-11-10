@@ -55,7 +55,7 @@ Route::group(['middleware' => 'Fisico'], function () {
     Route::get('/Home/Veiculos','controllerVeiculo@LerVeiculos');//Ler
     Route::post('/Home/Veiculos','controllerVeiculo@CriarVeiculos')->name('veiculo');//Criar
     Route::put('/Home/Veiculos','controllerVeiculo@AlterarVeiculos');//Alterar
-    Route::delete('/Home/Veiculos/{placa?}', 'controllerVeiculo@DeletarVeiculo');//Deletar
+    Route::delete('/Home/Veiculos/{placa?}', 'controllerVeiculo@DeletarVeiculo')->name('deletar');//Deletar
     Route::get('/Home/Veiculos/{placa?}','controllerVeiculo@DetalhesVeiculo');
     Route::get('/Home/Quilometragem/{Placa?}','controllerVeiculo@InserirQuilometragem')->name('quilomatragem');
     // * Anuncios
@@ -65,7 +65,7 @@ Route::group(['middleware' => 'Fisico'], function () {
     // * Notificacao
     Route::get('/Home/Notificacao','controllerCheck@listaNotificacoes');//Ler
     Route::put('/Home/Notificacao','controllerFisico@AlterarNotificacao');//Alterar
-    Route::delete('/Home/Notificacao', 'controllerFisico@DeletarNotificacao');//Deletar
+    Route::delete('/Home/Notificacao', 'controllerFisico@DeletarNotificacao')->name('deletarNotificacao');//Deletar
     Route::post('/Home/Notificacao','controllerCheck@VerificarVeiculo')->name('notificacao');
 });
 
