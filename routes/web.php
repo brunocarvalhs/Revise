@@ -65,7 +65,7 @@ Route::group(['middleware' => 'Fisico'], function () {
     // * Notificacao
     Route::get('/Home/Notificacao','controllerCheck@listaNotificacoes');//Ler
     Route::put('/Home/Notificacao','controllerFisico@AlterarNotificacao');//Alterar
-    Route::delete('/Home/Notificacao', 'controllerFisico@DeletarNotificacao')->name('deletarNotificacao');//Deletar
+    Route::delete('/Home/Notificacao', 'controllerCheck@DeletarNotificacao')->name('deletarNotificacao');//Deletar
     Route::post('/Home/Notificacao','controllerCheck@VerificarVeiculo')->name('notificacao');
 });
 

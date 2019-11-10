@@ -14,8 +14,9 @@
                 </a>
             </div>
             <div class="col-12 col-sm-12 col-md-12 col-lg col-xl">
-                <form action="{{ url('deletarNotificacao') }}?id={{ $Id }}" method="POST">
-                    <button class="btn btn-dark mt-3">Problema resolvido</button>
+                <form action="{{ url('deletarNotificacao') }}" method="POST">
+                    <input type="hidden" name="placa" value="{{ $Placa }}">
+                    <button class="btn btn-dark mt-3" name="id" value="{{$Id}}">Problema resolvido</button>
                     @csrf
                     @method('delete')
                 </form>
