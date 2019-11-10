@@ -8,21 +8,18 @@
         Opa, Chegou a hora da verificar o {{ $Nome }}!<br><br>
         Que tal já realizar suas pesquisas?Faça isso em Serviços e Produtos.<br>
         <div class="row mt-3">
-            <div class="col-8">
-                <div class="col">
-                    <a href="{{ route('pesquisa') }}?pesquisa={{ urlencode($Nome) }}&tipo=&preco=">
-                        <button class="btn btn-success mt-3">Pesquisar</button>
-                    </a>
-                </div>
-                <div class="col">
-                    <form action="" method="POST">
-                        <button class="btn btn-dark mt-3">Já foi resolvido</button>
-                        @csrf
-                        @method('delete')
-                    </form>
-                </div>
+            <div class="col">
+                <a href="{{ route('pesquisa') }}?pesquisa={{ urlencode($Nome) }}&tipo=&preco=">
+                    <button class="btn btn-success mt-3">Pesquisar</button>
+                </a>
             </div>
-            <div class="col"></div>
+            <div class="col">
+                <form action="" method="POST">
+                    <button class="btn btn-dark mt-3">Já foi resolvido</button>
+                    @csrf
+                    @method('delete')
+                </form>
+            </div>
         </div>
     </div>
 </div>
