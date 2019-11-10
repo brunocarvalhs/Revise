@@ -8,7 +8,7 @@
         Opa, Chegou a hora da verificar o {{ $Nome }}!<br><br>
         Que tal já realizar suas pesquisas?Faça isso em Serviços e Produtos.<br>
         <div class="row mt-3">
-            <div class="col-2">
+            <div class="col-3">
                 <a href="{{ route('pesquisa') }}?pesquisa={{ urlencode($Nome) }}&tipo=&preco=">
                     <button class="btn btn-success mt-3">Pesquisar</button>
                 </a>
