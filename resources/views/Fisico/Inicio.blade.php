@@ -66,25 +66,4 @@
 
 @section('script')
 @include('componentes.quilometragem')
-<script>
-function validarNotificacap(){
-    Swal.fire({
-        title: 'A peça foi verificada ou trocada?',
-        text: "You won't be able to revert this!",
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sim'
-    }).then((result) => {
-        if (result.value) {
-            return true;
-        }
-        else{
-            return false;
-        }
-    });
-    return false;
-}
-</script>
 @endsection
