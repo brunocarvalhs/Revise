@@ -68,12 +68,12 @@ class modelCheck extends Model
                         ['cd_check', '=', $idCheck]
                     ])
                     ->delete();
-                    return json_encode(['Status' => true, 'Mensagem' => 'Notificação deletado com sucesso!']);
+                    return json_encode(['Status' => true,'Tipo' => 'success', 'Titulo' => 'Confirmado', 'Mensagem' => 'Notificação deletado com sucesso!']);
             } else {
-                return json_encode(['Status' => false, 'Mensagem' => 'Notificação do veículo não encontrado!']);
+                return json_encode(['Status' => false,'Tipo' => 'warning', 'Titulo' => 'Atenção', 'Mensagem' => 'Notificação do veículo não encontrado!']);
             }
         } catch (Exception $e) {
-            return json_encode(['Status' => false, 'Mensagem' => 'Erro na tentativa de deletado notificação!']);
+            return json_encode(['Status' => false,'Tipo' => 'error', 'Titulo' => 'Erro', 'Mensagem' => 'Erro na tentativa de deletado notificação!']);
         }
     }
 }

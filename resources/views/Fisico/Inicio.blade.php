@@ -67,3 +67,15 @@
 @section('script')
 @include('componentes.quilometragem')
 @endsection
+
+@section('mensagem')
+@if(session()->has('Delete'))
+    @component('componentes.alert')
+        @slot('titulo',session()->get('Delete')->Titulo)
+        @slot('icone',session()->get('Delete')->Tipo)
+        @slot('mensagem')
+            {{ session()->get('Delete')->Mensagem }}
+        @endslot
+    @endcomponent
+@endif
+@endsection
