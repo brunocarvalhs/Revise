@@ -20,7 +20,7 @@
                     @method('delete')
                 </form>
             </div>
-            <div class="col-4"></div>
+            <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-4"></div>
         </div>
     </div>
 </div>
