@@ -38,7 +38,10 @@ class controllerCheck extends Controller
 
     }
 
-    public function DeletarNotificacao(){
-
+    public function DeletarNotificacao(Request $request, modelCheck $modelCheck){
+        $modelFisico = session()->get('Fisico');
+        $resultado = $modelCheck->DeletarNotificacao($request->Id, $request->placa,$modelFisico->getIdUsuario());
+        $resultado = json_decode($resultado);
+        return redirect()->back()->with('Delete',$resultado);
     }
 }
