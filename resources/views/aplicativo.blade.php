@@ -20,40 +20,36 @@
         </div>
     </div>
 </section>
-<section class="bg-light" id="sobre">
-    <div class="container">
+<!-- particles.js container -->
+
+<div id="particles-js"></div>
+<div class="container">
         <div class="row">
-            <div class="col">
-                <div class="col-12 col-sm-12 col-md-auto col-lg-auto col-xl-auto text-dark">
-                    <br><br>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-light pt-5">
                     <h1>O que é o Revise App?</h1>
-                    <hr>
                     <br>
                 </div>
-            </div>
         </div>
+</div>
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
-
+            <div class="col-1 col-sm-6 col-md-6 col-lg-6 col-xl-5">
                 <img id="imgRequisito" src="{{ asset('img/appimg.png') }}" class="AppSmart pl-5">
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <p class="text-dark h5 mt-5">
+            <div class="col-11 col-sm-6 col-md-6 col-lg-6 col-xl-5 pt-4">
+                <p class="text-light h5 mt-5">
                     Acesse as funcionalidades do sistema em seu smartphone ou
                     tablet a qualquer momento e ainda confira sua quilometragem com a tecnologia
                     do sensor Obd2, caso seja usuário Gold
                 </p>
             </div>
         </div>
-    </div>
-    </div>
-    <br><br>
+</div>
 </section>
 <section class="backgroundWhite" id="requisitos">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloPreto">
-                <h1 class="text-dark">Requisitos do aplicativo</h1>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 tituloPreto ">
+                <h1 class="text-dark mt-3">Requisitos do aplicativo</h1>
                 <hr>
                 <br>
             </div>
