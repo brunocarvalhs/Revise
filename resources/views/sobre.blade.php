@@ -15,7 +15,7 @@
                         <h1>Quem Somos?</h1>
                         <br>
                         <p>
-                            O Revise é um projeto tecnológico, criado por 5 desenvolvedores, que
+                            O Revise é um projeto tecnológico, criado pelo time da Devscattle compostos por 5 desenvolvedores, que
                             estão cursando o técnico de Desenvolvimento de Sistemas
                             na instituição Etec Dra. Ruth Cardoso, localizada em São Vicente - Litoral de São Paulo.
                              É o primeiro projeto da equipe sendo elaborado para a entrega do TCC (Trabalho de Conclusão de Curso).
