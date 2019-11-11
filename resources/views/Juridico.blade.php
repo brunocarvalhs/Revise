@@ -150,7 +150,7 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                         <div class="col-12">
                             <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Li e aceito os <a
+                                <label class="form-check-label" for="inlineCheckbox1">Li e aceito os <a href=""
                                         data-toggle="modal" data-target="#modalTermoDeUso">Termos de uso</a></label>
                             </div>
                         </div>
@@ -179,23 +179,23 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
 @endsection
 
 @section('mensagem')
-@if(session()->has('Cadastro'))
-@if(session()->get('Cadastro')->Status)
-@component('componentes.alert')
-@slot('titulo','SUCESSO')
-@slot('icone','success')
-@slot('mensagem')
-{{ session()->get('Cadastro')->Mensagem }}
-@endslot
-@endcomponent
-@else
-@component('componentes.alert')
-@slot('titulo','ERRO')
-@slot('icone','error')
-@slot('mensagem')
-{{ session()->get('Cadastro')->Mensagem }}
-@endslot
-@endcomponent
-@endif
-@endif
+    @if(session()->has('Cadastro'))
+        @if(session()->get('Cadastro')->Status)
+            @component('componentes.alert')
+                @slot('titulo','SUCESSO')
+                @slot('icone','success')
+                @slot('mensagem')
+                {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+        @else
+            @component('componentes.alert')
+                @slot('titulo','ERRO')
+                @slot('icone','error')
+                @slot('mensagem')
+                {{ session()->get('Cadastro')->Mensagem }}
+                @endslot
+            @endcomponent
+        @endif
+    @endif
 @endsection
