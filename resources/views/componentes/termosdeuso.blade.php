@@ -14,10 +14,11 @@
                 <div class="row p-2">
                     <div class="col-12">
                         <h6>
-                            I – ACEITAÇÃO DOS TERMOS E CONDIÇÕES GERAIS DE USO E DE COMPRA E VENDA
+                            <b>I – ACEITAÇÃO DOS TERMOS E CONDIÇÕES GERAIS DE USO E DE COMPRA E VENDA</b>
                         </h6>
                         <p>
-                            Ao utilizar o site Revise, o usuário aceita integralmente as presentes normas e compromete-se a
+                            Ao utilizar o site Revise, o usuário aceita integralmente as presentes normas e
+                            compromete-se a
                             observá-las, sob
                             risco de aplicação das penalidades cabíveis. Antes de iniciar qualquer navegação no site, o
                             usuário deverá
@@ -36,7 +37,9 @@
                             para apresentar-lhe as suas ressalvas.
                         </p>
                         <h6>
-                            II – GESTÃO DO SITE
+                            <b>
+                                II – GESTÃO DO SITE
+                            </b>
                         </h6>
                         <p>
                             Para a boa gestão, o editor do site Revise poderá, a qualquer momento:
@@ -58,7 +61,9 @@
                         </ol>
 
                         <h6>
-                            III – CADASTRO
+                            <b>
+                                III – CADASTRO
+                            </b>
                         </h6>
                         <p>
                             Os serviços disponibilizados no site apenas poderão ser acessados por pessoas plenamente
@@ -80,20 +85,24 @@
                             desativadas pelo editor do site, sem prejuízo de demais penalidades cabíveis.
                         </p>
                         <p>
-                            Para o devido cadastramento junto ao serviço, o usuário deverá fornecer integralmente os dados
+                            Para o devido cadastramento junto ao serviço, o usuário deverá fornecer integralmente os
+                            dados
                             requeridos. Todas
                             as
-                            informações fornecidas pelo usuário devem ser precisas, verdadeiras e atualizadas. Em qualquer
+                            informações fornecidas pelo usuário devem ser precisas, verdadeiras e atualizadas. Em
+                            qualquer
                             caso, o usuário
                             responderá, em âmbito cível e criminal, pela veracidade, exatidão e autenticidade dos dados
                             informados.
                         </p>
                         <p>
-                            O usuário deverá fornecer um endereço de e-mail válido, através do qual o site realizará todos
+                            O usuário deverá fornecer um endereço de e-mail válido, através do qual o site realizará
+                            todos
                             os contatos
                             necessários. Toda a comunicação enviada para o referido endereço será considerada lidas pelo
                             usuário, que se
-                            compromete, assim, a consultar regularmente suas mensagens recebidas e a responde-las em prazo
+                            compromete, assim, a consultar regularmente suas mensagens recebidas e a responde-las em
+                            prazo
                             razoável.
                         </p>
                         <p>
@@ -110,26 +119,33 @@
                             intransferível.
                         </p>
                         <p>
-                            O usuário poderá, a qualquer tempo e sem necessidade de justificação, requerer o cancelamento de
+                            O usuário poderá, a qualquer tempo e sem necessidade de justificação, requerer o
+                            cancelamento de
                             seu cadastro
-                            junto ao site. O seu desvinculo da conta será realizado o mais rapidamente possível, desde que
+                            junto ao site. O seu desvinculo da conta será realizado o mais rapidamente possível, desde
+                            que
                             não sejam
                             verificados débitos em aberto
                         </p>
                         <h6>
-                            VI – DAS RESPONSABILIDADES
+                            <b>
+                                VI – DAS RESPONSABILIDADES
+                            </b>
                         </h6>
                         <p>
-                            O editor se responsabilizará pelos defeitos ou vícios encontrados nos serviços prestados pelo
+                            O editor se responsabilizará pelos defeitos ou vícios encontrados nos serviços prestados
+                            pelo
                             site, desde que
                             tenha
-                            lhes dado causa. Defeitos ou vícios técnicos ou operacionais originados no próprio sistema do
+                            lhes dado causa. Defeitos ou vícios técnicos ou operacionais originados no próprio sistema
+                            do
                             usuário não serão
                             de
                             responsabilidade do editor.
                         </p>
                         <p>
-                            O editor responsabiliza-se apenas pelas informações que foram por ele diretamente divulgadas.
+                            O editor responsabiliza-se apenas pelas informações que foram por ele diretamente
+                            divulgadas.
                             Quaisquer
                             informações
                             incluídas pelos usuários, tais como em comentários e em perfis pessoais, serão de inteira
@@ -146,7 +162,8 @@
                                 cordialidade no relacionamento com os demais usuários;
                             </li>
                             <li>
-                                Pelo cumprimento das regras contidas neste instrumento, bem como normas de Direito Nacional
+                                Pelo cumprimento das regras contidas neste instrumento, bem como normas de Direito
+                                Nacional
                                 e de Direito
                                 Internacional;
                             </li>
@@ -162,25 +179,30 @@
                                 Pelo conteúdo ou atividades ilícitas praticadas através de seu site;
                             </li>
                             <li>
-                                Pelo erro de inserir os dados do veículo (quilometragem), fazendo assim que o sistema passe
+                                Pelo erro de inserir os dados do veículo (quilometragem), fazendo assim que o sistema
+                                passe
                                 as informações a
                                 errada e o Revise não estará responsável.
                             </li>
                         </ol>
                         <h6>
-                            VII – DOS DIREITOS AUTORAIS
+                            <b>
+                                VII – DOS DIREITOS AUTORAIS
+                            </b>
                         </h6>
                         <p>
                             A estrutura do site Revise, bem como os textos, os gráficos, as imagens, as fotografias, os
                             sons, os vídeos e as
-                            demais aplicações informáticas que o compõem são de propriedade do editor e são protegidas pela
+                            demais aplicações informáticas que o compõem são de propriedade do editor e são protegidas
+                            pela
                             legislação
                             brasileira e internacional referente à propriedade intelectual.
                         </p>
                         <p>
                             Qualquer representação, reprodução, adaptação ou exploração parcial ou total dos conteúdos,
                             marcas e serviços
-                            propostos pelo site, por qualquer meio que seja, sem autorização prévia, expressa e escrita do
+                            propostos pelo site, por qualquer meio que seja, sem autorização prévia, expressa e escrita
+                            do
                             editor, é
                             estritamente veada, podendo-se recorrer às medidas cíveis e penais cabíveis. Estão excluídos
                             desta previsão
@@ -192,33 +214,44 @@
                             restam sob a propriedade exclusiva do editor.
                         </p>
                         <p>
-                            É vedado ao usuário incluir no site dados que possam modificar o seu conteúdo ou sua aparência.
+                            É vedado ao usuário incluir no site dados que possam modificar o seu conteúdo ou sua
+                            aparência.
                         </p>
                         <h6>
-                            VIII – DA POLÍTICA DE PRIVACIDADE
+                            <b>
+                                VIII – DA POLÍTICA DE PRIVACIDADE
+                            </b>
                         </h6>
                         <h6>
-                            Informações gerais
+                            <b>
+                                Informações gerais
+                            </b>
                         </h6>
                         <p>
-                            Essa seção contém informações a respeito do tratamento de dados pessoais do usuário, total ou
+                            Essa seção contém informações a respeito do tratamento de dados pessoais do usuário, total
+                            ou
                             parcialmente,
-                            automatizados ou não, realizado pelo site e que poderão ou não serem armazenados. O objetivo é
+                            automatizados ou não, realizado pelo site e que poderão ou não serem armazenados. O objetivo
+                            é
                             fornecer
                             orientações
-                            a respeito das informações coletadas, os motivos da coleta e como o usuário poderá atualizar,
+                            a respeito das informações coletadas, os motivos da coleta e como o usuário poderá
+                            atualizar,
                             gerenciar,
                             exportar ou
                             excluir essas informações.
                         </p>
                         <p>
-                            Esta política de privacidade poderá ser atualizada em decorrência de uma eventual atualização
+                            Esta política de privacidade poderá ser atualizada em decorrência de uma eventual
+                            atualização
                             normativa, razão
                             pela
                             qual se convida o usuário a consultar periodicamente esta seção.
                         </p>
                         <h6>
-                            Direitos do usuário
+                            <b>
+                                Direitos do usuário
+                            </b>
                         </h6>
 
 
@@ -234,7 +267,8 @@
                                 finalidades);
                             </li>
                             <li>
-                                Seus dados pessoais serão coletados de forma adequada, pertinente e limitada às necessidades
+                                Seus dados pessoais serão coletados de forma adequada, pertinente e limitada às
+                                necessidades
                                 do objetivo para os
                                 quais eles são processados (minimização dos dados);
                             </li>
@@ -245,7 +279,9 @@
                             </li>
                         </ul>
                         <h6>
-                            IX – DO SERVIÇO DE ATENDIMENTO AO USUÁRIO
+                            <b>
+                                IX – DO SERVIÇO DE ATENDIMENTO AO USUÁRIO
+                            </b>
                         </h6>
                         <p>
                             Em caso de dúvidas, sugestões ou problemas com a utilização do site Revise, o usuário poderá
@@ -255,32 +291,40 @@
                             disponível assim que necessário.
                         </p>
                         <p>
-                            O usuário poderá, ainda, optar por enviar correspondência ao endereço da sede do site, informado
+                            O usuário poderá, ainda, optar por enviar correspondência ao endereço da sede do site,
+                            informado
                             no início deste
                             documento.
                         </p>
                         <h6>
-                            X – DAS ALTERAÇÕES
+                            <b>
+                                X – DAS ALTERAÇÕES
+                            </b>
                         </h6>
                         <p>
                             A presente versão dos termos e condições gerais de uso foi atualizada pela última vez em:
                             21/10/2019
-                            O editor se reserva o direito de modificar, a qualquer momento o site e os serviços, bem como as
+                            O editor se reserva o direito de modificar, a qualquer momento o site e os serviços, bem
+                            como as
                             presentes normas,
-                            especialmente para adaptá-las às evoluções do site Revise, seja pela disponibilização de novas
+                            especialmente para adaptá-las às evoluções do site Revise, seja pela disponibilização de
+                            novas
                             funcionalidades, seja
                             pela supressão ou modificação daquelas já existentes.
                         </p>
                         <p>
-                            O usuário será explicitamente notificado em caso de alteração do presente termo, caso não seja
+                            O usuário será explicitamente notificado em caso de alteração do presente termo, caso não
+                            seja
                             notificado ele poderá
                             pedir, imediatamente, o cancelamento de sua conta e apresentar a sua ressalva ao serviço de
                             atendimento, se assim o
                             desejar.
                         </p>
                         <h6>
-                            Seja Bem-Vindo (a)!
-                            A equipe do Revise lhe deseja uma excelente navegação
+                            <b>
+                                Seja Bem-Vindo (a)!
+                                A equipe do Revise lhe deseja uma excelente navegação
+                            </b>
                         </h6>
                     </div>
                 </div>
