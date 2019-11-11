@@ -110,19 +110,13 @@
                 <div class="col-6 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="https://www.facebook.com/Revise-109853873680667/">
                                 <img src="{{asset('img/icon/facebookIcon.png')}}" class="redesocialIcones"
                                     alt="Github-revise" />
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="{{asset('img/icon/InstagramIcon.png')}}" class="redesocialIcones"
-                                    alt="Github-revise" />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="https://www.youtube.com/channel/UCdhJKd97US8gXFIIiw0NKQA?">
                                 <img src="{{asset('img/icon/YoutubeIcon.png')}}" class="redesocialIcones"
                                     alt="Github-revise" />
                             </a>
