@@ -149,7 +149,7 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
             <div class="row mt-5">
                 <div class="col-12">
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <input class="form-check-input" type="checkbox" name="termos" id="inlineCheckbox1" value="option1">
                         <label class="form-check-label" for="inlineCheckbox1">Li e aceito os <a href=""
                                 data-toggle="modal" data-target="#modalTermoDeUso">Termos de uso</a></label>
                     </div>
