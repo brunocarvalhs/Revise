@@ -17,7 +17,7 @@ bar.animate(1.0);
 //Alert da Quilometragem
 function infoKm() {
   swal({
-    title: "Bem Vindo ao Revise!",
+    title: "",
     text: "Para iniciar o sistema é necessário informar a quilometragem do seu carro. Deseja inserir manualmente ou utilizar o Obd2 (sensor do carro)?",
     className: 'quilometragem',
     closeOnClickOutside: false,

@@ -147,7 +147,7 @@ class controllerUsuario extends Controller
                 $Login = json_encode(['Status' => false, 'Mensagem' => 'Caracteres de login inválido. Preencha corretamente os campos!']);
             }
         }else{
-            $Login = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado. Preencha corretamente os campos!']);
+            $Login = json_encode(['Status' => false, 'Mensagem' => 'Preencha corretamente os campos!']);
         }
         $Login = json_decode($Login);
         return redirect()->back()->with('Login', $Login);

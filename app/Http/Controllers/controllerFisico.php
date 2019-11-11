@@ -19,7 +19,7 @@ class controllerFisico extends Controller
         if ($campos) {
             $cadastro = $modelFisico->CadastrarUsuarioFisico($controllerUsuario->TratamentoLogin($request->txtcpf), $request);
         } else {
-            $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Campo em branco detectado, preencha corretamente os campos.']);
+            $cadastro = json_encode(['Status' => false, 'Mensagem' => 'Preencha corretamente os campos!']);
         }
         $cadastro = json_decode($cadastro);
         return redirect()->back()->with('Cadastro', $cadastro);

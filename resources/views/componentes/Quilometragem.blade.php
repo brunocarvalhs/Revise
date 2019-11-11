@@ -2,12 +2,11 @@
     <script>
         function quilometragem(placa) {
             Swal.fire({
-                title: 'Sistema de verificação',
-                    text: "Deseja inserir a quilometragem como?",
+                title: "Como deseja inserir a quilometragem?",
                     type: 'question',
                     showCancelButton: true,
-                    confirmButtonText: 'Manual',
-                    cancelButtonText: 'Automatico',
+                    confirmButtonText: 'Manualmente',
+                    cancelButtonText: 'Utilizando Obd2',
                     reverseButtons: true
                 }).then((result) => {
                     if(result.value){
@@ -24,21 +23,22 @@
                         })
                     }else{
                         Swal.mixin({
-                            confirmButtonText: 'Next &rarr;',
+                            confirmButtonText: 'Próximo &rarr;',
                             showCancelButton: true,
+                            confirmButtonText: 'Cancelar',
                             progressSteps: ['1', '2', '3', '4', '5', '6']
                         }).queue([
                         {
-                            title: 'Baixe o aplicativo Revise',
-                            text: 'Para poder escanear o veículo, é necessário ter o Revise App instalado em seu dispositivo.',
+                            title: 'Baixe o Revise App',
+                            text: 'Para escanear o veículo é necessário ter o Revise App instalado em seu dispositivo',
                             imageUrl: '{{ asset("img/manual/passo1.png") }}',
                             imageWidth: 200,
                             imageHeight: 200,
                             imageAlt: 'Custom image',
                             animation: false
                         },{
-                            title: 'OBD',
-                            text: 'Para utilizar função do automático, é necessario possuir o OBD compatível com os modelos suportados pelo Revise. Para aquisição do dispositivo, verifique na página do Revise',
+                            title: 'OBD2',
+                            text: 'Verifique a compatibilidade do Obd2',
                             imageUrl: '{{ asset("img/manual/passo2.png") }}',
                             imageWidth: 200,
                             imageHeight: 200,
@@ -53,26 +53,24 @@
                             imageAlt: 'Custom image',
                             animation: false
                         },{
-                            title: 'Inserir OBD',
-                            text: 'Conecte o OBD2 na entrada encontrada no passo 3, ligue o carro e verifique se as luzes presente no dispositivo estão ativados',
+                            title: 'Insira o OBD2',
+                            text: 'Conecte-o na entrada encontrada no passo 3, ligue o carro e verifique se as luzes presentes no dispositivo estão ativadas',
                             imageUrl: '{{ asset("img/manual/passo4.png") }}',
                             imageWidth: 200,
                             imageHeight: 200,
                             imageAlt: 'Custom image',
                             animation: false
                         },{
-                            title: 'Escaneando veículo',
-                            text: `Conecte via bluetooth ao dispositivo presente no veículo no celular com o Revise App instalado.
-                            Após o pareamento redirecione para sessão de scanner, presente no aplicativo e inicie o scanner selecionado o
-                            dispositivo pareado e placa do veículo avaliado`,
+                            title: 'Escaneando o veículo',
+                            text: 'Conecte via bluetooth o dispositivo com o Revise App e após o pareamento vá na sessão do scanner do aplicativo e inicie a verificação',
                             imageUrl: '{{ asset("img/manual/passo5.png") }}',
                             imageWidth: 200,
                             imageHeight: 200,
                             imageAlt: 'Custom image',
                             animation: false
                         },{
-                            title: 'Conclusão de scanner',
-                            text: `Após seguir os passos, o aplicativo notificará as manutenções dos componentes que foram encontradas`,
+                            title: 'Tudo pronto!',
+                            text: `Agora você poderá ver as notificações das manutenções de componentes do seu veículo`,
                         }
                         ]).then((result) => {
                             window.location.reload()
