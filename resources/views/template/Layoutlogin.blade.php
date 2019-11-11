@@ -61,7 +61,7 @@
                 <div class="row">
                     <div class="col-0 col-sm-0 col-md-0 col-lg-0 col-xl-7 padding">
                         <a href="{{ route('iwillbeback') }}">
-                            <svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                            <svg id="i-chevron-left" xmlns="http://www.w3.org/2000/svg" class="mt-5" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
                                 <path d="M20 30 L8 16 20 2" />
                             </svg>
                         </a>

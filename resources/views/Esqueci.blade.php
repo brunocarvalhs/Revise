@@ -22,7 +22,7 @@
         <div class="col-12 linkEsqueci">
             <a href="{{ url('/SignIn') }}">
                 <label>
-                    Volta
+                    Voltar
                 </label>
             </a>
         </div>
