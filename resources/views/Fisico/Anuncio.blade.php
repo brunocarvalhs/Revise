@@ -92,7 +92,7 @@
     </div>
 </div>
 <div class="Anuncios">
-    @if($Anuncios)
+    @if(isset($Anuncios))
     <div class="h-100 semPadding row p-3">
         @foreach ($Anuncios as $Anuncios)
             @component('componentes.PesquisaAnuncio')

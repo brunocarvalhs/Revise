@@ -49,21 +49,23 @@
             <hr />
             <div class="col-12 mt-3">
                 <ul class="list-group">
-                    @foreach ($Veiculos as $Veiculo)
-                    <form action="{{ route('notificacao') }}" method="POST">
-                        @csrf
-                        <input type="hidden" name="Placa" value="{{ $Veiculo->placa }}">
-                        <button class="btn list-group-item-action flex-column align-items-start "
-                            type="submit">
-                            <li class="list-group-item d-flex justify-content-between align-items-center m-1">
-                                <div class="d-flex w-100 justify-content-between">
-                                    <h5 class="mb-1">{{ $Veiculo->placa }} <br> {{ $Veiculo->modelo }}</h5>
-                                </div>
-                                <span class="badge badge-primary badge-pill">{{ $Veiculo->Notificacao }}</span>
-                            </li>
-                        </button>
-                    </form>
-                    @endforeach
+                    @if($Veiculos)
+                        @foreach ($Veiculos as $Veiculo)
+                        <form action="{{ route('notificacao') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="Placa" value="{{ $Veiculo->placa }}">
+                            <button class="btn list-group-item-action flex-column align-items-start "
+                                type="submit">
+                                <li class="list-group-item d-flex justify-content-between align-items-center m-1">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">{{ $Veiculo->placa }} <br> {{ $Veiculo->modelo }}</h5>
+                                    </div>
+                                    <span class="badge badge-primary badge-pill">{{ $Veiculo->Notificacao }}</span>
+                                </li>
+                            </button>
+                        </form>
+                        @endforeach
+                    @endif
                 </ul>
             </div>
         </div>
