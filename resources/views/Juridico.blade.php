@@ -146,30 +146,27 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                             aria-describedby="descricaoSenha">
                     </div>
                     <!-- Termos de uso -->
-                    <div class="row mt-5">
-                        <div class="col-12">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Li e aceito os <a href=""
-                                        data-toggle="modal" data-target="#modalTermoDeUso">Termos de uso</a></label>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Botão-->
-                    <br><br>
-                    <div class="row">
-                        <div class="col-0 col-sm-0 col-md-0 col-lg-8 col-xl-8"></div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                            <button class="btn btn-warning btn-block" id="btnContinua" type="submit">Cadastrar</button>
-                        </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Li e aceito os <a href=""
+                                data-toggle="modal" data-target="#modalTermoDeUso">Termos de uso</a></label>
                     </div>
                 </div>
             </div>
-        </form>
+            <!--Botão-->
+            <br><br>
+            <div class="row">
+                <div class="col-0 col-sm-0 col-md-0 col-lg-8 col-xl-8"></div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                    <button class="btn btn-warning btn-block" id="btnContinua">Cadastrar</button>
+                </div>
+            </div>
     </div>
+    </form>
 </section>
-@component('componentes.termosdeuso')
-@endcomponent
+@include('componentes.termosdeuso')
 @endsection
 
 @section('script')
