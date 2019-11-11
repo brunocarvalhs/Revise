@@ -89,7 +89,7 @@
                                                         <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top">
                                                     </div>
                                                     <div class="col-8">
-                                                        <label class="tituloMenu">Revise</label>
+                                                    <label class="tituloMenu">Bem Vindo(a)!</label>
                                                     </div>
                                                 </div>
                                             </a>
