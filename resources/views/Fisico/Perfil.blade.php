@@ -127,28 +127,30 @@
                         </tr>
                     </thead>
                     <tbody class="mt-5">
-                        @foreach ($Mensalidades as $Mensalidade)
-                        <tr>
-                            <td scope="row">
-                                <form action="{{ url('/Painel/Anuncios',['boleto' => $Mensalidade->ID]) }}"
-                                    method="POST">
-                            <td>{{ $Mensalidade->mes }}</td>
-                            <td>{{ $Mensalidade->vencimento }}</td>
-                            <td>R$ {{ $Mensalidade->valor }}</td>
-                            @if($Mensalidade->estado > 0)
-                            <td>Em Aberto</td>
-                            @else
-                            <td>Vencido</td>
-                            @endif
-                            <td class="actions">
-                                @if($Mensalidade->estado <= 0) <button type="submit" class="btn btn-danger">Gerar
-                                    Boleto</button>
-                                    @method('POST')
-                                    @csrf
-                                    @endif
-                                    </form>
-                        </tr>
-                        @endforeach
+                        @if($Mensalidades)
+                            @foreach ($Mensalidades as $Mensalidade)
+                            <tr>
+                                <td scope="row">
+                                    <form action="{{ url('/Painel/Anuncios',['boleto' => $Mensalidade->ID]) }}"
+                                        method="POST">
+                                <td>{{ $Mensalidade->mes }}</td>
+                                <td>{{ $Mensalidade->vencimento }}</td>
+                                <td>R$ {{ $Mensalidade->valor }}</td>
+                                @if($Mensalidade->estado > 0)
+                                <td>Em Aberto</td>
+                                @else
+                                <td>Vencido</td>
+                                @endif
+                                <td class="actions">
+                                    @if($Mensalidade->estado <= 0) <button type="submit" class="btn btn-danger">Gerar
+                                        Boleto</button>
+                                        @method('POST')
+                                        @csrf
+                                        @endif
+                                        </form>
+                            </tr>
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
             </div>

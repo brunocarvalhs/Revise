@@ -73,16 +73,18 @@
     <div class="col-12 card mt-3 w-100 shadow p-3 bg-white rounded">
         <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
             <div class="MultiCarousel-inner">
-                @foreach ($Veiculos as $Veiculo)
-                <a href="{{ url('/Home/Veiculos') }}/{{ $Veiculo->placa }} ">
-                    <div class="item">
-                        <div class="pad15 shadow-sm bg-light rounded">
-                            <p class="lead">{{ $Veiculo->placa }}</p>
-                            <p>{{ $Veiculo->modelo }}</p>
+                @if(isset($Veiculos))
+                    @foreach ($Veiculos as $Veiculo)
+                    <a href="{{ url('/Home/Veiculos') }}/{{ $Veiculo->placa }} ">
+                        <div class="item">
+                            <div class="pad15 shadow-sm bg-light rounded">
+                                <p class="lead">{{ $Veiculo->placa }}</p>
+                                <p>{{ $Veiculo->modelo }}</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-                @endforeach
+                    </a>
+                    @endforeach
+                @endif
             </div>
             <button class="btn btn-primary leftLst">
                 <svg id="i-caret-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22"
