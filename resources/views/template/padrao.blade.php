@@ -103,7 +103,7 @@
                             <div class="nav-link">© 2019 Revise, Inc.</div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Termos de uso</a>
+                            <a class="nav-link" href="" data-toggle="modal" data-target="#modalTermoDeUso">Termos de uso</a>
                         </li>
                     </ul>
                 </div>
@@ -144,6 +144,8 @@
             </div>
         </div>
     </footer>
+@component('componentes.termosdeuso')
+@endcomponent
 </body>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 
