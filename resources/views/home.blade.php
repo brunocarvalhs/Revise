@@ -16,7 +16,7 @@
                             PRATICIDADE E SEGURANÇA QUE VOCÊ EXIGE?
                         </div>
                         <p class="text-definition2 text-light">Revise suas manutenções usando o sistema de notificação
-                             preditiva e compare preços antes da troca dos componentes
+                            preditiva e compare preços antes da troca dos componentes
                     </div>
                     <div class="col-0 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <img src="{{asset('img/note_app.png')}}" id="icone">
@@ -64,7 +64,9 @@
                             </ul>
                         </p>
                         <div class="pt-4"></div>
-                        <button type="button" class="btn btn-warning w-100">Assine já</button>
+                        <a href="{{ url('/cadastro/fisico')}}">
+                            <button type="button" class="btn btn-warning w-100">Assine já</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -84,7 +86,9 @@
                             </ul>
                         </p>
                         <div class="pt-4"></div>
-                        <button type="button" class="btn btn-warning w-100">Assine já</button>
+                        <a href="{{ url('/cadastro/fisico')}}">
+                            <button type="button" class="btn btn-warning w-100">Assine já</button>
+                        </a>
                     </div>
                 </div>
             </div>
