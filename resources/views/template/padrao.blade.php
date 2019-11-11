@@ -122,13 +122,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="{{asset('img/icon/twitterIcon.png')}}" class="redesocialIcones"
-                                    alt="Github-revise" />
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="https://github.com/Bruno-Carv/Revise">
                                 <img src="{{asset('img/icon/githubIcon.png')}}" class="redesocialIcones"
                                     alt="Github-revise" />
                             </a>
