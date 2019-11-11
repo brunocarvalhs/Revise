@@ -304,3 +304,12 @@ CREATE TABLE tb_indice(
 	FOREIGN KEY (cd_anuncio)
 		REFERENCES tb_anuncio(cd_anuncio)
 );
+
+CREATE TABLE tb_suporte(
+	cd_suporte int not null,
+    nm_email varchar(255),
+    ds_suporte text,
+    in_estado bool,
+    CONSTRAINT pk_suporte
+		PRIMARY KEY (cd_suporte)
+);
