@@ -166,7 +166,6 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
     </div>
     </form>
 </section>
-@include('componentes.termosdeuso')
 @endsection
 
 @section('script')

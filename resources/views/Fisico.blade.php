@@ -171,8 +171,6 @@
     </div>
     </form>
 </section>
-@component('componentes.termosdeuso')
-@endcomponent
 @endsection
 
 @section('script')
