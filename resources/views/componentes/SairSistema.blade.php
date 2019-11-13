@@ -2,7 +2,7 @@
     function Sair() {
         Swal.fire({
             type: "question",
-            title: "Deseja sair do sistema?",
+            title: "Deseja realmente sair do sistema?",
             showCancelButton: true,
             confirmButtonText: 'Sim',
             cancelButtonText: 'Cancelar',

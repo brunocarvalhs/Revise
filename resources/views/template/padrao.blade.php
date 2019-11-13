@@ -75,7 +75,7 @@
                             <div class="dropdown-menu" aria-labelledby="empresaEmpresa">
                                 <a class="dropdown-item bg-light" href="{{ url('/sobre') }}">Quem Somos?</a>
 
-                                <a class="dropdown-item bg-light" href="{{ url('/sobre') }}">Trabalhar Conosco</a>
+                                <a class="dropdown-item bg-light" href="{{ url('/sobre#vagas') }}">Trabalhar Conosco</a>
                             </div>
                         </li>
                     </ul>
