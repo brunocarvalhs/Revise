@@ -40,8 +40,8 @@ Route::get('/voltar', function(){
     return redirect('/');
 })->name('iwillbeback');//Referencias do Pedrão
 
-Route::get('/Suporte', function($email){
-    return dd($email);
+Route::post('/Suporte', function(){
+    return ('oi');
 });
 
 //Rotas Paticulares
