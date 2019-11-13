@@ -31,7 +31,7 @@
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="customFileLang" lang="es"
                                             disabled>
-                                            <label class="custom-file-label" for="customFileLang">Seleccionar
+                                            <label class="custom-file-label" for="customFileLang">Selecionar
                                                 foto</label>
                                         </div>
                                     </div>
