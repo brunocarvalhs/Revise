@@ -226,7 +226,7 @@
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                     <span class="h6">Digite seu e-mail aqui:</span>
                     <div class="input-group input-group-lg p-2">
-                        <input type="text" class="form-control" aria-label="Sizing example input"
+                        <input type="email" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-lg" name="email">
                     </div>
                 </div>
@@ -238,7 +238,7 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
                     <div class="input-group suporteBotao">
-                        <button type="submit" class="btn btn-warning porcentagem" type="submit">Enviar</button>
+                        <button type="submit" class="btn btn-warning porcentagem">Enviar</button>
                     </div>
                 </div>
             </div>
