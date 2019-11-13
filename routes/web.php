@@ -40,7 +40,7 @@ Route::get('/voltar', function(){
     return redirect('/');
 })->name('iwillbeback');//Referencias do Pedrão
 
-Route::post('/Suporte', function($email){
+Route::get('/Suporte', function($email){
     return dd($email);
 });
 
