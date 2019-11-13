@@ -6,6 +6,7 @@ use App\Mail\SendMailUser;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Database\Eloquent\Model;
+use Mockery\Expectation;
 
 class modelUsuario extends Model
 {
@@ -101,5 +102,25 @@ class modelUsuario extends Model
     public function VeiculosDoUsuario(){
         $Veiculos = DB::select("call sp_listaVeiculo(?)", [$this->getIdUsuario()]);
         return json_encode($Veiculos);
+    }
+
+    public function Suporte($email, $descricao)
+    {
+        try{
+
+            $id = DB::table('tb_suporte')->max('cd_suporte') + 1;
+
+            DB::table('tb_suporte')->insert([
+                'cd_suporte' => $id,
+                'nm_email' => $email,
+                'ds_suporte' => $descricao,
+                'in_estado' => false
+            ]);
+
+            return true;
+
+        }catch(Expectation $e){
+            return false;
+        }
     }
 }

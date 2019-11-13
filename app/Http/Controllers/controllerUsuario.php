@@ -176,4 +176,19 @@ class controllerUsuario extends Controller
     public function ListaVeiculosDoUsuario($model){
         return $model->VeiculosDoUsuario();
     }
+
+    public function Suporte(Request $request, modelUsuario $modelUsuario){
+        if($modelUsuario->ValidarCampos($request)){
+            if($modelUsuario->Suporte($request->email, $request->descricao)){
+                $mensagem = json_encode(['Status' => true,'Mensagem' => '']);
+            }else{
+                $mensagem = json_encode(['Status' => false,'Mensagem' => '']);
+            }
+        }
+        else{
+            $mensagem = json_encode(['Status' => false,'Mensagem' => '']);
+        }
+        $mensagem = json_decode($mensagem);
+        return redirect()->back()->with('Suporte',$mensagem);
+    }
 }

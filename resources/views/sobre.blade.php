@@ -157,3 +157,28 @@
 @section('script')
 
 @endsection
+
+@section('mensagem')
+    @if(session()->has('Suporte'))
+        @if(session()->get('Suporte')->Status)
+            @component('componentes.alert')
+                @slot('titulo','SUCESSO')
+                @slot('icone','success')
+                @slot('mensagem')
+                {{ session()->get('Suporte')->Mensagem }}
+                @endslot
+            @endcomponent
+            <script>
+                window.location.href = '/public/SignIn';
+            </script>
+        @else
+            @component('componentes.alert')
+                @slot('titulo','ERRO')
+                @slot('icone','error')
+                @slot('mensagem')
+                {{ session()->get('Suporte')->Mensagem }}
+                @endslot
+            @endcomponent
+        @endif
+    @endif
+@endsection
