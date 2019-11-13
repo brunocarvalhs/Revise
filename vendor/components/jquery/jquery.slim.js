@@ -1307,7 +1307,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 
 			// Support: IE9-11+
 			// IE's :disabled selector does not pick up the children of disabled fieldsets
-			docElem.appendChild( el ).disabled = true;
+			docElem.appendChild( el ).disabled = false;
 			if ( el.querySelectorAll(":disabled").length !== 2 ) {
 				rbuggyQSA.push( ":enabled", ":disabled" );
 			}

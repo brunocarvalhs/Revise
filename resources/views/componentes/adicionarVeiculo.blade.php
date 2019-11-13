@@ -35,7 +35,7 @@
                             <div class="form-group">
                                 <label for="disabledTextInput">Marca/Modelo</label>
                                 <input type="text" readonly="true" class="form-control" id="txtMarca" name="txtMarca"
-                                    placeholder="">
+                                    placeholder="" >
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">

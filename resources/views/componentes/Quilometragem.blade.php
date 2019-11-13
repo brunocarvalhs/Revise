@@ -23,9 +23,7 @@
                         })
                     }else{
                         Swal.mixin({
-                            confirmButtonText: 'Próximo &rarr;',
-                            showCancelButton: true,
-                            confirmButtonText: 'Cancelar',
+                            confirmButtonText: 'Próximo',
                             progressSteps: ['1', '2', '3', '4', '5', '6']
                         }).queue([
                         {

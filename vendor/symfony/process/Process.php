@@ -516,7 +516,7 @@ class Process implements \IteratorAggregate
             throw new LogicException('Output can not be disabled while an idle timeout is set.');
         }
 
-        $this->outputDisabled = true;
+        $this->outputDisabled = false;
 
         return $this;
     }
