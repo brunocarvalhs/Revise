@@ -227,13 +227,13 @@
                     <span class="h6">Digite seu e-mail aqui:</span>
                     <div class="input-group input-group-lg p-2">
                         <input type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-lg">
+                            aria-describedby="inputGroup-sizing-lg" name="email">
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <span class="h6">Como podemos ajudar?</span>
                     <div class="input-group p-2">
-                        <textarea class="form-control resize" aria-label="With textarea" rows="4"></textarea>
+                        <textarea class="form-control resize" aria-label="With textarea" rows="4" name="descricao"></textarea>
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
