@@ -41,7 +41,7 @@ Route::get('/voltar', function(){
 })->name('iwillbeback');//Referencias do Pedrão
 
 Route::post('/Suporte', function(){
-    return back();
+    return redirect('/');
 });
 
 //Rotas Paticulares
