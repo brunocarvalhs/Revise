@@ -221,7 +221,7 @@
                 </p>
             </div>
         </div>
-        <form action="" method="POST" onsubmit="">
+        <form action="{{ route('suporte') }}" method="POST">
             <div class="formularioSuport row tituloBranco">
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                     <span class="h6">Digite seu e-mail aqui:</span>
@@ -238,7 +238,7 @@
                 </div>
                 <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
                     <div class="input-group suporteBotao">
-                        <button type="button" class="btn btn-warning porcentagem" type="submit">Enviar</button>
+                        <button type="submit" class="btn btn-warning porcentagem" type="submit">Enviar</button>
                     </div>
                 </div>
             </div>
