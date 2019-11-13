@@ -178,6 +178,7 @@ class controllerUsuario extends Controller
     }
 
     public function Suporte(Request $request, modelUsuario $modelUsuario){
+        return dd($request);
         if($modelUsuario->ValidarCampos($request)){
             if($modelUsuario->Suporte($request->email, $request->descricao)){
                 $mensagem = json_encode(['Status' => true,'Mensagem' => '']);
