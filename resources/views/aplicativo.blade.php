@@ -221,7 +221,7 @@
                 </p>
             </div>
         </div>
-        <form action="{{ url('/Suporte') }}" method="POST">
+        <form action="{{ url('/Suporte') }}" method="GET">
             <div class="formularioSuport row tituloBranco">
                 <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                     <span class="h6">Digite seu e-mail aqui:</span>
