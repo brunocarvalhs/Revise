@@ -20,8 +20,7 @@
         </div>
     </div>
 </section>
-<!-- particles.js container -->
-
+<!-- background js-->
 <div id="particles-js"></div>
 <div class="container">
         <div class="row">
