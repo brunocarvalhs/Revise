@@ -5,8 +5,8 @@
         <small class="text-muted">{{ $Data }}</small>
     </div>
     <div class="toast-body bg-ligth">
-        Opa, Chegou a hora da verificar o {{ $Nome }}!<br><br>
-        Que tal já realizar suas pesquisas?Faça isso em Serviços e Produtos.<br>
+        Opa! Chegou a hora da verificar o {{ $Nome }}<br><br>
+        Que tal já realizar suas pesquisas?<br>
         <div class="row mt-3">
             <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
                 <a href="{{ route('pesquisa') }}?pesquisa={{ urlencode($Nome) }}&tipo=&preco=">

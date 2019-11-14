@@ -17,7 +17,7 @@
     <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 card p-3 m-1 shadow-sm">
         <div class="row mt-3">
             <div class="col-12">
-                <h4>Notificação</h4>
+                <h4>Notificações</h4>
             </div>
             <hr />
             <div class="col-12 mt-3">
