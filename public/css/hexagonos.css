@@ -1,0 +1,35 @@
+
+body {
+margin: 0;
+
+}
+
+#hexagonos-js {
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #26282b;
+background-image: url("");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+max-height: 550px;
+} /* ---- stats.js ---- */
+
+
+.js-count-hexagonos {
+font-size: 1.1em;
+}
+#stats,
+.count-hexagonos {
+-webkit-user-select: none;
+margin-top: 5px;
+margin-left: 5px;
+}
+#stats {
+border-radius: 3px 3px 0 0;
+overflow: hidden;
+}
+.count-hexagonos {
+border-radius: 0 0 3px 3px;
+}

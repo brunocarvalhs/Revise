@@ -5,20 +5,32 @@
 @section('menu_home','active')
 
 @section('conteudo')
+
+
+
+  <!-- particles.js container -->
+<div id="hexagonos-js"></div>
+<!-- stats - count particles -->
+<div class="count-particles"> <span class="js-count-particles">--</span> particles </div>
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+<div class="container">
 <!-- Apresentação -->
-<section class="bg-dark espaco mt-2">
-    <div class="container">
+<section class="espaco mt-2">
         <div class="row">
             <div class="col-12">
                 <div class="row">
-                    <div class="col-0 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                         <div class=" text-warning text_definition">
                             PRATICIDADE E SEGURANÇA QUE VOCÊ EXIGE?
                         </div>
                         <p class="text-definition2 text-light">Revise suas manutenções usando o sistema de notificação
                             preditiva e compare preços antes da troca dos componentes
                     </div>
-                    <div class="col-0 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <div class="col-0 col-sm-0 col-md-0 col-lg-6 col-xl-6">
                         <img src="{{asset('img/note_app.png')}}" id="icone">
                         <br><br>
                     </div>
@@ -232,8 +244,11 @@
             </div>
         </div>
     </div>
+
 </section>
+
 @endsection
+
 @section('script')
 
 @endsection

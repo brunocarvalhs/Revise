@@ -315,7 +315,11 @@ h6 {
 #icone {
     width: 100%;
 }
-
+@media screen and (max-width: 999px) {
+    #icone {
+      display: none;
+    }
+}
 .resize {
     resize: none;
 }

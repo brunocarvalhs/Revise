@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/index.css')}}       ">
     <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset('css/particles.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/hexagonos.css')}}">
+
     @yield('style')
     <script src="/vendor/components/jquery/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -27,6 +29,8 @@
     <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="/resources/js/particles.js" type="text/javascript" async="true" defer></script>
+    <script src="/resources/js/hexagonos.js" type="text/javascript" async="true" defer></script>
+
     @yield('script')
     @yield('mensagem')
     @include('componentes.cadastroRedirecionamento')
