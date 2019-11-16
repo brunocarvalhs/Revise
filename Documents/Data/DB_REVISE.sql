@@ -98,7 +98,7 @@ CONSTRAINT fk_usuario_tipo
 		REFERENCES tb_tipo_usuario(cd_tipo_usuario)
 );
 
-create table tb_usuario_fisico(
+CREATE TABLE tb_usuario_fisico(
 cd_usuario_fisico int not null,
 nm_usuario_fisico varchar(255),
 cd_cpf varchar(13) not null,
@@ -111,7 +111,7 @@ CONSTRAINT fk_fisico_usuario
 		REFERENCES tb_usuario(cd_usuario)
 );
 
-create table tb_usuario_juridico(
+CREATE TABLE tb_usuario_juridico(
 cd_usuario_juridico int not null,
 nm_nome_fantasia varchar(255),
 nm_razao_social VARCHAR(255),
@@ -160,7 +160,7 @@ CONSTRAINT fk_peca_tipo
 CREATE TABLE tb_controle_plano(
 cd_controle int not null,
 cd_usuario_fisico int not null,
-cd_plano int,
+cd_plano int not null,
 dt_definicao DATETIME,
 dt_expiracao DATETIME,
 vl_pago_plano DECIMAL(7,2),
