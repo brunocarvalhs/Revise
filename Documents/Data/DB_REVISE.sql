@@ -1,5 +1,5 @@
-create database db_revise;
-use db_revise;
+CREATE DATABASE db_revise;
+USE db_revise;
 
 
 CREATE TABLE tb_status (
