@@ -97,7 +97,7 @@
                     <div class="input-group mb-3">
                         <select class="custom-select" id="txtplano" name="txtplano"
                             aria-label="Exemplo de select com botão addon">
-                            <option value="0" selected>Selecione seu plano...</option>
+                            <option selected>Selecione seu plano...</option>
                             <option value="1">Standart</option>
                             <option value="2">Gold</option>
                         </select>
