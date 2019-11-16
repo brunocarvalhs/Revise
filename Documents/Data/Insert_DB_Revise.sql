@@ -129,12 +129,10 @@ VALUES
 INSERT INTO tb_plano
     (cd_plano, nm_plano, ds_plano, vl_plano, qt_anuncio, qt_veiculo)
 VALUES
-    (1 , 'Basic', 'Plano Gratuito', 00.00, null, 2),
-    (2 , 'Standart', 'Plano de R$9,99', 9.99, null, 5),
-    (3 , 'Pro', 'Plano de R$39,99', 39.99, null, 20),
-    (4 , 'Deluxe Edition', 'Plano de R$99,90', 99.90, null, 50),
+    (1 , 'Standart', 'Plano Gratuito', 00.00, null, 1),
+    (2 , 'Gold', 'Plano de R$9,99', 9.99, null, 3),
     (5 , 'Plano Juridico', 'Personalizavel', null, null, null);
-
+/*
 INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_tipo_usuario) VALUES
 (1,'marinalunasales__marinalunasales@acritica.com.br','2Nq1duhP3l',1),
 (2,'josemariodamata-90@tivit.com.br','UjzE7GqhEI',1),
@@ -266,7 +264,7 @@ VALUES
 (28,'Calebe e Mirella Contábil ME','Resturante Feliz','55910408000192',58),
 (29,'Antonio e Carolina Telecomunicações Ltda','Contabilidade Assembleia','95237975000144',59),
 (30,'Raimundo e Isabel Entregas Expressas ME','Mudanças para tudo','61067396000189',60);
-
+*/
 
 INSERT INTO
     tb_cidade
@@ -7458,7 +7456,7 @@ VALUES
     (73, 1, 'MARAJO'),
     (74, 1, 'SUPREMA');
 
-
+/*
 INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veiculo, qt_quilometragem) VALUES
 (1,'Prata','JQK-4077',1,32,2015,'20469'),
 (2,'Laranja','MUK-2453',1,32,2016,'1069'),
@@ -7541,9 +7539,8 @@ INSERT INTO tb_logradouro (cd_logradouro, nm_logradouro, cd_usuario_juridico, cd
 (1, 'Rua cidade de Santos', 1, 1),
 (2, 'Rua cidade de Santos', 3, 3);
 
-
-INSERT INTO tb_controle_plano (cd_plano, cd_usuario_fisico, dt_definicao, dt_expiracao, vl_pago_plano) VALUES
-(2,1,'2019-09-27', '2019-10-27', 9.99);
+INSERT INTO tb_controle_plano (cd_controle, cd_usuario_fisico, cd_plano, dt_definicao, dt_expiracao, vl_pago_plano) VALUES
+(2,1,1,'2019-09-27', '2019-10-27', 9.99);
 
 
 INSERT INTO tb_check (cd_check, cd_veiculo, sg_status, cd_peca) VALUES
@@ -7551,10 +7548,7 @@ INSERT INTO tb_check (cd_check, cd_veiculo, sg_status, cd_peca) VALUES
 (2, 1, 'B', 4),
 (3, 1, 'A', 14),
 (4, 1, 'C', 12);
-
-update tb_controle_plano set cd_plano = 1 where cd_plano = 0;
-
-
+*/
 -- ################# OFICIAIS ##########################
 
 -- Seleciona Anuncio
