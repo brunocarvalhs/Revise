@@ -132,7 +132,7 @@ VALUES
     (1 , 'Standart', 'Plano Gratuito', 00.00, null, 1),
     (2 , 'Gold', 'Plano de R$9,99', 9.99, null, 3),
     (5 , 'Plano Juridico', 'Personalizavel', null, null, null);
-
+/*
 INSERT INTO tb_usuario(cd_usuario,nm_email,cd_senha,cd_tipo_usuario) VALUES
 (1,'marinalunasales__marinalunasales@acritica.com.br','2Nq1duhP3l',1),
 (2,'josemariodamata-90@tivit.com.br','UjzE7GqhEI',1),
@@ -264,7 +264,7 @@ VALUES
 (28,'Calebe e Mirella Contábil ME','Resturante Feliz','55910408000192',58),
 (29,'Antonio e Carolina Telecomunicações Ltda','Contabilidade Assembleia','95237975000144',59),
 (30,'Raimundo e Isabel Entregas Expressas ME','Mudanças para tudo','61067396000189',60);
-
+*/
 
 INSERT INTO
     tb_cidade
@@ -7456,7 +7456,7 @@ VALUES
     (73, 1, 'MARAJO'),
     (74, 1, 'SUPREMA');
 
-
+/*
 INSERT INTO tb_veiculo(cd_veiculo,nm_cor,cd_placa,cd_usuario,cd_modelo, aa_veiculo, qt_quilometragem) VALUES
 (1,'Prata','JQK-4077',1,32,2015,'20469'),
 (2,'Laranja','MUK-2453',1,32,2016,'1069'),
@@ -7548,7 +7548,7 @@ INSERT INTO tb_check (cd_check, cd_veiculo, sg_status, cd_peca) VALUES
 (2, 1, 'B', 4),
 (3, 1, 'A', 14),
 (4, 1, 'C', 12);
-
+*/
 -- ################# OFICIAIS ##########################
 
 -- Seleciona Anuncio
