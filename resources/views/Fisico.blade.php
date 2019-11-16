@@ -190,7 +190,9 @@
                 @endslot
             @endcomponent
             <script>
-                window.location.href = '/public/SignIn';
+                setTimeout(() => {
+                    window.location.href = '/public/SignIn';
+                }, 3000);
             </script>
         @else
             @component('componentes.alert')

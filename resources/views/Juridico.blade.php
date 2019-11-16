@@ -184,6 +184,11 @@ que consta em documentos legais e é usado em termos formais" name="razaoSocial"
                 {{ session()->get('Cadastro')->Mensagem }}
                 @endslot
             @endcomponent
+            <script>
+                setTimeout(() => {
+                    window.location.href = '/public/SignIn';
+                }, 3000);
+            </script>
         @else
             @component('componentes.alert')
                 @slot('titulo','ERRO')
