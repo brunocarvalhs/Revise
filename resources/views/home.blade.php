@@ -12,9 +12,9 @@
 <div id="hexagonos-js"></div>
 <!-- background js-->
 <div class="count-particles"> <span class="js-count-particles">--</span> particles </div>
-<div class="container">
+<div class="container-fluid backgroundDark">
 <!-- Apresentação -->
-<section class="espaco mt-2">
+<section class="espaco mt-2 p-5">
         <div class="row">
             <div class="col-12">
                 <div class="row">
