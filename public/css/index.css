@@ -38,6 +38,12 @@ html, body {
     padding: 80px;
 }
 
+.backgroundDark {
+    background-color: #26282b;
+    padding: 80px;
+}
+
+
 .backgroundYellow {
     background-color: #ffc107;
     padding: 80px;
@@ -54,6 +60,10 @@ html, body {
 }
 
 @media screen and (max-width: 600px) {
+    .backgroundDark {
+        background-color: #26282b;
+        padding: 10px;
+    }
     .backgroundBlack {
         background-color: #454545;
         padding: 10px;
