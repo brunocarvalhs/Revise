@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bem-Vindo(a)! - @yield('titulo')</title>
+    <title>Revise- @yield('titulo')</title>
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bulma.min.css') }}">
     <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -165,8 +165,8 @@
                                                     </svg>
                                                 </button>
                                                 <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
-                                                    <a class="dropdown-item bg-warning" href="">Excluir conta</a>
-                                                </div>
+                                                        <button class="btn dropdown-item bg-warning" onclick="excluirConta()">Excluir conta</button>
+                                                    </div>
                                             </div>
                                         </div>
                                     </div>

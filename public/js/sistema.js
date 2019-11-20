@@ -72,7 +72,7 @@ function infoKm() {
                   text: "Ok",
                   className: "swal-button--style",
                   value: "ok",
-
+                    cancel: "Cancelar"
                 }
               })
 
@@ -81,7 +81,7 @@ function infoKm() {
 
                     case "ok":
 
-                      window.location = './sistema.php';
+                      window.location = './SignIn.php';
 
                       break;
                   }
@@ -127,3 +127,19 @@ function infoKm() {
     });
   }
 }
+function excluirConta(){
+
+    swal({
+        icon: "warning",
+       title: "Deseja realmente excluir sua conta e todos os seus dados?",
+        button:
+        {
+          text: "Sim",
+          className: "swal-button--style",
+        }
+
+      })
+      .then((value) => {
+        window.location.reload();
+      })
+    }

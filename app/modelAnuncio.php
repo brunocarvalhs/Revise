@@ -52,14 +52,14 @@ class modelAnuncio extends Model
                     ]
                 );
 
-                return json_encode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Sucesso', 'Mensagem' => 'Cadastrado com sucesso.']);
+                return json_encode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Sucesso', 'Mensagem' => 'Cadastrado com sucesso']);
             } else {
 
-                return json_encode(['Status' => false, 'Tipo' => 'warning', 'Titulo' => 'Falha', 'Mensagem' => 'Campos em branco detectado.']);
+                return json_encode(['Status' => false, 'Tipo' => 'warning', 'Titulo' => 'Falha', 'Mensagem' => 'Preencha os campos em branco!']);
             }
         } catch (Exception $e) {
 
-            return json_encode(['Status' => false, 'Tipo' => 'error', 'Titulo' => 'Falha', 'Mensagem' => 'Erro ao tentar cadastar.']);
+            return json_encode(['Status' => false, 'Tipo' => 'error', 'Titulo' => 'Falha', 'Mensagem' => 'Erro ao cadastrar']);
         }
     }
 

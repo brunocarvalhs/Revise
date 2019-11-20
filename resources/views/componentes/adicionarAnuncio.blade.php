@@ -3,8 +3,8 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h4 class="modal-title w-100 font-weight-bold">Quilomentragem - <div id="campo"></div></h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <h4 class="modal-title w-100 font-weight-bold"> Criar Anúncio<div id="campo"></div></h4>
+                <button type="button" class="close " data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -14,11 +14,11 @@
                         <fieldset>
                             <div class="row">
                                 <div class="col-6">
-                                    <button class="btn btn-secondary btn-lg btn-block d-flex justify-content-center bg-warning mt-3"
+                                    <button class="btn btn-secondary btn-lg btn-block d-flex justify-content-center bg-warning mt-3 border-0"
                                         data-toggle="modal" data-target="#modelServico">Serviço</button>
                                 </div>
                                 <div class="col-6">
-                                    <button class="btn btn-secondary btn-lg btn-block d-flex justify-content-center bg-warning mt-3"
+                                    <button class="btn btn-secondary btn-lg btn-block d-flex justify-content-center bg-warning mt-3 border-0"
                                         data-toggle="modal" data-target="#modelProduto">Produto</button>
                                 </div>
                             </div>
