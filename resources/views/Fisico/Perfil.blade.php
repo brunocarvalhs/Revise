@@ -33,8 +33,7 @@
                                     <label for="campoNome" class="text-warning">Nome completo</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome" value="{{ $Perfil->Nome }}"
-                                        readonly>
+                                    <input type="text" class="form-control" id="campoNome" value="{{ $Perfil->Nome }}">
                                 </div>
                             </div>
                         </div>
@@ -42,8 +41,7 @@
                         <div class="form-group inputCadastro">
                             <label for="exampleFormControlInput1" class="text-warning">Endereço de
                                 email</label>
-                            <input type="email" class="form-control" id="campoEmail" value="{{ $Perfil->Email }}"
-                                readonly>
+                            <input type="email" class="form-control" id="campoEmail" value="{{ $Perfil->Email }}">
                         </div>
                         <div class="form-group inputCadastro">
                             <div class="form-row">
@@ -51,14 +49,14 @@
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1" class="text-warning">CPF</label>
                                     <input type="text" class="form-control" id="campoDoCpf" placeholder="xxx.xxx.xxx-xx"
-                                        data-mask="000.000.000-00" value="{{ $Perfil->CPF }}" readonly>
+                                        data-mask="000.000.000-00" value="{{ $Perfil->CPF }}">
                                 </div>
                                 <!-- Data de nascimento -->
                                 <div class="col-12 col-sm-12 col-md col-lg col-xl">
                                     <label for="exampleFormControlInput1" class="text-warning">Data
                                         de nascimento</label>
                                     <input type="date" class="form-control" id="campoDeNascimento"
-                                        value="{{ $Perfil->Nascimento }}" readonly>
+                                        value="{{ $Perfil->Nascimento }}">
                                 </div>
                             </div>
                         </div>
@@ -68,14 +66,13 @@
                                     <label class="text-warning">Planos</label>
                                 </div>
                             </div>
+                            <!--<div class="input-group mb-3">
+                                <input class="form-control" type="text" value='{{ $Perfil->Plano }}'>
+                            </div>-->
                             <div class="input-group mb-3">
-                                <input class="form-control" type="text" value='{{ $Perfil->Plano }}' readonly>
-                            </div>
-                            <div class="input-group mb-3">
-                                <select class="custom-select" id="txtPlano" name="txtPlano"
-                                    aria-label="Exemplo de select com botão addon" hidden>
-                                    <option value="">Basic</option>
-                                    <option value="">Gold</option>
+                                <select class="custom-select" id="txtPlano" name="txtPlano">
+                                    <option value='{{ $Perfil->Plano }}'>Basic</option>
+                                    <option value='{{ $Perfil->Plano }}'>Gold</option>
                                 </select>
                             </div>
                         </div>
@@ -85,7 +82,7 @@
                 <br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: block;" id="btn_off">
-                        <button type="button" class="btn btn-warning btn-block" onclick="btnPerfil()">Alterar
+                        <button type="button" class="btn btn-warning btn-block" onclick="btnPerfilFisico()">Alterar
                             dados</button>
                     </div>
                     <!--Botões escondidos-->

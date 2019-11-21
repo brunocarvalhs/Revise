@@ -16,6 +16,12 @@
 
 @section('sistema_juridico')
 <div class="card perfil">
+    <div class="card-up lighten-1 PerfilCard perfilBackgroud"></div>
+    <div class="avatar mx-auto row">
+        <div class="col">
+            <img src="{{ asset('img/user.jpg') }}" width="250" height="250" class="rounded-circle" alt="woman avatar">
+        </div>
+    </div>
     <div class="card-body">
         <div class="card-body">
             <form action="" method="POST" onsubmit="">
@@ -29,7 +35,7 @@
                                     <label for="campoNome" class="text-warning">Nome Fantasia</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome" value="{{ $Dados->Fantasia }}" readonly>
+                                    <input type="text" class="form-control" id="nomeFantasia" value="{{ $Dados->Fantasia }}" >
                                 </div>
                             </div>
                         </div>
@@ -39,7 +45,7 @@
                                     <label for="campoNome" class="text-warning">Razão Social</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome" value="{{ $Dados->Razao }}" readonly>
+                                    <input type="text" class="form-control" id="razaoSocial" value="{{ $Dados->Razao }}" >
                                 </div>
                             </div>
                         </div>
@@ -49,37 +55,37 @@
                                 <div class="col-12 col-sm-12 col-md col-lg-6 col-xl-6">
                                     <label for="exampleFormControlInput1" class="text-warning">Endereço de
                                         email</label>
-                                    <input type="email" class="form-control" id="campoEmail" value="{{ $Dados->Email }}" readonly>
+                                    <input type="email" class="form-control" id="campoEmail" value="{{ $Dados->Email }}" >
                                 </div>
                                 <!-- CNPJ -->
                                 <div class="col-12 col-sm-12 col-md col-lg-6 col-xl-6">
                                     <label for="exampleFormControlInput1" class="text-warning">CNPJ</label>
-                                    <input type="text" class="form-control" id="campoDoCpf" placeholder="" data-mask="00.000.000/0000-00"
-                                        value="{{ $Dados->CNPJ }}" readonly>
+                                    <input type="text" class="form-control" id="campoDoCnpj" placeholder="" data-mask="00.000.000/0000-00"
+                                        value="{{ $Dados->CNPJ }}" >
                                 </div>
                             </div>
                             <br>
                             <div class="form-group inputCadastro">
                                 <label for="inputAddress" class="text-warning">Endereço</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="" readonly value="{{ $Dados->Endereco }}">
+                                <input type="text" class="form-control" id="endereco" placeholder="" value="{{ $Dados->Endereco }}">
                             </div>
                             <div class="form-group inputCadastro">
                                     <label for="inputAddress" class="text-warning">Bairro</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder="" readonly value="{{ $Dados->Bairro }}">
+                                    <input type="text" class="form-control" id="bairro" placeholder=""  value="{{ $Dados->Bairro }}">
                             </div>
                             <div class="form-row inputCadastro">
                                 <div class="form-group col-md-4">
                                     <label for="inputCity" class="text-warning">Cidade</label>
-                                    <input type="text" class="form-control" id="inputCity" readonly value="{{ $Dados->Cidade }}">
+                                    <input type="text" class="form-control" id="cidade"  value="{{ $Dados->Cidade }}">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEstado" class="text-warning">Estado</label>
-                                    <input type="text" class="form-control" id="inputCity" readonly value="{{ $Dados->Estado }}">
+                                    <input type="text" class="form-control" id="estado"  value="{{ $Dados->Estado }}">
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
                                         <label for="inputEstado" class="text-warning">Pais</label>
-                                        <input type="text" class="form-control" id="inputCity" value="Brasil" readonly>
+                                        <input type="text" class="form-control" id="pais" value="Brasil" >
                                         </select>
                                     </div>
                             </div>
@@ -90,7 +96,7 @@
                 <br>
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="display: block;" id="btn_off">
-                        <button type="button" class="btn btn-warning btn-block" onclick="btnPerfil()">Alterar
+                        <button type="button" class="btn btn-warning btn-block" onclick="btnPerfilJuridico()">Alterar
                             dados</button>
                     </div>
                     <!--Botões escondidos-->

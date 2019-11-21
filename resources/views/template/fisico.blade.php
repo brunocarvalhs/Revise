@@ -32,7 +32,7 @@
     @include('componentes.SairSistema')
 </head>
 
-<body class="bg-light container-fluid semPadding">
+<body class="bg-light container-fluid semPadding" onload="disableFisico()">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2">
             <!--Menu superior responsivo-->
