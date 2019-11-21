@@ -17,7 +17,7 @@
 
 
 @section('sistema_juridico')
-<div class="row p-5">
+<div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3">
