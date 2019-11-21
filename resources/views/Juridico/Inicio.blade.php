@@ -34,7 +34,7 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-3">
                 <div class="col-12 card hadow-sm p-3 mb-5 bg-white rounded">
-
+                    <canvas id="AnunciosHorizontal" width="600" height="200"></canvas>
                 </div>
             </div>
         </div>
@@ -55,4 +55,5 @@
 @section('script')
     @include('componentes.graficoAnuncios')
     @include('componentes.graficoIndice')
+    @include('componentes.graficoHorizantal')
 @endsection
