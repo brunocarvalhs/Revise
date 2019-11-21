@@ -53,7 +53,7 @@ Route::group(['middleware' => 'Fisico'], function () {
     Route::get('/Home','controllerFisico@Index');
     // * Perfil
     Route::get('/Home/Perfil','controllerFisico@LerPerfil');//Ler
-    Route::put('/Home/Perfil','controllerFisico@AlterarPerfil');//Alterar
+    Route::put('/Home/Perfil','controllerFisico@AlterarPerfil')->name('atualizarFisico');//Alterar
     Route::delete('/Home/Perfil', 'controllerFisico@DeletarPerfil');//Deletar
     // * Veiculos
     Route::get('/Home/Veiculos','controllerVeiculo@LerVeiculos');//Ler
@@ -79,7 +79,9 @@ Route::group(['middleware' => 'Juridico'], function () {
     Route::get('/Painel','controllerJuridico@Index');//Ler
     // * Perfil
     Route::get('/Painel/Perfil','controllerJuridico@LerPerfil');//Ler
-    //Route::put('/Painel/Perfil','');//Alterar
+    Route::put('/Painel/Perfil',function(){
+        return 'oi';
+    })->name('atualizarJuridico');//Alterar
     //Route::delete('/Painel/Perfil', '');//Deletar
     // * Anuncios
     Route::get('/Painel/Anuncio','controllerAnuncio@ControlerDeAnuncioJuridico');//Ler

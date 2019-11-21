@@ -63,7 +63,7 @@ class controllerFisico extends Controller
     }
 
     public function AlterarPerfil(){
-
+        return 'oi';
     }
 
     public function DeletarPerfil(){

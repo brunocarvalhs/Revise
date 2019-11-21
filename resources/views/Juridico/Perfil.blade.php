@@ -24,7 +24,9 @@
     </div>
     <div class="card-body">
         <div class="card-body">
-            <form action="" method="POST" onsubmit="">
+            <form action="{{ route('atualizarJuridico') }}" method="POST">
+                @csrf
+                @method('PUT')
                 <!--Perfil Usuario Fisico-->
                 <div class="row">
                     <div class="col-12">

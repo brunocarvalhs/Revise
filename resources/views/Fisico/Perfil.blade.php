@@ -22,7 +22,9 @@
     </div>
     <div class="card-body">
         <div class="card-body">
-            <form action="" method="POST" onsubmit="">
+            <form action="{{ route('atualizarFisico') }}" method="POST">
+                @csrf
+                @method('PUT')
                 <!--Perfil Usuario Fisico-->
                 <div class="row">
                     <div class="col-12">
@@ -69,14 +71,6 @@
                             <div class="input-group mb-3">
                                 <input class="form-control" type="text" value='{{ $Perfil->Plano }}'>
                             </div>
-                           <!--
-                            <div class="input-group mb-3">
-                                <select class="custom-select" id="txtPlano" name="txtPlano">
-                                    <option value=''>Basic</option>
-                                    <option value=''>Gold</option>
-                                </select>
-                            </div>
-                        -->
                         </div>
                     </div>
                 </div>
@@ -91,7 +85,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" style="display: none;" id="btn_hidden">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                <button type="button" class="btn btn-success btn-block"
+                                <button type="submit" class="btn btn-success btn-block"
                                     onclick="Salvar()">Salvar</button>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
