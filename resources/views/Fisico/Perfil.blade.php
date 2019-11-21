@@ -66,15 +66,17 @@
                                     <label class="text-warning">Planos</label>
                                 </div>
                             </div>
-                            <!--<div class="input-group mb-3">
+                            <div class="input-group mb-3">
                                 <input class="form-control" type="text" value='{{ $Perfil->Plano }}'>
-                            </div>-->
+                            </div>
+                           <!--
                             <div class="input-group mb-3">
                                 <select class="custom-select" id="txtPlano" name="txtPlano">
-                                    <option value='{{ $Perfil->Plano }}'>Basic</option>
-                                    <option value='{{ $Perfil->Plano }}'>Gold</option>
+                                    <option value=''>Basic</option>
+                                    <option value=''>Gold</option>
                                 </select>
                             </div>
+                        -->
                         </div>
                     </div>
                 </div>
