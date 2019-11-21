@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-0 col-sm-0 col-md-6 col-lg-6 col-xl-6 p-3">
                 <div class="col-12 card hadow-sm p-3 mb-5 bg-white rounded">
-                    <canvas id="AnunciosHorizontal" width="600" height="200" class="col-0 col-sm-0 col-md-12 col-lg-12 col-xl-12 p-3"></canvas>
+                    <canvas id="AnunciosHorizontal" width="600" height="200"></canvas>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3">
