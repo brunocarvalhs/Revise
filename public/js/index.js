@@ -65,16 +65,12 @@ function btnPerfilJuridico() {
 
                 case "Sim":
                     //habilitando inputs
-                    document.getElementById("razaoSocial").disabled = false;
                     document.getElementById("nomeFantasia").disabled = false;
-                    document.getElementById("campoDoCnpj").disabled = false;
                     document.getElementById("campoEmail").disabled = false;
                     document.getElementById("endereco").disabled = false;
                     document.getElementById("bairro").disabled = false;
                     document.getElementById("cidade").disabled = false;
                     document.getElementById("estado").disabled = false;
-                    document.getElementById("pais").disabled = false;
-
                     //Aparecer botão
                     var show = document.getElementById('btn_hidden');
                     var hide = document.getElementById('btn_off');
@@ -121,7 +117,6 @@ function btnPerfilFisico() {
                     //habilitando inputs
                     document.getElementById("campoNome").disabled = false;
                     document.getElementById("campoEmail").disabled = false;
-                    document.getElementById("campoDoCpf").disabled = false;
                     document.getElementById("campoDeNascimento").disabled = false;
                     document.getElementById("txtPlano").disabled = false;
                     //Aparecer botão
