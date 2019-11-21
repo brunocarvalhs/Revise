@@ -222,4 +222,13 @@ class modelJuridico extends modelUsuario
         $dados = json_encode($dados);
         return ($dados);
     }
+
+    public function atualizarPerfil(){
+        try{
+            return true;
+        }
+        catch(Exception $e){
+            return false;
+        }
+    }
 }

@@ -52,6 +52,13 @@ class controllerJuridico extends Controller
 
     public function AlterarPerfil(Request $request, modelJuridico $modelJuridico, modelPlano $modelPlano){
         return dd($request);
+        if($modelJuridico->atualizarPerfil()){
+            $atualizacao = json_encode(['Status'=>true, 'Mensagem'=>'']);
+        }else{
+            $atualizacao = json_encode(['Status'=>false, 'Mensagem'=>'']);
+        }
+        $atualizacao = json_decode($atualizacao);
+        return redirect()->back()->with('Atualizacao', $atualizacao);
     }
 
     public function DeletarPerfil(){

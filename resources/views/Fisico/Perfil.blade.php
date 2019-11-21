@@ -158,3 +158,23 @@
 
 
 @endsection
+
+@section('mensagem')
+@if(session()->has('Atualizacao'))
+    @component('componentes.alert')
+        @slot('titulo','Confirmado')
+        @slot('icone','success')
+        @slot('mensagem')
+            {{ session()->get('Atualizacao')->Mensagem }}
+        @endslot
+    @endcomponent
+@else
+    @component('componentes.alert')
+        @slot('titulo','Erro')
+        @slot('icone','error')
+        @slot('mensagem')
+            {{ session()->get('Atualizacao')->Mensagem }}
+        @endslot
+    @endcomponent
+@endif
+@endsection

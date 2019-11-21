@@ -127,3 +127,16 @@
 @section('script')
 
 @endsection
+
+
+@section('mensagem')
+@if(session()->has('Atualizacao'))
+    @component('componentes.alert')
+        @slot('titulo',session()->get('Atualizacao')->Titulo)
+        @slot('icone',session()->get('Atualizacao')->Tipo)
+        @slot('mensagem')
+            {{ session()->get('Atualizacao')->Mensagem }}
+        @endslot
+    @endcomponent
+@endif
+@endsectionS
