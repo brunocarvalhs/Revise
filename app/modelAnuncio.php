@@ -52,7 +52,7 @@ class modelAnuncio extends Model
                     ]
                 );
 
-                return json_encode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Sucesso', 'Mensagem' => 'Cadastrado com sucesso']);
+                return json_encode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Cadastrado com sucesso!', 'Mensagem' => '']);
             } else {
 
                 return json_encode(['Status' => false, 'Tipo' => 'warning', 'Titulo' => 'Falha', 'Mensagem' => 'Preencha os campos em branco!']);
@@ -212,7 +212,7 @@ class modelAnuncio extends Model
         }
         $deletar = DB::table('tb_anuncio')->where('cd_anuncio', '=', $IdAnuncio)->delete();
         if ($deletar) {
-            return json_encode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Sucesso', 'Mensagem' => 'Deletado com sucesso.']);
+            return json_encode(['Status' => true, 'Tipo' => 'success', 'Titulo' => 'Deletado com sucesso', 'Mensagem' => '']);
         } else {
             return json_encode(['Status' => false, 'Tipo' => 'error', 'Titulo' => 'Falha', 'Mensagem' => 'Erro ao tentar deletar.']);
         }
