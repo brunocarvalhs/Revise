@@ -35,7 +35,7 @@
                                     <label for="campoNome" class="text-warning">Nome Fantasia</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="nomeFantasia" value="{{ $Dados->Fantasia }}" >
+                                    <input type="text" class="form-control" id="nomeFantasia" name="nomeFantasia" value="{{ $Dados->Fantasia }}" >
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                 <div class="col-12 col-sm-12 col-md col-lg-6 col-xl-6">
                                     <label for="exampleFormControlInput1" class="text-warning">Endereço de
                                         email</label>
-                                    <input type="email" class="form-control" id="campoEmail" value="{{ $Dados->Email }}" >
+                                    <input type="email" class="form-control" id="campoEmail" name="campoEmail" value="{{ $Dados->Email }}" >
                                 </div>
                                 <!-- CNPJ -->
                                 <div class="col-12 col-sm-12 col-md col-lg-6 col-xl-6">
@@ -67,20 +67,20 @@
                             <br>
                             <div class="form-group inputCadastro">
                                 <label for="inputAddress" class="text-warning">Endereço</label>
-                                <input type="text" class="form-control" id="endereco" placeholder="" value="{{ $Dados->Endereco }}">
+                                <input type="text" class="form-control" id="endereco" placeholder="" name="endereco" value="{{ $Dados->Endereco }}">
                             </div>
                             <div class="form-group inputCadastro">
                                     <label for="inputAddress" class="text-warning">Bairro</label>
-                                    <input type="text" class="form-control" id="bairro" placeholder=""  value="{{ $Dados->Bairro }}">
+                                    <input type="text" class="form-control" id="bairro" placeholder="" name="bairro" value="{{ $Dados->Bairro }}">
                             </div>
                             <div class="form-row inputCadastro">
                                 <div class="form-group col-md-4">
                                     <label for="inputCity" class="text-warning">Cidade</label>
-                                    <input type="text" class="form-control" id="cidade"  value="{{ $Dados->Cidade }}">
+                                    <input type="text" class="form-control" id="cidade" name="cidade"  value="{{ $Dados->Cidade }}">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputEstado" class="text-warning">Estado</label>
-                                    <input type="text" class="form-control" id="estado"  value="{{ $Dados->Estado }}">
+                                    <input type="text" class="form-control" id="estado" name="estado"  value="{{ $Dados->Estado }}">
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
@@ -103,7 +103,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" style="display: none;" id="btn_hidden">
                         <div class="row">
                             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-                                <button type="button" class="btn btn-success btn-block"
+                                <button type="submit" class="btn btn-success btn-block"
                                     onclick="Salvar()">Salvar</button>
                             </div>
                             <div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
