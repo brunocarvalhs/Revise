@@ -45,7 +45,7 @@
                                     <label for="campoNome" class="text-warning">Razão Social</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="razaoSocial" value="{{ $Dados->Razao }}" >
+                                    <input type="text" class="form-control" id="razaoSocial" value="{{ $Dados->Razao }}" disabled>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
                                 <div class="col-12 col-sm-12 col-md col-lg-6 col-xl-6">
                                     <label for="exampleFormControlInput1" class="text-warning">CNPJ</label>
                                     <input type="text" class="form-control" id="campoDoCnpj" placeholder="" data-mask="00.000.000/0000-00"
-                                        value="{{ $Dados->CNPJ }}" >
+                                        value="{{ $Dados->CNPJ }}" disabled>
                                 </div>
                             </div>
                             <br>
