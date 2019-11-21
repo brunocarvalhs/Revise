@@ -62,8 +62,8 @@ class controllerFisico extends Controller
         return view('Fisico\Perfil',['Fisico' => $modelFisico, 'Perfil' => $perfil, 'Mensalidades' => $mensalidade]);
     }
 
-    public function AlterarPerfil(){
-        return 'oi';
+    public function AlterarPerfil(Request $request, modelFisico $modelFisico, modelPlano $modelPlano){
+        return dd($request);
     }
 
     public function DeletarPerfil(){

@@ -79,9 +79,7 @@ Route::group(['middleware' => 'Juridico'], function () {
     Route::get('/Painel','controllerJuridico@Index');//Ler
     // * Perfil
     Route::get('/Painel/Perfil','controllerJuridico@LerPerfil');//Ler
-    Route::put('/Painel/Perfil',function(){
-        return 'oi';
-    })->name('atualizarJuridico');//Alterar
+    Route::put('/Painel/Perfil','controllerJuridico@AlterarPerfil')->name('atualizarJuridico');//Alterar
     //Route::delete('/Painel/Perfil', '');//Deletar
     // * Anuncios
     Route::get('/Painel/Anuncio','controllerAnuncio@ControlerDeAnuncioJuridico');//Ler

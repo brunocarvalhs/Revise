@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\modelAnuncio;
 use App\modelJuridico;
+use App\modelPlano;
 use Illuminate\Http\Request;
 
 class controllerJuridico extends Controller
@@ -49,8 +50,8 @@ class controllerJuridico extends Controller
         return view('Juridico\Perfil',['Juridico' => $modelJuridico, 'Dados' => $dados]);
     }
 
-    public function AlterarPerfil(){
-
+    public function AlterarPerfil(Request $request, modelJuridico $modelJuridico, modelPlano $modelPlano){
+        return dd($request);
     }
 
     public function DeletarPerfil(){
