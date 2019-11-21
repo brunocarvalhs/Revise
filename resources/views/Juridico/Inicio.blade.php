@@ -41,6 +41,6 @@
 
 
 @section('script')
-    @include('componentes.graficoAnuncios')
+    @include('componentes.graficoIndice')
     @include('componentes.graficoHorizantal')
 @endsection
