@@ -61,9 +61,6 @@
                             <li class="nav-item @yield('menu_anuncios')">
                                 <a class="nav-link" href="{{ url('/Painel/Anuncio') }}">Anúncios</a>
                             </li>
-                            <li class="nav-item @yield('menu_indice')">
-                                <a class="nav-link" href="{{ url('/Painel/Indice') }}">Índice de Acesso</a>
-                            </li>
                         </ul>
                         <div class="form-inline my-2 my-lg-0">
                             <button class="btn btn-outline-danger my-2 my-sm-0" onclick="Sair()" type="button">Sair</button>
@@ -132,14 +129,8 @@
                                                 </li>
                                                 <li class="sidebar-content">
                                                     <a href="{{ url('/Painel/Anuncio') }}">
-                                                        <i class="fa fa-wrench" aria-hidden="true"></i>
+                                                        <i class="fa fa-bullhorn" aria-hidden="true"></i>
                                                         <span>Anúncios</span>
-                                                    </a>
-                                                </li>
-                                                <li class="sidebar-content">
-                                                    <a href="{{ url('/Painel/Indice') }}">
-                                                        <i class="fa fa-car" aria-hidden="true"></i>
-                                                        <span>Indice de Acesso</span>
                                                     </a>
                                                 </li>
                                             </ul>

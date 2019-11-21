@@ -1,3 +1,4 @@
+// @ts-ignore
 var bar = new ProgressBar.Line(container, {
   strokeWidth: 4,
   easing: 'easeInOut',
@@ -16,6 +17,7 @@ var bar = new ProgressBar.Line(container, {
 bar.animate(1.0);
 //Alert da Quilometragem
 function infoKm() {
+  // @ts-ignore
   swal({
     title: "",
     text: "Para iniciar o sistema é necessário informar a quilometragem do seu carro. Deseja inserir manualmente ou utilizar o Obd2 (sensor do carro)?",
@@ -47,6 +49,7 @@ function infoKm() {
       switch (value) {
 
         case "Manualmente": {
+          // @ts-ignore
           swal({
             texte: "Digite a quilometragm do seu veículo:",
             closeOnClickOutside: false,
@@ -60,6 +63,7 @@ function infoKm() {
           }).then((value) => {
             if (value != ''  && isNaN(value) == false) {
 
+              // @ts-ignore
               swal({
 
                 title: "Salvo",
@@ -81,6 +85,7 @@ function infoKm() {
 
                     case "ok":
 
+                      // @ts-ignore
                       window.location = './SignIn.php';
 
                       break;
@@ -99,6 +104,7 @@ function infoKm() {
         }
 
         case "Obd2": {
+          // @ts-ignore
           swal({
             icon: "info",
             closeOnClickOutside: false,
@@ -111,6 +117,7 @@ function infoKm() {
               className: "swal-button--style",
             }
           })
+          // @ts-ignore
           .then((value) => {
             window.location.reload();
           })
@@ -118,7 +125,9 @@ function infoKm() {
       }
     });
 
+  // @ts-ignore
   function salvo() {
+    // @ts-ignore
     swal({
 
       title: "Salvo",
@@ -128,7 +137,7 @@ function infoKm() {
   }
 }
 function excluirConta(){
-
+    // @ts-ignore
     swal({
         icon: "warning",
        title: "Deseja realmente excluir sua conta e todos os seus dados?",
