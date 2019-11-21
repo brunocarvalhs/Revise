@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3">
                 <div class="col-12 card hadow-sm p-3 mb-5 bg-white rounded">
-                    <canvas id="Anuncios" width="400" height="400"></canvas>
+                    <canvas id="AnunciosHorizontal" width="600" height="200"></canvas>
                 </div>
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3">
@@ -42,5 +42,5 @@
 
 @section('script')
     @include('componentes.graficoAnuncios')
-    @include('componentes.graficoIndice')
+    @include('componentes.graficoHorizantal')
 @endsection
