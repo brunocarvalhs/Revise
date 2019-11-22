@@ -38,7 +38,7 @@
             <!--Menu superior responsivo-->
             <div class="col-12 col-sm-12 col-md-0 col-lg-0 col-xl-0 menusuperior">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav sistema_navbar">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{{ url('/Home') }}">
                         <div class="row">
                             <div class="col-4">
                                 <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise"
@@ -111,7 +111,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="page-wrapper chiller-theme toggled">
-                                <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+                                <a id="show-sidebar" class="btn btn-sm btn-dark" href="{{ url('/Home') }}">
                                     <i class="fas fa-bars"></i>
                                 </a>
                                 <nav id="sidebar" class="sidebar-wrapper">

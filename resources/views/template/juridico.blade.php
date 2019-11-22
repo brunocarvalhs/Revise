@@ -37,7 +37,7 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-2">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-0 menusuperior">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav sistema_navbar">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{{ url('/Painel') }}">
                         <div class="row">
                             <div class="col-4">
                                 <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top">
@@ -80,7 +80,7 @@
                                 <nav id="sidebar" class="sidebar-wrapper">
                                     <div class="sidebar-content">
                                         <div class="sidebar-brand">
-                                            <a class="navbar-brand" href="#">
+                                            <a class="navbar-brand" href="{{ url('/Painel') }}">
                                                 <div class="row">
                                                     <div class="col-4">
                                                         <img src="{{ asset('img/logo.png') }}" width="50" height="50" alt="Revise" class="d-inline-block align-top">

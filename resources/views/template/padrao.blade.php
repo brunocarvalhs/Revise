@@ -42,7 +42,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark barra_nav">
             <div class="container-fluid">
                 <!-- Logo -->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ url('/') }}">
                     <img src="{{asset('img/logo.png')}}" width="50" height="50" alt="Revise">
                 </a>
                 <!-- Botão do menu -->
