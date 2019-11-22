@@ -50,8 +50,9 @@ class controllerJuridico extends Controller
         return view('Juridico\Perfil',['Juridico' => $modelJuridico, 'Dados' => $dados]);
     }
 
-    public function AlterarPerfil(Request $request, modelJuridico $modelJuridico, modelPlano $modelPlano){
-        if($modelJuridico->atualizarPerfil()){
+    public function AlterarPerfil(Request $request, modelPlano $modelPlano){
+        $modelJuridico = session()->get('Juridico');
+        if($modelJuridico->atualizarPerfil($request, $modelJuridico->getIdJuridico(), $modelJuridico->getIdUsuario())){
             $atualizacao = json_encode(['Status'=>true, 'Mensagem'=>'']);
         }else{
             $atualizacao = json_encode(['Status'=>false, 'Mensagem'=>'']);
