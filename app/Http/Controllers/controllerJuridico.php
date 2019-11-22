@@ -62,7 +62,16 @@ class controllerJuridico extends Controller
     }
 
     public function DeletarPerfil(){
-
+        $modelJuridico = session()->get('Juridico');
+        if($modelJuridico->DeletarPerfil($modelJuridico->getIdJuridico(), $modelJuridico->getIdUsuario())){
+            $atualizacao = json_encode(['Status'=>true, 'Mensagem'=>'Deletado com sucesso']);
+        }
+        else{
+            $atualizacao = json_encode(['Status'=>false, 'Mensagem'=>'Erro ao deletar']);
+        }
+        $atualizacao = json_decode($atualizacao);
+        session()->clear();
+        return redirect('/SignIn')->with('Login',$atualizacao);
     }
 
 

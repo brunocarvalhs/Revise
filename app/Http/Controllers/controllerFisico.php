@@ -63,11 +63,27 @@ class controllerFisico extends Controller
     }
 
     public function AlterarPerfil(Request $request, modelFisico $modelFisico, modelPlano $modelPlano){
-        return dd($request);
+        $modelFisico = session()->get('Fisico');
+        if($modelFisico->atualizarPerfil($request, $modelFisico->getIdFisico(), $modelFisico->getIdUsuario())){
+            $atualizacao = json_encode(['Status'=>true, 'Mensagem'=>'']);
+        }else{
+            $atualizacao = json_encode(['Status'=>false, 'Mensagem'=>'']);
+        }
+        $atualizacao = json_decode($atualizacao);
+        return redirect()->back()->with('Atualizacao', $atualizacao);
     }
 
     public function DeletarPerfil(){
-
+        $modelFisico = session()->get('Fisico');
+        if($modelFisico->DeletarPerfil($modelFisico->getIdFisico(), $modelFisico->getIdUsuario())){
+            $atualizacao = json_encode(['Status'=>true, 'Mensagem'=>'Deletado com sucesso']);
+        }
+        else{
+            $atualizacao = json_encode(['Status'=>false, 'Mensagem'=>'Erro ao deletar']);
+        }
+        $atualizacao = json_decode($atualizacao);
+        session()->clear();
+        return redirect('/SignIn')->with('Login',$atualizacao);
     }
 
 }

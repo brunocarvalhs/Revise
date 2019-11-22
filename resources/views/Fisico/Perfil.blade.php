@@ -35,7 +35,7 @@
                                     <label for="campoNome" class="text-warning">Nome completo</label>
                                 </div>
                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                                    <input type="text" class="form-control" id="campoNome" value="{{ $Perfil->Nome }}">
+                                    <input type="text" class="form-control" id="campoNome" value="{{ $Perfil->Nome }}" name="campoNome">
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                         <div class="form-group inputCadastro">
                             <label for="exampleFormControlInput1" class="text-warning">Endereço de
                                 email</label>
-                            <input type="email" class="form-control" id="campoEmail" value="{{ $Perfil->Email }}">
+                            <input type="email" class="form-control" id="campoEmail" value="{{ $Perfil->Email }}" name="campoEmail">
                         </div>
                         <div class="form-group inputCadastro">
                             <div class="form-row">
@@ -58,7 +58,7 @@
                                     <label for="exampleFormControlInput1" class="text-warning">Data
                                         de nascimento</label>
                                     <input type="date" class="form-control" id="campoDeNascimento"
-                                        value="{{ $Perfil->Nascimento }}">
+                                        value="{{ $Perfil->Nascimento }}" name="campoDeNascimento">
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,11 @@
                                 </div>
                             </div>
                             <div class="input-group mb-3">
-                                <input class="form-control" type="text" value='{{ $Perfil->Plano }}'>
+                                <select class="form-control" disabled id="txtPlano" name="txtPlano">
+                                    <option value="{{ $Perfil->Plano }}"selected>Seu plano atual: {{ $Perfil->Plano }}</option>
+                                    <option value="Standart">Standart</option>
+                                    <option value="Gold">Gold</option>
+                                </select>
                             </div>
                         </div>
                     </div>
