@@ -10,22 +10,22 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bulma.min.css') }}">
     <link href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/vendor/twbs/bootstrap/dist/css/bootstrap-grid.min.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="/node_modules/chart.js/dist/Chart.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/sistema.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
     @yield('style')
     <script src="/vendor/components/jquery/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
     <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
-    <script src="/node_modules/chart.js/dist/Chart.min.js" type="text/javascript"></script>
-    <script src="/node_modules/chart.js/dist/Chart.bundle.min.js" type="text/javascript"></script>
     <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
     <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
     <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
-    <script src="{{ asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
-    <script src="{{ asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
+    <script src="{{asset('js/progressbar.js') }}" type="text/javascript" async="true" defer></script>
+    <script src="{{asset('js/sistema.js') }}" type="text/javascript" async="true" defer></script>
     <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     @yield('script')
     @yield('mensagem')
