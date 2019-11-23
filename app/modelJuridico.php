@@ -256,12 +256,12 @@ class modelJuridico extends modelUsuario
     public function DeletarPerfil($IdJuridico, $idUsuario)
     {
         try {
-            //Deletar anuncios
-            DB::table('tb_anuncio')->where('cd_usuario_juridico', $IdJuridico)->delete();
             //Deletar usuario da tabela usuario_fisico
             DB::table('tb_usuario_juridico')->where('cd_usuario_juridico', $IdJuridico)->delete();
             //Deletar usuario da tabela usuario
             DB::table('tb_usuario')->where('cd_usuario', $idUsuario)->delete();
+            //Deletar anuncios
+            DB::table('tb_anuncio')->where('cd_usuario_juridico', $IdJuridico)->delete();
             return true;
         } catch (Exception $e) {
             return false;
