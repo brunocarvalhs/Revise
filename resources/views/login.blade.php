@@ -21,14 +21,6 @@
                 <label>Senha</label>
             </div>
         </div>
-        <div class="col-12">
-            <div class="custom-control  custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="manterContectado">
-                <label class="custom-control-label " for="manterContectado">
-                    Manter-me contectado.
-                </label>
-            </div>
-        </div>
         <div class="col-12 btnEntrar">
             <button type="submit" class="btn btn-dark btn-lg btn-block">
                 ENTRAR
