@@ -8,7 +8,7 @@
                 @if($preco != null)
                     <h5>R$ {{ $preco }}</h5>
                 @else
-                    <h5>{{ $preco }}</h5>
+                    <div class="mt-3"></div>
                 @endif
             <a class="btn btn-outline-warning  w-100 col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" href="{{ url('/Home/Anuncios') }}/{{ $id }}" role="button"> Mais Detalhes +</a>
             </div>
