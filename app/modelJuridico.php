@@ -223,12 +223,36 @@ class modelJuridico extends modelUsuario
         return ($dados);
     }
 
-    public function atualizarPerfil(){
+    public function atualizarPerfil($dados,$IdJuridico,$idUsuario){
         try{
+            DB::table('tb_usuario_juridico')
+            ->where('cd_usuario_juridico','=',$IdJuridico)
+            ->update(
+                [
+                    'nm_nome_fantasia' => $dados->nomeFantasia,
+                ]
+            );
+            DB::table('tb_usuario')
+            ->where('cd_usuario','=',$idUsuario)
+            ->update(
+                [
+                    'nm_email' => $dados->campoEmail,
+                ]
+            );
             return true;
         }
         catch(Exception $e){
             return false;
         }
+    }
+
+    public function DeletarPerfil($IdJuridico, $idUsuario){
+        //Deletar usuario da tabela usuario_fisico
+        DB::table('tb_usuario_juridico')
+        ->where('cd_usuario','=',$idUsuario,'and','cd_usuario_juridico','=',$IdJuridico)->delete();
+        //Deletar usuario da tabela usuario
+        DB::table('tb_usuario')->where('cd_usuario',$idUsuario)->delete();
+        //Deletar anuncios
+        DB::table('tb_anuncio')->where('cd_usuario_juridico','=',$IdJuridico)->delete();
     }
 }

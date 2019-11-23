@@ -50,8 +50,9 @@ class controllerJuridico extends Controller
         return view('Juridico\Perfil',['Juridico' => $modelJuridico, 'Dados' => $dados]);
     }
 
-    public function AlterarPerfil(Request $request, modelJuridico $modelJuridico, modelPlano $modelPlano){
-        if($modelJuridico->atualizarPerfil()){
+    public function AlterarPerfil(Request $request, modelPlano $modelPlano){
+        $modelJuridico = session()->get('Juridico');
+        if($modelJuridico->atualizarPerfil($request, $modelJuridico->getIdJuridico(), $modelJuridico->getIdUsuario())){
             $atualizacao = json_encode(['Status'=>true, 'Mensagem'=>'']);
         }else{
             $atualizacao = json_encode(['Status'=>false, 'Mensagem'=>'']);
@@ -61,7 +62,17 @@ class controllerJuridico extends Controller
     }
 
     public function DeletarPerfil(){
-
+        $modelJuridico = session()->get('Juridico');
+        if($modelJuridico->DeletarPerfil($modelJuridico->getIdJuridico(), $modelJuridico->getIdUsuario())){
+            $atualizacao = json_encode(['Status'=>true, 'Mensagem'=>'Deletado com sucesso']);
+        }
+        else{
+            $atualizacao = json_encode(['Status'=>false, 'Mensagem'=>'Erro ao deletar']);
+        }
+        $atualizacao = json_decode($atualizacao);
+        unset($modelJuridico);
+        session()->flush();
+        return redirect('/SignIn')->with('Login',$atualizacao);
     }
 
 

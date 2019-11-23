@@ -54,7 +54,7 @@ Route::group(['middleware' => 'Fisico'], function () {
     // * Perfil
     Route::get('/Home/Perfil','controllerFisico@LerPerfil');//Ler
     Route::put('/Home/Perfil','controllerFisico@AlterarPerfil')->name('atualizarFisico');//Alterar
-    Route::delete('/Home/Perfil', 'controllerFisico@DeletarPerfil');//Deletar
+    Route::delete('/Home/Perfil', 'controllerFisico@DeletarPerfil')->name('deletarFisico');//Deletar
     // * Veiculos
     Route::get('/Home/Veiculos','controllerVeiculo@LerVeiculos');//Ler
     Route::post('/Home/Veiculos','controllerVeiculo@CriarVeiculos')->name('veiculo');//Criar
@@ -80,7 +80,7 @@ Route::group(['middleware' => 'Juridico'], function () {
     // * Perfil
     Route::get('/Painel/Perfil','controllerJuridico@LerPerfil');//Ler
     Route::put('/Painel/Perfil','controllerJuridico@AlterarPerfil')->name('atualizarJuridico');//Alterar
-    //Route::delete('/Painel/Perfil', '');//Deletar
+    Route::delete('/Painel/Perfil', 'controllerJuridico@DeletarPerfil')->name('deletarJuridico');//Deletar
     // * Anuncios
     Route::get('/Painel/Anuncio','controllerAnuncio@ControlerDeAnuncioJuridico');//Ler
     Route::post('/Painel/Anuncios','controllerAnuncio@CadastroAnuncio')->name('anuncio');//Criar

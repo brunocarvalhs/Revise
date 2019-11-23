@@ -224,4 +224,40 @@ class modelFisico extends modelUsuario
         return $resultado;
     }
 
+    public function atualizarPerfil($dados,$IdFisico,$idUsuario){
+        try{
+            DB::table('tb_usuario_fisico')
+            ->where('cd_usuario_fisico',$IdFisico)
+            ->update(
+                [
+                    'nm_usuario_fisico' => $dados->campoNome,
+                    'dt_nascimento' => $dados->campoDeNascimento
+                ]
+            );
+            DB::table('tb_usuario')
+            ->where('cd_usuario',$idUsuario)
+            ->update(
+                [
+                    'nm_email' => $dados->campoEmail,
+                ]
+            );
+            return true;
+        }
+        catch(Exception $e){
+            return false;
+        }
+    }
+
+    public function DeletarPerfil($IdFisico, $idUsuario){
+        //Deletar veiculos do usuario
+        DB::table('tb_veiculo')->where('cd_usuario',$idUsuario)->delete();
+        //Deletar plano do usuario
+        DB::table('tb_controle_plano')->where('cd_usuario_fisico',$IdFisico)->delete();
+        //Deletar usuario da tabela usuario_fisico
+        DB::table('tb_usuario_fisico')
+        ->where('cd_usuario','=',$idUsuario,'and','cd_usuario_fisico','=',$IdFisico)
+        ->delete();
+        DB::table('tb_usuario')->where('cd_usuario',$idUsuario)->delete();
+    }
+
 }

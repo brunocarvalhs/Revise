@@ -155,9 +155,13 @@
                                                         <circle cx="16" cy="16" r="4" />
                                                     </svg>
                                                 </button>
-                                                <div class="dropdown-menu bg-warning" aria-labelledby="dropdownMenuButton">
-                                                        <button class="btn dropdown-item bg-warning" onclick="excluirConta()">Excluir conta</button>
-                                                    </div>
+                                                <div class="dropdown-menu bg-warning"
+                                                aria-labelledby="dropdownMenuButton">
+                                                <form action="{{ route('deletarJuridico') }}" onsubmit="return excluirConta()" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn dropdown-item bg-warning">Excluir conta</button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
