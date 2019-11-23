@@ -177,10 +177,10 @@ function ValidarCadastroFisico() {
         document.getElementById("txtsenha").setAttribute('class', "form-control is-invalid");
         return false;
     }
-    if (document.CadastroFisico.txtsenha.value.length < 6 && document.CadastroFisico.txtsenha.value.length > 20) {
+    if (document.CadastroFisico.txtsenha.value.length < 6 || document.CadastroFisico.txtsenha.value.length > 20) {
         Swal.fire(
             'Formulário de Cadastro',
-            'Sua senha não pode ter mais de 20 caracteres',
+            'Sua senha precisa ser de 6 a 20 caracteres',
             'info'
         )
         document.getElementById("txtsenha").setAttribute('class', "form-control is-invalid");
@@ -195,10 +195,10 @@ function ValidarCadastroFisico() {
         document.getElementById("txtcsenha").setAttribute('class', "form-control is-invalid");
         return false;
     }
-    if (document.CadastroFisico.txtcsenha.value.length < 6 && document.CadastroFisico.txtcsenha.value.length > 20) {
+    if (document.CadastroFisico.txtcsenha.value.length < 6 || document.CadastroFisico.txtcsenha.value.length > 20) {
         Swal.fire(
             'Formulário de Cadastro',
-            'Sua senha confirmação não pode ter mais de 20 caracteres',
+            'Sua senha precisa ser de 6 a 20 caracteres',
             'info'
         )
         document.getElementById("txtcsenha").setAttribute('class', "form-control is-invalid");

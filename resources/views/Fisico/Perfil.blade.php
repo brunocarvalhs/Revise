@@ -70,7 +70,7 @@
                             </div>
                             <div class="input-group mb-3">
                                 <select class="form-control" disabled id="txtPlano" name="txtPlano">
-                                    <option value="{{ $Perfil->Plano }}"selected>Seu plano atual: {{ $Perfil->Plano }}</option>
+                                    <option value="{{ $Perfil->Plano }}"selected>{{ $Perfil->Plano }}</option>
                                     <option value="Standart">Standart</option>
                                     <option value="Gold">Gold</option>
                                 </select>

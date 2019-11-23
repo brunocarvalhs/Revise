@@ -24,7 +24,15 @@ function consultar() {
         error: function (erro) {
             swal({
                 icon : 'error',
-                title : 'Placa não encontrada'
+                title : 'Placa não encontrada',
+                buttons: {
+
+                    catch: {
+                        text: "Ok",
+                        value: "Ok",
+                        className: "swal-button--style"
+                    },
+                },
             });
             document.getElementById("txtMarca").setAttribute('value', "");
             document.getElementById("txtAno").setAttribute('value', "");
@@ -60,7 +68,15 @@ function consultarCep() {
         error: function (erro) {
             swal({
                 icon : 'error',
-                title : 'CEP não encontrado'
+                title : 'CEP não encontrado',
+                buttons: {
+
+                    catch: {
+                        text: "Ok",
+                        value: "Ok",
+                        className: "swal-button--style"
+                    },
+                },
             });
             document.getElementById("txtEstado").setAttribute('value', "");
             document.getElementById("txtBairro").setAttribute('value', "");

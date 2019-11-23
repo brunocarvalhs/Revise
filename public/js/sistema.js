@@ -51,7 +51,7 @@ function infoKm() {
         case "Manualmente": {
           // @ts-ignore
           swal({
-            texte: "Digite a quilometragm do seu veículo:",
+            text: "Digite a quilometragm do seu veículo:",
             closeOnClickOutside: false,
             closeOnEsc: false,
             content: "input",
@@ -130,9 +130,17 @@ function infoKm() {
     // @ts-ignore
     swal({
 
+      icon: "success",
       title: "Salvo",
       text: "Caso queira alterar vá na área de veículos",
-      icon: "success",
+      buttons: {
+
+        catch: {
+            text: "Ok",
+            value: "Ok",
+            className: "swal-button--style"
+        },
+    },
     });
   }
 }
@@ -145,6 +153,8 @@ function excluirConta(){
         {
           text: "Sim",
           className: "swal-button--style",
+          cancel: true,
+
         }
 
       })

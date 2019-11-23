@@ -4,7 +4,8 @@ function signIn() {
 
 function signUp() {
 
-    swal("Qual tipo de cadastro você deseja fazer?", {
+    swal({
+            text: "Qual tipo de cadastro você deseja fazer?",
             icon: "info",
             buttons: {
                 cancel: {
@@ -43,14 +44,15 @@ function signUp() {
 }
 
 function btnPerfilJuridico() {
-    swal("Deseja realmente alterar suas informações?", {
+    swal({
+            title: "Deseja realmente alterar suas informações?",
             icon: "warning",
             buttons: {
 
                 catch: {
                     text: "Sim",
                     value: "Sim",
-                    color: "warning",
+                    className: "swal-button--style"
                 },
                 defeat: {
                     text: "Cancelar",
@@ -93,21 +95,17 @@ function btnPerfilJuridico() {
 }
 
 function btnPerfilFisico() {
-    swal("Deseja realmente alterar suas informações?", {
+    swal({
+            title: "Deseja realmente alterar suas informações?",
             icon: "warning",
             buttons: {
 
                 catch: {
                     text: "Sim",
                     value: "Sim",
-                    color: "warning",
+                    className: "swal-button--style"
                 },
-                defeat: {
-                    text: "Cancelar",
-                    value: "cancelar",
-                    color: "warning",
-                },
-
+               cancel: true
             },
         })
         .then((value) => {
