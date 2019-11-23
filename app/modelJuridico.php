@@ -233,20 +233,38 @@ class modelJuridico extends modelUsuario
     public function atualizarPerfil($dados, $IdJuridico, $idUsuario)
     {
         try {
-            DB::table('tb_usuario_juridico')
-                ->where('cd_usuario_juridico', '=', $IdJuridico)
-                ->update(
-                    [
-                        'nm_nome_fantasia' => $dados->nomeFantasia,
-                    ]
-                );
-            DB::table('tb_usuario')
-                ->where('cd_usuario', '=', $idUsuario)
-                ->update(
-                    [
-                        'nm_email' => $dados->campoEmail,
-                    ]
-                );
+
+            //Verificar se existe o plano
+            $planoExiste = DB::table('tb_plano')
+            ->where([
+                ['tb_plano.nm_plano', 'LIKE', '%' . $dados->txtPlano . '%']
+            ])->exists();
+
+            if($planoExiste){
+
+                $idPlano = DB::table('tb_plano')
+                ->where([
+                    ['tb_plano.nm_plano', 'LIKE', '%' . $dados->txtPlano . '%']
+                ])->select('tb_plano.cd_plano as id')->first();
+
+                return dd($idPlano);
+
+                DB::table('tb_usuario_juridico')
+                    ->where('cd_usuario_juridico', '=', $IdJuridico)
+                    ->update(
+                        [
+                            'nm_nome_fantasia' => $dados->nomeFantasia,
+                        ]
+                    );
+                DB::table('tb_usuario')
+                    ->where('cd_usuario', '=', $idUsuario)
+                    ->update(
+                        [
+                            'nm_email' => $dados->campoEmail,
+                        ]
+                    );
+            }
+
             return true;
         } catch (Exception $e) {
             return false;
