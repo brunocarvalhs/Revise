@@ -245,7 +245,7 @@ class modelJuridico extends modelUsuario
                 $idPlano = DB::table('tb_plano')
                 ->where([
                     ['tb_plano.nm_plano', 'LIKE', '%' . $dados->txtPlano . '%']
-                ])->select('tb_plano.cd_plano as id')->first();
+                ])->select('tb_plano.cd_plano')->first();
 
                 return dd($idPlano);
 
