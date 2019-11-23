@@ -82,7 +82,8 @@ class controllerFisico extends Controller
             $atualizacao = json_encode(['Status'=>false, 'Mensagem'=>'Erro ao deletar']);
         }
         $atualizacao = json_decode($atualizacao);
-        session()->clear();
+        unset($modelFisico);
+        session()->flush();
         return redirect('/SignIn')->with('Login',$atualizacao);
     }
 
