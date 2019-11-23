@@ -108,9 +108,15 @@ class modelJuridico extends modelUsuario
         if ($checkUser) {
             $resultado = DB::table('tb_usuario')
                 ->join('tb_usuario_juridico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_juridico.cd_usuario')
-                ->select('tb_usuario_juridico.cd_usuario as Usuario','tb_usuario_juridico.cd_usuario_juridico as Id' ,
-                'tb_usuario_juridico.cd_cnpj as CNPJ', 'tb_usuario.cd_senha as Senha', 'tb_usuario.nm_email as Email',
-                 'tb_usuario_juridico.nm_nome_fantasia as Fantasia', 'tb_usuario_juridico.nm_razao_social as Razao')
+                ->select(
+                    'tb_usuario_juridico.cd_usuario as Usuario',
+                    'tb_usuario_juridico.cd_usuario_juridico as Id',
+                    'tb_usuario_juridico.cd_cnpj as CNPJ',
+                    'tb_usuario.cd_senha as Senha',
+                    'tb_usuario.nm_email as Email',
+                    'tb_usuario_juridico.nm_nome_fantasia as Fantasia',
+                    'tb_usuario_juridico.nm_razao_social as Razao'
+                )
                 ->where('tb_usuario_juridico.cd_cnpj', '=', $CNPJ, 'and', 'tb_usuario.cd_senha', '=', $SENHA)
                 ->first();
             if ($resultado->CNPJ == $CNPJ && $resultado->Senha == $SENHA) {
@@ -125,8 +131,7 @@ class modelJuridico extends modelUsuario
             } else {
                 return false;
             }
-        }
-        else{
+        } else {
             return false;
         }
     }
@@ -196,63 +201,89 @@ class modelJuridico extends modelUsuario
         }
     }
 
-    public function EsqueciSenha($CNPJ){
+    public function EsqueciSenha($CNPJ)
+    {
         $check = DB::table('tb_usuario')
-                    ->join('tb_usuario_juridico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_juridico.cd_usuario')
-                    ->where('tb_usuario_juridico.cd_cnpj', '=', $CNPJ)
-                    ->exists();
-        if($check){
-            $email = DB::table('tb_usuario')->select('nm_email as Email','cd_senha as Senha')->first();
+            ->join('tb_usuario_juridico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_juridico.cd_usuario')
+            ->where('tb_usuario_juridico.cd_cnpj', '=', $CNPJ)
+            ->exists();
+        if ($check) {
+            $email = DB::table('tb_usuario')->select('nm_email as Email', 'cd_senha as Senha')->first();
             return $email;
-        }else{
+        } else {
             return json_encode(['Status' => false, 'Mensagem' => 'Usuário não encontrado!']);
         }
     }
 
 
-    public function dadosUsuario($IdJuridico){
+    public function dadosUsuario($IdJuridico)
+    {
         $dados = DB::table('tb_usuario_juridico')
-        ->join('tb_logradouro','tb_logradouro.cd_usuario_juridico','=','tb_usuario_juridico.cd_usuario_juridico')
-        ->join('tb_bairro','tb_bairro.cd_bairro','=','tb_logradouro.cd_bairro')
-        ->join('tb_cidade','tb_cidade.cd_cidade','=','tb_bairro.cd_cidade')
-        ->join('tb_usuario','tb_usuario.cd_usuario','=','tb_usuario_juridico.cd_usuario')
-        ->where('tb_usuario_juridico.cd_usuario_juridico','=',$IdJuridico)
-        ->select('tb_usuario_juridico.nm_nome_fantasia as Fantasia','tb_usuario_juridico.nm_razao_social as Razao','tb_usuario.nm_email as Email','tb_usuario_juridico.cd_cnpj as CNPJ','tb_logradouro.nm_logradouro as Endereco','tb_bairro.nm_bairro as Bairro','tb_cidade.nm_cidade as Cidade','tb_cidade.sg_uf as Estado')
-        ->first();
+            ->join('tb_logradouro', 'tb_logradouro.cd_usuario_juridico', '=', 'tb_usuario_juridico.cd_usuario_juridico')
+            ->join('tb_bairro', 'tb_bairro.cd_bairro', '=', 'tb_logradouro.cd_bairro')
+            ->join('tb_cidade', 'tb_cidade.cd_cidade', '=', 'tb_bairro.cd_cidade')
+            ->join('tb_usuario', 'tb_usuario.cd_usuario', '=', 'tb_usuario_juridico.cd_usuario')
+            ->where('tb_usuario_juridico.cd_usuario_juridico', '=', $IdJuridico)
+            ->select('tb_usuario_juridico.nm_nome_fantasia as Fantasia', 'tb_usuario_juridico.nm_razao_social as Razao', 'tb_usuario.nm_email as Email', 'tb_usuario_juridico.cd_cnpj as CNPJ', 'tb_logradouro.nm_logradouro as Endereco', 'tb_bairro.nm_bairro as Bairro', 'tb_cidade.nm_cidade as Cidade', 'tb_cidade.sg_uf as Estado')
+            ->first();
         $dados = json_encode($dados);
         return ($dados);
     }
 
-    public function atualizarPerfil($dados,$IdJuridico,$idUsuario){
-        try{
-            DB::table('tb_usuario_juridico')
-            ->where('cd_usuario_juridico','=',$IdJuridico)
-            ->update(
-                [
-                    'nm_nome_fantasia' => $dados->nomeFantasia,
-                ]
-            );
-            DB::table('tb_usuario')
-            ->where('cd_usuario','=',$idUsuario)
-            ->update(
-                [
-                    'nm_email' => $dados->campoEmail,
-                ]
-            );
+    public function atualizarPerfil($dados, $IdJuridico, $idUsuario)
+    {
+        try {
+
+            //Verificar se existe o plano
+            $planoExiste = DB::table('tb_plano')
+            ->where([
+                ['tb_plano.nm_plano', 'LIKE', '%' . $dados->txtPlano . '%']
+            ])->exists();
+
+            if($planoExiste){
+
+                $idPlano = DB::table('tb_plano')
+                ->where([
+                    ['tb_plano.nm_plano', 'LIKE', '%' . $dados->txtPlano . '%']
+                ])->select('tb_plano.cd_plano')->first();
+
+                return dd($idPlano);
+
+                DB::table('tb_usuario_juridico')
+                    ->where('cd_usuario_juridico', '=', $IdJuridico)
+                    ->update(
+                        [
+                            'nm_nome_fantasia' => $dados->nomeFantasia,
+                        ]
+                    );
+                DB::table('tb_usuario')
+                    ->where('cd_usuario', '=', $idUsuario)
+                    ->update(
+                        [
+                            'nm_email' => $dados->campoEmail,
+                        ]
+                    );
+            }
+
             return true;
-        }
-        catch(Exception $e){
+        } catch (Exception $e) {
             return false;
         }
     }
 
-    public function DeletarPerfil($IdJuridico, $idUsuario){
-        //Deletar usuario da tabela usuario_fisico
-        DB::table('tb_usuario_juridico')
-        ->where('cd_usuario','=',$idUsuario,'and','cd_usuario_juridico','=',$IdJuridico)->delete();
-        //Deletar usuario da tabela usuario
-        DB::table('tb_usuario')->where('cd_usuario',$idUsuario)->delete();
-        //Deletar anuncios
-        DB::table('tb_anuncio')->where('cd_usuario_juridico','=',$IdJuridico)->delete();
+    public function DeletarPerfil($IdJuridico, $idUsuario)
+    {
+        try {
+            //Deletar anuncios
+            DB::table('tb_anuncio')->where('cd_usuario_juridico', $IdJuridico)->delete();
+            return dd('deleta');
+            //Deletar usuario da tabela usuario_fisico
+            DB::table('tb_usuario_juridico')->where('cd_usuario_juridico', $IdJuridico)->delete();
+            //Deletar usuario da tabela usuario
+            DB::table('tb_usuario')->where('cd_usuario', $idUsuario)->delete();
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
     }
 }

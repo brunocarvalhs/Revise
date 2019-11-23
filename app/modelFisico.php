@@ -141,7 +141,7 @@ class modelFisico extends modelUsuario
                     $auto_usuario_fisico = DB::table('tb_usuario_fisico')->max('cd_usuario_fisico') + 1;
                     $auto_controle_plano = DB::table('tb_controle_plano')->max('cd_controle') + 1;
 
-                    $plano = DB::table('tb_plano')->select('cd_plano as ID','vl_plano as valor')->where('cd_plano','=',$request->txtplano)->first();
+                    $plano = DB::table('tb_plano')->select('cd_plano as ID', 'vl_plano as valor')->where('cd_plano', '=', $request->txtplano)->first();
 
                     DB::table('tb_usuario')->insert(
                         [
@@ -174,7 +174,6 @@ class modelFisico extends modelUsuario
                     );
 
                     return json_encode(['Status' => true, 'Mensagem' => 'Cadastro realizado com sucesso!']);
-
                 } else {
                     return json_encode(['Status' => false, 'Mensagem' => 'Usuário já cadastrado!']);
                 }
@@ -212,52 +211,58 @@ class modelFisico extends modelUsuario
     }
 
 
-    public function DadosPerfil(){
+    public function DadosPerfil()
+    {
         $resultado = DB::table('tb_usuario')
-                ->join('tb_usuario_fisico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
-                ->join('tb_controle_plano', 'tb_controle_plano.cd_usuario_fisico', '=', 'tb_usuario_fisico.cd_usuario_fisico')
-                ->join('tb_plano', 'tb_plano.cd_plano', '=', 'tb_controle_plano.cd_plano')
-                ->select('tb_usuario.cd_usuario as Id', 'tb_usuario_fisico.cd_usuario as Usuario', 'tb_usuario_fisico.cd_cpf as CPF', 'tb_usuario.cd_senha as Senha', 'tb_usuario_fisico.nm_usuario_fisico as Nome', 'tb_usuario.nm_email as Email', 'tb_usuario_fisico.dt_nascimento as Nascimento', 'tb_plano.nm_plano as Plano', 'tb_plano.qt_veiculo as QuantidadeVeiculo')
-                ->where('tb_usuario_fisico.cd_cpf', '=', $this->getCPF())
-                ->first();
+            ->join('tb_usuario_fisico', 'tb_usuario.cd_usuario', '=', 'tb_usuario_fisico.cd_usuario')
+            ->join('tb_controle_plano', 'tb_controle_plano.cd_usuario_fisico', '=', 'tb_usuario_fisico.cd_usuario_fisico')
+            ->join('tb_plano', 'tb_plano.cd_plano', '=', 'tb_controle_plano.cd_plano')
+            ->select('tb_usuario.cd_usuario as Id', 'tb_usuario_fisico.cd_usuario as Usuario', 'tb_usuario_fisico.cd_cpf as CPF', 'tb_usuario.cd_senha as Senha', 'tb_usuario_fisico.nm_usuario_fisico as Nome', 'tb_usuario.nm_email as Email', 'tb_usuario_fisico.dt_nascimento as Nascimento', 'tb_plano.nm_plano as Plano', 'tb_plano.qt_veiculo as QuantidadeVeiculo')
+            ->where('tb_usuario_fisico.cd_cpf', '=', $this->getCPF())
+            ->first();
         $resultado = json_encode($resultado);
         return $resultado;
     }
 
-    public function atualizarPerfil($dados,$IdFisico,$idUsuario){
-        try{
+    public function atualizarPerfil($dados, $IdFisico, $idUsuario)
+    {
+        try {
             DB::table('tb_usuario_fisico')
-            ->where('cd_usuario_fisico',$IdFisico)
-            ->update(
-                [
-                    'nm_usuario_fisico' => $dados->campoNome,
-                    'dt_nascimento' => $dados->campoDeNascimento
-                ]
-            );
+                ->where('cd_usuario_fisico', $IdFisico)
+                ->update(
+                    [
+                        'nm_usuario_fisico' => $dados->campoNome,
+                        'dt_nascimento' => $dados->campoDeNascimento
+                    ]
+                );
             DB::table('tb_usuario')
-            ->where('cd_usuario',$idUsuario)
-            ->update(
-                [
-                    'nm_email' => $dados->campoEmail,
-                ]
-            );
+                ->where('cd_usuario', $idUsuario)
+                ->update(
+                    [
+                        'nm_email' => $dados->campoEmail,
+                    ]
+                );
             return true;
-        }
-        catch(Exception $e){
+        } catch (Exception $e) {
             return false;
         }
     }
 
-    public function DeletarPerfil($IdFisico, $idUsuario){
-        //Deletar veiculos do usuario
-        DB::table('tb_veiculo')->where('cd_usuario',$idUsuario)->delete();
-        //Deletar plano do usuario
-        DB::table('tb_controle_plano')->where('cd_usuario_fisico',$IdFisico)->delete();
-        //Deletar usuario da tabela usuario_fisico
-        DB::table('tb_usuario_fisico')
-        ->where('cd_usuario','=',$idUsuario,'and','cd_usuario_fisico','=',$IdFisico)
-        ->delete();
-        DB::table('tb_usuario')->where('cd_usuario',$idUsuario)->delete();
+    public function DeletarPerfil($IdFisico, $idUsuario)
+    {
+        try {
+            //Deletar veiculos do usuario
+            DB::table('tb_veiculo')->where('cd_usuario', $idUsuario)->delete();
+            //Deletar plano do usuario
+            DB::table('tb_controle_plano')->where('cd_usuario_fisico', $IdFisico)->delete();
+            //Deletar usuario da tabela usuario_fisico
+            DB::table('tb_usuario_fisico')
+                ->where('cd_usuario', '=', $idUsuario, 'and', 'cd_usuario_fisico', '=', $IdFisico)
+                ->delete();
+            DB::table('tb_usuario')->where('cd_usuario', $idUsuario)->delete();
+            return true;
+        } catch (Exception $e) {
+            return false;
+        }
     }
-
 }
