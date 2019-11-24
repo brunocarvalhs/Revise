@@ -22,6 +22,8 @@
         crossorigin="anonymous"></script>
     <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.5/push.js"></script>
+    <script src="/node_modules/chart.js/dist/Chart.min.js" type="text/javascript"></script>
+    <script src="/node_modules/chart.js/dist/Chart.bundle.min.js" type="text/javascript"></script>
     <script src="{{asset('js/wow.js')}}" type="text/javascript" async="true" defer></script>
     <script src="{{asset('js/sweetalert.min.js')}}" type="text/javascript" async="true" defer></script>
     <script src="{{asset('js/index.js')}}" type="text/javascript" async="true" defer></script>
