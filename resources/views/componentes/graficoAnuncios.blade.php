@@ -5,6 +5,7 @@
             var anuncio = "{{ route('an') }}"; //Rota de coleta de dados do banco
             var Anuncio = new Array();
             var Acessos = new Array();
+            Acessos.push(0);
             $(document).ready(function () {
                 $.get(anuncio, function (response) {
                     response.forEach(function (data) {
