@@ -2,7 +2,6 @@
 
 <div>
     <script>
-        setInterval({
             var anuncio = "{{ route('an') }}"; //Rota de coleta de dados do banco
             var Anuncio = new Array();
             var Acessos = new Array();
@@ -36,6 +35,5 @@
                     });
                 });
             });
-        }, 500);
     </script>
 </div>
