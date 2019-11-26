@@ -214,7 +214,7 @@
                                                 </button>
                                                 <div class="dropdown-menu bg-warning"
                                                     aria-labelledby="dropdownMenuButton">
-                                                    <form action="{{ route('deletarFisico') }}" onsubmit="return excluirConta()" method="POST">
+                                                    <form action="{{ route('deletarFisico') }}" method="POST">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn dropdown-item bg-warning">Excluir conta</button>
