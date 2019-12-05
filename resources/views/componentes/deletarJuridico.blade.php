@@ -33,6 +33,8 @@
                     type="submit">
                     <h5 class="text-white">Deletar</h5>
                 </button>
+                @csrf
+                @method('DELETE')
             </div>
         </form>
     </div>
