@@ -169,11 +169,7 @@
                                                 </button>
                                                 <div class="dropdown-menu bg-warning"
                                                     aria-labelledby="dropdownMenuButton">
-                                                    <form action="{{ route('deletarJuridico') }}" method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="btn dropdown-item bg-warning">Excluir conta</button>
-                                                    </form>
+                                                    <button type="submit" class="btn dropdown-item bg-warning">Excluir conta</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -198,4 +194,5 @@
     </div>
 </body>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
+@component('componentes.deletarJuridico')
 </html>
