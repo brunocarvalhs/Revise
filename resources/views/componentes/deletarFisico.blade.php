@@ -14,13 +14,11 @@
                     <div class="row">
                         <div class="col-12">
                             <fieldset>
-                                <div class="row">
-                                    <div class="col-6">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                         <input class="form-control" type="text" name="cpf" placeholder="CPF" data-mask="000.000.000-00">
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                         <input class="form-control" type="password" name="senha" placeholder="Senha" minlength="6">
                                     </div>
                                 </div>
@@ -38,6 +36,7 @@
         </form>
     </div>
 </div>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
 <!--
 <script>
     function deletar(){
