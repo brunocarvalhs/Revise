@@ -1,4 +1,5 @@
-<div class="modal fade" id="modelDeletarUsuarioFisico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+
+<div class="modal fade" id="deletarFisico" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <form action="{{ route('deletarFisico') }}" method="POST">
@@ -15,14 +16,12 @@
                             <fieldset>
                                 <div class="row">
                                     <div class="col-6">
-                                        <input type="text" name="cpf" placeholder="CPF" data-mask="000.000.000-00">
+                                        <input class="form-control" type="text" name="cpf" placeholder="CPF" data-mask="000.000.000-00">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <div class="col-6">
-                                            <input type="password" name="senha" placeholder="Senha" minlength="6">
-                                        </div>
+                                        <input class="form-control" type="password" name="senha" placeholder="Senha" minlength="6">
                                     </div>
                                 </div>
                             </fieldset>
@@ -39,3 +38,21 @@
         </form>
     </div>
 </div>
+<!--
+<script>
+    function deletar(){
+    Swal.fire({
+        title: 'Deseja deletar sua conta no revise?',
+        text: 'Obs.: Ao deletar a conta, os dados presentes serão deletados, sem recuperação de informações prevista no Termos de uso.',
+        html:
+            `<form action="{{ route('deletarFisico') }}" method="POST">
+                @csrf
+               @method('DELETE')                            
+                <button type="submit" class="btn btn-warning">Deletar</button>
+            </form>`,
+        showConfirmButton: false,
+        showCancelButton: true
+    });
+    }
+</script>
+-->
