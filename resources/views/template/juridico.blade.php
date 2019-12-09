@@ -169,7 +169,7 @@
                                                 </button>
                                                 <div class="dropdown-menu bg-warning"
                                                     aria-labelledby="dropdownMenuButton">
-                                                    <button tclass="btn dropdown-item bg-warning" data-toggle="modal"
+                                                    <button class="btn dropdown-item bg-warning" data-toggle="modal"
                                                     data-target="#deletarJuridico">Excluir conta</button>
                                                 </div>
                                             </div>
