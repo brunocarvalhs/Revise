@@ -171,11 +171,13 @@
         setInterval(function () {
             var valorPro = 1.00;
             var valorProduto = $('#produtoInput').val();
+            var valorTotalProduto = valorProduto * valorPro;
             $('#valorProduto').text('R$  ' + valorProduto * valorPro);
             var valorSer = 10.00;
             var valorServico = $('#servicoInput').val();
-            $('#valorServico').text('R$  ' + valorServico * valorSer);
-            var valorTotal = valorServico + valorProduto;
+            var valorTotalServico = valorServico * valorSer;
+            $('#valorServico').text('R$  ' + valorTotalServico);
+            var valorTotal = valorTotalServico + valorTotalProduto;
             $('#valorTotal').text('R$  ' + valorTotal);
         });
     });
