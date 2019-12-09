@@ -215,7 +215,7 @@
                                                 <div class="dropdown-menu bg-warning"
                                                     aria-labelledby="dropdownMenuButton">
                                                     <button class="btn dropdown-item bg-warning" data-toggle="modal"
-                                                    data-target="#modelDeletarUsuarioFisico">Excluir conta</button>
+                                                    data-target="#deletarFisico">Excluir conta</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -239,5 +239,5 @@
     </div>
 </body>
 <script type="text/javascript" src="//assets.locaweb.com.br/locastyle/edge/javascripts/locastyle.js"></script>
-@component('componentes.deletarFisico')
+@include('componentes.deletarFisico')
 </html>
