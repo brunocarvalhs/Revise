@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  mariadb:
+    container_name: DB_Revise
+    image: 'bitnami/mariadb:10.1'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=usersRevise
+      - MARIADB_DATABASE=db_revise
+      - MARIADB_PASSWORD=BGnh1ci93Yhxg2Aw
+    ports: 
+      - ${DB_PORT}:${DB_PORT}
+
+  Laravel:
+    container_name: Revise
+    tty: true
+    image: bitnami/laravel:5.8.3
+    environment:
+      - DB_HOST=mariadb
+      - DB_USERNAME=usersRevise
+      - DB_DATABASE=db_revise
+      - DB_PASSWORD=BGnh1ci93Yhxg2Aw
+    depends_on:
+      - mariadb
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
