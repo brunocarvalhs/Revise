@@ -1,0 +1,75 @@
+<ion-header no-shadow no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="warning" (click)="exitApp()">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card class="conteudo animated fadeInUpBig fast">
+    <img src="assets/padrao.png">
+    <ion-grid class="botoes">
+      <ion-row align-items-center>
+        <ion-col class="btnOpcoes" size="4">
+          <ion-button expand="block" color="success" (click)="salvaPerfil()">
+            <ion-icon name="md-save"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col class="btnOpcoes" size="4">
+          <ion-button expand="block" color="warning" (click)="alterarPerfil()">
+            <ion-icon name="md-create"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col class="btnOpcoes" size="4">
+          <ion-button expand="block" color="danger" (click)="deletarPerfil()">
+            <ion-icon name="md-trash"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="informacao">
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="floating">Nome</ion-label>
+            <ion-input type="text" disabled="{{inputDisabled}}" [ngModel]=txtNome></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="floating">CPF</ion-label>
+            <ion-input type="text" disabled [ngModel]=txtCpf></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="floating">Email</ion-label>
+            <ion-input type="text" disabled="{{inputDisabled}}" [ngModel]=txtEmail></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="stacked">Data de nascimento</ion-label>
+            <ion-input type="date" disabled="{{inputDisabled}}" [ngModel]=txtNascimento></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="floating">Plano</ion-label>
+            <ion-input type="text" disabled [ngModel]=txtPlano></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

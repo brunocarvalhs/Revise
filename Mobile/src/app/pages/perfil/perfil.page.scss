@@ -1,0 +1,136 @@
+
+ion-content{
+    --background: #5c5b5b;
+}
+ion-toolbar{
+    --background: #5c5b5b;
+    border: 0px;
+  }
+
+  ion-avatar{
+    --border-radius: 0px;
+    position: center;
+  }
+.botoes{
+    padding: 10px;
+}
+.btnOpcoes{
+    padding: 5px;
+}
+
+  ion-card{
+      margin: 0px;
+  }
+
+  .conteudo{
+    background-color: #3f3e3e;
+    left:0;
+    bottom: 0;
+    right: 0;
+	  z-index:12;
+  }
+  
+  .informacao{
+      margin-top: 20px;
+      margin-bottom: 50px;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+
+  ion-item{
+    --background: #3f3e3e;
+    margin-bottom: 15px;
+  }
+
+  ion-input{
+    color: white;
+  }
+
+  .txtCampos{
+    color: white;
+  }
+
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .animated.fast {
+    -webkit-animation-duration: 800ms;
+    animation-duration: 800ms;
+  }
+  
+  .animated.faster {
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+  }
+  
+  .animated.sonic {
+    -webkit-animation-duration: 300ms;
+    animation-duration: 300ms;
+  }
+  
+  @-webkit-keyframes fadeInUpBig {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 2000px, 0);
+      transform: translate3d(0, 2000px, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInUpBig {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 2000px, 0);
+      transform: translate3d(0, 2000px, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInUpBig {
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+  }
+
+  
+@-webkit-keyframes fadeOutDownBig {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 2000px, 0);
+      transform: translate3d(0, 2000px, 0);
+    }
+  }
+  
+  @keyframes fadeOutDownBig {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 2000px, 0);
+      transform: translate3d(0, 2000px, 0);
+    }
+  }
+  
+  .fadeOutDownBig {
+    -webkit-animation-name: fadeOutDownBig;
+    animation-name: fadeOutDownBig;
+  }

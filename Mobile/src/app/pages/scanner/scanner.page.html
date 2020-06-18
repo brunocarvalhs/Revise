@@ -1,0 +1,43 @@
+<ion-header no-shadow no-border>
+  <ion-toolbar>
+    <ion-title>scanner</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="warning" (click)="configScanner()">
+        <ion-icon slot="icon-only" name="help"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="listPairedDevices()">
+          <ion-card-header>
+            <ion-card-subtitle>Dispositivos</ion-card-subtitle>
+            <ion-card-title>
+              {{ name }}
+            </ion-card-title>
+          </ion-card-header>
+          <ion-select>
+            <ion-select-option *ngFor="let i of pairedList;let j=index" value="{{j}}" (click)="selectDevice()">
+              {{i.name}}
+            </ion-select-option>
+          </ion-select>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col>
+        <ion-fab vertical="center" horizontal="center" size="400">
+          <ion-fab-button class="btnScan">
+            <ion-icon name="md-wifi" class="iconScanner"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,36 @@
+ion-content, ion-item{
+    --background: #5c5b5b;
+}
+
+ion-toolbar{
+    --background: #454545;
+}
+
+.CarregandoNotificacao{
+    background: #5c5b5b;
+    --color: #f8e809;
+}
+
+ion-card{
+    background: #fff;
+}
+
+.barraDaPeca{
+    height: 20px;
+    border-radius: 2px;
+}
+
+ion-list{
+    background: #5c5b5b;
+}
+.NomeFundo{
+    text-align: center;
+    color: #fff;
+    align-items: center;
+    margin: 40px;
+    margin-top: 4px; 
+}
+.Item{
+    padding: 0px;
+    margin: 0px;
+}

@@ -1,0 +1,64 @@
+<ion-header no-shadow no-border>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-select placeholder="Veículo">
+              <ion-select-option selected *ngFor="let carro of carros" value="{{ carro.id }}">
+                {{ carro.placa }} / {{ carro.modelo }}
+              </ion-select-option>
+            </ion-select>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" class="CarregandoNotificacao">
+    <ion-refresher-content class="CarregandoNotificacao" pullingIcon="arrow-dropdown" pullingText="Revisar?"
+      refreshingSpinner="crescent" refreshingText="Procurando defeitos...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-grid padding>
+    <ion-row *ngIf="!notificacoes">
+      <ion-row>
+        <ion-col>
+          <img src="assets/not.png">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="NomeFundo">
+          <h2>O carro não tem notificações</h2>
+        </ion-col>
+      </ion-row>
+    </ion-row>
+    <ion-row *ngIf="notificacoes">
+      <ion-col>
+        <ion-list>
+          <ion-card class="notificacao" *ngFor="let notificacao of notificacoes" (click)="detalhesNotificacao()">
+            <ion-card-header>
+              <ion-card-subtitle>
+                {{ notificacao.status }}
+              </ion-card-subtitle>
+              <ion-card-title>
+                {{ notificacao.Peca }}
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-row>
+                <ion-col>
+                  <ion-label>
+                    {{ notificacao.Grandeza }}
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,24 @@
+ion-content{
+    --background:  #fff;
+}
+.Titulo{
+    font-size: 50px;
+    position: fixed;
+    z-index: 2;
+    color: #fff;
+}
+.Topo{
+    background: #454545;
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+.formulario{
+    margin-top: 130px;
+    z-index: 0;
+}
+.planos{
+    margin-bottom: 100px;
+}
+

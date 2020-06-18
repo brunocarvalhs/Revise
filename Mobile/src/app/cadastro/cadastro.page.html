@@ -1,0 +1,175 @@
+<ion-header>
+  <div class="Topo">
+    <ion-grid padding>
+      <ion-row>
+        <ion-col>
+          <h1 class="Titulo">Cadastro</h1>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-header>
+<ion-content>
+  <ion-grid padding class="formulario">
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="floating">Nome Completo</ion-label>
+          <ion-input type="text" [(ngModel)]="Nome">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="floating">Endereço de email</ion-label>
+          <ion-input type="text" [(ngModel)]="Email">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="floating">CPF</ion-label>
+          <ion-input type="text" [(ngModel)]="Cpf" (keydown)="MascaraCPF()" maxlength="14" inputmode="numeric">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="stacked">Data de nascimento</ion-label>
+          <ion-input type="date" displayFormat="MM DD YY" min="{{ minAno }}" max="{{ maxAno }}" [(ngModel)]="Nascimento">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="Senha">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="floating">Confirma Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="ConfSenha">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col>
+        <h1>Dados do Veículo</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="floating">Placa</ion-label>
+          <ion-input type="text" (keydown)="VerificarPlaca()" [(ngModel)]="Placa" maxlength="7">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="stacked">Marca / Modelo</ion-label>
+          <ion-input type="text" disabled="{{ cadastroCarro }}" [(ngModel)]="Modelo">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <ion-item lines="none" color="light">
+          <ion-label position="stacked">Ano</ion-label>
+          <ion-input type="text" disabled [(ngModel)]="Ano">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="stacked">Cor</ion-label>
+          <ion-input type="text" disabled [(ngModel)]="Cor">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8">
+        <ion-item lines="none" color="light">
+          <ion-label position="stacked">Cidade</ion-label>
+          <ion-input type="text" disabled [(ngModel)]="Cidade">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none" color="light">
+          <ion-label position="stacked">Estado</ion-label>
+          <ion-input type="text" disabled [(ngModel)]="Estado">
+          </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col>
+        <h1>Planos</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid padding>
+    <ion-row>
+      <ion-col>
+        <ion-select [(ngModel)]="Plano">
+          <ion-select-option *ngFor="let plano of planos" value="{{ plano.id }}">
+            {{ plano.nome }}
+          </ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid padding class="planos">
+    <ion-row>
+      <ion-col>
+        <ion-radio-group>
+          <ion-card *ngFor="let plano of planos">
+            <ion-card-header>
+              <ion-card-title>
+                {{ plano.nome }}
+              </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p>{{ plano.descricao }}</p>
+              <h1>{{ plano.preco }}</h1>
+            </ion-card-content>
+          </ion-card>
+        </ion-radio-group>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+      <ion-fab-button color="dark" (click)="closeCadastro()">
+        <ion-icon name="close"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="warning" (click)="validarCampo()">
+      <ion-icon name="checkmark-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

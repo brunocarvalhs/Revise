@@ -1,0 +1,25 @@
+ion-content{
+    --background: #5c5b5b;
+}
+
+ion-toolbar{
+    --background: #454545;
+}
+
+ion-card{
+    background: white;
+}
+
+.btnScan{
+    --background: #454545;
+    --color: #f8e809;
+    width: 200px;
+    height: 200px;
+    margin-top: 70px;
+    margin-left: -70px;
+}
+
+.iconScanner{
+    width: 150px;
+    height: 150px;
+}

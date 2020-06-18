@@ -1,0 +1,173 @@
+
+ion-content{
+    --overflow: hidden;
+}
+ion-toolbar{
+    --background: #5c5b5b;
+    border: 0px;
+}
+.fundoBlack{
+    --background: #5c5b5b;
+}
+.fundoWhite{
+    --background: #ffffff;
+}
+.fundoYellow{
+    --background: #f8e809;
+}
+ion-grid{
+    padding: 0%;
+}
+.login{
+    background-color: #474747;
+}
+.logo{
+    background-color: #5c5b5b;
+}
+
+#logo{
+    height: 23vh;
+    width: auto;
+    margin: auto;
+    display: block;
+}
+.ion-padding{
+    padding: 0;
+}
+ion-item:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+ion-item:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+ion-item{
+    --background: #b8b4b47e;
+    margin: 1% 5% 1% 5%;
+}
+.linhaLogin{
+    padding-top: 30px;
+}
+.btnSingIn{
+    --background: #FFEF00 !important;
+    --background-activated: #f8e809 !important;
+    --background-hover: #f8e809 !important;
+    color: #000000;
+    --color-activated: #616161;
+    -webkit-box-shadow: none;
+	  -moz-box-shadow: none;
+    box-shadow: none;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 30px;
+    height: 60px;
+    font-size: 20px;
+}
+.btnCadastro{
+    color: #f8e809;
+    text-align: center;
+    font-size: 14px;
+}
+
+.link{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.Validacao{
+    --color: #f8e809;
+    height: 100px;
+    width: 100px;
+    padding: 10%;
+    display: block;
+    position: absolute;
+    left:50%;
+    top:60%;
+    transform: translate(-50%, -50%);
+}
+
+ion-content{
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  
+  .animated {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+    
+    .animated.fast {
+      -webkit-animation-duration: 800ms;
+      animation-duration: 800ms;
+    }
+    
+    .animated.faster {
+      -webkit-animation-duration: 500ms;
+      animation-duration: 500ms;
+    }
+    
+    @-webkit-keyframes fadeInUpBig {
+      from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 2000px, 0);
+        transform: translate3d(0, 2000px, 0);
+      }
+    
+      to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    
+    @keyframes fadeInUpBig {
+      from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 2000px, 0);
+        transform: translate3d(0, 2000px, 0);
+      }
+    
+      to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    
+    .fadeInUpBig {
+      -webkit-animation-name: fadeInUpBig;
+      animation-name: fadeInUpBig;
+    }
+  
+    
+  @-webkit-keyframes fadeOutDownBig {
+      from {
+        opacity: 1;
+      }
+    
+      to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 2000px, 0);
+        transform: translate3d(0, 2000px, 0);
+      }
+    }
+    
+    @keyframes fadeOutDownBig {
+      from {
+        opacity: 1;
+      }
+    
+      to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 2000px, 0);
+        transform: translate3d(0, 2000px, 0);
+      }
+    }
+    
+    .fadeOutDownBig {
+      -webkit-animation-name: fadeOutDownBig;
+      animation-name: fadeOutDownBig;
+    }

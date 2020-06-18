@@ -1,0 +1,7 @@
+{
+  "name": "revise",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

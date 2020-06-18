@@ -1,0 +1,67 @@
+ion-slides{
+    --bullet-background-active: false;
+    --bullet-background:false;
+}
+
+.btnChecklist{
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.CarregandoVeiculo{
+    background: #5c5b5b;
+    --color: #f8e809;
+}
+
+
+.icone{
+    margin-top: 13px;
+    color: #f8e809;
+}
+
+ion-content{
+    --background: #5c5b5b;
+}
+
+ion-toolbar{
+    --background: #454545;
+}
+
+.Conteudo{
+    --background: #454545;
+    margin-top: 0px; 
+}
+
+ion-item{
+    --background: #454545;
+}
+
+.txtCampos{
+    color: #fff;
+}
+
+.btnChecklist{
+    --color: #000;
+    height: 60px;
+}
+
+.placa{
+    --background: #fff;
+}
+
+.Placa{
+    width: 110%;
+}
+
+ion-slide{
+    margin-right: -5px;
+}
+
+ion-slides{
+    margin: 0px;
+}
+
+ion-card-subtitle{
+    font-size: 16px;
+}

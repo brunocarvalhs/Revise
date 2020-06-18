@@ -1,0 +1,94 @@
+<ion-header no-shadow no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="warning" (click)="adicionarVeiculo()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" class="CarregandoVeiculo">
+    <ion-refresher-content class="CarregandoVeiculo" pullingIcon="arrow-dropdown" pullingText="Ver Garagem?"
+      refreshingSpinner="crescent" refreshingText="Carregando Garagem...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-slides padding pager="true" [options]="slideOpcoes">
+          <ion-slide *ngFor="let item of carros">
+            <ion-card (click)="selecionaCarro(item.id)" class="Placa">
+              <ion-item lines="none" class="placa">
+                <ion-icon name="car" slot="start"></ion-icon>
+                <ion-card-header>
+                  <ion-card-subtitle>{{item.placa}}</ion-card-subtitle>
+                  <ion-card-title>{{item.modelo}}</ion-card-title>
+                </ion-card-header>
+              </ion-item>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card class="Conteudo">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="floating">Placa</ion-label>
+            <ion-input type="text" class="txtCampos" disabled [ngModel]=txtPlaca></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="floating">Modelo</ion-label>
+            <ion-input type="text" class="txtCampos" disabled [ngModel]=txtModelo></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="floating">Marca</ion-label>
+            <ion-input type="text" class="txtCampos" disabled [ngModel]=txtMarca></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="floating">ano</ion-label>
+            <ion-input type="text" class="txtCampos" disabled [ngModel]=txtAno></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label class="txtCampos" position="floating">Cor</ion-label>
+            <ion-input type="text" class="txtCampos" disabled [ngModel]=txtCor></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-button (click)="alterarVeiculo()" class="btnChecklist" expand="block" color="warning">Editar
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button (click)="deletarVeiculo()" class="btnChecklist" expand="block" color="danger">Deletar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button (click)="realizarCheckList()" class="btnChecklist" expand="full" color="success">Realizar CheckList
+    </ion-button>
+  </ion-card>
+</ion-content>
