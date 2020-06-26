@@ -53,7 +53,7 @@
 
 ### Aplicação Mobile
 
-<p align="center"><img src="https://github.com/Bruno-Carv/Revise/blob/vers%C3%A3o(2.1)/Doc/Mobile.jpg?raw=true" width="400"></p>
+<p align="center"><img src="https://github.com/Bruno-Carv/Revise/blob/vers%C3%A3o(2.1)/Doc/Mobile.jpg?raw=true" width="200"></p>
 
 ## Começando
 
@@ -63,7 +63,7 @@
 - [Composer](https://getcomposer.org/download/) - versão 1.10.8;
 - [MySQL](https://www.mysql.com/) - versão 4.2.8;
 
-### Estrutura de Arquivos
+<!-- ### Estrutura de Arquivos -->
 
 <!-- ```bash
 MaratoraESAMC2020
