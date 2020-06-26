@@ -2,7 +2,7 @@
 *** Obrigado por estar vendo o meu README. Agora vamos rodar esse projeto incrível :D
 -->
 
-<p align="center"><img src="https://github.com/Bruno-Carv/Revise/blob/vers%C3%A3o(2.1)/Website/public/img/logo.png?raw=true" width="400"></p>
+<p align="center"><img src="https://github.com/Bruno-Carv/Revise/blob/vers%C3%A3o(2.1)/Website/public/img/logo.png?raw=true" width="200"></p>
 
 <!-- TABLE OF CONTENTS -->
 
