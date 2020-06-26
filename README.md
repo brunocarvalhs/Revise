@@ -23,37 +23,44 @@
 ## Sobre o Projeto
 
 
+### Modelagem 
+
+#### Diagrama de classes
+
+<p align="center"><img src="https://github.com/Bruno-Carv/Revise/blob/vers%C3%A3o(2.1)/Doc/Class/DIAGRAMA%20DE%20CLASSE.jpg?raw=true" width="400"></p>
+
+#### Modelo Lógico
+
+<p align="center"><img src="https://github.com/Bruno-Carv/Revise/blob/vers%C3%A3o(2.1)/Doc/Data/modeloDB_Revise.png?raw=true" width="400"></p>
 
 ### Tecnologias aplicadas
 
 #### WebSite
 
-- [](https:///) - 
+- [MySQL 5.3](https://www.mysql.com/) - O MySQL é um sistema de gerenciamento de banco de dados , que utiliza a linguagem SQL (Linguagem de Consulta Estruturada, do inglês Structured Query Language) como interface. É atualmente um dos sistemas de gerenciamento de bancos de dados mais populares da Oracle Corporation, com mais de 10 milhões de instalações pelo mundo.
 
-- [](https:///) - 
+- [Laravel 5.8](https://laravel.com/) - Laravel é um framework PHP livre e open-source criado por Taylor B. Otwell para o desenvolvimento de sistemas web que utilizam o padrão MVC (model, view, controller).
 
 #### Mobile
 
-- [](https:///) - 
-
-- [](https:///) - 
+- [Ionic 4](https://ionicframework.com/) - Ionic é um framework para desenvolvimento de aplicações para dispositivos móveis que visa o desenvolvimento de apps híbridas e de rápido e fácil desenvolvimento.
 
 ## Interface da aplicação
 
 ### Aplicação Web
 
-<p align="center"><img src="" width="400"></p>
+<p align="center"><img src="https://github.com/Bruno-Carv/Revise/blob/vers%C3%A3o(2.1)/Doc/Web.jpg?raw=true" width="400"></p>
 
 ### Aplicação Mobile
 
-<p align="center"><img src="" width="400"></p>
+<p align="center"><img src="https://github.com/Bruno-Carv/Revise/blob/vers%C3%A3o(2.1)/Doc/Mobile.jpg?raw=true" width="400"></p>
 
 ## Começando
 
 ### Pré-requisitos
 
-- [NodeJS](https://nodejs.org/pt-br/) - versão 12.18 LTS;
-- [Yarn](https://yarnpkg.com/) - versão 1.22.0;
+- [PHP](https://www.php.net/) - versão 5.6;
+- [Composer](https://getcomposer.org/download/) - versão 1.10.8;
 - [MySQL](https://www.mysql.com/) - versão 4.2.8;
 
 ### Estrutura de Arquivos
@@ -206,7 +213,7 @@ Distribuído sob a licença MIT. Veja `LICENSE` para mais informações. -->
 ## Contato
 
 Bruno Silva Carvalho - [Github](https://github.com/bruno-carv)
-Bruno Silva Carvalho - [Github](https://github.com/bruno-carv)
-Bruno Silva Carvalho - [Github](https://github.com/bruno-carv)
-Bruno Silva Carvalho - [Github](https://github.com/bruno-carv)
-Bruno Silva Carvalho - [Github](https://github.com/bruno-carv)
+Fernanda - [Github](https://github.com/bruno-carv)
+Lucas Juan - [Github](https://github.com/bruno-carv)
+Luiz Marcelo - [Github](https://github.com/bruno-carv)
+Katryel Menezes - [Github](https://github.com/bruno-carv)
