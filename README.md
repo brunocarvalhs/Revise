@@ -11,6 +11,8 @@
 - [Tabela de Conteúdo](#tabela-de-conteúdo)
 - [Sobre o Projeto](#sobre-o-Projeto)
   - [Tecnologias aplicadas](#tecnologias-aplicadas)
+    - [WebSite](#WebSite)
+    - [Mobile](#Mobile)
 - [Interface da aplicação](#interface-da-aplicação)
 - [Começando](#Começando)
   - [Pré-requisitos](#pré-requisitos)
@@ -24,9 +26,13 @@
 
 ### Tecnologias aplicadas
 
+#### WebSite
+
 - [](https:///) - 
 
 - [](https:///) - 
+
+#### Mobile
 
 - [](https:///) - 
 
